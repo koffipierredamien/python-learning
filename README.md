@@ -33,6 +33,16 @@ un ordinateur à l'élève qui code déjà — avec seulement deux enseignants.
 7. **Motivation** : grades, badges, Mur de Mission, tournoi final devant les familles
 8. **Évaluation par la preuve, jamais par la note** : ça marche / je sais l'expliquer / je sais le refaire
 
+### [→ Fiches de séance](docs/seances/)
+
+| Séance | Titre | Brique ajoutée au jeu | Notion |
+|---|---|---|---|
+| [S01](docs/seances/S01-decollage.md) | Le Décollage | L'écran d'accueil du jeu XO | `print()` |
+
+Chaque fiche contient le déroulé minute par minute, les scripts d'animation, les
+supports des 3 pistes, les erreurs anticipées, les plans de secours et le code
+officiel de fin de séance.
+
 ### Annexes opérationnelles
 
 | Annexe | Contenu |
@@ -42,6 +52,13 @@ un ordinateur à l'élève qui code déjà — avec seulement deux enseignants.
 | [A3 — Matrice des cas particuliers](docs/annexes/A3-matrice-des-cas.md) | 35 cas (niveau, rythme, assiduité, matériel, émotionnel, cognitif, organisation, projet) avec détection et réponse |
 | [A4 — Grades, badges & Mur de Mission](docs/annexes/A4-grades-et-badges.md) | Le système de motivation complet, et ce qu'il ne faut surtout pas faire |
 | [A5 — Outils imprimables](docs/annexes/A5-outils-imprimables.md) | Cartes de signalisation, contrat de binôme, dictionnaire des erreurs, journal de bord, grille de test, tableau de suivi |
+
+### Supports et code
+
+| Dossier | Contenu |
+|---|---|
+| [`supports/`](supports/) | Fiches mémo élèves et fichiers des 3 pistes, par séance |
+| [`code-officiel/`](code-officiel/) | **Le Filet** : le code du jeu tel qu'il est à la fin de chaque séance, redistribué à tous au début de la suivante |
 
 ---
 
@@ -65,6 +82,7 @@ un ordinateur à l'élève qui code déjà — avec seulement deux enseignants.
 - [x] Méthode pédagogique complète
 - [x] Outils de diagnostic et de suivi
 - [x] Annexes opérationnelles imprimables
-- [ ] Découpage détaillé des 22 séances
-- [ ] Supports élèves (fiches mémo, fichiers à trous par piste)
+- [x] Séance 1 : fiche détaillée, supports et code officiel
+- [ ] Découpage détaillé des séances 2 à 22
+- [ ] Supports élèves des séances suivantes
 - [ ] Code de référence du jeu XO, version par version
