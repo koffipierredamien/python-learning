@@ -77,12 +77,18 @@ def principal():
             os.makedirs(dossier)
         journal.append(("ok", dossier + "  (vide : normal a la seance 1)"))
 
-    # 3 - les supports a imprimer
+    # 3 - les supports a imprimer : les PDF d'abord, les sources HTML a cote
     source_impressions = os.path.join(RACINE, "impressions")
+    dossier_pdf = os.path.join(source_impressions, "pdf")
+    if os.path.isdir(dossier_pdf):
+        for nom in sorted(os.listdir(dossier_pdf)):
+            if nom.endswith(".pdf"):
+                copier_fichier(os.path.join(dossier_pdf, nom),
+                               os.path.join(cle, "3-SUPPORTS-A-IMPRIMER", nom), journal)
     for nom in sorted(os.listdir(source_impressions)):
         if nom.endswith((".html", ".md")):
             copier_fichier(os.path.join(source_impressions, nom),
-                           os.path.join(cle, "3-SUPPORTS-A-IMPRIMER", nom), journal)
+                           os.path.join(cle, "3-SUPPORTS-A-IMPRIMER", "sources-modifiables", nom), journal)
 
     # 4 - l'emplacement des sauvegardes eleves
     dossier = os.path.join(cle, "4-SAUVEGARDES-ELEVES", "S%s" % seance)
@@ -93,8 +99,8 @@ def principal():
     # 5 - mes fiches d'animation
     for chemin, nom in (
         (os.path.join("docs", "seances", "S%s-decollage.md" % seance), "fiche-de-seance.md"),
-        (os.path.join("docs", "seances", "S%s-script-animateur.html" % seance), "MON-SCRIPT.html"),
-        (os.path.join("docs", "S%s-fiche-de-validation.html" % seance), "fiche-de-validation.html"),
+        (os.path.join("impressions", "pdf", "00-MON-SCRIPT-animation.pdf"), "MON-SCRIPT-a-imprimer.pdf"),
+        (os.path.join("impressions", "pdf", "00-FICHE-DE-VALIDATION-responsables.pdf"), "fiche-de-validation.pdf"),
     ):
         copier_fichier(os.path.join(RACINE, chemin),
                        os.path.join(cle, "5-MES-FICHES", nom), journal)

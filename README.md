@@ -39,8 +39,8 @@ un ordinateur à l'élève qui code déjà — avec seulement deux enseignants.
 |---|---|---|---|
 | [S01](docs/seances/S01-decollage.md) | Le Décollage | L'écran d'accueil du jeu XO | `print()` |
 
-Pour la séance 1 : [🎤 le script d'animation](docs/seances/S01-script-animateur.html) ·
-[📋 la fiche de validation pour les responsables](docs/S01-fiche-de-validation.html)
+Pour la séance 1 : [🎤 le script d'animation (PDF)](impressions/pdf/00-MON-SCRIPT-animation.pdf) ·
+[📋 la fiche de validation pour les responsables (PDF)](impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf)
 
 Chaque fiche contient le déroulé minute par minute, les scripts d'animation, les
 supports des 3 pistes, les erreurs anticipées, les plans de secours et le code
@@ -60,7 +60,7 @@ officiel de fin de séance.
 
 | Dossier | Contenu |
 |---|---|
-| [`impressions/`](impressions/README.md) | 🖨️ **Tout ce qui est à imprimer**, un fichier HTML prêt à l'emploi par document |
+| [`impressions/pdf/`](impressions/pdf/) | 🖨️ **Tout ce qui est à imprimer, en PDF** — au bon format, couleurs incluses, rien à régler. [Guide et quantités](impressions/README.md) |
 | [`suivi/`](suivi/) | 📊 **Le classeur de suivi** à importer dans Google Sheets : apprenants, contacts, présence, diagnostic, badges, checklists, tableau de bord |
 | [`demo/`](demo/) | 🎮 Le jeu XO terminé (démo du « WOW »), l'anti-sèche de live coding, et le vérificateur de poste |
 | [`supports/`](supports/) | Fiches mémo élèves et fichiers des 3 pistes, par séance |

@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><title>MON SCRIPT — Séance 1</title>
 <style>
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   @page { size: A4 portrait; margin: 11mm 10mm 9mm; }
   * { box-sizing:border-box; }
   body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:11pt; color:#111; }
@@ -10,7 +12,7 @@
   .couv .st { font-size:12pt; color:#555; margin-bottom:4mm; }
   .rappels { display:flex; gap:3mm; }
   .rappel { flex:1; border:0.8mm solid #1a1a2e; padding:3mm; font-size:9.5pt; line-height:1.3; }
-  .rappel b { display:block; font-size:10.5pt; margin-bottom:1mm; }
+  .rappel > b:first-child { display:block; font-size:10.5pt; margin-bottom:1mm; }
   .bloc { border:0.8mm solid #1a1a2e; border-radius:2mm; margin-bottom:4mm; page-break-inside:avoid; }
   .tete { background:#1a1a2e; color:#fff; padding:2.5mm 3mm; display:flex; align-items:baseline; gap:3mm; }
   .tete .h { font-size:15pt; font-weight:bold; font-family:"Courier New",monospace; }
@@ -36,7 +38,7 @@
   table.mini th { background:#eee; }
   @media print { .note { display:none; } }
 </style></head><body>
-<div class="note"><b>À imprimer :</b> 1 exemplaire pour l'animateur (le Capitaine), A4, agrafé. 7 pages.
+<div class="note"><b>À imprimer :</b> 1 exemplaire pour l'animateur (le Capitaine), A4, agrafé.
 Gardez-le à la main pendant toute la séance : il est écrit pour être lu debout, d'un coup d'œil.
 La dernière page est la <b>fiche du Mécanicien</b> — donnez-la à votre collègue.</div>
 
@@ -45,12 +47,12 @@ La dernière page est la <b>fiche du Mécanicien</b> — donnez-la à votre coll
   <div class="st">« Le Décollage » · 2 h · Classe : ............................ · Date : ......../......../............</div>
   <div class="rappels">
     <div class="rappel"><b>MON RÔLE AUJOURD'HUI</b>Je suis le <b>CAPITAINE</b>. J'anime devant. Je gère le temps.
-      <b style="display:inline">Je ne m'assois jamais plus de 60 secondes à côté d'un élève</b> — sauf carte rouge.</div>
+      <b>Je ne m'assois jamais plus de 60 secondes à côté d'un élève</b> — sauf carte rouge.</div>
     <div class="rappel"><b>MA SEULE OBLIGATION</b>Que <b>100 %</b> des élèves aient exécuté un programme qu'ils ont écrit.
-      Si le temps manque, je sacrifie le Test de Décollage. <b style="display:inline">Jamais l'atelier.</b></div>
+      Si le temps manque, je sacrifie le Test de Décollage. <b>Jamais l'atelier.</b></div>
     <div class="rappel"><b>MES 4 PHRASES POUR AIDER</b>1. Lis-moi ton erreur à voix haute.<br>
       2. Montre-moi la ligne.<br>3. Essaie, on verra.<br>4. Explique-moi cette ligne.<br>
-      <b style="display:inline">⛔ Je ne prends jamais le clavier.</b></div>
+      <b>⛔ Je ne prends jamais le clavier.</b></div>
   </div>
 </div>
 

@@ -1,34 +1,36 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><title>Fiche mémo — Séance 1</title>
 <style>
-  @page { size: A4 portrait; margin: 10mm; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @page { size: A4 portrait; margin: 7mm 8mm; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:10.5pt; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:9.5pt; }
   .consigne { font-size:9pt; color:#333; border:1px dashed #999; padding:3mm; margin-bottom:4mm; }
-  h1 { font-size:19pt; margin:0 0 1mm; text-align:center; }
+  h1 { font-size:16pt; margin:0 0 1mm; text-align:center; }
   .sur { text-align:center; font-size:10pt; color:#555; margin-bottom:4mm; }
-  h2 { font-size:12.5pt; background:#1a1a2e; color:#fff; padding:2mm 3mm; margin:4mm 0 2.5mm; border-radius:1.5mm; }
-  .code { font-family:"Courier New",monospace; font-size:15pt; font-weight:bold; background:#f3f3f8;
-          border-left:2mm solid #6b2d8f; padding:3mm; text-align:center; }
+  h2 { font-size:11pt; background:#1a1a2e; color:#fff; padding:1.3mm 3mm; margin:2.6mm 0 1.6mm; border-radius:1.5mm; }
+  .code { font-family:"Courier New",monospace; font-size:13pt; font-weight:bold; background:#f3f3f8;
+          border-left:2mm solid #6b2d8f; padding:2mm; text-align:center; }
   table { width:100%; border-collapse:collapse; margin-top:2mm; }
-  td,th { border:1px solid #666; padding:2mm 2.5mm; font-size:10pt; vertical-align:top; text-align:left; }
+  td,th { border:1px solid #666; padding:1.2mm 2mm; font-size:9pt; vertical-align:top; text-align:left; }
   th { background:#eee; }
   .mono { font-family:"Courier New",monospace; font-weight:bold; }
   .regles { display:flex; gap:3mm; }
-  .regle { flex:1; border:1.2mm solid #1a1a2e; border-radius:2mm; padding:3mm; font-size:10pt; }
-  .regle b { display:block; font-size:11pt; margin-bottom:1.5mm; }
+  .regle { flex:1; border:1mm solid #1a1a2e; border-radius:2mm; padding:2mm; font-size:9pt; }
+  .regle > b:first-child { display:block; font-size:9.5pt; margin-bottom:1mm; }
   .cols { display:flex; gap:4mm; }
   .cols > * { flex:1; }
-  .trois { border:1.5mm solid #f08a24; padding:3mm; }
+  .trois { border:1.2mm solid #f08a24; padding:2mm; }
   .trois ol { margin:0; padding-left:6mm; }
-  .trois li { margin-bottom:1.5mm; }
+  .trois li { margin-bottom:0.6mm; }
   @media print { .consigne { display:none; } }
 </style></head><body>
 <div class="consigne"><b>À imprimer :</b> 1 exemplaire par binôme (soit 1 par poste), A4 recto. Posé sur la table pendant tout l'atelier.
 À plastifier si vous voulez le réutiliser — mais il est propre à la séance 1.</div>
 
 <h1>🧠 FICHE MÉMO — SÉANCE 1</h1>
-<div class="sur">À garder sur la table. C'est l'étape 2 de la règle des 3 avant moi.</div>
+<div class="sur" style="margin-bottom:2mm">À garder sur la table. C'est l'étape 2 de la règle des 3 avant moi.</div>
 
 <h2>LA COMMANDE DU JOUR</h2>
 <div class="code">print("Bonjour")</div>
@@ -87,7 +89,7 @@
 </ol>
 <div style="margin-top:2mm"><b>➜ Toujours bloqué ? CARTE ORANGE 🟠</b></div></div>
 
-<div style="margin-top:4mm; text-align:center; font-size:9.5pt; color:#555">
-Tu ne trouves pas une touche ? Ce n'est pas une bêtise de demander.
+<div style="margin-top:2mm; text-align:center; font-size:9pt; color:#555">
+Tu ne trouves pas une touche ? <b>Ce n'est pas une bêtise de demander.</b>
 </div>
 </body></html>

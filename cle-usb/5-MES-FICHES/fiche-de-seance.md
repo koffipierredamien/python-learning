@@ -57,11 +57,11 @@
 | 6 exemplaires | Feuilles d'énigmes **station 2** | [A1 §3](../annexes/A1-diagnostic-et-passeport.md) |
 | 2 exemplaires | **Grille d'observation** | [A1 §5](../annexes/A1-diagnostic-et-passeport.md) |
 | 1 par binôme | **Fiche mémo S1** | [supports/S01/fiche-memo.md](../../supports/S01/fiche-memo.md) |
-| 3 pages | **Étiquettes prénom** | [`impressions/11-etiquettes-prenoms.html`](../../impressions/11-etiquettes-prenoms.html) |
-| 2 exemplaires | **Affiche « aider sans faire à la place »** (côté enseignants) | [`impressions/12-affiche-4-phrases-enseignant.html`](../../impressions/12-affiche-4-phrases-enseignant.html) |
+| 3 pages | **Étiquettes prénom** | `pdf/11-etiquettes-prenoms.pdf` |
+| 2 exemplaires | **Affiche « aider sans faire à la place »** (côté enseignants) | `pdf/12-affiche-4-phrases-enseignant.pdf` |
 | — | Badges / autocollants, minuteur visible, **2 post-it par élève**, boîte à post-it, stylos de rechange | |
 
-> **Tous les documents ci-dessus sont prêts à imprimer dans [`impressions/`](../../impressions/) — un fichier HTML par document, au bon format, à ouvrir dans le navigateur puis `Ctrl+P`.** Voir [le guide d'impression](../../impressions/README.md).
+> **Tous les documents ci-dessus sont déjà convertis en PDF dans [`impressions/pdf/`](../../impressions/pdf/), au bon format de papier, couleurs incluses : on ouvre et on imprime, sans rien cocher.** Le détail des quantités est dans [le guide d'impression](../../impressions/README.md). Les fichiers `.html` du dossier `impressions/` sont les sources, à ne rouvrir que pour modifier un texte.
 >
 > **Trois supports ont été volontairement écartés de l'impression**, et voici ce qui les remplace :
 > | Support écarté | Remplacé par |
@@ -547,9 +547,9 @@ monde a décollé !
 
 | Support | Fichier |
 |---|---|
-| 🎤 **Mon script d'animation** (à imprimer, 7 pages) | [`docs/seances/S01-script-animateur.html`](S01-script-animateur.html) |
-| 📋 Fiche de validation pour les responsables | [`docs/S01-fiche-de-validation.html`](../S01-fiche-de-validation.html) |
-| 🖨️ Tous les documents à imprimer | [`impressions/`](../../impressions/README.md) |
+| 🎤 **Mon script d'animation** (14 pages A4, agrafé) | [`impressions/pdf/00-MON-SCRIPT-animation.pdf`](../../impressions/pdf/00-MON-SCRIPT-animation.pdf) |
+| 📋 Fiche de validation pour les responsables (3 pages) | [`impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf`](../../impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf) |
+| 🖨️ Tous les documents à imprimer, en PDF | [`impressions/pdf/`](../../impressions/pdf/) — guide : [`impressions/README.md`](../../impressions/README.md) |
 | 📊 Classeur de suivi (Google Sheets) | [`suivi/classeur-de-suivi.xlsx`](../../suivi/classeur-de-suivi.xlsx) |
 | 🎮 Le jeu fini, pour le WOW | [`demo/xo_complet.py`](../../demo/xo_complet.py) |
 | ⌨️ L'anti-sèche du live coding | [`demo/live_coding_S01.py`](../../demo/live_coding_S01.py) |

@@ -19,15 +19,16 @@ CLE USB/
 │       ├── xo_officiel/             LE FILET — vide avant la séance 1
 │       └── LISEZ-MOI.txt
 │
-├── 3-SUPPORTS-A-IMPRIMER/        Les 13 documents + le guide d'impression
+├── 3-SUPPORTS-A-IMPRIMER/        Les 15 PDF prêts à imprimer + le guide
+│     sources-modifiables/        (les HTML, seulement si vous voulez corriger un texte)
 │
 ├── 4-SAUVEGARDES-ELEVES/
 │     S01/                          ← on y copie le travail des binômes en fin de séance
 │
 ├── 5-MES-FICHES/
-│     MON-SCRIPT.html               Le script d'animation (à imprimer)
+│     MON-SCRIPT-a-imprimer.pdf     Le script d'animation, 14 pages
 │     fiche-de-seance.md            La fiche détaillée complète
-│     fiche-de-validation.html      Le document pour les responsables
+│     fiche-de-validation.pdf       Le document pour les responsables
 │
 └── 6-CODE-OFFICIEL/
       S01/jeu.py                    Le code officiel, publié devant les élèves à 110 min

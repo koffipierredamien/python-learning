@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><title>Station 3 — Ma fiche de Geek</title>
 <style>
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   @page { size: A4 portrait; margin: 12mm; }
   * { box-sizing:border-box; }
   body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:11.5pt; }
@@ -9,7 +11,7 @@
   .sur { text-align:center; font-size:10.5pt; color:#555; margin-bottom:6mm; }
   .ligne { border-bottom:0.4mm solid #333; display:inline-block; }
   .q { margin-bottom:6mm; }
-  .q b { display:block; margin-bottom:2mm; font-size:12pt; }
+  .q > b:first-child { display:block; margin-bottom:2mm; font-size:12pt; }
   .case { display:inline-block; width:5mm; height:5mm; border:0.4mm solid #333; margin-right:1.5mm;
           vertical-align:-0.5mm; }
   .opt { display:inline-block; margin-right:6mm; white-space:nowrap; }
