@@ -13,11 +13,14 @@
   .rappels { display:flex; gap:3mm; }
   .rappel { flex:1; border:0.8mm solid #1a1a2e; padding:3mm; font-size:9.5pt; line-height:1.3; }
   .rappel > b:first-child { display:block; font-size:10.5pt; margin-bottom:1mm; }
+  .prog { width:100%; border-collapse:collapse; margin-top:4mm; }
+  .prog td { border:0.3mm solid #999; padding:1.6mm 2.5mm; font-size:9.5pt; }
+  .prog td:first-child { font-family:"Courier New",monospace; font-weight:bold; white-space:nowrap; width:34mm; }
   .bloc { border:0.8mm solid #1a1a2e; border-radius:2mm; margin-bottom:4mm; page-break-inside:avoid; }
   .tete { background:#1a1a2e; color:#fff; padding:2.5mm 3mm; display:flex; align-items:baseline; gap:3mm; }
-  .tete .h { font-size:15pt; font-weight:bold; font-family:"Courier New",monospace; }
+  .tete .h { font-size:12.5pt; font-weight:bold; font-family:"Courier New",monospace; white-space:nowrap; }
   .tete .t { font-size:13pt; font-weight:bold; flex:1; }
-  .tete .d { font-size:9.5pt; opacity:.85; }
+  .tete .d { font-size:9.5pt; opacity:.85; white-space:nowrap; }
   .corps { padding:3mm; }
   .dis { border-left:2.5mm solid #6b2d8f; background:#f7f2fb; padding:2.5mm 3mm; margin:2mm 0; font-size:11.5pt; line-height:1.45; }
   .dis::before { content:"🗣️  JE DIS"; display:block; font-size:8.5pt; font-weight:bold; color:#6b2d8f; letter-spacing:1px; margin-bottom:1.5mm; }
@@ -30,7 +33,9 @@
   .autre::before { content:"👥  PENDANT CE TEMPS, LE MÉCANICIEN"; display:block; font-size:8pt; font-weight:bold; color:#555; letter-spacing:.5px; margin-bottom:1mm; }
   .coche { display:inline-block; width:4.5mm; height:4.5mm; border:0.4mm solid #333; margin-right:2mm; vertical-align:-0.5mm; }
   code, .mono { font-family:"Courier New",monospace; font-weight:bold; background:#eee; padding:0 1mm; }
-  .ecran { font-family:"Courier New",monospace; font-size:10.5pt; background:#111; color:#0f0; padding:2.5mm; margin:2mm 0; line-height:1.2; white-space:pre; }
+  .ecran { font-family:"Courier New",monospace; font-size:10.5pt; background:#111; color:#0f0; padding:2.5mm; margin:2mm 0; line-height:1.25; white-space:pre; }
+  .tableau { font-family:"Courier New",monospace; font-size:9.5pt; background:#fffdf2; border:0.6mm solid #d79a00; padding:2.5mm; margin:2mm 0; line-height:1.3; white-space:pre; }
+  .tableau::before { content:"🖊️  J'ÉCRIS ÇA AU TABLEAU"; display:block; font-family:"Trebuchet MS",sans-serif; font-size:8pt; font-weight:bold; color:#8a6500; letter-spacing:.5px; margin-bottom:1.5mm; }
   .pb { page-break-before:always; }
   h2.sec { font-size:15pt; border-bottom:1mm solid #1a1a2e; padding-bottom:1.5mm; margin:0 0 4mm; }
   table.mini { width:100%; border-collapse:collapse; margin:2mm 0; }
@@ -44,50 +49,69 @@ La dernière page est la <b>fiche du Mécanicien</b> — donnez-la à votre coll
 
 <div class="couv">
   <h1>🎤 MON SCRIPT — SÉANCE 1</h1>
-  <div class="st">« Le Décollage » · 2 h · <b>samedi 12 septembre 2026</b> · Classe : ............................</div>
+  <div class="st">« Le Décollage » · <b>samedi 12 septembre 2026 · 12 h - 14 h</b> · Classe : ............................</div>
   <div class="rappels">
     <div class="rappel"><b>MON RÔLE AUJOURD'HUI</b>Je suis le <b>CAPITAINE</b>. J'anime devant. Je gère le temps.
       <b>Je ne m'assois jamais plus de 60 secondes à côté d'un élève</b> — sauf carte rouge.</div>
     <div class="rappel"><b>MA SEULE OBLIGATION</b>Que <b>100 %</b> des élèves aient exécuté un programme qu'ils ont écrit.
-      Si le temps manque, je sacrifie le Test de Décollage. <b>Jamais l'atelier.</b></div>
+      Si le temps manque, je coupe le Kahoot, puis la théorie. <b>Jamais le temps machine.</b></div>
     <div class="rappel"><b>MES 4 PHRASES POUR AIDER</b>1. Lis-moi ton erreur à voix haute.<br>
       2. Montre-moi la ligne.<br>3. Essaie, on verra.<br>4. Explique-moi cette ligne.<br>
       <b>⛔ Je ne prends jamais le clavier.</b></div>
   </div>
+  <table class="prog">
+    <tr><td>12 h - 12 h 15</td><td>Prière et accueil <span style="color:#777">· + le signal de silence</span></td></tr>
+    <tr><td>12 h 15 - 12 h 25</td><td>L'effet WOW, la guilde, les trois promesses</td></tr>
+    <tr><td>12 h 25 - 12 h 55</td><td><b>La théorie</b> : pourquoi coder · les domaines · les portraits · du binaire à l'éditeur · l'algorithme</td></tr>
+    <tr><td>12 h 55 - 13 h 05</td><td>Pause</td></tr>
+    <tr><td>13 h 05 - 13 h 30</td><td>Les missions de décollage (3 stations)</td></tr>
+    <tr><td>13 h 30 - 13 h 45</td><td><b>Premier contact machine</b> — le cœur de la séance</td></tr>
+    <tr><td>13 h 45 - 13 h 55</td><td>Le Kahoot</td></tr>
+    <tr><td>13 h 55 - 14 h</td><td>Clôture : badges, Mur de Mission, post-it</td></tr>
+  </table>
 </div>
 
-<div class="bloc"><div class="tete"><span class="h">00</span><span class="t">AVANT QU'ILS ENTRENT</span><span class="d">—</span></div>
+<div class="bloc"><div class="tete"><span class="h">AVANT</span><span class="t">AVANT QU'ILS ENTRENT</span><span class="d">—</span></div>
 <div class="corps">
 <div class="fais"><ul>
 <li><span class="coche"></span>Le jeu fini <span class="mono">jeu_xo_complet.py</span> est <b>déjà lancé</b> et réduit dans la barre des tâches</li>
-<li><span class="coche"></span>Thonny ouvert sur chaque poste, police 18, dossier <span class="mono">GEEKS</span> sur le Bureau</li>
+<li><span class="coche"></span>Le <b>Kahoot est ouvert dans un onglet</b>, prêt à démarrer · connexion internet testée</li>
+<li><span class="coche"></span>Thonny ouvert sur chaque poste, police 18, <span class="mono">GEEKS/mon_xo/jeu.py</span> <b>déjà ouvert</b></li>
 <li><span class="coche"></span>Machine de réserve allumée au fond</li>
-<li><span class="coche"></span>Affiches au mur : 3 avant moi · Contrat · Dictionnaire des erreurs · Mur de Mission</li>
-<li><span class="coche"></span>Sur chaque poste : fiche mémo, 4 cartes de signalisation, carte des pistes</li>
-<li><span class="coche"></span>Sur chaque table : 2 post-it par élève</li>
+<li><span class="coche"></span>Affiches au mur : 3 avant moi · Contrat · Dictionnaire des erreurs · <b>Mur de Mission</b></li>
+<li><span class="coche"></span>Sur chaque poste : fiche mémo + les 4 cartes de signalisation · sur chaque table : 2 post-it par élève</li>
 <li><span class="coche"></span>Minuteur visible · badges dans la boîte · étiquettes prénoms + feutres</li>
+<li><span class="coche"></span>Les 3 stations du test sont prêtes (cartes-missions, énigmes, questionnaires)</li>
 <li><span class="coche"></span>À voix haute avec mon collègue : <b>« aujourd'hui je suis Capitaine, tu es Mécanicien »</b></li>
 </ul></div>
 </div></div>
 
-<div class="bloc"><div class="tete"><span class="h">00→08</span><span class="t">ACCUEIL</span><span class="d">8 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">12 h</span><span class="t">PRIÈRE ET ACCUEIL</span><span class="d">15 min</span></div>
 <div class="corps">
 <div class="fais"><ul>
-<li>Je reste <b>debout devant</b>. Je salue. Je pose fiche mémo + cartes + post-it sur les postes.</li>
-<li>Je laisse le Mécanicien accueillir à la porte.</li>
+<li>Je laisse le Mécanicien accueillir à la porte. Je rassemble la salle.</li>
+<li>Temps de prière : <b>10 à 12 minutes</b>.</li>
 </ul></div>
-<div class="dis">« Les ordinateurs, on n'y touche pas tout de suite. Promis, ça vient dans un instant. »</div>
-<div class="alerte">S'ils touchent les machines maintenant, je ne récupère plus leur attention de la matinée.</div>
-<div class="autre">Accueille un par un à la porte, tope, donne l'étiquette prénom, coche la présence.
-Repère : qui arrive avec un parent, qui n'ose pas entrer, qui se précipite sur la machine.</div>
+<div class="dis">« Bienvenue à tous. On va commencer comme on commencera <b>chaque samedi</b> : par un temps de prière. »</div>
+<div class="dis"><i>(pour finir, une seule phrase de lien)</i><br>
+« On va apprendre à donner des ordres à des machines. Que ce qu'on construira ici serve, et serve bien. »</div>
+
+<div class="fais"><ul><li><b>Puis, tout de suite, le signal de silence</b> (1 min). C'est le seul rituel dont j'ai besoin maintenant.</li>
+<li>Mon signal, choisi une fois pour toute l'année : <b>☐ 3 frappes dans les mains ☐ clochette ☐ bras levés</b></li></ul></div>
+<div class="dis">« Une seule règle d'organisation pour l'instant. Quand j'ai besoin de vous, j'ai un signal. <i>[signal]</i>
+Quand vous l'entendez : mains sur la table, yeux sur moi, plus un mot, en 3 secondes. On s'entraîne.
+Faites du bruit… allez, du <b>vrai</b> bruit ! … <i>[signal]</i> … Trois, deux, un. <b>Parfait.</b> »</div>
+<div class="alerte"><b>Personne ne touche une machine avant 13 h 30.</b> Écrans allumés, mais on n'y touche pas.
+Je le dis avec le sourire : « Les ordinateurs, on n'y touche pas tout de suite. Promis, ça vient. »</div>
+<div class="autre">Accueille un par un à la porte, donne l'étiquette prénom, coche la présence.
+Repère : qui arrive avec un parent · qui n'ose pas entrer · qui se précipite sur la machine.</div>
 </div></div>
 
-<div class="bloc"><div class="tete"><span class="h">08→12</span><span class="t">LE WOW</span><span class="d">4 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">12 h 15</span><span class="t">LE WOW</span><span class="d">4 min</span></div>
 <div class="corps">
 <div class="fais"><ul>
 <li>Je ne dis pas bonjour. <b>Je lance le jeu, plein écran, en silence.</b> Je laisse 5 secondes.</li>
-<li>Je prends un volontaire. Mode <b>2 JOUEURS</b> (pas l'ordinateur).</li>
-<li><b>Je perds la partie.</b> Applaudissements.</li>
+<li>Je prends un volontaire. Mode <b>2 JOUEURS</b> (pas l'ordinateur). <b>Je perds la partie.</b> Applaudissements.</li>
 </ul></div>
 <div class="dis">« Il me faut un volontaire… Viens. Assieds-toi. Tu joues contre moi. »<br><br>
 « Ce jeu, ce n'est pas moi qui vais le faire. <b>C'est vous.</b> Vous allez le construire, morceau par morceau,
@@ -95,26 +119,20 @@ un samedi après l'autre. Et à la fin, vous repartirez avec — sur une clé, p
 à vos amis, et pour les battre. »</div>
 </div></div>
 
-<div class="bloc"><div class="tete"><span class="h">12→16</span><span class="t">LA GUILDE</span><span class="d">4 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">12 h 19</span><span class="t">LA GUILDE ET LES TROIS PROMESSES</span><span class="d">6 min</span></div>
 <div class="corps">
 <div class="dis">« Bienvenue chez les <b>……………… Geeks</b>. Un geek, ce n'est pas un mot moqueur ici : c'est quelqu'un
 qui comprend comment marchent les machines, et qui sait leur donner des ordres. À partir d'aujourd'hui, vous êtes
-des <b>Novices</b>. Dans quelques semaines vous serez Apprentis Codeurs, puis Codeurs, puis Ingénieurs,
-puis Architectes — et les meilleurs finiront <b>Maîtres Geeks</b>. »</div>
+des <b>Novices</b>. Puis Apprentis Codeurs, Codeurs, Ingénieurs, Architectes — et les meilleurs finiront
+<b>Maîtres Geeks</b>. »</div>
 <div class="fais"><ul><li>Je montre le <b>Mur de Mission</b>.</li></ul></div>
 <div class="dis">« Voilà notre carte. 22 cases, 22 samedis. Chaque samedi, la classe avance d'<b>une</b> case.
 Attention : <b>la classe</b>, pas un élève. On avance <b>ensemble</b>. Aujourd'hui, on franchit la case 1 :
 <i>le jeu dit bonjour</i>. »</div>
-<div class="autre">Finit de placer les retardataires, sans faire de bruit.</div>
-</div></div>
-
-<div class="bloc"><div class="tete"><span class="h">16→20</span><span class="t">LA PROMESSE ET LES 3 RÈGLES</span><span class="d">4 min</span></div>
-<div class="corps">
 <div class="dis">« Je vous fais trois promesses.<br>
 <b>Un :</b> chaque samedi, en repartant, votre jeu marchera mieux qu'en arrivant. <b>Chaque samedi. Tous.</b><br>
 <b>Deux :</b> ici, il n'y a <b>pas de notes</b>. Jamais. Personne ne sera comparé à personne.<br>
-<b>Trois :</b> si vous êtes absents un samedi, vous ne serez <b>pas</b> en retard. J'ai un système pour ça,
-je vous le montrerai tout à l'heure.<br><br>
+<b>Trois :</b> si vous êtes absents un samedi, vous ne serez <b>pas</b> en retard. J'ai un système pour ça, je vous le montrerai.<br><br>
 En échange, je vous demande trois choses.<br>
 <b>Un :</b> on ne se moque <b>jamais</b> de quelqu'un qui n'a pas compris ou qui va moins vite. Jamais.
 C'est la seule règle pour laquelle je me fâcherai.<br>
@@ -123,71 +141,151 @@ C'est la seule règle pour laquelle je me fâcherai.<br>
 </div></div>
 
 <div class="pb"></div>
-<h2 class="sec">⏱️ 20 → 30 · LES QUATRE RITUELS <span style="font-size:10pt;font-weight:normal">(10 min — chronométré, je coupe à 30 quoi qu'il arrive)</span></h2>
+<h2 class="sec">🧠 12 h 25 → 12 h 55 · LA THÉORIE <span style="font-size:10pt;font-weight:normal">(30 min — minuteur visible, je coupe à 12 h 55 quoi qu'il arrive)</span></h2>
+<div class="alerte" style="margin-bottom:4mm">Trente minutes sans machine, c'est long. <b>Je ne parle jamais plus de 3 minutes
+d'affilée sans faire réagir la salle.</b> Chaque partie a sa question ou son activité debout. Tout s'écrit au tableau
+en même temps.<br>
+🧒 <b>9–12 ans :</b> beaucoup de mains levées, les portraits racontés comme des histoires.
+🧑 <b>12–18 ans :</b> plus vite sur les domaines, plus loin sur le binaire.</div>
 
-<div class="bloc"><div class="tete"><span class="h">20→22</span><span class="t">RITUEL 1 — LE SIGNAL DE SILENCE</span><span class="d">2 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">12 h 25</span><span class="t">POURQUOI CODER ?</span><span class="d">4 min</span></div>
 <div class="corps">
-<div class="dis">« Dans cette salle, il y aura du bruit, et c'est normal : quand on code à deux, on parle.
-Mais quand j'ai besoin de vous, j'ai un signal. »<br><br>
-« Quand vous entendez ça : mains sur la table, yeux sur moi, plus un mot. En 3 secondes. On s'entraîne.
-Faites du bruit… allez, du <b>vrai</b> bruit ! … <i>[signal]</i> … Trois, deux, un. <b>Parfait.</b>
-On recommence, plus fort. »</div>
-<div class="fais"><ul>
-<li>Mon signal (je le choisis maintenant et je n'en changerai jamais) : <b>☐ 3 frappes dans les mains ☐ clochette ☐ bras levés</b></li>
-<li><b>Je fais l'exercice 2 ou 3 fois</b>, en jeu. C'est un investissement, pas une perte de temps.</li>
-</ul></div>
+<div class="dis">« Première question. <b>Ce matin, avant d'arriver ici, combien d'ordres avez-vous donnés à une machine ?</b>
+… Réfléchissez. Vous avez allumé un téléphone ? Envoyé un message ? Mis de la musique ? Retiré de l'argent ?
+Regardé l'heure ?<br>
+… Chacun de ces gestes, une machine l'a exécuté parce que <b>quelqu'un, un jour, lui a écrit quoi faire.</b> »</div>
+<div class="dis">« Aujourd'hui, vous <b>utilisez</b> ce que d'autres ont écrit. Vous êtes des consommateurs.
+Coder, c'est passer de l'autre côté : <b>devenir celui qui écrit.</b> Celui qui décide ce que la machine fait.<br><br>
+Et ça sert à trois choses : <b>fabriquer</b> des outils qui n'existent pas encore, <b>résoudre</b> des problèmes
+autour de vous, et <b>comprendre</b> le monde dans lequel vous vivez — parce qu'aujourd'hui, tout ce qui vous
+entoure obéit à du code. »</div>
+<div class="fais"><ul><li><b>Question à la classe :</b> « Qu'est-ce que vous aimeriez que la machine fasse, et qu'elle ne fait pas encore ? »</li>
+<li>Je note 2 ou 3 réponses au tableau. <b>On y reviendra à la dernière séance.</b></li></ul></div>
 </div></div>
 
-<div class="bloc"><div class="tete"><span class="h">22→25</span><span class="t">RITUEL 2 — LES CARTES DE SIGNALISATION</span><span class="d">3 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">12 h 29</span><span class="t">OÙ SE CACHE LE CODE ?</span><span class="d">6 min</span></div>
 <div class="corps">
-<div class="dis">« Ici, on ne lève <b>pas</b> la main. On lève une carte.<br>
-🟢 <b>Vert</b> : ça avance, tout va bien.<br>
-🟠 <b>Orange</b> : on est bloqués. On continue à chercher, mais on a besoin d'aide.<br>
-🔴 <b>Rouge</b> : rien ne marche du tout, au secours.<br>
-🔵 <b>Bleu</b> : on a fini — et on est prêts à aider les autres.<br><br>
-Vous posez la carte sur l'écran, bien visible, et vous continuez à travailler. Nous, on voit toute la salle
-d'un coup d'œil. Je vous fais une promesse : <b>une carte orange est servie en moins de 5 minutes.
-Une carte rouge, tout de suite.</b> »</div>
-<div class="autre">Vérifie que chaque poste a bien ses 4 cartes pendant que je parle.</div>
+<div class="fais"><ul><li><b>Jeu : « il y a du code là-dedans ? »</b> Je nomme, ils répondent <b>oui / non</b> à main levée,
+j'explique en une phrase. Rythme rapide.</li></ul></div>
+<table class="mini">
+<tr><th style="width:30%">Je nomme…</th><th>Ma phrase</th></tr>
+<tr><td>🎮 Les jeux vidéo</td><td>« Chaque déplacement, chaque point, chaque adversaire : du code. »</td></tr>
+<tr><td>🏥 La santé</td><td>« Les machines qui regardent à l'intérieur du corps, les dossiers des patients, les alarmes qui sauvent une vie la nuit. »</td></tr>
+<tr><td>🌾 L'agriculture</td><td>« Savoir quand il va pleuvoir, combien d'engrais mettre, repérer une maladie sur une feuille avec une photo. »</td></tr>
+<tr><td>🎵 La musique</td><td>« Presque toute la musique que vous écoutez est enregistrée, mélangée, parfois créée avec du code. »</td></tr>
+<tr><td>🚗 Les transports</td><td>« Le GPS qui choisit ta route, les feux de circulation, les avions. »</td></tr>
+<tr><td>💸 L'argent</td><td>« Le mobile money, les distributeurs, les paiements par téléphone. »</td></tr>
+<tr><td>🎬 Le cinéma, le dessin animé</td><td>« Les images de synthèse, les décors, les personnages. »</td></tr>
+<tr><td>🚀 L'espace</td><td>« Il n'y a personne pour tourner le volant d'une fusée. C'est du code. »</td></tr>
+<tr><td>⚽ Le sport</td><td>« Les statistiques, la vidéo, les capteurs sur les joueurs. »</td></tr>
+</table>
+<div class="dis">« Alors, dans quel domaine n'y a-t-il <b>pas</b> de code ? … <b>Il n'y en a aucun.</b><br>
+Ce que vous allez apprendre ici ne sert pas à "faire de l'informatique". Ça sert <b>dans le métier que vous
+choisirez</b>, quel qu'il soit. »</div>
 </div></div>
 
-<div class="bloc"><div class="tete"><span class="h">25→28</span><span class="t">RITUEL 3 — LA RÈGLE DES 3 AVANT MOI</span><span class="d">3 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">12 h 35</span><span class="t">CEUX QUI L'ONT FAIT</span><span class="d">7 min</span></div>
 <div class="corps">
-<div class="fais"><ul><li>Je montre l'affiche du doigt en parlant.</li></ul></div>
-<div class="dis">« Avant de lever la carte orange, trois choses.<br>
-<b>Un : je relis.</b> La consigne, puis le message rouge de l'ordinateur — <b>à voix haute</b>.
-Vous verrez, ça marche tout seul une fois sur trois.<br>
-<b>Deux : je demande à mon binôme</b>, et on regarde la fiche mémo posée sur la table.<br>
-<b>Trois : on demande au binôme d'à côté.</b> 30 secondes, pas plus.<br>
-Toujours bloqués ? Carte orange, et on arrive. »</div>
-<div class="fais"><ul>
-<li>🧒 <b>9–12 ans :</b> je leur fais répéter en chœur « je relis, mon binôme, le voisin ! »</li>
-<li>🧑 <b>12–18 ans :</b> j'ajoute « c'est exactement ce qu'on attend d'un développeur ».</li>
-</ul></div>
-</div></div>
-
-<div class="bloc"><div class="tete"><span class="h">28→30</span><span class="t">RITUEL 4 — LE BINÔME</span><span class="d">2 min</span></div>
-<div class="corps">
-<div class="dis">« Ici, on code <b>à deux sur un ordinateur</b>. Ce n'est pas parce qu'on manque de machines : c'est comme ça
-que travaillent les vrais développeurs, ça s'appelle le <i>pair programming</i>.<br>
-Un <b>Pilote</b> : il tient le clavier, il est le seul à taper, et il dit à voix haute ce qu'il fait.<br>
-Un <b>Copilote</b> : il lit la consigne, il surveille les erreurs, il propose — et il <b>n'a pas le droit de toucher
-le clavier</b>. C'est le rôle le plus difficile, et c'est souvent lui qui trouve les bugs.<br>
-Toutes les 10 minutes, au signal, <b>vous échangez</b>. »</div>
+<div class="fais"><ul><li>Cinq portraits, <b>une minute chacun</b>, racontés comme des histoires. Si je projette : une photo par portrait.</li></ul></div>
+<table class="mini">
+<tr><th style="width:26%">Qui</th><th>Ce que je raconte</th></tr>
+<tr><td><b>Ada Lovelace</b><br>1815-1852</td><td>« Elle a écrit le premier programme de l'histoire… <b>avant que l'ordinateur existe.</b>
+Elle a compris qu'une machine pourrait faire plus que des calculs : de la musique, des images. Personne ne l'a crue.
+Elle avait 150 ans d'avance. »</td></tr>
+<tr><td><b>Grace Hopper</b><br>1906-1992</td><td>« Elle voulait qu'on parle à l'ordinateur avec des mots au lieu de chiffres —
+c'est grâce à des gens comme elle que Python existe. Et c'est son équipe qui a rendu célèbre le mot <b>bug</b> :
+un vrai insecte, un papillon de nuit coincé dans la machine, collé dans le cahier de bord. Depuis, une erreur
+dans un programme s'appelle un bug. »</td></tr>
+<tr><td><b>Katherine Johnson</b><br>1918-2020</td><td>« Elle a calculé les trajectoires des fusées de la NASA. Quand les premiers
+ordinateurs sont arrivés, les astronautes ont demandé qu'<b>elle</b> revérifie les calculs de la machine à la main
+avant de décoller. Elle était noire, dans une Amérique qui séparait les gens par la couleur. Elle a quand même
+envoyé des hommes dans l'espace. »</td></tr>
+<tr><td><b>Guido van Rossum</b><br>né en 1956</td><td>« C'est lui qui a créé <b>Python</b>, le langage que vous allez apprendre
+aujourd'hui. Il voulait un langage simple, lisible, que des débutants pourraient comprendre. C'est pour ça qu'on
+l'a choisi pour vous. »</td></tr>
+<tr><td><b>Verone Mankou</b><br>né en 1986, Congo</td><td>« Il a conçu la première tablette pensée et lancée en Afrique centrale,
+puis un smartphone. Des gens lui ont dit que c'était impossible depuis chez lui. Il l'a fait quand même. »</td></tr>
+</table>
+<div class="dis"><b>La conclusion — c'est le message de ce bloc :</b><br>
+« Regardez-les bien. Une femme de 1843. Une femme noire à qui on interdisait certaines portes. Un jeune Africain
+à qui on a dit que c'était impossible.<br>
+<b>Aucun d'eux n'a commencé en sachant coder.</b> Ils ont tous commencé exactement là où vous êtes assis aujourd'hui. »</div>
+<div class="fais"><ul><li>💡 <b>J'ajoute un portrait que je connais bien</b> — quelqu'un de mon pays, de ma ville, de mon entourage.
+Un exemple proche vaut mieux qu'un exemple célèbre. Le mien : ..........................................</li></ul></div>
 </div></div>
 
 <div class="pb"></div>
-<div class="bloc"><div class="tete"><span class="h">30→55</span><span class="t">LE TEST DE DÉCOLLAGE</span><span class="d">25 min · 3 stations × 8 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">12 h 42</span><span class="t">DU BINAIRE À L'ÉDITEUR</span><span class="d">7 min</span></div>
+<div class="corps">
+<div class="fais"><ul><li><b>Activité debout (3 min) :</b> je fais lever <b>8 élèves</b> en ligne face à la classe.</li></ul></div>
+<div class="dis">« Vous êtes l'intérieur d'un ordinateur. Chacun de vous n'a le droit d'être que dans deux états :
+<b>debout = 1</b>, <b>assis = 0</b>. C'est tout. Pas de "peut-être", pas de "un peu". L'ordinateur ne sait faire que
+ça : du courant qui passe, ou qui ne passe pas.<br><br>
+Maintenant on va écrire une lettre. La lettre <b>A</b>, pour une machine, c'est : <b>01000001</b>.
+Allez : assis, debout, assis, assis, assis, assis, assis, debout. … <b>Voilà. Vous êtes la lettre A.</b> »</div>
+<div class="dis">« Vous imaginez écrire tout un jeu comme ça ? Avec des milliers de 0 et de 1 ? … Personne ne veut faire ça.
+<b>Alors on a inventé des langages</b> pour parler à la machine avec des mots. Python est l'un d'eux — et l'un des
+plus proches de l'anglais courant. »</div>
+<div class="tableau">   MOI              PYTHON            L'INTERPRÈTE          0 et 1         LA MACHINE
+   j'écris   →   print("Bonjour")  →   il traduit    →   01110000...  →   elle obéit
+  dans THONNY      (des mots !)        (le traducteur)                    (elle affiche)</div>
+<div class="dis">« Trois mots à retenir.<br>
+<b>Python</b>, c'est la <b>langue</b> dans laquelle j'écris mes ordres — avec des mots, pas des chiffres.<br>
+<b>L'interprète</b>, c'est le <b>traducteur</b> : il transforme mes mots en 0 et en 1. Il est déjà installé,
+vous ne le verrez jamais, mais il travaille à chaque fois.<br>
+<b>Thonny</b>, c'est l'<b>éditeur</b> : c'est ma feuille, avec un bouton "vas-y". C'est le seul des trois que vous
+allez toucher.<br><br>
+Et <b>retenez surtout ceci</b> : l'ordinateur, dans tout ça, <b>ne réfléchit jamais</b>. Il ne devine pas ce que vous
+voulez dire. <b>Il n'est pas intelligent : il est obéissant.</b> S'il fait une bêtise, ce n'est pas lui qui s'est trompé. »</div>
+</div></div>
+
+<div class="bloc"><div class="tete"><span class="h">12 h 49</span><span class="t">L'ALGORITHME</span><span class="d">6 min</span></div>
+<div class="corps">
+<div class="fais"><ul><li><b>Le robot humain (4 min) :</b> un élève volontaire au fond de la salle.</li>
+<li><b>Il obéit à la lettre</b> — donc il se cogne, il s'arrête trop tôt, il tourne dans le vide. C'est exactement
+l'effet recherché : on rit, et on comprend.</li></ul></div>
+<div class="dis">« Lui, c'est un robot. Il ne comprend que trois ordres : <b>AVANCE</b>, <b>TOURNE À GAUCHE</b>,
+<b>TOURNE À DROITE</b>. Il n'a pas d'imagination : il fait <b>exactement</b> ce qu'on lui dit, ni plus, ni moins.
+Votre mission, tous ensemble : l'amener au tableau, et lui faire écrire un X. »</div>
+<div class="dis">« Vous venez de vivre ce que vit un programmeur toute la journée. Ce que vous avez écrit —
+cette suite d'ordres précis, dans le bon ordre — <b>ça s'appelle un algorithme.</b> »</div>
+<div class="tableau">UN ALGORITHME, C'EST UNE SUITE D'ORDRES PRÉCIS,
+DONNÉS DANS LE BON ORDRE, POUR ARRIVER À UN RÉSULTAT.</div>
+<div class="fais"><ul><li>Je le fais <b>recopier</b> par les élèves.</li></ul></div>
+<div class="dis">« Une recette de cuisine est un algorithme. Un itinéraire est un algorithme. Les règles du morpion
+sont un algorithme — et c'est précisément celui-là que vous allez apprendre à écrire pendant 22 samedis.<br><br>
+<b>Attention :</b> l'algorithme, ce n'est pas encore du code. C'est la <b>réflexion</b> avant le code. On peut
+l'écrire en français, sur du papier, sans ordinateur. <b>C'est la partie la plus difficile du métier — et c'est
+celle que vous allez travailler dans un instant.</b> »</div>
+<div class="dis">« Pause de dix minutes. Levez-vous, sortez, bougez — et revenez à l'heure. »</div>
+</div></div>
+
+<div class="bloc"><div class="tete"><span class="h">12 h 55</span><span class="t">PAUSE</span><span class="d">10 min</span></div>
+<div class="corps">
+<div class="alerte">Les élèves <b>sortent vraiment</b>. Pause non négociable après 30 minutes de théorie.</div>
+<div class="fais"><ul>
+<li>J'installe les <b>3 stations</b> du test avec mon collègue : postes / tables sans machine / table du fond.</li>
+<li>Je revérifie que le <b>Kahoot est prêt</b> et que la connexion tient.</li>
+<li><b>Je ne fais PAS les binômes aujourd'hui</b> : on les composera ce soir, à froid, avec le diagnostic en main.</li>
+</ul></div>
+</div></div>
+
+<div class="pb"></div>
+<div class="bloc"><div class="tete"><span class="h">13 h 05</span><span class="t">LES MISSIONS DE DÉCOLLAGE</span><span class="d">25 min · 3 stations</span></div>
 <div class="corps">
 <div class="alerte">Je ne prononce <b>jamais</b> le mot « test ». Je dis « les missions de décollage ».</div>
-<div class="dis">« Avant de décoller, tous les astronautes passent des missions de préparation. Trois missions,
-huit minutes chacune. <b>Ce n'est pas noté</b>, il n'y a pas de bonne ou de mauvaise équipe — ça sert <b>à nous</b>,
-pour bien vous accompagner. Vous êtes trois groupes. Quand j'appelle, vous tournez. »</div>
+<div class="dis">« Avant de décoller, tous les astronautes passent des missions de préparation. Trois missions.
+<b>Ce n'est pas noté</b>, il n'y a pas de bonne ou de mauvaise équipe — ça sert <b>à nous</b>, pour bien vous
+accompagner. Vous êtes trois groupes. Quand j'appelle, vous tournez. »</div>
 <div class="fais"><ul>
 <li>Je compte les élèves, je fais 3 groupes, je montre les 3 zones du doigt.</li>
-<li>Je tiens la <b>station 1 (Pilotage)</b> : j'observe et je cote. <b>Je n'aide qu'après 60 secondes de blocage réel.</b></li>
-<li>J'annonce chaque rotation à voix haute. 8 min, 8 min, 8 min.</li>
+<li>Je tiens la <b>station 1 (Pilotage)</b> : j'observe et je cote /6. <b>Je n'aide qu'après 60 secondes de blocage réel.</b></li>
+<li>J'annonce chaque rotation à voix haute : 8 min, 8 min, 8 min.</li>
 </ul></div>
+<div class="dis"><b>Le lien avec la théorie — je le dis explicitement :</b><br>
+« L'énigme du robot, c'est exactement ce qu'on a fait tout à l'heure. Et la dernière — expliquer le morpion à un
+extraterrestre — c'est <b>votre premier algorithme</b>. Gardez bien cette feuille : on la relira à la séance 10,
+quand votre programme saura reconnaître le gagnant. »</div>
 <table class="mini">
 <tr><th style="width:32%">Station</th><th>Ce qu'ils font</th><th style="width:22%">Tenue par</th></tr>
 <tr><td><b>1 · Pilotage</b> (postes)</td><td>Les 6 manœuvres machine</td><td><b>MOI</b>, je cote /6</td></tr>
@@ -195,207 +293,152 @@ pour bien vous accompagner. Vous êtes trois groupes. Quand j'appelle, vous tour
 <tr><td><b>3 · Identité</b> (fond)</td><td>« Ma fiche de Geek »</td><td>Autonomie</td></tr>
 </table>
 <div class="dis">« Missions terminées. <b>Personne n'a raté quoi que ce soit : tout le monde décolle.</b>
-Pause ! Dix minutes. Levez-vous, sortez, bougez — et revenez à l'heure. »</div>
-<div class="autre">Remplit la grille d'observation, surtout la colonne « face à la difficulté ».
-<b>Puis trie les fiches en 3 piles (P0 · P1 · P2-P3) : c'est urgent, ça sert au binômage pendant la pause.</b></div>
+Et maintenant… <b>on allume les machines.</b> »</div>
+<div class="autre">Remplit la grille d'observation, surtout la colonne <b>« face à la difficulté »</b> :
+abandonne · demande · persévère · aide les autres. Puis trie les fiches en 3 piles : P0 · P1 · P2-P3.</div>
 </div></div>
 
-<div class="bloc"><div class="tete"><span class="h">55→65</span><span class="t">PAUSE — ET BINÔMAGE</span><span class="d">10 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">13 h 30</span><span class="t">PREMIER CONTACT MACHINE — LE MOMENT QUI COMPTE</span><span class="d">15 min</span></div>
 <div class="corps">
-<div class="alerte">Les élèves <b>sortent vraiment</b>. Pendant ce temps, on forme les binômes tous les deux. <b>5 minutes chrono.</b></div>
-<div class="fais"><ul>
-<li>1. Un petit papier par élève, avec son profil <b>P0 / P1 / P2 / P3</b>.</li>
-<li>2. Je trie <b>du moins à l'aise au plus à l'aise</b>. Je coupe le paquet en deux : pile A et pile B.</li>
-<li>3. J'associe le <b>1ᵉʳ de A avec le 1ᵉʳ de B</b>, le 2ᵉ avec le 2ᵉ, etc. → écart d'un niveau, jamais P0 avec P3.</li>
-<li>4. J'ajuste 2 ou 3 cas à la main (qui ne doit pas être avec qui, le timide avec un patient).</li>
-<li>5. Nombre impair → <b>un trinôme</b> : Pilote / Copilote / <b>Testeur</b>. Jamais un élève seul.</li>
-<li>6. <b>J'écris la liste au tableau avec le numéro de poste</b> — l'installation doit être instantanée.</li>
-</ul></div>
-</div></div>
+<div class="fais"><ul><li><b>a) Les cartes et la règle des 3 avant moi (3 min).</b> Les 4 cartes sont déjà sur chaque poste.</li></ul></div>
+<div class="dis">« À partir de maintenant, dans cette salle, on ne lève <b>pas</b> la main. On lève une carte.<br>
+🟢 <b>Vert</b> : ça avance. 🟠 <b>Orange</b> : on est bloqués, on cherche quand même. 🔴 <b>Rouge</b> : rien ne
+marche, au secours. 🔵 <b>Bleu</b> : on a fini, on peut aider.<br>
+Vous la posez sur l'écran, bien visible, et vous continuez à travailler. Nous, on voit toute la salle d'un coup
+d'œil. <b>Une carte orange est servie en moins de 5 minutes. Une carte rouge, tout de suite.</b><br><br>
+Et avant de lever l'orange, trois choses <i>(je montre l'affiche)</i> : <b>je relis</b> la consigne et le message
+rouge <b>à voix haute</b> · <b>je demande à mon voisin</b> · <b>on regarde la fiche mémo</b>. Ensuite seulement, la carte. »</div>
 
-<div class="bloc"><div class="tete"><span class="h">65→70</span><span class="t">BINÔMES + ENGAGEMENT COLLECTIF</span><span class="d">5 min</span></div>
-<div class="corps">
-<div class="dis">« Les équipes sont au tableau, avec le numéro de votre poste. Vous ne choisissez pas votre binôme —
-comme au travail. Vous en changerez dans trois semaines. Installez-vous. »</div>
-<div class="fais"><ul><li>2 minutes d'installation, puis <b>signal de silence</b>, et tout le monde se tourne vers l'affiche du contrat.</li></ul></div>
-<div class="dis">« Le contrat des Geeks est affiché là. On va le lire <b>ensemble, à voix haute</b>. Je lis une règle,
-vous la répétez. Prêts ?<br>
-<i>« Quand je suis copilote… je ne touche pas le clavier. »</i><br>
-<i>« Quand je suis pilote… je dis à voix haute ce que je tape. »</i><br>
-<i>« Je ne dis jamais "t'es nul"… je dis "essaie ça". »</i><br>
-<i>« Si mon binôme n'a pas compris… on ne passe pas à la suite. »</i><br>
-<i>« Une erreur, ce n'est pas une honte… c'est une information. »</i><br>
-<i>« On lève la carte ensemble… pas chacun de son côté. »</i><br><br>
-Maintenant, tournez-vous vers votre binôme, regardez-le, et <b>topez-là</b>. Voilà, <b>c'est signé</b>.
-Ça vaut une signature, et je m'en souviendrai. »<br><br>
-« Celui dont le prénom commence par la lettre la plus proche de A est <b>Pilote</b> en premier. L'autre est
-<b>Copilote</b>. Copilotes, levez la main… vous êtes les gardiens : <b>vos doigts ne touchent pas le clavier</b>. »</div>
-</div></div>
-
-<div class="pb"></div>
-<div class="bloc"><div class="tete"><span class="h">70→78</span><span class="t">VISITE GUIDÉE DE THONNY</span><span class="d">8 min</span></div>
-<div class="corps">
-<div class="alerte">Ils <b>regardent seulement</b>. Personne ne touche encore. Je vais très lentement.</div>
-<div class="dis">« Voici l'outil des Geeks. Il s'appelle <b>Thonny</b>. Il n'y a que trois choses à retenir aujourd'hui. »<br><br>
-<b>1. La zone du haut, blanche :</b> « c'est votre feuille. Ce que vous écrivez ici, l'ordinateur ne le fait pas
-tout de suite : il attend. »<br><br>
-<b>2. La zone du bas :</b> « c'est sa bouche. Tout ce qu'il a à vous dire sort ici. Y compris quand il n'est pas
-content — en rouge. »<br><br>
-<b>3. Le bouton vert ▶ / la touche F5 :</b> « c'est le bouton <i>vas-y</i>. L'ordinateur lit votre programme du début
-à la fin et fait <b>exactement</b> ce que vous avez écrit. Ni plus, ni moins. Retenez bien :
-<b>l'ordinateur n'est pas intelligent. Il est obéissant.</b> Si votre programme fait une bêtise, ce n'est pas lui
-qui s'est trompé. »</div>
-<div class="fais"><ul><li>Je montre en 30 secondes : <span class="mono">Fichier &gt; Enregistrer</span>, et
-<span class="mono">Bureau / GEEKS / mon_xo</span>.</li></ul></div>
-</div></div>
-
-<div class="bloc"><div class="tete"><span class="h">78→90</span><span class="t">LIVE CODING — « JE CODE, VOUS PRÉDISEZ »</span><span class="d">12 min</span></div>
-<div class="corps">
-<div class="fais"><ul><li><b>A.</b> Je tape caractère par caractère, en verbalisant :</li></ul></div>
+<div class="fais"><ul><li><b>b) Le live coding (5 min).</b> Trois repères Thonny suffisent : la zone du haut (ma feuille),
+la zone du bas (sa bouche), le bouton vert ▶ / <span class="mono">F5</span> (vas-y). Je tape très lentement.</li></ul></div>
 <div class="ecran">print("Bonjour")</div>
-<div class="dis">« p-r-i-n-t, ça veut dire <b>affiche</b>. Une parenthèse : on l'ouvre, on la fermera <b>toujours</b>.
-Un guillemet, mon texte, un guillemet. Et on referme.<br>
+<div class="dis">« <b>p-r-i-n-t</b>, ça veut dire <b>affiche</b>. Une parenthèse : on l'ouvre, on la fermera <b>toujours</b>.
+Un guillemet, mon texte, un guillemet. On referme.<br>
 <b>Avant que j'appuie : qu'est-ce qui va se passer ? À trois. Un, deux, trois !</b> »<br><br>
 <i>(j'exécute)</i> « Voilà. Vous venez de voir un ordinateur <b>obéir</b>. C'est tout le métier. »</div>
 
-<div class="fais"><ul><li><b>B.</b> J'ajoute une deuxième ligne :</li></ul></div>
-<div class="ecran">print("Bonjour")
-print("Je suis ton ordinateur")</div>
-<div class="dis">« Qu'est-ce que ça va afficher ? Dans quel ordre ? Levez la main ceux qui pensent que "Bonjour"
-sortira en premier… On vérifie. »<br><br>
-« Règle numéro un : <b>l'ordinateur lit de haut en bas, ligne par ligne, dans l'ordre.</b> Toujours. »</div>
-
-<div class="fais"><ul><li><b>C. 🔥 L'ERREUR VOLONTAIRE — le moment le plus important de la séance.</b>
-J'efface le guillemet de fin, et j'exécute.</li></ul></div>
+<div class="fais"><ul><li><b>🔥 L'ERREUR VOLONTAIRE — le moment le plus important de la séance.</b> J'efface le guillemet de fin
+et j'exécute.</li></ul></div>
 <div class="ecran">print("Bonjour)</div>
 <div class="dis"><i>(grand sourire)</i> « <b>Ah ! Du rouge !</b> … Alors, qui a peur ? »<br><br>
 <i>(laisser réagir, puis très calmement)</i><br>
 « Moi je code depuis des années, et j'ai du rouge <b>tous les jours</b>. Le rouge, ce n'est pas une punition.
 Ce n'est pas une mauvaise note. <b>C'est l'ordinateur qui vous explique ce qu'il n'a pas compris.</b>
-Il essaie de vous aider. Le problème, c'est qu'il le dit en anglais. Alors on va apprendre à le lire. Ensemble.<br>
-Il a écrit : <span class="mono">SyntaxError</span>. Quelqu'un devine ? … <i>Syntax</i>, c'est la grammaire.
+Il essaie de vous aider — mais il le dit en anglais. Alors on va apprendre à le lire. Ensemble.<br>
+Il a écrit <span class="mono">SyntaxError</span>. Quelqu'un devine ? … <i>Syntax</i>, c'est la grammaire.
 <i>Error</i>, l'erreur. Il nous dit : <b>"je ne comprends pas ta phrase"</b>. Et regardez : il montre même
 l'endroit avec une petite flèche. »<br><br>
 <i>(je répare, je relance, ça marche)</i><br>
-« Réparé en quatre secondes. Retenez ça : <b>dans cette salle, le rouge n'est pas grave.
-Le rouge est une information.</b> »</div>
+« Réparé en quatre secondes. Retenez ça : <b>dans cette salle, le rouge n'est pas grave. Le rouge est une
+information.</b> »</div>
 <div class="fais"><ul>
-<li>Je vais écrire <span class="mono">SyntaxError</span> sur l'affiche du <b>Dictionnaire des erreurs</b>.</li>
+<li>J'écris <span class="mono">SyntaxError</span> sur l'affiche du <b>Dictionnaire des erreurs</b>.</li>
 <li>Je nomme le <b>Gardien des erreurs</b> de la séance : ....................................</li>
 </ul></div>
 
-<div class="fais"><ul><li><b>D.</b> Je projette le résultat à obtenir et j'annonce les 3 pistes :</li></ul></div>
-<div class="ecran">===================================
-       BIENVENUE DANS LE JEU XO
-===================================
-Cree par : ..............</div>
-<div class="dis">« Votre mission : faire dire ça à votre ordinateur. Avec <b>votre</b> prénom. Trois pistes, vous choisissez :<br>
-🔵 <b>Bleue</b> — le début est déjà écrit dans votre fichier, vous complétez les trous.
-<b>Aucune honte : c'est la piste la plus maligne quand on débute.</b><br>
-🔴 <b>Rouge</b> — vous écrivez tout vous-mêmes, à partir de la consigne.<br>
-⚫ <b>Noire</b> — tout ça, <b>et en plus</b> vous dessinez la grille vide du morpion en dessous. Avec des print, uniquement.<br><br>
-Personne ne vous jugera sur votre piste. <b>Le jeu qui sort est le même.</b> Cartes de signalisation sorties.
-Pilotes, à vous. Copilotes : vos mains restent sur vos genoux ! <b>C'est parti.</b> »</div>
-</div></div>
-
-<div class="pb"></div>
-<div class="bloc"><div class="tete"><span class="h">90→108</span><span class="t">ATELIER — LE MOMENT QUI COMPTE VRAIMENT</span><span class="d">18 min</span></div>
-<div class="corps">
-<div class="fais"><ul>
-<li>Je <b>reste debout, devant</b>. Je balaye la salle du regard. Je ne me déplace que pour une <b>carte rouge</b>.</li>
-<li><b>Je lance le minuteur.</b> <b>À 99 min : signal sonore → rotation Pilote / Copilote</b>, sans exception,
-même au milieu d'une ligne.</li>
-<li><b>À 104 min :</b> je compte les écrans. <b>S'il reste un poste où rien n'est jamais sorti, on y va tous les deux.</b></li>
-<li>À 108 : signal de silence, on s'arrête.</li>
-</ul></div>
-<div class="alerte">Mes 4 phrases, et rien d'autre. <b>Je ne prends jamais le clavier.</b>
-Si c'est indispensable : je demande la permission, je tape <b>une ligne</b>, je la commente, je rends le clavier.</div>
+<div class="fais"><ul><li><b>c) Chacun à son poste (7 min).</b> Le fichier est déjà ouvert : c'est un texte à trous
+qui fonctionne dès la première exécution.</li>
+<li><b>Je lance le minuteur.</b> À <b>13 h 42</b> je compte les écrans. <b>S'il reste un poste où rien n'est jamais
+sorti, on y va tous les deux.</b></li></ul></div>
+<div class="dis">« À vos postes, avec votre voisin. Le fichier est déjà ouvert. <b>Premier geste : appuyez sur F5,
+tout de suite, avant d'avoir rien écrit.</b> … Vous voyez ? Ça marche déjà.<br>
+Maintenant, vous remplacez chaque <span class="mono">____</span> par ce qu'on vous demande : le titre du jeu,
+<b>votre prénom</b>, votre âge, et une phrase à vous. Vous relancez après <b>chaque</b> changement.
+Cartes sorties. C'est parti ! »</div>
+<div class="alerte">Mes 4 phrases, et rien d'autre. <b>Je ne prends jamais le clavier.</b> Si c'est indispensable :
+je demande la permission, je tape <b>une ligne</b>, je la commente, je rends le clavier.</div>
 <table class="mini">
 <tr><th style="width:40%">Ce que je vois</th><th>Ce que je dis</th></tr>
 <tr><td><span class="mono">SyntaxError</span></td><td>« Compte tes guillemets. Il en faut deux, comme une paire de chaussures. »</td></tr>
 <tr><td>Parenthèse oubliée</td><td>« Tout ce qui s'ouvre doit se fermer. »</td></tr>
 <tr><td><span class="mono">NameError: 'Print'</span></td><td>« L'ordinateur est très à cheval sur les majuscules. <span class="mono">print</span>, tout en minuscules. »</td></tr>
-<tr><td>Texte sans guillemets</td><td>« Du texte, ça se met toujours entre guillemets — sinon il croit que c'est un ordre. »</td></tr>
 <tr><td>Ne trouve pas <span class="mono">"</span> ou <span class="mono">(</span></td><td>Je montre la touche du doigt. <b>Je ne tape pas à sa place.</b></td></tr>
 <tr><td>Il tape dans la zone du bas</td><td>« Ça, c'est sa bouche. Ta feuille, c'est en haut. »</td></tr>
 <tr><td>Fichier non enregistré</td><td>« Tu enregistres d'abord, tu lances ensuite. Toujours. »</td></tr>
-<tr><td><b>Carte 🔵 en 5 minutes</b></td><td>« Passe en piste Noire. » puis « Va aider le poste ___ — <b>interdiction de toucher leur clavier</b>. »</td></tr>
-<tr><td><b>Binôme qui n'a pas fini</b></td><td>À voix haute pour tous : « <b>Personne ne finit tout aujourd'hui, c'est normal, et ça ne vous mettra jamais en retard.</b> »</td></tr>
 </table>
-<div class="autre">Circuit en U, <b>en commençant par les postes P0</b>. Valide oralement les 3 gestes machine
-(<b>ouvrir Thonny et lancer</b> · <b>enregistrer au bon endroit</b> · <b>retrouver son fichier</b>).</div>
+<div class="dis"><i>(à 13 h 44)</i> « Tout le monde : <span class="mono">Fichier</span>,
+<span class="mono">Enregistrer</span>. Pouce levé quand c'est fait. »</div>
+<div class="autre">Circuit en U, <b>en commençant par les élèves repérés en difficulté à la station 1</b>.
+Sert les cartes orange en moins de 5 min, les rouges tout de suite. <b>À 13 h 42 : vérifie qu'aucun écran n'est
+resté vide.</b> Puis passe avec la clé sauvegarder le travail de chaque poste.</div>
 </div></div>
 
-<div class="bloc"><div class="tete"><span class="h">108→114</span><span class="t">MISE EN COMMUN + LE FILET</span><span class="d">6 min</span></div>
+<div class="pb"></div>
+<div class="bloc"><div class="tete"><span class="h">13 h 45</span><span class="t">LE KAHOOT</span><span class="d">10 min</span></div>
 <div class="corps">
-<div class="fais"><ul><li>Je choisis <b>un binôme piste Bleue</b>, puis un binôme piste Noire. <b>Dans cet ordre, jamais l'inverse.</b></li></ul></div>
-<div class="dis">« Poste ___, montrez-nous votre écran… Vous avez fait quoi ?… Applaudissez-les. »<br><br>
-<i>(après la Noire)</i> « Vous voyez : le leur a une grille en plus. Mais les deux jeux disent bonjour, et les deux
-marchent. Piste Bleue ou piste Noire : <b>vous avez tous franchi la case 1.</b> »</div>
-<div class="fais"><ul><li><b>Le Filet — je le fais solennellement</b>, au vidéoprojecteur : je branche la clé et je copie
-<span class="mono">jeu.py</span> dans <span class="mono">xo_officiel/</span>, devant tout le monde.</li></ul></div>
-<div class="dis">« Vous vous souvenez de ma troisième promesse ? Regardez bien.<br><br>
-Ce fichier, c'est le <b>code officiel</b>. Il contient exactement ce qu'on a fait aujourd'hui, sans erreur.
-Et samedi prochain, <b>je le redonne à tout le monde</b>.<br>
-Ça veut dire quoi ? Que si vous êtes malade samedi prochain… vous ne serez <b>pas</b> en retard.
-Que si vous effacez tout par accident… ce n'est <b>pas</b> grave. Que si vous cassez votre code en essayant
-un truc… <b>ce n'est pas grave du tout.</b><br>
-Donc à partir d'aujourd'hui : <b>essayez des choses. Cassez. Expérimentez.</b> On a toujours une copie de secours. »<br><br>
-« Tout le monde : <span class="mono">Fichier</span>, <span class="mono">Enregistrer</span>. Vérifiez que c'est bien dans
-<span class="mono">GEEKS / mon_xo</span>. <b>Copilotes, c'est vous qui vérifiez.</b> Pouce levé quand c'est fait. »</div>
-<div class="autre">Passe avec la clé et copie le travail de chaque binôme dans <span class="mono">4-SAUVEGARDES-ELEVES/S01/</span>.</div>
+<div class="dis">« Dernière épreuve du décollage : on va voir ce qui est resté. <b>Ce n'est pas une note</b>, c'est un jeu.
+Et il y a des questions sur tout ce qu'on a fait aujourd'hui — la théorie <b>et</b> la machine. »</div>
+<div class="fais"><ul>
+<li><b>14 questions, 20 secondes chacune.</b> Les questions, les bonnes réponses et la phrase d'explication sont
+sur la fiche <span class="mono">kahoot/questions-et-reponses.md</span> — je l'ai imprimée ou ouverte à côté.</li>
+<li><b>En retard ? Je garde les 8 premières.</b></li>
+<li><b>Après chaque question, j'explique la réponse en UNE phrase.</b> C'est là que le Kahoot devient de
+l'enseignement et plus seulement un jeu.</li>
+<li><b>Je m'arrête à 13 h 55</b>, question en cours ou pas.</li>
+</ul></div>
+<div class="dis"><i>(en célébrant le podium)</i> « Et ceux qui n'ont pas gagné : <b>vous avez appris exactement les
+mêmes choses.</b> Le podium, c'est pour rire. »</div>
+<div class="alerte"><b>Pas d'internet ?</b> Version débranchée, immédiate : je lis la question et les 4 réponses,
+je les écris au tableau, je compte « 3, 2, 1 », <b>et tout le monde lève sa carte de couleur</b> —
+réponse 1 = 🔴 rouge · 2 = 🔵 bleu · 3 = 🟠 orange · 4 = 🟢 vert. Le Mécanicien compte par table.</div>
 </div></div>
 
-<div class="bloc"><div class="tete"><span class="h">114→120</span><span class="t">CLÔTURE — INTOUCHABLE</span><span class="d">6 min</span></div>
+<div class="bloc"><div class="tete"><span class="h">13 h 55</span><span class="t">CLÔTURE — INTOUCHABLE</span><span class="d">5 min</span></div>
 <div class="corps">
-<div class="alerte">Même en retard, je ne supprime <b>jamais</b> ce bloc. Sans les badges, je casse le moteur dès le premier samedi.</div>
+<div class="alerte">Même en retard, je ne supprime <b>jamais</b> ce bloc. Sans les badges, je casse le moteur dès le
+premier samedi.</div>
 <div class="fais"><ul>
 <li>🧱 <b>Bâtisseur</b> → <b>à tous ceux dont le programme a affiché quelque chose. Je vise 100 %.</b></li>
-<li>🤝 <b>Bon copilote</b> → 3 ou 4 élèves qui n'ont pas touché le clavier</li>
 <li>🐞 <b>Chasseur de bug</b> → ceux qui ont trouvé une erreur seuls</li>
 <li>💪 <b>Persévérant</b> → <b>en priorité ceux qui ont galéré et sont restés dessus. Je le dis fort.</b></li>
+<li>❓ <b>Question en or</b> → celui qui a posé la question que toute la classe se posait</li>
 <li>🔤 <b>Traducteur d'erreur</b> → le Gardien des erreurs du jour</li>
 <li>🤍 <b>Grade Novice</b> → toute la classe</li>
 <li><b>Mur de Mission</b> : je désigne <b>l'élève le plus discret de la séance</b> pour colorier la case 1</li>
 </ul></div>
-<div class="dis">« Viens colorier la case 1… <i>Le jeu dit bonjour.</i> Une case sur 22. <b>Applaudissez-vous.</b> »<br><br>
-« Prenez vos deux post-it. Sur le premier : votre prénom et <i>aujourd'hui j'ai compris ___</i>.
+<div class="dis">« Viens colorier la case 1… <i>Le jeu dit bonjour.</i> Une case sur 22. <b>Applaudissez-vous.</b> »</div>
+<div class="fais"><ul><li><b>Le Filet</b> : je branche la clé et je copie <span class="mono">jeu.py</span> dans
+<span class="mono">xo_officiel/</span>, devant tout le monde.</li></ul></div>
+<div class="dis">« Vous vous souvenez de ma troisième promesse ? Ce fichier, c'est le <b>code officiel</b>.
+Samedi prochain, <b>je le redonne à tout le monde</b>. Donc si vous êtes malade, vous ne serez <b>pas</b> en retard.
+Et si vous cassez votre code en essayant un truc, <b>ce n'est pas grave du tout</b>. Alors à partir d'aujourd'hui :
+<b>essayez des choses.</b> »</div>
+<div class="dis">« Prenez vos deux post-it. Sur le premier : votre prénom et <i>aujourd'hui j'ai compris ___</i>.
 Sur le deuxième : votre prénom et <i>je ne suis pas encore sûr de ___</i>.<br>
 Le deuxième est <b>plus important</b> que le premier : c'est lui qui nous dit par quoi commencer samedi.
-Écrivez la vérité — personne ne sera jugé, et personne d'autre que nous deux ne les lira.
-Vous les déposez dans la boîte en sortant. »<br><br>
-« Défi maison, <b>totalement facultatif</b> : expliquez à quelqu'un chez vous ce que fait <span class="mono">print</span>.
-Et si vous n'avez pas d'ordinateur à la maison — <b>aucun problème, vous ne serez jamais en retard.</b>
-Rien ici ne dépend de ce que vous faites chez vous.<br><br>
+Écrivez la vérité — personne d'autre que nous deux ne les lira. Déposez-les dans la boîte en sortant.<br><br>
+Défi maison, <b>totalement facultatif</b> : expliquez à quelqu'un chez vous ce qu'est un algorithme. Et si vous
+n'avez pas d'ordinateur à la maison, <b>aucun problème : vous ne serez jamais en retard.</b><br><br>
 Samedi prochain : le jeu va vous <b>demander votre nom</b>. À samedi, les Geeks ! »</div>
 </div></div>
 
 <div class="pb"></div>
 <h2 class="sec">👥 FICHE DU MÉCANICIEN — à donner à mon collègue</h2>
-<div class="bloc"><div class="tete"><span class="t">MA RÈGLE : JE NE PARLE JAMAIS DEVANT</span><span class="d">Séance 1</span></div>
+<div class="bloc"><div class="tete"><span class="t">MA RÈGLE : JE NE PARLE JAMAIS DEVANT</span><span class="d">Séance 1 · 12 h - 14 h</span></div>
 <div class="corps">
 <table class="mini">
-<tr><th style="width:16%">Quand</th><th>Ce que je fais</th></tr>
-<tr><td><b>00→08</b></td><td>J'accueille <b>à la porte</b>, un par un : je tope, je donne l'étiquette prénom, je coche la présence.
-J'observe : qui arrive avec un parent · qui n'ose pas entrer · qui se précipite sur la machine.</td></tr>
-<tr><td><b>08→30</b></td><td>Je distribue les cartes de signalisation. Je place les retardataires sans bruit.
-Je repère les 2 ou 3 élèves qui ne regardent déjà plus.</td></tr>
-<tr><td><b>30→55</b></td><td>Je circule entre les stations 2 et 3. <b>Je remplis la grille d'observation</b>, surtout la colonne
-<b>« face à la difficulté »</b> : abandonne · demande · persévère · aide les autres.
-<b>Puis je trie les fiches en 3 piles : P0 · P1 · P2-P3. C'est urgent.</b></td></tr>
-<tr><td><b>55→65</b></td><td><b>On forme les binômes tous les deux, 5 minutes chrono</b> (tri, coupe du paquet en deux, appariement A↔B).
-J'écris la liste au tableau avec les numéros de poste.</td></tr>
-<tr><td><b>65→90</b></td><td>Je vérifie que chaque poste a : fiche mémo · cartes · carte des pistes · le fichier
-<span class="mono">jeu.py</span> ouvert. Je reste silencieux pendant le live coding.</td></tr>
-<tr><td><b>90→108</b></td><td><b>Mon circuit en U, en commençant par les postes P0.</b> Je sers les cartes orange en moins de 5 min,
-les rouges tout de suite. Je valide oralement les 3 gestes machine.
-<b>À 104 : je vérifie qu'aucun écran n'est resté vide.</b></td></tr>
-<tr><td><b>108→120</b></td><td>Je passe avec la clé sauvegarder le travail de chaque binôme. Je récupère les post-it à la porte.
-Je salue chacun en sortant.</td></tr>
-<tr><td><b>Après</b></td><td>Tableau de suivi · saisie du diagnostic · tri des post-it · <b>liste des 10 minutes</b> pour la séance 2.</td></tr>
+<tr><th style="width:20%">Quand</th><th>Ce que je fais</th></tr>
+<tr><td><b>12 h - 12 h 15</b></td><td>J'accueille <b>à la porte</b>, un par un : étiquette prénom, présence cochée.
+J'observe : qui arrive avec un parent · qui n'ose pas entrer · qui se précipite sur la machine.
+Puis je rejoins le temps de prière.</td></tr>
+<tr><td><b>12 h 15 - 12 h 55</b></td><td>Je place les retardataires sans bruit. <b>Pendant la théorie, je m'assois au fond
+et je repère les 3 ou 4 élèves qui décrochent</b> — ce sont eux que j'irai voir en premier à 13 h 30.
+J'aide pour les activités debout (les 8 élèves du binaire, le robot humain).</td></tr>
+<tr><td><b>12 h 55 - 13 h 05</b></td><td>J'installe les 3 stations avec le Capitaine. Je revérifie le Kahoot et la connexion.</td></tr>
+<tr><td><b>13 h 05 - 13 h 30</b></td><td>Je circule entre les stations 2 et 3. <b>Je remplis la grille d'observation</b>,
+surtout la colonne <b>« face à la difficulté »</b>. Puis je trie les fiches en 3 piles : P0 · P1 · P2-P3.</td></tr>
+<tr><td><b>13 h 30 - 13 h 45</b></td><td><b>Mon circuit en U, en commençant par les élèves repérés.</b> Cartes orange
+en moins de 5 min, rouges tout de suite. Je valide oralement les gestes machine.
+<b>À 13 h 42 : je vérifie qu'aucun écran n'est resté vide.</b> Puis je sauvegarde le travail sur la clé.</td></tr>
+<tr><td><b>13 h 45 - 13 h 55</b></td><td>J'aide les élèves à rejoindre le Kahoot. <b>Sans internet : je compte les cartes
+levées par table.</b></td></tr>
+<tr><td><b>13 h 55 - 14 h</b></td><td>Je récupère les post-it à la porte. Je salue chacun en sortant.</td></tr>
+<tr><td><b>Le soir</b></td><td>Saisie du diagnostic · <b>composition des binômes de la séance 2, à froid</b> ·
+tri des post-it · lecture du rapport Kahoot · <b>liste des 10 minutes</b>.</td></tr>
 </table>
-<div class="alerte">Les 4 phrases autorisées : <b>1.</b> Lis-moi ton erreur à voix haute. <b>2.</b> Montre-moi la ligne, qu'est-ce que tu voulais qu'elle fasse ?
-<b>3.</b> Qu'est-ce qui se passerait si… ? Essaie. <b>4.</b> Explique-moi cette ligne comme si j'étais ton petit frère.
+<div class="alerte">Les 4 phrases autorisées : <b>1.</b> Lis-moi ton erreur à voix haute. <b>2.</b> Montre-moi la ligne,
+qu'est-ce que tu voulais qu'elle fasse ? <b>3.</b> Qu'est-ce qui se passerait si… ? Essaie.
+<b>4.</b> Explique-moi cette ligne comme si j'étais ton petit frère.
 <b>⛔ Je ne prends jamais le clavier d'un élève.</b></div>
 </div></div>
 </body></html>

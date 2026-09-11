@@ -7,10 +7,10 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 |---|---|
 | **Jerusalem Geeks** | 9 – 12 ans |
 | **Jeremiah Geeks** | 12 – 18 ans |
-| **Format** | 2 h, chaque samedi · 22 séances |
+| **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
 | **Encadrement** | 2 enseignants |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
-| **Première séance** | samedi 12 septembre 2026 |
+| **Première séance** | samedi 12 septembre 2026, 12 h - 14 h |
 
 ---
 
@@ -33,7 +33,8 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 |---|---|
 | Animer la séance | [🎤 Mon script d'animation](2-seances/S01-decollage/a-imprimer/00-MON-SCRIPT-animation.pdf) — 14 pages, à agrafer |
 | Tout imprimer | [🖨️ Les 14 PDF](2-seances/S01-decollage/a-imprimer/) + [les quantités](2-seances/S01-decollage/a-imprimer/quantites-et-formats.md) |
-| Faire valider la séance | [📋 La fiche pour les responsables](2-seances/S01-decollage/a-imprimer/00-FICHE-DE-VALIDATION-responsables.pdf) — envoi numérique |
+| Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S01-decollage/a-envoyer/deroule-seance-1.docx) |
+| Préparer le quiz final | [🎯 Le Kahoot : 14 questions](2-seances/S01-decollage/kahoot/questions-et-reponses.md) |
 | Comprendre le détail, minute par minute | [📖 La fiche de séance](2-seances/S01-decollage/fiche-de-seance.md) |
 | Préparer les machines | [🔧 Les outils, dans l'ordre](4-outils/LISEZ-MOI.md) |
 
@@ -63,7 +64,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 | Phase | Séances | Brique ajoutée au jeu | Notions |
 |---|---|---|---|
-| 0. Décollage | 1 | L'écran d'accueil du jeu | `print()` |
+| 0. Décollage | 1 | L'écran d'accueil du jeu | théorie de base · l'algorithme · `print()` |
 | 1. Parler au joueur | 2–5 | Le jeu demande les noms | variables, `input()`, types |
 | 2. Le plateau vit | 6–9 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
 | 3. Les règles du jeu | 10–13 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
@@ -78,7 +79,7 @@ Les rendez-vous : **S8** première démo jouable · **S14** concours de design �
 ## Où on en est
 
 - [x] La méthode pédagogique et ses annexes
-- [x] Séance 1 : fiche, script d'animation, 14 documents imprimables, code, fiche de validation
+- [x] Séance 1 : fiche, script d'animation, 14 documents imprimables, code, quiz Kahoot, déroulé Word pour les responsables
 - [x] Le classeur de suivi
 - [x] Le jeu XO terminé (démonstration d'ouverture) et les outils de préparation
 - [ ] Séances 2 à 22

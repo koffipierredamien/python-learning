@@ -24,38 +24,39 @@ Document à imprimer et à avoir sous les yeux chaque samedi.
 - [ ] Vidéoprojecteur testé, **police de l'éditeur agrandie** (taille 18 minimum)
 - [ ] Le Mur de Mission et les affiches (Règle des 3 avant moi, Contrat de binôme) sont visibles
 - [ ] Rôles du jour décidés : qui est **Capitaine**, qui est **Mécanicien**
+- [ ] Qui conduit le temps de prière
 
 ---
 
 ## 3. Le déroulé, avec les scripts d'animation
 
-### 0–10 · Accueil & décollage
+### 12 h - 12 h 15 · Prière et accueil
 > *« Bienvenue les Geeks ! Vous connaissez la routine : on allume, on ouvre le dossier officiel, et 5 minutes de clavier. Qui bat son record aujourd'hui ? »*
 
 Le Mécanicien accueille à la porte, repère les visages fermés, note les absents. Le Capitaine finit sa préparation.
 **Dès la séance 3, cette phase est 100 % autonome** — la procédure est affichée au mur en 4 images.
 
-### 10–20 · Le WOW puis le rappel
+### 12 h 15 - 12 h 25 · Le WOW puis le rappel
 On lance **le jeu terminé de la séance** sur le vidéoprojecteur et on y joue 30 secondes avec un élève.
 > *« Voilà ce que votre jeu saura faire dans deux heures. Vous êtes prêts ? »*
 
 Puis 3 questions de rappel, réponse à main levée, **jamais interrogation individuelle** (un élève interrogé au hasard et qui ne sait pas répond une fois, et ne lève plus jamais la main).
 
-### 20–35 · La notion
+### 12 h 25 - 12 h 40 · La notion
 **Toujours dans cet ordre :**
 1. **Débranché** (5 min) — avec le corps ou des objets. *Exemple pour les listes : sept élèves debout, chacun tient un carton numéroté de 0 à 6. « Le plateau, c'est vous. Élève numéro 4, lève ton carton : voilà `plateau[4]`. »*
 2. **Live coding lent** (8 min) — l'enseignant tape en direct, très lentement, en verbalisant tout. **Règle : « je code, vous prédisez »** — s'arrêter avant chaque exécution : *« qu'est-ce qui va s'afficher ? À trois : un, deux, trois ! »*
 3. **L'erreur volontaire** (2 min) — l'enseignant fait une faute réaliste (oubli des deux-points, indentation, `=` au lieu de `==`), montre le message d'erreur, **le lit à voix haute, le traduit en français**, et le répare.
    > *« Vous voyez ? Moi aussi je fais des erreurs, tout le temps. La différence, c'est que je sais lire ce que l'ordinateur me dit. »*
 
-### 35–55 · Atelier 1 · 65–90 · Atelier 2
+### 12 h 40 - 13 h · Atelier 1 · 13 h 10 - 13 h 35 · Atelier 2
 Annonce systématique avant de lâcher la classe :
 > *« Atelier 1 : mission = ___ . Piste Bleue si vous voulez être guidés, Rouge pour le niveau normal, Noire si vous voulez du défi. Cartes de signalisation sorties. Pilote et copilote : vous savez qui vous êtes. Rotation dans 10 minutes. C'est parti ! »*
 
 Pendant l'atelier :
 - Le Capitaine **reste debout, devant**, sauf pour aller sur une carte rouge. Il garde une vue d'ensemble de la salle et surveille le temps.
 - Le Mécanicien fait son **circuit en U**, en commençant par la zone des profils P0.
-- **Signal sonore de rotation** pilote/copilote toutes les 10 minutes (minuteur visible au mur ou projeté).
+- **Signal sonore de rotation** pilote/copilote toutes les 10 à 12 minutes (minuteur visible au mur ou projeté).
 
 **Comment aider sans faire à la place — les 4 phrases autorisées :**
 1. *« Lis-moi ton message d'erreur à voix haute. »*
@@ -65,18 +66,18 @@ Pendant l'atelier :
 
 **Interdit :** prendre le clavier de l'élève. Si vraiment nécessaire : demander la permission, taper au maximum une ligne, la commenter à voix haute, puis rendre le clavier immédiatement.
 
-### 90–103 · Chasse aux bugs croisée
+### 13 h 35 - 13 h 47 · Chasse aux bugs croisée
 > *« Vous changez de place : binôme 1 va tester le jeu du binôme 2. Votre mission : le faire planter. Vous avez la grille de test. Tout bug trouvé = un badge Chasseur de bug pour vous, et un badge Testeur impitoyable si vous expliquez gentiment comment le réparer. »*
 
 C'est la phase qui **absorbe naturellement les écarts de rythme** : les binômes rapides deviennent testeurs et Geek Mentors, les binômes lents finissent leur brique pendant qu'on teste leur jeu.
 
-### 103–113 · Mise en commun
+### 13 h 47 - 13 h 55 · Mise en commun
 - 2 binômes montrent (2 min chacun) — **tenir la liste de passage** pour que tout le monde passe au moins une fois par mois. Un binôme timide passe en duo avec l'enseignant à côté de lui.
 - Récapitulatif en 3 phrases maximum, écrites au tableau.
 - **Publication du nouveau code officiel** (clé USB / dossier partagé), devant les élèves : c'est un moment rituel, on le fait solennellement.
 - Distribution du défi maison **facultatif**, en insistant : *« Ceux qui n'ont pas d'ordinateur à la maison : ce n'est pas grave du tout, vous ne serez jamais en retard à cause de ça. »*
 
-### 113–120 · Clôture rituelle
+### 13 h 55 - 14 h · Clôture rituelle
 1. Remise des badges et des grades, avec applaudissements.
 2. Avancée du **Mur de Mission** par un élève désigné.
 3. Post-it : *« aujourd'hui j'ai compris ___ , je ne suis pas encore sûr de ___ »*, déposé dans la boîte en sortant.

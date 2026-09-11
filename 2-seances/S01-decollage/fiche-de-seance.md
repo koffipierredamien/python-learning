@@ -3,7 +3,7 @@
 > **Fiche de conduite détaillée.** Tout ce qui doit être dit, tout ce qui doit être fait.
 > Les passages en **🗣️ guillemets** sont des scripts : ils peuvent être lus tels quels.
 > `CAP` = le Capitaine (anime devant) · `MEC` = le Mécanicien (circule, observe, dépanne).
-> Voir [la méthode pédagogique](../../1-methode/methode-pedagogique.md) pour les principes, et [l'annexe A2](../../1-methode/annexes/A2-conduite-de-seance.md) pour le rituel des séances ordinaires.
+> Voir [la méthode pédagogique](../../1-methode/methode-pedagogique.md) pour les principes.
 
 ---
 
@@ -12,145 +12,162 @@
 | | |
 |---|---|
 | **Numéro** | 1 / 22 — Phase 0 « Décollage » |
-| **Durée** | 2 h (120 min) |
+| **Date** | samedi 12 septembre 2026 · **12 h - 14 h** |
 | **Classes** | Jerusalem Geeks (9–12) et Jeremiah Geeks (12–18) — même déroulé, variantes signalées par 🧒 et 🧑 |
-| **Notion Python** | `print()` — faire parler l'ordinateur |
+| **Notions** | Pourquoi et comment on code · du binaire à Python · l'algorithme · `print()` |
 | **Brique ajoutée au projet** | **L'écran d'accueil du jeu XO** : le jeu s'annonce et affiche le nom de son créateur |
 | **Livrable élève** | Un fichier `mon_xo/jeu.py` qui s'exécute et affiche un écran d'accueil |
-| **Particularité** | Séance atypique : elle installe les rituels et contient le Test de Décollage. **Le temps de code est volontairement court (18 min).** La séance 2 est la première séance de format normal. |
+| **Particularité** | Séance de lancement : prière, théorie fondatrice, test de positionnement et quiz Kahoot. **Le temps de code est volontairement court (12 min).** La séance 2 est la première séance de format normal. |
 
-### Les 6 objectifs, par ordre de priorité
+### Les 5 objectifs, par ordre de priorité
 
 1. **Que chaque élève reparte en ayant fait tourner un programme qu'il a écrit lui-même.** *Non négociable — y compris pour l'élève qui n'a jamais touché un ordinateur.*
-2. Que chaque élève reparte avec l'envie de revenir samedi.
-3. Que les 4 rituels soient installés (signal de silence, cartes de signalisation, règle des 3 avant moi, contrat de binôme).
-4. Que les enseignants connaissent le profil de chaque élève.
-5. Que chaque élève sache où est son fichier et comment le retrouver.
-6. Que chaque élève ait vu un message d'erreur — et compris que ce n'est pas grave.
+2. Que chaque élève comprenne **pourquoi** il est là, et ait envie de revenir samedi.
+3. Que les enseignants connaissent le niveau réel de chaque élève.
+4. Que chaque élève sache dire ce qu'est **un algorithme**, et comment l'ordinateur comprend ce qu'on lui écrit.
+5. Que le vocabulaire du jour soit **vérifié**, pas seulement énoncé — c'est le rôle du Kahoot final.
 
-> **L'objectif n° 1 prime sur tous les autres.** Si le temps manque, on sacrifie le Test de Décollage (reportable à la séance 2), jamais l'atelier de code.
+> **L'objectif n° 1 prime sur tous les autres.** Si le temps manque, on raccourcit le Kahoot, puis la théorie, puis le test de positionnement. **Jamais le temps machine.**
 
 ---
 
-## 1. Préparation
+## 1. Le programme de la séance
+
+| Horaire | Séquence | Durée |
+|---|---|---|
+| **12 h - 12 h 15** | Prière et accueil | 15 min |
+| **12 h 15 - 12 h 25** | L'effet WOW et les trois promesses | 10 min |
+| **12 h 25 - 12 h 55** | La théorie : pourquoi et comment on code | 30 min |
+| **12 h 55 - 13 h 05** | Pause | 10 min |
+| **13 h 05 - 13 h 30** | Les missions de décollage (test de positionnement) | 25 min |
+| **13 h 30 - 13 h 45** | Premier contact machine : mon premier programme | 15 min |
+| **13 h 45 - 13 h 55** | Le Kahoot | 10 min |
+| **13 h 55 - 14 h** | Clôture : badges, Mur de Mission, post-it | 5 min |
+
+### Détail de la théorie (12 h 25 - 12 h 55)
+
+| Horaire | Sujet |
+|---|---|
+| 12 h 25 - 12 h 29 | Pourquoi coder ? |
+| 12 h 29 - 12 h 35 | Où se cache le code ? Les domaines d'application |
+| 12 h 35 - 12 h 42 | Ceux qui ont fait des choses impressionnantes avec du code |
+| 12 h 42 - 12 h 49 | Comment l'ordinateur comprend : du binaire à l'éditeur |
+| 12 h 49 - 12 h 55 | La notion d'algorithme |
+
+### Ce qui a été retiré du programme initial, et où c'est parti
+
+| Retiré de la séance 1 | Pourquoi | Devient quoi |
+|---|---|---|
+| Le bloc des 4 rituels (10 min) | Trop tôt et trop long : on installe un rituel **au moment où il sert** | Le signal de silence est posé en 1 min à 12 h 15 ; les cartes de signalisation et la règle des 3 avant moi à 13 h 30, juste avant la machine |
+| La constitution des binômes pendant la pause (5 min) | Faire des binômes en 5 minutes chrono était le point le plus fragile de la séance | **Reporté à la séance 2**, composés à froid le soir même à partir du diagnostic. C'est mieux fait. En séance 1, chacun travaille avec son voisin de poste |
+| Le contrat de binôme (2 min) | Sans binômes officiels, il n'a pas d'objet | Séance 2, avec l'engagement collectif à voix haute |
+| La visite guidée de Thonny (8 min) | On peut découvrir l'outil en s'en servant | Fondue dans le premier contact machine, réduite à 3 repères |
+| Le live coding en 4 étapes (12 min) | Trop long après 30 min de théorie | Condensé à 5 min. **L'erreur volontaire est conservée** : c'est le moment le plus important de la séance |
+| Les 3 pistes Bleue / Rouge / Noire | Tout le monde fait la même chose aujourd'hui : compléter un fichier déjà prêt | **Démarrent à la séance 2** |
+| La mise en commun et les 2 démonstrations (6 min) | Le Kahoot joue ce rôle, et mieux : il fait participer tout le monde | Le Kahoot |
+
+---
+
+## 2. Préparation
 
 ### J-7 — À faire impérativement
 
-- [ ] **Coder le jeu XO terminé** (version graphique jouable). C'est la démo du « WOW » d'ouverture : sans elle, la séance perd son moteur. Le tester sur la machine de démonstration.
-- [ ] Installer **Python + Thonny** sur toutes les machines, **version identique**, et **lancer un programme sur chaque poste** pour vérifier.
-- [ ] Créer sur chaque poste, sur le Bureau : le dossier **`GEEKS`**, contenant `xo_officiel/` (vide pour l'instant) et `mon_xo/`.
-- [ ] Régler la **taille de police de Thonny à 18** minimum sur tous les postes, et sur la machine de projection.
-- [ ] Préparer la **clé USB maîtresse** : le code officiel, les fichiers des 3 pistes, les fiches.
-- [ ] Vérifier le vidéoprojecteur **avec le câble et la machine du jour**.
+- [ ] **Coder le jeu XO terminé** ([`4-outils/jeu_xo_complet.py`](../../4-outils/jeu_xo_complet.py) est prêt : il suffit de le tester). C'est la démo du « WOW » : sans elle, la séance perd son moteur.
+- [ ] Installer **Python + Thonny** sur toutes les machines, **version identique**, et lancer [`4-outils/verifier_un_poste.py`](../../4-outils/verifier_un_poste.py) sur **chaque** poste.
+- [ ] Lancer [`4-outils/installer_dossier_geeks.py`](../../4-outils/installer_dossier_geeks.py) sur chaque poste : le dossier `GEEKS` doit apparaître sur le Bureau.
+- [ ] Régler la **taille de police de Thonny à 18** minimum sur tous les postes et sur la machine de projection.
+- [ ] **Créer le Kahoot** : importer [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) dans votre compte, relire les 14 questions, **et tester le jeu en solo une fois**.
+- [ ] **Vérifier la connexion internet de la salle** — c'est la seule chose de la séance qui en dépend. Si elle est incertaine, préparez la version débranchée (§ 6).
+- [ ] Préparer la **clé USB** : `python 4-outils/preparer_cle_usb.py`.
+- [ ] Vérifier le **vidéoprojecteur** avec le câble et la machine du jour.
 
 ### J-1 — Impressions et matériel
 
-| Quantité | Document | Source |
+| Quantité | Document | Fichier |
 |---|---|---|
-| 1 par binôme | Jeu de 4 **cartes de signalisation** (vert / orange / rouge / bleu), plastifiées | [A5](../../1-methode/annexes/A5-outils-et-modeles.md) |
-| 1 affiche A3 | **Règle des 3 avant moi** | [A5](../../1-methode/annexes/A5-outils-et-modeles.md) |
-| 1 affiche A3 | **Contrat de binôme** | [A5](../../1-methode/annexes/A5-outils-et-modeles.md) |
-| 1 affiche A3 | **Dictionnaire des erreurs**, avec seulement 3 lignes remplies | [A5](../../1-methode/annexes/A5-outils-et-modeles.md) |
-| 1 affiche A1 | **Mur de Mission** : 22 cases, case 1 = « Le jeu dit bonjour » | [A4 §3](../../1-methode/annexes/A4-grades-et-badges.md) |
-| 1 par élève | Questionnaire **station 3** | [A1 §4](../../1-methode/annexes/A1-diagnostic-et-passeport.md) |
-| 6 exemplaires | Cartes-missions **station 1** | [A1 §2](../../1-methode/annexes/A1-diagnostic-et-passeport.md) |
-| 6 exemplaires | Feuilles d'énigmes **station 2** | [A1 §3](../../1-methode/annexes/A1-diagnostic-et-passeport.md) |
-| 2 exemplaires | **Grille d'observation** | [A1 §5](../../1-methode/annexes/A1-diagnostic-et-passeport.md) |
+| 1 par binôme | Jeu de 4 **cartes de signalisation**, plastifiées — **elles serviront aussi de cartes de réponse au Kahoot** | `a-imprimer/01-cartes-signalisation.pdf` |
+| 1 affiche A3 | **Règle des 3 avant moi** | `a-imprimer/02-affiche-3-avant-moi.pdf` |
+| 1 affiche A3 | **Contrat de binôme** *(affiché aujourd'hui, expliqué en séance 2)* | `a-imprimer/03-affiche-contrat-binome.pdf` |
+| 1 affiche A3 | **Dictionnaire des erreurs** | `a-imprimer/04-affiche-dictionnaire-erreurs.pdf` |
+| 1 affiche A3 | **Mur de Mission** | `a-imprimer/05-mur-de-mission.pdf` |
 | 1 par binôme | **Fiche mémo S1** | `a-imprimer/06-fiche-memo-eleve.pdf` |
+| 6 exemplaires | Cartes-missions **station 1** | `a-imprimer/07-station1-cartes-missions.pdf` |
+| 6 exemplaires | Feuilles d'énigmes **station 2** | `a-imprimer/08-station2-enigmes.pdf` |
+| 1 par élève | Questionnaire **station 3** | `a-imprimer/09-station3-questionnaire.pdf` |
+| 2 exemplaires | **Grille d'observation** *(pages 2-3 = corrigés)* | `a-imprimer/10-grille-observation.pdf` |
 | 3 pages | **Étiquettes prénom** | `a-imprimer/11-etiquettes-prenoms.pdf` |
-| 2 exemplaires | **Affiche « aider sans faire à la place »** (côté enseignants) | `a-imprimer/12-affiche-4-phrases-enseignant.pdf` |
-| — | Badges / autocollants, minuteur visible, **2 post-it par élève**, boîte à post-it, stylos de rechange | |
+| 2 exemplaires | **Affiche « aider sans faire à la place »** *(côté enseignants)* | `a-imprimer/12-affiche-4-phrases-enseignant.pdf` |
+| 1, agrafé | **MON SCRIPT d'animation** | `a-imprimer/00-MON-SCRIPT-animation.pdf` |
+| — | Badges / autocollants, minuteur visible, **2 post-it par élève**, boîte à post-it | |
 
-> **Tous les documents ci-dessus sont déjà convertis en PDF dans [`a-imprimer/`](a-imprimer/), au bon format de papier, couleurs incluses : on ouvre et on imprime, sans rien cocher.** Le détail des quantités est dans [les quantités à imprimer](a-imprimer/quantites-et-formats.md). Les fichiers du dossier `sources/` sont les fichiers modifiables, à ne rouvrir que pour modifier un texte.
->
-> **Trois supports ont été volontairement écartés de l'impression**, et voici ce qui les remplace :
-> | Support écarté | Remplacé par |
-> |---|---|
-> | Contrat de binôme en A5 à signer | **L'affiche A3** + un **engagement collectif à voix haute** (rituel 4, 65–70 min) |
-> | Passeport Machine (livret 12 gestes) | Le suivi des gestes machine dans le **classeur de suivi**, onglet `08_Passeport` — validation orale et badge, sans papier |
-> | Journal de bord (carnet A5) | **Deux post-it par élève**, distribués en début de séance et déposés dans la boîte en sortant |
+> Les quantités et les formats sont détaillés dans [`a-imprimer/quantites-et-formats.md`](a-imprimer/quantites-et-formats.md).
+> Le document **13-cartes-pistes** n'est pas utile aujourd'hui : les 3 pistes démarrent en séance 2.
 
 ### Le jour même — 30 minutes avant
 
-- [ ] Machines allumées, Thonny ouvert sur chaque poste, dossier `GEEKS` visible
+- [ ] Machines allumées, Thonny ouvert, `GEEKS/mon_xo/jeu.py` **déjà ouvert** sur chaque poste
 - [ ] **Une machine de réserve allumée** en fond de salle
-- [ ] Le fichier de départ (`code/depart_eleves_piste_bleue.py`) est bien dans `mon_xo/jeu.py` de **chaque** poste
+- [ ] Le jeu XO fini est **lancé et réduit** dans la barre des tâches (ne jamais chercher le fichier devant la classe)
+- [ ] Le Kahoot est **ouvert dans un onglet**, prêt à démarrer
 - [ ] Affiches au mur, Mur de Mission bien visible
-- [ ] Le jeu XO fini est **ouvert et prêt à lancer** sur la machine de projection (ne pas le lancer devant les élèves en cherchant le fichier : l'effet est cassé)
 - [ ] Rôles décidés à voix haute : « aujourd'hui, je suis Capitaine, tu es Mécanicien »
-- [ ] **Salle ouverte 30 min avant** (Sas Permis Machine) : accueillir ceux qui arrivent tôt, les laisser explorer la machine
-
-### Disposition de la salle
-
-```
-                        ┌──────────────────┐
-                        │   ÉCRAN PROJETÉ  │
-                        └──────────────────┘
-                              [ CAP ]
-      ╔═══════╗   ╔═══════╗          ╔═══════╗   ╔═══════╗
-      ║ poste ║   ║ poste ║          ║ poste ║   ║ poste ║
-      ╚═══════╝   ╚═══════╝          ╚═══════╝   ╚═══════╝
-      ╔═══════╗   ╔═══════╗          ╔═══════╗   ╔═══════╗
-      ║ poste ║   ║ poste ║          ║ poste ║   ║ poste ║
-      ╚═══════╝   ╚═══════╝          ╚═══════╝   ╚═══════╝
-           ↑ circuit du MEC ↑ ─────────────────→ ↓
-      ┌─────────────────────────────────────────────────┐
-      │  MURS : 3 avant moi · Contrat · Erreurs · MUR   │
-      │  Table du fond : machine de réserve + matériel  │
-      └─────────────────────────────────────────────────┘
-```
-
-**Règle de disposition :** tous les écrans doivent être visibles depuis le fond de la salle. En U ou en rangées face au tableau, **jamais** en épi dos au mur.
 
 ---
 
-## 2. Le déroulé minute par minute
+## 3. Le déroulé
 
 ---
 
-### ⏱️ 00 – 08 · Accueil et installation *(8 min)*
+### ⏱️ 12 h - 12 h 15 · Prière et accueil *(15 min)*
 
-**MEC** — à la porte, accueille chaque élève individuellement, serre la main ou tope, donne une étiquette prénom, coche la présence.
+**MEC** — à la porte, accueille chaque élève individuellement, donne une étiquette prénom, coche la présence.
 
 > 🗣️ **MEC :** « Salut ! Comment tu t'appelles ? … Bienvenue chez les **Jerusalem Geeks** [ou Jeremiah Geeks]. Écris ton prénom en gros sur l'étiquette et colle-la sur toi. Ensuite, assieds-toi où tu veux — c'est la seule fois de l'année où tu choisis ta place ! »
 
-**CAP** — debout devant, salue, et dépose sur chaque poste : la **fiche mémo** (1 par poste), le **jeu de 4 cartes de signalisation**, et **2 post-it par élève**.
+**CAP** — rassemble, puis conduit le temps de prière.
 
-> ⚠️ **Ne pas laisser les élèves toucher les machines pendant cette phase.** Écrans allumés mais non utilisés — sinon on ne récupère plus leur attention. Le dire simplement : *« Les ordinateurs, on n'y touche pas tout de suite. Promis, ça vient dans un instant. »*
+> 🗣️ **CAP :** « Bienvenue à tous. On va commencer comme on commencera chaque samedi : par un temps de prière. »
 
-**Ce que MEC observe déjà et note :** qui arrive avec un parent · qui n'ose pas entrer · qui se connaît déjà · qui se précipite sur la machine.
+*(Temps de prière — 10 à 12 minutes.)*
+
+> 🗣️ **CAP** *(pour faire le lien avec la séance, en une phrase)* : « On va apprendre à donner des ordres à des machines. Que ce qu'on construira ici serve, et serve bien. »
+
+**Puis, immédiatement, le signal de silence** (1 min) — c'est le seul rituel dont on a besoin tout de suite :
+
+> 🗣️ **CAP :** « Une seule règle d'organisation pour l'instant. Quand j'ai besoin de vous, j'ai un signal. *[signal]* Quand vous l'entendez : mains sur la table, yeux sur moi, plus un mot, en 3 secondes. On s'entraîne. Faites du bruit… allez, du **vrai** bruit ! … *[signal]* … Trois, deux, un. **Parfait.** »
+
+> ⚠️ **Ne pas laisser les élèves toucher les machines** pendant toute la première heure. Écrans allumés mais non utilisés. Le dire simplement : *« Les ordinateurs, on n'y touche pas tout de suite. Promis, ça vient. »*
+
+**Ce que MEC observe et note :** qui arrive avec un parent · qui n'ose pas entrer · qui se connaît déjà · qui se précipite sur la machine.
 
 ---
 
-### ⏱️ 08 – 20 · L'ouverture : le WOW, la guilde, la promesse *(12 min)*
+### ⏱️ 12 h 15 - 12 h 25 · L'effet WOW et les trois promesses *(10 min)*
 
 #### a) Le WOW (4 min) — `CAP`
 
-On ne dit pas bonjour. **On lance le jeu terminé, en silence, plein écran.**
+**On lance le jeu terminé, en silence, plein écran.** On laisse 5 secondes.
 
-> 🗣️ **CAP :** *(après 5 secondes de silence)* « Il me faut un volontaire. … Viens. Assieds-toi ici. Tu joues contre moi. »
+> 🗣️ **CAP :** « Il me faut un volontaire… Viens. Assieds-toi ici. Tu joues contre moi. »
 
-On joue une partie complète, en direct, au vidéoprojecteur. On la perd, de préférence. Applaudissements.
+On joue une partie complète, en direct, au vidéoprojecteur. **On la perd**, de préférence. Applaudissements.
 
 > 🗣️ **CAP :** « Ce jeu, ce n'est pas moi qui vais le faire. **C'est vous.** Vous allez le construire, morceau par morceau, un samedi après l'autre. Et à la fin, vous repartirez avec — sur une clé, pour le montrer à vos parents, à vos amis, et pour les battre. »
 
-#### b) La guilde (4 min) — `CAP`
+#### b) La guilde et le Mur de Mission (3 min) — `CAP`
 
-> 🗣️ **CAP :** « Bienvenue chez les **Jerusalem Geeks**. Un geek, ce n'est pas un mot moqueur ici : c'est quelqu'un qui comprend comment marchent les machines, et qui sait leur donner des ordres. À partir d'aujourd'hui, vous êtes des **Novices**. Dans quelques semaines vous serez **Apprentis Codeurs**, puis **Codeurs**, puis **Ingénieurs**, puis **Architectes** — et les meilleurs finiront **Maîtres Geeks**. »
+> 🗣️ **CAP :** « Bienvenue chez les **……………… Geeks**. Un geek, ce n'est pas un mot moqueur ici : c'est quelqu'un qui comprend comment marchent les machines, et qui sait leur donner des ordres. À partir d'aujourd'hui, vous êtes des **Novices**. Puis Apprentis Codeurs, Codeurs, Ingénieurs, Architectes — et les meilleurs finiront **Maîtres Geeks**. »
 
-Montrer le **Mur de Mission** — 22 cases.
+*(Montrer le Mur de Mission.)*
 
-> 🗣️ **CAP :** « Voilà notre carte. 22 cases, 22 samedis. Chaque samedi, la classe avance d'**une** case. Attention : la classe, pas un élève. On avance **ensemble**. Aujourd'hui, on va franchir la case 1 : *le jeu dit bonjour*. »
+> 🗣️ **CAP :** « Voilà notre carte. 22 cases, 22 samedis. Chaque samedi, la classe avance d'**une** case. Attention : **la classe**, pas un élève. On avance **ensemble**. Aujourd'hui, on franchit la case 1 : *le jeu dit bonjour*. »
 
-🧒 **Jerusalem :** insister sur la carte au trésor, le côté aventure, les bracelets de grade.
-🧑 **Jeremiah :** ton plus sobre. « Ce que vous allez faire ici, c'est exactement ce que font les développeurs professionnels : un projet, découpé en versions, livré morceau par morceau. »
-
-#### c) La promesse et les 3 règles (4 min) — `CAP`
+#### c) Les trois promesses et les trois règles (3 min) — `CAP`
 
 > 🗣️ **CAP :** « Je vous fais trois promesses.
 > **Un :** chaque samedi, en repartant, votre jeu marchera mieux qu'en arrivant. **Chaque samedi. Tous.**
 > **Deux :** ici, il n'y a **pas de notes**. Jamais. Personne ne sera comparé à personne.
-> **Trois :** si vous êtes absents un samedi, vous ne serez **pas** en retard. J'ai un système pour ça, je vous le montrerai tout à l'heure.
+> **Trois :** si vous êtes absents un samedi, vous ne serez **pas** en retard. J'ai un système pour ça, je vous le montrerai.
 >
 > En échange, je vous demande trois choses.
 > **Un :** on ne se moque **jamais** de quelqu'un qui n'a pas compris ou qui va moins vite. Jamais. C'est la seule règle pour laquelle je me fâcherai.
@@ -159,210 +176,185 @@ Montrer le **Mur de Mission** — 22 cases.
 
 ---
 
-### ⏱️ 20 – 30 · Les quatre rituels *(10 min)*
+### ⏱️ 12 h 25 - 12 h 55 · La théorie : pourquoi et comment on code *(30 min)*
 
-#### Rituel 1 — Le signal de silence (2 min)
-
-> 🗣️ **CAP :** « Dans cette salle, il y aura du bruit, et c'est normal : quand on code à deux, on parle. Mais quand j'ai besoin de vous, j'ai un signal. »
-
-Choisir **un** signal et ne jamais en changer : trois frappes dans les mains · une clochette · les bras levés.
-
-> 🗣️ **CAP :** « Quand vous entendez ça : mains sur la table, yeux sur moi, plus un mot. En 3 secondes. On s'entraîne. Faites du bruit… allez, du vrai bruit ! … *[signal]* … Trois, deux, un. **Parfait.** On recommence, plus fort. »
-
-> **Faire l'exercice 2 ou 3 fois, en jeu.** Dix minutes investies là économisent deux heures sur le trimestre.
-
-#### Rituel 2 — Les cartes de signalisation (3 min)
-
-`MEC` distribue un jeu de 4 cartes par poste pendant que `CAP` explique.
-
-> 🗣️ **CAP :** « Ici, on ne lève **pas** la main. On lève une carte.
-> 🟢 **Vert** : ça avance, tout va bien.
-> 🟠 **Orange** : on est bloqués. On continue à chercher, mais on a besoin d'aide.
-> 🔴 **Rouge** : rien ne marche du tout, au secours.
-> 🔵 **Bleu** : on a fini — et on est prêts à aider les autres.
+> ⚠️ **Trente minutes sans machine, c'est long.** Cette partie ne doit pas être un cours magistral :
+> chaque sujet contient une question posée à la classe ou une activité debout. **On ne parle jamais plus
+> de 3 minutes d'affilée sans faire réagir la salle.** Tout s'écrit au tableau en même temps.
 >
-> Vous posez la carte sur l'écran, bien visible, et vous continuez à travailler. Nous, on voit toute la salle d'un coup d'œil.
-> Je vous fais une promesse : **une carte orange est servie en moins de 5 minutes. Une carte rouge, tout de suite.** »
+> 🧒 **Jerusalem (9–12) :** beaucoup de questions à main levée, les portraits racontés comme des histoires.
+> 🧑 **Jeremiah (12–18) :** on peut aller plus vite sur les domaines et plus loin sur le binaire.
 
-#### Rituel 3 — La règle des 3 avant moi (3 min)
+#### a) 12 h 25 - 12 h 29 · Pourquoi coder ? *(4 min)*
 
-Montrer l'affiche.
+> 🗣️ **CAP :** « Première question. **Ce matin, avant d'arriver ici, combien d'ordres avez-vous donnés à une machine ?** … Réfléchissez. Vous avez allumé un téléphone ? Envoyé un message ? Mis de la musique ? Retiré de l'argent ? Regardé l'heure ? … Chacun de ces gestes, une machine l'a exécuté parce que **quelqu'un, un jour, lui a écrit quoi faire.** »
 
-> 🗣️ **CAP :** « Avant de lever la carte orange, trois choses.
-> **Un : je relis.** La consigne, puis le message rouge de l'ordinateur — **à voix haute**. Vous verrez, ça marche tout seul une fois sur trois.
-> **Deux : je demande à mon binôme**, et on regarde la fiche mémo posée sur la table.
-> **Trois : on demande au binôme d'à côté.** 30 secondes, pas plus.
-> Toujours bloqués ? Carte orange, et on arrive. »
+> 🗣️ **CAP :** « Aujourd'hui, vous **utilisez** ce que d'autres ont écrit. Vous êtes des consommateurs.
+> Coder, c'est passer de l'autre côté : **devenir celui qui écrit.** Celui qui décide ce que la machine fait.
+> Et ça sert à trois choses : **fabriquer** des outils qui n'existent pas encore, **résoudre** des problèmes autour de vous, et **comprendre** le monde dans lequel vous vivez — parce qu'aujourd'hui, tout ce qui vous entoure obéit à du code. »
 
-🧒 **Jerusalem :** faire répéter en chœur « je relis, mon binôme, le voisin ! ».
-🧑 **Jeremiah :** « C'est exactement ce qu'on attend d'un développeur : ne pas rester bloqué en silence, mais ne pas non plus appeler à l'aide avant d'avoir lu l'erreur. »
+**Question à la classe :** *« Qu'est-ce que vous aimeriez que la machine fasse, et qu'elle ne fait pas encore ? »*
+→ On note 2 ou 3 réponses au tableau. **On y reviendra à la dernière séance.**
 
-#### Rituel 4 — Le contrat de binôme (2 min, l'engagement vient à 65 min)
+#### b) 12 h 29 - 12 h 35 · Où se cache le code ? *(6 min)*
 
-> 🗣️ **CAP :** « Ici, on code **à deux sur un ordinateur**. Ce n'est pas parce qu'on manque de machines : c'est comme ça que travaillent les vrais développeurs, ça s'appelle le *pair programming*.
-> Un **Pilote** : il tient le clavier, il est le seul à taper, et il dit à voix haute ce qu'il fait.
-> Un **Copilote** : il lit la consigne, il surveille les erreurs, il propose — et il **n'a pas le droit de toucher le clavier**. C'est le rôle le plus difficile, et c'est souvent lui qui trouve les bugs.
-> Toutes les 10 minutes, au signal, **vous échangez**. »
+**Jeu : « il y a du code là-dedans ? »** — `CAP` nomme un métier ou un objet, les élèves répondent **oui / non** à main levée, puis `CAP` explique en une phrase.
+
+| Ce qu'on nomme | La phrase d'explication |
+|---|---|
+| 🎮 **Les jeux vidéo** | « Chaque déplacement, chaque point, chaque adversaire : du code. » |
+| 🏥 **La santé** | « Les machines qui regardent à l'intérieur du corps, les dossiers des patients, les alarmes qui sauvent une vie la nuit. » |
+| 🌾 **L'agriculture** | « Savoir quand il va pleuvoir, combien d'engrais mettre, repérer une maladie sur une feuille avec une photo. » |
+| 🎵 **La musique** | « Presque toute la musique que vous écoutez est enregistrée, mélangée et parfois créée avec du code. » |
+| 🚗 **Les transports** | « Le GPS qui choisit ta route, les feux de circulation, les avions. » |
+| 💸 **L'argent** | « Le mobile money, les distributeurs, les paiements par téléphone. » |
+| 🎬 **Le cinéma et le dessin animé** | « Les images de synthèse, les décors, les personnages. » |
+| 🚀 **L'espace** | « Il n'y a personne pour tourner le volant d'une fusée. C'est du code. » |
+| ⚽ **Le sport** | « Les statistiques, la vidéo, les capteurs sur les joueurs. » |
+
+> 🗣️ **CAP** *(conclusion)* : « Alors, dans quel domaine n'y a-t-il **pas** de code ? … **Il n'y en a aucun.**
+> Ce que vous allez apprendre ici ne sert pas à "faire de l'informatique". Ça sert **dans le métier que vous choisirez**, quel qu'il soit. »
+
+#### c) 12 h 35 - 12 h 42 · Ceux qui ont fait des choses impressionnantes *(7 min)*
+
+Cinq portraits, **une minute chacun**, racontés comme des histoires. *(Si vous projetez, une photo par portrait suffit.)*
+
+| Qui | Ce qu'on raconte |
+|---|---|
+| **Ada Lovelace** (1815-1852) | « Elle a écrit le premier programme de l'histoire… **avant que l'ordinateur existe.** Elle a compris qu'une machine pourrait faire plus que des calculs : de la musique, des images. Personne ne l'a crue. Elle avait 150 ans d'avance. » |
+| **Grace Hopper** (1906-1992) | « Elle voulait qu'on puisse parler à l'ordinateur avec des mots au lieu de chiffres — c'est grâce à des gens comme elle que Python existe. Et c'est son équipe qui a rendu célèbre le mot **bug** : un vrai insecte, un papillon de nuit, coincé dans la machine, collé dans le cahier de bord. Depuis, une erreur dans un programme s'appelle un bug. » |
+| **Katherine Johnson** (1918-2020) | « Elle a calculé les trajectoires des fusées de la NASA. Quand les premiers ordinateurs sont arrivés, les astronautes ont demandé qu'**elle** revérifie les calculs de la machine à la main avant de décoller. Elle était noire, dans une Amérique qui séparait les gens par la couleur. Elle a quand même envoyé des hommes dans l'espace. » |
+| **Guido van Rossum** (né en 1956) | « C'est lui qui a créé **Python**, le langage que vous allez apprendre aujourd'hui. Il voulait un langage simple, lisible, que des débutants pourraient comprendre. C'est pour ça qu'on l'a choisi pour vous. » |
+| **Verone Mankou** (né en 1986, Congo) | « Il a conçu la première tablette pensée et lancée en Afrique centrale, puis un smartphone. Des gens lui ont dit que c'était impossible depuis chez lui. Il l'a fait quand même. » |
+
+> 🗣️ **CAP** *(conclusion — c'est le message de ce bloc)* : « Regardez-les bien. Une femme de 1843. Une femme noire à qui on interdisait certaines portes. Un jeune Africain à qui on a dit que c'était impossible.
+> **Aucun d'eux n'a commencé en sachant coder.** Ils ont tous commencé exactement là où vous êtes assis aujourd'hui. »
+
+> 💡 **Ajoutez un portrait que vous connaissez bien** — quelqu'un de votre pays, de votre ville, ou de votre entourage. Un exemple proche vaut mieux qu'un exemple célèbre.
+
+#### d) 12 h 42 - 12 h 49 · Comment l'ordinateur comprend : du binaire à l'éditeur *(7 min)*
+
+**Activité debout (3 min).** `CAP` fait lever **8 élèves** en ligne face à la classe.
+
+> 🗣️ **CAP :** « Vous êtes l'intérieur d'un ordinateur. Chacun de vous n'a le droit d'être que dans deux états : **debout = 1**, **assis = 0**. C'est tout. Pas de "peut-être", pas de "un peu". L'ordinateur ne sait faire que ça : du courant qui passe, ou qui ne passe pas.
+> Maintenant, on va écrire une lettre. La lettre **A**, pour une machine, c'est : `01000001`. Allez : assis, debout, assis, assis, assis, assis, assis, debout. … **Voilà. Vous êtes la lettre A.** »
+
+> 🗣️ **CAP :** « Vous imaginez écrire tout un jeu comme ça ? Avec des milliers de 0 et de 1 ? … Personne ne veut faire ça. **Alors on a inventé des langages** pour parler à la machine avec des mots. Python est l'un d'eux — et c'est l'un des plus proches de l'anglais courant. »
+
+**Le tableau (4 min).** `CAP` dessine la chaîne, de gauche à droite, en parlant :
+
+```
+   MOI              PYTHON            L'INTERPRÈTE          0 et 1         LA MACHINE
+   j'écris   →   print("Bonjour")  →   il traduit    →   01110000...  →   elle obéit
+  dans THONNY      (des mots !)        (le traducteur)                    (elle affiche)
+```
+
+> 🗣️ **CAP :** « Trois mots à retenir.
+> **Python**, c'est la **langue** dans laquelle j'écris mes ordres — avec des mots, pas des chiffres.
+> **L'interprète**, c'est le **traducteur** : il transforme mes mots en 0 et en 1. Il est déjà installé, vous ne le verrez jamais, mais il travaille à chaque fois.
+> **Thonny**, c'est l'**éditeur** : c'est ma feuille, avec un bouton "vas-y". C'est le seul des trois que vous allez toucher.
+>
+> Et **retenez surtout ceci** : l'ordinateur, dans tout ça, **ne réfléchit jamais**. Il ne devine pas ce que vous voulez dire. **Il n'est pas intelligent : il est obéissant.** S'il fait une bêtise, ce n'est pas lui qui s'est trompé. »
+
+#### e) 12 h 49 - 12 h 55 · La notion d'algorithme *(6 min)*
+
+**Activité : le robot humain (4 min).** Un élève volontaire se place au fond de la salle.
+
+> 🗣️ **CAP :** « Lui, c'est un robot. Il ne comprend que trois ordres : **AVANCE**, **TOURNE À GAUCHE**, **TOURNE À DROITE**. Il n'a pas d'imagination : il fait **exactement** ce qu'on lui dit, ni plus, ni moins. Votre mission, tous ensemble : l'amener au tableau, et lui faire écrire un X. »
+
+La classe dicte les ordres. **Le robot obéit à la lettre — donc il se cogne, il s'arrête trop tôt, il tourne dans le vide.** C'est exactement l'effet recherché : on rit, et on comprend.
+
+> 🗣️ **CAP :** « Vous venez de vivre ce que vit un programmeur toute la journée. Ce que vous avez écrit — cette suite d'ordres précis, dans le bon ordre — **ça s'appelle un algorithme.** »
+
+**La définition, écrite au tableau et recopiée par les élèves :**
+
+> **Un algorithme, c'est une suite d'ordres précis, donnés dans le bon ordre, pour arriver à un résultat.**
+
+> 🗣️ **CAP :** « Une recette de cuisine est un algorithme. Un itinéraire est un algorithme. Les règles du morpion sont un algorithme — et c'est précisément celui-là que vous allez apprendre à écrire pendant 22 samedis.
+> **Attention :** l'algorithme, ce n'est pas encore du code. C'est la **réflexion** avant le code. On peut l'écrire en français, sur du papier, sans ordinateur. **C'est la partie la plus difficile du métier — et c'est celle que vous allez travailler dans un instant.** »
+
+> 🗣️ **CAP :** « Pause de dix minutes. Levez-vous, sortez, bougez — et revenez à l'heure. »
 
 ---
 
-### ⏱️ 30 – 55 · Le Test de Décollage *(25 min — 3 stations × 8 min)*
+### ⏱️ 12 h 55 - 13 h 05 · Pause *(10 min)*
+
+Pause **réelle** : les élèves sortent, se lèvent, boivent. Non négociable, surtout après 30 minutes de théorie.
+
+`CAP` et `MEC` en profitent pour installer les 3 stations du test et vérifier que le Kahoot est prêt.
+
+---
+
+### ⏱️ 13 h 05 - 13 h 30 · Les missions de décollage *(25 min — 3 stations)*
 
 > ⚠️ **Le mot « test » n'est jamais prononcé devant les élèves.** On dit **« les missions de décollage »**.
 
-> 🗣️ **CAP :** « Avant de décoller, tous les astronautes passent des missions de préparation. Trois missions, huit minutes chacune. Ce n'est pas noté, il n'y a pas de bonne ou de mauvaise équipe — ça sert **à nous**, pour bien vous accompagner. Vous êtes trois groupes. Quand j'appelle, vous tournez. »
+> 🗣️ **CAP :** « Avant de décoller, tous les astronautes passent des missions de préparation. Trois missions. **Ce n'est pas noté**, il n'y a pas de bonne ou de mauvaise équipe — ça sert **à nous**, pour bien vous accompagner. Vous êtes trois groupes. Quand j'appelle, vous tournez. »
 
-Compter les élèves, faire trois groupes, désigner les zones : **Mission Pilotage** (postes) · **Mission Logique** (tables sans machine) · **Mission Identité** (table du fond).
+| Station | Durée | Contenu | Tenue par |
+|---|---|---|---|
+| **1 · Pilotage** (postes) | 8 min | Les 6 manœuvres machine ([A1 §2](../../1-methode/annexes/A1-diagnostic-et-passeport.md)) | `CAP` observe et cote /6 |
+| **2 · Logique** (tables) | 8 min | Les 4 énigmes papier — **dont le robot et le morpion, qu'on vient de voir** | En autonomie ; `MEC` circule |
+| **3 · Identité** (fond) | 8 min | « Ma fiche de Geek » | En autonomie |
 
-| Station | Contenu | Tenue par |
-|---|---|---|
-| **1. Pilotage** — 8 min | Les 6 missions machine ([A1 §2](../../1-methode/annexes/A1-diagnostic-et-passeport.md)) | `CAP` observe et cote |
-| **2. Logique** — 8 min | Les 4 énigmes papier ([A1 §3](../../1-methode/annexes/A1-diagnostic-et-passeport.md)) | En autonomie ; `MEC` circule |
-| **3. Identité** — 5 min puis libre | Le questionnaire ([A1 §4](../../1-methode/annexes/A1-diagnostic-et-passeport.md)) | En autonomie ; ceux qui finissent prennent **une énigme d'avance** de la station 2 |
+> 💡 **Le lien avec la théorie est explicite, dites-le :** *« L'énigme du robot, c'est exactement ce qu'on a fait tout à l'heure. Et la dernière — expliquer le morpion à un extraterrestre — c'est votre premier algorithme. Gardez bien cette feuille : on la relira à la séance 10, quand votre programme saura reconnaître le gagnant. »*
 
-**Pendant tout le test, `MEC` remplit la grille d'observation** et surtout la colonne décisive : *abandonne / demande / persévère / aide les autres*.
+**Pendant tout le test, `MEC` remplit la grille d'observation**, et surtout la colonne décisive : *abandonne / demande / persévère / aide les autres*.
 
-**À la fin du test, `MEC` trie immédiatement les fiches en 3 piles : P0 · P1 · P2-P3.** Ce tri sert au binômage pendant la pause. **C'est la tâche la plus urgente de la séance : elle doit être finie avant la fin de la pause.**
-
-> 🗣️ **CAP** *(à la fin)* : « Missions terminées. Personne n'a raté quoi que ce soit : tout le monde décolle. Pause ! Dix minutes. Levez-vous, sortez, bougez — et revenez à l'heure. »
+> 🗣️ **CAP** *(à la fin)* : « Missions terminées. **Personne n'a raté quoi que ce soit : tout le monde décolle.** Et maintenant… on allume les machines. »
 
 ---
 
-### ⏱️ 55 – 65 · Pause *(10 min)*
+### ⏱️ 13 h 30 - 13 h 45 · Premier contact machine *(15 min)*
 
-Pause **réelle** : les élèves sortent, se lèvent, boivent.
+#### a) Les cartes de signalisation et la règle des 3 avant moi (3 min)
 
-**Pendant ce temps, les deux enseignants forment les binômes, en 5 minutes chrono :**
+`MEC` a posé un jeu de 4 cartes sur chaque poste.
 
-1. Écrire chaque prénom sur un petit papier, avec son profil (P0 / P1 / P2 / P3).
-2. **Trier tous les papiers du plus faible au plus fort.** Couper le paquet en deux moitiés : pile A (la moitié la moins à l'aise) et pile B.
-3. **Associer le 1ᵉʳ de A avec le 1ᵉʳ de B, le 2ᵉ de A avec le 2ᵉ de B**, etc.
-   → cela donne mécaniquement un **écart d'environ un niveau** : jamais un P0 avec un P3.
-4. Ajuster à la main pour 2 ou 3 cas : élèves qui ne doivent pas être ensemble, élève très timide à placer avec un élève patient.
-5. Nombre impair ? Former **un trinôme** : Pilote / Copilote / **Testeur** (le testeur lit la consigne à voix haute et vérifie le résultat). Jamais un élève seul.
-6. Écrire la liste au tableau **avec le numéro du poste**, pour que l'installation soit instantanée.
-
----
-
-### ⏱️ 65 – 70 · Les binômes s'installent et s'engagent *(5 min)*
-
-> 🗣️ **CAP :** « Les équipes sont au tableau, avec le numéro de votre poste. Vous ne choisissez pas votre binôme — comme au travail. Vous en changerez dans trois semaines. Installez-vous. »
-
-*(Laisser 2 minutes d'installation. Puis signal de silence, et on se tourne vers l'affiche A3 du contrat.)*
-
-**L'engagement collectif** — on remplace la signature par un serment lu à voix haute, ce qui est plus fort dans un groupe de jeunes, et ne coûte ni papier ni temps :
-
-> 🗣️ **CAP :** « Le contrat des Geeks est affiché là. On va le lire **ensemble, à voix haute**. Je lis une règle, vous la répétez. Prêts ?
-> *« Quand je suis copilote… je ne touche pas le clavier. »*
-> *« Quand je suis pilote… je dis à voix haute ce que je tape. »*
-> *« Je ne dis jamais "t'es nul"… je dis "essaie ça". »*
-> *« Si mon binôme n'a pas compris… on ne passe pas à la suite. »*
-> *« Une erreur, ce n'est pas une honte… c'est une information. »*
-> *« On lève la carte ensemble… pas chacun de son côté. »*
+> 🗣️ **CAP :** « À partir de maintenant, dans cette salle, on ne lève **pas** la main. On lève une carte.
+> 🟢 **Vert** : ça avance. 🟠 **Orange** : on est bloqués, on cherche quand même. 🔴 **Rouge** : rien ne marche, au secours. 🔵 **Bleu** : on a fini, on peut aider.
+> Vous la posez sur l'écran, bien visible, et vous continuez à travailler. Nous, on voit toute la salle d'un coup d'œil. **Une carte orange est servie en moins de 5 minutes. Une carte rouge, tout de suite.**
 >
-> Maintenant, tournez-vous vers votre binôme, regardez-le, et topez-là. **Voilà, c'est signé.** Ça vaut une signature, et je m'en souviendrai. »
+> Et avant de lever l'orange, trois choses *(montrer l'affiche)* : **je relis** la consigne et le message rouge **à voix haute** · **je demande à mon voisin** · **on regarde la fiche mémo**. Ensuite seulement, la carte. »
 
-> 🗣️ **CAP :** « Celui des deux dont le **prénom commence par la lettre la plus proche de A** est **Pilote** en premier. L'autre est **Copilote**. Copilotes, levez la main… vous êtes les gardiens : **vos doigts ne touchent pas le clavier**. »
+#### b) Le live coding condensé, avec l'erreur volontaire (5 min)
 
----
-
-### ⏱️ 70 – 78 · Visite guidée de Thonny *(8 min)*
-
-Au vidéoprojecteur, très lentement, avec la police en taille 18+. Les élèves **regardent seulement** : on ne touche pas encore.
-
-> 🗣️ **CAP :** « Voici l'outil des Geeks. Il s'appelle **Thonny**. Il n'y a que trois choses à retenir aujourd'hui. »
-
-1. **La zone du haut, blanche : c'est là qu'on écrit le programme.**
-   > 🗣️ « C'est votre feuille. Ce que vous écrivez ici, l'ordinateur ne le fait pas tout de suite : il attend. »
-2. **La zone du bas : c'est là que l'ordinateur répond.**
-   > 🗣️ « C'est sa bouche. Tout ce qu'il a à vous dire sort ici. Y compris quand il n'est pas content — en rouge. »
-3. **Le gros bouton vert ▶, ou la touche `F5` : c'est le bouton "vas-y".**
-   > 🗣️ « Quand vous appuyez là, l'ordinateur lit votre programme du début à la fin et fait **exactement** ce que vous avez écrit. Ni plus, ni moins. Retenez bien : **l'ordinateur n'est pas intelligent. Il est obéissant.** Si votre programme fait une bêtise, ce n'est pas lui qui s'est trompé. »
-
-Montrer aussi, en 30 secondes : `Fichier > Enregistrer`, et où se trouve `Bureau / GEEKS / mon_xo`.
-
----
-
-### ⏱️ 78 – 90 · Live coding : « je code, vous prédisez » *(12 min)*
-
-#### a) Le premier `print` (3 min)
-
-`CAP` tape, très lentement, en verbalisant chaque caractère :
+`CAP` tape au vidéoprojecteur, très lentement, en verbalisant. **Trois repères Thonny suffisent :** la zone du haut (ma feuille), la zone du bas (sa bouche), le bouton vert ▶ / `F5` (vas-y).
 
 ```python
 print("Bonjour")
 ```
 
-> 🗣️ **CAP :** « `p-r-i-n-t`, ça veut dire *affiche*. Ensuite une parenthèse — on l'ouvrira et on la fermera **toujours**. Puis un guillemet, mon texte, un guillemet. Et on referme la parenthèse.
-> **Avant que j'appuie : qu'est-ce qui va se passer ? … À trois. Un, deux, trois !** »
+> 🗣️ **CAP :** « `p-r-i-n-t`, ça veut dire **affiche**. Une parenthèse : on l'ouvre, on la fermera **toujours**. Un guillemet, mon texte, un guillemet. On referme.
+> **Avant que j'appuie : qu'est-ce qui va se passer ? À trois. Un, deux, trois !** »
 
-*(Appuyer sur F5. Le mot apparaît en bas.)*
+*(Exécuter.)* « Voilà. Vous venez de voir un ordinateur **obéir**. C'est tout le métier. »
 
-> 🗣️ **CAP :** « Voilà. Vous venez de voir un ordinateur **obéir**. C'est tout le métier. »
-
-#### b) Prédiction n° 2 (2 min)
-
-```python
-print("Bonjour")
-print("Je suis ton ordinateur")
-```
-
-> 🗣️ **CAP :** « Deux lignes maintenant. Qu'est-ce que ça va afficher ? Dans quel ordre ? … Levez la main ceux qui pensent que "Bonjour" sortira en premier. … On vérifie. »
-
-> 🗣️ **CAP :** « Règle numéro un de la programmation : **l'ordinateur lit de haut en bas, ligne par ligne, dans l'ordre.** Toujours. »
-
-#### c) 🔥 L'erreur volontaire (4 min) — **le moment le plus important de la séance**
-
-`CAP` oublie volontairement le guillemet de fin :
+**🔥 Puis l'erreur volontaire — le moment le plus important de la séance.** `CAP` efface le guillemet de fin :
 
 ```python
 print("Bonjour)
 ```
 
-Appuyer sur F5. Du rouge apparaît.
+*(Exécuter. Du rouge apparaît.)*
 
-> 🗣️ **CAP :** *(avec un grand sourire)* « **Ah ! Du rouge !** … Alors, qui a peur ? »
-
-*(Laisser réagir. Puis, très calmement :)*
-
-> 🗣️ **CAP :** « Moi je code depuis des années, et j'ai du rouge **tous les jours**. Le rouge, ce n'est pas une punition. Ce n'est pas une mauvaise note. **C'est l'ordinateur qui vous explique ce qu'il n'a pas compris.** Il essaie de vous aider. Le problème, c'est qu'il le dit en anglais. Alors on va apprendre à le lire. Ensemble. Il a écrit : `SyntaxError`. Quelqu'un devine ? … *Syntax*, c'est la grammaire. *Error*, l'erreur. Il nous dit : **"je ne comprends pas ta phrase"**. Et regardez : il montre même l'endroit avec une petite flèche. »
-
-Réparer devant tout le monde, relancer, ça marche.
-
-> 🗣️ **CAP :** « Réparé en quatre secondes. Retenez ça : **dans cette salle, le rouge n'est pas grave. Le rouge est une information.** »
-
-Aller écrire `SyntaxError` au tableau du **Dictionnaire des erreurs**, et nommer un **Gardien des erreurs** pour la séance.
-
-#### d) La consigne de l'atelier (3 min)
-
-Projeter le résultat à obtenir :
-
-```
-===================================
-       BIENVENUE DANS LE JEU XO
-===================================
-Créé par : Damien
-```
-
-> 🗣️ **CAP :** « Votre mission : faire dire ça à votre ordinateur. Avec **votre** prénom. Trois pistes, vous choisissez :
-> 🔵 **Bleue** — le début est déjà écrit dans votre fichier, vous complétez les trous. Aucune honte, c'est la piste la plus maligne quand on débute.
-> 🔴 **Rouge** — vous écrivez tout vous-mêmes, à partir de la consigne.
-> ⚫ **Noire** — vous faites tout ça, **et en plus** vous dessinez la grille vide du morpion en dessous. Avec des `print`, uniquement.
+> 🗣️ **CAP** *(avec un grand sourire)* : « **Ah ! Du rouge !** … Alors, qui a peur ? »
 >
-> Personne ne vous jugera sur votre piste. **Le jeu qui sort est le même.** Cartes de signalisation sorties. Pilotes, à vous. Copilotes : vos mains restent sur vos genoux ! C'est parti. »
+> *(Laisser réagir, puis très calmement)* « Moi je code depuis des années, et j'ai du rouge **tous les jours**. Le rouge, ce n'est pas une punition. Ce n'est pas une mauvaise note. **C'est l'ordinateur qui vous explique ce qu'il n'a pas compris.** Il essaie de vous aider — mais il le dit en anglais. Alors on va apprendre à le lire. Ensemble.
+> Il a écrit `SyntaxError`. Quelqu'un devine ? … *Syntax*, c'est la grammaire. *Error*, l'erreur. Il nous dit : **"je ne comprends pas ta phrase"**. Et regardez : il montre même l'endroit avec une petite flèche. »
+>
+> *(Réparer, relancer, ça marche.)* « Réparé en quatre secondes. Retenez ça : **dans cette salle, le rouge n'est pas grave. Le rouge est une information.** »
 
----
+`CAP` écrit `SyntaxError` sur l'affiche du **Dictionnaire des erreurs** et nomme le **Gardien des erreurs** de la séance.
 
-### ⏱️ 90 – 108 · Atelier 1 : mon premier programme *(18 min)*
+#### c) Chacun à son poste (7 min)
 
-**Déroulé mécanique :**
-- 90 : lancement. Les binômes ouvrent `GEEKS / mon_xo / jeu.py` dans Thonny.
-- **99 : signal sonore → rotation Pilote / Copilote.** Sans exception, même au milieu d'une ligne.
-- 108 : signal de silence, on s'arrête.
+Le fichier `GEEKS/mon_xo/jeu.py` est **déjà ouvert** sur chaque écran : c'est un texte à trous, il fonctionne dès la première exécution.
 
-**Positions :**
-- `CAP` **reste debout, devant**, balaye la salle du regard, gère le temps. Il ne se déplace que pour une carte rouge.
-- `MEC` fait son circuit en U, **en commençant par les postes des profils P0**.
+> 🗣️ **CAP :** « À vos postes, avec votre voisin. Le fichier est déjà ouvert. **Premier geste : appuyez sur F5, tout de suite, avant d'avoir rien écrit.** … Vous voyez ? Ça marche déjà.
+> Maintenant, vous remplacez chaque `____` par ce qu'on vous demande : le titre du jeu, **votre prénom**, votre âge, et une phrase à vous. Vous relancez après **chaque** changement. Cartes sorties. C'est parti ! »
+
+**Positions :** `CAP` reste debout devant, balaye la salle du regard, ne se déplace que pour une carte rouge. `MEC` fait son circuit en U, **en commençant par les élèves repérés en difficulté à la station 1**.
 
 **Les 4 phrases autorisées pour aider** *(ne jamais prendre le clavier)* :
 1. « Lis-moi ton message d'erreur à voix haute. »
@@ -370,211 +362,170 @@ Créé par : Damien
 3. « Qu'est-ce qui se passerait si on mettait ça ici ? Essaie. »
 4. « Explique-moi cette ligne comme si j'étais ton petit frère. »
 
-**Les 3 gestes machine à valider pendant l'atelier.** `MEC` les valide **oralement** (« montre-moi », puis félicitations) et les coche le soir dans le classeur de suivi, onglet `08_Passeport` :
-`#10` j'ouvre Thonny et je lance un programme · `#8` j'enregistre au bon endroit · `#9` je retrouve mon fichier.
-
-**Les erreurs attendues aujourd'hui — et la réponse, en une phrase :**
+**Les erreurs attendues — et la réponse, en une phrase :**
 
 | Erreur | Ce qu'on voit | Ce qu'on dit |
 |---|---|---|
 | Guillemet oublié | `SyntaxError` | « Compte tes guillemets. Il en faut deux, comme une paire de chaussures. » |
 | Parenthèse oubliée | `SyntaxError` | « Tout ce qui s'ouvre doit se fermer. » |
-| `Print` avec majuscule | `NameError: name 'Print' is not defined` | « L'ordinateur est très à cheval sur les majuscules. `print`, tout en minuscules. » |
-| Texte sans guillemets | `SyntaxError` / `NameError` | « Du texte, ça se met toujours entre guillemets — sinon il croit que c'est un ordre. » |
-| Clavier : ne trouve pas `"` ou `(` | — | Montrer la touche physiquement. **Geste 4 du Passeport.** Ne pas taper à sa place. |
-| A tapé dans la zone du bas (console) | Ça s'exécute mais rien n'est enregistré | « Ça, c'est sa bouche. Ta feuille, c'est en haut. » |
-| Le fichier n'est pas enregistré | Thonny propose d'enregistrer au lancement | « Tu enregistres d'abord, tu lances ensuite. Toujours. » |
+| `Print` avec majuscule | `NameError` | « L'ordinateur est très à cheval sur les majuscules. `print`, tout en minuscules. » |
+| Ne trouve pas `"` ou `(` | — | Montrer la touche du doigt. **Ne pas taper à sa place.** |
+| A tapé dans la zone du bas | Rien n'est enregistré | « Ça, c'est sa bouche. Ta feuille, c'est en haut. » |
+| Fichier non enregistré | Thonny le propose au lancement | « Tu enregistres d'abord, tu lances ensuite. Toujours. » |
 
-**Gestion des rythmes pendant ces 18 minutes :**
+> **Objectif absolu de ces 7 minutes : que 100 % des écrans aient affiché quelque chose écrit par l'élève.**
+> `MEC` compte les écrans à **13 h 42**. S'il reste un poste où rien n'est jamais sorti, **c'est la priorité n° 1 des deux enseignants.**
 
-| Situation | Réponse immédiate |
-|---|---|
-| Binôme carte 🔵 en 5 min | 1) Passer piste Noire (la grille du morpion) 2) puis devenir **Geek Mentor** : « va aider le binôme du poste 4, mais **interdiction de toucher leur clavier** » |
-| Binôme qui n'a pas fini à 108 | On s'arrête quand même. `MEC` enregistre leur fichier, et **CAP annonce publiquement** : « personne ne finit tout aujourd'hui, c'est normal, et ça ne vous mettra jamais en retard. » |
-| Un élève ne trouve aucune touche | Lui donner **une seule** ligne à compléter, et célébrer bruyamment quand elle s'affiche |
+> 🗣️ **CAP** *(à 13 h 44)* : « Tout le monde : `Fichier`, `Enregistrer`. Pouce levé quand c'est fait. »
 
-> **Objectif absolu de ces 18 minutes : que 100 % des écrans aient affiché quelque chose écrit par l'élève.** `MEC` tient mentalement le compte. À 104, s'il reste un poste où rien n'est jamais sorti, **c'est la priorité n° 1 des deux enseignants.**
+`MEC` passe avec la clé et sauvegarde le travail de chaque poste.
 
 ---
 
-### ⏱️ 108 – 114 · Mise en commun, le Filet, sauvegarde *(6 min)*
+### ⏱️ 13 h 45 - 13 h 55 · Le Kahoot *(10 min)*
 
-#### a) Deux démonstrations (2 min)
+> 🗣️ **CAP :** « Dernière épreuve du décollage : on va voir ce qui est resté. **Ce n'est pas une note**, c'est un jeu. Et il y a des questions sur tout ce qu'on a fait aujourd'hui — la théorie **et** la machine. »
 
-Choisir **un binôme piste Bleue** et **un binôme piste Noire** — dans cet ordre, jamais l'inverse.
+- **14 questions**, 20 secondes chacune. Le détail, les bonnes réponses et l'explication à donner après chaque question sont dans **[`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md)**.
+- **En retard ?** Gardez les **8 premières** : elles couvrent l'essentiel.
+- Après chaque question, `CAP` **explique la réponse en une phrase**. C'est là que le Kahoot devient de l'enseignement et plus seulement un jeu.
+- On célèbre le podium, **mais on insiste** :
 
-> 🗣️ **CAP :** « Poste 3, montrez-nous votre écran. … Vous avez fait quoi ? … Applaudissez-les. »
+> 🗣️ **CAP :** « Et ceux qui n'ont pas gagné : vous avez appris exactement les mêmes choses. Le podium, c'est pour rire. »
 
-> 🗣️ **CAP :** *(après la Noire)* « Vous voyez : le leur a une grille en plus. Mais les deux jeux disent bonjour, et les deux marchent. Piste Bleue ou piste Noire : **vous avez tous franchi la case 1.** »
-
-#### b) Le Filet (2 min) — **à faire solennellement**
-
-> 🗣️ **CAP :** « Vous vous souvenez de ma troisième promesse ? Regardez bien. »
-
-Brancher la clé USB, copier `jeu.py` dans `xo_officiel/`, devant tout le monde, au vidéoprojecteur.
-
-> 🗣️ **CAP :** « Ce fichier, c'est le **code officiel**. Il contient exactement ce qu'on a fait aujourd'hui, sans erreur. Et samedi prochain, **je le redonne à tout le monde**.
-> Ça veut dire quoi ? Que si vous êtes malade samedi prochain… vous ne serez **pas** en retard. Que si vous effacez tout par accident… ce n'est **pas** grave. Que si vous cassez votre code en essayant un truc… **ce n'est pas grave du tout.**
-> Donc à partir d'aujourd'hui : **essayez des choses. Cassez. Expérimentez.** On a toujours une copie de secours. »
-
-#### c) Sauvegarde (2 min)
-
-> 🗣️ **CAP :** « Tout le monde : `Fichier`, `Enregistrer`. Vérifiez en haut que c'est bien dans `GEEKS / mon_xo`. Copilotes, c'est **vous** qui vérifiez. Levez le pouce quand c'est fait. »
-
-`MEC` passe avec la clé et copie le travail de chaque binôme (filet de sécurité côté enseignants).
+> ⚠️ **Le Kahoot est la seule partie de la séance qui a besoin d'internet.** Si la connexion est incertaine, basculez sur la **version débranchée** : § 6.
 
 ---
 
-### ⏱️ 114 – 120 · Clôture rituelle *(6 min)*
+### ⏱️ 13 h 55 - 14 h · Clôture *(5 min)*
 
 #### a) Badges et grade (2 min)
 
-> 🗣️ **CAP :** « Premiers badges des Jerusalem Geeks ! »
+> 🗣️ **CAP :** « Premiers badges des ……………… Geeks ! »
 
-- 🧱 **`Bâtisseur`** → **à tous ceux dont le programme a affiché quelque chose.** Viser 100 %.
-- 🤝 `Bon copilote` → à 3 ou 4 élèves qui ont vraiment tenu le rôle sans toucher le clavier
-- 🐞 `Chasseur de bug` → à ceux qui ont trouvé une erreur seuls
-- 💪 `Persévérant` → **en priorité à ceux qui ont galéré et qui sont restés dessus** — le dire fort
-- 🔤 `Traducteur d'erreur` → au Gardien des erreurs du jour
-- 🤍 **Grade Novice** → à toute la classe, avec la carte de membre de la guilde
+- 🧱 **`Bâtisseur`** → **à tous ceux dont le programme a affiché quelque chose. Viser 100 %.**
+- 🐞 `Chasseur de bug` → ceux qui ont trouvé une erreur seuls
+- 💪 `Persévérant` → **en priorité ceux qui ont galéré et sont restés dessus. Le dire fort.**
+- ❓ `Question en or` → celui qui a posé la question que toute la classe se posait
+- 🔤 `Traducteur d'erreur` → le Gardien des erreurs du jour
+- 🤍 **Grade Novice** → toute la classe
 
-#### b) Le Mur de Mission (1 min)
+#### b) Le Mur de Mission et le Filet (1 min 30)
 
-Désigner un élève — de préférence **le plus discret de la séance**.
+Désigner un élève — de préférence **le plus discret de la séance** — pour colorier la case 1.
 
-> 🗣️ **CAP :** « Viens colorier la case 1. … *Le jeu dit bonjour.* Une case sur 22. Applaudissez-vous. »
+> 🗣️ **CAP :** « *Le jeu dit bonjour.* Une case sur 22. Applaudissez-vous. »
 
-#### c) Les deux post-it (2 min)
+*(Brancher la clé et copier `jeu.py` dans `xo_officiel/`, devant tout le monde.)*
 
-> 🗣️ **CAP :** « Prenez vos deux post-it. Sur le premier, vous écrivez votre prénom et : *aujourd'hui j'ai compris ___*. Sur le deuxième, votre prénom et : *je ne suis pas encore sûr de ___*.
-> Le deuxième est **plus important** que le premier : c'est lui qui nous dit, à nous, par quoi commencer samedi. Écrivez la vérité — personne ne sera jugé là-dessus, et personne d'autre que nous deux ne les lira.
-> Vous les déposez dans la boîte en sortant. »
+> 🗣️ **CAP :** « Vous vous souvenez de ma troisième promesse ? Ce fichier, c'est le **code officiel**. Samedi prochain, **je le redonne à tout le monde**. Donc si vous êtes malade, vous ne serez **pas** en retard. Et si vous cassez votre code en essayant un truc, **ce n'est pas grave du tout**. Alors à partir d'aujourd'hui : **essayez des choses.** »
 
-> **Pourquoi deux post-it séparés :** en les triant le soir en deux tas, on obtient immédiatement la liste des acquis et la liste des difficultés du groupe, sans avoir à relire vingt carnets.
+#### c) Les deux post-it et la sortie (1 min 30)
 
-#### d) Sortie (1 min)
-
-> 🗣️ **CAP :** « Défi maison, **totalement facultatif** : expliquez à quelqu'un chez vous ce que fait `print`. Et si vous n'avez pas d'ordinateur à la maison — **aucun problème, vous ne serez jamais en retard**. Rien ici ne dépend de ce que vous faites chez vous.
+> 🗣️ **CAP :** « Prenez vos deux post-it. Sur le premier : votre prénom et *aujourd'hui j'ai compris ___*. Sur le deuxième : votre prénom et *je ne suis pas encore sûr de ___*. Le deuxième est **plus important** que le premier : c'est lui qui nous dit par quoi commencer samedi. Écrivez la vérité — personne d'autre que nous deux ne les lira. Déposez-les dans la boîte en sortant.
+>
+> Défi maison, **totalement facultatif** : expliquez à quelqu'un chez vous ce qu'est un algorithme. Et si vous n'avez pas d'ordinateur à la maison, **aucun problème : vous ne serez jamais en retard.**
+>
 > Samedi prochain : le jeu va vous **demander votre nom**. À samedi, les Geeks ! »
 
-Éteindre les machines (**geste 1 du Passeport**), ranger les chaises, `MEC` à la porte pour saluer chacun et récupérer les post-it.
+Éteindre les machines, ranger les chaises, `MEC` à la porte pour saluer chacun et récupérer les post-it.
 
 ---
 
-## 3. Après la séance — 15 minutes à deux
+## 4. Après la séance — 20 minutes à deux
 
-- [ ] **Finaliser le code officiel** `code-officiel/S01/jeu.py` et le copier sur la clé maîtresse
-- [ ] **Remplir le tableau de suivi** : une ligne par élève — `✔` / `~` / `✖` + piste (B/R/N) + profil P0–P3
-- [ ] **Lire tous les post-it** et compter ce qui revient. Si une même difficulté apparaît chez plus de 30 % du groupe, **elle ouvre la séance 2**
-- [ ] **Établir la liste des 10 minutes** pour la séance 2 : qui n'a rien produit, qui a décroché, qui n'a pas parlé de la séance
-- [ ] **Envoyer le message aux familles** (modèle ci-dessous)
-- [ ] **Répondre aux 3 questions de la revue**, dans le carnet partagé :
-  1. Qui a décroché aujourd'hui, et qu'est-ce qu'on fait samedi prochain ?
-  2. Quelle explication n'a pas fonctionné, et comment on la reformule ?
-  3. La brique de la semaine prochaine est-elle trop grosse ?
-- [ ] **Décider les rôles de la séance 2** : les rôles s'échangent (`CAP` ↔ `MEC`)
-
-### Message aux familles
-
-```
-Bonjour à tous 👋
-
-Première séance des Jerusalem Geeks aujourd'hui — et tout le
-monde a décollé !
-
-✅ Ce qu'ils ont appris : donner un ordre à un ordinateur
-   (la commande « print »), et surtout que les messages
-   d'erreur ne sont PAS des fautes : ce sont des indices.
-
-🎮 Leur jeu sait déjà faire quelque chose : il affiche son
-   écran d'accueil, avec le nom de son créateur.
-
-🏅 Tous sont repartis avec le badge « Bâtisseur » et le
-   grade de Novice.
-
-🎯 Défi facultatif : demandez-leur ce que fait « print ».
-   Aucune obligation, et aucun retard si ce n'est pas fait —
-   tout se fait en classe.
-
-📅 Samedi prochain : le jeu leur demandera leur nom.
-```
+- [ ] **Saisir le diagnostic** dans le classeur de suivi, onglet `02_Diagnostic`
+- [ ] **Composer les binômes de la séance 2**, à froid : prénoms sur papiers, tri par profil, paquet coupé en deux, 1ᵉʳ de A avec 1ᵉʳ de B → écart d'un niveau, **jamais un P0 avec un P3**
+- [ ] Remplir `03_Presence` et `04_Suivi-seances`
+- [ ] **Lire tous les post-it** : si une même difficulté revient chez plus de 30 % du groupe, **elle ouvre la séance 2**
+- [ ] **Regarder les résultats du Kahoot** : toute question ratée par plus de la moitié de la classe se reprend en 2 minutes samedi
+- [ ] Établir la **liste des 10 minutes** pour la séance 2
+- [ ] Envoyer le message aux familles
+- [ ] Répondre aux **3 questions de la revue** (onglet `10_Journal-enseignants`)
+- [ ] **Échanger les rôles** pour la séance 2
 
 ---
 
-## 4. Plans de secours
+## 5. Plans de secours
 
 | Problème | Quoi faire |
 |---|---|
-| **Panne de courant / machines HS** | Basculer sur la **version débranchée** (§ 5). Le WOW se raconte, le Test de Décollage se fait entièrement sur papier (stations 2 et 3), et l'atelier devient « le programme sur papier » : chaque binôme **écrit** son écran d'accueil au feutre sur une feuille A3, et un camarade joue le rôle de l'ordinateur en le lisant **littéralement, ligne par ligne**. Très efficace, et les élèves en reparlent des semaines après. |
-| **Le vidéoprojecteur ne marche pas** | Le WOW se fait en petits groupes autour de la machine de démonstration (3 minutes par groupe, pendant que `MEC` distribue le matériel). Le live coding se fait aussi par groupes tournants. |
-| **Un enseignant absent** | Supprimer le Test de Décollage (reporté à la séance 2). Garder : accueil, WOW, guilde, rituels, Thonny, live coding, atelier, clôture. Binômes formés par proximité géographique. |
-| **Beaucoup plus d'élèves que prévu** | Trinômes (Pilote / Copilote / Testeur). Test de Décollage réduit aux stations 2 et 3, station 1 reportée à la séance 2. |
-| **Moins de machines que de binômes** | Alterner : pendant que la moitié code, l'autre moitié fait les énigmes de la station 2 ou avance son Passeport. Échange à mi-atelier. |
-| **On a 20 minutes de retard** | Supprimer, dans cet ordre : 1) la station 3 du test (questionnaire à remplir à la maison ou en séance 2) 2) la 2ᵉ démonstration de la mise en commun 3) la station 1. **Ne jamais supprimer l'atelier, ni la clôture avec les badges.** |
-| **Un élève arrive 45 min en retard** | `MEC` le prend 2 min à part : étiquette prénom, résumé en 3 phrases, placement dans un binôme existant en **trinôme**, et il code. Pas de test de décollage : on le fera la semaine prochaine. |
+| **Pas d'internet** | Seul le Kahoot est touché → **version débranchée** (§ 6). Tout le reste de la séance fonctionne sans connexion. |
+| **Les élèves n'ont pas d'appareil pour le Kahoot** | Les élèves jouent **par poste, à deux ou trois** sur les ordinateurs de la salle. Sinon, version débranchée. |
+| **Le vidéoprojecteur ne marche pas** | Le WOW se fait en petits groupes autour de la machine de démonstration (3 min par groupe). La théorie se fait au tableau — elle est de toute façon conçue pour le tableau. |
+| **Panne de courant / machines HS** | Toute la première heure (prière, WOW raconté, théorie) fonctionne telle quelle. Le premier contact machine devient **« le programme sur papier »** : chaque binôme écrit son écran d'accueil au feutre sur une A3, et un camarade joue l'ordinateur en le lisant **littéralement**. |
+| **Un enseignant absent** | Supprimer les missions de décollage (reportées en séance 2). Garder prière, WOW, théorie, premier contact machine, Kahoot, clôture. |
+| **On a 15 minutes de retard** | Supprimer, dans cet ordre : 1) le Kahoot passe à 8 questions 2) les portraits passent de 5 à 3 3) la station 3 du test (questionnaire à remplir en séance 2). **Ne jamais supprimer le temps machine, ni la clôture avec les badges.** |
+| **Un élève arrive pendant la théorie** | `MEC` le prend 2 min à part : étiquette prénom, résumé en 3 phrases, placement. Il fera ses missions de décollage en séance 2. |
 
 ---
 
-## 5. Version débranchée de la séance 1 (plan B complet)
+## 6. Le Kahoot débranché (plan B complet)
 
-**Matériel :** feuilles A3, gros feutres, la grille XO dessinée au tableau.
+**Il ne coûte rien à préparer et il ne dépend de rien.** Les élèves ont déjà les 4 cartes de couleur sur leur poste : elles deviennent les cartes de réponse.
 
-1. **Le WOW** : jouer une vraie partie de morpion au tableau, contre un élève.
-2. **La guilde, la promesse, les rituels** : identiques, mot pour mot.
-3. **« L'ordinateur humain »** (20 min) : un enseignant joue le rôle de l'ordinateur. Il **n'obéit qu'aux ordres écrits, et à la lettre**. Les élèves lui écrivent `print("Bonjour")` sur une feuille. Il lit, il dit « Bonjour ». Si on écrit `Print`, il répond : *« je ne connais pas ce mot »*. Si on oublie un guillemet, il dit : *« erreur de grammaire, je ne comprends pas ta phrase »*.
-   > Cette activité enseigne **mieux que la machine** ce qu'est l'obéissance littérale d'un ordinateur. À garder même quand tout fonctionne, si le temps le permet.
-4. **Atelier papier** (20 min) : chaque binôme écrit son écran d'accueil du jeu XO en lignes de `print`, sur A3. Un autre binôme vient « l'exécuter » à voix haute, littéralement. Les bugs se voient immédiatement, et c'est très drôle.
-5. **Clôture** : identique — badges, Mur de Mission, les deux post-it. Les A3 des élèves sont affichés au mur.
+| Réponse | Couleur Kahoot | Carte à lever |
+|---|---|---|
+| 1 | 🔴 rouge | 🔴 **Rouge** |
+| 2 | 🔵 bleu | 🔵 **Bleu** |
+| 3 | 🟡 jaune | 🟠 **Orange** |
+| 4 | 🟢 vert | 🟢 **Vert** |
+
+**Déroulé :** `CAP` lit la question et les 4 réponses à voix haute, les écrit au tableau, compte « 3, 2, 1 », **et tout le monde lève sa carte en même temps**. `MEC` compte les bonnes réponses par équipe de table. On donne l'explication, on passe à la suivante.
+
+> **C'est parfois meilleur que le vrai Kahoot :** tout le monde répond en même temps, personne ne recopie son voisin, et on voit d'un seul regard quelle notion n'est pas passée.
 
 ---
 
-## 6. Les six pièges de la séance 1
+## 7. Les six pièges de cette séance
 
 | Piège | Conséquence | Parade |
 |---|---|---|
-| **Trop parler au début** | On perd la classe avant même d'avoir codé | Le bloc 08–30 est **chronométré**. Si à 30 min on n'a pas fini, on coupe et on avance |
-| **Laisser les élèves toucher les machines pendant les explications** | Plus personne n'écoute | Règle annoncée d'emblée, et rappelée avec humour |
-| **Présenter le Test comme un test** | Angoisse, résultats faussés, mauvais départ | On dit « missions de décollage », toujours |
-| **Prendre le clavier d'un élève pour aller plus vite** | L'élève apprend qu'il n'y arrive pas seul. Le geste le plus destructeur du métier | Les 4 phrases autorisées, et rien d'autre |
-| **Laisser un élève repartir sans avoir rien affiché** | Il ne reviendra probablement pas samedi | `MEC` surveille les écrans à 104 min ; c'est la priorité absolue |
-| **Oublier les badges faute de temps** | On casse le moteur de motivation dès la première séance | Les 6 dernières minutes sont **intouchables** |
+| **Faire de la théorie un cours magistral** | Trente minutes assis = classe perdue avant la machine | Chaque sous-partie a **une question ou une activité debout**. On ne parle jamais 3 minutes d'affilée |
+| **Laisser toucher les machines avant 13 h 30** | Plus personne n'écoute pendant la théorie | Règle annoncée d'emblée, avec humour, et rappelée |
+| **Déborder sur la théorie** | On mange le temps machine, et l'objectif n° 1 tombe | **Minuteur visible.** À 12 h 55 on s'arrête, même au milieu d'un portrait |
+| **Présenter le test comme un test** | Angoisse, résultats faussés, mauvais départ | On dit « missions de décollage », toujours |
+| **Prendre le clavier d'un élève** | Il apprend qu'il n'y arrive pas seul. Le geste le plus destructeur du métier | Les 4 phrases autorisées, et rien d'autre |
+| **Laisser le Kahoot manger la clôture** | On finit sans badges : le moteur de motivation est cassé dès le premier samedi | Le Kahoot **s'arrête à 13 h 55**, question en cours ou pas |
 
 ---
 
-## 7. Supports de la séance
+## 8. Supports de la séance
 
 ### Pour les enseignants
 
 | Support | Fichier |
 |---|---|
-| 🎤 **Mon script d'animation** (14 pages A4, agrafé) | [`a-imprimer/00-MON-SCRIPT-animation.pdf`](a-imprimer/00-MON-SCRIPT-animation.pdf) |
-| 📋 Fiche de validation pour les responsables (2 pages, **envoi numérique**) | [`a-imprimer/00-FICHE-DE-VALIDATION-responsables.pdf`](a-imprimer/00-FICHE-DE-VALIDATION-responsables.pdf) |
-| 🖨️ Tous les documents à imprimer, en PDF | [`a-imprimer/`](a-imprimer/) — quantités : [`quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
-| 📊 Classeur de suivi (Google Sheets) | [`3-suivi/classeur-de-suivi.xlsx`](../../3-suivi/classeur-de-suivi.xlsx) |
+| 🎤 **Mon script d'animation** (à imprimer, agrafé) | [`a-imprimer/00-MON-SCRIPT-animation.pdf`](a-imprimer/00-MON-SCRIPT-animation.pdf) |
+| 🎯 **Le Kahoot** : 14 questions, réponses, explications, plan B | [`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md) |
+| 📥 Fichier d'import Kahoot | [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) |
+| 📨 **Le déroulé à envoyer au responsable** (Word, modifiable) | [`a-envoyer/deroule-seance-1.docx`](a-envoyer/deroule-seance-1.docx) |
+| 🖨️ Tous les documents à imprimer | [`a-imprimer/`](a-imprimer/) — quantités : [`quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
+| 📊 Classeur de suivi | [`3-suivi/classeur-de-suivi.xlsx`](../../3-suivi/classeur-de-suivi.xlsx) |
 | 🎮 Le jeu fini, pour le WOW | [`4-outils/jeu_xo_complet.py`](../../4-outils/jeu_xo_complet.py) |
 | ⌨️ L'anti-sèche du live coding | [`code/live_coding_antiseche.py`](code/live_coding_antiseche.py) |
 | ✅ Vérifier un poste avant la séance | [`4-outils/verifier_un_poste.py`](../../4-outils/verifier_un_poste.py) |
-| 💾 Contenu de la clé USB | [`4-outils/LISEZ-MOI.md`](../../4-outils/LISEZ-MOI.md) |
+| 💾 Préparer la clé USB | [`4-outils/LISEZ-MOI.md`](../../4-outils/LISEZ-MOI.md) |
 
 ### Pour les élèves
 
 | Support | Fichier |
 |---|---|
-| Fiche mémo élève (1 par binôme) | [`a-imprimer/06-fiche-memo-eleve.pdf`](a-imprimer/06-fiche-memo-eleve.pdf) |
-| 🔴 Piste Rouge et ⚫ Piste Noire — consignes | [`a-imprimer/13-cartes-pistes.pdf`](a-imprimer/13-cartes-pistes.pdf) |
-| 🔵 Piste Bleue — le fichier à trous, déjà sur leur poste | [`code/depart_eleves_piste_bleue.py`](code/depart_eleves_piste_bleue.py) |
+| Fiche mémo (1 par binôme) | [`a-imprimer/06-fiche-memo-eleve.pdf`](a-imprimer/06-fiche-memo-eleve.pdf) |
+| Le fichier de départ, déjà sur leur poste | [`code/depart_eleves_piste_bleue.py`](code/depart_eleves_piste_bleue.py) |
 | **Code officiel de fin de séance** — le Filet | [`code/code_officiel_fin_de_seance.py`](code/code_officiel_fin_de_seance.py) |
 
 ---
 
-## 8. Vers la séance 2
+## 9. Vers la séance 2
 
 **Brique suivante :** *le jeu demande son nom au joueur et le salue.*
 **Notion :** les variables et `input()`.
 **Accroche à annoncer dès aujourd'hui :** *« Samedi prochain, votre jeu ne va plus seulement parler. Il va vous écouter. »*
 
-**À préparer avec ce qui est sorti d'aujourd'hui :**
-- Les profils P0 → le fichier piste Bleue de la séance 2 devra être encore plus guidé
-- Les post-it → la difficulté la plus citée ouvre la séance
-- La liste des 10 minutes → qui `MEC` prend en tête-à-tête pendant l'atelier 2
-- Les binômes → inchangés jusqu'à la séance 4
+**Ce qui démarre en séance 2 et pas aujourd'hui :**
+- les **binômes officiels** (composés à froid ce soir, à partir du diagnostic) et le **contrat de binôme** lu à voix haute ;
+- les **3 pistes** Bleue / Rouge / Noire ;
+- le format de séance normal, avec deux ateliers et la chasse aux bugs.
+
+**À préparer avec ce qui est sorti d'aujourd'hui :** les profils P0→P3 · les post-it · les résultats du Kahoot · la liste des 10 minutes.

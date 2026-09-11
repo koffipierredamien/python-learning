@@ -1,7 +1,7 @@
 # Méthode pédagogique — Apprendre Python en construisant le jeu XO
 
 **Classes concernées :** Jerusalem Geeks (9–12 ans) · Jeremiah Geeks (12–18 ans)
-**Format :** 1 séance de 2 h, chaque samedi
+**Format :** 1 séance de 2 h, chaque samedi, de 12 h à 14 h — ouverte par un temps de prière de 15 minutes
 **Encadrement :** 2 enseignants
 **Projet fil rouge :** le jeu XO (Tic-Tac-Toe), de la première ligne de code jusqu'à l'application graphique jouable
 
@@ -219,19 +219,19 @@ Les profils sont **réévalués à la séance 5 et à la séance 12**. Un P0 dev
 
 ## 4. Le rituel de séance : les 2 heures, minute par minute
 
-Le rituel est **identique chaque samedi**. La répétition rassure les jeunes élèves, réduit le temps perdu, et permet à un élève absent de reprendre sans effort.
+Le rituel est **identique chaque samedi**, de **12 h à 14 h**, et il ouvre toujours par le temps de prière. La répétition rassure les jeunes élèves, réduit le temps perdu, et permet à un élève absent de reprendre sans effort.
 
 | Temps | Bloc | Contenu | Qui |
 |---|---|---|---|
-| **0–10** | 🚪 **Accueil & décollage** | Les élèves entrent, allument, ouvrent le projet, récupèrent le **code de départ officiel** (procédure affichée au mur, faite en autonomie dès la S3). 5 min de jeu de clavier chronométré. | Mécanicien accueille et dépanne · Capitaine prépare |
-| **10–20** | 🎬 **Le WOW** | On montre **le résultat de la séance** avant de commencer : « Voilà ce que votre jeu saura faire dans 2 heures. » Puis rappel express de la séance précédente sous forme de quiz oral rapide (3 questions, réponse à main levée). | Capitaine |
-| **20–35** | 🧠 **La notion** | Une seule notion nouvelle par séance. Introduite en **débranché** (avec le corps, des cartes, des objets) puis en **live coding lent** avec la règle « je code, vous prédisez » : l'enseignant tape, s'arrête, et demande *« qu'est-ce que ça va afficher ? »* avant d'exécuter. **L'enseignant fait volontairement une erreur et la répare devant tout le monde.** | Capitaine (Mécanicien vérifie que tout le monde suit) |
-| **35–55** | 🔨 **Atelier 1** | Codage en binôme, pistes Bleue/Rouge/Noire. Rotation pilote/copilote à 45 min. | Les deux circulent |
-| **55–65** | 🥤 **Pause** | Pause réelle : on se lève, on sort de la salle, on bouge. Non négociable, surtout pour les 9–12 ans. | — |
-| **65–90** | 🔨 **Atelier 2** | Deuxième moitié de la brique + intégration dans le jeu complet. Rotation pilote/copilote à 78 min. | Les deux circulent |
-| **90–103** | 🐞 **Chasse aux bugs croisée** | Chaque binôme teste **le jeu d'un autre binôme** avec une grille de test fournie (« essaie de le faire planter »). Les élèves rapides deviennent testeurs officiels et Geek Mentors. | Mécanicien organise les échanges |
-| **103–113** | 🎤 **Mise en commun** | 2 binômes montrent leur écran (2 min chacun, tournant : chaque binôme passe au moins une fois par mois). Le Capitaine récapitule la notion en 3 phrases. Distribution du **défi maison facultatif**. Sauvegarde et publication du **nouveau code officiel**. | Capitaine |
-| **113–120** | 🏅 **Clôture rituelle** | Remise des badges et grades du jour. Avancée du Mur de Mission. Post-it « j'ai compris ___ / je ne suis pas sûr de ___ ». Rangement. | Les deux |
+| **12 h - 12 h 15** | 🙏 **Prière et accueil** | La séance ouvre par le temps de prière. Pendant ce temps, le Mécanicien accueille les retardataires à la porte et coche la présence. | Capitaine conduit · Mécanicien accueille |
+| **12 h 15 - 12 h 25** | 🎬 **Le WOW et le rappel** | On montre **le résultat de la séance** avant de commencer : « Voilà ce que votre jeu saura faire dans deux heures. » Puis rappel express de la séance précédente en 3 questions à main levée. Les élèves ouvrent le projet et récupèrent le **code de départ officiel**. | Capitaine |
+| **12 h 25 - 12 h 40** | 🧠 **La notion** | Une seule notion nouvelle par séance. Introduite en **débranché** (avec le corps, des cartes, des objets) puis en **live coding lent** avec la règle « je code, vous prédisez ». **L'enseignant fait volontairement une erreur et la répare devant tout le monde.** | Capitaine (Mécanicien vérifie que tout le monde suit) |
+| **12 h 40 - 13 h** | 🔨 **Atelier 1** | Codage en binôme, pistes Bleue / Rouge / Noire. Rotation pilote/copilote à 12 h 50. | Les deux circulent |
+| **13 h - 13 h 10** | 🥤 **Pause** | Pause réelle : on se lève, on sort de la salle, on bouge. Non négociable, surtout pour les 9–12 ans. | — |
+| **13 h 10 - 13 h 35** | 🔨 **Atelier 2** | Deuxième moitié de la brique + intégration dans le jeu complet. Rotation pilote/copilote à 13 h 22. | Les deux circulent |
+| **13 h 35 - 13 h 47** | 🐞 **Chasse aux bugs croisée** | Chaque binôme teste **le jeu d'un autre binôme** avec une grille de test (« essaie de le faire planter »). Les élèves rapides deviennent testeurs officiels et Geek Mentors. | Mécanicien organise les échanges |
+| **13 h 47 - 13 h 55** | 🎤 **Mise en commun** | 2 binômes montrent leur écran (2 min chacun, tournant). Le Capitaine récapitule la notion en 3 phrases. Distribution du **défi maison facultatif**. Sauvegarde et publication du **nouveau code officiel**. | Capitaine |
+| **13 h 55 - 14 h** | 🏅 **Clôture rituelle** | Remise des badges et grades du jour. Avancée du Mur de Mission. Post-it « j'ai compris ___ / je ne suis pas sûr de ___ ». Rangement. | Les deux |
 
 **Règle des blocs d'attention :** aucun bloc où l'élève est passif ne dépasse **15 minutes** (Jerusalem) ou **20 minutes** (Jeremiah). Au-delà, la classe décroche, quel que soit le talent de l'orateur.
 
