@@ -52,4 +52,4 @@ Choisis un défi bonus :
 Ton dessin de grille est écrit **en dur** : les cases sont vides pour toujours.
 Comment ferait-on pour qu'une case affiche `X` quand un joueur joue dedans ?
 
-Note ton idée dans ton journal de bord. On comparera avec la vraie solution dans cinq semaines.
+Note ton idée sur un post-it et donne-le au prof. On comparera avec la vraie solution dans cinq semaines.

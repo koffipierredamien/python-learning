@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Mur de Mission</title>
+<style>
+  @page { size: A3 landscape; margin: 10mm; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; }
+  .consigne { font-size:10pt; color:#333; border:1px dashed #999; padding:4mm; margin-bottom:5mm; }
+  h1 { font-size:26pt; text-align:center; margin:0 0 1mm; }
+  .sur { text-align:center; font-size:12pt; color:#444; margin-bottom:5mm; }
+  .grille { display:grid; grid-template-columns:repeat(6,1fr); gap:3mm; }
+  .case { border:1.2mm solid #1a1a2e; border-radius:3mm; padding:3mm; min-height:34mm;
+          display:flex; flex-direction:column; }
+  .num { font-size:15pt; font-weight:bold; color:#6b2d8f; }
+  .lib { font-size:9.5pt; line-height:1.25; margin-top:1.5mm; flex:1; }
+  .coche { align-self:flex-end; width:9mm; height:9mm; border:0.8mm solid #999; border-radius:2mm; }
+  .star { background:#fff6d8; border-color:#d79a00; border-width:2mm; }
+  .star .num { color:#b06f00; }
+  .fin { background:#eaf7ee; border-color:#1e9e4a; border-width:2mm; }
+  .fin .num { color:#0c5c29; }
+  .pied { margin-top:5mm; font-size:11pt; text-align:center; }
+  @media print { .consigne { display:none; } }
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 1 exemplaire, <b>A3 paysage</b>. Si vous pouvez l'imprimer en A2 ou A1 chez un imprimeur, c'est encore mieux —
+c'est la pièce maîtresse de la salle. À défaut, imprimez-le en A3 et collez-le sur une grande feuille de papier kraft, avec le titre écrit à la main en gros.
+<b>Usage :</b> la classe colorie UNE case à la fin de chaque séance. Collez-y une photo du groupe ou une capture d'écran du jeu.</div>
+
+<h1>🗺️ MUR DE MISSION — LE JEU XO EN 22 SAMEDIS</h1>
+<div class="sur">On avance ENSEMBLE. Une case par samedi. La classe entière, jamais un élève seul.</div>
+
+<div class="grille">
+  <div class="case"><div class="num">1</div><div class="lib">Le jeu dit bonjour</div><div class="coche"></div></div>
+  <div class="case"><div class="num">2</div><div class="lib">Le jeu demande ton nom</div><div class="coche"></div></div>
+  <div class="case"><div class="num">3</div><div class="lib">Le jeu retient les 2 joueurs</div><div class="coche"></div></div>
+  <div class="case"><div class="num">4</div><div class="lib">Le plateau s'affiche</div><div class="coche"></div></div>
+  <div class="case"><div class="num">5</div><div class="lib">Les cases sont numérotées</div><div class="coche"></div></div>
+  <div class="case"><div class="num">6</div><div class="lib">On place un X</div><div class="coche"></div></div>
+  <div class="case"><div class="num">7</div><div class="lib">X et O jouent à tour de rôle</div><div class="coche"></div></div>
+  <div class="case star"><div class="num">8 ⭐</div><div class="lib"><b>PREMIÈRE DÉMO</b> — on joue à deux !</div><div class="coche"></div></div>
+  <div class="case"><div class="num">9</div><div class="lib">Les coups interdits sont refusés</div><div class="coche"></div></div>
+  <div class="case"><div class="num">10</div><div class="lib">Le jeu compte les tours</div><div class="coche"></div></div>
+  <div class="case"><div class="num">11</div><div class="lib">Le jeu range son code (fonctions)</div><div class="coche"></div></div>
+  <div class="case"><div class="num">12</div><div class="lib">Le jeu détecte le gagnant</div><div class="coche"></div></div>
+  <div class="case"><div class="num">13</div><div class="lib">Match nul et fin de partie</div><div class="coche"></div></div>
+  <div class="case star"><div class="num">14 ⭐</div><div class="lib"><b>LA FENÊTRE S'OUVRE</b> — concours de design</div><div class="coche"></div></div>
+  <div class="case"><div class="num">15</div><div class="lib">La grille devient cliquable</div><div class="coche"></div></div>
+  <div class="case"><div class="num">16</div><div class="lib">X et O se dessinent</div><div class="coche"></div></div>
+  <div class="case"><div class="num">17</div><div class="lib">Le gagnant s'affiche en grand</div><div class="coche"></div></div>
+  <div class="case star"><div class="num">18 ⭐</div><div class="lib"><b>LA NUIT DU BUG</b></div><div class="coche"></div></div>
+  <div class="case"><div class="num">19</div><div class="lib">Le score et le bouton Rejouer</div><div class="coche"></div></div>
+  <div class="case"><div class="num">20</div><div class="lib">Les sons et les couleurs</div><div class="coche"></div></div>
+  <div class="case"><div class="num">21</div><div class="lib">L'ordinateur joue tout seul</div><div class="coche"></div></div>
+  <div class="case fin"><div class="num">22 🏆</div><div class="lib"><b>TOURNOI XO</b> + démo aux familles</div><div class="coche"></div></div>
+</div>
+<div class="pied">🤍 Novice → 💛 Apprenti Codeur → 🧡 Codeur → 💚 Ingénieur → 💙 Architecte → 🖤 Maître Geek</div>
+</body></html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Station 2 — Les 4 énigmes</title>
+<style>
+  @page { size: A4 portrait; margin: 11mm; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:11pt; }
+  .consigne { font-size:9pt; color:#333; border:1px dashed #999; padding:3mm; margin-bottom:4mm; }
+  h1 { font-size:19pt; margin:0 0 1mm; text-align:center; }
+  .sur { text-align:center; font-size:10pt; color:#555; margin-bottom:5mm; }
+  .nom { border:1mm solid #1a1a2e; padding:3mm; margin-bottom:5mm; font-size:11.5pt; }
+  .ligne { border-bottom:0.4mm solid #333; display:inline-block; }
+  h2 { font-size:13.5pt; background:#6b2d8f; color:#fff; padding:2mm 3mm; margin:5mm 0 3mm; border-radius:1.5mm; }
+  .vign { display:flex; flex-wrap:wrap; gap:2.5mm; margin:3mm 0; }
+  .v { border:0.5mm solid #333; border-radius:2mm; padding:2.5mm; width:38mm; font-size:9.5pt; }
+  .v .box { float:right; width:7mm; height:7mm; border:0.4mm solid #333; text-align:center; }
+  table.grid { border-collapse:collapse; margin:3mm 0; }
+  table.grid td { width:11mm; height:11mm; border:0.4mm solid #333; text-align:center; font-size:13pt; font-weight:bold; }
+  td.bloc { background:#333; }
+  td.rob { background:#dbe9ff; }
+  td.tres { background:#fff3c4; }
+  .rep { margin-top:2mm; }
+  .rep .ligne { width:100%; margin-bottom:4mm; }
+  .suite { font-family:"Courier New",monospace; font-size:15pt; letter-spacing:2px; margin:2mm 0; }
+  .pb { page-break-before:always; }
+  @media print { .consigne { display:none; } }
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 6 exemplaires, A4, <b>recto-verso</b> (2 pages). Station 2 du Test de Décollage, 8 min, sans ordinateur.
+Les élèves travaillent seuls et en autonomie. <b>On ne cherche pas les bonnes réponses : on observe la manière de raisonner.</b>
+Cotation indicative sur 4 (1 point par énigme abordée sérieusement) → onglet <b>02_Diagnostic</b> du classeur.</div>
+
+<h1>🧩 MISSION LOGIQUE</h1>
+<div class="sur">4 énigmes. Tu peux les faire dans l'ordre que tu veux.<br>Ce n'est pas noté. Si tu n'y arrives pas, écris quand même ce que tu as pensé.</div>
+
+<div class="nom">Mon prénom : <span class="ligne" style="width:70mm">&nbsp;</span> &nbsp; Mon âge : <span class="ligne" style="width:18mm">&nbsp;</span></div>
+
+<h2>ÉNIGME 1 — Remets dans l'ordre</h2>
+<p style="margin:0 0 1mm">Voici les étapes d'une partie de morpion, mais elles sont mélangées.
+Écris le bon numéro dans chaque case, de <b>1</b> à <b>6</b>.</p>
+<div class="vign">
+  <div class="v"><span class="box"></span>Le premier joueur place son X</div>
+  <div class="v"><span class="box"></span>On dessine la grille de 9 cases</div>
+  <div class="v"><span class="box"></span>Quelqu'un a 3 symboles alignés</div>
+  <div class="v"><span class="box"></span>On annonce le gagnant</div>
+  <div class="v"><span class="box"></span>On décide qui commence</div>
+  <div class="v"><span class="box"></span>Le deuxième joueur place son O</div>
+</div>
+
+<h2>ÉNIGME 2 — Le robot aveugle</h2>
+<p style="margin:0 0 1mm">Le robot 🤖 est dans la case bleue. Il regarde vers la <b>droite ➡️</b>.
+Le trésor 💎 est dans la case jaune. Les cases noires sont des murs.<br>
+Écris la liste des ordres pour qu'il aille au trésor. Tu n'as le droit qu'à <b>trois ordres</b> :
+<b>AVANCE</b>, <b>GAUCHE</b> (il pivote), <b>DROITE</b> (il pivote).</p>
+<table class="grid">
+  <tr><td class="rob">🤖</td><td></td><td></td><td class="bloc"></td><td></td></tr>
+  <tr><td class="bloc"></td><td></td><td class="bloc"></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td class="bloc"></td></tr>
+  <tr><td></td><td class="bloc"></td><td class="bloc"></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td class="tres">💎</td></tr>
+</table>
+<div class="rep">Mes ordres :<br>
+<span class="ligne">&nbsp;</span><span class="ligne">&nbsp;</span><span class="ligne">&nbsp;</span></div>
+
+<div class="pb"></div>
+<h2>ÉNIGME 3 — Trouve la règle</h2>
+<p style="margin:0 0 2mm">Complète les deux cases vides, <b>et surtout</b> écris la règle en une phrase.</p>
+
+<div class="suite">a)&nbsp;&nbsp; 2 &nbsp; 4 &nbsp; 6 &nbsp; 8 &nbsp; ___ &nbsp; ___</div>
+<div>La règle, c'est : <span class="ligne" style="width:110mm">&nbsp;</span></div>
+
+<div class="suite" style="margin-top:5mm">b)&nbsp;&nbsp; 1 &nbsp; 2 &nbsp; 4 &nbsp; 8 &nbsp; ___ &nbsp; ___</div>
+<div>La règle, c'est : <span class="ligne" style="width:110mm">&nbsp;</span></div>
+
+<div class="suite" style="margin-top:5mm">c)&nbsp;&nbsp; ▲ &nbsp; ▲ &nbsp; ● &nbsp; ▲ &nbsp; ▲ &nbsp; ● &nbsp; ___ &nbsp; ___</div>
+<div>La règle, c'est : <span class="ligne" style="width:110mm">&nbsp;</span></div>
+
+<h2>ÉNIGME 4 — Explique le morpion à un extraterrestre</h2>
+<p style="margin:0 0 2mm">Un extraterrestre arrive sur Terre. Il est très intelligent, mais il ne connaît
+<b>absolument pas</b> le morpion, et il fait <b>exactement</b> ce qu'on lui dit — rien de plus.<br>
+Écris toutes les règles pour qu'il puisse y jouer sans se tromper. Sois le plus précis possible.</p>
+<div class="rep">
+<span class="ligne">&nbsp;</span><span class="ligne">&nbsp;</span><span class="ligne">&nbsp;</span>
+<span class="ligne">&nbsp;</span><span class="ligne">&nbsp;</span><span class="ligne">&nbsp;</span>
+<span class="ligne">&nbsp;</span><span class="ligne">&nbsp;</span><span class="ligne">&nbsp;</span>
+<span class="ligne">&nbsp;</span>
+</div>
+<div style="margin-top:4mm; border:1mm solid #f08a24; padding:3mm; font-size:10pt">
+<b>Garde bien cette feuille, le prof la reprend.</b> On la relira ensemble à la séance 10,
+quand ton jeu saura vraiment reconnaître le gagnant. Tu verras que tu avais déjà la réponse aujourd'hui.
+</div>
+</body></html>

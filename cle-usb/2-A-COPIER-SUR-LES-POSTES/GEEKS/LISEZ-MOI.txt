@@ -1,0 +1,21 @@
+=====================================================
+   DOSSIER GEEKS
+   Jerusalem Geeks  -  Jeremiah Geeks
+=====================================================
+
+   mon_xo/        <-  TON dossier de travail.
+                      C'est ici que tu codes.
+                      Ton fichier s'appelle  jeu.py
+
+   xo_officiel/   <-  LE FILET.
+                      Le code de reference, donne par
+                      le prof au debut de chaque seance.
+                      N'y touche pas : c'est ta copie
+                      de secours.
+
+-----------------------------------------------------
+   TU AS TOUT CASSE ?  CE N'EST PAS GRAVE.
+   Recopie le fichier de  xo_officiel  dans  mon_xo
+   et tu repars propre. Personne ne te grondera :
+   c'est fait pour ca.
+=====================================================

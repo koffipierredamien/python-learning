@@ -39,6 +39,9 @@ un ordinateur à l'élève qui code déjà — avec seulement deux enseignants.
 |---|---|---|---|
 | [S01](docs/seances/S01-decollage.md) | Le Décollage | L'écran d'accueil du jeu XO | `print()` |
 
+Pour la séance 1 : [🎤 le script d'animation](docs/seances/S01-script-animateur.html) ·
+[📋 la fiche de validation pour les responsables](docs/S01-fiche-de-validation.html)
+
 Chaque fiche contient le déroulé minute par minute, les scripts d'animation, les
 supports des 3 pistes, les erreurs anticipées, les plans de secours et le code
 officiel de fin de séance.
@@ -53,12 +56,17 @@ officiel de fin de séance.
 | [A4 — Grades, badges & Mur de Mission](docs/annexes/A4-grades-et-badges.md) | Le système de motivation complet, et ce qu'il ne faut surtout pas faire |
 | [A5 — Outils imprimables](docs/annexes/A5-outils-imprimables.md) | Cartes de signalisation, contrat de binôme, dictionnaire des erreurs, journal de bord, grille de test, tableau de suivi |
 
-### Supports et code
+### Supports, code et outils
 
 | Dossier | Contenu |
 |---|---|
+| [`impressions/`](impressions/README.md) | 🖨️ **Tout ce qui est à imprimer**, un fichier HTML prêt à l'emploi par document |
+| [`suivi/`](suivi/) | 📊 **Le classeur de suivi** à importer dans Google Sheets : apprenants, contacts, présence, diagnostic, badges, checklists, tableau de bord |
+| [`demo/`](demo/) | 🎮 Le jeu XO terminé (démo du « WOW »), l'anti-sèche de live coding, et le vérificateur de poste |
 | [`supports/`](supports/) | Fiches mémo élèves et fichiers des 3 pistes, par séance |
 | [`code-officiel/`](code-officiel/) | **Le Filet** : le code du jeu tel qu'il est à la fin de chaque séance, redistribué à tous au début de la suivante |
+| [`cle-usb/`](cle-usb/README.md) | 💾 L'arborescence exacte de la clé USB + le script qui installe le dossier `GEEKS` sur chaque poste |
+| [`outils/`](outils/) | Le script qui reconstruit la clé après toute modification |
 
 ---
 
@@ -83,6 +91,10 @@ officiel de fin de séance.
 - [x] Outils de diagnostic et de suivi
 - [x] Annexes opérationnelles imprimables
 - [x] Séance 1 : fiche détaillée, supports et code officiel
+- [x] Séance 1 : script d'animation, documents imprimables, fiche de validation
+- [x] Classeur de suivi (apprenants, présence, diagnostic, badges, tableau de bord)
+- [x] Jeu XO terminé pour la démonstration d'ouverture
+- [x] Clé USB et installation du dossier `GEEKS` sur les postes
 - [ ] Découpage détaillé des séances 2 à 22
 - [ ] Supports élèves des séances suivantes
 - [ ] Code de référence du jeu XO, version par version

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Cartes des pistes — Séance 1</title>
+<style>
+  @page { size: A4 portrait; margin: 9mm; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; }
+  .consigne { font-size:9pt; color:#333; border:1px dashed #999; padding:3mm; margin-bottom:4mm; }
+  .carte { border:1.5mm dashed #666; border-radius:3mm; padding:5mm; height:130mm; margin-bottom:4mm; }
+  h1 { font-size:17pt; margin:0 0 1mm; }
+  .rouge h1 { color:#c0272d; } .noire h1 { color:#111; }
+  .sous { font-size:10pt; color:#555; margin-bottom:2.5mm; }
+  pre { font-family:"Courier New",monospace; font-size:10.5pt; background:#f4f4f8; border-left:1.5mm solid #6b2d8f;
+        padding:2.5mm 3mm; margin:2mm 0; line-height:1.25; }
+  ol,ul { margin:1.5mm 0; padding-left:7mm; }
+  li { font-size:10pt; margin-bottom:1mm; line-height:1.25; }
+  .cols { display:flex; gap:4mm; }
+  .cols > div { flex:1; }
+  b.k { background:#ffe9a8; }
+  .mono { font-family:"Courier New",monospace; }
+  @media print { .consigne { display:none; } }
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 1 page par binôme (les deux cartes sur la même feuille), A4, à découper.
+La carte Bleue n'existe pas sur papier : elle est <b>dans le fichier</b> <span class="mono">mon_xo/jeu.py</span> déjà ouvert sur leur poste.</div>
+
+<div class="carte rouge">
+  <h1>🔴 PISTE ROUGE — Séance 1</h1>
+  <div class="sous">Tu écris tout toi-même, depuis un fichier vide.</div>
+  <div class="cols">
+    <div>
+      <b>Le résultat à obtenir :</b>
+<pre>===================================
+      BIENVENUE DANS LE JEU XO
+===================================
+Cree par : (ton prenom)
+Age du createur : (ton age) ans
+Prepare-toi a perdre !</pre>
+      <b>Tu n'as le droit qu'à une commande :</b>
+<pre>print("le texte que je veux")</pre>
+    </div>
+    <div>
+      <b>Les étapes :</b>
+      <ol>
+        <li>Ouvre <span class="mono">GEEKS / mon_xo / jeu.py</span></li>
+        <li><b class="k">Efface tout</b> ce qu'il y a dedans</li>
+        <li>Écris tes lignes : <b>une ligne de code = une ligne affichée</b></li>
+        <li><b class="k">Enregistre</b>, PUIS lance (▶ ou <span class="mono">F5</span>)</li>
+        <li>Relance après CHAQUE modification</li>
+      </ol>
+      <b>Si ça ne marche pas :</b>
+      <ul>
+        <li>Lis le message rouge <b>à voix haute</b></li>
+        <li>Compte tes guillemets : <b>deux</b> par ligne</li>
+        <li>Une parenthèse ouverte = une fermée</li>
+        <li><span class="mono">print</span> tout en minuscules</li>
+      </ul>
+      <b>Fini ?</b> Fais relire ton écran par ton binôme, puis attaque la piste Noire.
+    </div>
+  </div>
+</div>
+
+<div class="carte noire">
+  <h1>⚫ PISTE NOIRE — Séance 1</h1>
+  <div class="sous">Tout ce que fait la piste Rouge, <b>et en plus</b> ton jeu dessine la grille vide du morpion.</div>
+  <div class="cols">
+    <div>
+      <b>Le résultat à obtenir :</b>
+<pre>===================================
+      BIENVENUE DANS LE JEU XO
+===================================
+Cree par : (ton prenom)
+
+ . | . | .
+---+---+---
+ . | . | .
+---+---+---
+ . | . | .
+
+Prepare-toi a perdre !</pre>
+      <b>Les règles du défi :</b>
+      <ul>
+        <li>Tu n'as <b>que</b> <span class="mono">print()</span>. Rien d'autre.</li>
+        <li>La grille doit être <b class="k">bien alignée</b>. Toute la difficulté est là : compte tes espaces.</li>
+      </ul>
+    </div>
+    <div>
+      <b>Fini avant la fin ? Choisis un bonus :</b>
+      <ol>
+        <li><b>Les numéros.</b> Remplace les points par les numéros des cases, de 1 à 9.
+        <i>(C'est exactement ce qu'il nous faudra à la séance 6 — tu prends de l'avance sur le projet.)</i></li>
+        <li><b>La ligne vide.</b> Trouve seul comment afficher une ligne complètement vide.
+        <i>(Indice : un print peut être très, très court.)</i></li>
+        <li><b>Le cadre.</b> Encadre tout ton écran avec des <span class="mono">|</span> sur les côtés.</li>
+        <li><b>Geek Mentor.</b> Lève la carte 🔵 et va aider un autre binôme.
+        <b class="k">Interdiction de toucher leur clavier</b> — tu ne poses que des questions.</li>
+      </ol>
+      <b>Pour réfléchir</b> (on en reparle à la séance 6) : ta grille est écrite en dur, les cases
+      sont vides pour toujours. Comment ferait-on pour qu'une case affiche <span class="mono">X</span> ?
+      Note ton idée sur un post-it et donne-le au prof.
+    </div>
+  </div>
+</div>
+</body></html>
