@@ -1,100 +1,84 @@
-# Python Learning — Jerusalem Geeks & Jeremiah Geeks
+# Jerusalem Geeks & Jeremiah Geeks
 
-Programme de formation à la programmation Python pour enfants et adolescents,
-construit autour d'un projet fil rouge unique : **le jeu XO (Tic-Tac-Toe)**,
+Apprendre Python en construisant le jeu **XO** (morpion), une brique par samedi,
 de la première ligne de code jusqu'à l'application graphique jouable.
 
 | | |
 |---|---|
 | **Jerusalem Geeks** | 9 – 12 ans |
 | **Jeremiah Geeks** | 12 – 18 ans |
-| **Format** | 1 séance de 2 h, chaque samedi (≈ 22 séances) |
+| **Format** | 2 h, chaque samedi · 22 séances |
 | **Encadrement** | 2 enseignants |
-| **Langage & outils** | Python 3 · Thonny · Tkinter |
+| **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
+| **Première séance** | samedi 12 septembre 2026 |
 
 ---
 
-## 📚 Documentation
+## Où est quoi
 
-### [→ Méthode pédagogique complète](docs/methode-pedagogique.md)
+| Dossier | Contenu | Quand on l'ouvre |
+|---|---|---|
+| **[1-methode/](1-methode/methode-pedagogique.md)** | La pédagogie : comment faire progresser ensemble des niveaux très différents, à 2 enseignants | Une fois, au début. On y revient en cas de problème |
+| **[2-seances/](2-seances/LISEZ-MOI.md)** | Une séance = un dossier. Fiche détaillée, PDF à imprimer, code, sources | **Chaque semaine** |
+| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur de suivi à importer dans Google Sheets | Après chaque séance |
+| **[4-outils/](4-outils/LISEZ-MOI.md)** | Les programmes : le jeu de démo, l'installateur des postes, la préparation de la clé | Avant chaque séance |
 
-Le document de référence : la stratégie retenue pour faire progresser ensemble
-des élèves de niveaux très différents — du grand débutant qui n'a jamais utilisé
-un ordinateur à l'élève qui code déjà — avec seulement deux enseignants.
+---
 
-**Les huit principes :**
+## Samedi prochain : la séance 1
+
+👉 **[2-seances/S01-decollage/](2-seances/S01-decollage/fiche-de-seance.md)**
+
+| J'ai besoin de… | C'est ici |
+|---|---|
+| Animer la séance | [🎤 Mon script d'animation](2-seances/S01-decollage/a-imprimer/00-MON-SCRIPT-animation.pdf) — 14 pages, à agrafer |
+| Tout imprimer | [🖨️ Les 14 PDF](2-seances/S01-decollage/a-imprimer/) + [les quantités](2-seances/S01-decollage/a-imprimer/quantites-et-formats.md) |
+| Faire valider la séance | [📋 La fiche pour les responsables](2-seances/S01-decollage/a-imprimer/00-FICHE-DE-VALIDATION-responsables.pdf) — envoi numérique |
+| Comprendre le détail, minute par minute | [📖 La fiche de séance](2-seances/S01-decollage/fiche-de-seance.md) |
+| Préparer les machines | [🔧 Les outils, dans l'ordre](4-outils/LISEZ-MOI.md) |
+
+---
+
+## La méthode en huit principes
 
 1. Une seule classe, un seul projet, **pas de groupes de niveau**
-2. Différencier par la profondeur : **3 pistes** (🔵 Bleue guidée · 🔴 Rouge standard · ⚫ Noire défi), choisies par l'élève à chaque atelier
-3. **Le Filet** : un code de départ officiel redistribué à chaque séance → aucun décrochage cumulatif possible
+2. Différencier par la profondeur : **3 pistes** (🔵 guidée · 🔴 standard · ⚫ défi), choisies par l'élève à chaque atelier
+3. **Le Filet** : le code de référence redistribué à chaque séance → une absence ne met jamais personne en retard
 4. **Le binôme est le 3ᵉ enseignant** : pilote / copilote, rotation toutes les 10 minutes
-5. **Deux rôles enseignants distincts et tournants** : le Capitaine (devant) et le Mécanicien (dans les rangs)
+5. **Deux rôles enseignants distincts et tournants** : le Capitaine devant, le Mécanicien dans les rangs
 6. **Le Sas « Permis Machine »** pour les grands débutants, sans les séparer du groupe
 7. **Motivation** : grades, badges, Mur de Mission, tournoi final devant les familles
 8. **Évaluation par la preuve, jamais par la note** : ça marche / je sais l'expliquer / je sais le refaire
 
-### [→ Fiches de séance](docs/seances/)
-
-| Séance | Titre | Brique ajoutée au jeu | Notion |
-|---|---|---|---|
-| [S01](docs/seances/S01-decollage.md) | Le Décollage | L'écran d'accueil du jeu XO | `print()` |
-
-Pour la séance 1 : [🎤 le script d'animation (PDF)](impressions/pdf/00-MON-SCRIPT-animation.pdf) ·
-[📋 la fiche de validation pour les responsables (PDF)](impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf)
-
-Chaque fiche contient le déroulé minute par minute, les scripts d'animation, les
-supports des 3 pistes, les erreurs anticipées, les plans de secours et le code
-officiel de fin de séance.
-
-### Annexes opérationnelles
-
-| Annexe | Contenu |
-|---|---|
-| [A1 — Diagnostic & Passeport Machine](docs/annexes/A1-diagnostic-et-passeport.md) | Le « Test de Décollage » en 3 stations, la grille d'observation, les 12 gestes du Passeport |
-| [A2 — Conduite de séance](docs/annexes/A2-conduite-de-seance.md) | Le déroulé des 2 h minute par minute, les checklists avant/pendant/après, les scripts d'animation |
-| [A3 — Matrice des cas particuliers](docs/annexes/A3-matrice-des-cas.md) | 35 cas (niveau, rythme, assiduité, matériel, émotionnel, cognitif, organisation, projet) avec détection et réponse |
-| [A4 — Grades, badges & Mur de Mission](docs/annexes/A4-grades-et-badges.md) | Le système de motivation complet, et ce qu'il ne faut surtout pas faire |
-| [A5 — Outils imprimables](docs/annexes/A5-outils-imprimables.md) | Cartes de signalisation, contrat de binôme, dictionnaire des erreurs, journal de bord, grille de test, tableau de suivi |
-
-### Supports, code et outils
-
-| Dossier | Contenu |
-|---|---|
-| [`impressions/pdf/`](impressions/pdf/) | 🖨️ **Tout ce qui est à imprimer, en PDF** — au bon format, couleurs incluses, rien à régler. [Guide et quantités](impressions/README.md) |
-| [`suivi/`](suivi/) | 📊 **Le classeur de suivi** à importer dans Google Sheets : apprenants, contacts, présence, diagnostic, badges, checklists, tableau de bord |
-| [`demo/`](demo/) | 🎮 Le jeu XO terminé (démo du « WOW »), l'anti-sèche de live coding, et le vérificateur de poste |
-| [`supports/`](supports/) | Fiches mémo élèves et fichiers des 3 pistes, par séance |
-| [`code-officiel/`](code-officiel/) | **Le Filet** : le code du jeu tel qu'il est à la fin de chaque séance, redistribué à tous au début de la suivante |
-| [`cle-usb/`](cle-usb/README.md) | 💾 L'arborescence exacte de la clé USB + le script qui installe le dossier `GEEKS` sur chaque poste |
-| [`outils/`](outils/) | Le script qui reconstruit la clé après toute modification |
+→ [La méthode complète](1-methode/methode-pedagogique.md) ·
+[Diagnostic](1-methode/annexes/A1-diagnostic-et-passeport.md) ·
+[Conduite de séance](1-methode/annexes/A2-conduite-de-seance.md) ·
+[Les 35 cas particuliers](1-methode/annexes/A3-matrice-des-cas.md) ·
+[Grades et badges](1-methode/annexes/A4-grades-et-badges.md) ·
+[Outils et modèles](1-methode/annexes/A5-outils-et-modeles.md)
 
 ---
 
-## 🗺️ Ossature du parcours
+## Le parcours
 
-| Phase | Séances | Brique ajoutée au jeu | Notions Python |
+| Phase | Séances | Brique ajoutée au jeu | Notions |
 |---|---|---|---|
-| 0. Décollage | 1 | Premier programme, premier message affiché | environnement, exécution |
-| 1. Parler au joueur | 2–5 | Le jeu dit bonjour, demande les noms, affiche un plateau vide | variables, `input()`, `print()`, types |
-| 2. Le plateau vit | 6–9 | On place un X ou un O, les joueurs alternent | listes, indices, conditions, boucles |
-| 3. Les règles du jeu | 10–13 | Coups invalides refusés, gagnant détecté, match nul | fonctions, `while`, opérateurs logiques |
-| 4. L'interface graphique | 14–18 | Fenêtre, grille cliquable, personnalisation | Tkinter, événements, callbacks |
-| 5. Finition & intelligence | 19–22 | Score, sons, **IA de l'ordinateur**, distribution | organisation du code, algorithmes |
+| 0. Décollage | 1 | L'écran d'accueil du jeu | `print()` |
+| 1. Parler au joueur | 2–5 | Le jeu demande les noms | variables, `input()`, types |
+| 2. Le plateau vit | 6–9 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
+| 3. Les règles du jeu | 10–13 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
+| 4. L'interface graphique | 14–18 | Fenêtre, grille cliquable, design | Tkinter, événements |
+| 5. Finition & intelligence | 19–22 | Score, sons, **IA**, distribution | organisation du code, algorithmes |
 
-> Le découpage détaillé séance par séance fera l'objet du document suivant, une fois la méthode validée.
+Les rendez-vous : **S8** première démo jouable · **S14** concours de design ·
+**S18** la Nuit du bug · **S22** tournoi XO et démo aux familles.
 
 ---
 
-## 📌 État du projet
+## Où on en est
 
-- [x] Méthode pédagogique complète
-- [x] Outils de diagnostic et de suivi
-- [x] Annexes opérationnelles imprimables
-- [x] Séance 1 : fiche détaillée, supports et code officiel
-- [x] Séance 1 : script d'animation, documents imprimables, fiche de validation
-- [x] Classeur de suivi (apprenants, présence, diagnostic, badges, tableau de bord)
-- [x] Jeu XO terminé pour la démonstration d'ouverture
-- [x] Clé USB et installation du dossier `GEEKS` sur les postes
-- [ ] Découpage détaillé des séances 2 à 22
-- [ ] Supports élèves des séances suivantes
-- [ ] Code de référence du jeu XO, version par version
+- [x] La méthode pédagogique et ses annexes
+- [x] Séance 1 : fiche, script d'animation, 14 documents imprimables, code, fiche de validation
+- [x] Le classeur de suivi
+- [x] Le jeu XO terminé (démonstration d'ouverture) et les outils de préparation
+- [ ] Séances 2 à 22
