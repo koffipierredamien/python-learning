@@ -3,25 +3,25 @@
 <style>
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  @page { size: A4 portrait; margin: 11mm 12mm; }
+  @page { size: A4 portrait; margin: 14mm 13mm; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:9pt; color:#111; line-height:1.28; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:10.5pt; color:#111; line-height:1.45; }
   .note { font-size:9pt; color:#333; border:1px dashed #999; padding:3mm; margin-bottom:5mm; }
-  .entete { border-bottom:1.2mm solid #1a1a2e; padding-bottom:2mm; margin-bottom:3mm; }
+  .entete { border-bottom:1.2mm solid #1a1a2e; padding-bottom:3.5mm; margin-bottom:5mm; }
   .entete .k { font-size:9pt; letter-spacing:2px; color:#6b2d8f; font-weight:bold; }
-  h1 { font-size:17pt; margin:1mm 0 1.5mm; }
-  .meta { display:flex; gap:5mm; font-size:8.6pt; color:#444; flex-wrap:wrap; }
+  h1 { font-size:21pt; margin:1.5mm 0 2.5mm; }
+  .meta { display:flex; gap:6mm; font-size:9.5pt; color:#444; flex-wrap:wrap; }
   .meta div b { color:#111; }
-  h2 { font-size:10pt; background:#1a1a2e; color:#fff; padding:1.2mm 3mm; margin:2.6mm 0 1.5mm; border-radius:1.5mm; }
-  p { margin:0 0 1.8mm; }
-  table { width:100%; border-collapse:collapse; margin:2mm 0; }
-  th,td { border:0.3mm solid #666; padding:0.9mm 1.8mm; font-size:8.3pt; vertical-align:top; text-align:left; }
+  h2 { font-size:12pt; background:#1a1a2e; color:#fff; padding:1.8mm 3.5mm; margin:5.5mm 0 3mm; border-radius:1.5mm; }
+  p { margin:0 0 3mm; }
+  table { width:100%; border-collapse:collapse; margin:2mm 0; page-break-inside:avoid; }
+  th,td { border:0.3mm solid #666; padding:1.8mm 2.5mm; font-size:9.8pt; vertical-align:top; text-align:left; }
   th { background:#eee; }
   td.h { font-family:"Courier New",monospace; font-weight:bold; white-space:nowrap; width:17mm; }
-  ul { margin:0 0 1.8mm; padding-left:5mm; } li { margin-bottom:0.7mm; }
+  ul { margin:0 0 3mm; padding-left:6mm; } li { margin-bottom:1.6mm; }
   .encadre { border:0.8mm solid #1a1a2e; padding:2.5mm; margin:2mm 0; }
-  .trois { display:flex; gap:3mm; margin:2mm 0; }
-  .trois > div { flex:1; border:0.5mm solid #888; padding:1.8mm; font-size:8.2pt; }
+  .trois { display:flex; gap:4mm; margin:3mm 0; page-break-inside:avoid; }
+  .trois > div { flex:1; border:0.5mm solid #888; padding:3mm; font-size:9.5pt; }
   .trois > div > b:first-child { display:block; margin-bottom:1mm; color:#6b2d8f; }
   .coche { display:inline-block; width:4.5mm; height:4.5mm; border:0.4mm solid #333; margin-right:2mm; vertical-align:-0.5mm; }
   .sign { display:flex; gap:6mm; margin-top:4mm; }
@@ -30,8 +30,9 @@
   .cle { background:#fff6d8; padding:0 1mm; }
   @media print { .note { display:none; } }
 </style></head><body>
-<div class="note"><b>À imprimer :</b> 1 exemplaire par responsable, A4 recto-verso (2 pages).
-Ou bien « Enregistrer au format PDF » dans la fenêtre d'impression, pour l'envoyer par mail.</div>
+<div class="note"><b>Document à envoyer par voie numérique.</b> Le PDF prêt à l'envoi est
+<code>impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf</code>. Pensez à renseigner la date prévue
+dans l'en-tête avant l'envoi (modifiable dans ce fichier .html, puis regénérez le PDF avec Ctrl+P).</div>
 
 <div class="entete">
   <div class="k">PROGRAMME DE FORMATION — CODAGE PYTHON POUR LES JEUNES</div>
@@ -40,7 +41,7 @@ Ou bien « Enregistrer au format PDF » dans la fenêtre d'impression, pour l'en
     <div><b>Public :</b> Jerusalem Geeks (9–12 ans) · Jeremiah Geeks (12–18 ans)</div>
     <div><b>Durée :</b> 2 h, le samedi</div>
     <div><b>Encadrement :</b> 2 enseignants</div>
-    <div><b>Date prévue :</b> ......../......../............</div>
+    <div><b>Date prévue :</b> <span style="background:#fff6d8">&nbsp;à compléter&nbsp;</span></div>
   </div>
 </div>
 
@@ -78,7 +79,6 @@ y compris ceux qui n'ont jamais utilisé un ordinateur.</p>
   <tr><td class="h">108 → 120</td><td>Présentation des travaux, sauvegarde, remise des distinctions</td><td>Valoriser, et fidéliser</td></tr>
 </table>
 
-<div class="pb"></div>
 <h2>4 · COMMENT NOUS GÉRONS DES NIVEAUX TRÈS DIFFÉRENTS</h2>
 <p>Le groupe ira du grand débutant — qui n'a peut-être jamais utilisé un ordinateur portable — à l'élève qui sait
 déjà coder. Trois dispositifs répondent à cette difficulté, sans jamais séparer la classe en groupes de niveau :</p>
@@ -91,50 +91,5 @@ déjà coder. Trois dispositifs répondent à cette difficulté, sans jamais sé
   L'entraide devient une ressource d'encadrement, indispensable avec 2 enseignants.</div>
 </div>
 
-<h2>5 · ÉVALUATION</h2>
-<p><b>Aucune note, à aucun moment du parcours.</b> Une compétence est validée quand l'élève apporte trois preuves :
-<b>son programme fonctionne</b> · <b>il sait l'expliquer avec ses mots</b> · <b>il sait le refaire</b> sur une variante.
-La progression est matérialisée par des grades (Novice → Maître Geek) et des distinctions qui valorisent aussi
-la persévérance et l'entraide, pas seulement la rapidité.</p>
-<p>Le test de positionnement de la séance 1 est un outil interne aux enseignants : <b>ses résultats ne sont
-communiqués ni aux élèves ni aux familles</b>, et il est présenté aux enfants comme un jeu, jamais comme un examen.</p>
 
-<h2>6 · MOYENS NÉCESSAIRES</h2>
-<table>
-  <tr><th style="width:34%">Ressource</th><th>Détail</th></tr>
-  <tr><td>Salle</td><td>Écrans visibles depuis le fond de la salle ; un vidéoprojecteur ; un mur libre pour les affiches</td></tr>
-  <tr><td>Machines</td><td><b>1 ordinateur pour 2 élèves suffit</b> (le travail en binôme est un choix pédagogique) + 1 machine de réserve</td></tr>
-  <tr><td>Logiciel</td><td>Python 3 et l'éditeur Thonny — <b>gratuits</b>, installés une fois avant la séance 1. <b>Aucun besoin d'internet pendant les cours.</b></td></tr>
-  <tr><td>Impressions</td><td>≈ 80 pages A4 (dont 20 en couleur) et 4 affiches A3, <b>pour toute la séance et réutilisables</b></td></tr>
-  <tr><td>Consommables</td><td>Post-it, feutres, gommettes de couleur (distinctions), 1 clé USB</td></tr>
-  <tr><td>Préparation</td><td>≈ 2 h avant la séance 1 (installation des postes), puis 30 min par semaine</td></tr>
-  <tr><td>Ouverture anticipée</td><td><b>Demande :</b> pouvoir ouvrir la salle 30 min avant, pour un atelier libre destiné aux élèves les moins à l'aise avec la machine</td></tr>
-</table>
-
-<h2>7 · CADRE ET PRÉCAUTIONS</h2>
-<ul>
-  <li><b>Règle de vie n° 1, annoncée dès l'ouverture :</b> on ne se moque jamais de quelqu'un qui n'a pas compris ou qui va moins vite.</li>
-  <li><b>Aucun devoir obligatoire à la maison</b> : tous les élèves n'ont pas d'ordinateur chez eux, et le programme ne doit créer aucune inégalité. Les défis à la maison sont facultatifs et ne conditionnent jamais la suite.</li>
-  <li><b>Aucune donnée personnelle publiée en ligne.</b> Les informations recueillies (contacts, suivi) servent uniquement à l'encadrement et restent internes à l'équipe.</li>
-  <li>Les photos d'élèves ne sont prises et utilisées qu'avec l'accord écrit des familles (case prévue sur la fiche d'inscription).</li>
-  <li>Deux enseignants sont présents en permanence ; un protocole de fonctionnement en mode dégradé est prévu si l'un est absent.</li>
-</ul>
-
-<h2>8 · POINTS SOUMIS À VALIDATION</h2>
-<div class="encadre">
-  <div><span class="coche"></span> Le contenu et le déroulé de la séance 1 tels que décrits ci-dessus</div>
-  <div><span class="coche"></span> Le principe de l'évaluation <b>sans notes</b>, par validation de compétences</div>
-  <div><span class="coche"></span> Le principe du travail en binôme sur une machine partagée</div>
-  <div><span class="coche"></span> L'installation de Python et Thonny sur les postes de la salle</div>
-  <div><span class="coche"></span> Le budget d'impression et de consommables</div>
-  <div><span class="coche"></span> L'ouverture de la salle 30 minutes avant la séance</div>
-  <div><span class="coche"></span> La collecte des coordonnées des élèves et de leurs responsables (fiche d'inscription)</div>
-  <div style="margin-top:2.5mm">Observations : ..........................................................................................................................................</div>
-  <div style="margin-top:2mm">.......................................................................................................................................................................</div>
-</div>
-
-<div class="sign">
-  <div><b>Présenté par</b><br>Nom : ..................................................<br><br>Date : ......../......../............<br><br>Signature :</div>
-  <div><b>Validé par</b><br>Nom et fonction : ..................................<br><br>Date : ......../......../............<br><br>Signature :</div>
-</div>
 </body></html>

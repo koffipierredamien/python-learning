@@ -12,7 +12,7 @@ impressions/
 
 - **Pour imprimer :** ouvrez le PDF, `Ctrl+P`, vérifiez le format de papier indiqué dans le tableau ci-dessous, et lancez. Les couleurs et les cadres sont déjà inclus dans le PDF — vous n'avez **aucune** option à cocher.
 - **Pour faire imprimer en boutique :** donnez-leur le dossier `pdf/` sur une clé, avec le tableau ci-dessous.
-- **Pour envoyer à vos responsables :** le PDF `00-FICHE-DE-VALIDATION-responsables.pdf` s'envoie par mail tel quel.
+- **Pour vos responsables :** le PDF `00-FICHE-DE-VALIDATION-responsables.pdf` est fait pour un **envoi numérique** — il s'envoie par mail tel quel, et n'a pas besoin d'être imprimé. Renseignez la date prévue dans l'en-tête avant de l'envoyer.
 
 > Les fichiers `.html` sont les **sources**. Un fichier HTML est une page web : si vous double-cliquez dessus, il s'ouvre dans votre navigateur et vous pouvez aussi l'imprimer avec `Ctrl+P` — mais il faut alors penser à cocher **« Graphiques d'arrière-plan »**. Les PDF vous évitent ça. Ne gardez les HTML que si vous voulez corriger un texte : voir « Modifier un document » en bas de page.
 
@@ -23,7 +23,7 @@ impressions/
 | # | Document (dans `pdf/`) | Papier | Pages | Combien | Pour qui |
 |---|---|---|---|---|---|
 | — | `00-MON-SCRIPT-animation.pdf` | A4 | **14** | 1, agrafé | **L'animateur** (la dernière page se détache pour le Mécanicien) |
-| — | `00-FICHE-DE-VALIDATION-responsables.pdf` | A4 | 3 | 1 par responsable | Les responsables |
+| — | `00-FICHE-DE-VALIDATION-responsables.pdf` | A4 | 2 | **à envoyer par mail**, pas à imprimer | Les responsables |
 | 01 | `01-cartes-signalisation.pdf` | A4 **couleur** | 1 | **1 par binôme** | Élèves — à découper et plastifier |
 | 02 | `02-affiche-3-avant-moi.pdf` | **A3** couleur | 1 | 1 | Mur |
 | 03 | `03-affiche-contrat-binome.pdf` | **A3** couleur | 1 | 1 | Mur |

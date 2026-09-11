@@ -548,7 +548,7 @@ monde a décollé !
 | Support | Fichier |
 |---|---|
 | 🎤 **Mon script d'animation** (14 pages A4, agrafé) | [`impressions/pdf/00-MON-SCRIPT-animation.pdf`](../../impressions/pdf/00-MON-SCRIPT-animation.pdf) |
-| 📋 Fiche de validation pour les responsables (3 pages) | [`impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf`](../../impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf) |
+| 📋 Fiche de validation pour les responsables (2 pages, **envoi numérique**) | [`impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf`](../../impressions/pdf/00-FICHE-DE-VALIDATION-responsables.pdf) |
 | 🖨️ Tous les documents à imprimer, en PDF | [`impressions/pdf/`](../../impressions/pdf/) — guide : [`impressions/README.md`](../../impressions/README.md) |
 | 📊 Classeur de suivi (Google Sheets) | [`suivi/classeur-de-suivi.xlsx`](../../suivi/classeur-de-suivi.xlsx) |
 | 🎮 Le jeu fini, pour le WOW | [`demo/xo_complet.py`](../../demo/xo_complet.py) |
