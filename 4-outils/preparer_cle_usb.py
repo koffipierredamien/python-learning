@@ -120,8 +120,10 @@ def principal():
     a_imprimer = os.path.join(seance, "a-imprimer")
     if os.path.isdir(a_imprimer):
         for nom in sorted(os.listdir(a_imprimer)):
-            copier(os.path.join(a_imprimer, nom),
-                   os.path.join(cle, "2-A-IMPRIMER", nom), journal)
+            chemin = os.path.join(a_imprimer, nom)
+            if not os.path.isfile(chemin):
+                continue                  # a-imprimer/sources/ : sources modifiables
+            copier(chemin, os.path.join(cle, "2-A-IMPRIMER", nom), journal)
     copier(os.path.join(seance, "fiche-de-seance.md"),
            os.path.join(cle, "3-MES-FICHES", "fiche-de-seance.md"), journal)
     for sous, cible_sous in (("a-projeter", "0-A-PROJETER"),
@@ -141,6 +143,14 @@ def principal():
         for nom in sorted(os.listdir(suivi)):
             if nom.endswith(".xlsx") and nom.startswith("Inscriptions"):
                 copier(os.path.join(suivi, nom), os.path.join(cle, "3-MES-FICHES", nom), journal)
+
+    # 3 ter - le reglement interieur
+    administratif = os.path.join(RACINE, "0-administratif")
+    for nom, cible_sous in (("reglement-interieur.pdf", "2-A-IMPRIMER"),
+                            ("reglement-interieur.docx", "3-MES-FICHES")):
+        chemin = os.path.join(administratif, nom)
+        if os.path.isfile(chemin):
+            copier(chemin, os.path.join(cle, cible_sous, nom), journal)
 
     # 4 - l'emplacement des sauvegardes eleves
     dossier = os.path.join(cle, "4-SAUVEGARDES-ELEVES", "S%s" % numero)

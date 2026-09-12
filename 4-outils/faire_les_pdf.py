@@ -11,6 +11,7 @@
 
         python 4-outils/faire_les_pdf.py            (seance 1)
         python 4-outils/faire_les_pdf.py --seance 2
+        python 4-outils/faire_les_pdf.py --reglement (0-administratif/)
 
   Il a besoin de Chrome ou Chromium installe sur la machine.
   Si vous ne l'avez pas : ouvrez le fichier .html dans votre navigateur,
@@ -49,46 +50,70 @@ def trouver_le_navigateur():
     return None
 
 
-def principal():
-    numero = "%02d" % int(sys.argv[sys.argv.index("--seance") + 1]) if "--seance" in sys.argv else "01"
+def travaux_d_un_dossier(racine_du_lot, dossier_de_sortie):
+    """Liste les (source .html, PDF a ecrire) d'un dossier.
 
-    seances = os.path.join(RACINE, "2-seances")
-    seance = next((os.path.join(seances, n) for n in sorted(os.listdir(seances))
-                   if n.startswith("S" + numero)), None)
-    if seance is None:
-        print("[ERREUR] Aucun dossier 2-seances/S%s... trouve." % numero)
-        return 1
-
-    # on cherche tous les .html de la seance, et on decide ou va chaque PDF
-    a_imprimer = os.path.join(seance, "a-imprimer")
-    travaux = []                       # (fichier source, fichier PDF)
-    for dossier, _, fichiers in os.walk(seance):
+    Regle unique : ce qui est dans un sous-dossier "sources" monte dans
+    dossier_de_sortie ; tout le reste reste a cote de sa source.
+    """
+    travaux = []
+    for dossier, _, fichiers in os.walk(racine_du_lot):
         for nom in sorted(fichiers):
             if not nom.endswith(".html"):
                 continue
             source = os.path.join(dossier, nom)
             if os.path.basename(dossier) == "sources":
-                cible = os.path.join(a_imprimer, nom[:-5] + ".pdf")
+                cible = os.path.join(dossier_de_sortie, nom[:-5] + ".pdf")
             else:
                 cible = os.path.join(dossier, nom[:-5] + ".pdf")
             travaux.append((source, cible))
     travaux.sort(key=lambda t: t[1])
-    if not travaux:
-        print("[ERREUR] Aucun fichier .html trouve dans %s" % os.path.relpath(seance, RACINE))
+    return travaux
+
+
+def le_lot_demande():
+    """Renvoie (titre, dossier de reference, liste des travaux) ou None."""
+    if "--reglement" in sys.argv:
+        administratif = os.path.join(RACINE, "0-administratif")
+        if not os.path.isdir(administratif):
+            print("[ERREUR] Le dossier 0-administratif/ n'existe pas.")
+            print("         Fabriquez d'abord la source : python 4-outils/faire_le_reglement.py")
+            return None
+        return ("DOSSIER ADMINISTRATIF", administratif,
+                travaux_d_un_dossier(administratif, administratif))
+
+    numero = "%02d" % int(sys.argv[sys.argv.index("--seance") + 1]) if "--seance" in sys.argv else "01"
+    seances = os.path.join(RACINE, "2-seances")
+    seance = next((os.path.join(seances, n) for n in sorted(os.listdir(seances))
+                   if n.startswith("S" + numero)), None)
+    if seance is None:
+        print("[ERREUR] Aucun dossier 2-seances/S%s... trouve." % numero)
+        return None
+    return ("SEANCE %s" % numero, seance,
+            travaux_d_un_dossier(seance, os.path.join(seance, "a-imprimer")))
+
+
+def principal():
+    lot = le_lot_demande()
+    if lot is None:
         return 1
-    sources = a_imprimer
+    titre, dossier_de_reference, travaux = lot
+    if not travaux:
+        print("[ERREUR] Aucun fichier .html trouve dans %s"
+              % os.path.relpath(dossier_de_reference, RACINE))
+        return 1
 
     navigateur = trouver_le_navigateur()
     if navigateur is None:
         print("[ERREUR] Chrome ou Chromium est introuvable sur cette machine.")
-        print("         Faites-le a la main : ouvrez chaque .html de la seance dans")
+        print("         Faites-le a la main : ouvrez chaque .html du dossier dans")
         print("         votre navigateur, Ctrl+P, 'Enregistrer au format PDF', et rangez")
-        print("         le resultat sous le meme nom (ceux de a-imprimer/sources/ vont")
-        print("         dans a-imprimer/, les autres restent a cote de leur source).")
+        print("         le resultat sous le meme nom (ceux d'un dossier sources/ montent")
+        print("         d'un cran, les autres restent a cote de leur source).")
         return 1
 
     print("=" * 66)
-    print("  PDF DE LA SEANCE %s" % numero)
+    print("  PDF - %s" % titre)
     print("  Navigateur : %s" % navigateur)
     print("=" * 66)
 
@@ -102,10 +127,10 @@ def principal():
                         "file://" + source],
                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         if os.path.isfile(sortie):
-            print("  + %s" % os.path.relpath(sortie, seance))
+            print("  + %s" % os.path.relpath(sortie, dossier_de_reference))
             faits += 1
         else:
-            print("  ! echec : %s" % os.path.relpath(source, seance))
+            print("  ! echec : %s" % os.path.relpath(source, dossier_de_reference))
 
     print("=" * 66)
     print("  %d PDF ecrits" % faits)

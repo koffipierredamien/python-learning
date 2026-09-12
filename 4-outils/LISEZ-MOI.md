@@ -1,6 +1,6 @@
 # 🔧 Outils
 
-Cinq programmes Python. Vous les lancez depuis Thonny (`F5`) ou en ligne de commande.
+Six programmes Python. Vous les lancez depuis Thonny (`F5`) ou en ligne de commande.
 Aucun n'est destiné aux élèves.
 
 | Programme | Quand s'en servir |
@@ -9,7 +9,8 @@ Aucun n'est destiné aux élèves.
 | [`verifier_un_poste.py`](verifier_un_poste.py) | **À lancer sur chaque machine avant la séance.** Vérifie Python, la logique du jeu, et que la fenêtre graphique pourra s'ouvrir. Tout doit afficher `[OK]`. |
 | [`installer_dossier_geeks.py`](installer_dossier_geeks.py) | **À lancer sur chaque poste de la salle** (et sur votre machine). Crée le dossier `GEEKS` sur le Bureau, avec le fichier de départ de l'élève. |
 | [`preparer_cle_usb.py`](preparer_cle_usb.py) | Fabrique le dossier `cle-usb/` à emporter le samedi. |
-| [`faire_les_pdf.py`](faire_les_pdf.py) | Refabrique les PDF d'une séance à partir de ses sources `.html`. |
+| [`faire_les_pdf.py`](faire_les_pdf.py) | Refabrique les PDF d'une séance — ou du règlement — à partir des sources `.html`. |
+| [`faire_le_reglement.py`](faire_le_reglement.py) | Réécrit le **règlement intérieur** dans ses deux versions, Word et source du PDF, à partir d'un texte unique. |
 
 ---
 
@@ -57,8 +58,8 @@ cle-usb/
 ├── installer_dossier_geeks.py      à lancer sur chaque poste
 ├── depart_eleves_piste_bleue.py    le fichier que l'installateur copie
 ├── 1-DEMO/                         le jeu fini, l'anti-sèche, le vérificateur
-├── 2-A-IMPRIMER/                   les PDF de la séance
-├── 3-MES-FICHES/                   la fiche de séance détaillée
+├── 2-A-IMPRIMER/                   les PDF de la séance + le règlement intérieur
+├── 3-MES-FICHES/                   la fiche de séance, le classeur de suivi, le règlement en Word
 ├── 4-SAUVEGARDES-ELEVES/           où déposer le travail des binômes en fin de séance
 └── 5-CODE-OFFICIEL/                le code publié devant les élèves à 110 min
 ```
@@ -80,4 +81,24 @@ a-imprimer/sources/*.html   →  le PDF monte dans  a-imprimer/
 tout autre  *.html          →  le PDF est écrit à côté de sa source
 ```
 
+Pour le règlement intérieur : `python 4-outils/faire_les_pdf.py --reglement`
+(il convertit alors `0-administratif/sources/*.html` dans `0-administratif/`).
+
 Il a besoin de Chrome ou Chromium. Sans navigateur installé, il vous dit quoi faire à la main.
+
+---
+
+## Le règlement intérieur
+
+Son texte n'est écrit qu'**une seule fois**, dans `faire_le_reglement.py`, article par article et en clair.
+Le programme en sort le Word **et** la source du PDF : les deux versions ne peuvent donc pas se contredire.
+
+```
+python 4-outils/faire_le_reglement.py          → 0-administratif/reglement-interieur.docx
+                                                 + 0-administratif/sources/…html
+python 4-outils/faire_les_pdf.py --reglement   → 0-administratif/reglement-interieur.pdf
+```
+
+Déposez votre bandeau d'en-tête dans `0-administratif/en-tete.png` (ou `.jpg`) avant de relancer :
+il remplace alors le bandeau de texte, dans le Word comme dans le PDF.
+Détails : [0-administratif/LISEZ-MOI.md](../0-administratif/LISEZ-MOI.md)
