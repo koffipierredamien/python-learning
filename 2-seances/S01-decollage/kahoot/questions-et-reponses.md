@@ -10,7 +10,7 @@
 | Temps par question | **20 secondes** |
 | Nombre de questions | 15 — **en retard, gardez les 10 premières** |
 | **Le quiz à projeter** | **[`quiz-seance-1.pptx`](quiz-seance-1.pptx)** — 32 diapos : question, puis réponse |
-| Si vous préférez la version en ligne | [`import-kahoot.pdf`](import-kahoot.pdf) · [`import-kahoot.xlsx`](import-kahoot.xlsx) |
+| Si vous préférez la version en ligne | **[`import-kahoot.xlsx`](import-kahoot.xlsx)** — le modèle officiel de Kahoot, déjà rempli · [`import-kahoot.pdf`](import-kahoot.pdf) |
 | Internet | **Pas nécessaire** : le quiz se joue au vidéoprojecteur, avec les cartes de couleur |
 
 ---
@@ -141,37 +141,38 @@
 
 ---
 
-## Si vous voulez quand même la version en ligne (Kahoot)
+## Si vous voulez la version en ligne (Kahoot)
 
-### ✅ Le plus rapide : le PDF
+### ✅ Le tableur — **c'est le fichier officiel de Kahoot, déjà rempli**
 
-Kahoot sait fabriquer un quiz **à partir d'un document**.
+**[`import-kahoot.xlsx`](import-kahoot.xlsx) est le modèle officiel de Kahoot**, repris tel quel et rempli
+avec nos 15 questions. Il n'y a **rien à recopier** : on le téléverse directement.
 
-1. Sur **kahoot.com** : **Create** → choisissez de générer un kahoot **à partir d'un document**
-   (selon la version : *Create from document*, *Import*, ou l'assistant qui propose de déposer un fichier).
-2. Déposez **[`import-kahoot.pdf`](import-kahoot.pdf)** — 15 questions, chaque bonne réponse signalée.
-3. Kahoot génère les questions. **Relisez-les une par une** : il lui arrive de reformuler, de couper
-   une réponse trop longue, ou de se tromper de bonne réponse.
-4. Réglez le temps sur **20 secondes** pour toutes les questions.
+1. Sur **kahoot.com** : **Create** → **Kahoot** → **Import spreadsheet**.
+2. Téléversez `import-kahoot.xlsx`.
+3. Vérifiez que Kahoot a bien pris la feuille **« Séance 1 - Le Décollage »** (le classeur contient aussi la
+   feuille `Sheet1`, qui est le modèle vierge d'origine — on la garde, c'est comme ça que le fichier est fourni
+   par Kahoot).
+4. **Testez le quiz une fois en solo avant la séance.**
 
-> ⚠️ Cette génération passe par l'IA de Kahoot : le résultat n'est jamais garanti au mot près.
-> **La relecture des 15 questions n'est pas optionnelle.** La liste de contrôle, c'est cette page-ci.
+> **Ce qui n'allait pas avant :** le fichier était construit de zéro, avec les en-têtes en ligne 1.
+> Le vrai modèle de Kahoot a un bloc d'instructions en lignes 2 à 6, **ses en-têtes en ligne 8**, les questions
+> **à partir de la ligne 9**, et une colonne A déjà numérotée de 1 à 100. C'est cette structure exacte qui est
+> désormais utilisée — plus rien à ajuster.
 
-### 🔧 Le plus fidèle : le tableur
+| Colonne | Contenu | Limite |
+|---|---|---|
+| A | le numéro de la question *(déjà rempli, ne pas y toucher)* | 1 à 100 |
+| B | la question | **120 caractères** |
+| C · D · E · F | les réponses 1 à 4 | **75 caractères** chacune |
+| G | le temps, en secondes | 5, 10, 20, 30, 60, 90, 120 ou 240 |
+| H | le numéro de la bonne réponse | 1 à 4 *(plusieurs : séparées par une virgule)* |
 
-1. **Create** → **Kahoot** → **Import spreadsheet**.
-2. Kahoot propose de **télécharger son modèle** (`template.xlsx`). Téléchargez-le.
-3. Ouvrez [`import-kahoot.xlsx`](import-kahoot.xlsx), **copiez les 15 lignes de questions** et collez-les
-   dans le modèle de Kahoot, sous sa ligne d'en-tête.
-4. Enregistrez le modèle, puis **importez-le**.
+### Le PDF, si vous préférez
 
-> Cette voie ne reformule rien : ce que vous écrivez est ce qui apparaît. Si l'import refuse le fichier,
-> c'est presque toujours l'ordre des colonnes : recopiez-les une par une dans leur modèle du jour.
-> Colonnes attendues : **question · réponse 1 · réponse 2 · réponse 3 · réponse 4 · temps · numéro de la bonne réponse**.
-
-### Dans les deux cas
-
-**Testez le quiz une fois en solo avant la séance.** Les questions à corriger se voient tout de suite.
+**[`import-kahoot.pdf`](import-kahoot.pdf)** se dépose dans *Create from document*. C'est plus rapide, mais
+**ça passe par l'IA de Kahoot**, qui reformule, coupe parfois une réponse trop longue ou se trompe de bonne
+réponse. **Relisez les 15 questions** — la liste de contrôle, c'est cette page-ci.
 
 ---
 

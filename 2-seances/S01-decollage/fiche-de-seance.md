@@ -554,7 +554,7 @@ Désignez un élève — de préférence **le plus discret de la séance** — p
 | 🤖 Refaire le diaporama avec Gemini | [`presentation/prompt-pour-gemini.md`](presentation/prompt-pour-gemini.md) |
 | 🎯 **Le quiz à projeter** : 32 diapos, une par question puis la réponse | [`kahoot/quiz-seance-1.pptx`](kahoot/quiz-seance-1.pptx) |
 | 📝 Les 15 questions, réponses et explications | [`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md) |
-| 📥 Import Kahoot : PDF (le plus simple) ou tableur | [`kahoot/import-kahoot.pdf`](kahoot/import-kahoot.pdf) · [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) |
+| 📥 Import Kahoot (si version en ligne) : le modèle officiel déjà rempli | [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) · [`kahoot/import-kahoot.pdf`](kahoot/import-kahoot.pdf) |
 | 📨 **Le déroulé à envoyer au responsable** (Word, modifiable) | [`a-envoyer/deroule-seance-1.docx`](a-envoyer/deroule-seance-1.docx) |
 | 🖨️ Tous les documents à imprimer | [`a-imprimer/`](a-imprimer/) — quantités : [`quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
 | 📊 Classeur de suivi | [`3-suivi/classeur-de-suivi.xlsx`](../../3-suivi/classeur-de-suivi.xlsx) |
