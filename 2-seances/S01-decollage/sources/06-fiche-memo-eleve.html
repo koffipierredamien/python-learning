@@ -8,88 +8,139 @@
   body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:9.5pt; }
   .consigne { font-size:9pt; color:#333; border:1px dashed #999; padding:3mm; margin-bottom:4mm; }
   h1 { font-size:16pt; margin:0 0 1mm; text-align:center; }
-  .sur { text-align:center; font-size:10pt; color:#555; margin-bottom:4mm; }
-  h2 { font-size:11pt; background:#1a1a2e; color:#fff; padding:1.3mm 3mm; margin:2.6mm 0 1.6mm; border-radius:1.5mm; }
+  .sur { text-align:center; font-size:10pt; color:#555; margin-bottom:2.5mm; }
+  h2 { font-size:11pt; background:#1a1a2e; color:#fff; padding:1.1mm 3mm; margin:2.1mm 0 1.2mm; border-radius:1.5mm; }
+  h2.orange { background:#f08a24; }
   .code { font-family:"Courier New",monospace; font-size:13pt; font-weight:bold; background:#f3f3f8;
-          border-left:2mm solid #6b2d8f; padding:2mm; text-align:center; }
-  table { width:100%; border-collapse:collapse; margin-top:2mm; }
-  td,th { border:1px solid #666; padding:1.2mm 2mm; font-size:9pt; vertical-align:top; text-align:left; }
+          border-left:2mm solid #6b2d8f; padding:1.6mm; text-align:center; }
+  table { width:100%; border-collapse:collapse; margin-top:1.5mm; }
+  td,th { border:1px solid #666; padding:0.9mm 1.8mm; font-size:8.8pt; vertical-align:top; text-align:left; }
   th { background:#eee; }
   .mono { font-family:"Courier New",monospace; font-weight:bold; }
-  .regles { display:flex; gap:3mm; }
-  .regle { flex:1; border:1mm solid #1a1a2e; border-radius:2mm; padding:2mm; font-size:9pt; }
-  .regle > b:first-child { display:block; font-size:9.5pt; margin-bottom:1mm; }
-  .cols { display:flex; gap:4mm; }
+  .cols { display:flex; gap:3mm; }
   .cols > * { flex:1; }
-  .trois { border:1.2mm solid #f08a24; padding:2mm; }
-  .trois ol { margin:0; padding-left:6mm; }
-  .trois li { margin-bottom:0.6mm; }
+  .regles { display:flex; gap:3mm; }
+  .regle { flex:1; border:0.8mm solid #1a1a2e; border-radius:2mm; padding:1.7mm; font-size:8.8pt; }
+  .regle > b:first-child { display:block; font-size:9.5pt; margin-bottom:1mm; }
+  /* --- la chaine --- */
+  .chaine { display:flex; align-items:stretch; gap:1mm; margin:1.5mm 0; }
+  .maillon { flex:1; border:0.5mm solid #6b2d8f; border-radius:1.5mm; padding:1.5mm 1mm; text-align:center; }
+  .maillon b { display:block; font-size:8.5pt; color:#6b2d8f; }
+  .maillon span { font-size:7.5pt; color:#333; }
+  .fleche { align-self:center; font-size:11pt; color:#999; }
+  /* --- theorie --- */
+  .theo { border:0.5mm solid #999; border-radius:1.5mm; padding:1.7mm; margin-bottom:1.5mm; }
+  .theo b.t { display:block; font-size:9.5pt; color:#6b2d8f; margin-bottom:0.8mm; }
+  .ages { display:flex; gap:2mm; margin-top:1.2mm; }
+  .age { flex:1; background:#1a1a2e; color:#fff; border-radius:1.5mm; padding:1.2mm; text-align:center; }
+  .age b { display:block; font-size:14pt; line-height:1.1; }
+  .age span { font-size:7pt; }
+  .def { background:#fff6d8; border:0.8mm solid #d79a00; border-radius:1.5mm; padding:1.6mm; text-align:center;
+         font-size:10pt; font-weight:bold; }
   @media print { .consigne { display:none; } }
 </style></head><body>
-<div class="consigne"><b>À imprimer :</b> 1 exemplaire par binôme (soit 1 par poste), A4 recto. Posé sur la table pendant tout l'atelier.
-À plastifier si vous voulez le réutiliser — mais il est propre à la séance 1.</div>
+<div class="consigne"><b>À imprimer :</b> 1 exemplaire par binôme (soit 1 par poste), A4 recto.
+Posé sur la table pendant tout l'atelier, et à emporter à la maison. Il résume <b>toute la théorie de la séance 1</b>.</div>
 
 <h1>🧠 FICHE MÉMO — SÉANCE 1</h1>
-<div class="sur" style="margin-bottom:2mm">À garder sur la table. C'est l'étape 2 de la règle des 3 avant moi.</div>
+<div class="sur" style="margin-bottom:1.8mm">Tout ce qu'on a vu aujourd'hui, sur une seule page. Garde-la.</div>
 
-<h2>LA COMMANDE DU JOUR</h2>
-<div class="code">print("Bonjour")</div>
-<table>
-  <tr><th style="width:22%">Le morceau</th><th>Ce que ça veut dire</th></tr>
-  <tr><td class="mono">print</td><td><b>affiche</b> — toujours tout en minuscules</td></tr>
-  <tr><td class="mono">( … )</td><td>ce qu'on ouvre, on le ferme</td></tr>
-  <tr><td class="mono">" … "</td><td>du texte se met <b>toujours</b> entre deux guillemets</td></tr>
-</table>
+<h2>CE QU'ON A APPRIS AUJOURD'HUI</h2>
+
+<div class="cols">
+  <div class="theo"><b class="t">1 · Pourquoi coder ?</b>
+    Aujourd'hui, tu <b>utilises</b> ce que d'autres ont écrit.<br>
+    Coder, c'est passer de l'autre côté : <b>devenir celui qui écrit</b>.<br><br>
+    Ça sert à trois choses :<br>
+    🔨 <b>fabriquer</b> ce qui n'existe pas encore<br>
+    🧩 <b>résoudre</b> de vrais problèmes<br>
+    🔍 <b>comprendre</b> le monde où tu vis
+  </div>
+  <div class="theo"><b class="t">2 · Où se cache le code ?</b>
+    Les jeux · la santé · l'agriculture · la musique · les transports · l'argent · le cinéma · l'espace · le sport…<br><br>
+    <b>Il n'existe aucun domaine sans code.</b><br>
+    Ça te servira dans le métier que tu choisiras, quel qu'il soit.
+  </div>
+</div>
+
+<div class="theo"><b class="t">3 · Ceux qui l'ont fait — et leur âge quand ils ont commencé</b>
+  <div class="ages">
+    <div class="age"><b>12</b><span>Thomas Suarez<br>des applis</span></div>
+    <div class="age"><b>15</b><span>Nick D'Aloisio<br>un résumeur d'articles</span></div>
+    <div class="age"><b>11</b><span>Gitanjali Rao<br>un détecteur de plomb</span></div>
+    <div class="age"><b>13</b><span>Kelvin Doe<br>une radio avec des déchets</span></div>
+    <div class="age" style="background:#6b2d8f"><b>12</b><span>Elon Musk<br>a vendu son 1ᵉʳ jeu</span></div>
+  </div>
+  <div style="margin-top:1.5mm; font-size:9pt">
+    Aussi : <b>Mark Zuckerberg</b> a écrit Facebook dans sa chambre d'étudiant · <b>Charlette N'Guessan</b> 🇨🇮 a créé
+    un logiciel qui reconnaît les visages.<br>
+    <b>Aucun d'eux n'a commencé en sachant coder. La seule différence : ils ont commencé.</b>
+  </div>
+</div>
+
+<div class="theo"><b class="t">4 · Comment la machine comprend ce que j'écris</b>
+  L'ordinateur ne connaît que deux états : <b>le courant passe = 1</b>, <b>le courant ne passe pas = 0</b>.
+  La lettre <b>A</b>, pour lui, c'est <span class="mono">01000001</span>.
+  Personne ne veut écrire un jeu comme ça — alors on a inventé des langages.
+  <div class="chaine">
+    <div class="maillon"><b>MOI</b><span>j'écris dans Thonny</span></div><div class="fleche">▸</div>
+    <div class="maillon"><b>PYTHON</b><span>des mots !</span></div><div class="fleche">▸</div>
+    <div class="maillon"><b>L'INTERPRÈTE</b><span>il traduit</span></div><div class="fleche">▸</div>
+    <div class="maillon"><b>0 et 1</b><span>01110000…</span></div><div class="fleche">▸</div>
+    <div class="maillon"><b>LA MACHINE</b><span>elle obéit</span></div>
+  </div>
+  <b>PYTHON</b> = la langue dans laquelle j'écris · <b>L'INTERPRÈTE</b> = le traducteur ·
+  <b>THONNY</b> = ma feuille, avec le bouton « vas-y »
+</div>
+
+<div class="theo"><b class="t">5 · L'algorithme</b>
+  <div class="def">Un algorithme, c'est une suite d'ordres précis,<br>donnés dans le bon ordre, pour arriver à un résultat.</div>
+  <div style="margin-top:1.5mm; font-size:9pt">Une recette de cuisine en est un. Un itinéraire aussi. Et les règles du morpion — c'est celui-là
+  qu'on va écrire pendant 22 samedis. <b>Un algorithme, ce n'est pas encore du code : c'est la réflexion avant le code.</b></div>
+</div>
 
 <h2>LES 3 RÈGLES D'OR</h2>
 <div class="regles">
   <div class="regle"><b>1. Il n'est pas intelligent.</b>L'ordinateur est <b>obéissant</b>. Il fait exactement ce qui est écrit. Ni plus, ni moins.</div>
   <div class="regle"><b>2. Il lit de haut en bas.</b>Une ligne après l'autre, dans l'ordre. Toujours.</div>
-  <div class="regle"><b>3. Le rouge n'est pas grave.</b>Le rouge est une <b>information</b>. C'est l'ordinateur qui essaie de t'aider.</div>
+  <div class="regle"><b>3. Le rouge n'est pas grave.</b>Le rouge est une <b>information</b> : c'est l'ordinateur qui essaie de t'aider.</div>
 </div>
 
-<div class="cols">
-<div>
-<h2>LES 4 GESTES</h2>
-<table>
-  <tr><th>Je veux…</th><th>Je fais…</th></tr>
-  <tr><td>lancer mon programme</td><td>bouton vert ▶ ou <span class="mono">F5</span></td></tr>
-  <tr><td>enregistrer</td><td><span class="mono">Fichier → Enregistrer</span></td></tr>
-  <tr><td>retrouver mon fichier</td><td><span class="mono">Bureau → GEEKS → mon_xo → jeu.py</span></td></tr>
-  <tr><td>tout recommencer proprement</td><td>je recopie depuis <span class="mono">GEEKS → xo_officiel</span></td></tr>
-</table>
-</div>
-<div>
-<h2>OÙ SONT LES TOUCHES DIFFICILES</h2>
-<table>
-  <tr><th>Touche</th><th>Comment la faire (AZERTY)</th></tr>
-  <tr><td class="mono">"</td><td><span class="mono">Maj</span> + <span class="mono">3</span></td></tr>
-  <tr><td class="mono">(</td><td><span class="mono">Maj</span> + <span class="mono">5</span></td></tr>
-  <tr><td class="mono">)</td><td><span class="mono">Maj</span> + <span class="mono">°</span></td></tr>
-  <tr><td class="mono">#</td><td><span class="mono">AltGr</span> + <span class="mono">3</span></td></tr>
-  <tr><td class="mono">_</td><td><span class="mono">Maj</span> + <span class="mono">8</span></td></tr>
-  <tr><td class="mono">:</td><td><span class="mono">Maj</span> + <span class="mono">.</span></td></tr>
-</table>
-</div>
+<h2>MA PREMIÈRE COMMANDE</h2>
+<div class="code">print("Bonjour")</div>
+<div class="cols" style="margin-top:1.5mm">
+  <div>
+    <table>
+      <tr><th style="width:22%">Le morceau</th><th>Ce que ça veut dire</th></tr>
+      <tr><td class="mono">print</td><td><b>affiche</b> — toujours tout en minuscules</td></tr>
+      <tr><td class="mono">( … )</td><td>ce qu'on ouvre, on le ferme. Toujours.</td></tr>
+      <tr><td class="mono">" … "</td><td>du texte se met <b>toujours</b> entre deux guillemets</td></tr>
+    </table>
+    <table style="margin-top:1.5mm">
+      <tr><th>Je veux…</th><th>Je fais…</th></tr>
+      <tr><td>lancer mon programme</td><td>bouton vert ▶ ou <span class="mono">F5</span></td></tr>
+      <tr><td>enregistrer</td><td><span class="mono">Fichier → Enregistrer</span></td></tr>
+      <tr><td>retrouver mon fichier</td><td><span class="mono">Bureau → GEEKS → mon_xo → jeu.py</span></td></tr>
+      <tr><td>tout recommencer proprement</td><td>je recopie depuis <span class="mono">GEEKS → xo_officiel</span></td></tr>
+    </table>
+  </div>
+  <div style="flex:0 0 42%">
+    <table>
+      <tr><th colspan="2">Où sont les touches difficiles (AZERTY)</th></tr>
+      <tr><td class="mono" style="width:24%">"</td><td><span class="mono">Maj</span> + <span class="mono">3</span></td></tr>
+      <tr><td class="mono">(</td><td><span class="mono">Maj</span> + <span class="mono">5</span></td></tr>
+      <tr><td class="mono">)</td><td><span class="mono">Maj</span> + <span class="mono">°</span></td></tr>
+      <tr><td class="mono">#</td><td><span class="mono">AltGr</span> + <span class="mono">3</span></td></tr>
+      <tr><td class="mono">_</td><td><span class="mono">Maj</span> + <span class="mono">8</span></td></tr>
+      <tr><td class="mono">:</td><td><span class="mono">Maj</span> + <span class="mono">.</span></td></tr>
+    </table>
+    <div style="margin-top:2mm; border:0.8mm solid #1a1a2e; border-radius:1.5mm; padding:2mm; font-size:9pt; text-align:center">
+      <b>Samedi prochain</b><br>ton jeu ne va plus seulement parler.<br><b>Il va t'écouter.</b>
+    </div>
+  </div>
 </div>
 
-<h2>LES MESSAGES ROUGES D'AUJOURD'HUI</h2>
-<table>
-  <tr><th style="width:36%">Ce que l'ordinateur écrit</th><th>Ce qu'il veut dire</th><th>Ce que je fais</th></tr>
-  <tr><td class="mono">SyntaxError</td><td>« Je ne comprends pas ta phrase »</td><td>Je compte mes guillemets et mes parenthèses</td></tr>
-  <tr><td class="mono">NameError: name 'Print'<br>is not defined</td><td>« Je ne connais pas ce mot »</td><td><span class="mono">print</span>, tout en minuscules</td></tr>
-  <tr><td class="mono">EOL while scanning<br>string literal</td><td>« Ton texte n'est jamais refermé »</td><td>Il manque un guillemet <span class="mono">"</span></td></tr>
-</table>
-
-<h2 style="background:#f08a24">SI JE SUIS BLOQUÉ : 3 AVANT MOI</h2>
-<div class="trois"><ol>
-  <li>👀 <b>Je relis</b> la consigne, puis le message rouge — <b>à voix haute</b></li>
-  <li>🤝 <b>Je demande à mon binôme</b>, et on regarde cette fiche</li>
-  <li>👥 <b>On demande au binôme d'à côté</b> (30 secondes)</li>
-</ol>
-<div style="margin-top:2mm"><b>➜ Toujours bloqué ? CARTE ORANGE 🟠</b></div></div>
-
-<div style="margin-top:2mm; text-align:center; font-size:9pt; color:#555">
+<div style="margin-top:1.4mm; text-align:center; font-size:8.5pt; color:#555">
 Tu ne trouves pas une touche ? <b>Ce n'est pas une bêtise de demander.</b>
 </div>
 </body></html>

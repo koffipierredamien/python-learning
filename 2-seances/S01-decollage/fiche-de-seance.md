@@ -76,7 +76,7 @@
 - [ ] Installer **Python + Thonny** sur toutes les machines, **version identique**, et lancer [`4-outils/verifier_un_poste.py`](../../4-outils/verifier_un_poste.py) sur **chaque** poste.
 - [ ] Lancer [`4-outils/installer_dossier_geeks.py`](../../4-outils/installer_dossier_geeks.py) sur chaque poste : le dossier `GEEKS` doit apparaître sur le Bureau.
 - [ ] Régler la **taille de police de Thonny à 18** minimum sur tous les postes et sur la machine de projection.
-- [ ] **Créer le Kahoot** : importer [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) dans votre compte, relire les 14 questions, **et tester le jeu en solo une fois**.
+- [ ] **Créer le Kahoot** : déposer [`kahoot/import-kahoot.pdf`](kahoot/import-kahoot.pdf) dans Kahoot (*Create from document*) — ou coller [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) dans leur modèle de tableur. **Relire les 15 questions** — l'import PDF passe par leur IA et peut reformuler — puis **tester le jeu en solo une fois**.
 - [ ] **Vérifier la connexion internet de la salle** — c'est la seule chose de la séance qui en dépend. Si elle est incertaine, préparez la version débranchée (§ 6).
 - [ ] Préparer la **clé USB** : `python 4-outils/preparer_cle_usb.py`.
 - [ ] Vérifier le **vidéoprojecteur** avec le câble et la machine du jour.
@@ -415,8 +415,8 @@ Le fichier `GEEKS/mon_xo/jeu.py` est **déjà ouvert** sur chaque écran : c'est
 
 > 🗣️ **CAP :** « Dernière épreuve du décollage : on va voir ce qui est resté. **Ce n'est pas une note**, c'est un jeu. Et il y a des questions sur tout ce qu'on a fait aujourd'hui — la théorie **et** la machine. »
 
-- **14 questions**, 20 secondes chacune. Le détail, les bonnes réponses et l'explication à donner après chaque question sont dans **[`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md)**.
-- **En retard ?** Gardez les **8 premières** : elles couvrent l'essentiel.
+- **15 questions**, 20 secondes chacune. Le détail, les bonnes réponses et l'explication à donner après chaque question sont dans **[`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md)**.
+- **En retard ?** Gardez les **10 premières** : elles couvrent l'essentiel.
 - Après chaque question, `CAP` **explique la réponse en une phrase**. C'est là que le Kahoot devient de l'enseignement et plus seulement un jeu.
 - On célèbre le podium, **mais on insiste** :
 
@@ -528,8 +528,8 @@ Désigner un élève — de préférence **le plus discret de la séance** — p
 | 🎤 **Mon script d'animation** (à imprimer, agrafé) | [`a-imprimer/00-MON-SCRIPT-animation.pdf`](a-imprimer/00-MON-SCRIPT-animation.pdf) |
 | 📺 **Le diaporama à projeter** — 46 diapos, notes de l'animateur incluses | [`presentation/seance-1-projection.pptx`](presentation/seance-1-projection.pptx) |
 | 🤖 Refaire le diaporama avec Gemini | [`presentation/prompt-pour-gemini.md`](presentation/prompt-pour-gemini.md) |
-| 🎯 **Le Kahoot** : 14 questions, réponses, explications, plan B | [`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md) |
-| 📥 Fichier d'import Kahoot | [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) |
+| 🎯 **Le Kahoot** : 15 questions, réponses, explications, plan B | [`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md) |
+| 📥 Import Kahoot : PDF (le plus simple) ou tableur | [`kahoot/import-kahoot.pdf`](kahoot/import-kahoot.pdf) · [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) |
 | 📨 **Le déroulé à envoyer au responsable** (Word, modifiable) | [`a-envoyer/deroule-seance-1.docx`](a-envoyer/deroule-seance-1.docx) |
 | 🖨️ Tous les documents à imprimer | [`a-imprimer/`](a-imprimer/) — quantités : [`quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
 | 📊 Classeur de suivi | [`3-suivi/classeur-de-suivi.xlsx`](../../3-suivi/classeur-de-suivi.xlsx) |

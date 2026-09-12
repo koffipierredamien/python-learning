@@ -57,10 +57,14 @@ def principal():
         print("[ERREUR] Aucun dossier 2-seances/S%s... trouve." % numero)
         return 1
 
-    sources = os.path.join(seance, "sources")
-    cible = os.path.join(seance, "a-imprimer")
-    if not os.path.isdir(cible):
-        os.makedirs(cible)
+    # (dossier des sources, dossier de sortie)
+    paires = [(os.path.join(seance, "sources"), os.path.join(seance, "a-imprimer")),
+              (os.path.join(seance, "kahoot"), os.path.join(seance, "kahoot"))]
+    paires = [(s, c) for s, c in paires if os.path.isdir(s)]
+    sources = paires[0][0]
+    for _, c in paires:
+        if not os.path.isdir(c):
+            os.makedirs(c)
 
     navigateur = trouver_le_navigateur()
     if navigateur is None:
@@ -77,23 +81,24 @@ def principal():
     print("=" * 66)
 
     faits = 0
-    for nom in sorted(os.listdir(sources)):
-        if not nom.endswith(".html"):
-            continue
-        source = os.path.join(sources, nom)
-        sortie = os.path.join(cible, nom[:-5] + ".pdf")
-        subprocess.run([navigateur, "--headless", "--disable-gpu", "--no-sandbox",
-                        "--no-pdf-header-footer", "--print-to-pdf=" + sortie,
-                        "file://" + source],
-                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        if os.path.isfile(sortie):
-            print("  + %s" % os.path.basename(sortie))
-            faits += 1
-        else:
-            print("  ! echec : %s" % nom)
+    for dossier_src, cible in paires:
+        for nom in sorted(os.listdir(dossier_src)):
+            if not nom.endswith(".html"):
+                continue
+            source = os.path.join(dossier_src, nom)
+            sortie = os.path.join(cible, nom[:-5] + ".pdf")
+            subprocess.run([navigateur, "--headless", "--disable-gpu", "--no-sandbox",
+                            "--no-pdf-header-footer", "--print-to-pdf=" + sortie,
+                            "file://" + source],
+                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            if os.path.isfile(sortie):
+                print("  + %s" % os.path.relpath(sortie, seance))
+                faits += 1
+            else:
+                print("  ! echec : %s" % nom)
 
     print("=" * 66)
-    print("  %d PDF ecrits dans %s" % (faits, os.path.relpath(cible, RACINE)))
+    print("  %d PDF ecrits" % faits)
     print("=" * 66)
     return 0
 

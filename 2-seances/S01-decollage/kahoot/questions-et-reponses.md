@@ -9,7 +9,7 @@
 |---|---|
 | Temps par question | **20 secondes** |
 | Nombre de questions | 15 — **en retard, gardez les 10 premières** |
-| Fichier d'import | [`import-kahoot.xlsx`](import-kahoot.xlsx) |
+| Fichiers d'import | [`import-kahoot.pdf`](import-kahoot.pdf) — **le plus simple** · [`import-kahoot.xlsx`](import-kahoot.xlsx) |
 | Sans internet | **Version débranchée** avec les cartes de couleur → bas de page |
 
 ---
@@ -140,18 +140,37 @@
 
 ---
 
-## Importer le quiz dans Kahoot
+## Importer le quiz dans Kahoot — deux chemins
 
-1. Sur **kahoot.com**, connectez-vous → **Create** → **Kahoot** → **Import spreadsheet**.
+### ✅ Le plus rapide : le PDF
+
+Kahoot sait fabriquer un quiz **à partir d'un document**.
+
+1. Sur **kahoot.com** : **Create** → choisissez de générer un kahoot **à partir d'un document**
+   (selon la version : *Create from document*, *Import*, ou l'assistant qui propose de déposer un fichier).
+2. Déposez **[`import-kahoot.pdf`](import-kahoot.pdf)** — 15 questions, chaque bonne réponse signalée.
+3. Kahoot génère les questions. **Relisez-les une par une** : il lui arrive de reformuler, de couper
+   une réponse trop longue, ou de se tromper de bonne réponse.
+4. Réglez le temps sur **20 secondes** pour toutes les questions.
+
+> ⚠️ Cette génération passe par l'IA de Kahoot : le résultat n'est jamais garanti au mot près.
+> **La relecture des 15 questions n'est pas optionnelle.** La liste de contrôle, c'est cette page-ci.
+
+### 🔧 Le plus fidèle : le tableur
+
+1. **Create** → **Kahoot** → **Import spreadsheet**.
 2. Kahoot propose de **télécharger son modèle** (`template.xlsx`). Téléchargez-le.
 3. Ouvrez [`import-kahoot.xlsx`](import-kahoot.xlsx), **copiez les 15 lignes de questions** et collez-les
    dans le modèle de Kahoot, sous sa ligne d'en-tête.
-4. Enregistrez le modèle, puis **importez-le** dans Kahoot.
-5. **Testez le quiz une fois en solo avant la séance.** Les questions à corriger se voient tout de suite.
+4. Enregistrez le modèle, puis **importez-le**.
 
-> Kahoot fait évoluer son modèle de temps en temps. Si l'import refuse le fichier, c'est presque
-> toujours l'ordre des colonnes : recopiez simplement les colonnes une par une dans leur modèle du jour.
-> Les colonnes attendues sont : **question · réponse 1 · réponse 2 · réponse 3 · réponse 4 · temps · numéro de la bonne réponse**.
+> Cette voie ne reformule rien : ce que vous écrivez est ce qui apparaît. Si l'import refuse le fichier,
+> c'est presque toujours l'ordre des colonnes : recopiez-les une par une dans leur modèle du jour.
+> Colonnes attendues : **question · réponse 1 · réponse 2 · réponse 3 · réponse 4 · temps · numéro de la bonne réponse**.
+
+### Dans les deux cas
+
+**Testez le quiz une fois en solo avant la séance.** Les questions à corriger se voient tout de suite.
 
 ---
 

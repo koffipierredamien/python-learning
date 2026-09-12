@@ -128,6 +128,8 @@ def principal():
         dossier_src = os.path.join(seance, sous)
         if os.path.isdir(dossier_src):
             for nom in sorted(os.listdir(dossier_src)):
+                if nom.endswith(".html"):     # sources modifiables : inutiles sur la cle
+                    continue
                 copier(os.path.join(dossier_src, nom),
                        os.path.join(cle, cible_sous, nom), journal)
 
