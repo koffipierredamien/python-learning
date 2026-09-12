@@ -22,7 +22,7 @@
 
 | # | Document (dans `pdf/`) | Papier | Pages | Combien | Pour qui |
 |---|---|---|---|---|---|
-| — | `00-MON-SCRIPT-animation.pdf` | A4 | **16** | 1, agrafé | **L'animateur** (la dernière page se détache pour le Mécanicien) |
+| — | `00-MON-SCRIPT-animation.pdf` | A4 | **17** | 1 par enseignant, agrafé | **L'enseignant** (la dernière page rappelle les 5 réflexes du prof seul) |
 | 01 | `01-cartes-signalisation.pdf` | A4 **couleur** | 1 | **1 par binôme** | Élèves — à découper et plastifier |
 | 02 | `02-affiche-3-avant-moi.pdf` | **A3** couleur | 1 | 1 | Mur |
 | 03 | `03-affiche-contrat-binome.pdf` | **A3** couleur | 1 | 1 | Mur |

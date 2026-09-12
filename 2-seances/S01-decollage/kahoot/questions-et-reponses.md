@@ -1,4 +1,4 @@
-# 🎯 Le Kahoot de la séance 1
+# 🎯 Le quiz de la séance 1
 
 **13 h 45 - 13 h 55 · 15 questions · 20 secondes chacune**
 
@@ -9,8 +9,9 @@
 |---|---|
 | Temps par question | **20 secondes** |
 | Nombre de questions | 15 — **en retard, gardez les 10 premières** |
-| Fichiers d'import | [`import-kahoot.pdf`](import-kahoot.pdf) — **le plus simple** · [`import-kahoot.xlsx`](import-kahoot.xlsx) |
-| Sans internet | **Version débranchée** avec les cartes de couleur → bas de page |
+| **Le quiz à projeter** | **[`quiz-seance-1.pptx`](quiz-seance-1.pptx)** — 32 diapos : question, puis réponse |
+| Si vous préférez la version en ligne | [`import-kahoot.pdf`](import-kahoot.pdf) · [`import-kahoot.xlsx`](import-kahoot.xlsx) |
+| Internet | **Pas nécessaire** : le quiz se joue au vidéoprojecteur, avec les cartes de couleur |
 
 ---
 
@@ -140,7 +141,7 @@
 
 ---
 
-## Importer le quiz dans Kahoot — deux chemins
+## Si vous voulez quand même la version en ligne (Kahoot)
 
 ### ✅ Le plus rapide : le PDF
 
@@ -174,9 +175,11 @@ Kahoot sait fabriquer un quiz **à partir d'un document**.
 
 ---
 
-## 🎨 Le Kahoot débranché — plan B, sans internet
+## 🎨 Comment on joue : le diaporama + les cartes de couleur
 
-Les élèves ont déjà les **4 cartes de couleur** sur leur poste. Elles deviennent les cartes de réponse.
+**Le quiz se joue sans internet, avec [`quiz-seance-1.pptx`](quiz-seance-1.pptx)** — une diapositive par question,
+puis une diapositive de réponse avec l'explication. Les élèves ont déjà les **4 cartes de couleur** sur leur poste :
+elles sont les cartes de réponse, et **les couleurs du diaporama sont exactement les mêmes**.
 
 | Réponse | Couleur Kahoot | Carte à lever |
 |---|---|---|
@@ -185,12 +188,13 @@ Les élèves ont déjà les **4 cartes de couleur** sur leur poste. Elles devien
 | 3 | 🟡 jaune | 🟠 **Orange** |
 | 4 | 🟢 vert | 🟢 **Vert** |
 
-**Déroulé :** on lit la question et les 4 réponses à voix haute, on les écrit au tableau, on compte
-« 3, 2, 1 » — **et tout le monde lève sa carte en même temps**. Le Mécanicien compte les bonnes
-réponses par table. On donne l'explication, on passe à la suivante.
+**Déroulé :** on projette la question, on lit les 4 réponses à voix haute, on compte « 3, 2, 1 » —
+**et tout le monde lève sa carte en même temps**. On compte à vue, table par table : inutile de tenir un score
+exact. Puis on affiche la diapositive de réponse, on donne l'explication en une phrase, et on enchaîne.
 
-> **C'est parfois meilleur que le vrai Kahoot :** tout le monde répond en même temps, personne ne
-> recopie son voisin, et on voit d'un seul regard quelle notion n'est pas passée.
+> **C'est meilleur que le Kahoot en ligne pour une classe seule :** aucun compte à créer, aucun appareil à
+> distribuer, tout le monde répond en même temps, personne ne recopie son voisin — et on voit d'un seul regard
+> quelle notion n'est pas passée.
 
 ---
 

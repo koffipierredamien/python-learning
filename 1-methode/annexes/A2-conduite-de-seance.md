@@ -23,8 +23,7 @@ Document à imprimer et à avoir sous les yeux chaque samedi.
 - [ ] Machine de réserve allumée en fond de salle
 - [ ] Vidéoprojecteur testé, **police de l'éditeur agrandie** (taille 18 minimum)
 - [ ] Le Mur de Mission et les affiches (Règle des 3 avant moi, Contrat de binôme) sont visibles
-- [ ] Rôles du jour décidés : qui est **Capitaine**, qui est **Mécanicien**
-- [ ] Qui conduit le temps de prière
+- [ ] Un message à mon collègue de l'autre classe : tout est prêt des deux côtés ?
 
 ---
 
@@ -33,7 +32,7 @@ Document à imprimer et à avoir sous les yeux chaque samedi.
 ### 12 h - 12 h 15 · Prière et accueil
 > *« Bienvenue les Geeks ! Vous connaissez la routine : on allume, on ouvre le dossier officiel, et 5 minutes de clavier. Qui bat son record aujourd'hui ? »*
 
-Le Mécanicien accueille à la porte, repère les visages fermés, note les absents. Le Capitaine finit sa préparation.
+J'accueille à la porte, je repère les visages fermés, je note les absents.
 **Dès la séance 3, cette phase est 100 % autonome** — la procédure est affichée au mur en 4 images.
 
 ### 12 h 15 - 12 h 25 · Le WOW puis le rappel
@@ -54,8 +53,8 @@ Annonce systématique avant de lâcher la classe :
 > *« Atelier 1 : mission = ___ . Piste Bleue si vous voulez être guidés, Rouge pour le niveau normal, Noire si vous voulez du défi. Cartes de signalisation sorties. Pilote et copilote : vous savez qui vous êtes. Rotation dans 10 minutes. C'est parti ! »*
 
 Pendant l'atelier :
-- Le Capitaine **reste debout, devant**, sauf pour aller sur une carte rouge. Il garde une vue d'ensemble de la salle et surveille le temps.
-- Le Mécanicien fait son **circuit en U**, en commençant par la zone des profils P0.
+- **C'est le moment où je circule** : je ne m'adresse plus au groupe. Circuit en U, en commençant par la zone des profils P0.
+- Je sers les cartes orange en moins de 5 minutes, les rouges tout de suite. Je nomme **2 Geek Mentors** dès les premières cartes bleues.
 - **Signal sonore de rotation** pilote/copilote toutes les 10 à 12 minutes (minuteur visible au mur ou projeté).
 
 **Comment aider sans faire à la place — les 4 phrases autorisées :**
@@ -85,14 +84,14 @@ C'est la phase qui **absorbe naturellement les écarts de rythme** : les binôme
 
 ---
 
-## 4. Checklist — après la séance (15 min, à deux)
+## 4. Checklist — après la séance (15 min seul, puis 10 min avec mon collègue)
 
 - [ ] Tableau de suivi complété (`✔` / `~` / `✖` + piste)
 - [ ] Post-it lus et triés : quelle notion revient le plus ?
 - [ ] **Liste des 10 minutes** mise à jour (deux `~`/`✖` consécutifs = rendez-vous individuel la semaine prochaine)
 - [ ] Message aux familles envoyé (2 lignes)
 - [ ] Code officiel de la séance archivé et daté
-- [ ] Les 3 questions de la revue notées dans le carnet partagé :
+- [ ] Les 3 questions de la revue notées dans l'onglet `Journal` du classeur — **une ligne par classe** :
   1. Qui a décroché aujourd'hui, et qu'est-ce qu'on fait samedi prochain ?
   2. Quelle explication n'a pas fonctionné, et comment on la reformule ?
   3. La brique de la semaine prochaine est-elle trop grosse ?
@@ -103,8 +102,8 @@ C'est la phase qui **absorbe naturellement les écarts de rythme** : les binôme
 
 | Signal | Interprétation | Action immédiate |
 |---|---|---|
-| Plus de 3 cartes orange sur la même difficulté | L'explication a échoué, pas les élèves | Le Capitaine **arrête tout** et reprend la notion devant, autrement |
-| Un binôme reste vert mais n'avance pas | Décrochage silencieux ou copie sans comprendre | Le Mécanicien demande : *« explique-moi cette ligne »* |
+| Plus de 3 cartes orange sur la même difficulté | L'explication a échoué, pas les élèves | **J'arrête tout** et je reprends la notion devant, autrement |
+| Un binôme reste vert mais n'avance pas | Décrochage silencieux ou copie sans comprendre | Je demande : *« explique-moi cette ligne »* |
 | Un élève regarde son binôme taper sans rien dire | Rôle de copilote non tenu | Rotation immédiate des rôles |
 | Un élève range ses affaires 20 min avant la fin | Perte de sens ou frustration | Tête-à-tête de 2 min, hors du groupe, sans reproche |
 | Le brouhaha monte d'un coup | Consigne pas comprise ou atelier trop long | Reformuler la consigne en une seule phrase au tableau |

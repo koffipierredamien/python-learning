@@ -8,7 +8,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **Jerusalem Geeks** | 9 – 12 ans |
 | **Jeremiah Geeks** | 12 – 18 ans |
 | **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
-| **Encadrement** | 2 enseignants |
+| **Encadrement** | 2 enseignants — **un par classe**, les deux classes en parallèle |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
 | **Première séance** | samedi 12 septembre 2026, 12 h - 14 h |
 
@@ -20,7 +20,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 |---|---|---|
 | **[1-methode/](1-methode/methode-pedagogique.md)** | La pédagogie : comment faire progresser ensemble des niveaux très différents, à 2 enseignants | Une fois, au début. On y revient en cas de problème |
 | **[2-seances/](2-seances/LISEZ-MOI.md)** | Une séance = un dossier. Fiche détaillée, PDF à imprimer, code, sources | **Chaque semaine** |
-| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur de suivi à importer dans Google Sheets | Après chaque séance |
+| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur d'inscriptions et de suivi | Après chaque séance |
 | **[4-outils/](4-outils/LISEZ-MOI.md)** | Les programmes : le jeu de démo, l'installateur des postes, la préparation de la clé | Avant chaque séance |
 
 ---
@@ -47,7 +47,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 2. Différencier par la profondeur : **3 pistes** (🔵 guidée · 🔴 standard · ⚫ défi), choisies par l'élève à chaque atelier
 3. **Le Filet** : le code de référence redistribué à chaque séance → une absence ne met jamais personne en retard
 4. **Le binôme est le 3ᵉ enseignant** : pilote / copilote, rotation toutes les 10 minutes
-5. **Deux rôles enseignants distincts et tournants** : le Capitaine devant, le Mécanicien dans les rangs
+5. **Un enseignant par classe**, et cinq réflexes pour tenir seul : j'alterne parler / circuler, les cartes de couleur sont mes yeux, les élèves s'entraident d'abord, 2 Geek Mentors par séance, je ne m'assois jamais
 6. **Le Sas « Permis Machine »** pour les grands débutants, sans les séparer du groupe
 7. **Motivation** : grades, badges, Mur de Mission, tournoi final devant les familles
 8. **Évaluation par la preuve, jamais par la note** : ça marche / je sais l'expliquer / je sais le refaire

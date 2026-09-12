@@ -44,8 +44,8 @@ LISEZ_MOI = """\
      C'est le moment du FILET.
 
   3. EN FIN DE SEANCE :
-     le Mecanicien passe avec la cle et copie le travail de chaque
-     binome dans  4-SAUVEGARDES-ELEVES/
+     je passe avec la cle et je copie le travail de chaque binome
+     dans  4-SAUVEGARDES-ELEVES/
 
 =====================================================================
   0-A-PROJETER/         le diaporama de la seance (mode Presentateur !)
@@ -132,6 +132,13 @@ def principal():
                     continue
                 copier(os.path.join(dossier_src, nom),
                        os.path.join(cle, cible_sous, nom), journal)
+
+    # 3 bis - le classeur de suivi
+    suivi = os.path.join(RACINE, "3-suivi")
+    if os.path.isdir(suivi):
+        for nom in sorted(os.listdir(suivi)):
+            if nom.endswith(".xlsx") and nom.startswith("Inscriptions"):
+                copier(os.path.join(suivi, nom), os.path.join(cle, "3-MES-FICHES", nom), journal)
 
     # 4 - l'emplacement des sauvegardes eleves
     dossier = os.path.join(cle, "4-SAUVEGARDES-ELEVES", "S%s" % numero)

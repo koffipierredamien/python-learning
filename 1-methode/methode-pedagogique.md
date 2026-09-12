@@ -2,7 +2,7 @@
 
 **Classes concernées :** Jerusalem Geeks (9–12 ans) · Jeremiah Geeks (12–18 ans)
 **Format :** 1 séance de 2 h, chaque samedi, de 12 h à 14 h — ouverte par un temps de prière de 15 minutes
-**Encadrement :** 2 enseignants
+**Encadrement :** 2 enseignants — **un par classe**, les deux classes en parallèle
 **Projet fil rouge :** le jeu XO (Tic-Tac-Toe), de la première ligne de code jusqu'à l'application graphique jouable
 
 ---
@@ -18,8 +18,8 @@ Notre réponse tient en huit principes. Ils sont conçus pour fonctionner ensemb
 | 1 | **Un seul projet, une seule classe, jamais de groupes de niveau figés** | Évite la stigmatisation et la classe à deux vitesses |
 | 2 | **Différencier par la profondeur, jamais par le contenu** — chaque atelier existe en 3 pistes (Bleue / Rouge / Noire) que l'élève choisit lui-même | Chacun travaille à sa hauteur, tout le monde traite la même notion |
 | 3 | **Le Filet : un « code de départ officiel » distribué au début de CHAQUE séance** | Supprime le décrochage cumulatif : rater une séance ne condamne jamais la suite |
-| 4 | **Le binôme est le 3ᵉ enseignant** — pilote / copilote, rotation toutes les 10 min, écart de niveau contrôlé | Multiplie l'encadrement par 5 sans recruter |
-| 5 | **Deux enseignants, deux rôles distincts et tournants** : le Capitaine (devant) et le Mécanicien (dans les rangs) | Personne ne reste bloqué plus de 5 minutes |
+| 4 | **Le binôme est le 3ᵉ enseignant** — pilote / copilote, rotation toutes les 10 min, écart de niveau contrôlé | Fait le travail du deuxième adulte : un élève sur deux aide l'autre |
+| 5 | **Un enseignant par classe, et cinq réflexes pour tenir seul** : j'alterne parler / circuler, les cartes sont mes yeux, les élèves s'entraident d'abord, 2 Geek Mentors par séance, je ne m'assois jamais | Personne ne reste bloqué plus de 5 minutes, même sans deuxième adulte |
 | 6 | **Le Sas « Permis Machine »** pour les grands débutants, en parallèle et sans les sortir du groupe | Traite le cas « ne sait pas utiliser un ordinateur » sans créer une sous-classe |
 | 7 | **Motivation par le jeu, le grade et la démo** — ceintures, badges, tournoi final, présentation aux parents | Tient l'engagement sur 20+ semaines |
 | 8 | **Évaluation par la preuve, jamais par la note** : ça marche / je sais l'expliquer / je sais le refaire | Enlève la peur de l'erreur, indispensable pour apprendre à coder |
@@ -47,7 +47,7 @@ Toute la méthode ci-dessous découle de ces quatre contraintes.
 
 Nous **n'ouvrons pas** de « groupe débutant » et de « groupe avancé ». Trois raisons :
 
-- Avec 2 enseignants, deux groupes séparés = 1 enseignant seul par groupe = aucune marge de manœuvre en cas d'incident ou d'absence.
+- Séparer une classe en deux groupes de niveau la rendrait ingérable : **un enseignant seul ne peut pas animer deux groupes différents en même temps.**
 - Les groupes de niveau enferment : un enfant étiqueté « faible » à la séance 2 le reste jusqu'à la fin.
 - L'écart de niveau est une **ressource** : celui qui explique consolide deux fois plus que celui qui écoute.
 
@@ -114,27 +114,30 @@ Tout le travail de codage se fait **en binôme sur un seul ordinateur** (pair pr
 3. Si mon binôme n'a pas compris, on ne passe pas à la suite.
 4. On lève la carte orange ensemble, pas chacun de son côté.
 
-### Principe 5 — Deux enseignants, deux rôles distincts et tournants
+### Principe 5 — Un enseignant par classe : les cinq réflexes du prof seul
 
-Le pire usage de 2 enseignants : deux personnes qui font la même chose. Nous séparons strictement :
+**L'organisation retenue : un enseignant par classe, les deux classes en parallèle.** Jeremiah Geeks (12–18)
+d'un côté, Jerusalem Geeks (9–12) de l'autre. Personne ne circule pendant que vous parlez.
 
-| Rôle | Nom | Mission pendant la séance |
+Toute la méthode tient encore — mais elle repose désormais sur cinq réflexes, et sur le binôme.
+
+| # | Le réflexe | Pourquoi |
 |---|---|---|
-| Enseignant A | **Le Capitaine** | Anime devant, fait le live coding, gère le temps, lance les ateliers, fait la mise en commun. Il ne s'assoit **jamais** à côté d'un élève pendant plus de 60 secondes. |
-| Enseignant B | **Le Mécanicien** | Ne parle jamais devant. Circule en permanence selon un circuit défini, traite les cartes orange, tient le tableau de suivi, repère les décrochages silencieux. |
+| **1** | **J'alterne explicitement : « je parle » ou « je circule ».** Jamais les deux. Quand je parle, personne ne code. Quand je circule, je ne m'adresse plus au groupe. | Ce que deux enseignants faisaient en même temps, un seul le fait l'un après l'autre. |
+| **2** | **Les cartes de signalisation sont mes yeux.** Je balaye la salle toutes les 2 minutes, sans bouger. | Seul, je ne peux pas passer à chaque poste. C'est la carte qui vient à moi. |
+| **3** | **Les élèves s'entraident d'abord** : je relis · je demande à mon voisin · on regarde la fiche. Ensuite seulement, la carte orange. | Ce n'est plus un confort, c'est **la condition** pour qu'une classe seule tienne. |
+| **4** | **Je nomme 2 Geek Mentors par séance** — les premières cartes bleues. Ils aident 10 minutes, **sans jamais toucher le clavier des autres**. | C'est ce qui remplace le deuxième adulte. |
+| **5** | **Je ne m'assois jamais**, et je fais un tour complet avant de répondre deux fois au même élève. | Sinon un élève bavard capte tout le temps, et trois autres décrochent en silence. |
 
-**Les rôles s'échangent à chaque séance** (semaine paire / semaine impaire), pour que les deux enseignants maîtrisent tout le contenu et que la classe ne s'attache pas à un seul référent.
-
-**La chorégraphie de salle du Mécanicien** : un circuit en U qui commence toujours par la zone des profils fragiles, passe par tout le monde, et revient. Objectif : **chaque élève est vu de près au moins 3 fois par séance**, même celui qui ne demande rien. Le décrochage silencieux est plus dangereux que le blocage bruyant.
-
-**Le système des cartes de signalisation** (3 cartes cartonnées par binôme, posées bien visibles sur l'écran ou l'unité centrale) :
+**Le système des cartes de signalisation** (3 cartes cartonnées par binôme, posées bien visibles sur l'écran) :
 
 - 🟢 **Vert** — « Tout va bien, on avance. »
 - 🟠 **Orange** — « On est bloqués, on a besoin d'aide, mais on continue à chercher. »
-- 🔴 **Rouge** — « On est totalement arrêtés, rien ne marche. » (Priorité absolue du Mécanicien.)
+- 🔴 **Rouge** — « On est totalement arrêtés, rien ne marche. » (Priorité absolue.)
 - 🔵 **Bleu** *(bonus)* — « On a fini, on est disponible pour aider. » → l'élève devient **Geek Mentor** pour 10 minutes.
 
-Ce système supprime les mains levées, le bruit, l'attente passive, et donne aux enseignants une **carte thermique instantanée** de la classe.
+Ce système supprime les mains levées, le bruit, l'attente passive, et donne une **carte thermique instantanée**
+de la classe — ce qui, seul, est la seule façon de savoir où on en est.
 
 **La règle des 3 avant moi** (affichée au mur) : avant de lever la carte orange, on essaie dans l'ordre :
 1. **Je relis** la consigne et le message d'erreur à voix haute.
@@ -142,7 +145,14 @@ Ce système supprime les mains levées, le bruit, l'attente passive, et donne au
 3. **On demande au binôme d'à côté** (30 secondes maximum).
 Ensuite seulement : carte orange.
 
-> **Garde-fou :** un binôme carte orange doit être servi en moins de 5 minutes. Si la salle est saturée d'orange, c'est un signal : le Capitaine **arrête tout le monde** et reprend la notion devant. Trois cartes orange sur la même difficulté = la faute est à l'enseignement, pas aux élèves.
+> **Garde-fou :** un binôme carte orange doit être servi en moins de 5 minutes. Si la salle est saturée d'orange,
+> c'est un signal : **on arrête tout le monde** et on reprend la notion devant. Trois cartes orange sur la même
+> difficulté = la faute est à l'enseignement, pas aux élèves.
+
+**Les deux enseignants se parlent après la séance, pas pendant.** 15 minutes seul pour le suivi, puis
+**10 minutes ensemble** : ce qui a marché, ce qui a raté, ce qu'on change samedi. C'est le seul moment où les
+deux classes se parlent — il n'est pas facultatif. Chacun remplit sa propre ligne dans l'onglet `Journal`
+du classeur : **une ligne par séance et par classe**.
 
 ### Principe 6 — Le Sas « Permis Machine »
 
@@ -223,15 +233,15 @@ Le rituel est **identique chaque samedi**, de **12 h à 14 h**, et il ouvre touj
 
 | Temps | Bloc | Contenu | Qui |
 |---|---|---|---|
-| **12 h - 12 h 15** | 🙏 **Prière et accueil** | La séance ouvre par le temps de prière. Pendant ce temps, le Mécanicien accueille les retardataires à la porte et coche la présence. | Capitaine conduit · Mécanicien accueille |
-| **12 h 15 - 12 h 25** | 🎬 **Le WOW et le rappel** | On montre **le résultat de la séance** avant de commencer : « Voilà ce que votre jeu saura faire dans deux heures. » Puis rappel express de la séance précédente en 3 questions à main levée. Les élèves ouvrent le projet et récupèrent le **code de départ officiel**. | Capitaine |
-| **12 h 25 - 12 h 40** | 🧠 **La notion** | Une seule notion nouvelle par séance. Introduite en **débranché** (avec le corps, des cartes, des objets) puis en **live coding lent** avec la règle « je code, vous prédisez ». **L'enseignant fait volontairement une erreur et la répare devant tout le monde.** | Capitaine (Mécanicien vérifie que tout le monde suit) |
-| **12 h 40 - 13 h** | 🔨 **Atelier 1** | Codage en binôme, pistes Bleue / Rouge / Noire. Rotation pilote/copilote à 12 h 50. | Les deux circulent |
+| **12 h - 12 h 15** | 🙏 **Prière et accueil** | La séance ouvre par le temps de prière. J'accueille à la porte, je coche la présence, puis je rassemble. | L'enseignant conduit |
+| **12 h 15 - 12 h 25** | 🎬 **Le WOW et le rappel** | On montre **le résultat de la séance** avant de commencer : « Voilà ce que votre jeu saura faire dans deux heures. » Puis rappel express de la séance précédente en 3 questions à main levée. Les élèves ouvrent le projet et récupèrent le **code de départ officiel**. | L'enseignant, debout devant |
+| **12 h 25 - 12 h 40** | 🧠 **La notion** | Une seule notion nouvelle par séance. Introduite en **débranché** (avec le corps, des cartes, des objets) puis en **live coding lent** avec la règle « je code, vous prédisez ». **L'enseignant fait volontairement une erreur et la répare devant tout le monde.** | L'enseignant, debout devant |
+| **12 h 40 - 13 h** | 🔨 **Atelier 1** | Codage en binôme, pistes Bleue / Rouge / Noire. Rotation pilote/copilote à 12 h 50. | **Je circule** — je ne parle plus au groupe |
 | **13 h - 13 h 10** | 🥤 **Pause** | Pause réelle : on se lève, on sort de la salle, on bouge. Non négociable, surtout pour les 9–12 ans. | — |
-| **13 h 10 - 13 h 35** | 🔨 **Atelier 2** | Deuxième moitié de la brique + intégration dans le jeu complet. Rotation pilote/copilote à 13 h 22. | Les deux circulent |
-| **13 h 35 - 13 h 47** | 🐞 **Chasse aux bugs croisée** | Chaque binôme teste **le jeu d'un autre binôme** avec une grille de test (« essaie de le faire planter »). Les élèves rapides deviennent testeurs officiels et Geek Mentors. | Mécanicien organise les échanges |
-| **13 h 47 - 13 h 55** | 🎤 **Mise en commun** | 2 binômes montrent leur écran (2 min chacun, tournant). Le Capitaine récapitule la notion en 3 phrases. Distribution du **défi maison facultatif**. Sauvegarde et publication du **nouveau code officiel**. | Capitaine |
-| **13 h 55 - 14 h** | 🏅 **Clôture rituelle** | Remise des badges et grades du jour. Avancée du Mur de Mission. Post-it « j'ai compris ___ / je ne suis pas sûr de ___ ». Rangement. | Les deux |
+| **13 h 10 - 13 h 35** | 🔨 **Atelier 2** | Deuxième moitié de la brique + intégration dans le jeu complet. Rotation pilote/copilote à 13 h 22. | **Je circule** — je ne parle plus au groupe |
+| **13 h 35 - 13 h 47** | 🐞 **Chasse aux bugs croisée** | Chaque binôme teste **le jeu d'un autre binôme** avec une grille de test (« essaie de le faire planter »). Les élèves rapides deviennent testeurs officiels et Geek Mentors. | J'organise les échanges |
+| **13 h 47 - 13 h 55** | 🎤 **Mise en commun** | 2 binômes montrent leur écran (2 min chacun, tournant). Je récapitule la notion en 3 phrases. Distribution du **défi maison facultatif**. Sauvegarde et publication du **nouveau code officiel**. | L'enseignant, debout devant |
+| **13 h 55 - 14 h** | 🏅 **Clôture rituelle** | Remise des badges et grades du jour. Avancée du Mur de Mission. Post-it « j'ai compris ___ / je ne suis pas sûr de ___ ». Rangement. | L'enseignant |
 
 **Règle des blocs d'attention :** aucun bloc où l'élève est passif ne dépasse **15 minutes** (Jerusalem) ou **20 minutes** (Jeremiah). Au-delà, la classe décroche, quel que soit le talent de l'orateur.
 
@@ -298,7 +308,7 @@ Deux principes transversaux gouvernent toute la matrice :
 
 ## 8. Pilotage de la qualité
 
-### Le tableau de suivi (tenu par le Mécanicien, 2 minutes par séance)
+### Le tableau de suivi (2 minutes après chaque séance)
 
 Une ligne par élève, une colonne par séance. Trois symboles seulement :
 
@@ -306,7 +316,7 @@ Une ligne par élève, une colonne par séance. Trois symboles seulement :
 - `~` a produit partiellement — **à revoir la semaine prochaine**
 - `✖` absent ou n'a pas produit — **priorité de vigilance à la séance suivante**
 
-**Règle de déclenchement :** deux `~` ou `✖` consécutifs = l'élève est mis sur la **liste des 10 minutes**. Le Mécanicien lui consacre 10 minutes en tête-à-tête à la séance suivante, pendant l'atelier 2. C'est un rendez-vous, pas une punition — et c'est ce qui empêche un décrochage silencieux de devenir un abandon.
+**Règle de déclenchement :** deux `~` ou `✖` consécutifs = l'élève est mis sur la **liste des 10 minutes**. Je lui consacre 10 minutes en tête-à-tête à la séance suivante, pendant l'atelier 2 — c'est le moment où le reste de la classe travaille en binôme sans moi. C'est un rendez-vous, pas une punition — et c'est ce qui empêche un décrochage silencieux de devenir un abandon.
 
 ### Les indicateurs de santé du dispositif
 
@@ -355,7 +365,7 @@ Cette progression n'est donnée ici que pour vérifier que la méthode tient sur
 
 Ces cinq points conditionnent le calibrage fin du parcours et ne peuvent pas être tranchés sans vous :
 
-1. **Effectifs prévus par classe** — la taille des binômes et le circuit du Mécanicien en dépendent (au-delà de 20 élèves par classe avec 2 enseignants, il faudra revoir le dispositif).
+1. **Effectifs par classe** — 15 élèves inscrits à ce jour (7 Jerusalem, 8 Jeremiah), soit 3 à 4 binômes par classe : parfaitement tenable seul. **Au-delà de 12 élèves dans une classe seule, il faudra un deuxième adulte ou un Geek Mentor permanent.**
 2. **Le matériel** — un ordinateur par élève, ou un pour deux ? (Un pour deux est *pédagogiquement préférable* et cohérent avec le pair programming.)
 3. **La possibilité d'ouvrir la salle 30 minutes avant** pour le Sas Permis Machine.
 4. **Le nombre de séances disponibles** dans le calendrier (vacances, jours fériés) — l'ossature ci-dessus suppose 22 samedis.
