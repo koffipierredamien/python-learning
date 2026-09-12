@@ -49,8 +49,8 @@
 | Horaire | Sujet |
 |---|---|
 | 12 h 25 - 12 h 29 | Pourquoi coder ? |
-| 12 h 29 - 12 h 35 | Où se cache le code ? Les domaines d'application |
-| 12 h 35 - 12 h 42 | Ceux qui ont fait des choses impressionnantes avec du code |
+| 12 h 29 - 12 h 34 | Où se cache le code ? Les domaines d'application |
+| 12 h 34 - 12 h 42 | Ceux qui ont fait des choses magnifiques avec du code |
 | 12 h 42 - 12 h 49 | Comment l'ordinateur comprend : du binaire à l'éditeur |
 | 12 h 49 - 12 h 55 | La notion d'algorithme |
 
@@ -80,6 +80,7 @@
 - [ ] **Vérifier la connexion internet de la salle** — c'est la seule chose de la séance qui en dépend. Si elle est incertaine, préparez la version débranchée (§ 6).
 - [ ] Préparer la **clé USB** : `python 4-outils/preparer_cle_usb.py`.
 - [ ] Vérifier le **vidéoprojecteur** avec le câble et la machine du jour.
+- [ ] **Ouvrir le diaporama** [`presentation/seance-1-projection.pptx`](presentation/seance-1-projection.pptx) une fois sur la machine de projection, en **mode Présentateur** : les notes de l'animateur s'affichent sur votre écran, les élèves ne voient que la diapositive.
 
 ### J-1 — Impressions et matériel
 
@@ -108,6 +109,7 @@
 - [ ] Machines allumées, Thonny ouvert, `GEEKS/mon_xo/jeu.py` **déjà ouvert** sur chaque poste
 - [ ] **Une machine de réserve allumée** en fond de salle
 - [ ] Le jeu XO fini est **lancé et réduit** dans la barre des tâches (ne jamais chercher le fichier devant la classe)
+- [ ] Le **diaporama est ouvert** en mode Présentateur, sur la diapositive 1
 - [ ] Le Kahoot est **ouvert dans un onglet**, prêt à démarrer
 - [ ] Affiches au mur, Mur de Mission bien visible
 - [ ] Rôles décidés à voix haute : « aujourd'hui, je suis Capitaine, tu es Mécanicien »
@@ -196,7 +198,7 @@ On joue une partie complète, en direct, au vidéoprojecteur. **On la perd**, de
 **Question à la classe :** *« Qu'est-ce que vous aimeriez que la machine fasse, et qu'elle ne fait pas encore ? »*
 → On note 2 ou 3 réponses au tableau. **On y reviendra à la dernière séance.**
 
-#### b) 12 h 29 - 12 h 35 · Où se cache le code ? *(6 min)*
+#### b) 12 h 29 - 12 h 34 · Où se cache le code ? *(5 min)*
 
 **Jeu : « il y a du code là-dedans ? »** — `CAP` nomme un métier ou un objet, les élèves répondent **oui / non** à main levée, puis `CAP` explique en une phrase.
 
@@ -215,22 +217,49 @@ On joue une partie complète, en direct, au vidéoprojecteur. **On la perd**, de
 > 🗣️ **CAP** *(conclusion)* : « Alors, dans quel domaine n'y a-t-il **pas** de code ? … **Il n'y en a aucun.**
 > Ce que vous allez apprendre ici ne sert pas à "faire de l'informatique". Ça sert **dans le métier que vous choisirez**, quel qu'il soit. »
 
-#### c) 12 h 35 - 12 h 42 · Ceux qui ont fait des choses impressionnantes *(7 min)*
+#### c) 12 h 34 - 12 h 42 · Ceux qui ont fait des choses magnifiques *(8 min)*
 
-Cinq portraits, **une minute chacun**, racontés comme des histoires. *(Si vous projetez, une photo par portrait suffit.)*
+> **C'est le cœur émotionnel de la séance.** Le but n'est pas de réciter des biographies : c'est que
+> chaque élève se dise *« si lui l'a fait à mon âge, moi aussi je peux »*. Racontez, ne lisez pas.
 
-| Qui | Ce qu'on raconte |
+**1. Deux noms qu'ils connaissent déjà — et ce qu'ils ne savent pas *(2 min)***
+
+| Qui | L'histoire à raconter |
 |---|---|
-| **Ada Lovelace** (1815-1852) | « Elle a écrit le premier programme de l'histoire… **avant que l'ordinateur existe.** Elle a compris qu'une machine pourrait faire plus que des calculs : de la musique, des images. Personne ne l'a crue. Elle avait 150 ans d'avance. » |
-| **Grace Hopper** (1906-1992) | « Elle voulait qu'on puisse parler à l'ordinateur avec des mots au lieu de chiffres — c'est grâce à des gens comme elle que Python existe. Et c'est son équipe qui a rendu célèbre le mot **bug** : un vrai insecte, un papillon de nuit, coincé dans la machine, collé dans le cahier de bord. Depuis, une erreur dans un programme s'appelle un bug. » |
-| **Katherine Johnson** (1918-2020) | « Elle a calculé les trajectoires des fusées de la NASA. Quand les premiers ordinateurs sont arrivés, les astronautes ont demandé qu'**elle** revérifie les calculs de la machine à la main avant de décoller. Elle était noire, dans une Amérique qui séparait les gens par la couleur. Elle a quand même envoyé des hommes dans l'espace. » |
-| **Guido van Rossum** (né en 1956) | « C'est lui qui a créé **Python**, le langage que vous allez apprendre aujourd'hui. Il voulait un langage simple, lisible, que des débutants pourraient comprendre. C'est pour ça qu'on l'a choisi pour vous. » |
-| **Verone Mankou** (né en 1986, Congo) | « Il a conçu la première tablette pensée et lancée en Afrique centrale, puis un smartphone. Des gens lui ont dit que c'était impossible depuis chez lui. Il l'a fait quand même. » |
+| **Mark Zuckerberg** | « Vous connaissez Facebook, Instagram, WhatsApp ? Un seul homme a lancé tout ça. Il a écrit la première version de Facebook **dans sa chambre d'étudiant**, à 19 ans. Mais voilà ce que personne ne vous dit : **il a commencé à coder vers 12 ans.** Son premier programme servait à envoyer des messages entre les ordinateurs de la maison de ses parents. C'était minuscule. Il l'a fait quand même. » |
+| **Elon Musk** | « Les fusées qui reviennent se poser toutes seules, les voitures électriques : c'est son entreprise. Et savez-vous ce qu'il faisait **à 12 ans** ? Il a codé un petit jeu vidéo, il s'appelait *Blastar*, et **il l'a vendu à un magazine d'informatique.** Douze ans. Vous avez presque son âge. » |
 
-> 🗣️ **CAP** *(conclusion — c'est le message de ce bloc)* : « Regardez-les bien. Une femme de 1843. Une femme noire à qui on interdisait certaines portes. Un jeune Africain à qui on a dit que c'était impossible.
-> **Aucun d'eux n'a commencé en sachant coder.** Ils ont tous commencé exactement là où vous êtes assis aujourd'hui. »
+**2. Trois jeunes qui n'ont pas attendu d'être grands *(4 min — le bloc le plus important)***
 
-> 💡 **Ajoutez un portrait que vous connaissez bien** — quelqu'un de votre pays, de votre ville, ou de votre entourage. Un exemple proche vaut mieux qu'un exemple célèbre.
+| Qui | L'histoire à raconter |
+|---|---|
+| **Thomas Suarez**<br>🇺🇸 · avait **12 ans** | « À 12 ans, il fabriquait déjà des applications pour téléphone dans sa chambre. Il en a fait un petit jeu, puis un autre. Et un jour, on l'a invité à monter sur une grande scène pour expliquer à des adultes comment il faisait. **Sa vidéo a été vue des millions de fois.** À 12 ans. » |
+| **Nick D'Aloisio**<br>🇬🇧 · avait **15 ans** | « Il en avait assez de lire de longs articles. Alors, à 15 ans, il a codé une application qui **résume automatiquement** les articles d'actualité en quelques lignes. Deux ans plus tard, à 17 ans, **une très grande entreprise a racheté son application** pour une somme énorme. Il était encore au lycée. » |
+| **Gitanjali Rao**<br>🇺🇸 · avait **11 puis 15 ans** | « Elle a entendu parler d'une ville où l'eau du robinet était empoisonnée au plomb. À 11 ans, elle a fabriqué un appareil qui **détecte le plomb dans l'eau**. Ensuite elle a créé une application qui repère les messages méchants sur internet avant qu'ils fassent mal. À 15 ans, un grand magazine l'a nommée **« enfant de l'année »**. Elle a utilisé le code pour **régler de vrais problèmes**. » |
+
+**3. Deux histoires proches de nous *(2 min)***
+
+| Qui | L'histoire à raconter |
+|---|---|
+| **Charlette N'Guessan**<br>🇨🇮 Côte d'Ivoire | « Elle est ivoirienne. Avec son équipe, elle a créé un logiciel qui **reconnaît le visage d'une personne** pour vérifier son identité à distance — pour que les banques africaines ne se fassent plus voler des identités. En 2020, elle a gagné un grand prix africain d'ingénierie : **la première femme à le remporter.** » |
+| **Kelvin Doe**<br>🇸🇱 Sierra Leone · avait **13 ans** | « Chez lui, il n'y avait pas d'électricité tous les jours. À 13 ans, avec des morceaux ramassés dans les poubelles, il a fabriqué une batterie pour éclairer sa maison, puis **son propre émetteur radio**, pour faire une station de radio dans son quartier. Une grande université américaine l'a fait venir chez elle pour qu'il montre comment il faisait. » |
+
+> 🗣️ **CAP** *(la conclusion — c'est LE message du bloc, à dire lentement)* :
+> « Regardez-les bien. **Thomas avait 12 ans. Nick avait 15 ans. Gitanjali avait 11 ans. Kelvin avait 13 ans.**
+> Aucun d'eux n'était un génie. Aucun n'avait de matériel extraordinaire — Kelvin travaillait avec des déchets.
+> **Aucun d'eux n'a commencé en sachant coder.** Ils ont tous commencé exactement là où vous êtes assis
+> aujourd'hui. La seule différence, c'est qu'ils ont commencé. »
+
+> 🗣️ **Et la transition vers Python :** « Et tout ça, ça s'écrit dans un langage. Le nôtre s'appelle **Python**.
+> Il a été créé par **Guido van Rossum**, qui voulait un langage simple, lisible, qu'un débutant puisse comprendre.
+> C'est exactement pour ça qu'on l'a choisi pour vous. »
+
+> 💡 **Ajoutez un portrait que vous connaissez personnellement** — quelqu'un de votre ville, de votre église,
+> de votre famille, qui vit du code. Un exemple qu'on peut croiser dans la rue vaut mieux que tous les milliardaires.
+
+> ⚠️ **Avant de citer un chiffre précis** (un âge, un montant, une date), vérifiez-le : les enfants retiennent
+> les chiffres, et un élève curieux ira lire. Si vous n'êtes pas sûr, dites « il était encore adolescent » plutôt
+> qu'un âge exact.
 
 #### d) 12 h 42 - 12 h 49 · Comment l'ordinateur comprend : du binaire à l'éditeur *(7 min)*
 
@@ -497,6 +526,8 @@ Désigner un élève — de préférence **le plus discret de la séance** — p
 | Support | Fichier |
 |---|---|
 | 🎤 **Mon script d'animation** (à imprimer, agrafé) | [`a-imprimer/00-MON-SCRIPT-animation.pdf`](a-imprimer/00-MON-SCRIPT-animation.pdf) |
+| 📺 **Le diaporama à projeter** — 46 diapos, notes de l'animateur incluses | [`presentation/seance-1-projection.pptx`](presentation/seance-1-projection.pptx) |
+| 🤖 Refaire le diaporama avec Gemini | [`presentation/prompt-pour-gemini.md`](presentation/prompt-pour-gemini.md) |
 | 🎯 **Le Kahoot** : 14 questions, réponses, explications, plan B | [`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md) |
 | 📥 Fichier d'import Kahoot | [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) |
 | 📨 **Le déroulé à envoyer au responsable** (Word, modifiable) | [`a-envoyer/deroule-seance-1.docx`](a-envoyer/deroule-seance-1.docx) |

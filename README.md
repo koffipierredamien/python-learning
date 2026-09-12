@@ -31,7 +31,8 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| Animer la séance | [🎤 Mon script d'animation](2-seances/S01-decollage/a-imprimer/00-MON-SCRIPT-animation.pdf) — 14 pages, à agrafer |
+| Animer la séance | [🎤 Mon script d'animation](2-seances/S01-decollage/a-imprimer/00-MON-SCRIPT-animation.pdf) — 17 pages, à agrafer |
+| Projeter | [📺 Le diaporama](2-seances/S01-decollage/presentation/seance-1-projection.pptx) — 46 diapos, notes incluses |
 | Tout imprimer | [🖨️ Les 14 PDF](2-seances/S01-decollage/a-imprimer/) + [les quantités](2-seances/S01-decollage/a-imprimer/quantites-et-formats.md) |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S01-decollage/a-envoyer/deroule-seance-1.docx) |
 | Préparer le quiz final | [🎯 Le Kahoot : 14 questions](2-seances/S01-decollage/kahoot/questions-et-reponses.md) |
@@ -79,7 +80,7 @@ Les rendez-vous : **S8** première démo jouable · **S14** concours de design �
 ## Où on en est
 
 - [x] La méthode pédagogique et ses annexes
-- [x] Séance 1 : fiche, script d'animation, 14 documents imprimables, code, quiz Kahoot, déroulé Word pour les responsables
+- [x] Séance 1 : fiche, script d'animation, diaporama de 46 diapos, 14 documents imprimables, code, quiz Kahoot, déroulé Word
 - [x] Le classeur de suivi
 - [x] Le jeu XO terminé (démonstration d'ouverture) et les outils de préparation
 - [ ] Séances 2 à 22

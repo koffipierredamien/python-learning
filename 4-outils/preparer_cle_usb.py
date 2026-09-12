@@ -48,6 +48,7 @@ LISEZ_MOI = """\
      binome dans  4-SAUVEGARDES-ELEVES/
 
 =====================================================================
+  0-A-PROJETER/         le diaporama de la seance (mode Presentateur !)
   1-DEMO/               le jeu fini (le WOW), l'anti-seche du live
                         coding, et le verificateur de poste
   2-A-IMPRIMER/         les PDF, deja au bon format
@@ -122,7 +123,8 @@ def principal():
                    os.path.join(cle, "2-A-IMPRIMER", nom), journal)
     copier(os.path.join(seance, "fiche-de-seance.md"),
            os.path.join(cle, "3-MES-FICHES", "fiche-de-seance.md"), journal)
-    for sous, cible_sous in (("kahoot", "3-MES-FICHES"), ("a-envoyer", "3-MES-FICHES")):
+    for sous, cible_sous in (("kahoot", "3-MES-FICHES"), ("a-envoyer", "3-MES-FICHES"),
+                             ("presentation", "0-A-PROJETER")):
         dossier_src = os.path.join(seance, sous)
         if os.path.isdir(dossier_src):
             for nom in sorted(os.listdir(dossier_src)):

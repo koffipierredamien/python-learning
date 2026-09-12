@@ -1,6 +1,6 @@
 # 🎯 Le Kahoot de la séance 1
 
-**13 h 45 - 13 h 55 · 14 questions · 20 secondes chacune**
+**13 h 45 - 13 h 55 · 15 questions · 20 secondes chacune**
 
 > La bonne réponse est en **gras**. La ligne *« ce qu'on dit »* est à prononcer **après** chaque
 > question, en une phrase : c'est ce qui transforme le jeu en enseignement.
@@ -8,7 +8,7 @@
 | Réglage | Valeur |
 |---|---|
 | Temps par question | **20 secondes** |
-| Nombre de questions | 14 — **en retard, gardez les 8 premières** |
+| Nombre de questions | 15 — **en retard, gardez les 10 premières** |
 | Fichier d'import | [`import-kahoot.xlsx`](import-kahoot.xlsx) |
 | Sans internet | **Version débranchée** avec les cartes de couleur → bas de page |
 
@@ -62,13 +62,13 @@
 
 > *Ce qu'on dit :* « Il voulait un langage simple et lisible. C'est pour ça qu'on l'a choisi pour vous. »
 
-### 7. Qui a écrit le premier programme de l'histoire ?
-- **Ada Lovelace** ✅
-- Grace Hopper
-- Verone Mankou
+### 7. Qui a écrit la première version de Facebook dans sa chambre d'étudiant ?
+- **Mark Zuckerberg** ✅
+- Elon Musk
 - Guido van Rossum
+- Nick D'Aloisio
 
-> *Ce qu'on dit :* « Et elle l'a écrit **avant** que l'ordinateur existe. 150 ans d'avance. »
+> *Ce qu'on dit :* « À 19 ans. Mais il avait commencé à coder vers **12 ans**, avec des programmes minuscules. »
 
 ### 8. D'où vient le mot « bug » ?
 - **D'un vrai insecte coincé dans une machine** ✅
@@ -76,9 +76,10 @@
 - Du nom d'un ordinateur
 - D'un jeu vidéo
 
-> *Ce qu'on dit :* « Un papillon de nuit, collé dans le cahier de bord de l'équipe de Grace Hopper. »
+> *Ce qu'on dit :* « Un papillon de nuit coincé dans une machine, en 1947, collé dans le cahier de bord
+> de l'équipe. Depuis, une erreur dans un programme s'appelle un bug. »
 > *Pour votre information :* le mot existait déjà avant chez les ingénieurs, mais c'est cette histoire
-> de 1947 qui l'a rendu célèbre en informatique. Si un élève le sait, félicitez-le.
+> qui l'a rendu célèbre en informatique. Si un élève le sait, félicitez-le.
 
 ### 9. Dans quel domaine n'y a-t-il **PAS** de code ?
 - La santé
@@ -120,13 +121,22 @@
 
 > *Ce qu'on dit :* « Il fait exactement ce qui est écrit. Ni plus, ni moins. S'il fait une bêtise, ce n'est pas lui qui s'est trompé. »
 
-### 14. Katherine Johnson a calculé à la main…
-- **Les trajectoires des fusées de la NASA** ✅
-- Le premier jeu vidéo
-- Le langage Python
-- Le premier téléphone
+### 14. À quel âge Elon Musk a-t-il vendu son premier jeu vidéo ?
+- 8 ans
+- **12 ans** ✅
+- 20 ans
+- 30 ans
 
-> *Ce qu'on dit :* « Les astronautes lui demandaient de revérifier les calculs de l'ordinateur avant de décoller. »
+> *Ce qu'on dit :* « Douze ans. Presque votre âge. Le jeu s'appelait *Blastar*, et un magazine l'a acheté. »
+
+### 15. Charlette N'Guessan, ivoirienne, a créé un logiciel qui…
+- **reconnaît le visage d'une personne** ✅
+- répare les voitures
+- traduit les langues
+- fabrique des médicaments
+
+> *Ce qu'on dit :* « Pour vérifier une identité à distance, contre la fraude dans les banques africaines.
+> En 2020, elle a été **la première femme** à gagner un grand prix africain d'ingénierie. »
 
 ---
 
@@ -134,7 +144,7 @@
 
 1. Sur **kahoot.com**, connectez-vous → **Create** → **Kahoot** → **Import spreadsheet**.
 2. Kahoot propose de **télécharger son modèle** (`template.xlsx`). Téléchargez-le.
-3. Ouvrez [`import-kahoot.xlsx`](import-kahoot.xlsx), **copiez les 14 lignes de questions** et collez-les
+3. Ouvrez [`import-kahoot.xlsx`](import-kahoot.xlsx), **copiez les 15 lignes de questions** et collez-les
    dans le modèle de Kahoot, sous sa ligne d'en-tête.
 4. Enregistrez le modèle, puis **importez-le** dans Kahoot.
 5. **Testez le quiz une fois en solo avant la séance.** Les questions à corriger se voient tout de suite.
