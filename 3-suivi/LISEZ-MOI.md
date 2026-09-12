@@ -15,12 +15,39 @@ Cinq onglets de suivi ont été ajoutés à la suite :
 | **Observations** | Le journal : un fait marquant, l'action décidée, et si elle a été faite |
 | **Journal** | La revue d'après-séance. **Une ligne par séance ET par classe** : chaque enseignant remplit la sienne |
 
+### Les deux onglets financiers
+
+| Onglet | À quoi il sert |
+|---|---|
+| **Cotisations** | Qui est à jour. Une colonne par mois, de septembre à juin. On écrit le **montant reçu** dans la case du mois ; le total, le solde et le statut se calculent seuls |
+| **Caisse** | Le journal de l'argent : **entrées et sorties**, avec catégorie, moyen de paiement et numéro de pièce. Le solde se calcule seul |
+
+**Cotisations — deux réglages seulement**, dans les cases crème en haut :
+
+- **Montant mensuel** : 50 DH.
+- **Mois dus à ce jour** : mettez `1` en septembre, `2` en octobre, et ainsi de suite. **C'est le seul geste à ne pas oublier au début de chaque mois** — c'est lui qui fait basculer les élèves en retard.
+
+Le statut se met à jour tout seul : **À jour** sur fond vert clair, ou **« Doit 50 DH »** sur fond rose.
+La dernière ligne donne le total encaissé par mois, le total dû et le reste à recouvrer.
+
+**Caisse — le contrôle automatique.** Les cotisations encaissées se notent **aussi** dans la Caisse, en
+*Entrée* / catégorie *Cotisation*. La case **« Contrôle cotisations »** compare les deux onglets :
+
+> **Elle doit toujours afficher 0 DH.** Si elle affiche autre chose, c'est qu'un encaissement a été noté dans un
+> onglet et pas dans l'autre. C'est le seul moyen simple de ne pas perdre d'argent en route.
+
+> ⚠️ **Attention au doublon :** votre feuille `Enfants` a déjà des colonnes *Participation*, *Montant* et
+> *Date de Paiement*. Elles conviennent bien pour le **paiement d'inscription**. Pour les **cotisations
+> mensuelles**, utilisez l'onglet `Cotisations` — sinon vous aurez deux vérités et aucune ne sera fiable.
+
 ### La règle d'or
 
 **On saisit les noms une seule fois, dans la feuille `Enfants`.** Les cinq onglets les recopient automatiquement,
 avec la classe. Si un nom manque ailleurs, c'est qu'il manque dans `Enfants`.
 
-Les cellules **jaunes** se remplissent à la main. Le **texte vert** est calculé : n'écrivez pas dedans.
+**Le code couleur, identique partout :** les cellules **crème** se remplissent à la main · le **texte vert** est
+calculé, n'écrivez pas dedans · le **rose** signale ce qui demande une action (retard de paiement, décrochage).
+Tout le classeur est en **Candara**, avec les bandeaux verts de votre charte.
 Les onglets ont de la place pour **40 élèves** — il y en a 15 aujourd'hui (7 Jerusalem, 8 Jeremiah).
 
 ### Le déclencheur à surveiller
