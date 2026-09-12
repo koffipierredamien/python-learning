@@ -20,7 +20,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 |---|---|---|
 | **[1-methode/](1-methode/methode-pedagogique.md)** | La pédagogie : comment faire progresser ensemble des niveaux très différents, à 2 enseignants | Une fois, au début. On y revient en cas de problème |
 | **[2-seances/](2-seances/LISEZ-MOI.md)** | Une séance = un dossier. Fiche détaillée, PDF à imprimer, code, sources | **Chaque semaine** |
-| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur d'inscriptions et de suivi | Après chaque séance |
+| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur : inscriptions, présence, diagnostic, suivi, observations, journal, **cotisations et caisse** | Après chaque séance |
 | **[4-outils/](4-outils/LISEZ-MOI.md)** | Les programmes : le jeu de démo, l'installateur des postes, la préparation de la clé | Avant chaque séance |
 
 ---
@@ -32,10 +32,10 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | J'ai besoin de… | C'est ici |
 |---|---|
 | Animer la séance | [🎤 Mon script d'animation](2-seances/S01-decollage/a-imprimer/00-MON-SCRIPT-animation.pdf) — 17 pages, à agrafer |
-| Projeter | [📺 Le diaporama](2-seances/S01-decollage/presentation/seance-1-projection.pptx) — 46 diapos, notes incluses |
+| Projeter | [📺 Le diaporama](2-seances/S01-decollage/a-projeter/seance-1-projection.pptx) — 46 diapos, notes incluses |
 | Tout imprimer | [🖨️ Les 14 PDF](2-seances/S01-decollage/a-imprimer/) + [les quantités](2-seances/S01-decollage/a-imprimer/quantites-et-formats.md) |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S01-decollage/a-envoyer/deroule-seance-1.docx) |
-| Préparer le quiz final | [🎯 Le Kahoot : 14 questions](2-seances/S01-decollage/kahoot/questions-et-reponses.md) |
+| Préparer le quiz final | [🎯 Le Kahoot : 14 questions](2-seances/S01-decollage/a-projeter/quiz-questions-et-reponses.md) |
 | Comprendre le détail, minute par minute | [📖 La fiche de séance](2-seances/S01-decollage/fiche-de-seance.md) |
 | Préparer les machines | [🔧 Les outils, dans l'ordre](4-outils/LISEZ-MOI.md) |
 

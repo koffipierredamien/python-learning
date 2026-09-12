@@ -3,9 +3,11 @@
 =============================================================================
   REFABRIQUER LES PDF D'UNE SEANCE
 =============================================================================
-  Convertit chaque document de  2-seances/Sxx.../sources/*.html
-  en PDF dans  2-seances/Sxx.../a-imprimer/ , au bon format de papier et
-  avec les couleurs.
+  Convertit en PDF tous les fichiers .html d'une seance, au bon format de
+  papier et avec les couleurs. La regle est simple :
+
+    a-imprimer/sources/*.html   ->  le PDF monte dans  a-imprimer/
+    tout autre  *.html          ->  le PDF est ecrit a cote de sa source
 
         python 4-outils/faire_les_pdf.py            (seance 1)
         python 4-outils/faire_les_pdf.py --seance 2
@@ -57,22 +59,32 @@ def principal():
         print("[ERREUR] Aucun dossier 2-seances/S%s... trouve." % numero)
         return 1
 
-    # (dossier des sources, dossier de sortie)
-    paires = [(os.path.join(seance, "sources"), os.path.join(seance, "a-imprimer")),
-              (os.path.join(seance, "kahoot"), os.path.join(seance, "kahoot"))]
-    paires = [(s, c) for s, c in paires if os.path.isdir(s)]
-    sources = paires[0][0]
-    for _, c in paires:
-        if not os.path.isdir(c):
-            os.makedirs(c)
+    # on cherche tous les .html de la seance, et on decide ou va chaque PDF
+    a_imprimer = os.path.join(seance, "a-imprimer")
+    travaux = []                       # (fichier source, fichier PDF)
+    for dossier, _, fichiers in os.walk(seance):
+        for nom in sorted(fichiers):
+            if not nom.endswith(".html"):
+                continue
+            source = os.path.join(dossier, nom)
+            if os.path.basename(dossier) == "sources":
+                cible = os.path.join(a_imprimer, nom[:-5] + ".pdf")
+            else:
+                cible = os.path.join(dossier, nom[:-5] + ".pdf")
+            travaux.append((source, cible))
+    travaux.sort(key=lambda t: t[1])
+    if not travaux:
+        print("[ERREUR] Aucun fichier .html trouve dans %s" % os.path.relpath(seance, RACINE))
+        return 1
+    sources = a_imprimer
 
     navigateur = trouver_le_navigateur()
     if navigateur is None:
         print("[ERREUR] Chrome ou Chromium est introuvable sur cette machine.")
-        print("         Faites-le a la main : ouvrez chaque fichier de")
-        print("         %s" % os.path.relpath(sources, RACINE))
-        print("         dans votre navigateur, Ctrl+P, 'Enregistrer au format PDF',")
-        print("         et rangez le resultat dans a-imprimer/ sous le meme nom.")
+        print("         Faites-le a la main : ouvrez chaque .html de la seance dans")
+        print("         votre navigateur, Ctrl+P, 'Enregistrer au format PDF', et rangez")
+        print("         le resultat sous le meme nom (ceux de a-imprimer/sources/ vont")
+        print("         dans a-imprimer/, les autres restent a cote de leur source).")
         return 1
 
     print("=" * 66)
@@ -81,21 +93,19 @@ def principal():
     print("=" * 66)
 
     faits = 0
-    for dossier_src, cible in paires:
-        for nom in sorted(os.listdir(dossier_src)):
-            if not nom.endswith(".html"):
-                continue
-            source = os.path.join(dossier_src, nom)
-            sortie = os.path.join(cible, nom[:-5] + ".pdf")
-            subprocess.run([navigateur, "--headless", "--disable-gpu", "--no-sandbox",
-                            "--no-pdf-header-footer", "--print-to-pdf=" + sortie,
-                            "file://" + source],
-                           stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            if os.path.isfile(sortie):
-                print("  + %s" % os.path.relpath(sortie, seance))
-                faits += 1
-            else:
-                print("  ! echec : %s" % nom)
+    for source, sortie in travaux:
+        dossier = os.path.dirname(sortie)
+        if not os.path.isdir(dossier):
+            os.makedirs(dossier)
+        subprocess.run([navigateur, "--headless", "--disable-gpu", "--no-sandbox",
+                        "--no-pdf-header-footer", "--print-to-pdf=" + sortie,
+                        "file://" + source],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if os.path.isfile(sortie):
+            print("  + %s" % os.path.relpath(sortie, seance))
+            faits += 1
+        else:
+            print("  ! echec : %s" % os.path.relpath(source, seance))
 
     print("=" * 66)
     print("  %d PDF ecrits" % faits)

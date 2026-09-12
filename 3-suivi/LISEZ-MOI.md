@@ -67,18 +67,12 @@ Drive → `Nouveau` → `Importation de fichier` → puis `Fichier` → `Enregis
 
 ---
 
-## L'autre fichier : `classeur-de-suivi.xlsx`
+## Un seul classeur
 
-[`classeur-de-suivi.xlsx`](classeur-de-suivi.xlsx) était le classeur complet construit avant que vous
-fournissiez votre fichier d'inscriptions. **Il n'est plus le classeur de référence.**
+Il n'y a **qu'un seul fichier de suivi**, celui-ci. L'ancien `classeur-de-suivi.xlsx`, construit avant que
+vous fournissiez votre fichier d'inscriptions, a été retiré : ses onglets faisaient double emploi avec les
+vôtres et créaient deux vérités.
 
-Il garde cependant six onglets qui n'existent pas ailleurs et qui restent utiles :
-
-`06_Binomes` · `07_Badges-Grades` · `08_Passeport` · `09_Checklist-S01` · `11_Materiel` · `12_Tableau-de-bord`
-
-> ⚠️ **Ses onglets `01_Apprenants`, `02_Diagnostic`, `03_Presence`, `04_Suivi-seances`, `05_Observations` et
-> `10_Journal-enseignants` font maintenant double emploi : ne les utilisez pas.** Le suivi réel se fait dans le
-> fichier d'inscriptions.
->
-> Dites-moi quand vous voulez, et je fusionne les six onglets utiles dans votre fichier d'inscriptions pour
-> n'avoir plus qu'un seul classeur.
+Trois suivis qu'il contenait n'ont pas été repris, faute d'être utilisés pour l'instant :
+**les binômes**, **les badges et grades**, et **le Passeport Machine**. Dites-le-moi et je les ajoute
+comme onglets de ce classeur-ci, dans la même charte.

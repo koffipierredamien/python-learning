@@ -10,7 +10,7 @@
 | Temps par question | **20 secondes** |
 | Nombre de questions | 15 — **en retard, gardez les 10 premières** |
 | **Le quiz à projeter** | **[`quiz-seance-1.pptx`](quiz-seance-1.pptx)** — 32 diapos : question, puis réponse |
-| Si vous préférez la version en ligne | **[`import-kahoot.xlsx`](import-kahoot.xlsx)** — le modèle officiel de Kahoot, déjà rempli · [`import-kahoot.pdf`](import-kahoot.pdf) |
+| Si vous préférez la version en ligne | **[`kahoot-en-ligne/import-kahoot.xlsx`](kahoot-en-ligne/import-kahoot.xlsx)** — le modèle officiel de Kahoot, déjà rempli · [`kahoot-en-ligne/import-kahoot.pdf`](kahoot-en-ligne/import-kahoot.pdf) |
 | Internet | **Pas nécessaire** : le quiz se joue au vidéoprojecteur, avec les cartes de couleur |
 
 ---
@@ -145,7 +145,7 @@
 
 ### ✅ Le tableur — **c'est le fichier officiel de Kahoot, déjà rempli**
 
-**[`import-kahoot.xlsx`](import-kahoot.xlsx) est le modèle officiel de Kahoot**, repris tel quel et rempli
+**[`kahoot-en-ligne/import-kahoot.xlsx`](kahoot-en-ligne/import-kahoot.xlsx) est le modèle officiel de Kahoot**, repris tel quel et rempli
 avec nos 15 questions. Il n'y a **rien à recopier** : on le téléverse directement.
 
 1. Sur **kahoot.com** : **Create** → **Kahoot** → **Import spreadsheet**.
@@ -170,7 +170,7 @@ avec nos 15 questions. Il n'y a **rien à recopier** : on le téléverse directe
 
 ### Le PDF, si vous préférez
 
-**[`import-kahoot.pdf`](import-kahoot.pdf)** se dépose dans *Create from document*. C'est plus rapide, mais
+**[`kahoot-en-ligne/import-kahoot.pdf`](kahoot-en-ligne/import-kahoot.pdf)** se dépose dans *Create from document*. C'est plus rapide, mais
 **ça passe par l'IA de Kahoot**, qui reformule, coupe parfois une réponse trop longue ou se trompe de bonne
 réponse. **Relisez les 15 questions** — la liste de contrôle, c'est cette page-ci.
 

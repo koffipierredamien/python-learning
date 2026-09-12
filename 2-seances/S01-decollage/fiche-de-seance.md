@@ -77,11 +77,11 @@
 - [ ] Installer **Python + Thonny** sur toutes les machines, **version identique**, et lancer [`4-outils/verifier_un_poste.py`](../../4-outils/verifier_un_poste.py) sur **chaque** poste.
 - [ ] Lancer [`4-outils/installer_dossier_geeks.py`](../../4-outils/installer_dossier_geeks.py) sur chaque poste : le dossier `GEEKS` doit apparaître sur le Bureau.
 - [ ] Régler la **taille de police de Thonny à 18** minimum sur tous les postes et sur la machine de projection.
-- [ ] **Ouvrir le quiz** [`kahoot/quiz-seance-1.pptx`](kahoot/quiz-seance-1.pptx) une fois et le faire défiler. Rien d'autre à préparer : il se joue avec les cartes de couleur. *(Si vous préférez la version en ligne, les fichiers d'import Kahoot sont dans le même dossier.)*
+- [ ] **Ouvrir le quiz** [`a-projeter/quiz-seance-1.pptx`](a-projeter/quiz-seance-1.pptx) une fois et le faire défiler. Rien d'autre à préparer : il se joue avec les cartes de couleur. *(Si vous préférez la version en ligne, les fichiers d'import Kahoot sont dans le même dossier.)*
 - [ ] **Aucune partie de la séance ne dépend d'internet.** Vérifiez quand même que le vidéoprojecteur affiche bien les deux diaporamas.
 - [ ] Préparer la **clé USB** : `python 4-outils/preparer_cle_usb.py`.
 - [ ] Vérifier le **vidéoprojecteur** avec le câble et la machine du jour.
-- [ ] **Ouvrir le diaporama** [`presentation/seance-1-projection.pptx`](presentation/seance-1-projection.pptx) une fois sur la machine de projection, en **mode Présentateur** : les notes de l'animateur s'affichent sur votre écran, les élèves ne voient que la diapositive.
+- [ ] **Ouvrir le diaporama** [`a-projeter/seance-1-projection.pptx`](a-projeter/seance-1-projection.pptx) une fois sur la machine de projection, en **mode Présentateur** : les notes de l'animateur s'affichent sur votre écran, les élèves ne voient que la diapositive.
 
 ### J-1 — Impressions et matériel
 
@@ -437,9 +437,9 @@ Vous passez avec la clé et vous sauvegardez le travail de chaque poste.
 
 > 🗣️ **Vous :** « Dernière épreuve du décollage : on va voir ce qui est resté. **Ce n'est pas une note**, c'est un jeu. Et il y a des questions sur tout ce qu'on a fait aujourd'hui — la théorie **et** la machine. »
 
-- **Le quiz est un diaporama** : [`kahoot/quiz-seance-1.pptx`](kahoot/quiz-seance-1.pptx). Une diapositive par question, puis une diapositive de réponse avec l'explication. 15 questions, 20 secondes chacune.
+- **Le quiz est un diaporama** : [`a-projeter/quiz-seance-1.pptx`](a-projeter/quiz-seance-1.pptx). Une diapositive par question, puis une diapositive de réponse avec l'explication. 15 questions, 20 secondes chacune.
 - Les 4 réponses portent **les couleurs des cartes de signalisation** : 🔴 = 1 · 🔵 = 2 · 🟠 = 3 · 🟢 = 4. Les élèves répondent **en levant leur carte**, tous en même temps, au signal « 3, 2, 1 ».
-- Le détail, les bonnes réponses et l'explication à dire sont aussi dans **[`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md)**.
+- Le détail, les bonnes réponses et l'explication à dire sont aussi dans **[`a-projeter/quiz-questions-et-reponses.md`](a-projeter/quiz-questions-et-reponses.md)**.
 - **En retard ?** Gardez les **10 premières** : elles couvrent l'essentiel.
 - Après chaque question, **vous expliquez la réponse en une phrase**. C'est là que le Kahoot devient de l'enseignement et plus seulement un jeu.
 - On célèbre le podium, **mais on insiste** :
@@ -550,14 +550,14 @@ Désignez un élève — de préférence **le plus discret de la séance** — p
 | Support | Fichier |
 |---|---|
 | 🎤 **Mon script d'animation** (à imprimer, agrafé) | [`a-imprimer/00-MON-SCRIPT-animation.pdf`](a-imprimer/00-MON-SCRIPT-animation.pdf) |
-| 📺 **Le diaporama à projeter** — 46 diapos, notes de l'animateur incluses | [`presentation/seance-1-projection.pptx`](presentation/seance-1-projection.pptx) |
-| 🤖 Refaire le diaporama avec Gemini | [`presentation/prompt-pour-gemini.md`](presentation/prompt-pour-gemini.md) |
-| 🎯 **Le quiz à projeter** : 32 diapos, une par question puis la réponse | [`kahoot/quiz-seance-1.pptx`](kahoot/quiz-seance-1.pptx) |
-| 📝 Les 15 questions, réponses et explications | [`kahoot/questions-et-reponses.md`](kahoot/questions-et-reponses.md) |
-| 📥 Import Kahoot (si version en ligne) : le modèle officiel déjà rempli | [`kahoot/import-kahoot.xlsx`](kahoot/import-kahoot.xlsx) · [`kahoot/import-kahoot.pdf`](kahoot/import-kahoot.pdf) |
+| 📺 **Le diaporama à projeter** — 46 diapos, notes de l'animateur incluses | [`a-projeter/seance-1-projection.pptx`](a-projeter/seance-1-projection.pptx) |
+| 🤖 Refaire le diaporama avec Gemini | [`a-projeter/prompt-pour-gemini.md`](a-projeter/prompt-pour-gemini.md) |
+| 🎯 **Le quiz à projeter** : 32 diapos, une par question puis la réponse | [`a-projeter/quiz-seance-1.pptx`](a-projeter/quiz-seance-1.pptx) |
+| 📝 Les 15 questions, réponses et explications | [`a-projeter/quiz-questions-et-reponses.md`](a-projeter/quiz-questions-et-reponses.md) |
+| 📥 Import Kahoot (si version en ligne) : le modèle officiel déjà rempli | [`a-projeter/kahoot-en-ligne/import-kahoot.xlsx`](a-projeter/kahoot-en-ligne/import-kahoot.xlsx) · [`a-projeter/kahoot-en-ligne/import-kahoot.pdf`](a-projeter/kahoot-en-ligne/import-kahoot.pdf) |
 | 📨 **Le déroulé à envoyer au responsable** (Word, modifiable) | [`a-envoyer/deroule-seance-1.docx`](a-envoyer/deroule-seance-1.docx) |
 | 🖨️ Tous les documents à imprimer | [`a-imprimer/`](a-imprimer/) — quantités : [`quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
-| 📊 Classeur de suivi | [`3-suivi/classeur-de-suivi.xlsx`](../../3-suivi/classeur-de-suivi.xlsx) |
+| 📊 Classeur de suivi | [`3-suivi/InscriptionsAcProKidsCodingCampSept2026.xlsx`](../../3-suivi/InscriptionsAcProKidsCodingCampSept2026.xlsx) |
 | 🎮 Le jeu fini, pour le WOW | [`4-outils/jeu_xo_complet.py`](../../4-outils/jeu_xo_complet.py) |
 | ⌨️ L'anti-sèche du live coding | [`code/live_coding_antiseche.py`](code/live_coding_antiseche.py) |
 | ✅ Vérifier un poste avant la séance | [`4-outils/verifier_un_poste.py`](../../4-outils/verifier_un_poste.py) |

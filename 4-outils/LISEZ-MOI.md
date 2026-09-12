@@ -9,7 +9,7 @@ Aucun n'est destiné aux élèves.
 | [`verifier_un_poste.py`](verifier_un_poste.py) | **À lancer sur chaque machine avant la séance.** Vérifie Python, la logique du jeu, et que la fenêtre graphique pourra s'ouvrir. Tout doit afficher `[OK]`. |
 | [`installer_dossier_geeks.py`](installer_dossier_geeks.py) | **À lancer sur chaque poste de la salle** (et sur votre machine). Crée le dossier `GEEKS` sur le Bureau, avec le fichier de départ de l'élève. |
 | [`preparer_cle_usb.py`](preparer_cle_usb.py) | Fabrique le dossier `cle-usb/` à emporter le samedi. |
-| [`construire_classeur.py`](construire_classeur.py) | Refabrique le classeur de suivi **à vide**. À n'utiliser que pour changer sa structure. |
+| [`faire_les_pdf.py`](faire_les_pdf.py) | Refabrique les PDF d'une séance à partir de ses sources `.html`. |
 
 ---
 
@@ -71,10 +71,13 @@ Pour écrire directement sur la clé : `python 4-outils/preparer_cle_usb.py --ve
 
 ---
 
-## Le classeur de suivi
+## Refabriquer les PDF
 
-⚠️ `construire_classeur.py` **écrase** `3-suivi/classeur-de-suivi.xlsx` et donc les données
-déjà saisies. Ne le lancez que pour modifier la structure du classeur (ajouter une colonne, un
-onglet, une valeur de menu déroulant). Pour l'usage courant, travaillez dans Google Sheets.
+`faire_les_pdf.py` convertit tous les `.html` d'une séance. La règle tient en deux lignes :
 
-Il a besoin d'`openpyxl` : `pip install openpyxl`
+```
+a-imprimer/sources/*.html   →  le PDF monte dans  a-imprimer/
+tout autre  *.html          →  le PDF est écrit à côté de sa source
+```
+
+Il a besoin de Chrome ou Chromium. Sans navigateur installé, il vous dit quoi faire à la main.

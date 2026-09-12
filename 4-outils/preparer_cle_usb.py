@@ -48,11 +48,12 @@ LISEZ_MOI = """\
      dans  4-SAUVEGARDES-ELEVES/
 
 =====================================================================
-  0-A-PROJETER/         le diaporama de la seance (mode Presentateur !)
+  0-A-PROJETER/         les diaporamas : la seance et le quiz
+                        (a ouvrir en mode Presentateur !)
   1-DEMO/               le jeu fini (le WOW), l'anti-seche du live
                         coding, et le verificateur de poste
   2-A-IMPRIMER/         les PDF, deja au bon format
-  3-MES-FICHES/         la fiche de seance, le Kahoot, le deroule Word
+  3-MES-FICHES/         la fiche de seance, le classeur, le deroule Word
   4-SAUVEGARDES-ELEVES/ ou l'on depose le travail des binomes
   5-CODE-OFFICIEL/      le code de reference publie en fin de seance
 =====================================================================
@@ -123,15 +124,16 @@ def principal():
                    os.path.join(cle, "2-A-IMPRIMER", nom), journal)
     copier(os.path.join(seance, "fiche-de-seance.md"),
            os.path.join(cle, "3-MES-FICHES", "fiche-de-seance.md"), journal)
-    for sous, cible_sous in (("kahoot", "3-MES-FICHES"), ("a-envoyer", "3-MES-FICHES"),
-                             ("presentation", "0-A-PROJETER")):
-        dossier_src = os.path.join(seance, sous)
+    for sous, cible_sous in (("a-projeter", "0-A-PROJETER"),
+                             ("a-projeter/kahoot-en-ligne", "0-A-PROJETER/kahoot-en-ligne"),
+                             ("a-envoyer", "3-MES-FICHES")):
+        dossier_src = os.path.join(seance, *sous.split("/"))
         if os.path.isdir(dossier_src):
             for nom in sorted(os.listdir(dossier_src)):
-                if nom.endswith(".html"):     # sources modifiables : inutiles sur la cle
-                    continue
-                copier(os.path.join(dossier_src, nom),
-                       os.path.join(cle, cible_sous, nom), journal)
+                chemin = os.path.join(dossier_src, nom)
+                if not os.path.isfile(chemin) or nom.endswith(".html"):
+                    continue              # sources modifiables : inutiles sur la cle
+                copier(chemin, os.path.join(cle, *cible_sous.split("/"), nom), journal)
 
     # 3 bis - le classeur de suivi
     suivi = os.path.join(RACINE, "3-suivi")
