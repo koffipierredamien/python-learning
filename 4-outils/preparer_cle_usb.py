@@ -141,7 +141,7 @@ def principal():
     suivi = os.path.join(RACINE, "3-suivi")
     if os.path.isdir(suivi):
         for nom in sorted(os.listdir(suivi)):
-            if nom.endswith(".xlsx") and nom.startswith("Inscriptions"):
+            if nom.endswith(".xlsx") and not nom.startswith("~$"):
                 copier(os.path.join(suivi, nom), os.path.join(cle, "3-MES-FICHES", nom), journal)
 
     # 3 ter - le reglement interieur

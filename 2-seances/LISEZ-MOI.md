@@ -30,8 +30,11 @@ S01-decollage/
 │     les 14 PDF + quantites-et-formats.md
 │     sources/                      les .html, à ne rouvrir que pour corriger un texte
 │
-├── a-envoyer/             ce qui part par mail
+├── a-envoyer/             ce qui part par mail ou par message
 │     deroule-seance-1.docx         le déroulé pour les responsables
+│     revisions-maison/             les DEUX envois de la semaine aux parents
+│           envoi-1.pdf · envoi-2.pdf    à joindre au message
+│           messages-a-copier.md         le texte du message, et les réponses
 │
 └── code/                  ce qui tourne sur les machines
       depart_eleves_piste_bleue.py   le fichier de l'élève
@@ -47,6 +50,9 @@ S01-decollage/
 4. **J-7 aussi** — ouvrir les deux diaporamas de `a-projeter/` et les faire défiler une fois.
 5. **Le jour J** — animer avec `00-MON-SCRIPT-animation.pdf` à la main.
 6. **Le soir** — remplir le [classeur de suivi](../3-suivi/LISEZ-MOI.md) et répondre aux 3 questions de la revue.
+7. **Dans la semaine qui suit** — envoyer aux parents les deux révisions de
+   [`a-envoyer/revisions-maison/`](S01-decollage/a-envoyer/revisions-maison/messages-a-copier.md),
+   et noter ce qui revient dans l'onglet `Révisions maison` du classeur.
 
 ## Pour modifier un document imprimé
 

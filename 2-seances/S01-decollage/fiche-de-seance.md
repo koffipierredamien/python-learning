@@ -557,7 +557,7 @@ Désignez un élève — de préférence **le plus discret de la séance** — p
 | 📥 Import Kahoot (si version en ligne) : le modèle officiel déjà rempli | [`a-projeter/kahoot-en-ligne/import-kahoot.xlsx`](a-projeter/kahoot-en-ligne/import-kahoot.xlsx) · [`a-projeter/kahoot-en-ligne/import-kahoot.pdf`](a-projeter/kahoot-en-ligne/import-kahoot.pdf) |
 | 📨 **Le déroulé à envoyer au responsable** (Word, modifiable) | [`a-envoyer/deroule-seance-1.docx`](a-envoyer/deroule-seance-1.docx) |
 | 🖨️ Tous les documents à imprimer | [`a-imprimer/`](a-imprimer/) — quantités : [`quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
-| 📊 Classeur de suivi | [`3-suivi/InscriptionsAcProKidsCodingCampSept2026.xlsx`](../../3-suivi/InscriptionsAcProKidsCodingCampSept2026.xlsx) |
+| 📊 Classeur de suivi | [`3-suivi/AcProKidsCodingCampSept2026.xlsx`](../../3-suivi/AcProKidsCodingCampSept2026.xlsx) |
 | 🎮 Le jeu fini, pour le WOW | [`4-outils/jeu_xo_complet.py`](../../4-outils/jeu_xo_complet.py) |
 | ⌨️ L'anti-sèche du live coding | [`code/live_coding_antiseche.py`](code/live_coding_antiseche.py) |
 | ✅ Vérifier un poste avant la séance | [`4-outils/verifier_un_poste.py`](../../4-outils/verifier_un_poste.py) |

@@ -1,6 +1,6 @@
 # 🔧 Outils
 
-Six programmes Python. Vous les lancez depuis Thonny (`F5`) ou en ligne de commande.
+Sept programmes Python. Vous les lancez depuis Thonny (`F5`) ou en ligne de commande.
 Aucun n'est destiné aux élèves.
 
 | Programme | Quand s'en servir |
@@ -11,6 +11,7 @@ Aucun n'est destiné aux élèves.
 | [`preparer_cle_usb.py`](preparer_cle_usb.py) | Fabrique le dossier `cle-usb/` à emporter le samedi. |
 | [`faire_les_pdf.py`](faire_les_pdf.py) | Refabrique les PDF d'une séance — ou du règlement — à partir des sources `.html`. |
 | [`faire_le_reglement.py`](faire_le_reglement.py) | Réécrit le **règlement intérieur** dans ses deux versions, Word et source du PDF, à partir d'un texte unique. |
+| [`faire_les_revisions.py`](faire_les_revisions.py) | Écrit les **deux envois de révision de la semaine** — le quiz, le défi, et le texte des messages aux parents. |
 
 ---
 
@@ -102,3 +103,19 @@ python 4-outils/faire_les_pdf.py --reglement   → 0-administratif/reglement-int
 Déposez votre bandeau d'en-tête dans `0-administratif/en-tete.png` (ou `.jpg`) avant de relancer :
 il remplace alors le bandeau de texte, dans le Word comme dans le PDF.
 Détails : [0-administratif/LISEZ-MOI.md](../0-administratif/LISEZ-MOI.md)
+
+---
+
+## Les révisions à la maison
+
+Deux envois par semaine aux parents. `faire_les_revisions.py` écrit les deux pages et le texte des
+messages, dans `2-seances/S01-decollage/a-envoyer/revisions-maison/` :
+
+```
+python 4-outils/faire_les_revisions.py             → envoi-1.html · envoi-2.html
+                                                     + messages-a-copier.md
+python 4-outils/faire_les_pdf.py --seance 1        → envoi-1.pdf · envoi-2.pdf
+```
+
+Le contenu de chaque semaine est écrit en clair en haut du programme, dans `SEMAINES` : questions,
+réponses, défis. **Il ne porte que sur ce qui a déjà été fait en classe**, et s'ajoute séance par séance.

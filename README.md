@@ -21,7 +21,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **[0-administratif/](0-administratif/LISEZ-MOI.md)** | Le règlement intérieur, à remettre signé par chaque famille | Une fois, à la séance 1 |
 | **[1-methode/](1-methode/methode-pedagogique.md)** | La pédagogie : comment faire progresser ensemble des niveaux très différents, à 2 enseignants | Une fois, au début. On y revient en cas de problème |
 | **[2-seances/](2-seances/LISEZ-MOI.md)** | Une séance = un dossier. Fiche détaillée, PDF à imprimer, code, sources | **Chaque semaine** |
-| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur : inscriptions, présence, diagnostic, suivi, observations, journal, **cotisations et caisse** | Après chaque séance |
+| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur : inscriptions, présence, diagnostic, suivi, observations, journal, cotisations et caisse, **indiscipline et révisions maison** | Après chaque séance |
 | **[4-outils/](4-outils/LISEZ-MOI.md)** | Les programmes : le jeu de démo, l'installateur des postes, la préparation de la clé | Avant chaque séance |
 
 ---
@@ -37,6 +37,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | Tout imprimer | [🖨️ Les 14 PDF](2-seances/S01-decollage/a-imprimer/) + [les quantités](2-seances/S01-decollage/a-imprimer/quantites-et-formats.md) |
 | Remettre le règlement aux familles | [📜 Le règlement intérieur](0-administratif/reglement-interieur.pdf) — 4 pages, coupon à faire signer |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S01-decollage/a-envoyer/deroule-seance-1.docx) |
+| Envoyer les révisions de la semaine | [📲 Les deux envois aux parents](2-seances/S01-decollage/a-envoyer/revisions-maison/messages-a-copier.md) — le quiz, le défi, et le texte des messages |
 | Préparer le quiz final | [🎯 Le Kahoot : 14 questions](2-seances/S01-decollage/a-projeter/quiz-questions-et-reponses.md) |
 | Comprendre le détail, minute par minute | [📖 La fiche de séance](2-seances/S01-decollage/fiche-de-seance.md) |
 | Préparer les machines | [🔧 Les outils, dans l'ordre](4-outils/LISEZ-MOI.md) |
@@ -84,6 +85,6 @@ Les rendez-vous : **S8** première démo jouable · **S14** concours de design �
 - [x] La méthode pédagogique et ses annexes
 - [x] Le règlement intérieur (PDF à remettre + Word modifiable)
 - [x] Séance 1 : fiche, script d'animation, diaporama de 46 diapos, 14 documents imprimables, code, quiz Kahoot, déroulé Word
-- [x] Le classeur de suivi
+- [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture) et les outils de préparation
 - [ ] Séances 2 à 22
