@@ -11,7 +11,6 @@
 
         python 4-outils/faire_les_pdf.py            (seance 1)
         python 4-outils/faire_les_pdf.py --seance 2
-        python 4-outils/faire_les_pdf.py --reglement (0-administratif/)
 
   Il a besoin de Chrome ou Chromium installe sur la machine.
   Si vous ne l'avez pas : ouvrez le fichier .html dans votre navigateur,
@@ -73,15 +72,6 @@ def travaux_d_un_dossier(racine_du_lot, dossier_de_sortie):
 
 def le_lot_demande():
     """Renvoie (titre, dossier de reference, liste des travaux) ou None."""
-    if "--reglement" in sys.argv:
-        administratif = os.path.join(RACINE, "0-administratif")
-        if not os.path.isdir(administratif):
-            print("[ERREUR] Le dossier 0-administratif/ n'existe pas.")
-            print("         Fabriquez d'abord la source : python 4-outils/faire_le_reglement.py")
-            return None
-        return ("DOSSIER ADMINISTRATIF", administratif,
-                travaux_d_un_dossier(administratif, administratif))
-
     numero = "%02d" % int(sys.argv[sys.argv.index("--seance") + 1]) if "--seance" in sys.argv else "01"
     seances = os.path.join(RACINE, "2-seances")
     seance = next((os.path.join(seances, n) for n in sorted(os.listdir(seances))

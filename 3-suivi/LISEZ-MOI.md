@@ -15,7 +15,7 @@ Les onglets de suivi ont été ajoutés à la suite :
 | **Observations** | Le journal : un fait marquant, l'action décidée, et si elle a été faite |
 | **Journal** | La revue d'après-séance. **Une ligne par séance ET par classe** : chaque enseignant remplit la sienne |
 | **Indiscipline** | Le registre demandé par le responsable : un fait par ligne, la sanction, et le **compteur d'avertissements par apprenant** |
-| **Révisions maison** | Ce qui revient des deux envois de la semaine. `O` = a répondu · `N` = rien reçu |
+| **Révisions maison** | Ce qui revient du **formulaire Google** envoyé en semaine. `O` = a répondu · `N` = rien reçu |
 
 ### Les deux onglets financiers
 
@@ -61,13 +61,13 @@ avertissements, et statut. À **1 avertissement**, la case passe en crème. À *
 
 ### L'onglet Révisions maison
 
-Deux colonnes par séance : `S01-1` pour le premier envoi de la semaine, `S01-2` pour le second.
-On écrit `O` si l'apprenant a renvoyé ses réponses, `N` si rien n'est revenu, et **on laisse vide
-si l'envoi n'a pas été fait** — c'est ce qui rend le taux juste : il compare ce qui est revenu à ce
-qui a réellement été envoyé.
+Le suivi de la semaine se fait avec le **formulaire Google** envoyé aux parents — c'est lui qui pose les
+questions, on ne note ici que ce qui revient.
 
-Les envois eux-mêmes sont dans le dossier de la séance :
-[`2-seances/S01-decollage/a-envoyer/revisions-maison/`](../2-seances/S01-decollage/a-envoyer/revisions-maison/messages-a-copier.md)
+Deux colonnes par séance : `S01-1` pour un premier envoi dans la semaine, `S01-2` pour un second.
+On écrit `O` si l'apprenant a répondu, `N` si rien n'est revenu, et **on laisse vide si rien n'a été
+envoyé cette semaine-là** — c'est ce qui rend le taux juste : il compare ce qui revient à ce qui a
+réellement été envoyé.
 
 ### La règle d'or
 

@@ -1,5 +1,18 @@
 # Séance 1 — « Le Décollage »
 
+> ## 📌 Ce qui s'est réellement passé le 12 septembre 2026
+>
+> La séance **s'est arrêtée après les missions de décollage**. N'ont pas eu lieu :
+> **le premier contact machine**, **le Kahoot** et **la clôture** (badges, Mur de Mission, post-it).
+> La **méthode de travail** (binômes, pistes, cartes, le Filet) n'a pas été expliquée non plus.
+>
+> **Tout cela est repris dans la [séance 2](../S02-premier-contact/fiche-de-seance.md)**, et les trois
+> fichiers de code de cette séance y ont été déplacés : ils n'ont pas servi.
+> La fiche ci-dessous est conservée telle qu'elle a été préparée — elle reste la référence de la
+> partie théorique, qui, elle, a bien eu lieu.
+
+---
+
 > **Fiche de conduite détaillée.** Tout ce qui doit être dit, tout ce qui doit être fait.
 > Les passages en **🗣️ guillemets** sont des scripts : ils peuvent être lus tels quels.
 > **Vous êtes seul avec votre classe.** Les réflexes du prof seul sont rappelés au § 2 bis.
@@ -77,7 +90,7 @@
 - [ ] Installer **Python + Thonny** sur toutes les machines, **version identique**, et lancer [`4-outils/verifier_un_poste.py`](../../4-outils/verifier_un_poste.py) sur **chaque** poste.
 - [ ] Lancer [`4-outils/installer_dossier_geeks.py`](../../4-outils/installer_dossier_geeks.py) sur chaque poste : le dossier `GEEKS` doit apparaître sur le Bureau.
 - [ ] Régler la **taille de police de Thonny à 18** minimum sur tous les postes et sur la machine de projection.
-- [ ] **Ouvrir le quiz** [`a-projeter/quiz-seance-1.pptx`](a-projeter/quiz-seance-1.pptx) une fois et le faire défiler. Rien d'autre à préparer : il se joue avec les cartes de couleur. *(Si vous préférez la version en ligne, les fichiers d'import Kahoot sont dans le même dossier.)*
+- [ ] **Ouvrir le quiz** [`../S02-premier-contact/a-projeter/quiz-seance-1.pptx`](../S02-premier-contact/a-projeter/quiz-seance-1.pptx) une fois et le faire défiler. Rien d'autre à préparer : il se joue avec les cartes de couleur. *(Si vous préférez la version en ligne, les fichiers d'import Kahoot sont dans le même dossier.)*
 - [ ] **Aucune partie de la séance ne dépend d'internet.** Vérifiez quand même que le vidéoprojecteur affiche bien les deux diaporamas.
 - [ ] Préparer la **clé USB** : `python 4-outils/preparer_cle_usb.py`.
 - [ ] Vérifier le **vidéoprojecteur** avec le câble et la machine du jour.
@@ -437,9 +450,9 @@ Vous passez avec la clé et vous sauvegardez le travail de chaque poste.
 
 > 🗣️ **Vous :** « Dernière épreuve du décollage : on va voir ce qui est resté. **Ce n'est pas une note**, c'est un jeu. Et il y a des questions sur tout ce qu'on a fait aujourd'hui — la théorie **et** la machine. »
 
-- **Le quiz est un diaporama** : [`a-projeter/quiz-seance-1.pptx`](a-projeter/quiz-seance-1.pptx). Une diapositive par question, puis une diapositive de réponse avec l'explication. 15 questions, 20 secondes chacune.
+- **Le quiz est un diaporama** : [`../S02-premier-contact/a-projeter/quiz-seance-1.pptx`](../S02-premier-contact/a-projeter/quiz-seance-1.pptx). Une diapositive par question, puis une diapositive de réponse avec l'explication. 15 questions, 20 secondes chacune.
 - Les 4 réponses portent **les couleurs des cartes de signalisation** : 🔴 = 1 · 🔵 = 2 · 🟠 = 3 · 🟢 = 4. Les élèves répondent **en levant leur carte**, tous en même temps, au signal « 3, 2, 1 ».
-- Le détail, les bonnes réponses et l'explication à dire sont aussi dans **[`a-projeter/quiz-questions-et-reponses.md`](a-projeter/quiz-questions-et-reponses.md)**.
+- Le détail, les bonnes réponses et l'explication à dire sont aussi dans **[`../S02-premier-contact/a-projeter/quiz-questions-et-reponses.md`](../S02-premier-contact/a-projeter/quiz-questions-et-reponses.md)**.
 - **En retard ?** Gardez les **10 premières** : elles couvrent l'essentiel.
 - Après chaque question, **vous expliquez la réponse en une phrase**. C'est là que le Kahoot devient de l'enseignement et plus seulement un jeu.
 - On célèbre le podium, **mais on insiste** :
@@ -552,14 +565,14 @@ Désignez un élève — de préférence **le plus discret de la séance** — p
 | 🎤 **Mon script d'animation** (à imprimer, agrafé) | [`a-imprimer/00-MON-SCRIPT-animation.pdf`](a-imprimer/00-MON-SCRIPT-animation.pdf) |
 | 📺 **Le diaporama à projeter** — 46 diapos, notes de l'animateur incluses | [`a-projeter/seance-1-projection.pptx`](a-projeter/seance-1-projection.pptx) |
 | 🤖 Refaire le diaporama avec Gemini | [`a-projeter/prompt-pour-gemini.md`](a-projeter/prompt-pour-gemini.md) |
-| 🎯 **Le quiz à projeter** : 32 diapos, une par question puis la réponse | [`a-projeter/quiz-seance-1.pptx`](a-projeter/quiz-seance-1.pptx) |
-| 📝 Les 15 questions, réponses et explications | [`a-projeter/quiz-questions-et-reponses.md`](a-projeter/quiz-questions-et-reponses.md) |
-| 📥 Import Kahoot (si version en ligne) : le modèle officiel déjà rempli | [`a-projeter/kahoot-en-ligne/import-kahoot.xlsx`](a-projeter/kahoot-en-ligne/import-kahoot.xlsx) · [`a-projeter/kahoot-en-ligne/import-kahoot.pdf`](a-projeter/kahoot-en-ligne/import-kahoot.pdf) |
+| 🎯 **Le quiz à projeter** : 32 diapos, une par question puis la réponse | [`../S02-premier-contact/a-projeter/quiz-seance-1.pptx`](../S02-premier-contact/a-projeter/quiz-seance-1.pptx) |
+| 📝 Les 15 questions, réponses et explications | [`../S02-premier-contact/a-projeter/quiz-questions-et-reponses.md`](../S02-premier-contact/a-projeter/quiz-questions-et-reponses.md) |
+| 📥 Import Kahoot (si version en ligne) : le modèle officiel déjà rempli | [`../S02-premier-contact/a-projeter/kahoot-en-ligne/import-kahoot.xlsx`](../S02-premier-contact/a-projeter/kahoot-en-ligne/import-kahoot.xlsx) · [`../S02-premier-contact/a-projeter/kahoot-en-ligne/import-kahoot.pdf`](../S02-premier-contact/a-projeter/kahoot-en-ligne/import-kahoot.pdf) |
 | 📨 **Le déroulé à envoyer au responsable** (Word, modifiable) | [`a-envoyer/deroule-seance-1.docx`](a-envoyer/deroule-seance-1.docx) |
 | 🖨️ Tous les documents à imprimer | [`a-imprimer/`](a-imprimer/) — quantités : [`quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
 | 📊 Classeur de suivi | [`3-suivi/AcProKidsCodingCampSept2026.xlsx`](../../3-suivi/AcProKidsCodingCampSept2026.xlsx) |
 | 🎮 Le jeu fini, pour le WOW | [`4-outils/jeu_xo_complet.py`](../../4-outils/jeu_xo_complet.py) |
-| ⌨️ L'anti-sèche du live coding | [`code/live_coding_antiseche.py`](code/live_coding_antiseche.py) |
+| ⌨️ L'anti-sèche du live coding | [`../S02-premier-contact/code/live_coding_antiseche.py`](../S02-premier-contact/code/live_coding_antiseche.py) *(déplacé en séance 2)* |
 | ✅ Vérifier un poste avant la séance | [`4-outils/verifier_un_poste.py`](../../4-outils/verifier_un_poste.py) |
 | 💾 Préparer la clé USB | [`4-outils/LISEZ-MOI.md`](../../4-outils/LISEZ-MOI.md) |
 
@@ -568,8 +581,8 @@ Désignez un élève — de préférence **le plus discret de la séance** — p
 | Support | Fichier |
 |---|---|
 | Fiche mémo (1 par binôme) | [`a-imprimer/06-fiche-memo-eleve.pdf`](a-imprimer/06-fiche-memo-eleve.pdf) |
-| Le fichier de départ, déjà sur leur poste | [`code/depart_eleves_piste_bleue.py`](code/depart_eleves_piste_bleue.py) |
-| **Code officiel de fin de séance** — le Filet | [`code/code_officiel_fin_de_seance.py`](code/code_officiel_fin_de_seance.py) |
+| Le fichier de départ, déjà sur leur poste | [`../S02-premier-contact/code/depart_eleves_piste_bleue.py`](../S02-premier-contact/code/depart_eleves_piste_bleue.py) *(déplacé en séance 2)* |
+| **Code officiel de fin de séance** — le Filet | [`../S02-premier-contact/code/code_officiel_fin_de_seance.py`](../S02-premier-contact/code/code_officiel_fin_de_seance.py) *(déplacé en séance 2)* |
 
 ---
 

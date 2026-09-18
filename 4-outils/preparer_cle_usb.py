@@ -166,8 +166,10 @@ def principal():
     if numero != "01":
         precedent = dossier_de_seance("%02d" % (int(numero) - 1))
         if precedent:
-            copier(os.path.join(precedent, "code", "code_officiel_fin_de_seance.py"),
-                   os.path.join(cle, "code-officiel", "jeu.py"), journal)
+            filet = os.path.join(precedent, "code", "code_officiel_fin_de_seance.py")
+            # la seance precedente n'a pas forcement produit de code : c'est normal
+            if os.path.isfile(filet):
+                copier(filet, os.path.join(cle, "code-officiel", "jeu.py"), journal)
 
     with open(os.path.join(cle, "LISEZ-MOI.txt"), "w", encoding="utf-8") as f:
         f.write(LISEZ_MOI.format(numero=numero))

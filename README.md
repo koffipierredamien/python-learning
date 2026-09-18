@@ -10,7 +10,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
 | **Encadrement** | 2 enseignants — **un par classe**, les deux classes en parallèle |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
-| **Première séance** | samedi 12 septembre 2026, 12 h - 14 h |
+| **Séance en préparation** | **Séance 2**, samedi 19 septembre 2026, 12 h - 14 h |
 
 ---
 
@@ -26,20 +26,21 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 ---
 
-## Samedi prochain : la séance 1
+## Samedi prochain : la séance 2
 
-👉 **[2-seances/S01-decollage/](2-seances/S01-decollage/fiche-de-seance.md)**
+👉 **[2-seances/S02-premier-contact/](2-seances/S02-premier-contact/fiche-de-seance.md)**
+
+> La séance 1 s'est arrêtée après les missions de décollage. **Le premier contact machine, le Kahoot,
+> la clôture et la méthode de travail sont repris dans la séance 2.** Le parcours décale d'une séance.
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| Animer la séance | [🎤 Mon script d'animation](2-seances/S01-decollage/a-imprimer/00-MON-SCRIPT-animation.pdf) — 17 pages, à agrafer |
-| Projeter | [📺 Le diaporama](2-seances/S01-decollage/a-projeter/seance-1-projection.pptx) — 46 diapos, notes incluses |
-| Tout imprimer | [🖨️ Les 14 PDF](2-seances/S01-decollage/a-imprimer/) + [les quantités](2-seances/S01-decollage/a-imprimer/quantites-et-formats.md) |
-| Remettre le règlement aux familles | [📜 Le règlement intérieur](0-administratif/reglement-interieur.pdf) — 4 pages, coupon à faire signer |
-| Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S01-decollage/a-envoyer/deroule-seance-1.docx) |
-| Envoyer les révisions de la semaine | [📲 Les deux envois aux parents](2-seances/S01-decollage/a-envoyer/revisions-maison/messages-a-copier.md) — le quiz, le défi, et le texte des messages |
-| Préparer le quiz final | [🎯 Le Kahoot : 14 questions](2-seances/S01-decollage/a-projeter/quiz-questions-et-reponses.md) |
-| Comprendre le détail, minute par minute | [📖 La fiche de séance](2-seances/S01-decollage/fiche-de-seance.md) |
+| Animer la séance | [📖 La fiche de séance](2-seances/S02-premier-contact/fiche-de-seance.md) — minute par minute |
+| Projeter | [📺 Le diaporama](2-seances/S02-premier-contact/a-projeter/seance-2-projection.pptx) — 24 diapos, notes incluses |
+| Faire le quiz | [🎯 Le Kahoot](2-seances/S02-premier-contact/a-projeter/quiz-seance-1.pptx) — les 15 questions de la séance 1, qui n'ont pas servi |
+| Imprimer | [🖨️ Un seul document](2-seances/S02-premier-contact/a-imprimer/quantites-et-formats.md) |
+| Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S02-premier-contact/a-envoyer/deroule-seance-2.docx) |
+| Remettre le règlement aux familles | [📜 Le règlement intérieur](0-administratif/reglement-interieur.pdf) |
 | Préparer les machines | [🔧 Les outils, dans l'ordre](4-outils/LISEZ-MOI.md) |
 
 ---
@@ -68,23 +69,25 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 | Phase | Séances | Brique ajoutée au jeu | Notions |
 |---|---|---|---|
-| 0. Décollage | 1 | L'écran d'accueil du jeu | théorie de base · l'algorithme · `print()` |
-| 1. Parler au joueur | 2–5 | Le jeu demande les noms | variables, `input()`, types |
-| 2. Le plateau vit | 6–9 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
-| 3. Les règles du jeu | 10–13 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
-| 4. L'interface graphique | 14–18 | Fenêtre, grille cliquable, design | Tkinter, événements |
-| 5. Finition & intelligence | 19–22 | Score, sons, **IA**, distribution | organisation du code, algorithmes |
+| 0. Décollage | 1–2 | L'écran d'accueil du jeu | théorie de base · l'algorithme · `print()` |
+| 1. Parler au joueur | 3–6 | Le jeu demande les noms | variables, `input()`, types |
+| 2. Le plateau vit | 7–10 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
+| 3. Les règles du jeu | 11–14 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
+| 4. L'interface graphique | 15–19 | Fenêtre, grille cliquable, design | Tkinter, événements |
+| 5. Finition & intelligence | 20–22 | Score, sons, **IA**, distribution | organisation du code, algorithmes |
 
-Les rendez-vous : **S8** première démo jouable · **S14** concours de design ·
-**S18** la Nuit du bug · **S22** tournoi XO et démo aux familles.
+Les rendez-vous : **S9** première démo jouable · **S15** concours de design ·
+**S19** la Nuit du bug · **S22** tournoi XO et démo aux familles.
+*(Le parcours a décalé d'une séance : la séance 1 n'a pas pu aller jusqu'au bout.)*
 
 ---
 
 ## Où on en est
 
 - [x] La méthode pédagogique et ses annexes
-- [x] Le règlement intérieur (PDF à remettre + Word modifiable)
-- [x] Séance 1 : fiche, script d'animation, diaporama de 46 diapos, 14 documents imprimables, code, quiz Kahoot, déroulé Word
+- [x] Le règlement intérieur, version du responsable
+- [x] Séance 1 : fiche, script d'animation, diaporama de 46 diapos, 14 documents imprimables, quiz Kahoot, déroulé Word
+- [x] Séance 2 : fiche, diaporama de 24 diapos, aide-mémoire machine, code, déroulé Word
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture) et les outils de préparation
-- [ ] Séances 2 à 22
+- [ ] Séances 3 à 22

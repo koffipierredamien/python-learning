@@ -1,6 +1,9 @@
-# 🎯 Le quiz de la séance 1
+# 🎯 Le quiz — la révision de la séance 1
 
-**13 h 45 - 13 h 55 · 15 questions · 20 secondes chacune**
+> Préparé pour la séance 1, il n'a pas pu être joué. **Il se joue en séance 2, de 12 h 25 à 12 h 45**,
+> et il sert de révision de toute la théorie du 12 septembre.
+
+**12 h 25 - 12 h 45 · 15 questions · une minute chacune, explication comprise**
 
 > La bonne réponse est en **gras**. La ligne *« ce qu'on dit »* est à prononcer **après** chaque
 > question, en une phrase : c'est ce qui transforme le jeu en enseignement.

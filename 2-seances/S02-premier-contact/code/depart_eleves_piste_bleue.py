@@ -1,5 +1,5 @@
 # =====================================================
-#  JEU XO  -  Seance 1  -  PISTE BLEUE
+#  JEU XO  -  Seance 2  -  PISTE BLEUE
 #  Mon ecran d'accueil
 # =====================================================
 #

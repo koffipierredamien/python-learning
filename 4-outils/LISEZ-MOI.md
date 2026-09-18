@@ -1,6 +1,6 @@
 # 🔧 Outils
 
-Sept programmes Python. Vous les lancez depuis Thonny (`F5`) ou en ligne de commande.
+Cinq programmes Python. Vous les lancez depuis Thonny (`F5`) ou en ligne de commande.
 Aucun n'est destiné aux élèves.
 
 | Programme | Quand s'en servir |
@@ -9,9 +9,7 @@ Aucun n'est destiné aux élèves.
 | [`verifier_un_poste.py`](verifier_un_poste.py) | **À lancer sur chaque machine avant la séance.** Vérifie Python, la logique du jeu, et que la fenêtre graphique pourra s'ouvrir. Tout doit afficher `[OK]`. |
 | [`installer_dossier_geeks.py`](installer_dossier_geeks.py) | **À lancer sur chaque poste de la salle** (et sur votre machine). Crée le dossier `GEEKS` sur le Bureau, avec le fichier de départ de l'élève. |
 | [`preparer_cle_usb.py`](preparer_cle_usb.py) | Fabrique le dossier `cle-usb/` à emporter le samedi. |
-| [`faire_les_pdf.py`](faire_les_pdf.py) | Refabrique les PDF d'une séance — ou du règlement — à partir des sources `.html`. |
-| [`faire_le_reglement.py`](faire_le_reglement.py) | Réécrit le **règlement intérieur** dans ses deux versions, Word et source du PDF, à partir d'un texte unique. |
-| [`faire_les_revisions.py`](faire_les_revisions.py) | Écrit les **deux envois de révision de la semaine** — le quiz, le défi, et le texte des messages aux parents. |
+| [`faire_les_pdf.py`](faire_les_pdf.py) | Refabrique les PDF d'une séance à partir de ses sources `.html`. |
 
 ---
 
@@ -82,40 +80,4 @@ a-imprimer/sources/*.html   →  le PDF monte dans  a-imprimer/
 tout autre  *.html          →  le PDF est écrit à côté de sa source
 ```
 
-Pour le règlement intérieur : `python 4-outils/faire_les_pdf.py --reglement`
-(il convertit alors `0-administratif/sources/*.html` dans `0-administratif/`).
-
 Il a besoin de Chrome ou Chromium. Sans navigateur installé, il vous dit quoi faire à la main.
-
----
-
-## Le règlement intérieur
-
-Son texte n'est écrit qu'**une seule fois**, dans `faire_le_reglement.py`, article par article et en clair.
-Le programme en sort le Word **et** la source du PDF : les deux versions ne peuvent donc pas se contredire.
-
-```
-python 4-outils/faire_le_reglement.py          → 0-administratif/reglement-interieur.docx
-                                                 + 0-administratif/sources/…html
-python 4-outils/faire_les_pdf.py --reglement   → 0-administratif/reglement-interieur.pdf
-```
-
-Déposez votre bandeau d'en-tête dans `0-administratif/en-tete.png` (ou `.jpg`) avant de relancer :
-il remplace alors le bandeau de texte, dans le Word comme dans le PDF.
-Détails : [0-administratif/LISEZ-MOI.md](../0-administratif/LISEZ-MOI.md)
-
----
-
-## Les révisions à la maison
-
-Deux envois par semaine aux parents. `faire_les_revisions.py` écrit les deux pages et le texte des
-messages, dans `2-seances/S01-decollage/a-envoyer/revisions-maison/` :
-
-```
-python 4-outils/faire_les_revisions.py             → envoi-1.html · envoi-2.html
-                                                     + messages-a-copier.md
-python 4-outils/faire_les_pdf.py --seance 1        → envoi-1.pdf · envoi-2.pdf
-```
-
-Le contenu de chaque semaine est écrit en clair en haut du programme, dans `SEMAINES` : questions,
-réponses, défis. **Il ne porte que sur ce qui a déjà été fait en classe**, et s'ajoute séance par séance.

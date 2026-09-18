@@ -1,8 +1,8 @@
 # =====================================================
 #  JEU XO  -  CODE OFFICIEL
-#  Fin de la seance 1 : "Le jeu dit bonjour"
+#  Fin de la seance 2 : "Le jeu dit bonjour"
 #
-#  Ce fichier est le point de depart de la seance 2.
+#  Ce fichier est le point de depart de la seance 3.
 #  Chaque eleve en recoit une copie en arrivant,
 #  quoi qu'il ait reussi ou rate la semaine precedente.
 #
@@ -23,5 +23,5 @@ print("")
 print("Prepare-toi a perdre !")
 
 # =====================================================
-#  SEANCE 2 : le jeu va demander son nom au joueur.
+#  SEANCE 3 : le jeu va demander son nom au joueur.
 # =====================================================

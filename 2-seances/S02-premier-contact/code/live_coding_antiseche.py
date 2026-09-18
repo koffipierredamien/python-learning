@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
-  SEANCE 1  -  LE LIVE CODING DU CAPITAINE   (78 - 90 min)
+  SEANCE 2  -  LE LIVE CODING DE L'ENSEIGNANT   (13 h 15 - 13 h 25)
 =============================================================================
   A QUOI SERT CE FICHIER ?
 
-  C'est VOTRE anti-seche pour les 12 minutes de live coding.
+  C'est VOTRE anti-seche pour les 10 minutes de live coding.
   Le jour J, vous NE lancez PAS ce fichier : vous tapez devant les eleves,
   tres lentement, dans un fichier vide. Ce fichier est la pour :
     - repeter chez vous avant la seance,
