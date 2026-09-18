@@ -126,7 +126,10 @@ suppose pas faits. C'est à dire à voix haute, une fois, pour tout le monde.
 
 ### 3.3 · 12 h 22 - 12 h 40 — Le quiz
 
-Le quiz préparé pour la séance 1 et qui n'a pas eu lieu. Il révise toute la théorie du 12 septembre.
+Le quiz préparé pour la séance 1 et qui n'a pas eu lieu. **Il a été refait** : il ne porte plus que sur
+ce qui a vraiment été vu le 12 septembre. Les six questions sur `print()`, les guillemets, les messages
+d'erreur et la lecture d'un programme ont été retirées — **ces notions s'apprennent aujourd'hui**, on ne
+peut pas les réviser. Elles reviendront dans le quiz de la séance 3.
 
 **Le support :** [`a-projeter/quiz-seance-1.pptx`](a-projeter/quiz-seance-1.pptx) — 15 questions, une diapo
 par question puis la réponse. Les corrigés : [`a-projeter/quiz-questions-et-reponses.md`](a-projeter/quiz-questions-et-reponses.md).

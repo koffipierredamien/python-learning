@@ -1,40 +1,36 @@
 # 🎯 Le quiz — la révision de la séance 1
 
-> Préparé pour la séance 1, il n'a pas pu être joué. **Il se joue en séance 2, de 12 h 25 à 12 h 45**,
-> et il sert de révision de toute la théorie du 12 septembre.
+> **Il ne porte que sur ce qui a vraiment été vu le 12 septembre.** La séance s'étant arrêtée après
+> les missions de décollage, les questions sur `print()`, les guillemets, les messages d'erreur et la
+> lecture d'un programme ont été retirées : **ces notions s'apprennent aujourd'hui**, elles ne peuvent
+> pas être révisées. Elles reviendront dans le quiz de la séance 3.
 
-**12 h 25 - 12 h 45 · 15 questions · une minute chacune, explication comprise**
-
-> La bonne réponse est en **gras**. La ligne *« ce qu'on dit »* est à prononcer **après** chaque
-> question, en une phrase : c'est ce qui transforme le jeu en enseignement.
+**12 h 22 - 12 h 40 · 15 questions · une minute chacune, explication comprise**
 
 | Réglage | Valeur |
 |---|---|
-| Temps par question | **20 secondes** |
+| Temps de réponse | **20 secondes** par question |
 | Nombre de questions | 15 — **en retard, gardez les 10 premières** |
 | **Le quiz à projeter** | **[`quiz-seance-1.pptx`](quiz-seance-1.pptx)** — 32 diapos : question, puis réponse |
-| Si vous préférez la version en ligne | **[`kahoot-en-ligne/import-kahoot.xlsx`](kahoot-en-ligne/import-kahoot.xlsx)** — le modèle officiel de Kahoot, déjà rempli · [`kahoot-en-ligne/import-kahoot.pdf`](kahoot-en-ligne/import-kahoot.pdf) |
+| Si vous préférez la version en ligne | **[`kahoot-en-ligne/import-kahoot.xlsx`](kahoot-en-ligne/import-kahoot.xlsx)** — le modèle officiel de Kahoot, déjà rempli |
 | Internet | **Pas nécessaire** : le quiz se joue au vidéoprojecteur, avec les cartes de couleur |
 
 ---
 
-### 1. Que fait la commande `print` en Python ?
-- **Elle affiche du texte à l'écran** ✅
-- Elle imprime sur du papier
-- Elle efface le programme
-- Elle calcule
+## Les 15 questions
 
-> *Ce qu'on dit :* « `print` veut dire **affiche**. Attention au piège : ça n'imprime rien sur du papier ! »
+> La bonne réponse est en **gras**. La ligne *« ce qu'on dit »* se prononce **après** chaque question,
+> en une seule phrase : c'est elle qui transforme le jeu en enseignement.
 
-### 2. Combien de guillemets faut-il autour d'un texte ?
-- Un seul
-- **Deux : un avant, un après** ✅
-- Trois
-- Aucun
+### 1. Dans quel domaine n'y a-t-il PAS de code ?
+- La santé
+- L'agriculture
+- La musique
+- **Aucun : il y a du code partout** ✅
 
-> *Ce qu'on dit :* « Comme une paire de chaussures : jamais un tout seul. »
+> *Ce qu'on dit :* « Aucun. C'est pour ça que ça vous servira dans le métier que vous choisirez, quel qu'il soit. »
 
-### 3. Au fond, l'ordinateur ne comprend que…
+### 2. Au fond, l'ordinateur ne comprend que…
 - Le français
 - L'anglais
 - **Des 0 et des 1** ✅
@@ -42,96 +38,101 @@
 
 > *Ce qu'on dit :* « Souvenez-vous des huit élèves debout et assis. Debout = 1, assis = 0. Rien d'autre. »
 
-### 4. Quand l'ordinateur écrit en rouge, cela veut dire…
-- Il est en colère
-- **Il t'explique ce qu'il n'a pas compris** ✅
-- Tu es puni
-- L'ordinateur est cassé
+### 3. Les huit élèves debout et assis, ils formaient quoi ?
+- Un mot de passe
+- **La lettre A** ✅
+- Un numéro de téléphone
+- Rien du tout
 
-> *Ce qu'on dit :* « Le rouge n'est pas grave. **Le rouge est une information.** »
+> *Ce qu'on dit :* « 01000001 : c'est la lettre A pour une machine. Huit cases, huit élèves. »
 
-### 5. Un algorithme, c'est…
-- Un ordinateur très rapide
-- **Une suite d'ordres précis, dans le bon ordre** ✅
-- Un langage de programmation
-- Un robot
+### 4. Entre Python et la machine, qui fait la traduction ?
+- **L'interprète** ✅
+- Le clavier
+- Internet
+- Personne
 
-> *Ce qu'on dit :* « C'est ce que vous avez fait avec le robot humain. Et une recette de cuisine en est un. »
+> *Ce qu'on dit :* « J'écris des mots dans Thonny, l'interprète les traduit en 0 et en 1, et la machine obéit. »
 
-### 6. Qui a créé le langage Python ?
-- Ada Lovelace
-- **Guido van Rossum** ✅
-- Katherine Johnson
-- Grace Hopper
-
-> *Ce qu'on dit :* « Il voulait un langage simple et lisible. C'est pour ça qu'on l'a choisi pour vous. »
-
-### 7. Qui a écrit la première version de Facebook dans sa chambre d'étudiant ?
-- **Mark Zuckerberg** ✅
-- Elon Musk
-- Guido van Rossum
-- Nick D'Aloisio
-
-> *Ce qu'on dit :* « À 19 ans. Mais il avait commencé à coder vers **12 ans**, avec des programmes minuscules. »
-
-### 8. D'où vient le mot « bug » ?
-- **D'un vrai insecte coincé dans une machine** ✅
-- D'un mot anglais qui veut dire « erreur »
-- Du nom d'un ordinateur
-- D'un jeu vidéo
-
-> *Ce qu'on dit :* « Un papillon de nuit coincé dans une machine, en 1947, collé dans le cahier de bord
-> de l'équipe. Depuis, une erreur dans un programme s'appelle un bug. »
-> *Pour votre information :* le mot existait déjà avant chez les ingénieurs, mais c'est cette histoire
-> qui l'a rendu célèbre en informatique. Si un élève le sait, félicitez-le.
-
-### 9. Dans quel domaine n'y a-t-il **PAS** de code ?
-- La santé
-- L'agriculture
-- La musique
-- **Aucun : il y a du code partout** ✅
-
-> *Ce qu'on dit :* « C'est pour ça que ça vous servira dans le métier que vous choisirez, quel qu'il soit. »
-
-### 10. L'ordinateur lit ton programme…
-- **De haut en bas, ligne par ligne** ✅
-- De bas en haut
-- Dans le désordre
-- En commençant par le milieu
-
-> *Ce qu'on dit :* « Toujours. C'est la règle numéro un. »
-
-### 11. Comment s'appelle le logiciel dans lequel on écrit notre code ?
+### 5. Comment s'appelle le logiciel dans lequel on écrit notre code ?
 - Python
 - **Thonny** ✅
 - Kahoot
 - Windows
 
-> *Ce qu'on dit :* « Python est la **langue**. Thonny est la **feuille** avec le bouton vas-y. »
+> *Ce qu'on dit :* « Python est la LANGUE. Thonny est la FEUILLE, avec le bouton vas-y. »
 
-### 12. Que va afficher `print("Bonjour")` ?
-- **Bonjour** ✅
-- print Bonjour
-- "Bonjour" avec les guillemets
-- Rien
+### 6. Qui a créé le langage Python ?
+- Mark Zuckerberg
+- **Guido van Rossum** ✅
+- Elon Musk
+- Gitanjali Rao
 
-> *Ce qu'on dit :* « Les guillemets servent à dire *"ceci est du texte"*. Ils ne s'affichent pas. »
+> *Ce qu'on dit :* « Il voulait un langage simple et lisible. C'est pour ça qu'on l'a choisi pour vous. »
 
-### 13. L'ordinateur est surtout…
+### 7. L'ordinateur est surtout…
 - Intelligent
 - **Obéissant** ✅
 - Paresseux
 - Magique
 
-> *Ce qu'on dit :* « Il fait exactement ce qui est écrit. Ni plus, ni moins. S'il fait une bêtise, ce n'est pas lui qui s'est trompé. »
+> *Ce qu'on dit :* « Il fait exactement ce qui est écrit. S'il fait une bêtise, ce n'est pas lui qui s'est trompé. »
 
-### 14. À quel âge Elon Musk a-t-il vendu son premier jeu vidéo ?
+### 8. Un algorithme, c'est…
+- Un ordinateur très rapide
+- **Une suite d'ordres précis, dans le bon ordre** ✅
+- Un langage de programmation
+- Un robot
+
+> *Ce qu'on dit :* « C'est exactement ce que vous avez fait avec le robot humain. »
+
+### 9. Le robot humain de samedi dernier comprenait combien d'ordres ?
+- Un seul
+- **Trois** ✅
+- Dix
+- Tous les ordres
+
+> *Ce qu'on dit :* « Trois : avance, tourne à gauche, tourne à droite. Et il s'est cogné — parce qu'il obéit à la lettre. »
+
+### 10. Une recette de cuisine, c'est…
+- **Un algorithme** ✅
+- Un langage
+- Un programme Python
+- Rien à voir avec le code
+
+> *Ce qu'on dit :* « Des étapes précises, dans le bon ordre. Un itinéraire aussi. Et les règles du morpion, qu'on va écrire. »
+
+### 11. Qui a écrit la première version de Facebook dans sa chambre d'étudiant ?
+- **Mark Zuckerberg** ✅
+- Elon Musk
+- Guido van Rossum
+- Nick D'Aloisio
+
+> *Ce qu'on dit :* « À 19 ans. Mais il avait commencé bien plus tôt, avec des programmes minuscules. »
+
+### 12. À quel âge Elon Musk a-t-il vendu son premier jeu vidéo ?
 - 8 ans
 - **12 ans** ✅
 - 20 ans
 - 30 ans
 
-> *Ce qu'on dit :* « Douze ans. Presque votre âge. Le jeu s'appelait *Blastar*, et un magazine l'a acheté. »
+> *Ce qu'on dit :* « Douze ans. Presque votre âge. Le jeu s'appelait Blastar, et un magazine l'a acheté. »
+
+### 13. À 11 ans, Gitanjali Rao a inventé un appareil qui…
+- **détecte le poison dans l'eau** ✅
+- répare les téléphones
+- traduit les langues
+- dessine des cartes
+
+> *Ce qu'on dit :* « Elle avait entendu parler d'une ville où l'eau du robinet était empoisonnée. Coder, ce n'est pas faire des jeux : c'est résoudre. »
+
+### 14. Kelvin Doe, en Sierra Leone, a construit sa radio avec…
+- des pièces neuves
+- **des déchets ramassés** ✅
+- un kit acheté en magasin
+- l'aide d'une grande entreprise
+
+> *Ce qu'on dit :* « Chez lui, il n'y avait pas d'électricité tous les jours. Il a fabriqué avec ce qu'il avait sous la main. »
 
 ### 15. Charlette N'Guessan, ivoirienne, a créé un logiciel qui…
 - **reconnaît le visage d'une personne** ✅
@@ -139,71 +140,37 @@
 - traduit les langues
 - fabrique des médicaments
 
-> *Ce qu'on dit :* « Pour vérifier une identité à distance, contre la fraude dans les banques africaines.
-> En 2020, elle a été **la première femme** à gagner un grand prix africain d'ingénierie. »
+> *Ce qu'on dit :* « Contre la fraude aux identités dans les banques africaines. Et elle l'a fait depuis l'Afrique. »
 
 ---
 
-## Si vous voulez la version en ligne (Kahoot)
+## Comment on joue
 
-### ✅ Le tableur — **c'est le fichier officiel de Kahoot, déjà rempli**
+Les élèves ont déjà les **4 cartes de couleur** sur leur poste : ce sont les cartes de réponse, et les
+couleurs du diaporama sont exactement les mêmes.
 
-**[`kahoot-en-ligne/import-kahoot.xlsx`](kahoot-en-ligne/import-kahoot.xlsx) est le modèle officiel de Kahoot**, repris tel quel et rempli
-avec nos 15 questions. Il n'y a **rien à recopier** : on le téléverse directement.
+| Réponse | Carte à lever |
+|---|---|
+| 1 | 🔴 Rouge |
+| 2 | 🔵 Bleu |
+| 3 | 🟠 Orange |
+| 4 | 🟢 Vert |
+
+**Déroulé :** on projette la question, on lit les 4 réponses à voix haute, on compte « 3, 2, 1 » —
+**et tout le monde lève sa carte en même temps**. On compte à vue, table par table : inutile de tenir un
+score. Puis la diapositive de réponse, l'explication en une phrase, et on enchaîne.
+
+> **La règle qui sauve la séance : une seule phrase par question.** Quinze questions à deux minutes,
+> c'est une demi-heure — et le bloc machine est mort.
+
+## La version en ligne (Kahoot)
+
+**[`kahoot-en-ligne/import-kahoot.xlsx`](kahoot-en-ligne/import-kahoot.xlsx) est le modèle officiel de
+Kahoot**, repris tel quel et rempli avec ces 15 questions. Il n'y a rien à recopier.
 
 1. Sur **kahoot.com** : **Create** → **Kahoot** → **Import spreadsheet**.
 2. Téléversez `import-kahoot.xlsx`.
-3. Vérifiez que Kahoot a bien pris la feuille **« Séance 1 - Le Décollage »** (le classeur contient aussi la
-   feuille `Sheet1`, qui est le modèle vierge d'origine — on la garde, c'est comme ça que le fichier est fourni
-   par Kahoot).
+3. Vérifiez que Kahoot a bien pris la feuille **« Séance 1 - Le Décollage »**.
 4. **Testez le quiz une fois en solo avant la séance.**
 
-> **Ce qui n'allait pas avant :** le fichier était construit de zéro, avec les en-têtes en ligne 1.
-> Le vrai modèle de Kahoot a un bloc d'instructions en lignes 2 à 6, **ses en-têtes en ligne 8**, les questions
-> **à partir de la ligne 9**, et une colonne A déjà numérotée de 1 à 100. C'est cette structure exacte qui est
-> désormais utilisée — plus rien à ajuster.
-
-| Colonne | Contenu | Limite |
-|---|---|---|
-| A | le numéro de la question *(déjà rempli, ne pas y toucher)* | 1 à 100 |
-| B | la question | **120 caractères** |
-| C · D · E · F | les réponses 1 à 4 | **75 caractères** chacune |
-| G | le temps, en secondes | 5, 10, 20, 30, 60, 90, 120 ou 240 |
-| H | le numéro de la bonne réponse | 1 à 4 *(plusieurs : séparées par une virgule)* |
-
-### Le PDF, si vous préférez
-
-**[`kahoot-en-ligne/import-kahoot.pdf`](kahoot-en-ligne/import-kahoot.pdf)** se dépose dans *Create from document*. C'est plus rapide, mais
-**ça passe par l'IA de Kahoot**, qui reformule, coupe parfois une réponse trop longue ou se trompe de bonne
-réponse. **Relisez les 15 questions** — la liste de contrôle, c'est cette page-ci.
-
----
-
-## 🎨 Comment on joue : le diaporama + les cartes de couleur
-
-**Le quiz se joue sans internet, avec [`quiz-seance-1.pptx`](quiz-seance-1.pptx)** — une diapositive par question,
-puis une diapositive de réponse avec l'explication. Les élèves ont déjà les **4 cartes de couleur** sur leur poste :
-elles sont les cartes de réponse, et **les couleurs du diaporama sont exactement les mêmes**.
-
-| Réponse | Couleur Kahoot | Carte à lever |
-|---|---|---|
-| 1 | 🔴 rouge | 🔴 **Rouge** |
-| 2 | 🔵 bleu | 🔵 **Bleu** |
-| 3 | 🟡 jaune | 🟠 **Orange** |
-| 4 | 🟢 vert | 🟢 **Vert** |
-
-**Déroulé :** on projette la question, on lit les 4 réponses à voix haute, on compte « 3, 2, 1 » —
-**et tout le monde lève sa carte en même temps**. On compte à vue, table par table : inutile de tenir un score
-exact. Puis on affiche la diapositive de réponse, on donne l'explication en une phrase, et on enchaîne.
-
-> **C'est meilleur que le Kahoot en ligne pour une classe seule :** aucun compte à créer, aucun appareil à
-> distribuer, tout le monde répond en même temps, personne ne recopie son voisin — et on voit d'un seul regard
-> quelle notion n'est pas passée.
-
----
-
-## Après la séance
-
-Regardez le rapport du Kahoot (ou vos comptages papier). **Toute question ratée par plus de la moitié
-de la classe se reprend en 2 minutes au début de la séance 2.** C'est le meilleur usage qu'on puisse
-en faire.
+La liste imprimable des questions et des réponses : [`kahoot-en-ligne/import-kahoot.pdf`](kahoot-en-ligne/import-kahoot.pdf).
