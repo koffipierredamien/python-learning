@@ -6,8 +6,19 @@
 
 | Fichier | À quoi il sert |
 |---|---|
-| **[`reglement-interieur.pdf`](reglement-interieur.pdf)** | La version à imprimer et à remettre aux familles |
-| **[`reglement-interieur.docx`](reglement-interieur.docx)** | La version Word, celle qu'on modifie |
+| **[`reglement-interieur-a-partager.docx`](reglement-interieur-a-partager.docx)** | **La mise en page sur deux pages.** C'est celle qu'on modifie : l'en-tête se met dans la zone d'en-tête de Word, en haut |
+| **[`reglement-interieur-a-partager.pdf`](reglement-interieur-a-partager.pdf)** | La même, en PDF — à imprimer, ou à exporter en images |
+| [`images/`](images/) | Les deux pages en PNG, prêtes à envoyer par message |
+| `reglement-interieur.docx` · `.pdf` | La version d'origine du responsable. **Même texte**, sans mise en page |
+
+> **Le texte est identique dans les deux versions** — c'est le texte retenu du 16/09/2026, avec la seule
+> correction demandée à l'article 7. Seule la mise en page change.
+
+### Pour ajouter votre en-tête
+
+Dans `reglement-interieur-a-partager.docx` : **double-cliquez tout en haut de la page**, insérez votre
+image, et effacez la ligne grise qui s'y trouve. L'en-tête se répétera sur les deux pages.
+Puis `Fichier → Enregistrer sous → PDF` pour obtenir la version à partager.
 
 Le brouillon que j'avais fabriqué (13 articles, coupon d'engagement, générateur `faire_le_reglement.py`)
 a été retiré : il faisait double emploi et aurait fini par contredire la version officielle.
