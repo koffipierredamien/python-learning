@@ -7,8 +7,8 @@
 | **8** (1 par poste) | [`1-aide-memoire-machine.pdf`](1-aide-memoire-machine.pdf) | A4 portrait | ordinaire, recto |
 | 1 pour chaque enseignant | [Le dictionnaire des erreurs](../../../1-methode/annexes/dictionnaire-des-erreurs.pdf) — si ce n'est pas déjà fait | A4 recto verso | ordinaire |
 
-> Si vous ne pouvez pas imprimer l'aide-mémoire : **projetez-le**, ou recopiez les 5 gestes au tableau.
-> Ce n'est pas un document qui conditionne la séance.
+> Il porte les **deux notions du jour** : `print()` d'un côté, la variable et `input()` de l'autre.
+> Si vous ne pouvez pas l'imprimer : **projetez-le**, ou recopiez les 5 gestes au tableau.
 
 ## Ce qui doit déjà être en place
 

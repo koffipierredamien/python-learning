@@ -1,8 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
-  SEANCE 2  -  LE LIVE CODING DE L'ENSEIGNANT   (13 h 15 - 13 h 25, puis 13 h 35 - 13 h 43)
+  SEANCE 2  -  LE LIVE CODING DE L'ENSEIGNANT
 =============================================================================
+  DEUX DEMONSTRATIONS, DEUX ATELIERS :
+
+     13 h 07 - 13 h 15   etapes A, B, C   ->  print()
+     13 h 15 - 13 h 27   les eleves font leur ecran d'accueil
+     13 h 27 - 13 h 35   etapes D, E, F   ->  la variable, puis input()
+     13 h 35 - 13 h 47   les eleves font "le jeu demande ton nom"
+
   A QUOI SERT CE FICHIER ?
 
   C'est VOTRE anti-seche. Le jour J, vous NE lancez PAS ce fichier :
@@ -16,33 +23,53 @@
 
   AVANT LA SEANCE : police de Thonny en taille 18 minimum (Outils >
   Options > Editeur), sinon le fond de la salle ne lit rien.
-
-  CE QU'ON N'ENSEIGNE PAS AUJOURD'HUI : print(). Les eleves s'en servent,
-  l'ecran d'accueil leur est donne tout ecrit. La notion du jour, c'est
-  la VARIABLE et input().
 =============================================================================
 """
 
 # =============================================================================
-#  ETAPE A  (2 min)  -  ON LANCE CE QUI EST DEJA ECRIT
+#  ETAPE A  (3 min)  -  LE PREMIER PRINT
 # =============================================================================
-#  Vous ouvrez GEEKS/mon_xo/jeu.py devant eux, et vous appuyez sur F5.
-#  L'ecran d'accueil s'affiche.
+#  Vous tapez caractere par caractere en verbalisant :
+#    "p - r - i - n - t, ca veut dire AFFICHE.
+#     Ensuite une parenthese : on l'ouvre, et on la fermera TOUJOURS.
+#     Puis un guillemet, mon texte, un guillemet. Et on referme."
 #
-#    "Ce programme, je ne l'ai pas tape : il etait deja la. Il fonctionne.
-#     Chaque ligne print() affiche ce qu'il y a entre les guillemets.
-#     Voila. Vous savez lire ce programme. On passe a la suite."
+#  >>> AVANT D'APPUYER : "Qu'est-ce qui va se passer ? A trois. Un, deux, trois !"
+
+print("Bonjour")
+
+#  Apres l'execution :
+#    "Voila. Vous venez de voir un ordinateur OBEIR. C'est tout le metier.
+#     Attention au piege : print ne veut pas dire imprimer. Rien ne sort
+#     sur du papier. print veut dire AFFICHE."
 #
-#  >>> On ne detaille pas print(). Trois phrases, et on avance.
+#  Montrez aussi, en une seconde, que les guillemets ne s'affichent pas :
+#     ils disent seulement "ceci est du texte".
 
 
 # =============================================================================
-#  ETAPE B  (3 min)  -  L'ERREUR VOLONTAIRE
+#  ETAPE B  (2 min)  -  IL LIT DE HAUT EN BAS, LIGNE PAR LIGNE
+# =============================================================================
+#  Vous ajoutez deux lignes, et vous demandez AVANT de lancer :
+#     "Dans quel ordre ca va s'afficher ?"
+
+print("Un")
+print("Deux")
+print("Trois")
+
+#    "De haut en bas. Ligne par ligne. Toujours. Il ne devine pas,
+#     il ne saute pas de ligne, il ne revient pas en arriere.
+#     Si ca s'affiche dans le desordre, ce n'est pas lui : c'est l'ordre
+#     de vos lignes."
+
+
+# =============================================================================
+#  ETAPE C  (3 min)  -  L'ERREUR VOLONTAIRE
 # =============================================================================
 #  >>> LE MOMENT LE PLUS IMPORTANT DE LA SEANCE <<<
 #  Vous effacez un guillemet, devant eux, en l'annoncant :
 #     "Maintenant, je casse tout."
-
+#
 #  (ligne volontairement fausse, laissee en commentaire pour que ce fichier
 #   reste ouvrable dans Thonny — devant les eleves, vous la tapez pour de vrai)
 # print("Bonjour)
@@ -58,11 +85,16 @@
 #     il a trouve quelque chose."
 #
 #  Vous remettez le guillemet, vous relancez, ca marche.
+#
+#  >>> ON S'ARRETE LA. Les eleves font leur ecran d'accueil : PARTIE 1
+#      de leur fichier, etapes 1 a 5. Douze minutes.
 
 
 # =============================================================================
-#  ETAPE C  (3 min)  -  LA VARIABLE : UNE BOITE AVEC UNE ETIQUETTE
+#  ETAPE D  (3 min)  -  LA VARIABLE : UNE BOITE AVEC UNE ETIQUETTE
 # =============================================================================
+#  Tout le monde lache le clavier. Ecrans face a vous, mains sur la table.
+#
 #  D'abord SANS machine, avec les mains :
 #     "J'ai une boite. Je colle une etiquette dessus : nom.
 #      Je mets quelque chose dedans : Damien.
@@ -84,11 +116,12 @@ print(nom)
 print("nom")
 
 #    "La, avec les guillemets, il affiche le mot nom. Sans guillemets,
-#     il affiche ce qu'il y a dans la boite. C'est toute la difference."
+#     il affiche ce qu'il y a dans la boite. C'est toute la difference.
+#     Souvenez-vous de ca : c'est l'erreur numero un de toute l'annee."
 
 
 # =============================================================================
-#  ETAPE D  (2 min)  -  input() : C'EST LE JOUEUR QUI REMPLIT LA BOITE
+#  ETAPE E  (2 min)  -  input() : C'EST LE JOUEUR QUI REMPLIT LA BOITE
 # =============================================================================
 #     "Jusqu'ici, c'est MOI qui remplis la boite. Maintenant, je vais
 #      laisser le JOUEUR la remplir."
@@ -104,27 +137,30 @@ print(nom)
 
 
 # =============================================================================
-#  ETAPE E  (2 min)  -  ON COLLE DU TEXTE ET UNE BOITE
+#  ETAPE F  (2 min)  -  ON COLLE DU TEXTE ET UNE BOITE
 # =============================================================================
 
 print("Bonjour " + nom + " !")
 
-#    "Le + colle des morceaux de texte bout a bout.
+#    "Le + colle des morceaux bout a bout.
 #     Attention a l'espace apres Bonjour : sans lui, ca colle tout."
 #
 #  Montrez l'oubli de l'espace une fois : "BonjourDamien". Ils rient, ils retiennent.
 #
-#  >>> ET C'EST TOUT. On arrete ici et on les envoie faire, eux.
+#  >>> ET C'EST TOUT. On les envoie faire la PARTIE 2 de leur fichier,
+#      etapes 6 a 8. Douze minutes.
 
 
 # =============================================================================
-#  LES TROIS ERREURS QUI VONT ARRIVER PENDANT L'ATELIER
+#  LES QUATRE ERREURS QUI VONT ARRIVER PENDANT LES ATELIERS
 # =============================================================================
 #   SyntaxError ........ un guillemet ou une parenthese manque.
 #                        "Compte tes guillemets : ils vont par deux."
 #   NameError .......... du texte ecrit sans guillemets, ou une boite
 #                        dont le nom est mal orthographie.
 #                        "Tu as ecrit Nom et ta boite s'appelle nom."
+#   BonjourDamien ...... l'espace manque dans "Bonjour ".
+#                        "Il colle exactement ce que tu lui donnes."
 #   Rien ne se passe ... l'eleve a ecrit dans la zone grise du bas.
 #                        "Remonte dans la zone blanche, en haut."
 #

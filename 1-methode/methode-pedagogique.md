@@ -329,7 +329,7 @@ Cette progression n'est donnée ici que pour vérifier que la méthode tient sur
 
 | Phase | Séances | Brique ajoutée au projet | Notions Python |
 |---|---|---|---|
-| **0. Décollage** | 1–2 | Test de Décollage, premier contact machine, le jeu s'annonce et demande le nom du joueur | environnement, exécuter un programme, `input()` |
+| **0. Décollage** | 1–2 | Test de Décollage, premier contact machine, le jeu s'annonce et demande le nom du joueur | environnement, exécuter un programme, `print()`, la variable, `input()` |
 | **1. Parler au joueur** | 3–6 | Le jeu dit bonjour, demande les noms, affiche un plateau vide | variables, `input()`, `print()`, chaînes, types |
 | **2. Le plateau vit** | 7–10 | On place un X ou un O, on rejoue, on alterne les joueurs | listes, indices, conditions, boucles — **1ʳᵉ démo jouable en S9** |
 | **3. Les règles du jeu** | 11–14 | Coups invalides refusés, détection du gagnant, match nul, fin de partie | fonctions, `while`, opérateurs logiques, algorithme de victoire |

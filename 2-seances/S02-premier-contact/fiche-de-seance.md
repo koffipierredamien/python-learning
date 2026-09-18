@@ -13,18 +13,19 @@
 | **Numéro** | 2 / 22 — Phase 0 « Décollage », deuxième moitié |
 | **Date** | samedi 19 septembre 2026 · **12 h - 14 h** |
 | **Organisation** | **Un enseignant par classe**, les deux classes en parallèle |
-| **Notions** | **La variable** · **`input()`** · lire un message d'erreur |
+| **Notions** | **`print()`** · **la variable** · **`input()`** · lire un message d'erreur |
 | **Brique ajoutée au projet** | L'écran d'accueil, **et le jeu qui demande son nom au joueur** |
 | **Livrable élève** | Un fichier `mon_xo/jeu.py` qui s'exécute, pose une question et répond avec le nom du joueur |
 
-> **`print()` n'est pas la leçon du jour.** L'écran d'accueil est donné déjà écrit : les élèves le lancent,
-> le lisent, y mettent leur prénom. On enseigne **la variable et `input()`** — c'est cela, la brique.
+> **Deux notions, deux démonstrations, deux ateliers.** On fait ce qui n'a pas été fait la semaine passée
+> — `print()` et l'écran d'accueil — **et** ce qui était prévu pour aujourd'hui — la variable et `input()`.
+> Le bloc machine fait 50 minutes et il est découpé en deux moitiés symétriques : je montre, vous faites.
 
 ### Les 4 objectifs, par ordre de priorité
 
 1. **Chaque élève a lancé un programme et l'a vu s'exécuter.** Le seul objectif qui ne se négocie pas.
 2. **Chaque élève a vu une erreur rouge, et a compris que ce n'est pas grave.** On la provoque exprès.
-3. **Le jeu de chaque élève pose une question et affiche la réponse.** C'est la brique du jour.
+3. **Chaque élève a écrit son écran d'accueil**, puis **son jeu pose une question et affiche la réponse.**
 4. **La méthode de travail est posée** : les pistes, les cartes, le Filet. Elle servira les 20 séances suivantes.
 
 ---
@@ -34,29 +35,36 @@
 | Horaire | Séquence | Durée |
 |---|---|---|
 | **12 h - 12 h 15** | Prière et accueil | 15 min |
-| **12 h 15 - 12 h 25** | Récupération des exercices de décollage | 10 min |
-| **12 h 25 - 12 h 45** | Le quiz : ce qui est resté de samedi dernier | 20 min |
-| **12 h 45 - 12 h 55** | La méthode de travail | 10 min |
-| **12 h 55 - 13 h 05** | Pause | 10 min |
-| **13 h 05 - 13 h 50** | **Premier contact machine, et le jeu demande ton nom** | 45 min |
+| **12 h 15 - 12 h 22** | Récupération des exercices de décollage | 7 min |
+| **12 h 22 - 12 h 40** | Le quiz : ce qui est resté de samedi dernier | 18 min |
+| **12 h 40 - 12 h 50** | La méthode de travail | 10 min |
+| **12 h 50 - 13 h** | Pause | 10 min |
+| **13 h - 13 h 50** | **Premier contact machine : `print()`, puis `input()`** | 50 min |
 | **13 h 50 - 14 h** | Clôture | 10 min |
 
-### Le détail du bloc machine (13 h 05 - 13 h 50)
+### Le détail du bloc machine (13 h - 13 h 50)
+
+**Deux moitiés symétriques : je montre 8 minutes, vous faites 12 minutes.**
 
 | Horaire | Quoi | Durée |
 |---|---|---|
-| 13 h 05 - 13 h 12 | Allumer, ouvrir Thonny, les 3 repères, les cartes de couleur | 7 min |
-| 13 h 12 - 13 h 17 | On lance l'écran d'accueil déjà écrit, **et l'erreur volontaire** | 5 min |
-| 13 h 17 - 13 h 25 | **À vous** : mettre son prénom dans l'écran d'accueil, relancer | 8 min |
-| 13 h 25 - 13 h 33 | **La leçon du jour** : la variable, puis `input()` | 8 min |
-| 13 h 33 - 13 h 47 | **À vous** : le jeu demande le nom du joueur et lui répond | 14 min |
+| 13 h - 13 h 07 | Allumer, ouvrir Thonny, les 3 repères, les cartes de couleur | 7 min |
+| 13 h 07 - 13 h 15 | **Je montre `print()`** : la commande, l'ordre des lignes, **et l'erreur volontaire** | 8 min |
+| 13 h 15 - 13 h 27 | **Vous faites** : l'écran d'accueil du jeu XO — partie 1 du fichier | 12 min |
+| 13 h 27 - 13 h 35 | **Je montre la variable, puis `input()`** | 8 min |
+| 13 h 35 - 13 h 47 | **Vous faites** : le jeu demande le nom du joueur — partie 2 du fichier | 12 min |
 | 13 h 47 - 13 h 50 | On sauvegarde, et on distribue le Filet | 3 min |
+
+> **Le fichier de l'élève est coupé en deux parties**, avec un panneau d'arrêt au milieu :
+> *« arrête-toi ici, lève la carte verte, on attend le professeur pour la partie 2 ».*
+> C'est ce qui empêche les plus rapides de partir dans `input()` avant l'explication.
 
 ### Les trois règles de temps
 
-1. **13 h 05, les machines sont allumées.** Si le quiz ou la méthode débordent, on les coupe — pas le bloc machine.
+1. **13 h, les machines sont allumées.** Si le quiz ou la méthode débordent, on les coupe — pas le bloc machine.
 2. **On ne reprend aucune théorie de la séance 1.** Le quiz la révise à lui seul : une phrase d'explication par question, pas plus.
 3. **13 h 47, on arrête de coder**, même au milieu d'une ligne. On sauvegarde et on distribue le code officiel.
+4. **Si la première moitié déborde**, on écourte l'atelier 1 à 10 minutes — on ne sacrifie ni l'erreur volontaire, ni `input()` : ce sont les deux raisons d'être de la séance.
 
 ---
 
@@ -86,7 +94,7 @@ On copie ce dossier sur le Bureau de chaque poste. **`xo_officiel` reste fermé*
 
 | Quantité | Document | Fichier |
 |---|---|---|
-| 1 par poste | **Aide-mémoire machine** — les 5 gestes, la leçon du jour, les 3 erreurs | `a-imprimer/1-aide-memoire-machine.pdf` |
+| 1 par poste | **Aide-mémoire machine** — les 5 gestes, `print()`, `input()`, les 4 erreurs | [`a-imprimer/1-aide-memoire-machine.pdf`](a-imprimer/1-aide-memoire-machine.pdf) |
 | 1 pour vous | **Le dictionnaire des erreurs** — si ce n'est pas déjà fait | [`1-methode/annexes/dictionnaire-des-erreurs.pdf`](../../1-methode/annexes/dictionnaire-des-erreurs.pdf) |
 
 Les cartes de signalisation, l'affiche « 3 avant moi » et le Mur de Mission sont déjà en place.
@@ -100,12 +108,12 @@ Les cartes de signalisation, l'affiche « 3 avant moi » et le Mur de Mission so
 Comme chaque samedi. **Sur les deux dernières minutes**, on annonce la séance :
 
 > « Samedi dernier, on a beaucoup parlé, beaucoup réfléchi — et on n'a pas eu le temps d'allumer les machines.
-> Aujourd'hui, on répare ça : **à 13 h 05, tout le monde est devant un clavier.** Et à 14 h, votre jeu vous
+> Aujourd'hui, on répare ça : **à 13 h, tout le monde est devant un clavier.** Et à 14 h, votre jeu vous
 > demandera votre nom. »
 
 ---
 
-### 3.2 · 12 h 15 - 12 h 25 — Récupération des exercices de décollage
+### 3.2 · 12 h 15 - 12 h 22 — Récupération des exercices de décollage
 
 1. On ramasse les feuilles. On **note qui a rendu** dans l'onglet `Suivi` du classeur.
 2. On feuillette **sans corriger** : ce n'est pas noté, et on n'a pas le temps.
@@ -116,7 +124,7 @@ suppose pas faits. C'est à dire à voix haute, une fois, pour tout le monde.
 
 ---
 
-### 3.3 · 12 h 25 - 12 h 45 — Le quiz
+### 3.3 · 12 h 22 - 12 h 40 — Le quiz
 
 Le quiz préparé pour la séance 1 et qui n'a pas eu lieu. Il révise toute la théorie du 12 septembre.
 
@@ -134,8 +142,8 @@ On projette la question, on lit les 4 réponses à voix haute, on compte « 3, 2
 sa carte en même temps**. On regarde la salle d'un coup d'œil, on affiche la réponse, **une seule phrase
 d'explication**, on enchaîne.
 
-**Le minutage :** 2 min de règle du jeu · **15 questions à une minute** · 3 min de conclusion.
-**En retard, on garde les 10 premières questions.**
+**Le minutage :** 1 min de règle du jeu · **15 questions à une minute** · 2 min de conclusion.
+**En retard, on garde les 10 premières questions** — et on s'arrête à 12 h 40, quoi qu'il arrive.
 
 > **Le piège :** commenter chaque question pendant deux minutes. Quinze questions à deux minutes, c'est une
 > demi-heure — et le bloc machine est mort. **Une phrase par question. Chronomètre visible.**
@@ -147,7 +155,7 @@ d'explication**, on enchaîne.
 
 ---
 
-### 3.4 · 12 h 45 - 12 h 55 — La méthode de travail
+### 3.4 · 12 h 40 - 12 h 50 — La méthode de travail
 
 Dix minutes, pas plus. Trois choses.
 
@@ -182,16 +190,20 @@ C'est la phrase la plus importante de la séance pour les élèves les plus frag
 
 ---
 
-### 3.5 · 12 h 55 - 13 h 05 — Pause
+### 3.5 · 12 h 50 - 13 h — Pause
 
 Dix minutes. On en profite pour **allumer les machines** et vérifier que Thonny s'ouvre partout.
-**À 13 h 05, on commence — les retardataires s'assoient sans qu'on les attende.**
+**À 13 h, on commence — les retardataires s'assoient sans qu'on les attende.**
 
 ---
 
-### 3.6 · 13 h 05 - 13 h 50 — Premier contact machine, et le jeu demande ton nom
+### 3.6 · 13 h - 13 h 50 — Premier contact machine : `print()`, puis `input()`
 
-#### a) 13 h 05 - 13 h 12 · Les trois repères de Thonny, et les cartes
+**Deux moitiés, construites pareil : je montre 8 minutes, vous faites 12 minutes.**
+L'anti-sèche complète, avec ce qu'on dit à chaque étape :
+[`code/live_coding_antiseche.py`](code/live_coding_antiseche.py).
+
+#### a) 13 h - 13 h 07 · Les trois repères de Thonny, et les cartes
 
 On projette la fenêtre de Thonny. **Trois choses seulement** — pas de visite du logiciel :
 
@@ -213,33 +225,51 @@ Puis les cartes de signalisation, déjà sur les postes, en une minute :
 > « **Ici, on ne lève pas la main : on lève une carte.** Comme ça je vois toute la salle d'un coup d'œil, et
 > vous continuez à travailler pendant que j'arrive. »
 
-Et la règle des **3 avant moi**, affichée au mur : je relis la consigne · je demande à mon voisin · on
+Et la règle des **3 avant moi**, affichée au mur : je relis la consigne · je demande à mon voisin · je
 regarde la fiche mémo. **Ensuite** je lève l'orange.
 
-#### b) 13 h 12 - 13 h 17 · On lance ce qui est déjà écrit, et on casse tout
+#### b) 13 h 07 - 13 h 15 · Je montre `print()` — « je code, vous prédisez »
 
-On ouvre `GEEKS/mon_xo/jeu.py` **sur l'écran projeté**, et on appuie sur F5. L'écran d'accueil s'affiche.
+**On tape devant eux, lentement, dans un fichier vide.** On ne lance pas un fichier tout fait.
+**Avant chaque exécution : « qu'est-ce qui va s'afficher ? À trois. »** F5 seulement après leur réponse.
 
-> « Ce programme, je ne l'ai pas tapé : il était déjà là, et il marche. Chaque ligne `print` affiche ce qu'il
-> y a entre les guillemets. Voilà, vous savez le lire. »
+1. **`print("Bonjour")`** — on épelle en verbalisant : *« p-r-i-n-t, ça veut dire **AFFICHE**. Une parenthèse
+   qu'on ouvre et qu'on fermera toujours. Un guillemet, mon texte, un guillemet. »* Puis F5.
+   → *« Vous venez de voir un ordinateur obéir. C'est tout le métier. **Attention au piège : ça n'imprime
+   rien sur du papier.** »* Et les guillemets ne s'affichent pas : ils disent seulement *« ceci est du texte »*.
+2. **Trois lignes à la suite** — `print("Un")`, `print("Deux")`, `print("Trois")`. On demande l'ordre **avant**
+   de lancer. → *« De haut en bas. Ligne par ligne. Toujours. Il ne devine pas, il ne saute pas de ligne, il
+   ne revient pas en arrière. Si ça s'affiche dans le désordre, ce n'est pas lui : c'est l'ordre de vos lignes. »*
+3. **L'erreur volontaire** — `print("Bonjour)` : il manque un guillemet. **C'est le moment le plus important
+   de la séance.**
 
-Puis, **l'erreur volontaire** — on efface un guillemet devant eux, en l'annonçant : *« maintenant, je casse tout. »*
-
+> **Ce qu'on dit devant le message rouge** — lentement, sans dramatiser :
 > « Regardez. **Rouge.** Est-ce que l'ordinateur est cassé ? Non. Est-ce que je suis puni ? Non.
-> **Il m'explique ce qu'il n'a pas compris.** Il dit `SyntaxError` : j'ai mal écrit quelque chose. Il me
-> montre même la ligne. Le rouge n'est pas une punition, **le rouge est une information.**
+> **Il m'explique ce qu'il n'a pas compris.** Il dit `SyntaxError` : j'ai mal écrit quelque chose.
+> Il me montre même la ligne. Le rouge n'est pas une punition, **le rouge est une information.**
 > Aujourd'hui, celui qui voit du rouge lève le pouce : il a trouvé quelque chose. »
 
-On remet le guillemet, on relance, ça marche. **On laisse ça affiché.**
+On corrige devant eux, on relance, ça marche. **On laisse ça affiché.**
 
-#### c) 13 h 17 - 13 h 25 · À vous : votre nom dans l'écran d'accueil
+#### c) 13 h 15 - 13 h 27 · Vous faites : l'écran d'accueil du jeu XO
+
+Le fichier est déjà sur chaque poste : `GEEKS/mon_xo/jeu.py`
+(c'est [`code/depart_eleves_piste_bleue.py`](code/depart_eleves_piste_bleue.py)).
 
 > « Ouvrez `GEEKS`, puis `mon_xo`, puis `jeu.py`. **Appuyez tout de suite sur F5 : il marche déjà.**
-> Ensuite, **étape 1** seulement : mettez votre prénom à la place des tirets. Et relancez. »
+> Ensuite, **la partie 1 seulement** — étapes 1 à 5. Vous remplacez chaque `____`. Et vous relancez
+> après chaque changement. Quand ça marche, **carte verte, et vous m'attendez.** »
 
-Huit minutes. C'est court exprès : **tout le monde doit avoir vu son prénom s'afficher avant 13 h 25.**
+**Le panneau d'arrêt est écrit dans leur fichier**, au milieu : *« arrête-toi ici, lève la carte verte, on
+attend le professeur pour la partie 2 »*. Les rapides ne partent donc pas seuls dans `input()`.
 
-#### d) 13 h 25 - 13 h 33 · La leçon du jour : la variable, puis `input()`
+**Ce que l'enseignant fait :** il circule, il ne s'assoit pas, **il ne touche jamais le clavier d'un élève**.
+Devant une erreur, on ne corrige pas : **on lit le message rouge avec l'élève** et on demande
+*« qu'est-ce qu'il te dit ? »*.
+
+**À 13 h 27, tout le monde doit avoir vu son écran d'accueil s'afficher, avec son prénom dessus.**
+
+#### d) 13 h 27 - 13 h 35 · Je montre la variable, puis `input()`
 
 Tout le monde lâche le clavier. **Écrans face à nous, mains sur la table.**
 
@@ -260,6 +290,7 @@ print(nom)
 
 Puis `print("nom")` juste après, pour montrer la différence :
 **avec guillemets, il affiche le mot ; sans guillemets, il affiche ce qu'il y a dans la boîte.**
+C'est l'erreur numéro un de toute l'année — on le dit dès aujourd'hui.
 
 **2. `input()` : c'est le joueur qui remplit la boîte**
 
@@ -276,14 +307,10 @@ On lance, et **on tape le prénom d'un élève de la classe**. Effet garanti.
 
 Montrez l'oubli de l'espace une fois : `BonjourDamien`. Ils rient, ils retiennent.
 
-#### e) 13 h 33 - 13 h 47 · À vous : le jeu demande le nom du joueur
+#### e) 13 h 35 - 13 h 47 · Vous faites : le jeu demande le nom du joueur
 
-> « Étapes 2, 3 et 4 de votre fichier. Votre jeu doit poser une question, attendre, et répondre avec le nom
-> du joueur. **Relancez après chaque changement.** »
-
-**Ce que l'enseignant fait pendant 14 minutes :** il circule, il ne s'assoit pas, **il ne touche jamais le
-clavier d'un élève**. Devant une erreur, on ne corrige pas : **on lit le message rouge avec l'élève** et on
-demande *« qu'est-ce qu'il te dit ? »*.
+> « **Partie 2** de votre fichier, étapes 6, 7 et 8. Votre jeu doit poser une question, attendre, et répondre
+> avec le nom du joueur. **Relancez après chaque changement.** »
 
 **Les erreurs qui vont arriver :**
 
@@ -314,8 +341,9 @@ Dix minutes, trois temps :
    revient le plus ouvre la séance 3.
 3. **La dernière phrase** (2 min) :
 
-> « Aujourd'hui, votre jeu a appris à écouter. Samedi prochain, **il saura parler aux deux joueurs** — il
-> demandera leurs deux noms, et il saura qui joue les X et qui joue les O. À samedi, les Geeks ! »
+> « Aujourd'hui, votre jeu a appris à parler, **et à écouter**. Samedi prochain, **il parlera aux deux
+> joueurs** — il demandera leurs deux noms, et il saura qui joue les X et qui joue les O.
+> À samedi, les Geeks ! »
 
 ---
 
@@ -326,7 +354,7 @@ Dix minutes, trois temps :
 | **Le vidéoprojecteur ne marche pas** | Le quiz se lit à voix haute, les cartes de couleur suffisent. Le live coding se fait sur l'écran d'un poste, les élèves debout autour |
 | **Une machine ne démarre pas** | L'élève rejoint le poste d'un voisin : à deux sur une machine, on travaille très bien. On note le poste dans le classeur |
 | **Il n'y a pas assez de machines** | Deux élèves par poste, **10 minutes chacun**, chronomètre visible. Celui qui ne tape pas lit la consigne à voix haute |
-| **Le bloc machine commence à 13 h 20** (retard accumulé) | On garde : l'erreur volontaire, la variable, `input()`. On supprime le temps « votre prénom dans l'accueil » — les élèves le feront dans la foulée |
+| **Le bloc machine commence à 13 h 15** (retard accumulé) | On écourte les deux ateliers à 10 minutes. **On ne coupe ni l'erreur volontaire, ni `input()`** : ce sont les deux raisons d'être de la séance |
 | **Un élève finit en 5 minutes** | Carte bleue → le défi de l'âge. Puis il devient **Geek Mentor** : il aide deux voisins, sans toucher à leur clavier |
 | **Un élève bloque et se décourage** | On s'assoit à côté, on lui fait relancer le fichier **tel quel** pour qu'il voie que ça marche, puis **une seule** modification : son prénom. C'est suffisant pour aujourd'hui |
 | **Un nouvel élève arrive aujourd'hui** | Il prend le fichier de départ comme tout le monde : la séance 2 ne suppose rien de la séance 1. On lui donne la fiche mémo de la séance 1 en partant |

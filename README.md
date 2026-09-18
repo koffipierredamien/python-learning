@@ -36,7 +36,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | J'ai besoin de… | C'est ici |
 |---|---|
 | Animer la séance | [📖 La fiche de séance](2-seances/S02-premier-contact/fiche-de-seance.md) — minute par minute |
-| Projeter | [📺 Le diaporama](2-seances/S02-premier-contact/a-projeter/seance-2-projection.pptx) — 27 diapos, notes incluses |
+| Projeter | [📺 Le diaporama](2-seances/S02-premier-contact/a-projeter/seance-2-projection.pptx) — 28 diapos, notes incluses |
 | Faire le quiz | [🎯 Le quiz](2-seances/S02-premier-contact/a-projeter/quiz-seance-1.pptx) — les 15 questions de la séance 1, qui n'ont pas servi |
 | Imprimer | [🖨️ Un seul document](2-seances/S02-premier-contact/a-imprimer/quantites-et-formats.md) |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S02-premier-contact/a-envoyer/deroule-seance-2.docx) |
@@ -69,7 +69,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 | Phase | Séances | Brique ajoutée au jeu | Notions |
 |---|---|---|---|
-| 0. Décollage | 1–2 | L'écran d'accueil, et le jeu demande ton nom | théorie de base · l'algorithme · la variable · `input()` |
+| 0. Décollage | 1–2 | L'écran d'accueil, et le jeu demande ton nom | théorie de base · l'algorithme · `print()` · la variable · `input()` |
 | 1. Parler au joueur | 3–6 | Le jeu parle aux deux joueurs | variables, `input()`, types |
 | 2. Le plateau vit | 7–10 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
 | 3. Les règles du jeu | 11–14 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
@@ -87,7 +87,7 @@ Les rendez-vous : **S9** première démo jouable · **S15** concours de design �
 - [x] La méthode pédagogique et ses annexes
 - [x] Le règlement intérieur, version du responsable
 - [x] Séance 1 : faite — compte rendu, diaporama de 46 diapos, les 4 documents qui servent encore
-- [x] Séance 2 : fiche, diaporama de 27 diapos, quiz, aide-mémoire machine, code, déroulé Word
+- [x] Séance 2 : fiche, diaporama de 28 diapos, quiz, aide-mémoire machine, code, déroulé Word
 - [x] Le dictionnaire des erreurs, complet pour tout le parcours
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture)

@@ -3,33 +3,33 @@
 <style>
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing:border-box; }
-  @page { size: A4 portrait; margin: 8mm 9mm; }
-  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:10pt; }
+  @page { size: A4 portrait; margin: 7mm 9mm; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:9.6pt; }
   .consigne { font-size:9pt; color:#333; border:1px dashed #999; padding:3mm; margin-bottom:4mm; }
-  h1 { font-size:17pt; margin:0 0 1mm; text-align:center; }
-  .sur { text-align:center; font-size:10pt; color:#555; margin-bottom:3mm; }
-  h2 { font-size:11.5pt; background:#1a1a2e; color:#fff; padding:1.3mm 3mm; margin:3mm 0 1.6mm; border-radius:1.5mm; }
+  h1 { font-size:16pt; margin:0 0 .8mm; text-align:center; }
+  .sur { text-align:center; font-size:9.5pt; color:#555; margin-bottom:2mm; }
+  h2 { font-size:11pt; background:#1a1a2e; color:#fff; padding:1.1mm 3mm; margin:2.2mm 0 1.2mm; border-radius:1.5mm; }
   h2.orange { background:#f08a24; }
   .gestes { display:flex; gap:2mm; }
-  .geste { flex:1; border:0.6mm solid #6b2d8f; border-radius:2mm; padding:2mm 1.5mm; text-align:center; }
-  .geste .n { display:block; font-size:15pt; font-weight:bold; color:#6b2d8f; line-height:1.1; }
+  .geste { flex:1; border:0.6mm solid #6b2d8f; border-radius:2mm; padding:1.5mm 1.2mm; text-align:center; }
+  .geste .n { display:block; font-size:13pt; font-weight:bold; color:#6b2d8f; line-height:1.1; }
   .geste b { display:block; font-size:9.5pt; margin:0.8mm 0 0.6mm; }
   .geste span { font-size:8pt; color:#333; }
-  .code { font-family:"Courier New",monospace; font-size:15pt; font-weight:bold; background:#f3f3f8;
-          border-left:2.5mm solid #6b2d8f; padding:2.4mm; text-align:center; margin:1.5mm 0; }
-  .legende { display:flex; gap:3mm; font-size:8.6pt; margin-top:1mm; }
-  .legende > div { flex:1; border:0.4mm solid #bbb; border-radius:1.5mm; padding:1.6mm; }
+  .code { font-family:"Courier New",monospace; font-size:13.5pt; font-weight:bold; background:#f3f3f8;
+          border-left:2.5mm solid #6b2d8f; padding:1.8mm; text-align:center; margin:1.2mm 0; }
+  .legende { display:flex; gap:2.5mm; font-size:8.2pt; margin-top:.8mm; }
+  .legende > div { flex:1; border:0.4mm solid #bbb; border-radius:1.5mm; padding:1.2mm; }
   .legende b { color:#6b2d8f; }
   table { width:100%; border-collapse:collapse; margin-top:1.5mm; }
-  td,th { border:1px solid #666; padding:1.4mm 2mm; font-size:9pt; vertical-align:top; text-align:left; }
+  td,th { border:1px solid #666; padding:1mm 1.6mm; font-size:8.6pt; vertical-align:top; text-align:left; }
   th { background:#eee; }
   .mono { font-family:"Courier New",monospace; font-weight:bold; }
   .cartes { display:flex; gap:2mm; margin-top:1.5mm; }
-  .carte { flex:1; border-radius:2mm; padding:2mm 1.5mm; text-align:center; color:#fff; font-size:8.6pt; }
+  .carte { flex:1; border-radius:2mm; padding:1.5mm 1.2mm; text-align:center; color:#fff; font-size:8.2pt; }
   .carte b { display:block; font-size:10pt; margin-bottom:0.6mm; }
   .v { background:#2e9e52; } .o { background:#e07b1a; } .r { background:#c0392b; } .b { background:#2a6fb0; }
-  .regle { background:#fff6d8; border:0.8mm solid #d79a00; border-radius:2mm; padding:2.2mm;
-           font-size:10pt; text-align:center; margin-top:2mm; }
+  .regle { background:#fff6d8; border:0.8mm solid #d79a00; border-radius:2mm; padding:1.6mm;
+           font-size:9pt; text-align:center; margin-top:1.4mm; }
   .duo { display:flex; gap:3mm; margin-top:1.5mm; }
   .duo > div { flex:1; border:0.6mm solid #1a1a2e; border-radius:2mm; padding:2mm; font-size:9pt; }
   .duo b.t { display:block; font-size:10.5pt; margin-bottom:1mm; color:#1a1a2e; }
@@ -50,18 +50,27 @@ Posé à côté du clavier pendant tout l'atelier. Si vous ne pouvez pas imprime
   <div class="geste"><span class="n">5</span><b>Je sauve</b><span><b>Ctrl + S</b>.<br>L'étoile ⭑ doit disparaître</span></div>
 </div>
 
-<h2>La leçon du jour : la boîte, et la question</h2>
+<h2>1 · AFFICHER quelque chose</h2>
+<div class="code">print("Bonjour")</div>
+<div class="legende">
+  <div><b>print</b> — ça veut dire <b>AFFICHE</b>. Toujours en minuscules. <b>Ça n'imprime rien sur du papier.</b></div>
+  <div><b>( )</b> — une parenthèse ouverte se referme <b>toujours</b>.</div>
+  <div><b>" "</b> — les guillemets vont <b>par deux</b>, comme des chaussures. Ils ne s'affichent pas : ils disent « ceci est du texte ».</div>
+</div>
+<div class="regle" style="margin-top:2mm">Il lit ton programme <b>de haut en bas, ligne par ligne, toujours</b>. Si ça s'affiche dans le désordre, c'est l'ordre de tes lignes.</div>
+
+<h2>2 · DEMANDER quelque chose au joueur</h2>
 <div class="code">nom = input("Comment t'appelles-tu ? ")</div>
 <div class="legende">
   <div><b>nom</b> — c'est une <b>boîte avec une étiquette</b>. Ce que le joueur tape est rangé dedans.</div>
   <div><b>input</b> — ça veut dire <b>DEMANDE</b>. Le programme s'arrête, il attend, il range la réponse.</div>
-  <div><b>" "</b> — les guillemets vont <b>par deux</b>, comme des chaussures. Ce qui est dedans s'affiche tel quel.</div>
+  <div><b>nom</b> sans guillemets → <b>ce qu'il y a dans la boîte</b>. <b>"nom"</b> avec guillemets → le <b>mot</b> nom. Toute la différence est là.</div>
 </div>
 <div class="code" style="margin-top:2mm">print("Bonjour " + nom + " !")</div>
 <div class="legende">
-  <div>Le <b>+</b> colle les morceaux bout à bout. Garde l'espace après <b>Bonjour</b>, sinon tout se colle.</div>
-  <div><b>nom</b> sans guillemets → il affiche <b>ce qu'il y a dans la boîte</b>.</div>
-  <div><b>"nom"</b> avec guillemets → il affiche le <b>mot</b> nom. Toute la différence est là.</div>
+  <div>Le <b>+</b> colle les morceaux bout à bout.</div>
+  <div>Garde l'espace après <b>Bonjour</b> — sinon ça donne <b>BonjourDamien</b>.</div>
+  <div>Ton fichier est en <b>deux parties</b> : la 1 maintenant, la 2 quand le professeur le dira.</div>
 </div>
 
 <h2 class="orange">Si l'écran devient rouge — ce n'est pas grave</h2>

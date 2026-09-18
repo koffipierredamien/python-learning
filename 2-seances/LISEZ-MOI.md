@@ -5,7 +5,7 @@ Une séance = un dossier. Tout ce qui la concerne est dedans, et rien d'autre.
 | Séance | Brique ajoutée au jeu | Notion |
 |---|---|---|
 | **[S01 — Le Décollage](S01-decollage/compte-rendu.md)** · samedi 12 septembre 2026 | *(faite)* La théorie et les missions de décollage | Pourquoi et comment on code · l'algorithme |
-| **[S02 — Premier contact machine](S02-premier-contact/fiche-de-seance.md)** · samedi 19 septembre 2026 | L'écran d'accueil, **et le jeu demande ton nom** | la variable · `input()` · lire une erreur |
+| **[S02 — Premier contact machine](S02-premier-contact/fiche-de-seance.md)** · samedi 19 septembre 2026 | L'écran d'accueil, **et le jeu demande ton nom** | `print()` · la variable · `input()` · lire une erreur |
 | S03 à S22 | *à venir* | |
 
 > **La séance 1 s'est arrêtée après les missions de décollage.** Le premier contact machine, le Kahoot,
@@ -25,7 +25,7 @@ S02-premier-contact/
 │                          erreurs anticipées, plans de secours
 │
 ├── a-projeter/            ce qui passe au vidéoprojecteur
-│     seance-2-projection.pptx      le diaporama de la séance (27 diapos)
+│     seance-2-projection.pptx      le diaporama de la séance (28 diapos)
 │     quiz-seance-1.pptx            le quiz (32 diapos), joué en séance 2
 │     quiz-questions-et-reponses.md les 15 questions, réponses et explications
 │     kahoot-en-ligne/              si vous préférez le vrai Kahoot
