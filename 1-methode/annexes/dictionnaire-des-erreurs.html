@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Dictionnaire des erreurs</title>
+<style>
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing:border-box; }
+  @page { size: A4 portrait; margin: 8mm 9mm; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:8.6pt; color:#111; }
+  .consigne { font-size:8.5pt; color:#333; border:1px dashed #999; padding:2.5mm; margin-bottom:3mm; }
+  h1 { font-size:16pt; margin:0 0 1mm; text-align:center; }
+  .sur { text-align:center; font-size:9.5pt; color:#555; margin-bottom:2.5mm; }
+  .regle { background:#fff6d8; border:0.7mm solid #d79a00; border-radius:1.5mm; padding:2mm;
+            text-align:center; font-size:10pt; font-weight:bold; margin-bottom:3mm; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { border:0.3mm solid #999; padding:1.1mm 1.6mm; vertical-align:top; }
+  th { background:#1a1a2e; color:#fff; font-size:8.6pt; }
+  tr.sec td { background:#6b2d8f; color:#fff; font-weight:bold; font-size:9pt; padding:1.3mm 2mm; }
+  .case { width:7mm; }
+  .msg { width:33%; }
+  .s { width:9mm; text-align:center; color:#6b2d8f; font-weight:bold; }
+  .c { font-family:"Courier New",monospace; font-weight:bold; font-size:8.2pt; }
+  .pied { margin-top:3mm; font-size:8.5pt; color:#444; border-top:0.4mm solid #999; padding-top:2mm; }
+  @media print { .consigne { display:none; } }
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 1 exemplaire pour chaque enseignant, A4 recto verso.
+Ce n'est pas une affiche : elle reste avec l'enseignant, d'une séance à l'autre.</div>
+
+<h1>🔤 LE DICTIONNAIRE DES ERREURS</h1>
+<div class="sur">Toutes les erreurs du parcours · on coche quand elle a été traitée avec la classe</div>
+<div class="regle">LE ROUGE N'EST PAS UNE PUNITION. LE ROUGE EST UNE INFORMATION.</div>
+
+<table>
+<tr><th>Traitée</th><th>Ce que l'ordinateur écrit</th><th>Ce qu'il veut dire</th><th>Ce qu'on fait</th><th>Vers</th></tr>
+<tr class="sec"><td colspan="5">Les erreurs d&#x27;écriture — dès le premier contact machine</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">SyntaxError: invalid syntax</span></td><td>« Je ne comprends pas ta phrase »</td><td>Je relis la ligne indiquée <b>et celle juste avant</b> : parenthèse, guillemet ou deux-points manquants</td><td class="s">S2</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">SyntaxError: unterminated string literal</span></td><td>« Ton texte n&#x27;est jamais refermé »</td><td>Il manque un guillemet <span class="c">&quot;</span> — ils vont par deux</td><td class="s">S2</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">SyntaxError: &#x27;(&#x27; was never closed</span></td><td>« Tu as ouvert une parenthèse et tu ne l&#x27;as pas fermée »</td><td>Je ferme la parenthèse</td><td class="s">S2</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">NameError: name &#x27;…&#x27; is not defined</span></td><td>« Je ne connais pas ce mot »</td><td>Faute de frappe, majuscule en trop, ou du texte écrit <b>sans guillemets</b></td><td class="s">S2</td></tr>
+<tr><td class="case"></td><td class="msg">Rien ne se passe quand j&#x27;appuie sur F5</td><td>J&#x27;ai écrit dans la zone du bas, celle où l&#x27;ordinateur répond</td><td>Je remonte dans la zone blanche, en haut</td><td class="s">S2</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">SyntaxError</span> sur une ligne qui semble juste</td><td>L&#x27;erreur est presque toujours <b>sur la ligne d&#x27;avant</b></td><td>Je regarde la ligne précédente</td><td class="s">S3</td></tr>
+<tr class="sec"><td colspan="5">Les variables et ce que tape le joueur</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">TypeError: can only concatenate str (not &quot;int&quot;) to str</span></td><td>« Tu mélanges du texte et un nombre »</td><td>J&#x27;utilise une virgule dans le <span class="c">print</span>, ou <span class="c">str(mon_nombre)</span></td><td class="s">S3</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">ValueError: invalid literal for int() with base 10</span></td><td>« Tu m&#x27;as demandé un nombre, et j&#x27;ai reçu du texte »</td><td>Le joueur a tapé autre chose qu&#x27;un chiffre : je vérifie avant de convertir</td><td class="s">S4</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">TypeError: unsupported operand type(s) for +: &#x27;int&#x27; and &#x27;str&#x27;</span></td><td>« Je ne peux pas additionner un nombre et du texte »</td><td><span class="c">input()</span> rend <b>toujours</b> du texte : je convertis avec <span class="c">int()</span></td><td class="s">S4</td></tr>
+<tr><td class="case"></td><td class="msg">Le programme attend et ne répond plus</td><td>Il attend une réponse du joueur (<span class="c">input</span>)</td><td>Je clique dans la zone du bas et je tape ma réponse, puis Entrée</td><td class="s">S3</td></tr>
+<tr class="sec"><td colspan="5">L&#x27;indentation — le décalage du début de ligne</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">IndentationError: expected an indented block</span></td><td>« Après les deux-points, il faut décaler »</td><td>Je décale la ligne de <b>4 espaces</b></td><td class="s">S7</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">IndentationError: unexpected indent</span></td><td>« Cette ligne est décalée sans raison »</td><td>Je la remets au bord</td><td class="s">S7</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">TabError</span></td><td>« Tu mélanges tabulations et espaces »</td><td>J&#x27;efface le début de la ligne et je remets <b>4 espaces</b></td><td class="s">S7</td></tr>
+<tr class="sec"><td colspan="5">Les listes et le plateau</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">IndexError: list index out of range</span></td><td>« Cette case n&#x27;existe pas »</td><td>Une liste de 9 cases va de <b>0 à 8</b>, pas de 1 à 9</td><td class="s">S8</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">TypeError: &#x27;int&#x27; object is not subscriptable</span></td><td>« Ça, ce n&#x27;est pas une liste »</td><td>Je vérifie que la variable contient bien une liste</td><td class="s">S8</td></tr>
+<tr><td class="case"></td><td class="msg">Le plateau ne change pas</td><td>J&#x27;ai modifié une copie, pas la liste elle-même</td><td>Je modifie directement <span class="c">plateau[i]</span></td><td class="s">S9</td></tr>
+<tr class="sec"><td colspan="5">Les conditions, les boucles et les fonctions</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">SyntaxError</span> sur un <span class="c">if</span></td><td>J&#x27;ai écrit <span class="c">=</span> au lieu de <span class="c">==</span></td><td><span class="c">=</span> donne une valeur, <span class="c">==</span> compare deux valeurs</td><td class="s">S10</td></tr>
+<tr><td class="case"></td><td class="msg">Le programme ne s&#x27;arrête plus</td><td>Boucle sans fin : la condition reste vraie</td><td><span class="c">Ctrl + C</span> dans la zone du bas, puis je corrige ce qui doit changer dans la boucle</td><td class="s">S11</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">TypeError: … missing 1 required positional argument</span></td><td>« Il manque quelque chose entre les parenthèses »</td><td>Je regarde ce que la fonction attend</td><td class="s">S12</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">UnboundLocalError</span></td><td>« Tu utilises une variable avant de lui donner une valeur »</td><td>Je crée la variable avant de m&#x27;en servir</td><td class="s">S13</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">TypeError: &#x27;str&#x27; object is not callable</span></td><td>J&#x27;ai donné à une variable le nom d&#x27;une commande</td><td>Je renomme ma variable (jamais <span class="c">print</span>, <span class="c">list</span>, <span class="c">str</span>…)</td><td class="s">S13</td></tr>
+<tr class="sec"><td colspan="5">La fenêtre graphique</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">ModuleNotFoundError: No module named &#x27;tkinter&#x27;</span></td><td>« Je n&#x27;ai pas la boîte à outils des fenêtres »</td><td>Python mal installé sur ce poste : je change de machine et je le signale</td><td class="s">S15</td></tr>
+<tr><td class="case"></td><td class="msg">La fenêtre s&#x27;ouvre et se referme aussitôt</td><td>Il manque la dernière ligne</td><td><span class="c">fenetre.mainloop()</span> en fin de programme</td><td class="s">S15</td></tr>
+<tr><td class="case"></td><td class="msg"><span class="c">_tkinter.TclError: unknown color name</span></td><td>« Cette couleur n&#x27;existe pas »</td><td>J&#x27;écris la couleur en anglais, ou en code <span class="c">#RRGGBB</span></td><td class="s">S17</td></tr>
+<tr><td class="case"></td><td class="msg">Le bouton se déclenche tout seul au démarrage</td><td>J&#x27;ai mis les parenthèses à la fonction</td><td><span class="c">command=jouer</span> et non <span class="c">command=jouer()</span></td><td class="s">S16</td></tr>
+<tr class="sec"><td colspan="5">Les erreurs rencontrées en classe, à ajouter</td></tr>
+<tr><td class="case"></td><td>&nbsp;</td><td></td><td></td><td></td></tr>
+<tr><td class="case"></td><td>&nbsp;</td><td></td><td></td><td></td></tr>
+<tr><td class="case"></td><td>&nbsp;</td><td></td><td></td><td></td></tr>
+<tr><td class="case"></td><td>&nbsp;</td><td></td><td></td><td></td></tr>
+<tr><td class="case"></td><td>&nbsp;</td><td></td><td></td><td></td></tr>
+<tr><td class="case"></td><td>&nbsp;</td><td></td><td></td><td></td></tr>
+</table>
+
+<div class="pied"><b>La colonne « Vers » est une prévision, pas un programme.</b> Une erreur se traite le jour
+où elle arrive, même bien avant la séance indiquée — et on coche la case le soir même.</div>
+</body></html>

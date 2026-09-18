@@ -1,54 +1,23 @@
 # Annexe A5 — Outils et modèles
 
-Les outils de classe (cartes de signalisation, affiches, contrat de binôme, dictionnaire des
-erreurs, fiche mémo) ne sont plus décrits ici : ils existent comme **documents prêts à imprimer**
-dans le dossier de chaque séance, par exemple
+Les outils de classe (cartes de signalisation, affiches, fiche mémo) ne sont pas décrits ici : ils
+existent comme **documents prêts à imprimer** dans le dossier de chaque séance, par exemple
 [`2-seances/S01-decollage/a-imprimer/`](../../2-seances/S01-decollage/a-imprimer/quantites-et-formats.md).
+Le dictionnaire des erreurs a sa propre annexe : [A6](A6-dictionnaire-des-erreurs.md).
 
-Le **tableau de suivi** des enseignants n'est plus sur papier : il est dans le
-[classeur de suivi](../../3-suivi/LISEZ-MOI.md), onglet `04_Suivi-seances`.
+Le **tableau de suivi** des enseignants n'est pas sur papier : il est dans le
+[classeur de suivi](../../3-suivi/LISEZ-MOI.md).
 
-Cette annexe ne garde donc que les trois modèles qui n'ont pas de version imprimée.
-
----
-
-## 1. Le journal de bord de l'élève (carnet A5, 1 page par séance)
-
-```
-  ┌────────────────────────────────────────────────────────┐
-  │  SÉANCE N° ____        DATE : ____/____/____           │
-  │  Mon binôme du jour : ______________________           │
-  │                                                        │
-  │  Aujourd'hui, mon jeu sait faire :                     │
-  │  _____________________________________________         │
-  │                                                        │
-  │  Piste choisie :   🔵 Bleue    🔴 Rouge    ⚫ Noire     │
-  │                                                        │
-  │  Le mot Python que j'ai appris : ______________        │
-  │                                                        │
-  │  J'AI COMPRIS : ______________________________         │
-  │                                                        │
-  │  JE NE SUIS PAS ENCORE SÛR DE : ______________         │
-  │                                                        │
-  │  Mon bug le plus pénible :  ___________________        │
-  │  Comment on l'a réparé :    ___________________        │
-  │                                                        │
-  │  Badges du jour : 🏅 ____________________________      │
-  │                                                        │
-  │  Mon humeur :   😀    🙂    😐    😕    😣            │
-  └────────────────────────────────────────────────────────┘
-```
-
-> La ligne « je ne suis pas encore sûr de » est **l'outil de préparation le plus utile pour les enseignants**. Elle se recopie sur un post-it déposé dans la boîte en sortant, pour être lue le soir même.
+Cette annexe ne garde donc que les deux modèles qui n'ont pas de version imprimée.
 
 ---
 
-## 2. Grille de test — la chasse aux bugs croisée
+## 1. Grille de test — la chasse aux bugs croisée
 
-À remettre au binôme testeur. *« Votre mission : faire planter leur jeu. »*
+À remettre au testeur. *« Votre mission : faire planter leur jeu. »*
 
 ```
-  JEU TESTÉ — binôme : ______________     Testeurs : ______________
+  JEU TESTÉ — auteur : ______________     Testeur : ______________
 
   ☐ Le jeu démarre sans erreur
   ☐ Les messages s'affichent sans faute d'orthographe
@@ -70,7 +39,7 @@ Cette annexe ne garde donc que les trois modèles qui n'ont pas de version impri
 
 ---
 
-## 3. Modèle de message hebdomadaire aux familles
+## 2. Modèle de message hebdomadaire aux familles
 
 ```
 Bonjour à tous 👋
@@ -83,12 +52,12 @@ Séance 7 des Jerusalem Geeks aujourd'hui !
 🎮 Ce que leur jeu sait faire maintenant : les deux joueurs
    jouent chacun leur tour, et le plateau se met à jour.
 
-🏅 Bravo à tous : chacun est reparti avec sa brique.
+Bravo à tous : chacun est reparti avec sa brique.
 
 🎯 Défi facultatif (aucune obligation, et aucun retard si
    ce n'est pas fait) : demandez à votre enfant de vous
    expliquer ce qu'est une boucle. S'il y arrive, c'est
    qu'il a compris !
 
-📅 Rendez-vous samedi prochain, 9h.
+📅 Rendez-vous samedi prochain, 12 h.
 ```

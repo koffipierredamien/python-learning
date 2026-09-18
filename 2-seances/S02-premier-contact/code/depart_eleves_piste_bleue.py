@@ -1,6 +1,6 @@
 # =====================================================
 #  JEU XO  -  Seance 2  -  PISTE BLEUE
-#  Mon ecran d'accueil
+#  Mon ecran d'accueil, et le jeu qui demande ton nom
 # =====================================================
 #
 #  COMMENT FAIRE :
@@ -14,36 +14,49 @@
 # =====================================================
 
 
-# ETAPE 1 : cette ligne marche deja. N'y touche pas.
+# -----------------------------------------------------
+#  PARTIE 1 : l'ecran d'accueil. Il est deja ecrit.
+#             Tu changes seulement la ligne du createur.
+# -----------------------------------------------------
+
+print("===================================")
+print("       BIENVENUE DANS LE JEU XO")
 print("===================================")
 
-
-# ETAPE 2 : remplace  ____  par :   BIENVENUE DANS LE JEU XO
-print("        ____")
-
-
-# ETAPE 3 : cette ligne marche deja. N'y touche pas.
-print("===================================")
-
-
-# ETAPE 4 : remplace  ____  par TON PRENOM
+# ETAPE 1 : remplace  ____  par TON PRENOM
 print("Cree par : ____")
 
+print("")
+print(" . | . | .")
+print("---+---+---")
+print(" . | . | .")
+print("---+---+---")
+print(" . | . | .")
+print("")
 
-# ETAPE 5 : remplace  ____  par ton age
-print("Age du createur : ____ ans")
 
+# -----------------------------------------------------
+#  PARTIE 2 : le jeu va te poser une question.
+#             C'est la nouveaute d'aujourd'hui.
+# -----------------------------------------------------
 
-# ETAPE 6 : ecris ce que tu veux dans les guillemets.
-#           Par exemple :  Prepare-toi a perdre !
-print("____")
+# ETAPE 2 : remplace  ____  par la question que le jeu doit poser.
+#           Par exemple :   Comment t'appelles-tu ?
+#           ATTENTION : garde bien l'espace avant le dernier guillemet,
+#           c'est plus joli quand le joueur tape sa reponse.
+nom = input("____ ")
+
+# ETAPE 3 : cette ligne marche deja. N'y touche pas.
+#           Elle affiche le nom que le joueur vient de taper.
+print("Bonjour " + nom + " !")
+
+# ETAPE 4 : ecris ce que tu veux dire au joueur.
+#           Par exemple :   Prepare-toi a perdre
+print("____ " + nom + " !")
 
 
 # =====================================================
-#  BRAVO, TU AS FINI LA PISTE BLEUE !
-#
-#  Envie d'aller plus loin ? Essaie ceci :
-#  - ajoute une ligne  print("...")  toute seule, a toi
-#  - enleve UN guillemet quelque part, lance, et regarde
-#    le message rouge. Puis remets-le. C'est ca, un bug !
+#  TU AS FINI ? LEVE LA CARTE BLEUE.
+#  Le defi en plus : demande AUSSI son age au joueur,
+#  et affiche-le.   age = input("Quel age as-tu ? ")
 # =====================================================

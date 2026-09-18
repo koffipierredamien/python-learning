@@ -15,14 +15,14 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 
 | # | Cas | Comment on le détecte | Réponse immédiate (en séance) | Réponse de fond | Qui |
 |---|---|---|---|---|---|
-| A1 | **Ne sait pas utiliser un ordinateur** | Test de Décollage station 1, score 0–2 | Piste Bleue + squelette de code prérempli + binôme P1 | Passeport Machine + Sas des 30 minutes ; réévaluation à la séance 5 | moi |
+| A1 | **Ne sait pas utiliser un ordinateur** | Test de Décollage station 1, score 0–2 | Piste Bleue + squelette de code prérempli + voisin P1 | Passeport Machine + Sas des 30 minutes ; réévaluation à la séance 5 | moi |
 | A2 | **Tape très lentement (5 mots/min)** | Observation atelier 1 | **On ne lui fait jamais recopier du code.** Le squelette est fourni, il ne tape que ce qui porte du sens | 5 min de jeu de clavier chaque samedi, record personnel ; geste 12 du Passeport | moi |
 | A3 | **Lit difficilement / dyslexie** | Consignes non suivies alors que la logique est bonne | Consignes lues à voix haute par le copilote ; pictogrammes sur les fiches ; police agrandie sur son poste | Fiches en gros caractères, consignes en 1 phrase par étape, éditeur en thème contrasté | moi |
-| A4 | **Ne comprend pas les messages d'erreur (anglais)** | Blocage systématique dès la 1ʳᵉ erreur | Le **Dictionnaire des erreurs** (affiche murale) : 10 messages fréquents, traduits, avec la cause et le remède | Rituel : chaque erreur rencontrée en classe est ajoutée au dictionnaire par l'élève qui l'a trouvée (badge `Traducteur d'erreur`) | moi |
+| A4 | **Ne comprend pas les messages d'erreur (anglais)** | Blocage systématique dès la 1ʳᵉ erreur | Le **[Dictionnaire des erreurs](A6-dictionnaire-des-erreurs.md)** : les messages fréquents, traduits, avec la cause et le remède | On coche l'erreur dans le dictionnaire dès qu'elle a été traitée en classe : on sait ainsi ce qui a déjà été vu, et ce qui reste à voir | moi |
 | A5 | **Sait déjà coder (Scratch/Python)** | Test de Décollage, question 4 | Piste Noire dès la séance 1 | **Mission spéciale** : responsable d'un module bonus du jeu (sons, thèmes, score, IA) qu'il présentera à la classe ; rôle de Geek Mentor | moi |
 | A6 | **Très fort mais impatient / méprisant** | Soupirs, « c'est nul », coupe la parole | Recadrage privé, jamais public. On lui donne une responsabilité, pas une punition | Nommé **Chef de module** : il doit produire une fiche mémo utilisable par les autres. Enseigner l'oblige à ralentir | moi |
 | A7 | **Arrive avec un très fort niveau qui dépasse le parcours** | Termine tout, s'ennuie malgré la piste Noire | Parcours parallèle : IA du jeu, sauvegarde des scores, réseau | Peut co-animer une partie de la mise en commun ; orienté vers un défi long (voir H3) | soir |
-| A8 | **Ne parle pas bien la langue d'enseignement** | Observation | Binôme parlant la même langue maternelle ; consignes visuelles | Fiches très illustrées, vocabulaire technique affiché avec image | moi |
+| A8 | **Ne parle pas bien la langue d'enseignement** | Observation | Voisin parlant la même langue maternelle ; consignes visuelles | Fiches très illustrées, vocabulaire technique affiché avec image | moi |
 
 ---
 
@@ -42,8 +42,8 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 
 | # | Cas | Détection | Réponse immédiate | Réponse de fond | Qui |
 |---|---|---|---|---|---|
-| C1 | **Absent une séance** | Feuille de présence | **Le Filet règle le cas** : il repart du code officiel. Il n'a rien à rattraper sur le projet | Le copilote lui explique la notion manquée en 3 minutes pendant l'accueil (badge `Sauveteur`) + fiche mémo de la séance manquée | moi |
-| C2 | **Absent plusieurs séances** | 2 `✖` consécutifs | Code officiel + piste Bleue systématique + binôme solide | **Liste des 10 minutes** + appel à la famille : l'absence est le principal facteur d'abandon | soir |
+| C1 | **Absent une séance** | Feuille de présence | **Le Filet règle le cas** : il repart du code officiel. Il n'a rien à rattraper sur le projet | Un camarade lui explique la notion manquée en 3 minutes pendant l'accueil + fiche mémo de la séance manquée | moi |
+| C2 | **Absent plusieurs séances** | 2 `✖` consécutifs | Code officiel + piste Bleue systématique + voisin solide | **Liste des 10 minutes** + appel à la famille : l'absence est le principal facteur d'abandon | soir |
 | C3 | **Arrive en cours de parcours (nouvel inscrit)** | Inscription tardive | **Protocole d'intégration** (voir bas de page) | Parrainage par un Geek Mentor pendant 3 séances | soir |
 | C4 | **Retards chroniques** | Arrive après le WOW | Procédure d'accueil affichée : il démarre seul, sans perturber | Voir la cause avec la famille (transport, horaire) ; jamais de sanction publique | moi |
 | C5 | **Arrête en cours de parcours** | Deux absences non justifiées | — | Appel de la famille, proposition de retour sans condition. Le Filet garantit qu'un retour est toujours possible | soir |
@@ -62,13 +62,13 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 | # | Cas | Détection | Réponse immédiate | Réponse de fond | Qui |
 |---|---|---|---|---|---|
 | D1 | **Pas d'ordinateur à la maison** | Questionnaire A1, Q1 | **Aucun devoir n'est jamais obligatoire.** Le dire explicitement au groupe, à chaque distribution de défi | Défis maison sur papier (logique, dessin d'algorithme) accessibles à tous ; ouverture de la salle 30 min avant | soir |
-| D2 | **Machine en panne pendant la séance** | — | Le binôme continue sur l'autre machine (impact quasi nul grâce au pair programming) ; machine de réserve déjà allumée | 1 machine de réserve allumée en permanence en fond de salle | moi |
+| D2 | **Machine en panne pendant la séance** | — | L'élève rejoint le poste d'un voisin ; machine de réserve déjà allumée | 1 machine de réserve allumée en permanence en fond de salle | moi |
 | D3 | **Plusieurs machines HS** | — | Bascule sur la **version débranchée** de la séance, préparée à l'avance | Chaque séance a une version papier prête (plateau carton, cartes-instructions) | moi |
 | D4 | **Coupure de courant / pas d'internet** | — | Séance débranchée ; tout le contenu est déjà sur clé USB | **Rien dans le cours ne dépend d'internet.** Règle absolue | soir |
 | D5 | **Versions de Python différentes selon les postes** | Un code marche ici, pas là | Réinstaller depuis la clé | Version figée, affichée au mur, vérifiée avant la séance 1 | soir |
 | D6 | **L'élève ne retrouve pas son fichier** | Fréquent en début de parcours | Code officiel, 30 secondes, on repart | Geste 9 du Passeport ; convention de nommage unique affichée (`mon_xo/jeu.py`) | moi |
 | D7 | **Le fichier est écrasé ou vidé** | — | Code officiel | Sauvegarde par les enseignants du travail de chaque élève en fin de séance (clé/dossier) | moi |
-| D8 | **Ordinateur partagé à deux alors que l'élève voulait le sien** | Tension dans le binôme | Rappeler que le pair programming est **un choix pédagogique**, pas une contrainte matérielle, et que les vrais développeurs le pratiquent | Rotation stricte au signal ; le copilote a une vraie mission écrite | moi |
+| D8 | **Ordinateur partagé à deux alors que l'élève voulait le sien** | Tension devant un poste | On partage le temps au signal : 10 minutes chacun, chronomètre visible. Celui qui ne tape pas lit la consigne à voix haute | Donner la priorité du poste seul à celui qui n'a pas d'ordinateur à la maison | moi |
 
 ---
 
@@ -76,15 +76,15 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 
 | # | Cas | Détection | Réponse immédiate | Réponse de fond | Qui |
 |---|---|---|---|---|---|
-| E1 | **Binôme conflictuel** | Ton qui monte, un des deux se détourne | Séparer sans dramatiser : « rotation exceptionnelle » | Recomposition à la séance suivante ; rappel du contrat de binôme au groupe entier (jamais nominatif) | moi |
-| E2 | **Un élève monopolise le clavier** | Le copilote ne fait rien | Rotation immédiate + rappel de la règle : le copilote ne touche pas le clavier, le pilote ne code pas sans dire ce qu'il fait | Rebinômer avec un élève de niveau proche | moi |
-| E3 | **Élève moqué (lenteur, erreurs, matériel)** | Rires, remarques | **Tolérance zéro, réaction immédiate et publique sur le principe** : « ici, une erreur c'est une information, pas une honte » | Rituel de l'erreur volontaire de l'enseignant à chaque séance ; badge `Persévérant` valorisé autant que la réussite | soir |
+| E1 | **Deux élèves qui se disputent un poste** | Ton qui monte | Séparer sans dramatiser : un des deux passe sur la machine de réserve | Rappel de la règle de partage au groupe entier (jamais nominatif) | moi |
+| E2 | **Un élève monopolise le clavier d'un poste partagé** | L'autre ne fait rien | Échange immédiat, chronomètre visible : 10 minutes chacun | Les placer sur deux postes séparés dès que possible | moi |
+| E3 | **Élève moqué (lenteur, erreurs, matériel)** | Rires, remarques | **Tolérance zéro, réaction immédiate et publique sur le principe** : « ici, une erreur c'est une information, pas une honte » | Rituel de l'erreur volontaire de l'enseignant à chaque séance ; la persévérance est citée à voix haute autant que la réussite | soir |
 | E4 | **Timide qui n'ose jamais demander** | Reste vert et bloqué | Les cartes de signalisation existent **exactement pour ça** : il n'a pas à parler ni à lever la main | Mon circuit : chaque élève est vu de près au moins 3× par séance, même celui qui ne demande rien | moi |
 | E5 | **Peur de l'erreur / peur de casser** | N'ose pas exécuter son programme | « Casse-le exprès, pour voir. » Faire planter le programme ensemble, volontairement | Le Filet, répété à chaque séance : « on a toujours une copie de secours » | moi |
-| E6 | **Crise de frustration devant un bug** | Larmes, colère, veut tout effacer | Sortir du problème 2 minutes (verre d'eau, marcher). **Puis on lit le message d'erreur ensemble, à voix haute** | Enseigner la méthode de débogage comme une compétence à part entière, avec son propre badge | moi |
+| E6 | **Crise de frustration devant un bug** | Larmes, colère, veut tout effacer | Sortir du problème 2 minutes (verre d'eau, marcher). **Puis on lit le message d'erreur ensemble, à voix haute** | Enseigner la méthode de débogage comme une compétence à part entière | moi |
 | E7 | **Démotivation à mi-parcours (séances 9–13, le creux classique)** | Baisse de présence et d'énergie | C'est prévu : les rendez-vous **démo S8** et **passage au graphique S14** sont placés exactement là pour ça | Anticiper : montrer dès la séance 9 une capture de l'interface graphique à venir | moi |
 | E8 | **Élève qui veut abandonner** | Le dit, ou décroche visiblement | Entretien individuel, sans témoin, sans reproche. Une seule question : *« qu'est-ce qui te ferait revenir samedi ? »* | Rôle sur mesure (design, sons, testeur, présentateur) : tous les élèves n'aiment pas coder de la même façon | soir |
-| E9 | **Grand écart d'âge dans Jeremiah (12 ans vs 18 ans)** | Tensions, condescendance | Ne pas systématiquement binômer 12 et 18 ans | Les 16–18 ans deviennent **Chefs d'équipe** sur des modules ; on leur donne un statut, pas une garderie | moi |
+| E9 | **Grand écart d'âge dans Jeremiah (12 ans vs 18 ans)** | Tensions, condescendance | Ne pas systématiquement asseoir côte à côte un 12 ans et un 18 ans | Les 16–18 ans deviennent **Chefs d'équipe** sur des modules ; on leur donne un statut, pas une garderie | moi |
 
 ---
 
@@ -92,8 +92,8 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 
 | # | Cas | Détection | Réponse immédiate | Réponse de fond | Qui |
 |---|---|---|---|---|---|
-| F1 | **Blocage sur une notion clé (variable, boucle, fonction, liste)** | Post-it, cartes orange répétées | Reprise **débranchée** individuelle : la variable = une boîte étiquetée, la liste = des élèves alignés avec un numéro | Si > 30 % du groupe : la notion réouvre la séance suivante. **La faute est à l'enseignement, pas aux élèves** | moi |
-| F2 | **Erreurs d'indentation répétées** | `IndentationError` en boucle | Règle visuelle : « ce qui est *dans* le bloc est décalé, toujours de 4 espaces » + montrer la barre verticale de l'éditeur | Affiche murale ; badge `Zéro indentation ratée` | moi |
+| F1 | **Blocage sur une notion clé (variable, boucle, fonction, liste)** | Cartes orange répétées | Reprise **débranchée** individuelle : la variable = une boîte étiquetée, la liste = des élèves alignés avec un numéro | Si > 30 % du groupe : la notion réouvre la séance suivante. **La faute est à l'enseignement, pas aux élèves** | moi |
+| F2 | **Erreurs d'indentation répétées** | `IndentationError` en boucle | Règle visuelle : « ce qui est *dans* le bloc est décalé, toujours de 4 espaces » + montrer la barre verticale de l'éditeur | Ajoutée au dictionnaire des erreurs | moi |
 | F3 | **Confond `=` et `==`** | Erreurs de condition | Formule à répéter : « **un** égal, je range ; **deux** égaux, je compare » | Dans le Dictionnaire des erreurs | moi |
 | F4 | **Copie le code sans comprendre** | Ça marche, mais ne sait pas expliquer | **La preuve n° 2 filtre ce cas** : « explique-moi cette ligne comme si j'étais ton petit frère » | Retour en piste Bleue avec code à trous : le trou oblige à comprendre. Jamais de sanction | moi |
 | F5 | **Comprend en classe, a tout oublié samedi prochain** | Échec au quiz de rappel | Normal : c'est l'oubli ordinaire. Le rappel des 3 questions est fait pour ça | Réactivation espacée : chaque notion est réutilisée dans les 3 séances suivantes, par construction du projet | moi |
@@ -122,6 +122,6 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 | H1 | **Code irrécupérable / tout cassé** | — | Code officiel. 30 secondes. Sans jugement, avec le sourire | C'est précisément la raison d'être du Filet | moi |
 | H2 | **L'élève veut faire un autre jeu** | Demande explicite | Accepter **dans le cadre de la piste Noire**, sur les mêmes notions : « d'accord, mais avec les listes de cette semaine » | Un espace « projet libre » est ouvert aux 3 dernières séances pour tous | moi |
 | H3 | **A terminé tout le parcours en avance** | — | Missions longues : IA de l'ordinateur, sauvegarde des scores, mode 2 joueurs en réseau, plateau 4×4 | Statut d'**assistant** : co-anime une mise en commun, écrit une fiche mémo pour la classe | soir |
-| H4 | **Le jeu marche chez l'un, pas chez l'autre** | — | Comparer les deux codes en binôme : c'est un excellent exercice de débogage, on en fait une activité | Convention unique de nommage et de version | moi |
+| H4 | **Le jeu marche chez l'un, pas chez l'autre** | — | Comparer les deux codes côte à côte : c'est un excellent exercice de débogage, on en fait une activité | Convention unique de nommage et de version | moi |
 | H5 | **Un élève partage son code fini à toute la classe** | Copie massive | Ne pas punir : la preuve n° 2 (« explique-moi ») rend la copie inutile. En faire un sujet : « à quoi ça sert de copier un code qu'on ne sait pas expliquer ? » | Encourager le partage **d'idées** et interdire le partage de fichiers pendant les ateliers | moi |
 | H6 | **La brique de la semaine était trop grosse (personne ne finit)** | Majorité de `~` | On arrête, on distribue le code officiel, et on assume : *« c'était trop long, c'est ma faute, on finit samedi »* | Question 3 de la revue d'après-séance ; recalibrer la brique suivante | soir |

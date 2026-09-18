@@ -83,7 +83,7 @@ Les onglets ont de la place pour **40 élèves** — il y en a 15 aujourd'hui (7
 
 Dans l'onglet **Suivi**, la colonne **ALERTE** passe à `OUI` dès qu'un élève cumule **deux séances de suite
 sans production**. Cet élève entre sur la **liste des 10 minutes** : l'enseignant lui consacre 10 minutes en
-tête-à-tête à la séance suivante, pendant que le reste de la classe travaille en binôme.
+tête-à-tête à la séance suivante, pendant que le reste de la classe travaille seul.
 
 C'est un rendez-vous, pas une punition — et c'est ce qui empêche un décrochage silencieux de devenir un abandon.
 
@@ -102,6 +102,6 @@ Il n'y a **qu'un seul fichier de suivi**, celui-ci. L'ancien `classeur-de-suivi.
 vous fournissiez votre fichier d'inscriptions, a été retiré : ses onglets faisaient double emploi avec les
 vôtres et créaient deux vérités.
 
-Trois suivis qu'il contenait n'ont pas été repris, faute d'être utilisés pour l'instant :
-**les binômes**, **les badges et grades**, et **le Passeport Machine**. Dites-le-moi et je les ajoute
-comme onglets de ce classeur-ci, dans la même charte.
+Les binômes et les badges ne sont plus utilisés dans la méthode : il n'y a donc rien à suivre de ce
+côté-là. Si un jour vous voulez suivre les **grades** ou le **Passeport Machine**, dites-le-moi et je
+les ajoute comme onglets de ce classeur-ci, dans la même charte.

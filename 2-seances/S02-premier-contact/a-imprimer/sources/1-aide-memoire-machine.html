@@ -35,7 +35,7 @@
   .duo b.t { display:block; font-size:10.5pt; margin-bottom:1mm; color:#1a1a2e; }
   @media print { .consigne { display:none; } }
 </style></head><body>
-<div class="consigne"><b>À imprimer :</b> 1 exemplaire par binôme (1 par poste), A4 recto.
+<div class="consigne"><b>À imprimer :</b> 1 exemplaire par poste, A4 recto.
 Posé à côté du clavier pendant tout l'atelier. Si vous ne pouvez pas imprimer, projetez-le.</div>
 
 <h1>⌨️ MON PREMIER PROGRAMME</h1>
@@ -50,12 +50,18 @@ Posé à côté du clavier pendant tout l'atelier. Si vous ne pouvez pas imprime
   <div class="geste"><span class="n">5</span><b>Je sauve</b><span><b>Ctrl + S</b>.<br>L'étoile ⭑ doit disparaître</span></div>
 </div>
 
-<h2>La commande du jour</h2>
-<div class="code">print("Bonjour")</div>
+<h2>La leçon du jour : la boîte, et la question</h2>
+<div class="code">nom = input("Comment t'appelles-tu ? ")</div>
 <div class="legende">
-  <div><b>print</b> — ça veut dire <b>AFFICHE</b>. Toujours en minuscules, jamais « Print ».</div>
-  <div><b>( )</b> — une parenthèse ouverte se referme <b>toujours</b>.</div>
+  <div><b>nom</b> — c'est une <b>boîte avec une étiquette</b>. Ce que le joueur tape est rangé dedans.</div>
+  <div><b>input</b> — ça veut dire <b>DEMANDE</b>. Le programme s'arrête, il attend, il range la réponse.</div>
   <div><b>" "</b> — les guillemets vont <b>par deux</b>, comme des chaussures. Ce qui est dedans s'affiche tel quel.</div>
+</div>
+<div class="code" style="margin-top:2mm">print("Bonjour " + nom + " !")</div>
+<div class="legende">
+  <div>Le <b>+</b> colle les morceaux bout à bout. Garde l'espace après <b>Bonjour</b>, sinon tout se colle.</div>
+  <div><b>nom</b> sans guillemets → il affiche <b>ce qu'il y a dans la boîte</b>.</div>
+  <div><b>"nom"</b> avec guillemets → il affiche le <b>mot</b> nom. Toute la différence est là.</div>
 </div>
 
 <h2 class="orange">Si l'écran devient rouge — ce n'est pas grave</h2>
@@ -63,7 +69,8 @@ Posé à côté du clavier pendant tout l'atelier. Si vous ne pouvez pas imprime
 <table>
   <tr><th style="width:26%">Ce qui s'affiche</th><th style="width:34%">Ce qui s'est passé</th><th>Ce que je fais</th></tr>
   <tr><td class="mono">SyntaxError</td><td>Il manque un guillemet ou une parenthèse</td><td>Je compte mes guillemets : il en faut <b>deux</b>. Et je ferme ma parenthèse</td></tr>
-  <tr><td class="mono">NameError</td><td>J'ai écrit du texte sans guillemets</td><td>Je mets mon texte entre guillemets</td></tr>
+  <tr><td class="mono">NameError</td><td>Du texte sans guillemets, ou une boîte mal orthographiée</td><td>Je regarde comment j'ai appelé ma boîte : <b>nom</b> et <b>Nom</b>, ce n'est pas pareil</td></tr>
+  <tr><td>BonjourDamien collé</td><td>L'espace manque dans "Bonjour "</td><td>J'ajoute l'espace avant le guillemet</td></tr>
   <tr><td>Rien ne se passe</td><td>J'ai écrit dans la zone grise du bas</td><td>Je remonte dans la zone blanche, en haut</td></tr>
 </table>
 
@@ -75,10 +82,5 @@ Posé à côté du clavier pendant tout l'atelier. Si vous ne pouvez pas imprime
   <div class="carte b"><b>BLEU</b>j'ai fini, je veux le défi</div>
 </div>
 
-<h2>On travaille à deux</h2>
-<div class="duo">
-  <div><b class="t">🕹️ Le pilote</b>Il a le clavier et la souris. <b>Lui seul touche la machine.</b></div>
-  <div><b class="t">🗺️ Le copilote</b>Il lit la consigne à voix haute et surveille les fautes. <b>Il ne prend jamais le clavier.</b></div>
-</div>
-<div class="regle">On échange <b>toutes les 10 minutes</b>, au signal du professeur.</div>
+<div class="regle">Bloqué ? <b>Trois choses avant de lever l'orange :</b> je relis la consigne · je demande à mon voisin · je regarde cette fiche.</div>
 </body></html>

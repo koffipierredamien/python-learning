@@ -22,7 +22,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **[1-methode/](1-methode/methode-pedagogique.md)** | La pédagogie : comment faire progresser ensemble des niveaux très différents, à 2 enseignants | Une fois, au début. On y revient en cas de problème |
 | **[2-seances/](2-seances/LISEZ-MOI.md)** | Une séance = un dossier. Fiche détaillée, PDF à imprimer, code, sources | **Chaque semaine** |
 | **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur : inscriptions, présence, diagnostic, suivi, observations, journal, cotisations et caisse, **indiscipline et révisions maison** | Après chaque séance |
-| **[4-outils/](4-outils/LISEZ-MOI.md)** | Les programmes : le jeu de démo, l'installateur des postes, la préparation de la clé | Avant chaque séance |
+| **[4-le-jeu-termine/](4-le-jeu-termine/LISEZ-MOI.md)** | Le jeu XO fini : la démonstration d'ouverture, et le point d'arrivée du parcours | Pour montrer, et pour se repérer |
 
 ---
 
@@ -36,32 +36,32 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | J'ai besoin de… | C'est ici |
 |---|---|
 | Animer la séance | [📖 La fiche de séance](2-seances/S02-premier-contact/fiche-de-seance.md) — minute par minute |
-| Projeter | [📺 Le diaporama](2-seances/S02-premier-contact/a-projeter/seance-2-projection.pptx) — 24 diapos, notes incluses |
-| Faire le quiz | [🎯 Le Kahoot](2-seances/S02-premier-contact/a-projeter/quiz-seance-1.pptx) — les 15 questions de la séance 1, qui n'ont pas servi |
+| Projeter | [📺 Le diaporama](2-seances/S02-premier-contact/a-projeter/seance-2-projection.pptx) — 27 diapos, notes incluses |
+| Faire le quiz | [🎯 Le quiz](2-seances/S02-premier-contact/a-projeter/quiz-seance-1.pptx) — les 15 questions de la séance 1, qui n'ont pas servi |
 | Imprimer | [🖨️ Un seul document](2-seances/S02-premier-contact/a-imprimer/quantites-et-formats.md) |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S02-premier-contact/a-envoyer/deroule-seance-2.docx) |
 | Remettre le règlement aux familles | [📜 Le règlement intérieur](0-administratif/reglement-interieur.pdf) |
-| Préparer les machines | [🔧 Les outils, dans l'ordre](4-outils/LISEZ-MOI.md) |
+| Préparer les machines | [🔧 La préparation, dans la fiche de séance](2-seances/S02-premier-contact/fiche-de-seance.md) |
 
 ---
 
-## La méthode en huit principes
+## La méthode en sept principes
 
 1. Une seule classe, un seul projet, **pas de groupes de niveau**
 2. Différencier par la profondeur : **3 pistes** (🔵 guidée · 🔴 standard · ⚫ défi), choisies par l'élève à chaque atelier
 3. **Le Filet** : le code de référence redistribué à chaque séance → une absence ne met jamais personne en retard
-4. **Le binôme est le 3ᵉ enseignant** : pilote / copilote, rotation toutes les 10 minutes
-5. **Un enseignant par classe**, et cinq réflexes pour tenir seul : j'alterne parler / circuler, les cartes de couleur sont mes yeux, les élèves s'entraident d'abord, 2 Geek Mentors par séance, je ne m'assois jamais
-6. **Le Sas « Permis Machine »** pour les grands débutants, sans les séparer du groupe
-7. **Motivation** : grades, badges, Mur de Mission, tournoi final devant les familles
-8. **Évaluation par la preuve, jamais par la note** : ça marche / je sais l'expliquer / je sais le refaire
+4. **Un enseignant par classe**, et cinq réflexes pour tenir seul : j'alterne parler / circuler, les cartes de couleur sont mes yeux, les élèves s'entraident d'abord, 2 Geek Mentors par séance, je ne m'assois jamais
+5. **Le Sas « Permis Machine »** pour les grands débutants, sans les séparer du groupe
+6. **Motivation** : grades, Mur de Mission, tournoi final devant les familles
+7. **Évaluation par la preuve, jamais par la note** : ça marche / je sais l'expliquer / je sais le refaire
 
 → [La méthode complète](1-methode/methode-pedagogique.md) ·
 [Diagnostic](1-methode/annexes/A1-diagnostic-et-passeport.md) ·
 [Conduite de séance](1-methode/annexes/A2-conduite-de-seance.md) ·
 [Les 35 cas particuliers](1-methode/annexes/A3-matrice-des-cas.md) ·
-[Grades et badges](1-methode/annexes/A4-grades-et-badges.md) ·
-[Outils et modèles](1-methode/annexes/A5-outils-et-modeles.md)
+[Grades et Mur de Mission](1-methode/annexes/A4-grades-et-mur-de-mission.md) ·
+[Outils et modèles](1-methode/annexes/A5-outils-et-modeles.md) ·
+[Dictionnaire des erreurs](1-methode/annexes/A6-dictionnaire-des-erreurs.md)
 
 ---
 
@@ -69,8 +69,8 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 | Phase | Séances | Brique ajoutée au jeu | Notions |
 |---|---|---|---|
-| 0. Décollage | 1–2 | L'écran d'accueil du jeu | théorie de base · l'algorithme · `print()` |
-| 1. Parler au joueur | 3–6 | Le jeu demande les noms | variables, `input()`, types |
+| 0. Décollage | 1–2 | L'écran d'accueil, et le jeu demande ton nom | théorie de base · l'algorithme · la variable · `input()` |
+| 1. Parler au joueur | 3–6 | Le jeu parle aux deux joueurs | variables, `input()`, types |
 | 2. Le plateau vit | 7–10 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
 | 3. Les règles du jeu | 11–14 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
 | 4. L'interface graphique | 15–19 | Fenêtre, grille cliquable, design | Tkinter, événements |
@@ -86,8 +86,9 @@ Les rendez-vous : **S9** première démo jouable · **S15** concours de design �
 
 - [x] La méthode pédagogique et ses annexes
 - [x] Le règlement intérieur, version du responsable
-- [x] Séance 1 : fiche, script d'animation, diaporama de 46 diapos, 14 documents imprimables, quiz Kahoot, déroulé Word
-- [x] Séance 2 : fiche, diaporama de 24 diapos, aide-mémoire machine, code, déroulé Word
+- [x] Séance 1 : faite — compte rendu, diaporama de 46 diapos, les 4 documents qui servent encore
+- [x] Séance 2 : fiche, diaporama de 27 diapos, quiz, aide-mémoire machine, code, déroulé Word
+- [x] Le dictionnaire des erreurs, complet pour tout le parcours
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
-- [x] Le jeu XO terminé (démonstration d'ouverture) et les outils de préparation
+- [x] Le jeu XO terminé (démonstration d'ouverture)
 - [ ] Séances 3 à 22

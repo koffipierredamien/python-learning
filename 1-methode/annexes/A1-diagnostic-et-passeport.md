@@ -9,7 +9,7 @@
 
 - **Durée :** 25 minutes, en 3 stations tournantes.
 - **Où :** pendant la séance 1, juste après l'accueil.
-- **Qui :** un enseignant tient la station 1 (machines), l'autre circule entre les stations 2 et 3 et remplit la **grille d'observation**.
+- **Qui :** l'enseignant lance la station 1 (machines), puis circule entre les stations 2 et 3 et note ce qu'il observe directement dans l'onglet `Diagnostic` du classeur.
 - **Groupes :** la classe est divisée en 3 sous-groupes qui tournent toutes les 8 minutes.
 
 ---
@@ -76,7 +76,9 @@ Prénom : ______________________  Âge : ______  Classe : ☐ Jerusalem  ☐ Jer
 
 ---
 
-## 5. Grille d'observation (remplie par l'enseignant mobile)
+## 5. Ce qu'on note pour chaque élève
+
+Directement dans l'onglet `Diagnostic` du [classeur de suivi](../../3-suivi/LISEZ-MOI.md) :
 
 | Élève | Pilotage /6 | Logique /4 | A déjà codé | Face à la difficulté | Profil retenu |
 |---|---|---|---|---|---|
@@ -88,7 +90,7 @@ Prénom : ______________________  Âge : ______  Classe : ☐ Jerusalem  ☐ Jer
 
 ## 6. Le Passeport Machine — 12 gestes à valider
 
-Petit livret A5 (ou carte plastifiée) remis à **tous** les élèves — pas seulement aux débutants, pour éviter toute stigmatisation. Un tampon ou un autocollant par geste validé. Les P2/P3 le remplissent en une séance et deviennent **Examinateurs** (ils peuvent valider un geste chez un camarade, ce qui décharge les enseignants).
+Petit livret A5 (ou carte plastifiée) remis à **tous** les élèves — pas seulement aux débutants, pour éviter toute stigmatisation. Une case cochée par geste validé. Les P2/P3 le remplissent en une séance et deviennent **Examinateurs** (ils peuvent valider un geste chez un camarade, ce qui décharge les enseignants).
 
 | # | Geste | Validé par |
 |---|---|---|

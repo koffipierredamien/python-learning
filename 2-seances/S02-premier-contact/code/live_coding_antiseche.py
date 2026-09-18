@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 =============================================================================
-  SEANCE 2  -  LE LIVE CODING DE L'ENSEIGNANT   (13 h 15 - 13 h 25)
+  SEANCE 2  -  LE LIVE CODING DE L'ENSEIGNANT   (13 h 15 - 13 h 25, puis 13 h 35 - 13 h 43)
 =============================================================================
   A QUOI SERT CE FICHIER ?
 
-  C'est VOTRE anti-seche pour les 10 minutes de live coding.
-  Le jour J, vous NE lancez PAS ce fichier : vous tapez devant les eleves,
-  tres lentement, dans un fichier vide. Ce fichier est la pour :
-    - repeter chez vous avant la seance,
-    - vous rattraper si vous perdez le fil devant la classe.
+  C'est VOTRE anti-seche. Le jour J, vous NE lancez PAS ce fichier :
+  vous tapez devant les eleves, tres lentement, dans un fichier vide.
+  Ce fichier est la pour repeter chez vous, et pour vous rattraper si
+  vous perdez le fil devant la classe.
 
   REGLE D'OR : "JE CODE, VOUS PREDISEZ."
   Avant CHAQUE execution, vous vous arretez et vous demandez a la classe
@@ -17,107 +16,117 @@
 
   AVANT LA SEANCE : police de Thonny en taille 18 minimum (Outils >
   Options > Editeur), sinon le fond de la salle ne lit rien.
+
+  CE QU'ON N'ENSEIGNE PAS AUJOURD'HUI : print(). Les eleves s'en servent,
+  l'ecran d'accueil leur est donne tout ecrit. La notion du jour, c'est
+  la VARIABLE et input().
 =============================================================================
 """
 
 # =============================================================================
-#  ETAPE A  (3 min)  -  LE PREMIER PRINT
+#  ETAPE A  (2 min)  -  ON LANCE CE QUI EST DEJA ECRIT
 # =============================================================================
-#  Vous tapez caractere par caractere en verbalisant :
-#    "p - r - i - n - t, ca veut dire AFFICHE.
-#     Ensuite une parenthese : on l'ouvre, et on la fermera TOUJOURS.
-#     Puis un guillemet, mon texte, un guillemet. Et on referme."
+#  Vous ouvrez GEEKS/mon_xo/jeu.py devant eux, et vous appuyez sur F5.
+#  L'ecran d'accueil s'affiche.
 #
-#  >>> AVANT D'APPUYER : "Qu'est-ce qui va se passer ? A trois. Un, deux, trois !"
-
-print("Bonjour")
-
-#  Apres l'execution :
-#    "Voila. Vous venez de voir un ordinateur OBEIR. C'est tout le metier."
-
-
-# =============================================================================
-#  ETAPE B  (2 min)  -  L'ORDRE DES LIGNES
-# =============================================================================
-#  Vous ajoutez une deuxieme ligne.
+#    "Ce programme, je ne l'ai pas tape : il etait deja la. Il fonctionne.
+#     Chaque ligne print() affiche ce qu'il y a entre les guillemets.
+#     Voila. Vous savez lire ce programme. On passe a la suite."
 #
-#  >>> AVANT D'APPUYER : "Qu'est-ce que ca va afficher ? Dans quel ordre ?
-#      Levez la main ceux qui pensent que Bonjour sortira en premier."
-
-print("Bonjour")
-print("Je suis ton ordinateur")
-
-#  Apres l'execution :
-#    "Regle numero un de la programmation : l'ordinateur lit de haut en bas,
-#     ligne par ligne, dans l'ordre. Toujours."
+#  >>> On ne detaille pas print(). Trois phrases, et on avance.
 
 
 # =============================================================================
-#  ETAPE C  (4 min)  -  L'ERREUR VOLONTAIRE
+#  ETAPE B  (3 min)  -  L'ERREUR VOLONTAIRE
+# =============================================================================
 #  >>> LE MOMENT LE PLUS IMPORTANT DE LA SEANCE <<<
-# =============================================================================
-#  Vous effacez le guillemet de fin. Le code devient :
+#  Vous effacez un guillemet, devant eux, en l'annoncant :
+#     "Maintenant, je casse tout."
+
+#  (ligne volontairement fausse, laissee en commentaire pour que ce fichier
+#   reste ouvrable dans Thonny — devant les eleves, vous la tapez pour de vrai)
+# print("Bonjour)
+
+#  Vous lancez. L'ecran devient rouge.
 #
-#         print("Bonjour)
+#    "Regardez. ROUGE. Est-ce que l'ordinateur est casse ? Non.
+#     Est-ce que je suis puni ? Non.
+#     Il m'explique ce qu'il n'a pas compris. Il dit SyntaxError :
+#     j'ai mal ecrit quelque chose. Et il me montre meme la ligne.
+#     Le rouge n'est pas une punition. LE ROUGE EST UNE INFORMATION.
+#     Aujourd'hui, celui qui voit du rouge leve le pouce :
+#     il a trouve quelque chose."
 #
-#  (Il est en commentaire ici pour que ce fichier reste executable.
-#   Le jour J, vous le tapez VRAIMENT, et ca plante VRAIMENT.)
-#
-#  Vous lancez. Du rouge apparait. Vous SOURIEZ, et vous dites :
-#
-#    "Ah ! Du rouge ! ... Alors, qui a peur ?"
-#    (laisser reagir, puis, tres calmement :)
-#    "Moi je code depuis des annees, et j'ai du rouge TOUS LES JOURS.
-#     Le rouge, ce n'est pas une punition. Ce n'est pas une mauvaise note.
-#     C'est l'ordinateur qui vous explique ce qu'il n'a pas compris.
-#     Il essaie de vous aider. Le probleme, c'est qu'il le dit en anglais.
-#     Alors on va apprendre a le lire. Ensemble.
-#     Il a ecrit : SyntaxError. Quelqu'un devine ?
-#     ... Syntax, c'est la grammaire. Error, l'erreur.
-#     Il nous dit : JE NE COMPRENDS PAS TA PHRASE.
-#     Et regardez : il montre meme l'endroit avec une petite fleche."
-#
-#  Vous reparez devant tout le monde, vous relancez, ca marche :
-#
-#    "Repare en quatre secondes. Retenez ca : dans cette salle,
-#     LE ROUGE N'EST PAS GRAVE. LE ROUGE EST UNE INFORMATION."
-#
-#  Puis vous allez ecrire SyntaxError sur l'affiche "Dictionnaire des
-#  erreurs", et vous nommez le Gardien des erreurs de la seance.
-#
-#  ---------------------------------------------------------------------------
-#  SI VOUS VOULEZ MONTRER UNE AUTRE ERREUR (au choix, une seule suffit) :
-#         Print("Bonjour")      ->  NameError : "je ne connais pas ce mot"
-#         print(Bonjour)        ->  NameError : le texte sans guillemets
-#         print "Bonjour"       ->  SyntaxError : parentheses oubliees
-#  ---------------------------------------------------------------------------
+#  Vous remettez le guillemet, vous relancez, ca marche.
 
 
 # =============================================================================
-#  ETAPE D  (3 min)  -  LA CONSIGNE DE L'ATELIER
+#  ETAPE C  (3 min)  -  LA VARIABLE : UNE BOITE AVEC UNE ETIQUETTE
 # =============================================================================
-#  Vous projetez le resultat a obtenir, et vous annoncez les 3 pistes.
-#  Le voici, tel quel :
+#  D'abord SANS machine, avec les mains :
+#     "J'ai une boite. Je colle une etiquette dessus : nom.
+#      Je mets quelque chose dedans : Damien.
+#      Quand je dis 'nom', l'ordinateur regarde dans la boite."
 
-print("===================================")
-print("       BIENVENUE DANS LE JEU XO")
-print("===================================")
-print("Cree par : Damien")
+nom = "Damien"
+print(nom)
 
-#  Puis, mot pour mot :
+#  >>> AVANT DE LANCER : "qu'est-ce qui va s'afficher ? nom, ou Damien ?"
+#  C'est LA question du jour. Laissez-les se tromper : c'est comme ca
+#  qu'ils comprennent. Puis vous lancez.
 #
-#    "Votre mission : faire dire ca a votre ordinateur. Avec VOTRE prenom.
-#     Trois pistes, vous choisissez :
-#       BLEUE  - le debut est deja ecrit dans votre fichier, vous completez
-#                les trous. Aucune honte : c'est la piste la plus maligne
-#                quand on debute.
-#       ROUGE  - vous ecrivez tout vous-memes, a partir de la consigne.
-#       NOIRE  - tout ca, ET en plus vous dessinez la grille vide du morpion
-#                en dessous. Avec des print, uniquement.
+#    "Il affiche Damien. Parce que je n'ai pas mis de guillemets autour
+#     de nom : je ne lui ai pas demande le mot 'nom', je lui ai demande
+#     CE QU'IL Y A DANS LA BOITE."
 #
-#     Personne ne vous jugera sur votre piste. LE JEU QUI SORT EST LE MEME.
-#     Cartes de signalisation sorties. Pilotes, a vous.
-#     Copilotes : vos mains restent sur vos genoux ! C'est parti."
+#  Puis vous montrez la difference, en une ligne :
+
+print("nom")
+
+#    "La, avec les guillemets, il affiche le mot nom. Sans guillemets,
+#     il affiche ce qu'il y a dans la boite. C'est toute la difference."
+
+
+# =============================================================================
+#  ETAPE D  (2 min)  -  input() : C'EST LE JOUEUR QUI REMPLIT LA BOITE
+# =============================================================================
+#     "Jusqu'ici, c'est MOI qui remplis la boite. Maintenant, je vais
+#      laisser le JOUEUR la remplir."
+
+nom = input("Comment t'appelles-tu ? ")
+print(nom)
+
+#  Vous lancez, et VOUS tapez un prenom d'eleve de la classe.
+#  Effet garanti.
 #
-#  >>> Vous lancez le minuteur. Rotation pilote/copilote a 99 min.
+#    "Le programme s'est arrete et il m'attend. C'est ca, input :
+#     il pose la question, il attend, et il range la reponse dans la boite."
+
+
+# =============================================================================
+#  ETAPE E  (2 min)  -  ON COLLE DU TEXTE ET UNE BOITE
+# =============================================================================
+
+print("Bonjour " + nom + " !")
+
+#    "Le + colle des morceaux de texte bout a bout.
+#     Attention a l'espace apres Bonjour : sans lui, ca colle tout."
+#
+#  Montrez l'oubli de l'espace une fois : "BonjourDamien". Ils rient, ils retiennent.
+#
+#  >>> ET C'EST TOUT. On arrete ici et on les envoie faire, eux.
+
+
+# =============================================================================
+#  LES TROIS ERREURS QUI VONT ARRIVER PENDANT L'ATELIER
+# =============================================================================
+#   SyntaxError ........ un guillemet ou une parenthese manque.
+#                        "Compte tes guillemets : ils vont par deux."
+#   NameError .......... du texte ecrit sans guillemets, ou une boite
+#                        dont le nom est mal orthographie.
+#                        "Tu as ecrit Nom et ta boite s'appelle nom."
+#   Rien ne se passe ... l'eleve a ecrit dans la zone grise du bas.
+#                        "Remonte dans la zone blanche, en haut."
+#
+#  Le dictionnaire complet : 1-methode/annexes/dictionnaire-des-erreurs.pdf
 # =============================================================================

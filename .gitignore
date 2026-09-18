@@ -2,7 +2,4 @@ __pycache__/
 *.pyc
 .DS_Store
 ~$*.xlsx
-
-# dossiers et archives generes (voir 4-outils/)
-cle-usb/
 *.zip
