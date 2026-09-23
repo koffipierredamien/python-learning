@@ -36,6 +36,8 @@ S02-premier-contact/
 │
 ├── a-envoyer/             ce qui part par mail ou par message
 │     deroule-seance-2.docx         le déroulé pour les responsables
+│     formulaire-de-revision.gs     fabrique le formulaire Google noté, en un clic
+│     formulaire-de-revision.md     le mode d'emploi, le message aux parents, les réponses
 │
 └── code/                  ce qui tourne sur les machines
       depart_eleves_piste_bleue.py   le fichier de l'élève
