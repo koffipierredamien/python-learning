@@ -10,7 +10,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
 | **Encadrement** | 2 enseignants — **un par classe**, les deux classes en parallèle |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
-| **Séance en préparation** | **Séance 2**, samedi 19 septembre 2026, 12 h - 14 h |
+| **Séance en préparation** | **Séance 3 — TP**, samedi 26 septembre 2026, 12 h - 14 h |
 
 ---
 
@@ -26,22 +26,21 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 ---
 
-## Samedi prochain : la séance 2
+## Samedi prochain : la séance 3 — le TP
 
-👉 **[2-seances/S02-premier-contact/](2-seances/S02-premier-contact/fiche-de-seance.md)**
+👉 **[2-seances/S03-tp-les-joueurs/](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md)**
 
-> La séance 1 s'est arrêtée après les missions de décollage. **Le premier contact machine, le Kahoot,
-> la clôture et la méthode de travail sont repris dans la séance 2.** Le parcours décale d'une séance.
+> **Séance en autonomie.** Les deux classes travaillent seules dans leur salle, chacune avec un enseignant
+> qui passe régulièrement. Pas de diaporama, pas de cours : une feuille de TP, et les machines.
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| Animer la séance | [📖 La fiche de séance](2-seances/S02-premier-contact/fiche-de-seance.md) — minute par minute |
-| Projeter | [📺 Le diaporama](2-seances/S02-premier-contact/a-projeter/seance-2-projection.pptx) — 28 diapos, notes incluses |
-| Faire le quiz | [🎯 Le quiz](2-seances/S02-premier-contact/a-projeter/quiz-seance-1.pptx) — les 15 questions de la séance 1, qui n'ont pas servi |
-| Imprimer | [🖨️ Un seul document](2-seances/S02-premier-contact/a-imprimer/quantites-et-formats.md) |
-| Envoyer le programme au responsable | [📋 Le déroulé en Word, modifiable](2-seances/S02-premier-contact/a-envoyer/deroule-seance-2.docx) |
-| Remettre le règlement aux familles | [📜 Le règlement intérieur](0-administratif/reglement-interieur.pdf) |
-| Préparer les machines | [🔧 La préparation, dans la fiche de séance](2-seances/S02-premier-contact/fiche-de-seance.md) |
+| Le TP des élèves | [📄 TP n°1 — les deux joueurs](2-seances/S03-tp-les-joueurs/a-imprimer/1-tp-jeremiah.pdf) — 6 pages, 1 par élève |
+| Le corrigé et la conduite de séance | [🔑 Pour l'enseignant](2-seances/S03-tp-les-joueurs/a-imprimer/2-corrige-enseignant.pdf) — 4 pages, à ne pas distribuer |
+| Savoir quoi imprimer | [🖨️ Les quantités](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) |
+| Envoyer la révision aux parents | [📲 Le formulaire Google noté](2-seances/S02-premier-contact/a-envoyer/formulaire-de-revision.md) |
+| Revoir la séance précédente | [📖 La fiche de la séance 2](2-seances/S02-premier-contact/fiche-de-seance.md) |
+| Remettre le règlement aux familles | [📜 Le règlement intérieur](0-administratif/reglement-interieur-a-partager.pdf) |
 
 ---
 
@@ -89,6 +88,7 @@ Les rendez-vous : **S9** première démo jouable · **S15** concours de design �
 - [x] Séance 1 : faite — compte rendu, diaporama de 46 diapos, les 4 documents qui servent encore
 - [x] Séance 2 : fiche, diaporama de 28 diapos, quiz, aide-mémoire machine, code, déroulé Word
 - [x] Le dictionnaire des erreurs, complet pour tout le parcours
+- [x] Séance 3 : le TP de 2 h en autonomie (feuille élève + corrigé enseignant)
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture)
-- [ ] Séances 3 à 22
+- [ ] Séances 4 à 22

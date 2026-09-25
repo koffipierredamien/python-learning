@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>TP n°1 — Jeremiah Geeks</title>
+<style>
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing:border-box; }
+  @page { size: A4 portrait; margin: 9mm 12mm 8mm; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:9.9pt; color:#14142b; line-height:1.34; }
+
+  .bandeau { background:#1a1a2e; color:#fff; border-radius:2mm; padding:4.5mm 5mm; }
+  .bandeau .sur { font-size:8.5pt; letter-spacing:2px; color:#b06fd8; font-weight:bold; }
+  .bandeau h1 { margin:.8mm 0 1.2mm; font-size:19pt; }
+  .bandeau .st { font-size:11pt; color:#a8d4f0; }
+  .ident { display:flex; gap:3mm; margin:2.4mm 0 3mm; }
+  .ident > div { flex:1; border:.4mm solid #999; border-radius:1.5mm; padding:2mm 2.5mm; font-size:9.5pt; }
+  .ident b { color:#6b2d8f; }
+  .ligne { display:inline-block; border-bottom:.3mm solid #666; min-width:38mm; }
+
+  h2 { font-size:12.5pt; color:#fff; background:#6b2d8f; padding:1.3mm 3mm; border-radius:1.5mm;
+       margin:3.6mm 0 2mm; }
+  h2 .min { float:right; font-size:9.5pt; font-weight:normal; opacity:.9; }
+  h3 { font-size:10.5pt; color:#1a1a2e; margin:2.6mm 0 1.2mm; }
+  p { margin:0 0 1.6mm; }
+  ul, ol { margin:1mm 0 2mm; padding-left:6mm; }
+  li { margin-bottom:.8mm; }
+
+  .code { font-family:"Courier New",monospace; font-size:9.6pt; background:#f3f3f8;
+          border-left:2mm solid #6b2d8f; padding:1.8mm 3mm; margin:1.2mm 0 2mm;
+          white-space:pre; line-height:1.38; }
+  .ecran { font-family:"Courier New",monospace; font-size:9.2pt; background:#12122a; color:#4fc3f7;
+           border-radius:1.5mm; padding:2mm 3mm; margin:1.2mm 0 2mm; white-space:pre; line-height:1.36; }
+  .ecran b { color:#ffb74d; font-weight:normal; }
+
+  .exo { border:.4mm solid #c9c9d6; border-radius:1.5mm; padding:2mm 2.6mm; margin-bottom:2mm; }
+  .exo .t { font-weight:bold; color:#6b2d8f; }
+  .case { display:inline-block; width:3.6mm; height:3.6mm; border:.4mm solid #444; border-radius:.6mm;
+          margin-right:1.6mm; vertical-align:-.5mm; }
+
+  .plus { border:.5mm solid #e0a020; background:#fffaf0; border-radius:1.5mm; padding:2.2mm 2.8mm; margin:2mm 0; }
+  .plus .t { font-weight:bold; color:#a65d00; display:block; margin-bottom:1mm; }
+  .plus .code { border-left-color:#e0a020; background:#fdf3e0; }
+
+  .regles { background:#eef4fb; border:.4mm solid #9dc0e0; border-radius:1.5mm; padding:2.6mm 3.2mm; font-size:9.6pt; }
+  .regles b { color:#1d3f5e; }
+  .att { background:#fdecea; border-left:2mm solid #c0392b; padding:2mm 3mm; margin:2mm 0; font-size:9.7pt; }
+  .att b { color:#9c0006; }
+  .astuce { background:#eaf7ef; border-left:2mm solid #2e9e52; padding:2mm 3mm; margin:2mm 0; font-size:9.7pt; }
+  .astuce b { color:#0c5c29; }
+
+  table { width:100%; border-collapse:collapse; margin:2mm 0; }
+  th, td { border:.3mm solid #999; padding:1.1mm 1.8mm; font-size:9pt; vertical-align:top; text-align:left; }
+  th { background:#1a1a2e; color:#fff; }
+  .mono { font-family:"Courier New",monospace; font-weight:bold; }
+
+  .bilan td { height:6mm; }
+  .exo, .plus, .regles, table, .ecran { break-inside:avoid; page-break-inside:avoid; }
+  h2 { break-after:avoid; page-break-after:avoid; }
+  .fin { margin-top:5mm; border-top:.5mm solid #6b2d8f; padding-top:2.5mm; text-align:center;
+         font-size:9.5pt; color:#6b2d8f; font-style:italic; }
+</style></head><body>
+
+<div class="bandeau">
+  <div class="sur">JEREMIAH GEEKS · 12 – 18 ANS · SÉANCE 3</div>
+  <h1>TP n°1 — Le jeu apprend à connaître ses joueurs</h1>
+  <div class="st">samedi 26 septembre 2026 · 12 h - 14 h · à faire seul, sur ton poste</div>
+</div>
+
+<div class="ident">
+  <div><b>Ton nom :</b> <span class="ligne"></span></div>
+  <div><b>Ton fichier :</b> <span class="mono">tp1_tonprenom.py</span></div>
+  <div><b>Fini à :</b> <span class="ligne" style="min-width:20mm"></span> h</div>
+</div>
+
+<div class="regles">
+<b>COMMENT TRAVAILLER AUJOURD'HUI</b>
+<ul style="margin-bottom:0">
+  <li><b>Tu travailles seul</b>, à ton rythme. Le professeur passe régulièrement : il ne fera pas à ta place, il te fera lire ton erreur.</li>
+  <li><b>Tu coches chaque exercice réussi</b> sur cette feuille. Elle est à toi, tu l'emportes.</li>
+  <li><b>Tu relances (F5) après chaque changement</b>, et tu sauvegardes (Ctrl + S) après chaque exercice.</li>
+  <li><b>Bloqué ?</b> 1) je relis la consigne · 2) je lis le message rouge et je cherche la ligne · 3) je regarde le tableau des erreurs, dernière page · 4) <b>seulement après</b>, je lève la carte orange.</li>
+  <li>Les encadrés jaunes <b>⭐ ALLEZ PLUS LOIN</b> sont <b>facultatifs</b> : ils sont là pour ceux qui finissent avant. Personne n'est en retard s'il ne les fait pas.</li>
+</ul>
+</div>
+
+<h2>Partie 0 — Mise en route <span class="min">5 min</span></h2>
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 0</div>
+  <ol style="margin-bottom:1mm">
+    <li>Ouvre <b>Thonny</b>. Menu <b>Fichier → Nouveau</b>.</li>
+    <li><b>Fichier → Enregistrer sous…</b> dans le dossier <span class="mono">GEEKS / mon_xo</span>,
+        sous le nom <span class="mono">tp1_tonprenom.py</span> (ton vrai prénom, sans espace, sans accent).</li>
+    <li>Écris cette ligne, puis appuie sur <b>F5</b> :</li>
+  </ol>
+  <div class="code">print("TP1 - Mehdi")</div>
+  <p style="margin-bottom:0"><b>C'est réussi quand</b> ton prénom s'affiche dans la zone grise du bas.</p>
+</div>
+
+<h2>Partie 1 — Échauffement : afficher <span class="min">15 min</span></h2>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 1.1 — trois lignes</div>
+  <p>Sous ta première ligne, affiche <b>ton prénom</b>, <b>ton âge</b> et <b>ta ville</b>, chacun sur une ligne.
+     Il te faut donc trois <span class="mono">print</span>.</p>
+</div>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 1.2 — un cadre</div>
+  <p>Ajoute une ligne de tirets avant et après, pour faire un cadre. Résultat attendu à l'écran :</p>
+  <div class="ecran">------------------------------
+Mehdi
+15 ans
+Casablanca
+------------------------------</div>
+</div>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 1.3 — une ligne vide</div>
+  <p>Fais apparaître <b>une ligne vide</b> entre le cadre du haut et ton prénom. Cherche : que faut-il
+     écrire entre les guillemets pour n'afficher… rien du tout ?</p>
+</div>
+
+<div class="plus">
+  <span class="t">⭐ ALLEZ PLUS LOIN 1</span>
+  <p>Écrire trente tirets à la main, c'est long. Python sait <b>multiplier du texte</b> :</p>
+  <div class="code">print("-" * 30)
+print("=" * 30)
+print("ABC" * 3)</div>
+  <p>Essaie ces trois lignes, puis <b>refais ton cadre</b> de l'exercice 1.2 avec cette technique.</p>
+  <p style="margin-bottom:0">Autre découverte : la <b>virgule</b> dans un <span class="mono">print</span> met un espace toute seule.
+     Compare ces deux lignes, et repère la différence :</p>
+  <div class="code">print("J'ai" , "15" , "ans")
+print("J'ai" + "15" + "ans")</div>
+</div>
+
+<h2>Partie 2 — Les boîtes : les variables <span class="min">20 min</span></h2>
+
+<p><b>Rappel de samedi.</b> Une variable, c'est une <b>boîte avec une étiquette</b>. On range quelque chose
+dedans, et ensuite on appelle la boîte par son nom.</p>
+<div class="code">prenom = "Joyce"
+print(prenom)     <span style="color:#6b2d8f">→ affiche  Joyce   (ce qu'il y a DANS la boîte)</span>
+print("prenom")   <span style="color:#6b2d8f">→ affiche  prenom  (le MOT, à cause des guillemets)</span></div>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 2.1 — trois boîtes</div>
+  <p>Crée trois variables : <span class="mono">prenom</span>, <span class="mono">age</span>,
+     <span class="mono">ville</span>. Puis affiche trois phrases complètes en collant avec le
+     <span class="mono">+</span> :</p>
+  <div class="ecran">Je m'appelle Mehdi
+J'ai 15 ans
+J'habite a Casablanca</div>
+  <div class="att"><b>Attention :</b> mets ton âge <b>entre guillemets</b> :
+     <span class="mono">age = "15"</span>. Sans guillemets, c'est un nombre, et Python refuse de coller
+     un nombre à du texte. Tu verras pourquoi dans l'encadré jaune plus bas.</div>
+</div>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 2.2 — la boîte change</div>
+  <p>Après tes trois phrases, écris :</p>
+  <div class="code">ville = "Rabat"
+print("J'habite a " + ville)</div>
+  <p style="margin-bottom:0">Relance. <b>Que s'est-il passé ?</b> Écris ta réponse ici, en une phrase :</p>
+  <p style="margin:1.5mm 0 0"><span class="ligne" style="min-width:150mm"></span></p>
+</div>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 2.3 — une boîte dans une boîte</div>
+  <p>Range une phrase entière dans une variable, puis affiche-la :</p>
+  <div class="code">message = "Bonjour " + prenom + " !"
+print(message)</div>
+  <p style="margin-bottom:0">Ajoute ensuite une variable <span class="mono">presentation</span> qui contient
+     ton prénom <b>et</b> ta ville, et affiche-la.</p>
+</div>
+
+<div class="plus">
+  <span class="t">⭐ ALLEZ PLUS LOIN 2</span>
+  <p><b>a)</b> Python sait transformer un texte. Essaie :</p>
+  <div class="code">print(prenom.upper())     <span style="color:#a65d00">→ tout en MAJUSCULES</span>
+print(prenom.lower())     <span style="color:#a65d00">→ tout en minuscules</span>
+print(len(prenom))        <span style="color:#a65d00">→ le nombre de lettres</span></div>
+  <p><b>b) Provoque l'erreur exprès.</b> Enlève les guillemets autour de ton âge
+     (<span class="mono">age = 15</span>) et relance. Tu obtiens une erreur rouge :
+     <span class="mono">TypeError</span>. Recopie ici le mot qui suit <span class="mono">TypeError</span> :</p>
+  <p><span class="ligne" style="min-width:120mm"></span></p>
+  <p style="margin-bottom:0">Puis répare, sans remettre les guillemets, avec <span class="mono">str()</span> —
+     qui veut dire « traite ce nombre comme du texte » :</p>
+  <div class="code">age = 15
+print("J'ai " + str(age) + " ans")</div>
+</div>
+
+<h2>Partie 3 — Le programme te parle : <span class="mono" style="font-size:12pt">input</span> <span class="min">25 min</span></h2>
+
+<p><b>Rappel.</b> <span class="mono">input</span> veut dire <b>DEMANDE</b> : le programme s'arrête, il attend
+que le joueur tape quelque chose, et il <b>range la réponse dans la boîte</b>.</p>
+<div class="code">prenom = input("Comment t'appelles-tu ? ")
+print("Bonjour " + prenom + " !")</div>
+<div class="astuce"><b>Le détail qui compte :</b> garde <b>un espace</b> avant le dernier guillemet de la
+question — <span class="mono">"Ton nom ? "</span> — sinon la réponse du joueur se colle à ton point
+d'interrogation.</div>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 3.1 — bonjour à toi</div>
+  <p style="margin-bottom:0"><b>Ouvre un nouveau fichier</b> (Fichier → Nouveau), enregistre-le sous
+     <span class="mono">tp1_partie3.py</span>. Demande son prénom au joueur, et salue-le par son prénom.</p>
+</div>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 3.2 — deux questions</div>
+  <p>Demande au joueur <b>sa ville</b> puis <b>sa couleur préférée</b>, et affiche <b>une seule phrase</b>
+     qui utilise les deux réponses. Par exemple :</p>
+  <div class="ecran">Dans quelle ville habites-tu ? <b>Casablanca</b>
+Ta couleur preferee ? <b>vert</b>
+A Casablanca, il y a surement du vert quelque part !</div>
+</div>
+
+<div class="exo">
+  <div class="t"><span class="case"></span>Exercice 3.3 — la fiche d'identité</div>
+  <p>Écris un programme qui pose <b>trois questions</b> (prénom, âge, plat préféré), puis affiche une
+     fiche encadrée avec les trois réponses. Rendu attendu :</p>
+  <div class="ecran">==============================
+       FICHE DU JOUEUR
+==============================
+Prenom      : Mehdi
+Age         : 15
+Plat prefere: couscous
+==============================</div>
+</div>
+
+<div class="plus">
+  <span class="t">⭐ ALLEZ PLUS LOIN 3</span>
+  <p><b>Calculer avec une réponse.</b> Ce que tape le joueur est <b>toujours du texte</b>, même quand il
+     tape un nombre. Pour calculer, il faut d'abord le transformer en nombre avec
+     <span class="mono">int()</span> :</p>
+  <div class="code">age = input("Quel age as-tu ? ")
+age = int(age)                      <span style="color:#a65d00">→ maintenant c'est un vrai nombre</span>
+print("Dans 10 ans tu auras " + str(age + 10) + " ans")</div>
+  <p style="margin-bottom:0">Fais-le, puis ajoute : <b>l'année de ta naissance</b> (2026 moins ton âge).
+     Et pour finir : demande <b>deux nombres</b> au joueur et affiche leur somme.</p>
+</div>
+
+<h2>Partie 4 — LE PROJET : le jeu XO rencontre ses joueurs <span class="min">35 min</span></h2>
+
+<p><b>C'est la partie qui compte vraiment.</b> Tout le reste était de l'entraînement : ici, tu construis la
+brique de la semaine dans notre vrai jeu. Ouvre un nouveau fichier :
+<span class="mono">tp1_xo.py</span>.</p>
+
+<p><b>Voici exactement ce que ton programme doit faire</b> (en gras, ce que tape le joueur) :</p>
+<div class="ecran">===================================
+       BIENVENUE DANS LE JEU XO
+===================================
+Créé par : Mehdi
+
+Joueur 1, quel est ton nom ? <b>Joyce</b>
+Joueur 2, quel est ton nom ? <b>Gedeon</b>
+
+Joyce joue les X
+Gedeon joue les O
+
+ . | . | .
+---+---+---
+ . | . | .
+---+---+---
+ . | . | .
+
+Que la partie commence, Joyce et Gedeon !</div>
+
+<h3>Les six étapes, dans l'ordre</h3>
+<div class="exo">
+  <div class="t"><span class="case"></span>4.1 — l'écran d'accueil</div>
+  <p style="margin-bottom:0">Les trois lignes du titre, et ton nom de créateur. Tu l'as déjà fait samedi.</p>
+</div>
+<div class="exo">
+  <div class="t"><span class="case"></span>4.2 — le joueur 1</div>
+  <p style="margin-bottom:0">Demande son nom, et range-le dans une variable <span class="mono">joueur1</span>.</p>
+</div>
+<div class="exo">
+  <div class="t"><span class="case"></span>4.3 — le joueur 2</div>
+  <p style="margin-bottom:0">Pareil, dans <span class="mono">joueur2</span>. <b>Attention :</b> deux boîtes
+     différentes, deux noms différents. Si tu réutilises la même boîte, le premier nom est écrasé.</p>
+</div>
+<div class="exo">
+  <div class="t"><span class="case"></span>4.4 — les symboles</div>
+  <p>Crée deux variables :</p>
+  <div class="code">symbole1 = "X"
+symbole2 = "O"</div>
+  <p style="margin-bottom:0">Puis affiche les deux lignes <span class="mono">Joyce joue les X</span> et
+     <span class="mono">Gedeon joue les O</span> — <b>en utilisant les variables</b>, jamais les noms écrits
+     en dur.</p>
+</div>
+<div class="exo">
+  <div class="t"><span class="case"></span>4.5 — le plateau vide</div>
+  <p style="margin-bottom:0">Les cinq lignes de la grille. Recopie-les soigneusement : un espace de travers
+     et la grille penche.</p>
+</div>
+<div class="exo">
+  <div class="t"><span class="case"></span>4.6 — le lancement</div>
+  <p style="margin-bottom:0">La dernière phrase, avec <b>les deux noms</b> dedans.</p>
+</div>
+
+<div class="astuce"><b>Quand ça marche : Ctrl + S, et lève la main.</b> Le professeur vient voir ton écran,
+c'est la validation de la séance. Ensuite seulement, les étoiles ci-dessous.</div>
+
+<div class="plus">
+  <span class="t">⭐ ALLEZ PLUS LOIN 4 — quatre défis, dans l'ordre que tu veux</span>
+  <ol style="margin-bottom:0">
+    <li><b>Les noms en majuscules</b> dans les deux lignes des symboles :
+        <span class="mono">JOYCE joue les X</span>. <i>(indice : <span class="mono">.upper()</span>)</i></li>
+    <li><b>Qui commence ?</b> Pose une troisième question au joueur, et affiche
+        <span class="mono">C'est Joyce qui commence !</span></li>
+    <li><b>Un plateau numéroté</b> : remplace les points par les numéros 1 à 9, pour que les joueurs
+        sachent quelle case demander plus tard.</li>
+    <li><b>Le compte à rebours</b> : avant la grille, affiche <span class="mono">3...</span>,
+        <span class="mono">2...</span>, <span class="mono">1...</span>, <span class="mono">PARTEZ !</span>
+        sur quatre lignes.</li>
+  </ol>
+</div>
+
+<h2>Partie 5 — La chasse aux bugs <span class="min">15 min</span></h2>
+
+<p>Voici cinq programmes cassés. Pour chacun : <b>écris sur cette feuille ce qui ne va pas</b>, puis
+corrige-le dans Thonny pour vérifier. C'est l'exercice le plus utile de la journée : savoir lire une
+erreur, c'est la moitié du métier.</p>
+
+<div class="exo">
+  <div class="t">Bug 1 <span style="font-weight:normal;color:#666">— l'ordinateur dit : SyntaxError</span></div>
+  <div class="code">print("Bonjour)</div>
+  <p style="margin-bottom:0">Ce qui ne va pas : <span class="ligne" style="min-width:120mm"></span></p>
+</div>
+<div class="exo">
+  <div class="t">Bug 2 <span style="font-weight:normal;color:#666">— l'ordinateur dit : NameError: name 'Bonjour' is not defined</span></div>
+  <div class="code">print(Bonjour)</div>
+  <p style="margin-bottom:0">Ce qui ne va pas : <span class="ligne" style="min-width:120mm"></span></p>
+</div>
+<div class="exo">
+  <div class="t">Bug 3 <span style="font-weight:normal;color:#666">— l'ordinateur dit : NameError: name 'Print' is not defined</span></div>
+  <div class="code">Print("Bonjour")</div>
+  <p style="margin-bottom:0">Ce qui ne va pas : <span class="ligne" style="min-width:120mm"></span></p>
+</div>
+<div class="exo">
+  <div class="t">Bug 4 <span style="font-weight:normal;color:#666">— l'ordinateur dit : SyntaxError</span></div>
+  <div class="code">print("Bonjour"</div>
+  <p style="margin-bottom:0">Ce qui ne va pas : <span class="ligne" style="min-width:120mm"></span></p>
+</div>
+<div class="exo">
+  <div class="t">Bug 5 <span style="font-weight:normal;color:#666">— l'ordinateur dit : NameError: name 'Nom' is not defined</span></div>
+  <div class="code">nom = input("Ton nom ? ")
+print("Bonjour " + Nom)</div>
+  <p style="margin-bottom:0">Ce qui ne va pas : <span class="ligne" style="min-width:120mm"></span></p>
+</div>
+
+<div class="plus">
+  <span class="t">⭐ ALLEZ PLUS LOIN 5</span>
+  <p style="margin-bottom:0"><b>À ton tour de casser.</b> Écris sur une feuille un programme de trois lignes
+     avec <b>une seule</b> erreur dedans, donne-la à ton voisin, et vois s'il la trouve. Puis échangez.
+     Celui qui trouve explique <b>ce que dit le message rouge</b>, pas seulement la correction.</p>
+</div>
+
+<h2>Bilan — à remplir avant de partir <span class="min">5 min</span></h2>
+
+<table class="bilan">
+  <tr><th style="width:62%">Ce que je sais faire maintenant</th><th style="width:19%">Tout seul</th><th style="width:19%">Pas encore sûr</th></tr>
+  <tr><td>Afficher plusieurs lignes avec <span class="mono">print</span></td><td></td><td></td></tr>
+  <tr><td>Ranger quelque chose dans une variable et l'afficher</td><td></td><td></td></tr>
+  <tr><td>Expliquer la différence entre <span class="mono">print(nom)</span> et <span class="mono">print("nom")</span></td><td></td><td></td></tr>
+  <tr><td>Poser une question au joueur avec <span class="mono">input</span></td><td></td><td></td></tr>
+  <tr><td>Coller du texte et une variable avec le <span class="mono">+</span></td><td></td><td></td></tr>
+  <tr><td>Lire un message rouge et trouver ce qui ne va pas</td><td></td><td></td></tr>
+</table>
+
+<p style="margin-top:2.5mm"><b>Ce que j'ai trouvé le plus facile :</b> <span class="ligne" style="min-width:120mm"></span></p>
+<p><b>Ce que je n'ai pas bien compris :</b> <span class="ligne" style="min-width:122mm"></span></p>
+<p><b>Nombre d'étoiles ⭐ terminées :</b> <span class="ligne" style="min-width:20mm"></span> / 5</p>
+
+<h2>Si ça ne marche pas — le tableau des erreurs</h2>
+<table>
+  <tr><th style="width:26%">Ce qui s'affiche</th><th style="width:34%">Ce que ça veut dire</th><th>Ce que je fais</th></tr>
+  <tr><td class="mono">SyntaxError</td><td>« Je ne comprends pas ta phrase »</td><td>Je compte mes guillemets (ils vont par deux) et je ferme ma parenthèse. Je regarde <b>aussi la ligne d'au-dessus</b></td></tr>
+  <tr><td class="mono">NameError</td><td>« Je ne connais pas ce mot »</td><td>Du texte sans guillemets ? Une boîte mal orthographiée ? <span class="mono">nom</span> et <span class="mono">Nom</span>, ce n'est pas pareil</td></tr>
+  <tr><td class="mono">TypeError</td><td>« Tu mélanges du texte et un nombre »</td><td>J'écris le nombre entre guillemets, ou j'utilise <span class="mono">str()</span></td></tr>
+  <tr><td>Rien ne se passe</td><td>J'ai écrit dans la zone grise du bas</td><td>Je remonte dans la zone blanche, en haut</td></tr>
+  <tr><td>Le texte est collé</td><td>Il manque un espace dans mes guillemets</td><td><span class="mono">"Bonjour "</span> et non <span class="mono">"Bonjour"</span></td></tr>
+</table>
+
+<div class="fin">Le rouge n'est pas une punition. Le rouge est une information. — À samedi prochain, les Geeks !</div>
+</body></html>
