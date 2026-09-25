@@ -4,25 +4,25 @@
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing:border-box; }
   @page { size: A4 portrait; margin: 9mm 12mm 8mm; }
-  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:9.9pt; color:#14142b; line-height:1.34; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:9.6pt; color:#14142b; line-height:1.3; }
   .bandeau { background:#0c5c29; color:#fff; border-radius:2mm; padding:4mm 5mm; }
   .bandeau .sur { font-size:8.5pt; letter-spacing:2px; color:#a8e6c0; font-weight:bold; }
   .bandeau h1 { margin:.8mm 0 1.2mm; font-size:18pt; }
   .bandeau .st { font-size:10.5pt; color:#d7f0e0; }
-  h2 { font-size:12.5pt; color:#fff; background:#2e9e52; padding:1.3mm 3mm; border-radius:1.5mm; margin:3.6mm 0 2mm; }
+  h2 { font-size:12pt; color:#fff; background:#2e9e52; padding:1.1mm 3mm; border-radius:1.5mm; margin:3mm 0 1.6mm; }
   h3 { font-size:10.5pt; color:#0c5c29; margin:2.6mm 0 1.2mm; }
   p { margin:0 0 1.6mm; }
   ul, ol { margin:1mm 0 1.8mm; padding-left:6mm; }
   li { margin-bottom:.8mm; }
-  .code { font-family:"Courier New",monospace; font-size:9.4pt; background:#f3f3f8;
-          border-left:2mm solid #2e9e52; padding:1.8mm 3mm; margin:1.2mm 0 2mm; white-space:pre; line-height:1.36; }
+  .code { font-family:"Courier New",monospace; font-size:8.9pt; background:#f3f3f8;
+          border-left:2mm solid #2e9e52; padding:1.5mm 2.6mm; margin:1mm 0 1.6mm; white-space:pre; line-height:1.36; }
   .cle { background:#fff6d8; border:.5mm solid #d79a00; border-radius:1.5mm; padding:2.2mm 2.8mm; margin:2mm 0; }
   .cle b { color:#a65d00; }
   table { width:100%; border-collapse:collapse; margin:2mm 0; }
   th, td { border:.3mm solid #999; padding:1.1mm 1.8mm; font-size:9pt; vertical-align:top; text-align:left; }
   th { background:#0c5c29; color:#fff; }
   .mono { font-family:"Courier New",monospace; font-weight:bold; }
-  .grille td { height:6.2mm; }
+  .grille td { height:5.6mm; }
   .code, table, .cle { break-inside:avoid; page-break-inside:avoid; }
   h2 { break-after:avoid; page-break-after:avoid; }
 </style></head><body>
@@ -97,11 +97,26 @@ print(presentation)</div>
 <p><b>Réponse attendue en 2.2 :</b> « la variable a changé de contenu ; à partir de cette ligne, c'est la
 nouvelle valeur qui s'affiche ». Accepter toute formulation qui dit que <b>la boîte ne garde qu'une seule
 chose à la fois</b>.</p>
-<p><b>⭐ Allez plus loin 2 :</b> <span class="mono">.upper()</span>, <span class="mono">.lower()</span>,
-<span class="mono">len()</span>. L'erreur provoquée est
-<span class="mono">TypeError: can only concatenate str (not "int") to str</span> — le mot à recopier est
-<b>concatenate</b> (« coller »). La réparation :
-<span class="mono">print("J'ai " + str(age) + " ans")</span>.</p>
+<h3>⭐ Allez plus loin 2 — les deux défis sur les boîtes</h3>
+<div class="code">ligne = " . | . | ."          # a) la grille rangée dans deux boîtes
+separateur = "---+---+---"
+print(ligne)
+print(separateur)
+print(ligne)
+print(separateur)
+print(ligne)
+
+boite1 = "X"                  # b) l'échange, avec une troisième boîte
+boite2 = "O"
+cache  = boite1               # ← LA ligne à trouver
+boite1 = boite2
+boite2 = cache
+print(boite1)                 # affiche O
+print(boite2)                 # affiche X</div>
+<p><b>Le défi b) est le vrai morceau.</b> Presque tous vont écrire
+<span class="mono">boite1 = boite2</span> puis <span class="mono">boite2 = boite1</span> et obtenir
+<b>deux fois O</b>. Ne donnez pas la réponse : faites-leur dessiner deux boîtes sur leur feuille et jouer
+la scène à la main. Ils trouvent tout seuls qu'il faut poser le X quelque part avant de lâcher la boîte.</p>
 
 <h2>Corrigé — partie 3 : input</h2>
 <div class="code">prenom = input("Comment t'appelles-tu ? ")          # 3.1
@@ -121,10 +136,25 @@ print("Prenom      : " + prenom)
 print("Age         : " + age)
 print("Plat prefere: " + plat)
 print("==============================")</div>
-<p><b>⭐ Allez plus loin 3 :</b> <span class="mono">int()</span> puis <span class="mono">str()</span> pour
-réafficher. L'année de naissance : <span class="mono">print(str(2026 - age))</span> une fois
-<span class="mono">age</span> converti. La somme de deux nombres demande <b>deux conversions</b> — c'est
-là que la plupart se trompent, et c'est une très bonne erreur à leur laisser faire.</p>
+<h3>⭐ Allez plus loin 3 — les deux défis sur les questions</h3>
+<div class="code">prenom = input("Un prenom ? ")           # a) l'histoire folle
+animal = input("Un animal ? ")
+lieu   = input("Un lieu ? ")
+objet  = input("Un objet ? ")
+print("")
+print("Ce matin, " + prenom + " est parti a " + lieu + ".")
+print("Sur le chemin, il a rencontre un " + animal)
+print("qui lui a vole " + objet + " !")
+
+prenom = input("Ton prenom ? ")          # b) le badge
+print("****************************")
+print("*        " + prenom)
+print("****************************")</div>
+<p><b>Sur le badge :</b> le cadre se dérègle dès que le prénom change de longueur. C'est voulu.
+Il n'existe pas de solution parfaite avec ce qu'ils savent aujourd'hui — l'objectif est qu'ils
+<b>constatent le problème et cherchent</b>. Les bonnes réponses acceptées : ajouter des espaces à la main,
+ou mettre le prénom sur sa propre ligne sans étoile à droite. Celui qui demande « est-ce qu'on peut compter
+les lettres ? » a posé la question de la séance suivante — notez son nom.</p>
 
 <h2>Corrigé — partie 4 : LE PROJET (le code officiel de la séance)</h2>
 <div class="code">print("===================================")
@@ -164,10 +194,15 @@ c'est le Filet. Personne ne commence la séance 4 en retard.</div>
   <tr><td>La grille de travers</td><td>« Compte les espaces. L'ordinateur affiche exactement ce que tu écris, ni plus ni moins »</td></tr>
 </table>
 
-<p><b>⭐ Allez plus loin 4 :</b> 1) <span class="mono">joueur1.upper()</span> · 2) une troisième
-<span class="mono">input</span> et une ligne de plus · 3) remplacer les points par
+<p><b>⭐ Allez plus loin 4 :</b> 1) <b>la carte des joueurs</b> — deux <span class="mono">input</span> de
+plus pour les villes, puis des <span class="mono">print</span> encadrés qui collent nom, symbole et ville ·
+2) une troisième question « qui commence ? » et une ligne de plus · 3) remplacer les points par
 <span class="mono">1</span> à <span class="mono">9</span> dans les cinq lignes de la grille · 4) quatre
 <span class="mono">print</span> avant la grille.</p>
+<div class="cle"><b>Aucun de ces défis n'introduit de notion nouvelle.</b> Tout se fait avec
+<span class="mono">print</span>, les variables, <span class="mono">input</span> et le
+<span class="mono">+</span>. Si un élève réclame plus, donnez-lui le défi b) de l'étoile 2 — l'échange des
+deux boîtes — c'est le plus difficile de la feuille.</div>
 
 <h2>Corrigé — partie 5 : la chasse aux bugs</h2>
 <table>

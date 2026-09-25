@@ -76,7 +76,7 @@
   <li><b>Tu travailles seul</b>, à ton rythme. Le professeur passe régulièrement : il ne fera pas à ta place, il te fera lire ton erreur.</li>
   <li><b>Tu coches chaque exercice réussi</b> sur cette feuille. Elle est à toi, tu l'emportes.</li>
   <li><b>Tu relances (F5) après chaque changement</b>, et tu sauvegardes (Ctrl + S) après chaque exercice.</li>
-  <li><b>Bloqué ?</b> 1) je relis la consigne · 2) je lis le message rouge et je cherche la ligne · 3) je regarde le tableau des erreurs, dernière page · 4) <b>seulement après</b>, je lève la carte orange.</li>
+  <li><b>Bloqué ?</b> 1) je relis la consigne · 2) je lis le message rouge et je cherche la ligne · 3) je regarde le tableau des erreurs, dernière page</li>
   <li>Les encadrés jaunes <b>⭐ ALLEZ PLUS LOIN</b> sont <b>facultatifs</b> : ils sont là pour ceux qui finissent avant. Personne n'est en retard s'il ne les fait pas.</li>
 </ul>
 </div>
@@ -149,7 +149,7 @@ J'ai 15 ans
 J'habite a Casablanca</div>
   <div class="att"><b>Attention :</b> mets ton âge <b>entre guillemets</b> :
      <span class="mono">age = "15"</span>. Sans guillemets, c'est un nombre, et Python refuse de coller
-     un nombre à du texte. Tu verras pourquoi dans l'encadré jaune plus bas.</div>
+     un nombre à du texte, et il te le dira en rouge.</div>
 </div>
 
 <div class="exo">
@@ -171,19 +171,25 @@ print(message)</div>
 </div>
 
 <div class="plus">
-  <span class="t">⭐ ALLEZ PLUS LOIN 2</span>
-  <p><b>a)</b> Python sait transformer un texte. Essaie :</p>
-  <div class="code">print(prenom.upper())     <span style="color:#a65d00">→ tout en MAJUSCULES</span>
-print(prenom.lower())     <span style="color:#a65d00">→ tout en minuscules</span>
-print(len(prenom))        <span style="color:#a65d00">→ le nombre de lettres</span></div>
-  <p><b>b) Provoque l'erreur exprès.</b> Enlève les guillemets autour de ton âge
-     (<span class="mono">age = 15</span>) et relance. Tu obtiens une erreur rouge :
-     <span class="mono">TypeError</span>. Recopie ici le mot qui suit <span class="mono">TypeError</span> :</p>
-  <p><span class="ligne" style="min-width:120mm"></span></p>
-  <p style="margin-bottom:0">Puis répare, sans remettre les guillemets, avec <span class="mono">str()</span> —
-     qui veut dire « traite ce nombre comme du texte » :</p>
-  <div class="code">age = 15
-print("J'ai " + str(age) + " ans")</div>
+  <span class="t">⭐ ALLEZ PLUS LOIN 2 — deux défis sur les boîtes</span>
+  <p><b>a) Range la grille dans des boîtes.</b> Au lieu de recopier les mêmes lignes, prépare-les une fois
+     et sers-t'en plusieurs fois :</p>
+  <div class="code">ligne = " . | . | ."
+separateur = "---+---+---"
+
+print(ligne)
+print(separateur)
+print(ligne)</div>
+  <p>Complète pour afficher <b>la grille entière</b> (trois lignes et deux séparateurs) en n'écrivant
+     le dessin <b>qu'une seule fois</b>. Tu viens de gagner du temps pour la partie 4.</p>
+  <p><b>b) Échange les deux boîtes.</b> Écris :</p>
+  <div class="code">boite1 = "X"
+boite2 = "O"</div>
+  <p style="margin-bottom:0">Ton défi : après ton code, <span class="mono">boite1</span> doit contenir
+     <span class="mono">O</span> et <span class="mono">boite2</span> doit contenir
+     <span class="mono">X</span> — et tu dois le prouver avec deux <span class="mono">print</span>.
+     <b>Attention au piège :</b> si tu écris directement <span class="mono">boite1 = boite2</span>, tu
+     perds le X pour toujours. Il te faut une <b>troisième boîte</b>.</p>
 </div>
 
 <h2>Partie 3 — Le programme te parle : <span class="mono" style="font-size:12pt">input</span> <span class="min">25 min</span></h2>
@@ -225,15 +231,21 @@ Plat prefere: couscous
 </div>
 
 <div class="plus">
-  <span class="t">⭐ ALLEZ PLUS LOIN 3</span>
-  <p><b>Calculer avec une réponse.</b> Ce que tape le joueur est <b>toujours du texte</b>, même quand il
-     tape un nombre. Pour calculer, il faut d'abord le transformer en nombre avec
-     <span class="mono">int()</span> :</p>
-  <div class="code">age = input("Quel age as-tu ? ")
-age = int(age)                      <span style="color:#a65d00">→ maintenant c'est un vrai nombre</span>
-print("Dans 10 ans tu auras " + str(age + 10) + " ans")</div>
-  <p style="margin-bottom:0">Fais-le, puis ajoute : <b>l'année de ta naissance</b> (2026 moins ton âge).
-     Et pour finir : demande <b>deux nombres</b> au joueur et affiche leur somme.</p>
+  <span class="t">⭐ ALLEZ PLUS LOIN 3 — deux défis sur les questions</span>
+  <p><b>a) L'histoire folle.</b> Pose quatre questions au joueur — un <b>prénom</b>, un <b>animal</b>,
+     un <b>lieu</b>, un <b>objet</b> — puis raconte une histoire qui utilise <b>les quatre réponses</b>,
+     sur trois lignes au moins. Exemple de ce que ça peut donner :</p>
+  <div class="ecran">Un prenom ? <b>Joyce</b>
+Un animal ? <b>chameau</b>
+Un lieu ? <b>la piscine</b>
+Un objet ? <b>une calculatrice</b>
+
+Ce matin, Joyce est parti a la piscine.
+Sur le chemin, il a rencontre un chameau
+qui lui a vole une calculatrice !</div>
+  <p style="margin-bottom:0"><b>b) Le badge.</b> Demande son prénom au joueur, puis affiche-lui un badge
+     encadré, avec son prénom au milieu. Le cadre doit rester droit quelle que soit la longueur du
+     prénom — regarde ce qui se passe avec un prénom très court, puis très long, et débrouille-toi.</p>
 </div>
 
 <h2>Partie 4 — LE PROJET : le jeu XO rencontre ses joueurs <span class="min">35 min</span></h2>
@@ -301,8 +313,9 @@ c'est la validation de la séance. Ensuite seulement, les étoiles ci-dessous.</
 <div class="plus">
   <span class="t">⭐ ALLEZ PLUS LOIN 4 — quatre défis, dans l'ordre que tu veux</span>
   <ol style="margin-bottom:0">
-    <li><b>Les noms en majuscules</b> dans les deux lignes des symboles :
-        <span class="mono">JOYCE joue les X</span>. <i>(indice : <span class="mono">.upper()</span>)</i></li>
+    <li><b>La carte des joueurs.</b> Demande aussi <b>la ville</b> de chaque joueur, et affiche une carte
+        encadrée avant la grille :<br>
+        <span class="mono">| Joyce (X) — Casablanca |</span></li>
     <li><b>Qui commence ?</b> Pose une troisième question au joueur, et affiche
         <span class="mono">C'est Joyce qui commence !</span></li>
     <li><b>Un plateau numéroté</b> : remplace les points par les numéros 1 à 9, pour que les joueurs
@@ -346,12 +359,6 @@ print("Bonjour " + Nom)</div>
   <p style="margin-bottom:0">Ce qui ne va pas : <span class="ligne" style="min-width:120mm"></span></p>
 </div>
 
-<div class="plus">
-  <span class="t">⭐ ALLEZ PLUS LOIN 5</span>
-  <p style="margin-bottom:0"><b>À ton tour de casser.</b> Écris sur une feuille un programme de trois lignes
-     avec <b>une seule</b> erreur dedans, donne-la à ton voisin, et vois s'il la trouve. Puis échangez.
-     Celui qui trouve explique <b>ce que dit le message rouge</b>, pas seulement la correction.</p>
-</div>
 
 <h2>Bilan — à remplir avant de partir <span class="min">5 min</span></h2>
 
@@ -365,16 +372,13 @@ print("Bonjour " + Nom)</div>
   <tr><td>Lire un message rouge et trouver ce qui ne va pas</td><td></td><td></td></tr>
 </table>
 
-<p style="margin-top:2.5mm"><b>Ce que j'ai trouvé le plus facile :</b> <span class="ligne" style="min-width:120mm"></span></p>
-<p><b>Ce que je n'ai pas bien compris :</b> <span class="ligne" style="min-width:122mm"></span></p>
-<p><b>Nombre d'étoiles ⭐ terminées :</b> <span class="ligne" style="min-width:20mm"></span> / 5</p>
 
 <h2>Si ça ne marche pas — le tableau des erreurs</h2>
 <table>
   <tr><th style="width:26%">Ce qui s'affiche</th><th style="width:34%">Ce que ça veut dire</th><th>Ce que je fais</th></tr>
   <tr><td class="mono">SyntaxError</td><td>« Je ne comprends pas ta phrase »</td><td>Je compte mes guillemets (ils vont par deux) et je ferme ma parenthèse. Je regarde <b>aussi la ligne d'au-dessus</b></td></tr>
   <tr><td class="mono">NameError</td><td>« Je ne connais pas ce mot »</td><td>Du texte sans guillemets ? Une boîte mal orthographiée ? <span class="mono">nom</span> et <span class="mono">Nom</span>, ce n'est pas pareil</td></tr>
-  <tr><td class="mono">TypeError</td><td>« Tu mélanges du texte et un nombre »</td><td>J'écris le nombre entre guillemets, ou j'utilise <span class="mono">str()</span></td></tr>
+  <tr><td class="mono">TypeError</td><td>« Tu mélanges du texte et un nombre »</td><td>J'écris le nombre <b>entre guillemets</b> : <span class="mono">age = "15"</span></td></tr>
   <tr><td>Rien ne se passe</td><td>J'ai écrit dans la zone grise du bas</td><td>Je remonte dans la zone blanche, en haut</td></tr>
   <tr><td>Le texte est collé</td><td>Il manque un espace dans mes guillemets</td><td><span class="mono">"Bonjour "</span> et non <span class="mono">"Bonjour"</span></td></tr>
 </table>
