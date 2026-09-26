@@ -6,7 +6,7 @@ Une séance = un dossier. Tout ce qui la concerne est dedans, et rien d'autre.
 |---|---|---|
 | **[S01 — Le Décollage](S01-decollage/compte-rendu.md)** · samedi 12 septembre 2026 | *(faite)* La théorie et les missions de décollage | Pourquoi et comment on code · l'algorithme |
 | **[S02 — Premier contact machine](S02-premier-contact/fiche-de-seance.md)** · samedi 19 septembre 2026 | L'écran d'accueil, **et le jeu demande ton nom** | `print()` · la variable · `input()` · lire une erreur |
-| **[S03 — TP n°1 : les deux joueurs](S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md)** · samedi 26 septembre 2026 | Le jeu demande le nom des **deux** joueurs et attribue X et O | TP de 2 h, en autonomie · révision de `print`, variables, `input` |
+| **[S03 — TP n°1 : les deux joueurs](S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md)** · samedi 26 septembre 2026 | Le jeu demande le nom des **deux** joueurs et attribue X et O | TP de 2 h, en autonomie · quiz flash de rappel · `print`, variables, `input` |
 | S04 à S22 | *à venir* | |
 
 > **La séance 1 s'est arrêtée après les missions de décollage.** Le premier contact machine, le Kahoot,

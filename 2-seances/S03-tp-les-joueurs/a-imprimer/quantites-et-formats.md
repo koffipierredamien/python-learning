@@ -8,6 +8,18 @@
 > Le TP se fait **sur papier + machine** : les élèves lisent la feuille et tapent eux-mêmes leur code.
 > Aucun fichier `.py` n'est distribué — c'est voulu, ils écrivent tout.
 
+## À projeter avant de lancer le TP
+
+**[`../a-projeter/quiz-rappel.pptx`](../a-projeter/quiz-rappel.pptx)** — 10 questions, **8 minutes**,
+avec les cartes de couleur. Il remet en tête exactement ce dont ils ont besoin dans la feuille.
+La dernière diapositive, **« AU TRAVAIL ! »**, donne les cinq gestes de démarrage : on la laisse
+affichée toute la séance.
+
+> **Le quiz décale tout de 8 minutes.** Les repères de temps du corrigé partent de 12 h 15 :
+> avec le quiz, comptez 12 h 25 pour la fin de la partie 0, et **13 h 55 au lieu de 13 h 50**
+> pour la validation de la partie 4. Si vous voulez garder les repères tels quels, gardez les
+> **6 premières questions** et sautez les quatre dernières.
+
 ## Ce qui doit être en place
 
 - **Thonny installé et vérifié** sur chaque poste, police en taille 18 minimum ;

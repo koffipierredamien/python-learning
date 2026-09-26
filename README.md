@@ -35,6 +35,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 | J'ai besoin de… | C'est ici |
 |---|---|
+| Lancer la séance | [🎯 Le quiz flash](2-seances/S03-tp-les-joueurs/a-projeter/quiz-rappel.pptx) — 10 questions, 8 min, avec les cartes |
 | Le TP des élèves | [📄 TP n°1 — les deux joueurs](2-seances/S03-tp-les-joueurs/a-imprimer/1-tp-jeremiah.pdf) — 6 pages, 1 par élève |
 | Le corrigé et la conduite de séance | [🔑 Pour l'enseignant](2-seances/S03-tp-les-joueurs/a-imprimer/2-corrige-enseignant.pdf) — 4 pages, à ne pas distribuer |
 | Savoir quoi imprimer | [🖨️ Les quantités](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) |
