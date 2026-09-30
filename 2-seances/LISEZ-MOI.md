@@ -39,6 +39,7 @@ S02-premier-contact/
 │     deroule-seance-2.docx         le déroulé pour les responsables
 │     formulaire-de-revision.gs     fabrique le formulaire Google noté, en un clic
 │     formulaire-de-revision.md     le mode d'emploi, le message aux parents, les réponses
+│     (séance 3 : formulaire-exercices.gs — le test noté avec du code à écrire)
 │
 └── code/                  ce qui tourne sur les machines
       depart_eleves_piste_bleue.py   le fichier de l'élève
