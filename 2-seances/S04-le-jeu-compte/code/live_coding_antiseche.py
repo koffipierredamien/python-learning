@@ -3,16 +3,15 @@
 =============================================================================
   SEANCE 4  -  LE LIVE CODING DE L'ENSEIGNANT
 =============================================================================
-  DEUX DEMONSTRATIONS, DEUX ATELIERS :
+  TROIS NOTIONS, TROIS DEMONSTRATIONS COURTES :
 
-     12 h 25 - 12 h 40   etapes A, B, C   ->  texte ou nombre ? int()
-     12 h 40 - 13 h      les eleves font la calculatrice d'age
-     13 h 10 - 13 h 25   etapes D, E      ->  le compteur de tours
-     13 h 25 - 13 h 50   les eleves font le projet
+     12 h 22 - 12 h 35   etapes A, B, C   ->  int() et str()
+     12 h 35 - 12 h 50   atelier 1 : la calculatrice d'age
+     12 h 50 - 13 h      etape D          ->  le compteur
+     13 h 10 - 13 h 30   etapes E, F, G   ->  comparer, puis decider
+     13 h 30 - 13 h 52   atelier 2 : le projet
 
   REGLE D'OR : "JE CODE, VOUS PREDISEZ."
-  Avant CHAQUE execution, on demande a la classe ce qui va s'afficher.
-
   AVANT LA SEANCE : police de Thonny en taille 18 minimum.
 =============================================================================
 """
@@ -20,109 +19,119 @@
 # =============================================================================
 #  ETAPE A  (4 min)  -  input() REND TOUJOURS DU TEXTE
 # =============================================================================
-#  Vous tapez devant eux :
-
 age = input("Quel age as-tu ? ")
 print(age)
 
-#  Ca marche. Tout le monde est content. Puis vous ajoutez UNE ligne :
+#  Puis vous ajoutez UNE ligne, et vous demandez avant de lancer :
+#  print(age + 10)        <-- ERREUR ROUGE : TypeError
 #
-#  >>> AVANT DE LANCER : "qu'est-ce qui va s'afficher ? 25 ? ou autre chose ?"
-
-#  print(age + 10)        <-- a taper devant eux : ERREUR ROUGE
-#
-#    "TypeError. Il dit : can only concatenate str to str.
-#     str, c'est string : du TEXTE. Il me dit qu'il ne sait pas ajouter
-#     un nombre a du texte.
-#     Pourtant j'ai tape 15 ! Oui... mais input rend TOUJOURS du texte.
-#     Meme quand vous tapez un nombre. C'est LA chose a retenir aujourd'hui."
+#    "str, c'est string : du TEXTE. input rend TOUJOURS du texte,
+#     meme quand vous tapez un nombre."
 
 
 # =============================================================================
-#  ETAPE B  (4 min)  -  int() : LE TRADUCTEUR
+#  ETAPE B  (4 min)  -  int() ET str()
 # =============================================================================
-#     "Il existe un mot pour dire : traite ca comme un NOMBRE. C'est int."
-
 age = input("Quel age as-tu ? ")
 age = int(age)
 print(age + 10)
+print("Dans 10 ans tu auras " + str(age + 10) + " ans")
 
-#  >>> AVANT DE LANCER : "et maintenant, ca va marcher ?"
-#
-#    "int, c'est integer : nombre entier. La boite contenait du texte,
-#     maintenant elle contient un nombre. Et avec un nombre, on peut calculer."
-#
-#  Montrez la ligne 'age = int(age)' et dites-la a voix haute :
-#     "range dans age, la version NOMBRE de ce qu'il y a dans age."
+#    "int : traite ca comme un NOMBRE, pour calculer.
+#     str : traite ca comme du TEXTE, pour coller avec le +."
 
 
 # =============================================================================
-#  ETAPE C  (3 min)  -  L'ERREUR VOLONTAIRE DU JOUR
+#  ETAPE C  (3 min)  -  L'ERREUR VOLONTAIRE : on tape  douze
 # =============================================================================
-#  Vous relancez le meme programme, et vous tapez  douze  au lieu de  12.
-#
-#    "ValueError. Il dit : invalid literal for int.
-#     Traduction : je t'ai demande de transformer ca en nombre,
-#     et tu m'as donne 'douze'. Je ne sais pas faire.
-#     Retenez : int() ne marche que si ce qui est tape est bien un nombre."
-#
-#  >>> Ne cherchez pas a reparer : on verra comment se proteger plus tard.
-#      Aujourd'hui, on constate, et on sait lire le message.
+#    "ValueError : invalid literal for int. Je t'ai demande un nombre,
+#     tu m'as donne un mot. Je ne sais pas faire."
+#  >>> ON NE REPARE PAS : se proteger demande une condition... qu'on voit
+#      justement dans une heure. Dites-le-leur, ca cree l'attente.
 
 
 # =============================================================================
-#  ETAPE D  (5 min)  -  LE COMPTEUR : tour = tour + 1
+#  ETAPE D  (8 min)  -  LE COMPTEUR  (apres l'atelier 1)
 # =============================================================================
-#  D'abord SANS machine, avec les mains :
-#     "J'ai une boite 'tour'. Dedans, il y a 0.
-#      Je prends ce qu'il y a dedans, j'ajoute 1, et je remets le tout
-#      dans la MEME boite. Elle contient maintenant 1."
+#  D'abord SANS machine, avec une vraie boite et des papiers :
+#     "Je prends ce qu'il y a dedans, j'ajoute 1, je REMETS dans la meme boite."
 
 tour = 0
 tour = tour + 1
-print(tour)
-
-#  >>> AVANT DE LANCER : "qu'est-ce qui s'affiche ? 0 ou 1 ?"
-#
-#  Puis vous ajoutez deux fois la meme ligne, et vous redemandez :
-
-tour = tour + 1
 tour = tour + 1
 print(tour)
 
-#    "La ligne est TOUJOURS la meme, et pourtant le resultat change a chaque
-#     fois. C'est normal : elle ne dit pas 'tour egale 1'. Elle dit
-#     'range dans tour, ce qu'il y a dans tour, PLUS un'.
-#     Le signe = n'est pas 'egal'. C'est 'range dans'."
-#
-#  C'EST LE POINT LE PLUS IMPORTANT DE LA SEANCE. Allez lentement.
+#  >>> AVANT DE LANCER : "0, 1, ou 2 ?"
+#    "La ligne est TOUJOURS la meme et le resultat change. Le signe =
+#     n'est pas 'egal'. C'est 'RANGE DANS'."
 
 
 # =============================================================================
-#  ETAPE E  (3 min)  -  AFFICHER UN NOMBRE DANS UNE PHRASE
+#  ETAPE E  (5 min)  -  COMPARER : une question qui n'a que deux reponses
 # =============================================================================
-#     "Attention : pour coller un nombre a du texte, il faut refaire
-#      le chemin dans l'autre sens. str() : traite ca comme du texte."
+print(5 > 3)
+print(5 < 3)
+print(5 == 5)
+print(5 != 5)
 
-tour = 3
-print("Tour numero " + str(tour))
-
-#  Montrez l'oubli une fois : print("Tour numero " + tour) -> TypeError.
-#     "Le meme message rouge que tout a l'heure. Vous le connaissez
-#      maintenant : il parle de texte et de nombre melanges."
+#  >>> AVANT DE LANCER : "qu'est-ce que ca peut bien afficher ?"
 #
-#  >>> ET C'EST TOUT. On les envoie faire le projet.
+#    "True, False. Vrai, faux. Une comparaison ne donne jamais un nombre :
+#     elle donne une REPONSE a une question fermee."
+#
+#  LE PIEGE A MONTRER TOUT DE SUITE :
+#     =   c'est RANGE DANS       (age = 15)
+#     ==  c'est EST-CE EGAL A ?  (age == 15)
+#  Ecrivez les deux au tableau, l'un sous l'autre. Laissez-les affiches.
+
+
+# =============================================================================
+#  ETAPE F  (8 min)  -  DECIDER : if / else
+# =============================================================================
+age = int(input("Quel age as-tu ? "))
+
+if age > 17:
+    print("Tu es un Jeremiah Geek !")
+else:
+    print("Tu es un Jerusalem Geek !")
+
+#  Vous tapez TRES lentement, en nommant chaque geste :
+#     "if, deux-points. Je passe a la ligne. Et maintenant, REGARDEZ :
+#      Thonny m'a decale de quatre espaces tout seul. Ce decalage n'est pas
+#      de la decoration : c'est lui qui dit CE QUI EST DANS le if.
+#      else, deux-points, et on redecale."
+#
+#  >>> On lance DEUX fois, avec deux ages differents. C'est la demonstration :
+#      le MEME programme ne fait pas la meme chose.
+
+
+# =============================================================================
+#  ETAPE G  (4 min)  -  L'ERREUR VOLONTAIRE DU BLOC
+# =============================================================================
+#  Vous effacez le decalage de la ligne qui suit le if :
+#
+#       if age > 17:
+#       print("Tu es un Jeremiah Geek !")        <-- collee a gauche
+#
+#    "IndentationError : expected an indented block.
+#     Il me dit : apres les deux-points, il faut DECALER.
+#     Sans le decalage, il ne sait pas ce qui appartient au if."
+#
+#  Remettez les 4 espaces devant eux, relancez, ca marche.
+#  >>> C'est l'erreur qu'ils verront le plus aujourd'hui. Qu'ils la voient
+#      d'abord sur VOTRE ecran, calmement.
 
 
 # =============================================================================
 #  LES ERREURS QUI VONT ARRIVER PENDANT LES ATELIERS
 # =============================================================================
-#   TypeError .......... un nombre colle a du texte sans str(),
-#                        ou du texte utilise dans un calcul sans int().
-#   ValueError ......... int() sur quelque chose qui n'est pas un nombre.
-#                        "Qu'est-ce que tu as tape ? Relance et tape un chiffre."
-#   Le compteur reste a 1 ... l'eleve a ecrit tour = 1 au lieu de tour = tour + 1.
-#                        "Relis ta ligne a voix haute : range dans tour... quoi ?"
+#   TypeError .............. texte et nombre melanges : int() ou str().
+#   ValueError ............. int() sur un mot.
+#   IndentationError ....... il manque les 4 espaces apres les deux-points.
+#   SyntaxError sur le if .. les deux-points oublies, ou = au lieu de ==.
+#   Le compteur reste a 1 .. tour = 1 au lieu de tour = tour + 1.
+#   Les deux messages s'affichent ... l'eleve a mis deux print dans le if,
+#                            au lieu d'un dans le if et un dans le else.
 #
 #  Le dictionnaire complet : 1-methode/annexes/dictionnaire-des-erreurs.pdf
 # =============================================================================

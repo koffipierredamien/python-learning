@@ -7,12 +7,13 @@ Une séance = un dossier. Tout ce qui la concerne est dedans, et rien d'autre.
 | **[S01 — Le Décollage](S01-decollage/compte-rendu.md)** · samedi 12 septembre 2026 | *(faite)* La théorie et les missions de décollage | Pourquoi et comment on code · l'algorithme |
 | **[S02 — Premier contact machine](S02-premier-contact/fiche-de-seance.md)** · samedi 19 septembre 2026 | L'écran d'accueil, **et le jeu demande ton nom** | `print()` · la variable · `input()` · lire une erreur |
 | **[S03 — TP n°1 : les deux joueurs](S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md)** · samedi 26 septembre 2026 | Le jeu demande le nom des **deux** joueurs et attribue X et O | TP de 2 h, en autonomie · quiz flash de rappel · `print`, variables, `input` |
-| **[S04 — Le jeu compte les tours](S04-le-jeu-compte/fiche-de-seance.md)** · samedi 3 octobre 2026 | Le plateau **numéroté**, la case demandée, le **compteur de tours** | `int()` · `str()` · `tour = tour + 1` |
+| **[S04 — Le jeu vérifie et compte](S04-le-jeu-compte/fiche-de-seance.md)** · samedi 3 octobre 2026 | Le plateau **numéroté**, la case demandée, le **compteur**, et la case qui n'existe pas **refusée** | `int()` · `str()` · `tour = tour + 1` · `>` `<` `==` · **`if` / `else`** |
 | S05 à S22 | *à venir* | |
 
 > **La séance 1 s'est arrêtée après les missions de décollage.** Le premier contact machine, le Kahoot,
-> la clôture et la méthode de travail n'ont pas eu lieu : ils sont repris dans la séance 2, et le reste
-> du parcours décale d'une séance.
+> la clôture et la méthode de travail ont été repris dans la séance 2. Le samedi ainsi perdu est
+> **récupéré à partir de la séance 4**, qui porte trois notions au lieu de deux : la phase 1 du parcours
+> passe de quatre séances à trois.
 
 ---
 

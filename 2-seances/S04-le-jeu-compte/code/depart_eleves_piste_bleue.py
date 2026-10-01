@@ -1,15 +1,15 @@
 # =====================================================
 #  JEU XO  -  Seance 4  -  PISTE BLEUE
-#  Le jeu compte les tours
+#  Le jeu verifie et compte
 # =====================================================
 #
 #  COMMENT FAIRE :
 #  1. Appuie tout de suite sur F5. Le programme marche deja :
 #     c'est celui de samedi dernier.
-#  2. Ensuite, remplace chaque  ____  par ce qu'on te demande.
+#  2. Remplace chaque  ____  par ce qu'on te demande.
 #  3. Relance apres CHAQUE changement. Toujours.
 #
-#  >>> ON NE FAIT LA PARTIE 2 QU'APRES L'EXPLICATION DU PROFESSEUR.
+#  >>> TROIS PARTIES. On n'attaque la suivante qu'apres l'explication.
 # =====================================================
 
 print("===================================")
@@ -39,8 +39,7 @@ print("---+---+---")
 print(" . | . | . ")
 print("")
 
-
-#  >>> ARRETE-TOI ICI. Carte VERTE si ca marche, et attends.
+#  >>> CARTE VERTE, et on attend.
 
 
 # -----------------------------------------------------
@@ -50,7 +49,6 @@ print("")
 # ETAPE 3 : le compteur part de zero.
 tour = ____
 
-# --- tour du joueur 1 --------------------------------
 case = input(joueur1 + ", quelle case veux-tu jouer ? ")
 
 # ETAPE 4 : le joueur a tape du TEXTE. Transforme-le en NOMBRE.
@@ -62,19 +60,36 @@ tour = ____ + 1
 print(joueur1 + " joue la case " + str(case) + "   (tour numero " + str(tour) + ")")
 print("")
 
-# --- tour du joueur 2 --------------------------------
-# ETAPE 6 : recopie les quatre lignes du joueur 1, en remplacant
-#           joueur1 par joueur2. Le compteur, lui, continue : il ne
-#           repart PAS de zero.
+#  >>> CARTE VERTE, et on attend.
 
 
-# ETAPE 7 : affiche combien de cases restent libres.
-#           Il y en a 9 au depart, et on en a joue "tour".
+# -----------------------------------------------------
+#  PARTIE 3 : le jeu REFLECHIT avant d'accepter
+# -----------------------------------------------------
+
+# ETAPE 6 : remonte dans la PARTIE 2 et transforme-la comme ceci.
+#           Attention aux deux-points et au decalage de 4 espaces !
+#
+#       if case > 9:
+#           print("La case " + str(case) + " n'existe pas ! Choisis entre 1 et 9.")
+#       else:
+#           tour = tour + 1
+#           print(joueur1 + " joue la case " + str(case) + "   (tour numero " + str(tour) + ")")
+#
+#  Teste les DEUX chemins : tape 5, puis relance et tape 12.
+
+
+# ETAPE 7 : recopie tout le bloc pour le joueur 2.
+#           Le compteur, lui, continue : il ne repart PAS de zero.
+
+
+# ETAPE 8 : a la toute fin, affiche le bilan.
+print("Coups valides joues : " + str(____))
 print("Il reste " + str(9 - ____) + " cases libres.")
 
 
 # =====================================================
 #  TU AS FINI ? LEVE LA CARTE BLEUE.
-#  Le defi en plus : demande leur age aux deux joueurs,
-#  et affiche lequel est le plus age.
+#  Le defi en plus : et si le joueur tape 0, ou -3 ?
+#  Ajoute un troisieme cas avec  elif case < 1:
 # =====================================================

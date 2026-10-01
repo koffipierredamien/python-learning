@@ -30,15 +30,16 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 👉 **[2-seances/S04-le-jeu-compte/](2-seances/S04-le-jeu-compte/fiche-de-seance.md)**
 
-> **« Le jeu compte les tours. »** Deux notions : `int()` — pourquoi `"3" + "4"` donne `34` — et le
-> compteur `tour = tour + 1`, qui est le socle des boucles. Même structure qu'à la séance 2 :
-> je montre, vous faites. Deux fois.
+> **« Le jeu vérifie et compte. »** Trois notions enchaînées : `int()` / `str()` — pourquoi `"3" + "4"`
+> donne `34` — le compteur `tour = tour + 1`, socle des boucles, et surtout **`if` / `else`**, le moment
+> où le programme se met à décider. Structure : je montre, vous faites — trois leçons courtes,
+> deux ateliers.
 
 | J'ai besoin de… | C'est ici |
 |---|---|
 | Animer la séance | [📖 La fiche de séance](2-seances/S04-le-jeu-compte/fiche-de-seance.md) — minute par minute |
-| Projeter | [📺 Le diaporama](2-seances/S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — 19 diapos, notes incluses |
-| Ouvrir la séance | [🎯 Le quiz flash](2-seances/S04-le-jeu-compte/a-projeter/quiz-rappel.pptx) — 8 questions, 10 min |
+| Projeter | [📺 Le diaporama](2-seances/S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — 22 diapos, notes incluses |
+| Ouvrir la séance | [🎯 Le quiz flash](2-seances/S04-le-jeu-compte/a-projeter/quiz-rappel.pptx) — 6 questions, 7 min |
 | Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S04-le-jeu-compte/code/live_coding_antiseche.py) — à faire la veille, à voix haute |
 | Imprimer | [🖨️ Un seul document](2-seances/S04-le-jeu-compte/a-imprimer/quantites-et-formats.md) |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word](2-seances/S04-le-jeu-compte/a-envoyer/deroule-seance-4.docx) |
@@ -71,15 +72,16 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | Phase | Séances | Brique ajoutée au jeu | Notions |
 |---|---|---|---|
 | 0. Décollage | 1–2 | L'écran d'accueil, et le jeu demande ton nom | théorie de base · l'algorithme · `print()` · la variable · `input()` |
-| 1. Parler au joueur | 3–6 | Le jeu parle aux deux joueurs, et compte | variables, `input()`, `int()`, le compteur |
-| 2. Le plateau vit | 7–10 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
-| 3. Les règles du jeu | 11–14 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
-| 4. L'interface graphique | 15–19 | Fenêtre, grille cliquable, design | Tkinter, événements |
-| 5. Finition & intelligence | 20–22 | Score, sons, **IA**, distribution | organisation du code, algorithmes |
+| 1. Parler au joueur | 3–5 | Le jeu parle aux deux joueurs, compte, et décide | variables, `input()`, `int()`, le compteur, `if` / `else` |
+| 2. Le plateau vit | 6–9 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
+| 3. Les règles du jeu | 10–13 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
+| 4. L'interface graphique | 14–18 | Fenêtre, grille cliquable, design | Tkinter, événements |
+| 5. Finition & intelligence | 19–22 | Score, sons, **IA**, distribution | organisation du code, algorithmes |
 
 Les rendez-vous : **S9** première démo jouable · **S15** concours de design ·
-**S19** la Nuit du bug · **S22** tournoi XO et démo aux familles.
-*(Le parcours a décalé d'une séance : la séance 1 n'a pas pu aller jusqu'au bout.)*
+**S18** la Nuit du bug · **S22** tournoi XO et démo aux familles.
+*(La séance 1 n'a pas pu aller jusqu'au bout : le samedi perdu est récupéré en densifiant la phase 1,
+qui passe de quatre séances à trois.)*
 
 ---
 
@@ -91,7 +93,7 @@ Les rendez-vous : **S9** première démo jouable · **S15** concours de design �
 - [x] Séance 2 : fiche, diaporama de 28 diapos, quiz, aide-mémoire machine, code, déroulé Word
 - [x] Le dictionnaire des erreurs, complet pour tout le parcours
 - [x] Séance 3 : le TP de 2 h en autonomie (feuille élève + corrigé enseignant)
-- [x] Séance 4 : fiche, diaporama de 19 diapos, quiz flash, aide-mémoire, code, déroulé Word
+- [x] Séance 4 : fiche, diaporama de 22 diapos, quiz flash, aide-mémoire, code, déroulé Word
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture)
 - [ ] Séances 5 à 22

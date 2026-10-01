@@ -35,9 +35,9 @@ La version à imprimer, avec la colonne à cocher : **[`dictionnaire-des-erreurs
 
 | ✓ | Ce que l'ordinateur écrit | Ce qu'il veut dire | Ce que je fais | Vers |
 |---|---|---|---|---|
-| ☐ | `IndentationError: expected an indented block` | « Après les deux-points, il faut décaler » | Je décale la ligne de **4 espaces** | S7 |
-| ☐ | `IndentationError: unexpected indent` | « Cette ligne est décalée sans raison » | Je la remets au bord | S7 |
-| ☐ | `TabError` | « Tu mélanges tabulations et espaces » | J'efface le début de la ligne et je remets **4 espaces** | S7 |
+| ☐ | `IndentationError: expected an indented block` | « Après les deux-points, il faut décaler » | Je décale la ligne de **4 espaces** | S4 |
+| ☐ | `IndentationError: unexpected indent` | « Cette ligne est décalée sans raison » | Je la remets au bord | S4 |
+| ☐ | `TabError` | « Tu mélanges tabulations et espaces » | J'efface le début de la ligne et je remets **4 espaces** | S4 |
 
 ## 4. Les listes et le plateau
 
@@ -51,7 +51,8 @@ La version à imprimer, avec la colonne à cocher : **[`dictionnaire-des-erreurs
 
 | ✓ | Ce que l'ordinateur écrit | Ce qu'il veut dire | Ce que je fais | Vers |
 |---|---|---|---|---|
-| ☐ | `SyntaxError` sur un `if` | J'ai écrit `=` au lieu de `==` | `=` donne une valeur, `==` compare deux valeurs | S10 |
+| ☐ | `SyntaxError` sur un `if` | J'ai écrit `=` au lieu de `==`, ou j'ai oublié les deux-points | `=` **range dans**, `==` **compare** | S4 |
+| ☐ | Les **deux** messages s'affichent | Mes deux `print` sont dans le `if`, aucun dans le `else` | Je relis le décalage : un dans le `if`, un dans le `else` | S4 |
 | ☐ | Le programme ne s'arrête plus | Boucle sans fin : la condition reste vraie | `Ctrl + C` dans la zone du bas, puis je corrige ce qui doit changer dans la boucle | S11 |
 | ☐ | `TypeError: … missing 1 required positional argument` | « Il manque quelque chose entre les parenthèses » | Je regarde ce que la fonction attend | S12 |
 | ☐ | `UnboundLocalError` | « Tu utilises une variable avant de lui donner une valeur » | Je crée la variable avant de m'en servir | S13 |
