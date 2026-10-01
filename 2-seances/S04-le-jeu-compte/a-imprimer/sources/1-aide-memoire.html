@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Aide-mémoire — séance 4</title>
+<style>
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing:border-box; }
+  @page { size: A4 portrait; margin: 8mm 9mm; }
+  body { margin:0; font-family:"Trebuchet MS", Verdana, sans-serif; font-size:9.8pt; color:#14142b; }
+  .consigne { font-size:8.5pt; color:#333; border:1px dashed #999; padding:2mm; margin-bottom:3mm; }
+  h1 { font-size:16pt; margin:0 0 .8mm; text-align:center; }
+  .sur { text-align:center; font-size:9.5pt; color:#555; margin-bottom:2.5mm; }
+  h2 { font-size:11pt; background:#1a1a2e; color:#fff; padding:1.1mm 3mm; margin:3mm 0 1.4mm; border-radius:1.5mm; }
+  h2.o { background:#e07b1a; } h2.v { background:#2e9e52; }
+  .code { font-family:"Courier New",monospace; font-size:12.5pt; font-weight:bold; background:#f3f3f8;
+          border-left:2.5mm solid #6b2d8f; padding:1.8mm 2.6mm; text-align:center; margin:1.2mm 0; }
+  .legende { display:flex; gap:2.5mm; font-size:8.4pt; margin-top:.8mm; }
+  .legende > div { flex:1; border:.4mm solid #bbb; border-radius:1.5mm; padding:1.4mm; }
+  .legende b { color:#6b2d8f; }
+  .duo { display:flex; gap:3mm; margin-top:1.4mm; }
+  .duo > div { flex:1; border:.6mm solid #1a1a2e; border-radius:2mm; padding:2mm; font-size:9pt; }
+  .duo b.t { display:block; font-size:10.5pt; margin-bottom:1mm; }
+  .duo .ex { font-family:"Courier New",monospace; font-size:9.5pt; background:#f3f3f8; padding:1.2mm; margin-top:1mm; }
+  .cle { background:#fff6d8; border:.8mm solid #d79a00; border-radius:2mm; padding:2mm; font-size:10pt;
+         text-align:center; margin:1.6mm 0; }
+  .etapes { font-family:"Courier New",monospace; font-size:10.5pt; background:#12122a; color:#4fc3f7;
+            border-radius:1.5mm; padding:2.2mm 3mm; white-space:pre; line-height:1.4; margin:1.2mm 0; }
+  .etapes b { color:#ffb74d; font-weight:normal; }
+  table { width:100%; border-collapse:collapse; margin-top:1.2mm; }
+  td,th { border:1px solid #666; padding:1mm 1.6mm; font-size:8.6pt; vertical-align:top; text-align:left; }
+  th { background:#eee; }
+  .mono { font-family:"Courier New",monospace; font-weight:bold; }
+  @media print { .consigne { display:none; } }
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 1 exemplaire par poste, A4 recto. Posé à côté du clavier.</div>
+
+<h1>🔢 LE JEU COMPTE LES TOURS</h1>
+<div class="sur">Séance 4 — samedi 3 octobre 2026</div>
+
+<h2>La chose à retenir aujourd'hui</h2>
+<div class="cle"><b>input</b> rend <b>TOUJOURS du texte</b>. Même quand tu tapes un nombre.</div>
+<div class="duo">
+  <div><b class="t">🔤 Du texte → un nombre</b><b>int()</b> veut dire : traite ça comme un <b>nombre entier</b>.
+    On s'en sert pour <b>calculer</b>.<div class="ex">age = input("Ton age ? ")<br>age = int(age)<br>print(age + 10)</div></div>
+  <div><b class="t">🔢 Un nombre → du texte</b><b>str()</b> veut dire : traite ça comme du <b>texte</b>.
+    On s'en sert pour <b>coller avec +</b>.<div class="ex">tour = 3<br>print("Tour " + str(tour))</div></div>
+</div>
+
+<h2 class="v">Le compteur</h2>
+<div class="code">tour = tour + 1</div>
+<div class="cle">Le signe <b>=</b> ne veut pas dire « égal ». Il veut dire <b>« range dans »</b>.<br>
+Cette ligne dit : <b>range dans tour, ce qu'il y a dans tour, plus 1.</b></div>
+<div class="legende">
+  <div><b>tour = 0</b> → la boîte part de zéro. Une seule fois, au début !</div>
+  <div><b>tour = tour + 1</b> → à chaque coup joué. La même ligne, autant de fois qu'on veut.</div>
+  <div><b>9 - tour</b> → le nombre de cases qui restent libres.</div>
+</div>
+
+<h2>Le plateau numéroté</h2>
+<div class="etapes"> 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9</div>
+<div class="legende">
+  <div>Garde <b>exactement</b> les espaces : un seul de travers et la grille penche.</div>
+  <div>Les numéros servent au joueur à dire <b>où</b> il veut jouer.</div>
+  <div>Le jeu ne retient pas encore les coups : ça, c'est samedi prochain.</div>
+</div>
+
+<h2 class="o">Si l'écran devient rouge</h2>
+<table>
+  <tr><th style="width:24%">Ce qui s'affiche</th><th style="width:36%">Ce que ça veut dire</th><th>Ce que je fais</th></tr>
+  <tr><td class="mono">TypeError</td><td>Tu mélanges du texte et un nombre</td><td>Pour calculer : <span class="mono">int()</span>. Pour coller avec <span class="mono">+</span> : <span class="mono">str()</span></td></tr>
+  <tr><td class="mono">ValueError</td><td>Tu as demandé un nombre, et j'ai reçu du texte</td><td>Relance, et tape un <b>chiffre</b> — pas un mot</td></tr>
+  <tr><td class="mono">NameError</td><td>Je ne connais pas ce mot</td><td>Guillemets oubliés, ou boîte mal orthographiée : <span class="mono">tour</span> et <span class="mono">Tour</span>, ce n'est pas pareil</td></tr>
+  <tr><td>Le compteur reste à 1</td><td>Tu as écrit <span class="mono">tour = 1</span></td><td>C'est <span class="mono">tour = tour + 1</span>. Relis-la à voix haute</td></tr>
+</table>
+<div class="cle" style="margin-top:2.4mm">Le rouge n'est pas une punition. <b>Le rouge est une information.</b></div>
+</body></html>

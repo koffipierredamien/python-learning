@@ -10,7 +10,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
 | **Encadrement** | 2 enseignants — **un par classe**, les deux classes en parallèle |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
-| **Séance en préparation** | **Séance 3 — TP**, samedi 26 septembre 2026, 12 h - 14 h |
+| **Séance en préparation** | **Séance 4**, samedi 3 octobre 2026, 12 h - 14 h |
 
 ---
 
@@ -26,22 +26,23 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 ---
 
-## Samedi prochain : la séance 3 — le TP
+## Samedi prochain : la séance 4
 
-👉 **[2-seances/S03-tp-les-joueurs/](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md)**
+👉 **[2-seances/S04-le-jeu-compte/](2-seances/S04-le-jeu-compte/fiche-de-seance.md)**
 
-> **Séance en autonomie.** Les deux classes travaillent seules dans leur salle, chacune avec un enseignant
-> qui passe régulièrement. Pas de diaporama, pas de cours : une feuille de TP, et les machines.
+> **« Le jeu compte les tours. »** Deux notions : `int()` — pourquoi `"3" + "4"` donne `34` — et le
+> compteur `tour = tour + 1`, qui est le socle des boucles. Même structure qu'à la séance 2 :
+> je montre, vous faites. Deux fois.
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| Lancer la séance | [🎯 Le quiz flash](2-seances/S03-tp-les-joueurs/a-projeter/quiz-rappel.pptx) — 10 questions, 8 min, avec les cartes |
-| Le TP des élèves | [📄 TP n°1 — les deux joueurs](2-seances/S03-tp-les-joueurs/a-imprimer/1-tp-jeremiah.pdf) — 6 pages, 1 par élève |
-| Le corrigé et la conduite de séance | [🔑 Pour l'enseignant](2-seances/S03-tp-les-joueurs/a-imprimer/2-corrige-enseignant.pdf) — 4 pages, à ne pas distribuer |
-| Savoir quoi imprimer | [🖨️ Les quantités](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) |
-| Envoyer la révision aux parents | [📝 Le test n°2, noté, avec exercices de code](2-seances/S03-tp-les-joueurs/a-envoyer/formulaire-exercices.md) |
-| Revoir la séance précédente | [📖 La fiche de la séance 2](2-seances/S02-premier-contact/fiche-de-seance.md) |
-| Remettre le règlement aux familles | [📜 Le règlement intérieur](0-administratif/reglement-interieur-a-partager.pdf) |
+| Animer la séance | [📖 La fiche de séance](2-seances/S04-le-jeu-compte/fiche-de-seance.md) — minute par minute |
+| Projeter | [📺 Le diaporama](2-seances/S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — 19 diapos, notes incluses |
+| Ouvrir la séance | [🎯 Le quiz flash](2-seances/S04-le-jeu-compte/a-projeter/quiz-rappel.pptx) — 8 questions, 10 min |
+| Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S04-le-jeu-compte/code/live_coding_antiseche.py) — à faire la veille, à voix haute |
+| Imprimer | [🖨️ Un seul document](2-seances/S04-le-jeu-compte/a-imprimer/quantites-et-formats.md) |
+| Envoyer le programme au responsable | [📋 Le déroulé en Word](2-seances/S04-le-jeu-compte/a-envoyer/deroule-seance-4.docx) |
+| Revoir le TP de samedi dernier | [📄 La séance 3](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) |
 
 ---
 
@@ -70,7 +71,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | Phase | Séances | Brique ajoutée au jeu | Notions |
 |---|---|---|---|
 | 0. Décollage | 1–2 | L'écran d'accueil, et le jeu demande ton nom | théorie de base · l'algorithme · `print()` · la variable · `input()` |
-| 1. Parler au joueur | 3–6 | Le jeu parle aux deux joueurs | variables, `input()`, types |
+| 1. Parler au joueur | 3–6 | Le jeu parle aux deux joueurs, et compte | variables, `input()`, `int()`, le compteur |
 | 2. Le plateau vit | 7–10 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
 | 3. Les règles du jeu | 11–14 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
 | 4. L'interface graphique | 15–19 | Fenêtre, grille cliquable, design | Tkinter, événements |
@@ -90,6 +91,7 @@ Les rendez-vous : **S9** première démo jouable · **S15** concours de design �
 - [x] Séance 2 : fiche, diaporama de 28 diapos, quiz, aide-mémoire machine, code, déroulé Word
 - [x] Le dictionnaire des erreurs, complet pour tout le parcours
 - [x] Séance 3 : le TP de 2 h en autonomie (feuille élève + corrigé enseignant)
+- [x] Séance 4 : fiche, diaporama de 19 diapos, quiz flash, aide-mémoire, code, déroulé Word
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture)
-- [ ] Séances 4 à 22
+- [ ] Séances 5 à 22
