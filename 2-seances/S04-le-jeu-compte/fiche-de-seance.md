@@ -381,6 +381,9 @@ Celui qui n'a pas fini l'a aussi. »*
 2. **L'onglet `Journal`** : ce qui est ressorti de la clôture — en particulier, **combien ont écrit un `if` / `else` qui marche sans aide**.
 3. **L'onglet `Indiscipline`**, s'il s'est passé quelque chose.
 4. **Le [dictionnaire des erreurs](../../1-methode/annexes/A6-dictionnaire-des-erreurs.md)** : cocher `TypeError`, `ValueError`, `IndentationError` et le `=`/`==`, traités aujourd'hui.
+5. **Dans la semaine, le mercredi** : envoyer aux parents le **test n°3**
+   ([`a-envoyer/formulaire-exercices.md`](a-envoyer/formulaire-exercices.md)) — 20 points, 12 questions de
+   lecture de code et 8 exercices à taper. Les résultats ouvriront la séance 5.
 
 ---
 
