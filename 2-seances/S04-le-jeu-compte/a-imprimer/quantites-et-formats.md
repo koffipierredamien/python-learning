@@ -5,7 +5,7 @@
 | **8** (1 par poste) | [`1-aide-memoire.pdf`](1-aide-memoire.pdf) | A4 portrait | ordinaire, recto |
 
 Un seul document. Il porte les **trois notions du jour** — `int()` / `str()`, le compteur, et
-**comparer puis décider (`if` / `else`)** — ainsi que les six erreurs à reconnaître.
+**les opérateurs, puis décider (`if` / `else`)** — ainsi que les six erreurs à reconnaître.
 
 > Si vous ne pouvez pas imprimer : **projetez-le** pendant les ateliers.
 
@@ -20,7 +20,11 @@ Un seul document. Il porte les **trois notions du jour** — `int()` / `str()`, 
 
 ```
 =    range dans          age = 15
-==   est-ce égal à ?     age == 15
+==   est egal a ?        age == 15     <- un operateur de comparaison
+
+OPERATEURS DE CALCUL             OPERATEURS DE COMPARAISON
+  +   -   *   /                    >   <   >=   <=   ==   !=
+  -> un RESULTAT                   -> une REPONSE : True / False
 ```
 
 **On ne l'efface pas de toute la séance.** C'est la première chose qu'on montrera à un élève bloqué sur un

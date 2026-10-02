@@ -330,7 +330,7 @@ Cette progression n'est donnée ici que pour vérifier que la méthode tient sur
 | Phase | Séances | Brique ajoutée au projet | Notions Python |
 |---|---|---|---|
 | **0. Décollage** | 1–2 | Test de Décollage, premier contact machine, le jeu s'annonce et demande le nom du joueur | environnement, exécuter un programme, `print()`, la variable, `input()` |
-| **1. Parler au joueur** | 3–5 | Le jeu dit bonjour, demande les noms, affiche un plateau numéroté, compte les coups et refuse une case qui n'existe pas | variables, `input()`, `print()`, chaînes, types, `int()` / `str()`, le compteur, `if` / `else` |
+| **1. Parler au joueur** | 3–5 | Le jeu dit bonjour, demande les noms, affiche un plateau numéroté, compte les coups et refuse une case qui n'existe pas | variables, `input()`, `print()`, chaînes, types, `int()` / `str()`, le compteur, les opérateurs, `if` / `else` |
 | **2. Le plateau vit** | 6–9 | On place un X ou un O, on rejoue, on alterne les joueurs | listes, indices, conditions, boucles — **1ʳᵉ démo jouable en S9** |
 | **3. Les règles du jeu** | 10–13 | Coups invalides refusés, détection du gagnant, match nul, fin de partie | fonctions, `while`, opérateurs logiques, algorithme de victoire |
 | **4. L'interface graphique** | 14–18 | Fenêtre, grille cliquable, symboles dessinés, personnalisation, rejouer | Tkinter, événements, callbacks — **concours de design en S15, Nuit du bug en S18** |

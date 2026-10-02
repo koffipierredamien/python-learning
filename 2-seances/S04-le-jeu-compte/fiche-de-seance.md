@@ -12,7 +12,7 @@
 | **Numéro** | 4 / 22 — Phase 1 « Parler au joueur » |
 | **Date** | samedi 3 octobre 2026 · **12 h - 14 h** |
 | **Organisation** | **Un enseignant par classe**, les deux classes en parallèle |
-| **Notions** | **`int()` / `str()`** : texte ou nombre · **le compteur** `tour = tour + 1` · **comparer et décider** : `>` `<` `==` puis **`if` / `else`** |
+| **Notions** | **`int()` / `str()`** : texte ou nombre · **le compteur** `tour = tour + 1` · **les opérateurs** : ceux de calcul `+ - * /` et ceux de comparaison `>` `<` `>=` `<=` `==` `!=` · **`if` / `else`** |
 | **Brique ajoutée au projet** | Le **plateau numéroté 1 à 9**, la case demandée à chaque joueur, le **compteur de tours**, et le **refus d'une case qui n'existe pas** |
 | **Livrable élève** | Un `jeu.py` qui demande une case aux deux joueurs, **vérifie** qu'elle existe, ne compte que les coups valides et annonce les cases restantes |
 | **Point de départ** | Le code officiel de la séance 3, celui du TP |
@@ -22,16 +22,25 @@
 `int()` et `str()` seuls ne remplissent pas deux heures, et à une notion par samedi les 22 séances ne
 suffisent pas à finir le jeu. On ajoute donc **la décision**, qui est le vrai déblocage : c'est elle qui
 transforme un programme qui récite en programme qui **réfléchit**. Les trois notions s'enchaînent
-naturellement : `int()` permet de **comparer** des nombres, et comparer permet de **décider**.
+naturellement : `int()` donne des **nombres**, les nombres se **comparent**, et comparer permet de
+**décider**.
 
-### Les 3 objectifs, par ordre de priorité
+> **On nomme les choses : les opérateurs.** Plutôt que de parler vaguement de « comparaison », on leur
+> donne le mot et la **famille**. Ils connaissent déjà les **opérateurs de calcul** (`+ - * /`) : ils s'en
+> servent depuis la séance 2. On ajoute aujourd'hui les **opérateurs de comparaison**
+> (`>` `<` `>=` `<=` `==` `!=`). La différence tient en une phrase : **les premiers donnent un résultat,
+> les seconds donnent une réponse — `True` ou `False`.** Ce vocabulaire leur resservira à chaque séance,
+> et il évite qu'ils voient `>` comme un signe isolé tombé du ciel.
+
+### Les 4 objectifs, par ordre de priorité
 
 1. **Chacun sait écrire un `if` / `else`** correctement indenté, et sait lire `IndentationError`.
-2. **Chacun a compris que `input()` rend toujours du texte**, et sait le transformer avec `int()`.
-3. **Chacun sait lire `tour = tour + 1`** : le `=` n'est pas « égal », c'est « range dans ».
+2. **Chacun sait qu'un opérateur de comparaison répond `True` ou `False`**, et ne confond pas `=` et `==`.
+3. **Chacun a compris que `input()` rend toujours du texte**, et sait le transformer avec `int()`.
+4. **Chacun sait lire `tour = tour + 1`** : le `=` n'est pas « égal », c'est « range dans ».
 
 > **Les deux pièges du jour, à écrire au tableau et à y laisser :**
-> `=` c'est **range dans** · `==` c'est **est-ce égal à ?**
+> `=` c'est **range dans** · `==` c'est **l'opérateur « est égal à »**
 > et : après les deux-points, **on décale de 4 espaces**.
 
 ---
@@ -46,7 +55,7 @@ naturellement : `int()` permet de **comparer** des nombres, et comparer permet d
 | **12 h 35 - 12 h 50** | **Vous faites** : la calculatrice d'âge | 15 min |
 | **12 h 50 - 13 h** | **Je montre** : le compteur `tour = tour + 1` | 10 min |
 | **13 h - 13 h 10** | Pause | 10 min |
-| **13 h 10 - 13 h 30** | **Je montre** : comparer, puis décider — `if` / `else` | 20 min |
+| **13 h 10 - 13 h 30** | **Je montre** : les opérateurs, puis la décision `if` / `else` | 20 min |
 | **13 h 30 - 13 h 52** | **Vous faites** : LE PROJET — numéroter, compter, vérifier | 22 min |
 | **13 h 52 - 14 h** | Clôture | 8 min |
 
@@ -214,34 +223,58 @@ Dix minutes. On en profite pour ouvrir `GEEKS/mon_xo/jeu.py` sur chaque poste.
 
 ---
 
-### 3.7 · 13 h 10 - 13 h 30 — Je montre : comparer, puis décider
+### 3.7 · 13 h 10 - 13 h 30 — Je montre : les opérateurs, puis la décision
 
 **Le bloc le plus important de la séance.** Anti-sèche, **étapes E, F, G**. Claviers lâchés.
 
-**a) Comparer : une question qui n'a que deux réponses** (5 min)
+**a) Le mot du jour : un opérateur** (2 min)
+
+> « Vous en utilisez depuis la séance 2 sans le savoir. Un **opérateur**, c'est un petit signe qui
+> **travaille** sur ce qu'il y a de chaque côté de lui. Le `+` en est un. Et il en existe **deux
+> familles.** »
+
+Au tableau, les deux colonnes — ils complètent la première de mémoire :
+
+| Les opérateurs de **calcul** | Les opérateurs de **comparaison** |
+|---|---|
+| `+` additionner (ou coller du texte) | `>` plus grand que |
+| `-` soustraire | `<` plus petit que |
+| `*` multiplier | `>=` plus grand **ou égal** |
+| `/` diviser | `<=` plus petit **ou égal** |
+| | `==` **est égal à** |
+| | `!=` **est différent de** |
+| → donnent un **résultat** : `7`, `12`, `2.5` | → donnent une **réponse** : `True` ou `False` |
+
+> **La phrase à faire retenir :** « les opérateurs de calcul donnent un **résultat**, les opérateurs de
+> comparaison donnent une **réponse**. »
+
+**b) On les essaie** (3 min)
 
 ```python
 print(5 > 3)
 print(5 < 3)
-print(5 == 5)
+print(5 >= 5)
 print(5 != 5)
 ```
 
 > **Avant de lancer : « qu'est-ce que ça peut bien afficher ? »** Ils proposeront `8`, `oui`, `vrai`…
 > On lance : **`True False True False`.**
-> « Vrai, faux. Une comparaison ne donne jamais un nombre : elle donne une **réponse** à une question
-> fermée. »
+> « Vrai, faux. Un opérateur de comparaison ne donne jamais un nombre : il donne une **réponse** à une
+> question fermée. »
+
+> **`>=` se lit « plus grand ou égal », et s'écrit dans cet ordre, sans espace au milieu.** C'est lui
+> qu'ils voudront pour le défi en carte bleue (`case >= 1`).
 
 **Le piège, tout de suite**, au tableau, l'un sous l'autre, et on ne l'efface pas :
 
 | | |
 |---|---|
 | `age = 15` | **range dans** la boîte `age` le nombre 15 |
-| `age == 15` | **est-ce que** `age` vaut 15 ? → `True` ou `False` |
+| `age == 15` | l'**opérateur de comparaison** : est-ce que `age` vaut 15 ? → `True` ou `False` |
 
 > « Un seul `=`, c'est un ordre. Deux `=`, c'est une question. »
 
-**b) Décider : `if` / `else`** (8 min)
+**c) Décider : `if` / `else`** (8 min)
 
 ```python
 age = int(input("Quel age as-tu ? "))
@@ -261,7 +294,7 @@ On tape **très lentement**, en nommant chaque geste :
 **On lance deux fois, avec deux âges différents.** C'est toute la démonstration : *« le même programme ne
 fait pas la même chose. Il a choisi. »*
 
-**c) L'erreur volontaire du bloc** (4 min) — on efface le décalage de la ligne qui suit le `if` :
+**d) L'erreur volontaire du bloc** (4 min) — on efface le décalage de la ligne qui suit le `if` :
 
 > **`IndentationError: expected an indented block`.** « Il me dit : après les deux-points, **il faut
 > décaler**. Sans le décalage, il ne sait pas ce qui appartient au `if`. »
@@ -269,7 +302,7 @@ fait pas la même chose. Il a choisi. »*
 On remet les 4 espaces devant eux, on relance, ça marche. **C'est l'erreur qu'ils verront le plus
 aujourd'hui : qu'ils la voient d'abord sur votre écran, calmement.**
 
-**d) Le pont vers le projet** (3 min)
+**e) Le pont vers le projet** (3 min)
 
 > « Tout à l'heure, quand j'ai tapé *douze*, le programme a planté. Et si quelqu'un demande la case **12**
 > alors qu'il n'y en a que 9 ? Votre jeu va maintenant **vérifier**. »
@@ -339,8 +372,9 @@ testé dans ses deux cas n'est pas testé.
 | Le compteur reste à **1** | `tour = 1` au lieu de `tour = tour + 1` | « Relis ta ligne à voix haute : range dans tour… quoi ? » |
 | Le compteur **compte le coup refusé** | `tour = tour + 1` est au-dessus du `if`, ou dans les deux branches | « Un coup refusé, ça compte ? Alors où doit être cette ligne ? » |
 
-**Carte bleue :** *« et si le joueur tape 0, ou -3 ? Ajoute un troisième cas avec `elif case < 1:` »* — le
-défi est écrit en bas de leur fichier.
+**Carte bleue :** *« et si le joueur tape 0, ou -3 ? Ajoute un troisième cas avec `elif case < 1:` »* — ou,
+pour ceux qui ont retenu le tableau des opérateurs, `elif case <= 0:`, qui dit exactement la même chose.
+Le défi est écrit en bas de leur fichier.
 
 **13 h 50 — `Ctrl + S` tous ensemble**, puis on ouvre `xo_officiel/` devant eux : *« voilà le code officiel.
 Celui qui n'a pas fini l'a aussi. »*
@@ -366,7 +400,7 @@ Celui qui n'a pas fini l'a aussi. »*
 | **Le vidéoprojecteur ne marche pas** | Le live coding se fait sur l'écran d'un poste, les élèves debout autour. Le quiz se lit à voix haute |
 | **Une machine ne démarre pas** | L'élève rejoint le poste d'un voisin : à deux sur une machine, on travaille très bien |
 | **On démarre à 12 h 35** (retard) | On supprime le quiz flash **et** la calculatrice d'âge. On garde : `int()`/`str()` (8 min), le compteur (7 min), `if`/`else` (20 min), le projet |
-| **Le `if` / `else` prend du retard** | On coupe l'étape 7 du projet (le joueur 2) : le joueur 1 qui vérifie suffit. Le code officiel apportera le reste |
+| **Le `if` / `else` prend du retard** | On raccourcit le tableau des opérateurs à quatre (`>` `<` `==` `!=`) et on coupe l'étape 7 du projet (le joueur 2) : le joueur 1 qui vérifie suffit. Le code officiel apportera le reste |
 | **La classe bloque sur `tour = tour + 1`** | On le joue **avec un objet** : une boîte, un papier avec un nombre écrit dessus, qu'on remplace. Cinq minutes investies ici en valent trente plus tard |
 | **La classe bloque sur l'indentation** | Tout le monde ferme le fichier et **recopie les 5 lignes du `if`** depuis le tableau, en comptant les espaces à voix haute. On ne continue pas avant |
 | **Un élève finit en 10 minutes** | Carte bleue → le `elif case < 1:`. Puis **Geek Mentor** : il aide deux voisins, sans toucher à leur clavier |
@@ -393,4 +427,4 @@ Celui qui n'a pas fini l'a aussi. »*
 |---|---|
 | **Brique suivante** | Le plateau **se souvient** : la liste des 9 cases, et le symbole qui s'y pose |
 | **Point de départ** | [`code/code_officiel_fin_de_seance.py`](code/code_officiel_fin_de_seance.py), distribué aujourd'hui |
-| **Ce qui est acquis** | `print`, les variables, `input`, le `+`, **`int()` et `str()`**, **le compteur**, **les comparaisons et `if` / `else`** |
+| **Ce qui est acquis** | `print`, les variables, `input`, **`int()` et `str()`**, **le compteur**, **les opérateurs de calcul et de comparaison**, **`if` / `else`** |

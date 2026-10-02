@@ -55,14 +55,23 @@ Cette ligne dit : <b>range dans tour, ce qu'il y a dans tour, plus 1.</b></div>
   <div><b>9 - tour</b> → les cases qui restent libres.</div>
 </div>
 
-<h2 class="p">3 · Comparer, puis décider</h2>
+<h2 class="p">3 · Les opérateurs : comparer, puis décider</h2>
+<table style="margin-bottom:1.4mm">
+  <tr><th style="width:50%">Opérateurs de <b>calcul</b> — ils donnent un <b>résultat</b></th>
+      <th>Opérateurs de <b>comparaison</b> — ils donnent une <b>réponse</b> : <span class="mono">True</span> ou <span class="mono">False</span></th></tr>
+  <tr><td><span class="mono">+</span> additionner, ou coller du texte &nbsp;·&nbsp; <span class="mono">-</span> soustraire<br>
+          <span class="mono">*</span> multiplier &nbsp;·&nbsp; <span class="mono">/</span> diviser</td>
+      <td><span class="mono">&gt;</span> plus grand que &nbsp;·&nbsp; <span class="mono">&lt;</span> plus petit que &nbsp;·&nbsp;
+          <span class="mono">&gt;=</span> plus grand <b>ou égal</b> &nbsp;·&nbsp; <span class="mono">&lt;=</span> plus petit <b>ou égal</b><br>
+          <span class="mono">==</span> est égal à &nbsp;·&nbsp; <span class="mono">!=</span> est différent de</td></tr>
+</table>
 <div class="duo">
-  <div><b class="t">Comparer donne <span class="mono">True</span> ou <span class="mono">False</span></b>
-    <div class="ex">print(5 &gt; 3)&nbsp;&nbsp;→ True<br>print(5 &lt; 3)&nbsp;&nbsp;→ False<br>print(5 == 5) → True<br>print(5 != 5) → False</div>
-    Une comparaison ne donne jamais un nombre : elle donne une <b>réponse</b>.</div>
+  <div><b class="t">Essaie-les</b>
+    <div class="ex">print(5 &gt; 3)&nbsp;&nbsp;→ True<br>print(5 &lt; 3)&nbsp;&nbsp;→ False<br>print(5 &gt;= 5) → True<br>print(5 != 5) → False</div>
+    Un opérateur de comparaison ne donne jamais un nombre.</div>
   <div><b class="t">⚠️ Le piège</b>
     <div class="ex">age = 15&nbsp;&nbsp; ← range dans<br>age == 15 ← est-ce égal ?</div>
-    Un seul <b>=</b>, c'est un <b>ordre</b>.<br>Deux <b>==</b>, c'est une <b>question</b>.</div>
+    Un seul <b>=</b>, c'est un <b>ordre</b>.<br>Deux <b>==</b>, c'est l'opérateur qui <b>compare</b>.</div>
 </div>
 <div class="etapes">if case &gt; 9:
 <b>····</b>print("La case n'existe pas !")

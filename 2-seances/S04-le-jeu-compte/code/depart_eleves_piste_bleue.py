@@ -68,6 +68,7 @@ print("")
 # -----------------------------------------------------
 
 # ETAPE 6 : remonte dans la PARTIE 2 et transforme-la comme ceci.
+#           Le  >  est un OPERATEUR DE COMPARAISON : il repond True ou False.
 #           Attention aux deux-points et au decalage de 4 espaces !
 #
 #       if case > 9:
@@ -92,4 +93,6 @@ print("Il reste " + str(9 - ____) + " cases libres.")
 #  TU AS FINI ? LEVE LA CARTE BLEUE.
 #  Le defi en plus : et si le joueur tape 0, ou -3 ?
 #  Ajoute un troisieme cas avec  elif case < 1:
+#  ... ou avec  elif case <= 0:  -  les deux disent la meme chose.
+#  Souviens-toi du tableau :  >   <   >=   <=   ==   !=
 # =====================================================

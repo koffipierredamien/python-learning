@@ -31,8 +31,9 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 👉 **[2-seances/S04-le-jeu-compte/](2-seances/S04-le-jeu-compte/fiche-de-seance.md)**
 
 > **« Le jeu vérifie et compte. »** Trois notions enchaînées : `int()` / `str()` — pourquoi `"3" + "4"`
-> donne `34` — le compteur `tour = tour + 1`, socle des boucles, et surtout **`if` / `else`**, le moment
-> où le programme se met à décider. Structure : je montre, vous faites — trois leçons courtes,
+> donne `34` — le compteur `tour = tour + 1`, socle des boucles, et **les opérateurs** : ceux de calcul
+> qu'ils utilisent déjà, ceux de comparaison qui répondent `True` / `False`, et le **`if` / `else`** qui
+> en fait une décision. Structure : je montre, vous faites — trois leçons courtes,
 > deux ateliers.
 
 | J'ai besoin de… | C'est ici |
@@ -73,7 +74,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | Phase | Séances | Brique ajoutée au jeu | Notions |
 |---|---|---|---|
 | 0. Décollage | 1–2 | L'écran d'accueil, et le jeu demande ton nom | théorie de base · l'algorithme · `print()` · la variable · `input()` |
-| 1. Parler au joueur | 3–5 | Le jeu parle aux deux joueurs, compte, et décide | variables, `input()`, `int()`, le compteur, `if` / `else` |
+| 1. Parler au joueur | 3–5 | Le jeu parle aux deux joueurs, compte, et décide | variables, `input()`, `int()`, le compteur, les opérateurs, `if` / `else` |
 | 2. Le plateau vit | 6–9 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
 | 3. Les règles du jeu | 10–13 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
 | 4. L'interface graphique | 14–18 | Fenêtre, grille cliquable, design | Tkinter, événements |

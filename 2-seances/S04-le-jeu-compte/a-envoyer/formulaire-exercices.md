@@ -1,7 +1,7 @@
 # 📝 Test n°3 — le formulaire d'exercices noté
 
 **20 points : 12 questions « que va afficher ce programme ? » + 8 exercices où l'élève tape du code.**
-Il porte sur la séance 4 : `int()` / `str()`, le compteur, les comparaisons et `if` / `else`.
+Il porte sur la séance 4 : `int()` / `str()`, le compteur, **les opérateurs de comparaison** et `if` / `else`.
 Aucun ordinateur n'est nécessaire, on peut répondre depuis un téléphone. Comptez 20 à 25 minutes.
 
 > **À envoyer dans la semaine qui suit la séance 4** — le mercredi, comme les deux précédents.
@@ -80,8 +80,8 @@ Pour corriger à la main en cas de besoin, et pour préparer le quiz flash de la
 | 2 | `print(age + 1)` après `input` | `TypeError` | `input` rend du texte |
 | 3 | `int("12") + 1` | `13` | `int()` permet de calculer |
 | 4 | trois fois `tour = tour + 1` | `3` | le compteur |
-| 5 | `print(7 > 10)` | `False` | une comparaison donne `True` / `False` |
-| 6 | `print(x == 4)` | `True` | `==` pose une question |
+| 5 | `print(10 >= 10)` | `True` | `>=` = plus grand **ou égal** |
+| 6 | `print(x == 4)` | `True` | l'opérateur `==` pose une question |
 | 7 | `if age > 17 … else …` avec 20 | `Jeremiah` | **un seul** des deux chemins |
 | 8 | `if age = 17:` | `SyntaxError` | le piège `=` / `==` |
 | 9 | `if` sans décalage | `IndentationError` | les 4 espaces |

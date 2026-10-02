@@ -32,7 +32,7 @@ function creerLeTest() {
   form.setDescription(
       'AcProKids Coding Camp — Jerusalem Geeks & Jeremiah Geeks\n\n' +
       'Ce test reprend la séance de samedi : le texte et les nombres (int et str), ' +
-      'le compteur tour = tour + 1, et surtout la décision if / else.\n\n' +
+      'le compteur tour = tour + 1, les opérateurs de comparaison, et la décision if / else.\n\n' +
       'Il y a deux parties :\n' +
       '  A. Que va afficher ce programme ? — tu lis le code dans ta tête\n' +
       '  B. Écris le code — tu tapes toi-même les bonnes lignes\n\n' +
@@ -57,8 +57,8 @@ function creerLeTest() {
   form.addSectionHeaderItem()
       .setTitle('PARTIE A — Que va afficher ce programme ?')
       .setHelpText('Lis chaque programme dans ta tête, ligne par ligne, de haut en bas. '
-                 + 'Souviens-toi : le signe = veut dire « range dans », et le décalage de '
-                 + '4 espaces dit ce qui appartient au if.');
+                 + 'Souviens-toi : le signe = veut dire « range dans », un opérateur de comparaison '
+                 + 'répond True ou False, et le décalage de 4 espaces dit ce qui appartient au if.');
 
   var reflexion = [
 
@@ -79,13 +79,13 @@ function creerLeTest() {
      ['0', '1', '111', '3'], '3',
      'La même ligne, trois fois : chaque fois elle prend ce qu\'il y a dans tour et y remet un de plus. 0, puis 1, puis 2, puis 3.'],
 
-    ['print(7 > 10)\n\nQu\'est-ce qui s\'affiche ?',
-     ['False', 'True', '7', 'une erreur rouge'], 'False',
-     '7 n\'est pas plus grand que 10 : la réponse est False. Une comparaison donne toujours True ou False, jamais un nombre.'],
+    ['print(10 >= 10)\n\nQu\'est-ce qui s\'affiche ?',
+     ['True', 'False', '10', 'une erreur rouge'], 'True',
+     'L\'opérateur >= veut dire « plus grand OU ÉGAL ». 10 n\'est pas plus grand que 10, mais il est égal : la réponse est True.'],
 
     ['x = 4\nprint(x == 4)\n\nQu\'est-ce qui s\'affiche ?',
      ['4', 'True', 'False', 'x == 4'], 'True',
-     'Deux signes égal posent une QUESTION : est-ce que x vaut 4 ? Oui : True.'],
+     'L\'opérateur == pose une QUESTION : est-ce que x vaut 4 ? Oui : True. Un seul = aurait été un ordre.'],
 
     ['age = 20\n\nif age > 17:\n    print("Jeremiah")\nelse:\n    print("Jerusalem")\n\nQu\'est-ce qui s\'affiche ?',
      ['Jerusalem', 'Jeremiah puis Jerusalem', 'rien', 'Jeremiah'], 'Jeremiah',
@@ -94,7 +94,7 @@ function creerLeTest() {
     ['age = 20\n\nif age = 17:\n    print("Bravo")\n\nQue se passe-t-il ?',
      ['Une erreur rouge : SyntaxError', 'Ça affiche Bravo', 'Ça n\'affiche rien', 'Ça affiche 17'],
      'Une erreur rouge : SyntaxError',
-     'Un seul = , c\'est « range dans » : un ORDRE. Pour poser une question dans un if, il faut == .'],
+     'Un seul = , c\'est « range dans » : un ORDRE. Pour poser une question dans un if, il faut l\'opérateur == .'],
 
     ['age = 20\n\nif age > 17:\nprint("Bravo")\n\nQue se passe-t-il ?',
      ['Ça affiche Bravo', 'Ça n\'affiche rien', 'Une erreur rouge : IndentationError', 'Une erreur rouge : NameError'],
@@ -150,7 +150,7 @@ function creerLeTest() {
      'tour = tour + 1'],
 
     ['Écris la comparaison qui demande :  est-ce que  case  est plus grand que 9 ?',
-     'Seulement la comparaison, sans print et sans if.',
+     'Seulement la comparaison, avec le bon opérateur. Sans print et sans if.',
      'case > 9'],
 
     ['Cette ligne est cassée :\n\nif age = 17:\n\nRécris-la correctement.',

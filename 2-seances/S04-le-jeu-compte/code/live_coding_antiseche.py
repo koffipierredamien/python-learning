@@ -8,7 +8,7 @@
      12 h 22 - 12 h 35   etapes A, B, C   ->  int() et str()
      12 h 35 - 12 h 50   atelier 1 : la calculatrice d'age
      12 h 50 - 13 h      etape D          ->  le compteur
-     13 h 10 - 13 h 30   etapes E, F, G   ->  comparer, puis decider
+     13 h 10 - 13 h 30   etapes E, F, G   ->  les operateurs, puis decider
      13 h 30 - 13 h 52   atelier 2 : le projet
 
   REGLE D'OR : "JE CODE, VOUS PREDISEZ."
@@ -67,21 +67,44 @@ print(tour)
 
 
 # =============================================================================
-#  ETAPE E  (5 min)  -  COMPARER : une question qui n'a que deux reponses
+#  ETAPE E  (5 min)  -  LES OPERATEURS
 # =============================================================================
+#  LE MOT DU JOUR, a dire avant de taper quoi que ce soit :
+#    "Un OPERATEUR, c'est un petit signe qui TRAVAILLE sur ce qu'il y a de
+#     chaque cote de lui. Vous en utilisez depuis la seance 2 : le + .
+#     Il en existe DEUX FAMILLES."
+#
+#  AU TABLEAU, DEUX COLONNES  (ils remplissent la premiere de memoire) :
+#
+#     OPERATEURS DE CALCUL          OPERATEURS DE COMPARAISON
+#     --------------------          -------------------------
+#       +   additionner / coller      >    plus grand que
+#       -   soustraire                <    plus petit que
+#       *   multiplier                >=   plus grand OU EGAL
+#       /   diviser                   <=   plus petit OU EGAL
+#                                     ==   EST EGAL A
+#                                     !=   EST DIFFERENT DE
+#
+#     -> donnent un RESULTAT         -> donnent une REPONSE : True / False
+#
+#  LA PHRASE A FAIRE RETENIR :
+#    "Les operateurs de calcul donnent un RESULTAT.
+#     Les operateurs de comparaison donnent une REPONSE."
+
 print(5 > 3)
 print(5 < 3)
-print(5 == 5)
+print(5 >= 5)
 print(5 != 5)
 
 #  >>> AVANT DE LANCER : "qu'est-ce que ca peut bien afficher ?"
+#      Reponse : True False True False
 #
-#    "True, False. Vrai, faux. Une comparaison ne donne jamais un nombre :
-#     elle donne une REPONSE a une question fermee."
+#    ">= se lit 'plus grand ou egal'. Les deux signes dans cet ordre,
+#     sans espace au milieu."
 #
 #  LE PIEGE A MONTRER TOUT DE SUITE :
-#     =   c'est RANGE DANS       (age = 15)
-#     ==  c'est EST-CE EGAL A ?  (age == 15)
+#     =   c'est RANGE DANS                  (age = 15)
+#     ==  c'est l'operateur EST EGAL A      (age == 15)
 #  Ecrivez les deux au tableau, l'un sous l'autre. Laissez-les affiches.
 
 
@@ -129,6 +152,7 @@ else:
 #   ValueError ............. int() sur un mot.
 #   IndentationError ....... il manque les 4 espaces apres les deux-points.
 #   SyntaxError sur le if .. les deux-points oublies, ou = au lieu de ==.
+#   = au lieu de == ....... un seul = est un ORDRE, == est l'operateur qui COMPARE.
 #   Le compteur reste a 1 .. tour = 1 au lieu de tour = tour + 1.
 #   Les deux messages s'affichent ... l'eleve a mis deux print dans le if,
 #                            au lieu d'un dans le if et un dans le else.
