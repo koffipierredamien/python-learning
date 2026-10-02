@@ -24,60 +24,73 @@ JEREMIAH = [
  ("Viesainte MBIERE",              "RRR", ("non",""),  ("ok","10"), ("ok","8")),
  ("Isaac YEDOH LOHOUESS",          "PRR", ("non",""),  ("ok","8"),  ("ok","4")),
  ("Sarah LOUA",                    "PPP", ("ok","11"), ("ok","12"), ("non","")),
- ("Joshua DOGBRE",                 "ERA", ("?",""),    ("non",""),  ("non","")),
+ ("Joshua DOGBRE",                 "ERA", ("ok",""),   ("non",""),  ("non","")),
  ("Ethan SORO",                    "PAA", ("non",""),  ("non",""),  ("non","")),
  ("Eunice SORO",                   "PAA", ("non",""),  ("non",""),  ("non","")),
 ]
+
+RETARD_EXCUSE = {"Acquilas MBIERE", "Bénicia Chryti Léa MBIERE",
+                 "Viesainte MBIERE", "Isaac YEDOH LOHOUESS"}
 
 def compte(p):
     return p.count("R"), p.count("A"), p.count("E")
 
 def totaux(groupes):
-    r = a = e = 0; d = [0, 0, 0]
+    r = rx = a = e = 0; d = [0, 0, 0]
     n = 0
     for g in groupes:
         for el in g:
             n += 1
-            rr, aa, ee = compte(el[1]); r += rr; a += aa; e += ee
+            rr, aa, ee = compte(el[1]); a += aa; e += ee
+            if el[0] in RETARD_EXCUSE: rx += rr
+            else: r += rr
             for i in range(3):
                 if el[2+i][0] == "ok": d[i] += 1
-    return n, r, a, e, d
+    return n, r, rx, a, e, d
 
-N, RET, ABS, EXC, DEV = totaux([JERUSALEM, JEREMIAH])
+N, RET, RETX, ABS, EXC, DEV = totaux([JERUSALEM, JEREMIAH])
 
 # ---------------------------------------------------------------- HTML
 PAST = {"P": ("P", "#2e9e52", "#e9f7ee"), "R": ("R", "#c97a00", "#fff4de"),
         "E": ("E", "#5a5a72", "#eeeef4"), "A": ("A", "#c0392b", "#fdeaea")}
 
-def pastilles(p):
-    return "".join('<span class="pz" style="color:%s;background:%s">%s</span>' % (c, f, t)
-                   for t, c, f in (PAST[x] for x in p))
+def pastilles(p, excuse=False):
+    out = []
+    for x in p:
+        t, c, f = PAST[x]
+        if x == "R" and excuse: c, f = "#6a6a80", "#eeeef4"
+        out.append('<span class="pz" style="color:%s;background:%s">%s</span>' % (c, f, t))
+    return "".join(out)
 
-def dev(cell, note_unite="", non_echu=False):
+def dev(cell, non_echu=False):
     etat, note = cell
     if etat == "ok":
-        n = ('<i>%s%s</i>' % (note, note_unite)) if note else ""
-        return '<td class="ok">✔ <b>rendu</b> %s</td>' % n
+        return '<td class="ok">✔ <b>rendu</b></td>' 
     if etat == "?":
         return '<td class="dt">? à confirmer</td>'
     if non_echu:
         return '<td class="att">— en attente</td>'
     return '<td class="ko">✘ non rendu</td>'
 
-def lignes(groupe, unites):
+def lignes(groupe):
     out = []
     for nom, pres, d1, d2, d3 in groupe:
         r, a, e = compte(pres)
         rendus = sum(1 for x in (d1, d2) if x[0] == "ok")
         cls = ' class="alerte"' if (a >= 2 or rendus == 0) else ""
+        if not r:
+            cel_r = "<td class='n'>—</td>"
+        elif nom in RETARD_EXCUSE:
+            cel_r = "<td class='n exc'>%d <i>exc.</i></td>" % r
+        else:
+            cel_r = "<td class='n warn'>%d</td>" % r
         out.append(
-            "<tr%s><td class='nom'>%s</td><td class='pres'>%s</td>"
-            "<td class='n %s'>%s</td><td class='n %s'>%s</td>"
+            "<tr%s><td class='nom'>%s</td><td class='pres'>%s</td>%s"
+            "<td class='n %s'>%s</td>"
             "%s%s%s<td class='n b'>%d / 2</td></tr>" % (
-             cls, nom, pastilles(pres),
-             "warn" if r else "", r or "—",
+             cls, nom, pastilles(pres, nom in RETARD_EXCUSE), cel_r,
              "bad" if a else "", a or "—",
-             dev(d1, unites[0]), dev(d2, unites[1]), dev(d3, unites[2], True), rendus))
+             dev(d1), dev(d2), dev(d3, True), rendus))
     return "\n".join(out)
 
 HTML = u"""<!doctype html>
@@ -114,6 +127,8 @@ HTML = u"""<!doctype html>
   td.att{color:#8a8aa0;font-size:7.8pt;text-align:center;background:#f7f7fb}
   td.dt{color:#c97a00;font-size:7.8pt;text-align:center;background:#fffaf0}
   td.warn{color:#c97a00;font-weight:bold}
+  td.exc{color:#6a6a80}
+  td.exc i{font-style:normal;font-size:7pt;color:#8a8aa0}
   td.bad{color:#c0392b;font-weight:bold}
   tr.alerte td.nom{background:#fdf0f0}
   .leg{font-size:7.6pt;color:#555;margin-top:1.4mm}
@@ -133,16 +148,14 @@ HTML = u"""<!doctype html>
 <div class="ent">
   <div class="sur">ACPROKIDS CODING CAMP · VISION PLÉNITUDES VIE</div>
   <h1>Point d'assiduité et de devoirs</h1>
-  <div class="dest"><b>À l'attention du Pasteur Eli</b> &nbsp;·&nbsp; situation arrêtée le
-    <b>vendredi 2 octobre 2026</b>, veille de la séance 4 &nbsp;·&nbsp;
-    période couverte : <b>séances 1 à 3</b> (12, 19 et 26 septembre) et les <b>3 devoirs</b> envoyés les mercredis</div>
+  <div class="dest"><b>2 octobre 2026</b> &nbsp;·&nbsp; séances 1 à 3 &nbsp;·&nbsp; 3 devoirs</div>
 </div>
 
 <div class="tiles">
   <div class="ti"><div class="k">{{N}}</div><div class="l">élèves inscrits<br>9 Jerusalem · 8 Jeremiah</div></div>
-  <div class="ti"><div class="k" style="color:#c97a00">{{RET}}</div><div class="l">retards<br>sur 3 séances</div></div>
-  <div class="ti"><div class="k" style="color:#c0392b">{{ABS}}</div><div class="l">absences<br>non excusées</div></div>
-  <div class="ti"><div class="k" style="color:#5a5a72">{{EXC}}</div><div class="l">absences<br>excusées</div></div>
+  <div class="ti"><div class="k" style="color:#c97a00">{{RET}}</div><div class="l">retards<br>à signaler</div></div>
+  <div class="ti"><div class="k" style="color:#5a5a72">{{RETX}}</div><div class="l">retards excusés<br>école le samedi</div></div>
+  <div class="ti"><div class="k" style="color:#c0392b">{{ABS}}</div><div class="l">absences non excusées<br>{{EXC}} autres, excusées</div></div>
   <div class="ti"><div class="k">{{D1}}<span style="font-size:11pt">/17</span></div><div class="l">devoir 1 rendu<br>quiz d'introduction</div></div>
   <div class="ti"><div class="k">{{D2}}<span style="font-size:11pt">/17</span></div><div class="l">devoir 2 rendu<br>quiz de révision</div></div>
   <div class="ti" style="background:#fffaf0;border-color:#d79a00"><div class="k" style="color:#c97a00">{{D3}}<span style="font-size:11pt">/17</span></div><div class="l"><b>devoir 3 — en cours</b><br>échéance demain</div></div>
@@ -170,14 +183,16 @@ HTML = u"""<!doctype html>
   <span class="pz" style="color:#c97a00;background:#fff4de">R</span> en retard &nbsp;
   <span class="pz" style="color:#5a5a72;background:#eeeef4">E</span> absence excusée &nbsp;
   <span class="pz" style="color:#c0392b;background:#fdeaea">A</span> absence non excusée. &nbsp;
+  <b>exc.</b> = retards excusés : ces élèves ont <b>cours à leur école le samedi matin</b>. &nbsp;
   <b>« Devoirs exigibles »</b> compte les devoirs 1 et 2 : <b>le devoir 3 n'est pas encore dû</b>, son échéance est la séance de demain.
-  Les notes entre parenthèses sont celles calculées par le formulaire.</div>
+</div>
 
 <div class="enc">
   <div class="t">Ce que ces chiffres disent en une phrase</div>
-  <b>L'assiduité n'est pas le problème : la ponctualité et les devoirs le sont.</b>
-  Sur 17 élèves, 11 ont rendu le devoir 2 et 8 le devoir 1. Les retards sont presque tous concentrés
-  sur deux familles, et les absences non excusées sur une seule.
+  <b>L'assiduité n'est pas le problème ; les devoirs le sont, et pour quelques familles seulement.</b>
+  Sur 17 élèves, 11 ont rendu le devoir 2 et 9 le devoir 1. Les {{RETX}} retards excusés viennent tous
+  de l'école du samedi matin et ne dépendent pas des enfants. Les absences non excusées sont concentrées
+  sur deux familles.
 </div>
 
 <h2 class="pb">LES SITUATIONS À REGARDER <span>— par ordre d'urgence</span></h2>
@@ -197,13 +212,16 @@ HTML = u"""<!doctype html>
     non rendu pour les deux. À relier à l'appel ci-dessus.</li>
 </ol>
 
-<h3>2 · Un problème d'horaire, pas de motivation</h3>
+<h3>2 · Des retards qui ne dépendent pas des enfants</h3>
 <ul>
-  <li><b>Acquilas, Bénicia et Viesainte MBIERE</b> — <b>en retard aux trois séances</b>, soit 9 des
-    {{RET}} retards à eux seuls. Mais <b>ils ont rendu le devoir 2 et le devoir 3</b>, tous les trois.
-    Ces enfants travaillent : c'est l'arrivée à 12 h qui coince. Une question à poser à la famille
-    (transport, trajet, horaire de départ) plutôt qu'un rappel à l'ordre.</li>
-  <li><b>Isaac YEDOH LOHOUESS</b> — deux retards, mais devoirs 2 et 3 rendus. Même lecture.</li>
+  <li><b>Acquilas, Bénicia et Viesainte MBIERE</b> et <b>Isaac YEDOH LOHOUESS</b> —
+    <b>{{RETX}} des {{TOTRET}} retards relevés sont les leurs</b>, et ils s'expliquent par une seule
+    raison : <b>ces élèves ont cours à leur école le samedi matin</b> et ne peuvent pas être là à 12 h.
+    <b>Ces retards sont excusés</b>, et inscrits comme tels dans le classeur de suivi.</li>
+  <li>Et ils travaillent : <b>tous les quatre ont rendu le devoir 2 et le devoir 3</b>. Ce n'est donc
+    ni un problème de motivation, ni un problème de famille — il n'y a rien à leur demander.</li>
+  <li>Ce qu'on peut faire de notre côté : la séance <b>commence par la prière</b>, et la leçon ne
+    démarre qu'à 12 h 20. <b>L'essentiel leur est préservé</b> — c'est la raison de cet ordre.</li>
 </ul>
 
 <h3>3 · Ce qui fonctionne, et qu'il faut dire aux familles</h3>
@@ -225,37 +243,23 @@ HTML = u"""<!doctype html>
 <ol>
   <li><b>Appeler quatre familles</b> : SORO (deux absences), DOGBRE (absence + devoirs),
     NGAPELA et AMON (devoirs jamais rendus).</li>
-  <li><b>Appeler la famille MBIERE</b> sur la seule question de l'heure d'arrivée.</li>
+  <li><b>Ne pas relancer les quatre élèves en retard excusé</b>, et le dire au reste de la classe :
+    arriver à 12 h 20 après l'école n'est pas un manque de sérieux.</li>
   <li><b>Rappeler le lien du devoir par message la veille de l'échéance</b> : les deux tiers des
     non-rendus sont des familles qui n'ont pas réagi au premier envoi.</li>
-  <li><b>Féliciter nommément</b> les cinq élèves à jour, en début de séance 4.</li>
+  <li><b>Féliciter nommément</b> les élèves à jour, en début de séance 4.</li>
 </ol>
 
-<div class="note">
-  <b>Sources et précisions de lecture.</b>
-  Présence, retards et discipline : classeur de suivi <i>AcProKidsCodingCampSept2026</i>, onglets
-  <i>Présence</i> et <i>Indiscipline</i>. Devoirs : les réponses des quatre formulaires Google, plus le
-  relevé du devoir 3 des Jerusalem Geeks transmis par l'enseignant.
-  <br>• <b>Devoir 3 non échu.</b> Son échéance est la séance du 3 octobre : les « non rendu » de cette
-  colonne ne sont pas des manquements, ils indiquent seulement où nous en sommes ce soir.
-  <br>• <b>Une réponse non identifiée.</b> Le devoir 1 comporte une réponse signée « David Dogbre », qui
-  ne correspond à aucun nom inscrit. S'il s'agit de Joshua DOGBRE, son devoir 1 est rendu, et le total
-  passe de 8 à 9. <b>À confirmer auprès de la famille</b> — c'est la seule incertitude de ce document.
-  <br>• <b>Barèmes différents d'un devoir à l'autre</b> : le devoir 2 des Jeremiah Geeks est noté sur 12,
-  les autres suivent le barème propre à leur formulaire. Les notes du devoir 3 sont <b>partielles</b> :
-  seules les 12 questions à choix sont corrigées automatiquement, les 8 exercices où l'élève écrit du code
-  restent à corriger à la main. <b>Aucune note n'est donc définitive.</b>
-  <br>• <b>Double envoi</b> : Grâce-Elsa DREESEN a répondu deux fois au devoir 1 ; la meilleure note est retenue.
-</div>
 
-<div class="sig">Fait par les deux enseignants du Coding Camp, le 2 octobre 2026.</div>
+
+
 </body></html>
 """
 
 jetons = {"N": N, "RET": RET, "ABS": ABS, "EXC": EXC,
-          "D1": DEV[0], "D2": DEV[1], "D3": DEV[2],
-          "TJ": lignes(JERUSALEM, ["", "", ""]),
-          "TM": lignes(JEREMIAH, ["", "/12", "/12*"])}
+          "TOTRET": RET + RETX, "D1": DEV[0], "D2": DEV[1], "D3": DEV[2], "RETX": RETX,
+          "TJ": lignes(JERUSALEM),
+          "TM": lignes(JEREMIAH)}
 html = HTML
 for cle, val in jetons.items():
     html = html.replace("{{%s}}" % cle, str(val))

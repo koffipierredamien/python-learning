@@ -5,7 +5,7 @@ après l'avoir envoyé, on en fait un nouveau.
 
 | Date | Document | Demandé par | Couvre |
 |---|---|---|---|
-| 2 octobre 2026 | [`point-assiduite-et-devoirs.pdf`](point-assiduite-et-devoirs.pdf) · [version Word](point-assiduite-et-devoirs.docx) | Pasteur Eli | Retards, absences et devoirs — séances 1 à 3, devoirs 1 à 3 |
+| 2 octobre 2026 | [`point-assiduite-et-devoirs.pdf`](point-assiduite-et-devoirs.pdf) · [version Word](point-assiduite-et-devoirs.docx) | le responsable | Retards, absences et devoirs — séances 1 à 3, devoirs 1 à 3 |
 
 ## Comment il est fabriqué
 
@@ -15,17 +15,20 @@ Les chiffres ne sont pas saisis à la main : ils sont **lus dans les fichiers**.
 |---|---|
 | Présence, retards, absences | classeur de suivi, onglet `Présence` |
 | Fait de discipline | classeur de suivi, onglet `Indiscipline` |
-| Devoirs rendus et notes | les réponses des formulaires Google (un fichier par devoir) |
+| Devoirs rendus | les réponses des formulaires Google (un fichier par devoir) |
+| Retards excusés | onglet `Observations` du classeur |
 
-Le générateur : [`sources/point-assiduite-et-devoirs.html`](sources/point-assiduite-et-devoirs.html) —
-c'est la source à corriger si un nom ou une case est faux. Le PDF et le Word en sont tirés.
+Le générateur : [`sources/rapport.py`](sources/rapport.py) — **c'est le seul fichier à corriger** si un
+nom ou une case est faux. Il écrit le HTML, dont on tire le PDF ; [`sources/rapport_word.py`](sources/rapport_word.py)
+relit les mêmes données et écrit la version Word. Les deux documents ne peuvent donc pas se contredire.
 
 ## Les trois règles qu'on s'est données
 
 1. **Un devoir dont l'échéance n'est pas passée n'est jamais compté comme non rendu.** Il est marqué
    *en attente*, et la colonne « devoirs exigibles » ne le compte pas.
-2. **Toute incertitude est écrite dans le document**, pas corrigée en silence — une réponse signée d'un
-   nom non inscrit, un double envoi, une note encore partielle.
-3. **Aucun jugement sur un enfant.** On distingue ce qui relève de la famille (un horaire, un téléphone)
-   de ce qui relève de l'élève. Les trois retardataires permanents rendent tous leurs devoirs : ce n'est
-   pas un problème de motivation, et le document le dit.
+2. **Un retard excusé n'est pas un retard.** Quatre élèves ont cours à leur école le samedi matin : leurs
+   retards sont comptés à part, en gris, et le document explique pourquoi. On ne mélange jamais ce qui
+   dépend de l'enfant et ce qui ne dépend pas de lui.
+3. **Aucun jugement sur un enfant.** On distingue ce qui relève de la famille (un téléphone qui ne suit
+   pas, une école le samedi) de ce qui relève de l'élève. Les quatre retardataires rendent tous leurs
+   devoirs : le document le dit, pour qu'on n'en tire pas la mauvaise conclusion.

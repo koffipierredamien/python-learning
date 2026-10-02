@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Meme contenu, en Word, pour que le responsable puisse annoter ou transferer."""
 import importlib.util, sys
-spec = importlib.util.spec_from_file_location("rap", "/tmp/claude-0/-home-user-python-learning/731be2d5-98da-5705-b521-79ab616d2443/scratchpad/rapport.py")
+spec = importlib.util.spec_from_file_location("rap", "/home/user/python-learning/3-suivi/points-au-responsable/sources/rapport.py")
 rap = importlib.util.module_from_spec(spec); spec.loader.exec_module(rap)
 
 from docx import Document
@@ -40,16 +40,12 @@ def ombrer(cell, hexa):
 
 para("ACPROKIDS CODING CAMP · VISION PLÉNITUDES VIE", 8.5, True, VIOLET, after=2)
 para("Point d'assiduité et de devoirs", 20, True, MARINE, after=2)
-riche([("À l'attention du Pasteur Eli", True),
-       ("  ·  situation arrêtée le ", False), ("vendredi 2 octobre 2026", True),
-       (", veille de la séance 4  ·  période couverte : ", False),
-       ("séances 1 à 3", True), (" (12, 19 et 26 septembre) et les ", False),
-       ("3 devoirs", True), (" envoyés les mercredis", False)], 9.5, after=10)
+riche([("2 octobre 2026", True), ("  ·  séances 1 à 3  ·  3 devoirs", False)], 9.5, after=10)
 
 chiffres = [("17", "élèves inscrits (9 Jerusalem · 8 Jeremiah)", MARINE),
-            (str(rap.RET), "retards sur 3 séances", ORANGE),
-            (str(rap.ABS), "absences non excusées", ROUGE),
-            (str(rap.EXC), "absences excusées", GRIS),
+            (str(rap.RET), "retards à signaler", ORANGE),
+            (str(rap.RETX), "retards excusés (école le samedi)", GRIS),
+            (str(rap.ABS), "absences non excusées (%d autres, excusées)" % rap.EXC, ROUGE),
             ("%d / 17" % rap.DEV[0], "devoir 1 rendu", MARINE),
             ("%d / 17" % rap.DEV[1], "devoir 2 rendu", MARINE),
             ("%d / 17" % rap.DEV[2], "devoir 3 rendu — échéance demain", ORANGE)]
@@ -66,7 +62,7 @@ doc.add_paragraph().paragraph_format.space_after = Pt(6)
 
 ETAT = {"P": "P", "R": "R", "E": "E", "A": "A"}
 
-def tableau(titre, groupe, intitules, unites):
+def tableau(titre, groupe, intitules):
     para(titre, 11.5, True, MARINE, after=4)
     entetes = ["Élève", "S01 S02 S03", "Retards", "Absences",
                intitules[0], intitules[1], intitules[2], "Devoirs exigibles"]
@@ -88,15 +84,18 @@ def tableau(titre, groupe, intitules, unites):
             if centre: cel.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
         ecrire(ligne[0], nom, True, None, 8.5, False)
         ecrire(ligne[1], "  ".join(ETAT[x] for x in pres))
-        ecrire(ligne[2], str(ret) if ret else "—", bool(ret), ORANGE if ret else None)
+        if not ret:
+            ecrire(ligne[2], "—")
+        elif nom in rap.RETARD_EXCUSE:
+            ecrire(ligne[2], "%d exc." % ret, False, GRIS)
+        else:
+            ecrire(ligne[2], str(ret), True, ORANGE)
         ecrire(ligne[3], str(absc) if absc else "—", bool(absc), ROUGE if absc else None)
-        for j, (cell, unite) in enumerate(zip((d1, d2, d3), unites)):
+        for j, cell in enumerate((d1, d2, d3)):
             etat, note = cell
             if etat == "ok":
-                ecrire(ligne[4+j], "rendu" + (("  " + note + unite) if note else ""), True, VERT, 7.5)
+                ecrire(ligne[4+j], "rendu", True, VERT, 7.5)
                 ombrer(ligne[4+j], "F2FAF5")
-            elif etat == "?":
-                ecrire(ligne[4+j], "? à confirmer", False, ORANGE, 7.5); ombrer(ligne[4+j], "FFFAF0")
             elif j == 2:
                 ecrire(ligne[4+j], "en attente", False, GRIS, 7.5); ombrer(ligne[4+j], "F7F7FB")
             else:
@@ -106,20 +105,20 @@ def tableau(titre, groupe, intitules, unites):
     doc.add_paragraph().paragraph_format.space_after = Pt(2)
 
 tableau("JERUSALEM GEEKS — 9 à 12 ans · 9 élèves", rap.JERUSALEM,
-        ["Devoir 1 quiz d'introduction", "Devoir 2 quiz de révision", "Devoir 3 (échéance demain)"],
-        ["", "", ""])
+        ["Devoir 1 quiz d'introduction", "Devoir 2 quiz de révision", "Devoir 3 (échéance demain)"])
 tableau("JEREMIAH GEEKS — 12 à 18 ans · 8 élèves", rap.JEREMIAH,
-        ["Devoir 1 quiz d'introduction", "Devoir 2 révision séance 2", "Devoir 3 (échéance demain)"],
-        ["", "/12", "/12*"])
+        ["Devoir 1 quiz d'introduction", "Devoir 2 révision séance 2", "Devoir 3 (échéance demain)"])
 
 riche([("Présence : ", True), ("P présent · R en retard · E absence excusée · A absence non excusée.  ", False),
+       ("exc.", True), (" = retards excusés : ces élèves ont cours à leur école le samedi matin.  ", False),
        ("« Devoirs exigibles »", True), (" compte les devoirs 1 et 2 : ", False),
        ("le devoir 3 n'est pas encore dû", True), (", son échéance est la séance de demain.", False)], 8, after=10)
 
 riche([("Ce que ces chiffres disent en une phrase. ", True),
-       ("L'assiduité n'est pas le problème : la ponctualité et les devoirs le sont. ", True),
-       ("Sur 17 élèves, 11 ont rendu le devoir 2 et 8 le devoir 1. Les retards sont presque tous "
-        "concentrés sur deux familles, et les absences non excusées sur une seule.", False)], 10, after=12)
+       ("L'assiduité n'est pas le problème ; les devoirs le sont, et pour quelques familles seulement. ", True),
+       ("Sur 17 élèves, 11 ont rendu le devoir 2 et 9 le devoir 1. Les %d retards excusés viennent tous "
+        "de l'école du samedi matin et ne dépendent pas des enfants. Les absences non excusées sont "
+        "concentrées sur deux familles." % rap.RETX, False)], 10, after=12)
 
 doc.add_page_break()
 para("LES SITUATIONS À REGARDER — par ordre d'urgence", 13, True, MARINE, after=8)
@@ -140,15 +139,17 @@ riche([("À suivre — Caleb DOGBRE et Joshua DOGBRE", True),
        ("une absence non excusée à la séance 3", True),
        (", et le devoir 2 non rendu pour les deux. À relier à l'appel ci-dessus.", False)], 10, puce=True, after=10)
 
-para("2 · Un problème d'horaire, pas de motivation", 11, True, VIOLET, after=4)
-riche([("Acquilas, Bénicia et Viesainte MBIERE", True), (" — ", False),
-       ("en retard aux trois séances", True),
-       (", soit 9 des %d retards à eux seuls. Mais " % rap.RET, False),
-       ("ils ont rendu le devoir 2 et le devoir 3", True),
-       (", tous les trois. Ces enfants travaillent : c'est l'arrivée à 12 h qui coince. Une question à "
-        "poser à la famille (transport, trajet, horaire de départ) plutôt qu'un rappel à l'ordre.", False)], 10, puce=True)
-riche([("Isaac YEDOH LOHOUESS", True),
-       (" — deux retards, mais devoirs 2 et 3 rendus. Même lecture.", False)], 10, puce=True, after=10)
+para("2 · Des retards qui ne dépendent pas des enfants", 11, True, VIOLET, after=4)
+riche([("Acquilas, Bénicia et Viesainte MBIERE et Isaac YEDOH LOHOUESS", True),
+       (" — %d des %d retards relevés sont les leurs, et ils s'expliquent par une seule raison : " % (rap.RETX, rap.RET + rap.RETX), False),
+       ("ces élèves ont cours à leur école le samedi matin", True),
+       (" et ne peuvent pas être là à 12 h. ", False),
+       ("Ces retards sont excusés", True), (", et inscrits comme tels dans le classeur de suivi.", False)], 10, puce=True)
+riche([("Et ils travaillent : ", False), ("tous les quatre ont rendu le devoir 2 et le devoir 3", True),
+       (". Ce n'est donc ni un problème de motivation, ni un problème de famille — il n'y a rien à leur demander.", False)], 10, puce=True)
+riche([("Ce qu'on peut faire de notre côté : la séance ", False), ("commence par la prière", True),
+       (", et la leçon ne démarre qu'à 12 h 20. ", False), ("L'essentiel leur est préservé", True),
+       (" — c'est la raison de cet ordre.", False)], 10, puce=True, after=10)
 
 para("3 · Ce qui fonctionne, et qu'il faut dire aux familles", 11, True, VIOLET, after=4)
 riche([("Lohiss LOUA, Yanis AMESSAN et Joyce Bouam LALLE", True), (" — assidus, et ", False),
@@ -156,7 +157,7 @@ riche([("Lohiss LOUA, Yanis AMESSAN et Joyce Bouam LALLE", True), (" — assidus
        ("Sarah LOUA", True), (" et ", False), ("Gédéon OKITONGA", True), (" suivent de près.", False)], 10, puce=True)
 riche([("Aucune absence non excusée chez 13 élèves sur 17", True),
        (", et la participation aux devoirs ", False), ("monte", True),
-       (" : 8 au premier, 11 au deuxième.", False)], 10, puce=True, after=10)
+       (" : 9 au premier, 11 au deuxième.", False)], 10, puce=True, after=10)
 
 para("4 · Discipline en classe", 11, True, VIOLET, after=4)
 riche([("Un seul fait inscrit au registre depuis le début", True),
@@ -167,35 +168,14 @@ riche([("Un seul fait inscrit au registre depuis le début", True),
 para("5 · Ce que nous proposons de faire d'ici la séance 5", 11, True, VIOLET, after=4)
 for m in ([("Appeler quatre familles", True),
            (" : SORO (deux absences), DOGBRE (absence + devoirs), NGAPELA et AMON (devoirs jamais rendus).", False)],
-          [("Appeler la famille MBIERE", True), (" sur la seule question de l'heure d'arrivée.", False)],
+          [("Ne pas relancer les quatre élèves en retard excusé", True),
+           (", et le dire au reste de la classe : arriver à 12 h 20 après l'école n'est pas un manque de sérieux.", False)],
           [("Rappeler le lien du devoir par message la veille de l'échéance", True),
            (" : les deux tiers des non-rendus sont des familles qui n'ont pas réagi au premier envoi.", False)],
-          [("Féliciter nommément", True), (" les cinq élèves à jour, en début de séance 4.", False)]):
+          [("Féliciter nommément", True), (" les élèves à jour, en début de séance 4.", False)]):
     riche(m, 10, puce=True)
 
 doc.add_paragraph().paragraph_format.space_after = Pt(6)
-para("Sources et précisions de lecture", 9.5, True, MARINE, after=3)
-for m in ([("Présence, retards et discipline : classeur de suivi AcProKidsCodingCampSept2026, onglets "
-            "Présence et Indiscipline. Devoirs : les réponses des quatre formulaires Google, plus le "
-            "relevé du devoir 3 des Jerusalem Geeks transmis par l'enseignant.", False)],
-          [("Devoir 3 non échu. ", True),
-           ("Son échéance est la séance du 3 octobre : les « en attente » de cette colonne ne sont pas "
-            "des manquements, ils indiquent seulement où nous en sommes ce soir.", False)],
-          [("Une réponse non identifiée. ", True),
-           ("Le devoir 1 comporte une réponse signée « David Dogbre », qui ne correspond à aucun nom "
-            "inscrit. S'il s'agit de Joshua DOGBRE, son devoir 1 est rendu et le total passe de 8 à 9. "
-            "À confirmer auprès de la famille : c'est la seule incertitude de ce document.", False)],
-          [("Barèmes différents d'un devoir à l'autre. ", True),
-           ("Le devoir 2 des Jeremiah Geeks est noté sur 12, les autres suivent le barème propre à leur "
-            "formulaire. Les notes du devoir 3 sont partielles : seules les 12 questions à choix sont "
-            "corrigées automatiquement, les 8 exercices où l'élève écrit du code restent à corriger à la "
-            "main. Aucune note n'est donc définitive.", False)],
-          [("Double envoi. ", True),
-           ("Grâce-Elsa DREESEN a répondu deux fois au devoir 1 ; la meilleure note est retenue.", False)]):
-    riche(m, 8.5, after=3)
-
-para("Fait par les deux enseignants du Coding Camp, le 2 octobre 2026.", 9, False, GRIS, after=0)
-
 sortie = "/home/user/python-learning/3-suivi/points-au-responsable/point-assiduite-et-devoirs.docx"
 doc.save(sortie)
 print("word ecrit :", sortie)
