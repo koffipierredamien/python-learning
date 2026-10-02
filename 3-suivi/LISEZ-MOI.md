@@ -17,6 +17,13 @@ Les onglets de suivi ont été ajoutés à la suite :
 | **Indiscipline** | Le registre demandé par le responsable : un fait par ligne, la sanction, et le **compteur d'avertissements par apprenant** |
 | **Révisions maison** | Ce qui revient du **formulaire Google** envoyé en semaine. `O` = a répondu · `N` = rien reçu |
 
+### Les points transmis au responsable
+
+Le dossier **[`points-au-responsable/`](points-au-responsable/LISEZ-MOI.md)** garde les documents de
+synthèse demandés par le Pasteur Eli — un par demande, daté et arrêté, fabriqué à partir des onglets
+ci-dessus et des réponses aux formulaires. Le dernier en date :
+**[point d'assiduité et de devoirs du 2 octobre 2026](points-au-responsable/point-assiduite-et-devoirs.pdf)**.
+
 ### Les deux onglets financiers
 
 | Onglet | À quoi il sert |

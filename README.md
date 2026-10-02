@@ -21,7 +21,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **[0-administratif/](0-administratif/LISEZ-MOI.md)** | Le règlement intérieur, à remettre signé par chaque famille | Une fois, à la séance 1 |
 | **[1-methode/](1-methode/methode-pedagogique.md)** | La pédagogie : comment faire progresser ensemble des niveaux très différents, à 2 enseignants | Une fois, au début. On y revient en cas de problème |
 | **[2-seances/](2-seances/LISEZ-MOI.md)** | Une séance = un dossier. Fiche détaillée, PDF à imprimer, code, sources | **Chaque semaine** |
-| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur : inscriptions, présence, diagnostic, suivi, observations, journal, cotisations et caisse, **indiscipline et révisions maison** | Après chaque séance |
+| **[3-suivi/](3-suivi/LISEZ-MOI.md)** | Le classeur : inscriptions, présence, diagnostic, suivi, observations, journal, cotisations et caisse, **indiscipline et révisions maison** — et les **[points transmis au responsable](3-suivi/points-au-responsable/LISEZ-MOI.md)** | Après chaque séance |
 | **[4-le-jeu-termine/](4-le-jeu-termine/LISEZ-MOI.md)** | Le jeu XO fini : la démonstration d'ouverture, et le point d'arrivée du parcours | Pour montrer, et pour se repérer |
 
 ---
