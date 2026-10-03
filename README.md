@@ -45,7 +45,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | Imprimer | [🖨️ Un seul document](2-seances/S04-le-jeu-compte/a-imprimer/quantites-et-formats.md) |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word](2-seances/S04-le-jeu-compte/a-envoyer/deroule-seance-4.docx) |
 | Envoyer le test aux parents, mercredi | [📝 Le test n°3](2-seances/S04-le-jeu-compte/a-envoyer/formulaire-exercices.md) — 20 points, corrigé automatiquement |
-| Revoir le TP de samedi dernier | [📄 La séance 3](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) |
+| Revoir le TP de samedi dernier | [📄 La séance 3](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) · [💻 son corrigé en Python](2-seances/S03-tp-les-joueurs/code/LISEZ-MOI.md) |
 
 ---
 
