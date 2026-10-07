@@ -1,10 +1,21 @@
-# 📝 Test n°3 — le formulaire d'exercices noté
+# 📝 Test n°3 — « texte ou nombre »
 
 **20 points : 12 questions « que va afficher ce programme ? » + 8 exercices où l'élève tape du code.**
-Il porte sur la séance 4 : `int()` / `str()`, le compteur, **les opérateurs de comparaison** et `if` / `else`.
-Aucun ordinateur n'est nécessaire, on peut répondre depuis un téléphone. Comptez 20 à 25 minutes.
+Il ne porte que sur **la première notion de la séance 4** : `int()` et `str()`. Le compteur et le
+`if` / `else` n'y sont pas — **ils n'ont pas encore été vus.**
+Aucun ordinateur n'est nécessaire, on peut répondre depuis un téléphone. Comptez 20 minutes.
 
-> **À envoyer dans la semaine qui suit la séance 4** — le mercredi, comme les deux précédents.
+> **Le tableau de la classe est rappelé en haut du formulaire**, et chaque ligne est testée par au moins
+> une question :
+>
+> | | |
+> |---|---|
+> | texte + texte | les deux sont collés — `"3" + "4"` → `34` |
+> | texte + nombre | **TypeError** |
+> | nombre + texte | **TypeError** |
+> | nombre + nombre | une addition — `3 + 4` → `7` |
+>
+> Plus la règle qui déclenche tout : **`input()` rend toujours du texte.**
 
 ---
 
@@ -18,28 +29,24 @@ Aucun ordinateur n'est nécessaire, on peut répondre depuis un téléphone. Com
 ### ⚠️ Les 4 minutes à faire à la main
 
 Les **12 questions de la partie A se corrigent toutes seules**. Les **8 exercices de la partie B** sont
-des réponses libres : Google ne permet pas de fixer leur corrigé depuis un script, il faut l'ajouter
-dans le formulaire. Sur chaque question : **« Corrigé » → « Ajouter une réponse correcte »**, puis collez
-les réponses ci-dessous — **toutes les variantes**, sinon un élève qui a juste sera compté faux.
+des réponses libres : Google ne permet pas de fixer leur corrigé depuis un script. Sur chaque question :
+**« Corrigé » → « Ajouter une réponse correcte »**, puis collez les réponses ci-dessous — **toutes les
+variantes**, sinon un élève qui a juste sera compté faux.
 
 | Exercice | Réponses à accepter |
 |---|---|
 | 1 · le mot qui transforme en nombre | `int` · `int()` |
 | 2 · le mot qui transforme en texte | `str` · `str()` |
-| 3 · ajouter 1 au compteur | `tour = tour + 1` · `tour=tour+1` · `tour = tour+1` · `tour = 1 + tour` |
-| 4 · la comparaison | `case > 9` · `case>9` |
-| 5 · réparer `if age = 17:` | `if age == 17:` · `if age==17:` |
-| 6 · réparer `if case > 9` | `if case > 9:` · `if case>9:` |
-| 7 · les deux lignes du `if` | **à corriger à la main** — le décalage compte, les variantes sont trop nombreuses |
-| 8 · le `if` / `else` complet | **à corriger à la main** — même raison |
+| 3 · réparer `print("Tour " + 3)` | `print("Tour " + str(3))` · `print("Tour " + str(3) )` · avec guillemets simples |
+| 4 · réparer `print("J'ai " + 15 + " ans")` | `print("J'ai " + str(15) + " ans")` |
+| 5 · ranger le nombre 7 | `tour = 7` · `tour=7` |
+| 6 · les trois lignes de l'âge | **à corriger à la main** |
+| 7 · afficher la somme | `print(a + b)` · `print(a+b)` |
+| 8 · le programme complet | **à corriger à la main** |
 
-> **Les exercices 7 et 8 restent manuels**, c'est normal : ce sont des réponses sur plusieurs lignes, et
-> c'est justement **le décalage** qu'on veut voir. Google affichera la copie, vous mettez 1 ou 0.
-> L'élève voit de toute façon la réponse attendue dans le retour.
-
-**Ce qu'on regarde dans les exercices 7 et 8 :** les deux-points en fin de ligne, et **4 espaces** devant
-la ligne qui suit. Un élève qui a mis 2 ou 3 espaces a compris l'idée : comptez juste, et notez-le dans
-l'onglet `Révisions maison`.
+> **Les exercices 6 et 8 restent manuels**, c'est normal : ce sont des réponses sur plusieurs lignes.
+> Ce qu'on regarde dans le 6 : **la ligne `age = int(age)` est-elle là, et au bon endroit** (après la
+> question, avant le calcul) ? Dans le 8 : `int()` à l'entrée **et** `str()` à la sortie.
 
 Puis, dans **⚙️ Paramètres → Questionnaire** : « publier les notes » **immédiatement après chaque envoi**.
 Et dans **Réponses → lier à Sheets** pour recevoir tous les scores dans une feuille.
@@ -51,13 +58,17 @@ Et dans **Réponses → lier à Sheets** pour recevoir tous les scores dans une 
 ```
 Bonjour, et que la paix soit avec vous.
 
-Voici le test de révision de la semaine pour votre enfant. Il reprend la
-séance de samedi : les nombres et le texte, le compteur, et surtout les
-décisions — le moment où le programme choisit tout seul ce qu'il fait.
+Voici le test de révision de la semaine pour votre enfant. Il porte sur
+une seule chose, celle que nous avons travaillée samedi : savoir si on
+a du texte ou un nombre entre les mains, et passer de l'un à l'autre.
 
-Il y a deux parties : d'abord lire un programme et dire ce qu'il affiche,
-ensuite écrire soi-même quelques lignes de code. Comptez 20 minutes.
-Aucun ordinateur n'est nécessaire, un téléphone suffit.
+Il y a deux parties : d'abord lire un programme et dire ce qu'il
+affiche, ensuite écrire soi-même quelques lignes de code. Comptez
+20 minutes. Aucun ordinateur n'est nécessaire, un téléphone suffit.
+
+Le tableau que les enfants ont recopié en classe est rappelé en haut du
+formulaire : ils peuvent l'avoir sous les yeux, ce n'est pas de la
+triche, c'est l'outil.
 
 Il aura sa note à la fin, avec les explications de ce qu'il n'a pas
 trouvé. Se tromper n'est pas grave : c'est comme ça qu'on apprend.
@@ -72,22 +83,23 @@ AcProKids Coding Camp — Vision Plénitudes Vie
 
 ## 3. Les réponses de la partie A
 
-Pour corriger à la main en cas de besoin, et pour préparer le quiz flash de la séance 5.
+Toutes ont été **vérifiées en exécutant le code**.
 
-| # | Le programme | Réponse | Ce qu'on vérifie |
+| # | Le programme | Réponse | La ligne du tableau |
 |---|---|---|---|
-| 1 | `a = "5"` puis `b = a + a` | `55` | texte collé, pas additionné |
-| 2 | `print(age + 1)` après `input` | `TypeError` | `input` rend du texte |
-| 3 | `int("12") + 1` | `13` | `int()` permet de calculer |
-| 4 | trois fois `tour = tour + 1` | `3` | le compteur |
-| 5 | `print(10 >= 10)` | `True` | `>=` = plus grand **ou égal** |
-| 6 | `print(x == 4)` | `True` | l'opérateur `==` pose une question |
-| 7 | `if age > 17 … else …` avec 20 | `Jeremiah` | **un seul** des deux chemins |
-| 8 | `if age = 17:` | `SyntaxError` | le piège `=` / `==` |
-| 9 | `if` sans décalage | `IndentationError` | les 4 espaces |
-| 10 | un `print` décalé, un autre non | `grand puis fini` | ce qui appartient au `if` |
-| 11 | `case = 12`, compteur dans le `else` | `0` | le coup refusé n'est pas compté |
-| 12 | `"Tour " + tour` | `TypeError` | il manquait `str()` |
+| 1 | `print("3" + "4")` | `34` | texte + texte |
+| 2 | `print(3 + 4)` | `7` | nombre + nombre |
+| 3 | `print("3" + 4)` | `TypeError` | texte + nombre |
+| 4 | `print(3 + "4")` | `TypeError` | nombre + texte |
+| 5 | `print(int("3") + 4)` | `7` | `int()` rend l'addition possible |
+| 6 | `print("3" + str(4))` | `34` | `str()` rend la colle possible |
+| 7 | `input` puis `age + 1` | `TypeError` | **`input` rend du texte** |
+| 8 | `input`, `int()`, puis `age + 1` | `13` | la ligne `int()` règle tout |
+| 9 | `print("Tour " + tour)`, `tour = 3` | `TypeError` | texte + nombre |
+| 10 | `print("Total : " + str(5 + 3))` | `Total : 8` | on additionne, **puis** on colle |
+| 11 | `int("douze")` | `ValueError` | `int()` veut un vrai nombre |
+| 12 | `"10"` converti, puis `nombre + nombre` | `20` | sans `int()`, ce serait `1010` |
 
-**Les trois questions les plus discriminantes sont les n° 9, 10 et 11.** Si elles sont massivement
-ratées, le quiz flash de la séance 5 repart de là : **le décalage dit ce qui appartient au `if`.**
+**Les trois questions qui séparent vraiment** sont les n° **7**, **10** et **12** : elles demandent de
+suivre ce qu'il y a *dans la boîte* au fil des lignes, pas seulement de lire un signe `+`. Si elles sont
+ratées en masse, le quiz flash de samedi repart de là.

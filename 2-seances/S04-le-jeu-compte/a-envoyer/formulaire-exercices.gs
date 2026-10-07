@@ -1,12 +1,21 @@
 /**
  * =====================================================================
- *  AcProKids Coding Camp — Test de révision n°3  (après la séance 4)
+ *  AcProKids Coding Camp — Test de révision n°3
+ *  TEXTE OU NOMBRE  (int et str)  —  Jeremiah Geeks
+ *
  *  Formulaire Google NOTÉ, en deux parties :
  *     A. « Que va afficher ce programme ? »  — corrigé automatiquement
  *     B. « Écris le code »                   — l'élève tape du code
  *
- *  Ce qu'il révise : int() et str(), le compteur tour = tour + 1,
- *  les comparaisons, et la décision if / else (avec le décalage).
+ *  Il ne porte QUE sur la première notion de la séance 4 : le texte et
+ *  les nombres. Le compteur et le if / else n'y sont pas : ils n'ont
+ *  pas encore été vus.
+ *
+ *  Il s'appuie sur le tableau donné en classe :
+ *      str + str  ->  concatenation
+ *      str + int  ->  TypeError
+ *      int + str  ->  TypeError
+ *      int + int  ->  addition
  * =====================================================================
  *
  *  MODE D'EMPLOI :
@@ -27,12 +36,18 @@
 
 function creerLeTest() {
 
-  var form = FormApp.create('Test n°3 — les nombres, le compteur et les décisions');
+  var form = FormApp.create('Test n°3 — texte ou nombre');
 
   form.setDescription(
-      'AcProKids Coding Camp — Jerusalem Geeks & Jeremiah Geeks\n\n' +
-      'Ce test reprend la séance de samedi : le texte et les nombres (int et str), ' +
-      'le compteur tour = tour + 1, les opérateurs de comparaison, et la décision if / else.\n\n' +
+      'AcProKids Coding Camp — Jeremiah Geeks\n\n' +
+      'Ce test porte sur UNE SEULE chose, celle de samedi : savoir si on a du TEXTE ' +
+      'ou un NOMBRE entre les mains, et passer de l\'un à l\'autre avec int() et str().\n\n' +
+      'GARDE CE TABLEAU SOUS LES YEUX — c\'est celui de la classe :\n' +
+      '    texte  +  texte   →  les deux sont collés  ("3" + "4" donne 34)\n' +
+      '    texte  +  nombre  →  TypeError\n' +
+      '    nombre +  texte   →  TypeError\n' +
+      '    nombre +  nombre  →  une addition      (3 + 4 donne 7)\n\n' +
+      'Et la règle à ne jamais oublier : input() rend TOUJOURS du texte.\n\n' +
       'Il y a deux parties :\n' +
       '  A. Que va afficher ce programme ? — tu lis le code dans ta tête\n' +
       '  B. Écris le code — tu tapes toi-même les bonnes lignes\n\n' +
@@ -56,63 +71,64 @@ function creerLeTest() {
   // ============================================================ PARTIE A
   form.addSectionHeaderItem()
       .setTitle('PARTIE A — Que va afficher ce programme ?')
-      .setHelpText('Lis chaque programme dans ta tête, ligne par ligne, de haut en bas. '
-                 + 'Souviens-toi : le signe = veut dire « range dans », un opérateur de comparaison '
-                 + 'répond True ou False, et le décalage de 4 espaces dit ce qui appartient au if.');
+      .setHelpText('Pour chaque programme, demande-toi d\'abord : de chaque côté du + , '
+                 + 'est-ce que c\'est du TEXTE (avec des guillemets) ou un NOMBRE (sans guillemets) ? '
+                 + 'Ensuite, regarde ton tableau.');
 
   var reflexion = [
 
-    ['a = "5"\nb = a + a\nprint(b)\n\nQu\'est-ce qui s\'affiche ?',
-     ['55', '10', '5 5', 'une erreur rouge'], '55',
-     'Entre guillemets, 5 est du TEXTE. Le + colle deux textes : 55. Pour obtenir 10, il aurait fallu des nombres.'],
+    ['print("3" + "4")\n\nQu\'est-ce qui s\'affiche ?',
+     ['34', '7', '"34"', 'une erreur rouge'], '34',
+     'Texte + texte : les deux sont collés l\'un à l\'autre. "3" et "4" sont entre guillemets, donc ce sont des textes.'],
+
+    ['print(3 + 4)\n\nQu\'est-ce qui s\'affiche ?',
+     ['34', '7', '3 + 4', 'une erreur rouge'], '7',
+     'Nombre + nombre : c\'est une addition. Pas de guillemets, donc ce sont bien des nombres.'],
+
+    ['print("3" + 4)\n\nQue se passe-t-il ?',
+     ['Ça affiche 34', 'Ça affiche 7', 'Une erreur rouge : TypeError', 'Ça affiche "34"'],
+     'Une erreur rouge : TypeError',
+     'Texte + nombre : TypeError. Python ne sait pas s\'il doit coller ou additionner, alors il refuse.'],
+
+    ['print(3 + "4")\n\nQue se passe-t-il ?',
+     ['Ça affiche 7', 'Ça affiche 34', 'Ça n\'affiche rien', 'Une erreur rouge : TypeError'],
+     'Une erreur rouge : TypeError',
+     'Nombre + texte : TypeError aussi. L\'ordre ne change rien, c\'est le mélange qui ne passe pas.'],
+
+    ['print(int("3") + 4)\n\nQu\'est-ce qui s\'affiche ?',
+     ['7', '34', 'une erreur rouge', '"7"'], '7',
+     'int("3") transforme le texte 3 en nombre 3. On a donc nombre + nombre : une addition.'],
+
+    ['print("3" + str(4))\n\nQu\'est-ce qui s\'affiche ?',
+     ['une erreur rouge', '34', '7', '3 4'], '34',
+     'str(4) transforme le nombre 4 en texte. On a donc texte + texte : les deux sont collés.'],
 
     ['age = input("Ton age ? ")\nprint(age + 1)\n\nLe joueur tape  12.  Que se passe-t-il ?',
-     ['Ça affiche 13', 'Ça affiche 121', 'Une erreur rouge : TypeError', 'Ça affiche 12'],
+     ['Ça affiche 13', 'Ça affiche 121', 'Ça affiche 12', 'Une erreur rouge : TypeError'],
      'Une erreur rouge : TypeError',
-     'input rend TOUJOURS du texte, même quand on tape un nombre. On ne peut pas ajouter 1 à du texte : il fallait int(age) d\'abord.'],
+     'input rend TOUJOURS du texte, même quand le joueur tape un nombre. On a donc texte + nombre : TypeError.'],
 
-    ['age = int("12")\nprint(age + 1)\n\nQu\'est-ce qui s\'affiche ?',
-     ['121', '13', 'une erreur rouge', '"13"'], '13',
-     'int() a transformé le texte 12 en nombre 12. Avec un nombre, on peut calculer : 12 + 1 = 13.'],
-
-    ['tour = 0\ntour = tour + 1\ntour = tour + 1\ntour = tour + 1\nprint(tour)\n\nQu\'est-ce qui s\'affiche ?',
-     ['0', '1', '111', '3'], '3',
-     'La même ligne, trois fois : chaque fois elle prend ce qu\'il y a dans tour et y remet un de plus. 0, puis 1, puis 2, puis 3.'],
-
-    ['print(10 >= 10)\n\nQu\'est-ce qui s\'affiche ?',
-     ['True', 'False', '10', 'une erreur rouge'], 'True',
-     'L\'opérateur >= veut dire « plus grand OU ÉGAL ». 10 n\'est pas plus grand que 10, mais il est égal : la réponse est True.'],
-
-    ['x = 4\nprint(x == 4)\n\nQu\'est-ce qui s\'affiche ?',
-     ['4', 'True', 'False', 'x == 4'], 'True',
-     'L\'opérateur == pose une QUESTION : est-ce que x vaut 4 ? Oui : True. Un seul = aurait été un ordre.'],
-
-    ['age = 20\n\nif age > 17:\n    print("Jeremiah")\nelse:\n    print("Jerusalem")\n\nQu\'est-ce qui s\'affiche ?',
-     ['Jerusalem', 'Jeremiah puis Jerusalem', 'rien', 'Jeremiah'], 'Jeremiah',
-     '20 est plus grand que 17 : il prend le premier chemin, et il ne fait PAS le else. Un seul des deux chemins est pris, jamais les deux.'],
-
-    ['age = 20\n\nif age = 17:\n    print("Bravo")\n\nQue se passe-t-il ?',
-     ['Une erreur rouge : SyntaxError', 'Ça affiche Bravo', 'Ça n\'affiche rien', 'Ça affiche 17'],
-     'Une erreur rouge : SyntaxError',
-     'Un seul = , c\'est « range dans » : un ORDRE. Pour poser une question dans un if, il faut l\'opérateur == .'],
-
-    ['age = 20\n\nif age > 17:\nprint("Bravo")\n\nQue se passe-t-il ?',
-     ['Ça affiche Bravo', 'Ça n\'affiche rien', 'Une erreur rouge : IndentationError', 'Une erreur rouge : NameError'],
-     'Une erreur rouge : IndentationError',
-     'Après les deux-points, il faut DÉCALER de 4 espaces. Sans le décalage, Python ne sait pas ce qui appartient au if.'],
-
-    ['nombre = 5\n\nif nombre > 3:\n    print("grand")\nprint("fini")\n\nQu\'est-ce qui s\'affiche ?',
-     ['grand', 'grand puis fini', 'fini', 'rien'], 'grand puis fini',
-     'print("fini") n\'est PAS décalé : il n\'appartient pas au if. Il s\'affiche donc dans tous les cas.'],
-
-    ['tour = 0\ncase = 12\n\nif case > 9:\n    print("La case n\'existe pas !")\nelse:\n    tour = tour + 1\n\nprint(tour)\n\nQu\'est-ce qui s\'affiche à la fin ?',
-     ['1', '12', '9', '0'], '0',
-     'La case 12 est refusée : c\'est le premier chemin qui est pris. La ligne tour = tour + 1 est dans le else, elle n\'a pas été exécutée.'],
+    ['age = input("Ton age ? ")\nage = int(age)\nprint(age + 1)\n\nLe joueur tape  12.  Qu\'est-ce qui s\'affiche ?',
+     ['13', '121', 'une erreur rouge', '12'], '13',
+     'La ligne int() a transformé le texte en nombre. Maintenant, nombre + nombre : 12 + 1 = 13.'],
 
     ['tour = 3\nprint("Tour " + tour)\n\nQue se passe-t-il ?',
      ['Ça affiche Tour 3', 'Ça affiche Tour tour', 'Une erreur rouge : TypeError', 'Ça affiche 3'],
      'Une erreur rouge : TypeError',
-     'tour contient un NOMBRE, et on essaie de le coller à du texte avec le +. Il fallait écrire str(tour).']
+     'tour contient un NOMBRE, et "Tour " est du texte. Texte + nombre : TypeError. Il fallait écrire str(tour).'],
+
+    ['print("Total : " + str(5 + 3))\n\nQu\'est-ce qui s\'affiche ?',
+     ['Total : 53', 'Total : 8', 'une erreur rouge', 'Total : 5 + 3'], 'Total : 8',
+     'D\'abord 5 + 3 fait 8, parce que ce sont deux nombres. Puis str(8) en fait du texte, qu\'on peut coller.'],
+
+    ['age = int("douze")\n\nQue se passe-t-il ?',
+     ['age contient 12', 'age contient douze', 'Il ne se passe rien', 'Une erreur rouge : ValueError'],
+     'Une erreur rouge : ValueError',
+     'int() ne marche que si le texte est VRAIMENT un nombre. Avec le mot douze, Python ne sait pas faire.'],
+
+    ['nombre = "10"\nnombre = int(nombre)\nprint(nombre + nombre)\n\nQu\'est-ce qui s\'affiche ?',
+     ['1010', 'une erreur rouge', '20', '"20"'], '20',
+     'Sans la ligne int(), on aurait eu 1010 (deux textes collés). Avec elle, ce sont deux nombres : 10 + 10 = 20.']
   ];
 
   reflexion.forEach(function (q) {
@@ -132,42 +148,41 @@ function creerLeTest() {
       .setTitle('PARTIE B — Écris le code')
       .setHelpText('Tape ta réponse comme tu l\'écrirais dans Thonny. '
                  + 'Utilise des guillemets doubles " et respecte les majuscules et les minuscules. '
-                 + 'Quand il faut décaler une ligne, décale-la de 4 espaces. '
                  + 'Ton code ne sera pas exécuté : c\'est ta façon de l\'écrire qui compte.');
 
   var exercices = [
 
-    ['Complète pour transformer la réponse du joueur en NOMBRE :\n\ncase = ______(case)\n\nÉcris seulement le mot qui manque.',
+    ['Complète pour transformer la réponse du joueur en NOMBRE :\n\nage = ______(age)\n\nÉcris seulement le mot qui manque.',
      'Un seul mot, en minuscules.',
      'int'],
 
-    ['Complète pour pouvoir coller le nombre au texte :\n\nprint("Tour " + ______(tour))\n\nÉcris seulement le mot qui manque.',
+    ['Complète pour pouvoir coller le nombre au texte :\n\nprint("J\'ai " + ______(age) + " ans")\n\nÉcris seulement le mot qui manque.',
      'Un seul mot, en minuscules.',
      'str'],
 
-    ['Écris la ligne qui ajoute 1 au compteur appelé  tour',
-     'Une seule ligne. Souviens-toi : le = veut dire « range dans ».',
-     'tour = tour + 1'],
+    ['Cette ligne est cassée :\n\nprint("Tour " + 3)\n\nRécris-la correctement, pour qu\'elle affiche  Tour 3',
+     'Une seule ligne.',
+     'print("Tour " + str(3))'],
 
-    ['Écris la comparaison qui demande :  est-ce que  case  est plus grand que 9 ?',
-     'Seulement la comparaison, avec le bon opérateur. Sans print et sans if.',
-     'case > 9'],
+    ['Cette ligne est cassée :\n\nprint("J\'ai " + 15 + " ans")\n\nRécris-la correctement.',
+     'Une seule ligne. Attention : il y a UN SEUL nombre à transformer.',
+     'print("J\'ai " + str(15) + " ans")'],
 
-    ['Cette ligne est cassée :\n\nif age = 17:\n\nRécris-la correctement.',
-     'Une seule ligne, les deux-points compris.',
-     'if age == 17:'],
+    ['Écris la ligne qui range le nombre  7  dans une boîte appelée  tour\n\n(le NOMBRE 7, pas le texte)',
+     'Une seule ligne. Pas de guillemets.',
+     'tour = 7'],
 
-    ['Cette ligne est cassée :\n\nif case > 9\n    print("Trop grand !")\n\nRécris la PREMIÈRE ligne correctement.',
-     'Une seule ligne. Regarde bien la fin.',
-     'if case > 9:'],
+    ['Ce programme plante. Récris-le EN ENTIER pour qu\'il marche :\n\nage = input("Ton age ? ")\nprint(age + 10)',
+     'Trois lignes. Il manque une ligne au milieu.',
+     'age = input("Ton age ? ")\nage = int(age)\nprint(age + 10)'],
 
-    ['Ce programme est cassé :\n\nif age > 17:\nprint("Jeremiah")\n\nRécris les DEUX lignes correctement.',
-     'Deux lignes, l\'une sous l\'autre. Pense au décalage de 4 espaces.',
-     'if age > 17:\n    print("Jeremiah")'],
+    ['Deux boîtes contiennent des NOMBRES :\n\na = 4\nb = 5\n\nÉcris la ligne qui affiche leur somme (donc 9).',
+     'Une seule ligne, sans guillemets.',
+     'print(a + b)'],
 
-    ['Écris le if / else complet :\n\n1) si  case  est plus grand que 9, afficher  Impossible\n2) sinon, afficher  Case acceptee',
-     'Quatre lignes. Pense aux deux-points et au décalage de 4 espaces.',
-     'if case > 9:\n    print("Impossible")\nelse:\n    print("Case acceptee")']
+    ['Écris le programme qui demande son âge au joueur, puis affiche :\n\nDans 10 ans tu auras 25 ans\n\n(si le joueur a tapé 15)',
+     'Trois lignes : la question, la transformation en nombre, et l\'affichage.',
+     'age = input("Ton age ? ")\nage = int(age)\nprint("Dans 10 ans tu auras " + str(age + 10) + " ans")']
   ];
 
   exercices.forEach(function (e) {
