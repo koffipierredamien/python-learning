@@ -26,7 +26,26 @@ Aucun ordinateur n'est nécessaire, on peut répondre depuis un téléphone. Com
 3. Bouton **▶ Exécuter**, autorisez à la première utilisation.
 4. Le journal affiche **le lien à envoyer** et le lien pour modifier.
 
-### ⚠️ Les 4 minutes à faire à la main
+### 🔴 ÉTAPE 5 — sans elle, l'élève ne voit AUCUNE correction
+
+C'est le piège de Google Forms, et il est silencieux : le formulaire marche, les réponses arrivent,
+mais **l'élève ne voit que « Votre réponse a été enregistrée »** — pas de note, pas de corrigé.
+
+Ouvrez le formulaire → **roue dentée ⚙ Paramètres** → **Questionnaires** :
+
+| Réglage | À mettre sur |
+|---|---|
+| **Publier les notes** | **Immédiatement après chaque envoi** *(et non « Plus tard, après examen manuel »)* |
+| **Le participant peut voir** | cochez **les trois** : Questions manquées · Bonnes réponses · Valeurs des points |
+
+> **Pourquoi le script ne le fait pas :** Apps Script n'expose pas ce réglage. Il n'existe aucune
+> méthode pour le poser par programme — c'est quatre clics, une seule fois par formulaire.
+
+**La recette, avant d'envoyer aux parents :** répondez vous-même au formulaire. Vous devez voir, après
+l'envoi, **le bouton « Afficher le score »**, puis votre note et les corrigés. Si vous ne voyez pas ce
+bouton, l'étape 5 n'a pas été faite.
+
+### ⚠️ Et les 4 minutes à faire à la main
 
 Les **12 questions de la partie A se corrigent toutes seules**. Les **8 exercices de la partie B** sont
 des réponses libres : Google ne permet pas de fixer leur corrigé depuis un script. Sur chaque question :
@@ -48,8 +67,11 @@ variantes**, sinon un élève qui a juste sera compté faux.
 > Ce qu'on regarde dans le 6 : **la ligne `age = int(age)` est-elle là, et au bon endroit** (après la
 > question, avant le calcul) ? Dans le 8 : `int()` à l'entrée **et** `str()` à la sortie.
 
-Puis, dans **⚙️ Paramètres → Questionnaire** : « publier les notes » **immédiatement après chaque envoi**.
 Et dans **Réponses → lier à Sheets** pour recevoir tous les scores dans une feuille.
+
+> **Les 8 exercices de la partie B restent « à corriger » tant que vous n'avez pas collé leur corrigé** —
+> l'élève les voit alors à 0 point, en attente. C'est l'autre raison pour laquelle une copie peut sembler
+> « sans réponse ».
 
 ---
 

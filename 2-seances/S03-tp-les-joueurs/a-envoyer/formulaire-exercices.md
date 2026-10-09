@@ -34,6 +34,13 @@ les réponses ci-dessous — **toutes les variantes**, sinon un élève qui a ju
 > vous mettez 1 ou 0. L'élève voit de toute façon la réponse attendue dans le retour.
 
 Puis, dans **⚙️ Paramètres → Questionnaire** : « publier les notes » **immédiatement après chaque envoi**.
+
+> 🔴 **Le réglage qui décide de tout.** Tant que « Publier les notes » est sur *Plus tard, après examen
+> manuel*, l'élève ne voit que « Votre réponse a été enregistrée » : **ni note, ni corrigé**. Il faut
+> aussi cocher les trois cases de **« Le participant peut voir »** : *Questions manquées · Bonnes
+> réponses · Valeurs des points*. Apps Script n'expose pas ces réglages — c'est à faire à la main, une
+> fois par formulaire. **Vérifiez en répondant vous-même : le bouton « Afficher le score » doit apparaître.**
+
 Et dans **Réponses → lier à Sheets** pour recevoir tous les scores dans une feuille.
 
 ---

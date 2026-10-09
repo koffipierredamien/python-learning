@@ -24,7 +24,18 @@
  *   3. Bouton ▶ Exécuter  →  autorisez à la première utilisation
  *   4. Le journal affiche le lien à envoyer et le lien pour modifier
  *
- *  ⚠ UNE SEULE CHOSE À FAIRE À LA MAIN, dans le formulaire (4 minutes) :
+ *  ⚠⚠ ETAPE 5, SANS LAQUELLE L'ELEVE NE VERRA AUCUNE CORRECTION :
+ *     ouvrez le formulaire → roue dentée ⚙ Paramètres → Questionnaires,
+ *     et réglez à la main :
+ *        « Publier les notes »  →  IMMEDIATEMENT APRES CHAQUE ENVOI
+ *        « Le participant peut voir »  →  cochez les TROIS cases :
+ *               Questions manquées · Bonnes réponses · Valeurs des points
+ *     Tant que c'est sur « Plus tard, après examen manuel », l'élève ne
+ *     voit que « Votre réponse a été enregistrée », sans note ni corrigé.
+ *     Apps Script n'expose pas ce réglage : il ne peut pas être fait par
+ *     le script, c'est quatre clics et c'est définitif pour ce formulaire.
+ *
+ *  ⚠ ET LA DEUXIEME CHOSE À FAIRE À LA MAIN (4 minutes) :
  *     les 8 questions « Écris le code » sont des réponses libres. Google
  *     ne permet pas de fixer leur corrigé depuis un script — il faut
  *     l'ajouter dans le formulaire : sur chaque question, « Corrigé » →
@@ -203,6 +214,18 @@ function creerLeTest() {
     Logger.log('À faire à la main : ouvrez le formulaire et cliquez sur « Publier ».');
   }
 
+  Logger.log('#######################################################');
+  Logger.log('##  A FAIRE MAINTENANT, SINON L\'ELEVE NE VERRA RIEN  ##');
+  Logger.log('#######################################################');
+  Logger.log('1. Ouvrez le formulaire (lien de modification ci-dessous)');
+  Logger.log('2. Roue dentee ⚙ Parametres  >  Questionnaires');
+  Logger.log('3. « Publier les notes »  ->  Immediatement apres chaque envoi');
+  Logger.log('4. « Le participant peut voir »  ->  cochez les TROIS cases :');
+  Logger.log('      Questions manquees · Bonnes reponses · Valeurs des points');
+  Logger.log('5. Collez les corriges des 8 exercices (formulaire-exercices.md)');
+  Logger.log('6. RECETTE : repondez vous-meme au formulaire. Vous devez voir');
+  Logger.log('      le bouton « Afficher le score », la note, et les corriges.');
+  Logger.log('');
   Logger.log('=======================================================');
   Logger.log('LIEN À ENVOYER AUX PARENTS :');
   Logger.log(form.getPublishedUrl());
