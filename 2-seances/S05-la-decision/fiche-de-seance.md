@@ -29,17 +29,28 @@ elle en a fait une. On garde les deux autres, avec **plus d'air** : le projet pa
 | Horaire | Séquence | Durée |
 |---|---|---|
 | **12 h - 12 h 15** | Prière et accueil | 15 min |
-| **12 h 15 - 12 h 22** | **Quiz flash** : texte ou nombre | 7 min |
-| **12 h 22 - 12 h 35** | **Je montre** : le compteur `tour = tour + 1` | 13 min |
-| **12 h 35 - 12 h 50** | **Vous faites** : le compteur de points | 15 min |
-| **12 h 50 - 13 h** | **Je montre** : les opérateurs, les deux familles | 10 min |
+| **12 h 15 - 12 h 50** | 🧭 **LE GRAND PARCOURS** — les 8 paliers, en autonomie | **35 min** |
+| **12 h 50 - 13 h** | **Je montre** : le compteur — *on part du palier 7* | 10 min |
 | **13 h - 13 h 10** | Pause | 10 min |
-| **13 h 10 - 13 h 25** | **Je montre** : `if` / `else`, et l'`IndentationError` | 15 min |
-| **13 h 25 - 13 h 52** | **Vous faites** : LE PROJET — numéroter, compter, vérifier | 27 min |
+| **13 h 10 - 13 h 20** | **Je montre** : les opérateurs, les deux familles | 10 min |
+| **13 h 20 - 13 h 35** | **Je montre** : `if` / `else` — *on part du palier 8* — et l'`IndentationError` | 15 min |
+| **13 h 35 - 13 h 52** | **Vous faites** : LE PROJET — numéroter, compter, vérifier | 17 min |
 | **13 h 52 - 14 h** | Clôture | 8 min |
 
-**La règle du jour : 13 h 25, le projet commence.** S'il faut couper, on coupe le compteur de points —
-c'est un échauffement, le projet le refait travailler de toute façon.
+### Ce que le parcours remplace
+
+Il prend la place du **quiz flash** (il révise la même chose, en mieux : les doigts sur le clavier) et de
+l'atelier **« compteur de points »** (les paliers 7 et 8 font le même travail, en découverte).
+**Gardez le quiz** [`a-projeter/quiz-rappel.pptx`](a-projeter/quiz-rappel.pptx) : sa **dernière diapo**
+est le tableau `texte / nombre`, à projeter pendant les paliers 5 et 6.
+
+### Les deux règles de temps
+
+1. **12 h 50, on s'arrête**, fini ou pas. Le parcours n'est pas une course : ce qui n'est pas fait n'est
+   pas grave, c'est de la révision.
+2. **Si le parcours déborde jusqu'à 13 h**, on coupe dans la leçon des opérateurs (quatre signes au lieu
+   de six) — **jamais dans le `if` / `else`**. Et si le projet ne tient pas, **il passe à samedi
+   prochain** : on distribue quand même le code officiel à 13 h 50, le Filet joue son rôle.
 
 ---
 
@@ -49,7 +60,11 @@ Tout est dans **[`../S04-le-jeu-compte/`](../S04-le-jeu-compte/fiche-de-seance.m
 
 | Moment | Le fichier |
 |---|---|
-| 12 h 15 | [`a-projeter/quiz-rappel.pptx`](a-projeter/quiz-rappel.pptx) — **le seul fichier neuf d'aujourd'hui** |
+| 12 h 15 | 🧭 [`a-imprimer/1-parcours-revision.pdf`](a-imprimer/1-parcours-revision.pdf) — **1 par élève, recto-verso** |
+| 12 h 15 → 12 h 50 | [`a-projeter/parcours-tableau-de-bord.pptx`](a-projeter/parcours-tableau-de-bord.pptx) — 3 diapos, **la 2ᵉ reste affichée** |
+| sur chaque poste | [`code/parcours_depart.py`](code/parcours_depart.py) → enregistré sous `parcours_tonprenom.py` |
+| pour vous, la veille | [`code/parcours_corrige.py`](code/parcours_corrige.py) — les 8 paliers et les 3 défis, **il tourne** |
+| pendant les paliers 5-6 | la **dernière diapo** de [`a-projeter/quiz-rappel.pptx`](a-projeter/quiz-rappel.pptx) : le tableau texte / nombre |
 | 12 h 22 → 13 h 25 | [le diaporama de la séance 4](../S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — **on démarre au séparateur « 2 · Le compteur »**, on saute les diapos de `int()` / `str()` |
 | la veille, à voix haute | [l'anti-sèche](../S04-le-jeu-compte/code/live_coding_antiseche.py) — **étapes D à G seulement** |
 | 1 par poste | [l'aide-mémoire](../S04-le-jeu-compte/a-imprimer/1-aide-memoire.pdf) — il porte déjà les trois notions |
@@ -67,32 +82,43 @@ Tout est dans **[`../S04-le-jeu-compte/`](../S04-le-jeu-compte/fiche-de-seance.m
 
 ## 3. Les deux blocs neufs
 
-### 3.1 · 12 h 15 - 12 h 22 — Le quiz flash
+### 3.1 · 12 h 15 - 12 h 50 — 🧭 Le Grand Parcours
 
-6 questions, les cartes de couleur. Elles reprennent **exactement** le tableau de samedi dernier :
-`"3" + "4"`, `3 + 4`, `"3" + 4`, l'`input` qui rend du texte, la ligne `int()` qui répare, et `str()`
-dans une phrase.
+**C'est le bloc neuf de la séance.** Les élèves travaillent **seuls**, à leur rythme, sur un seul
+fichier. Vous circulez, vous ne vous asseyez pas, **vous ne touchez aucun clavier**.
 
-**La dernière diapo est le tableau complet**, à laisser affiché pendant le début de séance.
+**Le lancement, en deux minutes :** on distribue la feuille, on lit les quatre règles à voix haute, on
+projette la diapo 2 (le tableau de bord), et on part.
+
+| Palier | Ce qu'il révise | Durée |
+|---|---|---|
+| **1** · Afficher | `print`, plusieurs lignes, `"-" * 30` | 3 min |
+| **2** · La boîte | la variable, et `print(x)` contre `print("x")` | 4 min |
+| **3** · Coller | le `+`, et l'espace qui ne se met pas tout seul | 4 min |
+| **4** · Demander | `input`, et l'espace avant le guillemet | 5 min |
+| **5** · Texte ou nombre | le tableau des types, **et l'erreur provoquée exprès** | 6 min |
+| **6** · L'âge | `int()` à l'entrée **et** `str()` à la sortie | 6 min |
+| **7** · Le compteur | ⚡ **découverte** : ils tapent, ils prédisent, on n'explique pas | 4 min |
+| **8** · La décision | ⚡ **découverte** : `if` / `else` recopié, lancé deux fois | 3 min |
+
+**Les paliers 7 et 8 sont le cœur du dispositif.** Les élèves y découvrent **seuls**, sans explication,
+les deux notions du jour. On ne corrige pas, on ne commente pas : **on les laisse constater**, et la
+leçon de 12 h 50 vient répondre à une question qu'ils se posent déjà.
+
+**Ce que vous regardez en circulant** (c'est aussi écrit en bas du corrigé) :
+
+| Palier | La question |
+|---|---|
+| 2 | sait-il **dire** la différence `print(x)` / `print("x")` ? |
+| 5 | sait-il **nommer** l'erreur (`TypeError`) avant de la réparer ? |
+| 6 | met-il `int()` à l'entrée **et** `str()` à la sortie ? |
+| 7 | a-t-il prédit **2**, ou a-t-il dit 1 ? — **notez les noms** |
+| 8 | le décalage de 4 espaces est-il là **sans aide** ? |
+
+**Les trois défis ⭐** (au dos de la feuille) occupent les plus rapides : la fiche du joueur encadrée, le
+compteur de scores, le contrôle d'âge. **Personne n'est en retard s'il ne les fait pas.**
 
 > **On ne commente aucun résultat individuel du test envoyé mercredi.** Le score est pour vous.
-
-### 3.2 · 12 h 35 - 12 h 50 — Vous faites : le compteur de points
-
-Nouveau fichier, `compteur.py`. Au tableau, les quatre étapes :
-
-1. crée un compteur `points` qui part de **zéro**, et affiche-le ;
-2. ajoute 1 **trois fois**, en affichant après chaque ajout — tu dois voir `1`, `2`, `3` ;
-3. demande au joueur **combien de points il marque**, transforme sa réponse en **nombre**, et
-   ajoute-les au compteur ;
-4. affiche `Total : …` — attention, il faudra `str()`.
-
-**Carte bleue :** *« demande un deuxième score, ajoute-le aussi, et affiche combien il manque pour
-atteindre 20. »*
-
-**Aucune notion nouvelle** : c'est le compteur de tout à l'heure, plus `int()` et `str()` de samedi
-dernier. L'élève qui bute sur l'étape 3 n'a pas compris le compteur — c'est exactement ce qu'on veut
-repérer avant le projet.
 
 ---
 
@@ -100,8 +126,10 @@ repérer avant le projet.
 
 Il est **inchangé**, dans la fiche de la séance 4 :
 
-- **le compteur** → [§ 3.5](../S04-le-jeu-compte/fiche-de-seance.md) (la boîte, les papiers, « range dans »)
-- **les opérateurs et `if` / `else`** → [§ 3.7](../S04-le-jeu-compte/fiche-de-seance.md), les cinq temps a) à e)
+- **le compteur** → [§ 3.5](../S04-le-jeu-compte/fiche-de-seance.md) (la boîte, les papiers, « range dans ») —
+  **ouvrez en demandant : « au palier 7, qui avait prédit 2 ? »**
+- **les opérateurs et `if` / `else`** → [§ 3.7](../S04-le-jeu-compte/fiche-de-seance.md), les cinq temps a) à e) —
+  **ouvrez en demandant : « au palier 8, qui a vu le programme changer d'avis ? »**
 - **le projet, ses 8 étapes et ses 7 erreurs** → [§ 3.8](../S04-le-jeu-compte/fiche-de-seance.md)
 - **la clôture et les plans de secours** → [§ 3.9 et § 4](../S04-le-jeu-compte/fiche-de-seance.md)
 
@@ -118,5 +146,7 @@ Il est **inchangé**, dans la fiche de la séance 4 :
 2. **L'onglet `Journal`** : **combien ont écrit un `if` / `else` qui marche sans aide.** C'est la mesure
    de la séance.
 3. **L'onglet `Révisions maison`** : colonne `S05`, qui a rendu le devoir de mercredi.
-4. **Le [dictionnaire des erreurs](../../1-methode/annexes/A6-dictionnaire-des-erreurs.md)** : cocher
+4. **Les feuilles de parcours restent aux élèves** — mais **lisez le bas de leur page 2 avant qu'ils
+   partent** : « ce que je n'ai pas bien compris depuis le premier samedi ». C'est ce qui ouvrira la séance 6.
+5. **Le [dictionnaire des erreurs](../../1-methode/annexes/A6-dictionnaire-des-erreurs.md)** : cocher
    `IndentationError` et le `=` / `==`.

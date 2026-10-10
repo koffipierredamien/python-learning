@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Le Grand Parcours</title>
+<style>
+  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+  @page{size:A4 portrait;margin:7mm 9mm}
+  body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:8.9pt;color:#14142b}
+  .consigne{font-size:8.4pt;color:#333;border:1px dashed #999;padding:2mm;margin-bottom:2.6mm}
+  h1{font-size:15.5pt;margin:0 0 .8mm;text-align:center}
+  .sur{text-align:center;font-size:8.8pt;color:#555;margin-bottom:1.6mm}
+  .ident{display:flex;gap:3mm;font-size:8.6pt;margin-bottom:2mm}
+  .ident div{flex:1;border:.4mm solid #999;border-radius:1.5mm;padding:1.2mm}
+  .regles{background:#f3f3f8;border-left:2.5mm solid #6b2d8f;padding:1.6mm 2.6mm;font-size:8.3pt;margin-bottom:2.2mm;line-height:1.3}
+  .regles b{color:#6b2d8f}
+  .p{border:.4mm solid #1a1a2e;border-radius:2mm;margin-bottom:1.7mm;overflow:hidden;page-break-inside:avoid}
+  .pt{background:#1a1a2e;color:#fff;padding:.9mm 2.4mm;font-size:9.4pt;font-weight:bold;display:flex;justify-content:space-between}
+  .pt .n{background:#fff;color:#1a1a2e;border-radius:50%;width:5.2mm;height:5.2mm;display:inline-block;
+         text-align:center;line-height:5.2mm;font-size:9pt;margin-right:2mm}
+  .pt .t{font-weight:normal;font-size:8.6pt;opacity:.8}
+  .pb{padding:1.5mm 2.4mm;line-height:1.3}
+  .pb ol{margin:0;padding-left:5mm}.pb li{margin-bottom:.8mm;line-height:1.35}
+  .code{font-family:"Courier New",monospace;font-size:9.2pt;background:#12122a;color:#4fc3f7;
+        padding:1.4mm 2.4mm;border-radius:1.5mm;white-space:pre;line-height:1.28;margin:1mm 0}
+  .code i{color:#ff8a80;font-style:normal}
+  .case{display:inline-block;width:4mm;height:4mm;border:.4mm solid #1a1a2e;border-radius:.8mm;
+        vertical-align:-.8mm;margin-right:1.4mm}
+  .fait{font-size:8pt;color:#555;margin-top:.9mm;border-top:.2mm dashed #bbb;padding-top:.9mm}
+  .ecris{border-bottom:.3mm dotted #666;display:inline-block;min-width:60mm}
+  .star{background:#fff6d8;border:.6mm solid #d79a00}
+  .star .pt{background:#d79a00}
+  .star .pt .n{color:#d79a00}
+  table{width:100%;border-collapse:collapse;margin-top:1.4mm}
+  td,th{border:.25mm solid #888;padding:.8mm 1.4mm;font-size:8.2pt;text-align:left}
+  th{background:#eee;font-size:8pt}
+  .mono{font-family:"Courier New",monospace;font-weight:bold}
+  @media print{.consigne{display:none}}
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 1 par élève, A4 <b>recto-verso</b>. Ils écrivent dessus, ils l'emportent.</div>
+
+<h1>🧭 LE GRAND PARCOURS</h1>
+<div class="sur">Tout ce qu'on sait faire, du premier samedi à aujourd'hui · Jeremiah Geeks · 10 octobre 2026</div>
+
+<div class="ident">
+  <div><b>Ton nom :</b></div>
+  <div><b>Ton fichier :</b> <span class="mono">parcours_tonprenom.py</span></div>
+  <div><b>Paliers franchis :</b> ____ / 8</div>
+</div>
+
+<div class="regles">
+  <b>Huit paliers, dans l'ordre.</b> Tu écris le code toi-même, tu relances (<b>F5</b>) à la fin de chaque
+  palier, et tu coches la case. <b>Bloqué plus de 2 minutes ?</b> Carte orange, et tu passes au palier
+  suivant : on y reviendra. Les trois défis ⭐ sont au dos, pour ceux qui arrivent au bout.
+</div>
+
+<div class="p"><div class="pt"><span><span class="n">1</span>AFFICHER</span><span class="t">3 min</span></div>
+<div class="pb">
+  <ol><li>Affiche <b>trois lignes</b> : ton prénom, ta classe, et <span class="mono">Jeremiah Geek</span>.</li>
+      <li>Encadre-les avec une ligne de <b>30 tirets</b>, en haut et en bas.</li></ol>
+  <div class="code">print("-" * 30)   <i>← le rappel du TP : ça répète le tiret 30 fois</i></div>
+  <div class="fait"><span class="case"></span> <b>C'est franchi quand</b> tu vois 5 lignes à l'écran, encadrées.</div>
+</div></div>
+
+<div class="p"><div class="pt"><span><span class="n">2</span>LA BOÎTE</span><span class="t">4 min</span></div>
+<div class="pb">
+  <ol><li>Range ton prénom dans une boîte appelée <span class="mono">joueur</span>.</li>
+      <li>Affiche <span class="mono">print(joueur)</span> puis <span class="mono">print("joueur")</span>.</li>
+      <li>Change le contenu de la boîte, et réaffiche-la.</li></ol>
+  <div class="fait"><span class="case"></span> <b>Écris ici ce qui change entre les deux :</b><br>
+    <span class="ecris" style="min-width:150mm">&nbsp;</span></div>
+</div></div>
+
+<div class="p"><div class="pt"><span><span class="n">3</span>COLLER</span><span class="t">4 min</span></div>
+<div class="pb">
+  Affiche exactement : <span class="mono">Bienvenue &lt;ton prénom&gt; !</span> — en utilisant la boîte
+  <span class="mono">joueur</span> et le signe <span class="mono">+</span>.
+  <div class="fait"><span class="case"></span> <b>Attention :</b> l'espace ne se met pas tout seul. Compte-le.</div>
+</div></div>
+
+<div class="p"><div class="pt"><span><span class="n">4</span>DEMANDER</span><span class="t">5 min</span></div>
+<div class="pb">
+  <ol><li>Demande sa <b>couleur préférée</b> au joueur, et range la réponse dans une boîte.</li>
+      <li>Affiche une <b>phrase complète</b> qui utilise sa réponse.</li></ol>
+  <div class="fait"><span class="case"></span> <b>Le détail qui compte :</b> un espace avant le dernier
+    guillemet de la question — <span class="mono">"Ta couleur ? "</span></div>
+</div></div>
+
+<div class="p"><div class="pt"><span><span class="n">5</span>TEXTE OU NOMBRE</span><span class="t">6 min</span></div>
+<div class="pb">
+  Tape ces trois lignes, <b>une par une</b>, en relançant à chaque fois :
+  <div class="code">print("3" + "4")
+print(3 + 4)
+print("3" + 4)      <i>← celle-ci doit devenir ROUGE</i></div>
+  <table>
+    <tr><th style="width:34%">Ce que ça affiche</th><th>Pourquoi</th></tr>
+    <tr><td style="height:6.5mm"><span class="mono">"3" + "4"</span> →</td><td></td></tr>
+    <tr><td style="height:6mm"><span class="mono">3 + 4</span> →</td><td></td></tr>
+    <tr><td style="height:6mm"><span class="mono">"3" + 4</span> →</td><td>nom de l'erreur :</td></tr>
+  </table>
+  <div class="fait"><span class="case"></span> <b>Puis répare la troisième ligne.</b> Il y a
+    <b>deux</b> réparations possibles. Trouve-les toutes les deux.</div>
+</div></div>
+
+<div class="p"><div class="pt"><span><span class="n">6</span>L'ÂGE</span><span class="t">6 min</span></div>
+<div class="pb">
+  <ol><li>Demande son <b>âge</b> au joueur.</li>
+      <li>Transforme sa réponse en <b>nombre</b>.</li>
+      <li>Affiche : <span class="mono">Dans 10 ans tu auras &lt;…&gt; ans</span></li></ol>
+  <div class="fait"><span class="case"></span> <b>Il te faut les deux :</b>
+    <span class="mono">int()</span> à l'entrée, <span class="mono">str()</span> à la sortie.</div>
+</div></div>
+
+<div class="p"><div class="pt"><span><span class="n">7</span>LE COMPTEUR — découverte</span><span class="t">4 min</span></div>
+<div class="pb">
+  Recopie ce code <b>exactement</b>. <b>Avant de lancer</b>, écris ce que tu crois qu'il va afficher :
+  <div class="code">tour = 0
+tour = tour + 1
+tour = tour + 1
+print(tour)</div>
+  <div class="fait"><span class="case"></span> <b>Ma prédiction :</b> <span class="ecris" style="min-width:25mm">&nbsp;</span>
+    &nbsp;&nbsp; <b>Ce qui s'affiche vraiment :</b> <span class="ecris" style="min-width:25mm">&nbsp;</span></div>
+</div></div>
+
+<div class="p"><div class="pt"><span><span class="n">8</span>LA DÉCISION — découverte</span><span class="t">3 min</span></div>
+<div class="pb">
+  Recopie ce code <b>exactement</b>. Attention aux <b>deux-points</b> et au <b>décalage de 4 espaces</b> :
+  Thonny le met tout seul, ne l'enlève pas.
+  <div class="code">age = int(input("Quel age as-tu ? "))
+
+if age &gt; 11:
+    print("Tu es un Jeremiah Geek !")
+else:
+    print("Tu es un Jerusalem Geek !")</div>
+  <div class="fait"><span class="case"></span> <b>Lance deux fois, avec deux âges différents.</b>
+    Le même programme n'a pas fait la même chose : il a <b>choisi</b>.</div>
+</div></div>
+
+<h1 style="font-size:13pt;margin-top:3mm">⭐ LES TROIS DÉFIS</h1>
+<div class="sur">Seulement si les huit paliers sont franchis. Dans l'ordre que tu veux.</div>
+
+<div class="p star"><div class="pt"><span><span class="n">A</span>LA FICHE DU JOUEUR</span><span class="t">⭐</span></div>
+<div class="pb">
+  Pose <b>trois questions</b> (prénom, âge, couleur), puis affiche une fiche encadrée de
+  <span class="mono">=</span> avec un titre <span class="mono">FICHE DU JOUEUR</span> et les trois
+  réponses, une par ligne.
+  <div class="fait"><span class="case"></span> Les deux-points doivent être <b>alignés</b> : ajoute des espaces à la main.</div>
+</div></div>
+
+<div class="p star"><div class="pt"><span><span class="n">B</span>LE COMPTEUR DE SCORES</span><span class="t">⭐⭐</span></div>
+<div class="pb">
+  <ol><li>Un compteur <span class="mono">points</span> qui part de <b>zéro</b>.</li>
+      <li>Demande au joueur ses points du <b>1<sup>er</sup></b>, du <b>2<sup>e</sup></b> et du <b>3<sup>e</sup></b> tour.</li>
+      <li>Ajoute chaque score au compteur, puis affiche <span class="mono">Total : … points</span>.</li>
+      <li>Affiche enfin combien il lui <b>manque pour atteindre 20</b>.</li></ol>
+  <div class="fait"><span class="case"></span> Trois fois la même ligne <span class="mono">points = points + score</span>.
+    C'est normal : c'est le palier 7 qui travaille.</div>
+</div></div>
+
+<div class="p star"><div class="pt"><span><span class="n">C</span>LE CONTRÔLE D'ÂGE</span><span class="t">⭐⭐</span></div>
+<div class="pb">
+  Demande son prénom <b>et</b> son âge, puis affiche, avec son prénom dedans :
+  <span class="mono">Joyce, tu es dans la classe des Jeremiah Geeks.</span> … ou
+  <span class="mono">Jerusalem Geeks</span> s'il a 11 ans ou moins.
+  <div class="fait"><span class="case"></span> C'est le palier 8, plus le <span class="mono">+</span> du palier 3.</div>
+</div></div>
+
+<h1 style="font-size:12.5pt;margin-top:3mm">Mon bilan — à remplir avant de partir</h1>
+<table>
+  <tr><th style="width:62%">Ce que je sais faire maintenant</th><th style="width:19%">Tout seul</th><th>Pas encore sûr</th></tr>
+  <tr><td style="height:6mm">Afficher plusieurs lignes avec <span class="mono">print</span></td><td></td><td></td></tr>
+  <tr><td style="height:6mm">Ranger quelque chose dans une boîte, et l'afficher</td><td></td><td></td></tr>
+  <tr><td style="height:6mm">Expliquer <span class="mono">print(nom)</span> contre <span class="mono">print("nom")</span></td><td></td><td></td></tr>
+  <tr><td style="height:6mm">Poser une question avec <span class="mono">input</span></td><td></td><td></td></tr>
+  <tr><td style="height:6mm">Dire pourquoi <span class="mono">"3" + 4</span> devient rouge</td><td></td><td></td></tr>
+  <tr><td style="height:6mm">Utiliser <span class="mono">int()</span> et <span class="mono">str()</span> au bon endroit</td><td></td><td></td></tr>
+  <tr><td style="height:6mm">Lire un message rouge et trouver la ligne</td><td></td><td></td></tr>
+</table>
+
+<div class="regles" style="margin-top:2.4mm">
+  <b>La question qui compte, à écrire au dos :</b> qu'est-ce que tu n'as pas bien compris depuis le
+  premier samedi ? Personne ne lira ça pour te juger — c'est ce qui décidera de la prochaine séance.
+</div>
+</body></html>

@@ -38,10 +38,12 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | J'ai besoin de… | C'est ici |
 |---|---|
 | Animer la séance | [📖 La fiche du jour](2-seances/S05-la-decision/fiche-de-seance.md) — ce qui change, et ce qu'on rouvre |
-| Ouvrir la séance | [🎯 Le quiz flash](2-seances/S05-la-decision/a-projeter/quiz-rappel.pptx) — 6 questions sur « texte ou nombre », 7 min |
+| Ouvrir la séance | 🧭 [**Le Grand Parcours**](2-seances/S05-la-decision/a-imprimer/1-parcours-revision.pdf) — 8 paliers, 35 min, tout ce qu'on sait faire depuis le début |
+| Le projeter pendant le parcours | [📺 Le tableau de bord](2-seances/S05-la-decision/a-projeter/parcours-tableau-de-bord.pptx) — 3 diapos |
+| En réserve | [🎯 Le quiz flash](2-seances/S05-la-decision/a-projeter/quiz-rappel.pptx) — 6 questions ; **sa dernière diapo est le tableau texte / nombre** |
 | Projeter | [📺 Le diaporama de la séance 4](2-seances/S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — on démarre au séparateur « 2 · Le compteur » |
 | Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S04-le-jeu-compte/code/live_coding_antiseche.py) — à faire la veille, à voix haute |
-| Imprimer | [🖨️ Un seul document](2-seances/S04-le-jeu-compte/a-imprimer/quantites-et-formats.md) |
+| Imprimer | [🖨️ La liste du jour](2-seances/S05-la-decision/a-imprimer/quantites-et-formats.md) — la feuille de parcours + l'aide-mémoire |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word](2-seances/S04-le-jeu-compte/a-envoyer/deroule-seance-4.docx) |
 | Envoyer le test aux parents, mercredi | [📝 Le test n°3 « texte ou nombre »](2-seances/S04-le-jeu-compte/a-envoyer/formulaire-exercices.md) — 20 points, corrigé automatiquement |
 | Revoir le TP de samedi dernier | [📄 La séance 3](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) · [💻 son corrigé en Python](2-seances/S03-tp-les-joueurs/code/LISEZ-MOI.md) |
@@ -97,5 +99,5 @@ qui passe de quatre séances à trois.)*
 - [x] Séance 4 : fiche, diaporama de 22 diapos, quiz flash, aide-mémoire, code, déroulé Word, test n°3
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture)
-- [x] Séance 5 : quiz flash neuf, fiche de continuité (le reste réutilise la séance 4)
+- [x] Séance 5 : **Le Grand Parcours** (feuille, fichiers de code, tableau de bord), quiz flash, fiche de continuité
 - [ ] Séances 6 à 22

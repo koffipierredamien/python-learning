@@ -8,7 +8,7 @@ Une séance = un dossier. Tout ce qui la concerne est dedans, et rien d'autre.
 | **[S02 — Premier contact machine](S02-premier-contact/fiche-de-seance.md)** · samedi 19 septembre 2026 | L'écran d'accueil, **et le jeu demande ton nom** | `print()` · la variable · `input()` · lire une erreur |
 | **[S03 — TP n°1 : les deux joueurs](S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md)** · samedi 26 septembre 2026 | Le jeu demande le nom des **deux** joueurs et attribue X et O | TP de 2 h, en autonomie · quiz flash de rappel · `print`, variables, `input` — [corrigé en Python](S03-tp-les-joueurs/code/LISEZ-MOI.md) |
 | **[S04 — Le jeu vérifie et compte](S04-le-jeu-compte/fiche-de-seance.md)** · samedi 3 octobre 2026 | Le plateau **numéroté**, la case demandée, le **compteur**, et la case qui n'existe pas **refusée** | `int()` · `str()` · `tour = tour + 1` · **les opérateurs** `+ - * /` et `> < >= <= == !=` · **`if` / `else`** |
-| **[S05 — Le jeu compte et décide](S05-la-decision/fiche-de-seance.md)** · samedi 10 octobre 2026 | Le compteur de tours, et la case qui n'existe pas **refusée** | `tour = tour + 1` · **les opérateurs** `> < >= <= == !=` · **`if` / `else`** |
+| **[S05 — Le jeu compte et décide](S05-la-decision/fiche-de-seance.md)** · samedi 10 octobre 2026 | **Le Grand Parcours** (révision des 4 séances, 8 paliers), le compteur de tours, et la case qui n'existe pas **refusée** | `tour = tour + 1` · **les opérateurs** `> < >= <= == !=` · **`if` / `else`** |
 | S06 à S22 | *à venir* | |
 
 > **La séance 4 n'a traité que sa première notion** (texte ou nombre). Le compteur et la décision
