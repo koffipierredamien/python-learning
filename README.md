@@ -10,7 +10,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
 | **Encadrement** | 2 enseignants — **un par classe**, les deux classes en parallèle |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
-| **Séance en préparation** | **Séance 4**, samedi 3 octobre 2026, 12 h - 14 h |
+| **Séance en préparation** | **Séance 5**, samedi 10 octobre 2026, 12 h - 14 h |
 
 ---
 
@@ -26,21 +26,20 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 ---
 
-## Samedi prochain : la séance 4
+## Aujourd'hui : la séance 5
 
-👉 **[2-seances/S04-le-jeu-compte/](2-seances/S04-le-jeu-compte/fiche-de-seance.md)**
+👉 **[2-seances/S05-la-decision/](2-seances/S05-la-decision/fiche-de-seance.md)**
 
-> **« Le jeu vérifie et compte. »** Trois notions enchaînées : `int()` / `str()` — pourquoi `"3" + "4"`
-> donne `34` — le compteur `tour = tour + 1`, socle des boucles, et **les opérateurs** : ceux de calcul
-> qu'ils utilisent déjà, ceux de comparaison qui répondent `True` / `False`, et le **`if` / `else`** qui
-> en fait une décision. Structure : je montre, vous faites — trois leçons courtes,
-> deux ateliers.
+> **« Le jeu compte et décide. »** La suite directe de la séance 4, qui n'a traité que sa première
+> notion. Aujourd'hui : le compteur `tour = tour + 1`, **les opérateurs** de comparaison, et le
+> **`if` / `else`** qui en fait une décision. Tout le matériel de la séance 4 est réutilisé tel quel ;
+> seul le quiz flash est neuf.
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| Animer la séance | [📖 La fiche de séance](2-seances/S04-le-jeu-compte/fiche-de-seance.md) — minute par minute |
-| Projeter | [📺 Le diaporama](2-seances/S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — 22 diapos, notes incluses |
-| Ouvrir la séance | [🎯 Le quiz flash](2-seances/S04-le-jeu-compte/a-projeter/quiz-rappel.pptx) — 6 questions, 7 min |
+| Animer la séance | [📖 La fiche du jour](2-seances/S05-la-decision/fiche-de-seance.md) — ce qui change, et ce qu'on rouvre |
+| Ouvrir la séance | [🎯 Le quiz flash](2-seances/S05-la-decision/a-projeter/quiz-rappel.pptx) — 6 questions sur « texte ou nombre », 7 min |
+| Projeter | [📺 Le diaporama de la séance 4](2-seances/S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — on démarre au séparateur « 2 · Le compteur » |
 | Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S04-le-jeu-compte/code/live_coding_antiseche.py) — à faire la veille, à voix haute |
 | Imprimer | [🖨️ Un seul document](2-seances/S04-le-jeu-compte/a-imprimer/quantites-et-formats.md) |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word](2-seances/S04-le-jeu-compte/a-envoyer/deroule-seance-4.docx) |
@@ -98,4 +97,5 @@ qui passe de quatre séances à trois.)*
 - [x] Séance 4 : fiche, diaporama de 22 diapos, quiz flash, aide-mémoire, code, déroulé Word, test n°3
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture)
-- [ ] Séances 5 à 22
+- [x] Séance 5 : quiz flash neuf, fiche de continuité (le reste réutilise la séance 4)
+- [ ] Séances 6 à 22
