@@ -1,40 +1,58 @@
-# 🎮 Exercice de maison — « Le Quiz des Geeks »
+# 🎮 Exercice de maison — deux versions au choix
 
-**Pour les enfants qui ont un ordinateur à la maison.** Ils écrivent un vrai jeu : trois questions, un
-score qui monte, et un verdict à la fin. Comptez **45 minutes à 1 heure**.
+**Pour les enfants qui ont un ordinateur à la maison.** Comptez **45 min à 1 h**.
+Les deux exercices révisent **exactement les mêmes notions** — on envoie **l'un ou l'autre**, pas les deux.
 
-| | |
-|---|---|
-| **À envoyer** | [`exercice-maison-le-quiz-des-geeks.png`](exercice-maison-le-quiz-des-geeks.png) — **une seule image**, lisible sur un téléphone |
-| **La correction** | [`correction-le-quiz-des-geeks.png`](correction-le-quiz-des-geeks.png) · le code seul : [`correction-quiz-des-geeks.py`](correction-quiz-des-geeks.py) |
-| **À ne pas envoyer avec l'exercice** | la correction, évidemment — elle part **après** le retour des copies |
+| | 🔢 **LE NOMBRE SECRET** *(recommandé)* | 🎯 **LE QUIZ DES GEEKS** |
+|---|---|---|
+| **Ce que c'est** | Un **vrai jeu à deux joueurs**, qu'on rejoue | Un quiz de 3 questions, qu'on joue une fois |
+| **On y joue en famille ?** | **Oui** — c'est tout l'intérêt | Non |
+| **L'exercice** | [`exercice-maison-le-nombre-secret.png`](exercice-maison-le-nombre-secret.png) | [`exercice-maison-le-quiz-des-geeks.png`](exercice-maison-le-quiz-des-geeks.png) |
+| **La correction** | [image](correction-le-nombre-secret.png) · [`.py`](correction-nombre-secret.py) | [image](correction-le-quiz-des-geeks.png) · [`.py`](correction-quiz-des-geeks.py) |
+
+> **Pourquoi *Le Nombre Secret* est meilleur :** l'enfant ne répond pas à des questions, **il fait jouer
+> quelqu'un**. Le programme réagit (« plus grand ! », « plus petit ! »), il y a un score, et on a envie de
+> refaire une partie. C'est la différence entre un exercice et un jeu.
+
+> **La correction ne part qu'après** le retour des copies.
+
+---
 
 ## Ce que l'exercice fait réviser
 
-Tout, et rien d'autre. **Aucune notion nouvelle.**
+Tout, et rien d'autre. **Aucune notion nouvelle** — sauf le bonus ⭐⭐ final, signalé comme tel.
 
-| Notion | Où elle sert |
+| Notion | Où elle sert dans *Le Nombre Secret* |
 |---|---|
-| `print`, le cadre `"=" * 35` | étape 1 |
-| la variable, `input`, le `+` | étape 1 |
-| **le compteur** `score = score + 1` | étapes 2 à 5 |
-| **`int()`** pour comparer un nombre | étapes 3 et 5 |
-| **`str()`** pour coller un nombre dans une phrase | étape 6 |
-| **`==`** et **`>`**, et le `if` / `else` | étapes 3 à 6 |
+| `print`, le cadre `"=" * 33` | étape 1 |
+| la variable, `input`, le `+` | étapes 1 et 2 |
+| **`int()`** pour comparer des nombres | étapes 2 et 4 |
+| **`str()`** pour écrire un nombre dans une phrase | étape 6 |
+| **le compteur, à l'envers** : `points = points - 20` | étapes 3 à 5 |
+| **`<`, `>`, `==`** et le `if` | étape 4 — **le cœur du jeu** |
+| `if` / `else` | étape 6, le verdict |
 
-Les **deux bonus** (le reste à faire pour le sans-faute, la question d'âge) n'ajoutent rien de neuf non
-plus : ils recombinent.
+**Le `if` sans `else`** apparaît ici pour la première fois dans un exercice. Ce n'est pas une notion
+nouvelle (ils l'ont vu au quiz flash) : c'est un `if` tout seul, en plus simple.
 
 ## Les cinq choses à regarder dans une copie
 
-1. **`score = 0` est-il avant les questions, et une seule fois ?**
-2. **`int()` est-il là aux questions 1 et 3** (des nombres) **et absent à la question 2** (du texte) ?
-3. **Le `==` est-il doublé** dans les `if` ? Un seul `=` donne un `SyntaxError`.
-4. **Les 4 espaces de décalage** sont-ils là sous chaque `if` et chaque `else` ? *C'est l'erreur n°1.*
-5. **`str(score)`** est-il présent dans la phrase du bilan ? Sans lui : `TypeError`.
+1. **`points = 100` est-il avant les essais, et une seule fois ?**
+2. **Les deux lignes `essai = input(…)` puis `essai = int(essai)`** sont-elles là **à chaque essai** ?
+3. **Les trois `if`** (`<`, `>`, `==`) sont-ils présents à chaque essai ?
+4. **Le bug le plus intéressant :** `points = points - 20` **collée à gauche**, donc hors du `if` —
+   le joueur perd alors des points **même quand il gagne**. À lui faire découvrir **en jouant**.
+5. **`str(secret)` et `str(points)`** sont-ils là dans le verdict ?
 
-> **La vraie question à poser à l'enfant :** *« lance-le en te trompant exprès — est-ce que le `else` se
-> déclenche ? »* Un `if` qu'on n'a pas testé dans ses deux cas n'est pas testé.
+> **Ce que ce jeu prépare, sans le dire :** l'élève recopie **trois fois** le même bloc. C'est exactement
+> l'agacement dont naîtra la boucle `while`. Si un enfant demande *« on est obligés de tout recopier ? »*,
+> la réponse est : **« non — et c'est ce qu'on apprendra bientôt. »**
+
+## Le bonus ⭐⭐ : les deux lignes magiques
+
+Le dernier bonus donne `import random` / `random.randint(1, 50)` **tout fait**, pour jouer en solo.
+C'est **la seule chose nouvelle** de la feuille, et elle est écrite noir sur blanc comme telle.
+**Si vous préférez ne rien introduire du tout, dites-le-moi : je retire ce bonus en deux minutes.**
 
 ## Le message aux parents
 
@@ -42,18 +60,19 @@ plus : ils recombinent.
 Bonjour, et que la paix soit avec vous.
 
 Voici un exercice pour les enfants qui ont un ordinateur à la maison.
-Il reprend tout ce que nous avons appris depuis le premier samedi, et
-cette fois votre enfant écrit un vrai petit jeu : un quiz de trois
-questions, avec un score et un verdict à la fin.
+Votre enfant va programmer un vrai jeu : « Le Nombre Secret ». L'un
+cache un nombre, l'autre a trois essais pour le trouver, et le
+programme répond « plus grand » ou « plus petit » à chaque fois.
 
 Toutes les instructions sont sur l'image, étape par étape. Comptez
 environ une heure. Ce n'est pas noté : c'est pour s'entraîner.
 
-Quand ça marche, qu'il nous envoie une photo de son écran — nous en
-reparlerons samedi.
+Et quand ça marchera, jouez une partie avec lui. C'est le meilleur
+moment de l'exercice.
 
-Et s'il n'y arrive pas entièrement, ce n'est pas grave : qu'il envoie
-quand même ce qu'il a fait. C'est là-dessus que nous travaillerons.
+Qu'il nous envoie ensuite une photo de son écran — nous en reparlerons
+samedi. S'il n'y arrive pas entièrement, qu'il envoie quand même ce
+qu'il a fait : c'est là-dessus que nous travaillerons.
 
 👉 L'IMAGE DE L'EXERCICE
 
