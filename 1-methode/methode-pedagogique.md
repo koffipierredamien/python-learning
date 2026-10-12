@@ -16,7 +16,7 @@ Notre réponse tient en sept principes. Ils sont conçus pour fonctionner ensemb
 | # | Principe | Ce qu'il résout |
 |---|---|---|
 | 1 | **Un seul projet, une seule classe, jamais de groupes de niveau figés** | Évite la stigmatisation et la classe à deux vitesses |
-| 2 | **Différencier par la profondeur, jamais par le contenu** — chaque atelier existe en 3 pistes (Bleue / Rouge / Noire) que l'élève choisit lui-même | Chacun travaille à sa hauteur, tout le monde traite la même notion |
+| 2 | **Un seul exercice pour tous, et des défis ⭐ pour ceux qui finissent avant** — on différencie par ce qu'on ajoute, jamais par ce qu'on retire | Personne n'est mis à part, et les rapides ne s'ennuient pas |
 | 3 | **Le Filet : un « code de départ officiel » distribué au début de CHAQUE séance** | Supprime le décrochage cumulatif : rater une séance ne condamne jamais la suite |
 | 4 | **Un enseignant par classe, et cinq réflexes pour tenir seul** : j'alterne parler / circuler, les cartes sont mes yeux, les élèves s'entraident d'abord, 2 Geek Mentors par séance, je ne m'assois jamais | Personne ne reste bloqué plus de 5 minutes, même sans deuxième adulte |
 | 5 | **Le Sas « Permis Machine »** pour les grands débutants, en parallèle et sans les sortir du groupe | Traite le cas « ne sait pas utiliser un ordinateur » sans créer une sous-classe |
@@ -52,22 +52,23 @@ Nous **n'ouvrons pas** de « groupe débutant » et de « groupe avancé ». Tro
 
 **En revanche, les deux tranches d'âge restent deux classes séparées** (Jerusalem 9–12, Jeremiah 12–18) : le vocabulaire, le rythme, la durée d'attention et les métaphores ne sont pas transposables (voir § 12).
 
-### Principe 2 — Différencier par la profondeur : le système des 3 pistes
+### Principe 2 — Un seul exercice, et des défis ⭐ pour les plus rapides
 
-C'est le cœur du dispositif. **Tous les élèves travaillent la même notion, à la même heure, sur la même brique du jeu.** Seule la *forme* de la tâche change. Chaque atelier est publié en trois versions, présentées comme des pistes de ski :
+C'est le cœur du dispositif. **Tous les élèves travaillent la même notion, à la même heure, sur la même
+brique du jeu, avec le même fichier de départ.** Ce qui change, c'est ce qu'on ajoute à la fin :
 
-| Piste | Pour qui | Forme de la consigne | Exemple (séance « demander le coup du joueur ») |
-|---|---|---|---|
-| 🔵 **Bleue** — *guidée* | Débutant total, ou notion pas encore digérée | Code à trous + copie d'écran du résultat attendu + étapes numérotées | On donne le `input()` complet, l'élève complète le message affiché et teste |
-| 🔴 **Rouge** — *standard* | La cible du groupe | Consigne écrite en français + rappel des outils disponibles | « Demande au joueur le numéro de la case et range la réponse dans une variable » |
-| ⚫ **Noire** — *défi* | Ceux qui vont vite ou qui savent déjà | Consigne ouverte + contrainte supplémentaire | « Et si le joueur tape `stop` ? Et s'il tape `abc` ? Que doit-il se passer ? » |
+| | Pour qui | Ce que c'est |
+|---|---|---|
+| **L'exercice** | tout le monde | Le fichier de départ, avec des étapes numérotées et des trous à remplir. **Il marche déjà quand on le lance.** |
+| **Les défis ⭐** | ceux qui finissent avant | Une ou deux étapes de plus, écrites en bas du fichier ou au dos de la feuille. **Toujours sur la notion du jour** |
+| **L'aide** | ceux qui bloquent | On ne donne pas un exercice plus facile : on découpe l'étape, on fait lire l'erreur, on envoie vers un voisin |
 
-**Règles d'or des pistes :**
+**Les trois règles :**
 
-1. **C'est l'élève qui choisit sa piste, à chaque atelier.** Ce n'est pas une étiquette permanente. On peut être Bleue le matin sur les boucles et Noire l'après-midi sur l'affichage.
-2. **Aucune piste n'est « le vrai travail ».** La piste Bleue produit exactement le même jeu fonctionnel que la Noire. Le jeu de l'élève Bleue marche.
-3. **La piste Noire n'est jamais « la suite du programme ».** Elle approfondit, elle n'avance pas. Sinon les rapides prennent une avance impossible à rattraper et le groupe explose.
-4. **L'enseignant oriente, il n'assigne pas.** « Tu as fini en 4 minutes la dernière fois, essaie la Rouge aujourd'hui. » / « Prends la Bleue, tu passeras en Rouge sur la deuxième partie. »
+1. **Tout le monde fait le même exercice**, en même temps, sur la même brique du jeu. Aucun élève n'a une version « allégée » : ce serait une étiquette, et les étiquettes collent.
+2. **Les défis ⭐ sont facultatifs, et ils ne font pas avancer le projet.** Ils approfondissent la notion du jour. Personne n'est en retard s'il n'en fait aucun.
+3. **Celui qui bloque n'a pas un exercice plus facile : il a de l'aide.** On lui découpe l'étape, on lui fait lire son message d'erreur, on l'envoie vers un voisin. Et le Filet lui rend le code officiel à la fin, comme à tout le monde.
+4. **L'enseignant propose, il n'assigne pas.** « Tu as fini en 4 minutes : prends le défi ⭐ 2, il est plus coriace. » — et jamais devant la classe.
 
 > **Pourquoi ça marche :** le groupe reste synchronisé sur le projet (indispensable pour un projet cumulatif), tout en laissant chacun travailler à son niveau de difficulté réel. Personne ne s'ennuie, personne ne se noie.
 
@@ -142,7 +143,7 @@ Certains élèves ne savent pas utiliser un ordinateur. **Ils ne doivent ni bloq
 
 **b) Le Passeport Machine.** Un petit livret de 12 gestes à valider, un tampon par geste (voir Annexe A1). Chaque geste validé est coché devant l'élève. C'est valorisant, mesurable, et ça donne au grand débutant des victoires immédiates dès la séance 1, avant même de coder.
 
-**c) La dictée de code interdite.** Pour un élève qui tape à 5 mots/minute, recopier 15 lignes prend 20 minutes et il rate la notion. Solution : **sur piste Bleue, le squelette de code est déjà dans le fichier** ; l'élève ne tape que ce qui porte du sens (une valeur, une condition, un mot). On enseigne la logique, pas la dactylographie. La vitesse de frappe viendra toute seule.
+**c) La dictée de code interdite.** Pour un élève qui tape à 5 mots/minute, recopier 15 lignes prend 20 minutes et il rate la notion. Solution : **le squelette de code est déjà dans le fichier de départ, pour tout le monde** ; l'élève ne tape que ce qui porte du sens (une valeur, une condition, un mot). On enseigne la logique, pas la dactylographie. La vitesse de frappe viendra toute seule.
 
 **d) L'apprentissage du clavier par le jeu**, 5 minutes en rituel d'accueil (voir § 8), sur un logiciel de frappe — présenté comme un mini-jeu chronométré avec record personnel.
 
@@ -195,10 +196,10 @@ Il est **présenté comme un jeu, jamais comme un test**. Il dure 25 minutes, se
 
 | Profil | Description | Réponse pédagogique prioritaire |
 |---|---|---|
-| **P0 — Découvreur** | Ne maîtrise pas la machine | Passeport Machine, piste Bleue, squelette de code fourni, voisin P1, vérification visuelle 3×/séance |
-| **P1 — Initié** | Sait utiliser un ordinateur, n'a jamais codé | **C'est la cible standard du cours.** Piste Rouge |
-| **P2 — Autonome** | À l'aise, logique solide, éventuellement un peu de Scratch | Piste Rouge → Noire, rôle de Geek Mentor à partir de la séance 4 |
-| **P3 — Avancé** | Sait déjà coder | Piste Noire systématique + **mission spéciale** : responsable d'un module bonus du jeu (score, sons, thèmes, IA). Voir § 13, cas B1 |
+| **P0 — Découvreur** | Ne maîtrise pas la machine | Passeport Machine, voisin P1, vérification visuelle 3×/séance, étapes découpées à la demande |
+| **P1 — Initié** | Sait utiliser un ordinateur, n'a jamais codé | **C'est la cible standard du cours.** L'exercice est écrit pour lui |
+| **P2 — Autonome** | À l'aise, logique solide, éventuellement un peu de Scratch | Les défis ⭐, et le rôle de Geek Mentor à partir de la séance 4 |
+| **P3 — Avancé** | Sait déjà coder | Tous les défis ⭐ + **mission spéciale** : responsable d'un module bonus du jeu (score, sons, thèmes, IA). Voir § 13, cas B1 |
 
 Les profils sont **réévalués à la séance 5 et à la séance 12**. Un P0 devient très souvent P1 en six semaines : le dispositif doit acter cette progression, sinon il enferme.
 
@@ -213,7 +214,7 @@ Le rituel est **identique chaque samedi**, de **12 h à 14 h**, et il ouvre touj
 | **12 h - 12 h 15** | 🙏 **Prière et accueil** | La séance ouvre par le temps de prière. J'accueille à la porte, je coche la présence, puis je rassemble. | L'enseignant conduit |
 | **12 h 15 - 12 h 25** | 🎬 **Le WOW et le rappel** | On montre **le résultat de la séance** avant de commencer : « Voilà ce que votre jeu saura faire dans deux heures. » Puis rappel express de la séance précédente en 3 questions à main levée. Les élèves ouvrent le projet et récupèrent le **code de départ officiel**. | L'enseignant, debout devant |
 | **12 h 25 - 12 h 40** | 🧠 **La notion** | Une seule notion nouvelle par séance. Introduite en **débranché** (avec le corps, des cartes, des objets) puis en **live coding lent** avec la règle « je code, vous prédisez ». **L'enseignant fait volontairement une erreur et la répare devant tout le monde.** | L'enseignant, debout devant |
-| **12 h 40 - 13 h** | 🔨 **Atelier 1** | Chacun code sur son poste, piste Bleue / Rouge / Noire au choix. S'il manque des machines, deux élèves partagent un poste et alternent à 12 h 50. | **Je circule** — je ne parle plus au groupe |
+| **12 h 40 - 13 h** | 🔨 **Atelier 1** | Chacun code sur son poste, le même exercice pour tous, les défis ⭐ pour qui finit avant. S'il manque des machines, deux élèves partagent un poste et alternent à 12 h 50. | **Je circule** — je ne parle plus au groupe |
 | **13 h - 13 h 10** | 🥤 **Pause** | Pause réelle : on se lève, on sort de la salle, on bouge. Non négociable, surtout pour les 9–12 ans. | — |
 | **13 h 10 - 13 h 35** | 🔨 **Atelier 2** | Deuxième moitié de la brique + intégration dans le jeu complet. | **Je circule** — je ne parle plus au groupe |
 | **13 h 35 - 13 h 47** | 🐞 **Chasse aux bugs croisée** | Chacun teste **le jeu de son voisin** (« essaie de le faire planter »). Les élèves rapides deviennent testeurs officiels et Geek Mentors. | J'organise les échanges |
@@ -259,7 +260,7 @@ Le premier tueur de séance n'est pas la pédagogie, c'est l'installation logici
 | Une machine tombe en panne | L'élève rejoint le poste d'un voisin : à deux sur une machine, on travaille très bien. Une machine de réserve allumée en fond de salle. |
 | Plusieurs machines HS | Bascule sur la **séance débranchée équivalente** — chaque séance a une version papier prête (jeu de rôle, cartes-instructions, plateau XO en carton). |
 | Coupure de courant | Séance débranchée + défi logique en équipes. |
-| Un enseignant absent | **Mode dégradé** : pas de notion nouvelle. Séance « Atelier & Consolidation » : rattrapage, piste Bleue pour tous ceux qui en ont besoin, défis Noirs pour les autres, Geek Mentors activés. La brique est reportée d'une semaine. |
+| Un enseignant absent | **Mode dégradé** : pas de notion nouvelle. Séance « Atelier & Consolidation » : rattrapage pour ceux qui en ont besoin, défis ⭐ pour les autres, Geek Mentors activés. La brique est reportée d'une semaine. |
 
 ---
 
@@ -279,7 +280,7 @@ La matrice complète — **35 cas, avec signal de détection, réponse immédiat
 Deux principes transversaux gouvernent toute la matrice :
 
 > **Aucun cas ne doit ralentir le groupe. Aucun cas ne doit exclure un élève.**
-> Chaque fois que ces deux exigences semblent s'opposer, la réponse est toujours la même : **le Filet** (§ 2.3) et **les pistes** (§ 2.2).
+> Chaque fois que ces deux exigences semblent s'opposer, la réponse est toujours la même : **le Filet** (§ 2.3) et **les défis ⭐** (§ 2.2).
 
 ---
 
@@ -289,7 +290,7 @@ Deux principes transversaux gouvernent toute la matrice :
 
 Une ligne par élève, une colonne par séance. Trois symboles seulement :
 
-- `✔` a produit la brique de la séance (piste indiquée : B / R / N)
+- `✔` a produit la brique de la séance (et les défis ⭐ éventuels)
 - `~` a produit partiellement — **à revoir la semaine prochaine**
 - `✖` absent ou n'a pas produit — **priorité de vigilance à la séance suivante**
 
@@ -299,11 +300,11 @@ Une ligne par élève, une colonne par séance. Trois symboles seulement :
 
 | Indicateur | Cible | Que faire si hors cible |
 |---|---|---|
-| Élèves ayant un jeu fonctionnel en fin de séance | **100 %** | Alléger la brique ou renforcer la piste Bleue |
+| Élèves ayant un jeu fonctionnel en fin de séance | **100 %** | Alléger la brique, ou découper davantage les étapes |
 | Temps d'attente moyen après carte orange | < 5 min | Réduire la difficulté, renforcer les fiches mémo, activer plus de Geek Mentors |
 | Même notion citée comme « pas sûr » à la clôture | < 30 % du groupe | La notion est reprise en ouverture de la séance suivante |
 | Taux de présence | > 85 % | Enquête auprès des familles, revoir l'attractivité |
-| Élèves déclarant s'ennuyer | 0 | Renforcer les pistes Noires et les missions spéciales |
+| Élèves déclarant s'ennuyer | 0 | Ajouter des défis ⭐ et des missions spéciales |
 
 ### La revue des enseignants (15 minutes, après chaque séance)
 

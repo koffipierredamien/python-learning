@@ -68,7 +68,7 @@ Tout est dans **[`../S04-le-jeu-compte/`](../S04-le-jeu-compte/fiche-de-seance.m
 | 12 h 22 → 13 h 25 | [le diaporama de la séance 4](../S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — **on démarre au séparateur « 2 · Le compteur »**, on saute les diapos de `int()` / `str()` |
 | la veille, à voix haute | [l'anti-sèche](../S04-le-jeu-compte/code/live_coding_antiseche.py) — **étapes D à G seulement** |
 | 1 par poste | [l'aide-mémoire](../S04-le-jeu-compte/a-imprimer/1-aide-memoire.pdf) — il porte déjà les trois notions |
-| sur chaque poste | [`depart_eleves_piste_bleue.py`](../S04-le-jeu-compte/code/depart_eleves_piste_bleue.py) → `GEEKS/mon_xo/jeu.py` |
+| sur chaque poste | [`depart_eleves.py`](../S04-le-jeu-compte/code/depart_eleves.py) → `GEEKS/mon_xo/jeu.py` |
 | à 13 h 50 | [`code_officiel_fin_de_seance.py`](../S04-le-jeu-compte/code/code_officiel_fin_de_seance.py) → `GEEKS/xo_officiel/` |
 
 **Au tableau avant leur arrivée, et on n'efface pas :**

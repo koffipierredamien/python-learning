@@ -89,7 +89,7 @@ Chronométrez-les : 13, 10, 20 minutes. Pas une de plus.
 ```
 GEEKS/
 ├── mon_xo/
-│     jeu.py        ← une copie de code/depart_eleves_piste_bleue.py
+│     jeu.py        ← une copie de code/depart_eleves.py
 └── xo_officiel/
       jeu.py        ← une copie de code/code_officiel_fin_de_seance.py
 ```
@@ -312,7 +312,7 @@ aujourd'hui : qu'ils la voient d'abord sur votre écran, calmement.**
 ### 3.8 · 13 h 30 - 13 h 52 — Vous faites : LE PROJET
 
 Le fichier est sur chaque poste : `GEEKS/mon_xo/jeu.py`
-(c'est [`code/depart_eleves_piste_bleue.py`](code/depart_eleves_piste_bleue.py)).
+(c'est [`code/depart_eleves.py`](code/depart_eleves.py)).
 
 > « Ouvrez `jeu.py`. **F5 tout de suite : c'est votre programme de samedi dernier, il marche.** Ensuite,
 > partie 1 : le plateau porte des numéros. Carte verte, et vous m'attendez. »

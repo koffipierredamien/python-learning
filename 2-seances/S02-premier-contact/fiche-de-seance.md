@@ -26,7 +26,7 @@
 1. **Chaque élève a lancé un programme et l'a vu s'exécuter.** Le seul objectif qui ne se négocie pas.
 2. **Chaque élève a vu une erreur rouge, et a compris que ce n'est pas grave.** On la provoque exprès.
 3. **Chaque élève a écrit son écran d'accueil**, puis **son jeu pose une question et affiche la réponse.**
-4. **La méthode de travail est posée** : les pistes, les cartes, le Filet. Elle servira les 20 séances suivantes.
+4. **La méthode de travail est posée** : le même exercice pour tous, les défis ⭐, les cartes, le Filet. Elle servira les 20 séances suivantes.
 
 ---
 
@@ -83,7 +83,7 @@
 ```
 GEEKS/
 ├── mon_xo/
-│     jeu.py          ← une copie de code/depart_eleves_piste_bleue.py
+│     jeu.py          ← une copie de code/depart_eleves.py
 └── xo_officiel/
       jeu.py          ← une copie de code/code_officiel_fin_de_seance.py
 ```
@@ -162,20 +162,18 @@ d'explication**, on enchaîne.
 
 Dix minutes, pas plus. Trois choses.
 
-#### a) Les trois pistes (4 min)
+#### a) Comment on travaille (4 min)
 
-> « À partir d'aujourd'hui, à chaque atelier, **vous choisissez votre piste**. »
+> ⚠️ **Ce bloc a été abandonné en octobre 2026.** Il annonçait un système de « trois pistes » (bleue,
+> rouge, noire) que nous n'utilisons plus : dans les faits, **tout le monde fait le même exercice**, et
+> ceux qui finissent avant prennent les **défis ⭐**. C'est ce qu'il faut dire aujourd'hui :
 
-| Piste | Pour qui | Ce que c'est |
-|---|---|---|
-| 🔵 **Bleue** | on découvre | Le fichier est déjà écrit, avec des trous à remplir. **Il marche déjà quand on le lance.** |
-| 🔴 **Rouge** | on suit | On écrit soi-même, avec le modèle à l'écran |
-| ⚫ **Noire** | on veut plus | La même chose, plus un défi en plus |
+> « À chaque atelier, **tout le monde fait la même chose**. Le fichier de départ est le même pour tous,
+> et il marche déjà quand on le lance. Celui qui finit avant lève la **carte bleue** : il y a toujours
+> un défi ⭐ qui l'attend en bas de son fichier. Et celui qui bloque lève la **carte rouge** : on vient,
+> on lit l'erreur avec lui, on découpe l'étape. »
 
-**Les trois pistes arrivent au même résultat.** C'est la profondeur qui change, pas le programme.
-**On change de piste quand on veut, d'une séance à l'autre.** Personne n'est « de la piste bleue ».
-
-> **Aujourd'hui, tout le monde part en piste bleue** : c'est le premier contact machine, on ne complique rien.
+**Personne n'a une version allégée.** On aide celui qui bloque, on ne lui donne pas un autre exercice.
 > Qui finit en avance prend le défi écrit en bas de son fichier.
 
 #### b) Le Filet (4 min)
@@ -257,7 +255,7 @@ On corrige devant eux, on relance, ça marche. **On laisse ça affiché.**
 #### c) 13 h 15 - 13 h 27 · Vous faites : l'écran d'accueil du jeu XO
 
 Le fichier est déjà sur chaque poste : `GEEKS/mon_xo/jeu.py`
-(c'est [`code/depart_eleves_piste_bleue.py`](code/depart_eleves_piste_bleue.py)).
+(c'est [`code/depart_eleves.py`](code/depart_eleves.py)).
 
 > « Ouvrez `GEEKS`, puis `mon_xo`, puis `jeu.py`. **Appuyez tout de suite sur F5 : il marche déjà.**
 > Ensuite, **la partie 1 seulement** — étapes 1 à 5. Vous remplacez chaque `____`. Et vous relancez
@@ -380,4 +378,4 @@ Dix minutes, trois temps :
 |---|---|
 | **Brique suivante** | Le jeu demande le nom **des deux joueurs**, et attribue les X et les O |
 | **Point de départ** | [`code/code_officiel_fin_de_seance.py`](code/code_officiel_fin_de_seance.py), distribué aujourd'hui à tout le monde |
-| **Ce qui est déjà en place** | Les pistes, les cartes, le Filet — on ne les réexplique plus |
+| **Ce qui est déjà en place** | Les cartes, le Filet, les défis ⭐ — on ne les réexplique plus |

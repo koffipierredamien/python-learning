@@ -8,7 +8,7 @@ Document à imprimer et à avoir sous les yeux chaque samedi.
 
 - [ ] Le **code officiel** de la séance précédente est finalisé, testé, et copié sur la clé / le dossier partagé
 - [ ] La brique du jour est codée **en entier par l'enseignant**, sur une machine identique à celles des élèves
-- [ ] Les **trois pistes** sont prêtes : fichier à trous (Bleue), consigne écrite (Rouge), défi ouvert (Noire)
+- [ ] Le **fichier de départ** est prêt sur chaque poste, et les **défis ⭐** sont écrits pour ceux qui finiront avant
 - [ ] La **fiche mémo** de la séance est imprimée (1 par poste) : les 5 lignes de syntaxe utiles du jour
 - [ ] La **grille de test** pour la chasse aux bugs est imprimée
 - [ ] La **version débranchée** de la séance est prête (plan B panne de courant / machines HS)
@@ -49,7 +49,7 @@ Puis 3 questions de rappel, réponse à main levée, **jamais interrogation indi
 
 ### 12 h 40 - 13 h · Atelier 1 · 13 h 10 - 13 h 35 · Atelier 2
 Annonce systématique avant de lâcher la classe :
-> *« Atelier 1 : mission = ___ . Piste Bleue si vous voulez être guidés, Rouge pour le niveau normal, Noire si vous voulez du défi. Cartes de signalisation sorties. C'est parti ! »*
+> *« Atelier 1 : mission = ___ . Tout le monde fait la même chose. Celui qui finit avant lève la carte bleue : il y a des défis ⭐ pour lui. Cartes de signalisation sorties. C'est parti ! »*
 
 Pendant l'atelier :
 - **C'est le moment où je circule** : je ne m'adresse plus au groupe. Circuit en U, en commençant par la zone des profils P0.
@@ -85,7 +85,7 @@ C'est la phase qui **absorbe naturellement les écarts de rythme** : les élève
 
 ## 4. Checklist — après la séance (15 min seul, puis 10 min avec mon collègue)
 
-- [ ] Tableau de suivi complété (`✔` / `~` / `✖` + piste)
+- [ ] Tableau de suivi complété (`✔` / `~` / `✖` + défis ⭐ faits)
 - [ ] Ce qui est ressorti de la clôture est noté : quelle notion revient le plus ?
 - [ ] **Liste des 10 minutes** mise à jour (deux `~`/`✖` consécutifs = rendez-vous individuel la semaine prochaine)
 - [ ] Message aux familles envoyé (2 lignes)
@@ -106,4 +106,4 @@ C'est la phase qui **absorbe naturellement les écarts de rythme** : les élève
 | Un élève regarde son voisin taper sans rien faire | Décrochage | Je lui redonne la main sur son propre poste, et une étape à réussir seul |
 | Un élève range ses affaires 20 min avant la fin | Perte de sens ou frustration | Tête-à-tête de 2 min, hors du groupe, sans reproche |
 | Le brouhaha monte d'un coup | Consigne pas comprise ou atelier trop long | Reformuler la consigne en une seule phrase au tableau |
-| Un élève finit systématiquement en 5 min | Sous-alimenté | Passage en piste Noire + attribution d'une mission spéciale |
+| Un élève finit systématiquement en 5 min | Sous-alimenté | Défis ⭐ systématiques + attribution d'une mission spéciale |

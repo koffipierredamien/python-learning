@@ -11,7 +11,7 @@ Les onglets de suivi ont été ajoutés à la suite :
 |---|---|
 | **Présence** | Les 22 séances. `P` présent · `R` retard · `E` excusé · `A` absent. Le taux se calcule seul et passe en rouge sous 85 % |
 | **Diagnostic** | Le Test de Décollage : pilotage /6, logique /4, profil P0→P3. **Interne : jamais communiqué aux élèves ni aux familles** |
-| **Suivi** | Ce que chaque élève a produit à chaque séance, et sur quelle piste. **Colonne ALERTE automatique** |
+| **Suivi** | Ce que chaque élève a produit à chaque séance, et les défis ⭐ qu'il a faits. **Colonne ALERTE automatique** |
 | **Observations** | Le journal : un fait marquant, l'action décidée, et si elle a été faite |
 | **Journal** | La revue d'après-séance. **Une ligne par séance ET par classe** : chaque enseignant remplit la sienne |
 | **Indiscipline** | Le registre demandé par le responsable : un fait par ligne, la sanction, et le **compteur d'avertissements par apprenant** |

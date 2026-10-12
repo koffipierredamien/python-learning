@@ -49,7 +49,7 @@ S02-premier-contact/
 │     (séances 3 et 4 : formulaire-exercices.gs — le test noté avec du code à écrire)
 │
 └── code/                  ce qui tourne sur les machines
-      depart_eleves_piste_bleue.py   le fichier de l'élève
+      depart_eleves.py   le fichier de l'élève
       code_officiel_fin_de_seance.py le Filet
       live_coding_antiseche.py       pour répéter avant
 ```

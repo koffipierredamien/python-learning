@@ -5,7 +5,7 @@
 > 1. **Aucun cas ne doit ralentir le groupe.**
 > 2. **Aucun cas ne doit exclure un élève.**
 
-Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deux mécanismes structurels : **le Filet** (code officiel redistribué chaque séance) ou **les 3 pistes** (Bleue / Rouge / Noire).
+Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deux mécanismes structurels : **le Filet** (code officiel redistribué chaque séance) ou **les défis ⭐** (facultatifs, pour ceux qui finissent avant).
 
 **Légende de la dernière colonne :** `moi` = l'enseignant de la classe, pendant la séance · `soir` = après la séance, seul ou avec le collègue de l'autre classe
 
@@ -15,13 +15,13 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 
 | # | Cas | Comment on le détecte | Réponse immédiate (en séance) | Réponse de fond | Qui |
 |---|---|---|---|---|---|
-| A1 | **Ne sait pas utiliser un ordinateur** | Test de Décollage station 1, score 0–2 | Piste Bleue + squelette de code prérempli + voisin P1 | Passeport Machine + Sas des 30 minutes ; réévaluation à la séance 5 | moi |
+| A1 | **Ne sait pas utiliser un ordinateur** | Test de Décollage station 1, score 0–2 | Squelette de code prérempli + voisin P1 + étapes découpées | Passeport Machine + Sas des 30 minutes ; réévaluation à la séance 5 | moi |
 | A2 | **Tape très lentement (5 mots/min)** | Observation atelier 1 | **On ne lui fait jamais recopier du code.** Le squelette est fourni, il ne tape que ce qui porte du sens | 5 min de jeu de clavier chaque samedi, record personnel ; geste 12 du Passeport | moi |
 | A3 | **Lit difficilement / dyslexie** | Consignes non suivies alors que la logique est bonne | Consignes lues à voix haute par le copilote ; pictogrammes sur les fiches ; police agrandie sur son poste | Fiches en gros caractères, consignes en 1 phrase par étape, éditeur en thème contrasté | moi |
 | A4 | **Ne comprend pas les messages d'erreur (anglais)** | Blocage systématique dès la 1ʳᵉ erreur | Le **[Dictionnaire des erreurs](A6-dictionnaire-des-erreurs.md)** : les messages fréquents, traduits, avec la cause et le remède | On coche l'erreur dans le dictionnaire dès qu'elle a été traitée en classe : on sait ainsi ce qui a déjà été vu, et ce qui reste à voir | moi |
-| A5 | **Sait déjà coder (Scratch/Python)** | Test de Décollage, question 4 | Piste Noire dès la séance 1 | **Mission spéciale** : responsable d'un module bonus du jeu (sons, thèmes, score, IA) qu'il présentera à la classe ; rôle de Geek Mentor | moi |
+| A5 | **Sait déjà coder (Scratch/Python)** | Test de Décollage, question 4 | Les défis ⭐ dès la séance 1 | **Mission spéciale** : responsable d'un module bonus du jeu (sons, thèmes, score, IA) qu'il présentera à la classe ; rôle de Geek Mentor | moi |
 | A6 | **Très fort mais impatient / méprisant** | Soupirs, « c'est nul », coupe la parole | Recadrage privé, jamais public. On lui donne une responsabilité, pas une punition | Nommé **Chef de module** : il doit produire une fiche mémo utilisable par les autres. Enseigner l'oblige à ralentir | moi |
-| A7 | **Arrive avec un très fort niveau qui dépasse le parcours** | Termine tout, s'ennuie malgré la piste Noire | Parcours parallèle : IA du jeu, sauvegarde des scores, réseau | Peut co-animer une partie de la mise en commun ; orienté vers un défi long (voir H3) | soir |
+| A7 | **Arrive avec un très fort niveau qui dépasse le parcours** | Termine tout, s'ennuie malgré les défis ⭐ | Parcours parallèle : IA du jeu, sauvegarde des scores, réseau | Peut co-animer une partie de la mise en commun ; orienté vers un défi long (voir H3) | soir |
 | A8 | **Ne parle pas bien la langue d'enseignement** | Observation | Voisin parlant la même langue maternelle ; consignes visuelles | Fiches très illustrées, vocabulaire technique affiché avec image | moi |
 
 ---
@@ -31,7 +31,7 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 | # | Cas | Détection | Réponse immédiate | Réponse de fond | Qui |
 |---|---|---|---|---|---|
 | B1 | **Finit l'atelier en 3 minutes** | Carte bleue levée très tôt | 1) Défi Noir du jour 2) puis rôle de **Geek Mentor** (10 min max) 3) puis testeur officiel | Mission spéciale sur un module ; jamais « avance dans le programme » (interdit : casse la synchronisation du groupe) | moi |
-| B2 | **Ne finit jamais dans le temps** | Tableau de suivi : `~` répétés | On **arrête** au signal et on lui donne le code officiel : il repart à égalité la semaine suivante | Passage en piste Bleue ; brique découpée en 3 sous-étapes visibles ; inscrit sur la **liste des 10 minutes** | moi |
+| B2 | **Ne finit jamais dans le temps** | Tableau de suivi : `~` répétés | On **arrête** au signal et on lui donne le code officiel : il repart à égalité la semaine suivante | Brique découpée en 3 sous-étapes visibles ; inscrit sur la **liste des 10 minutes** | moi |
 | B3 | **Abandonne en cours d'atelier** | Bras croisés, écran figé | S'asseoir à côté 2 min, **sans reproche**. Trouver une micro-victoire immédiate (« change juste ce mot, lance ») | Réduire la taille des tâches : il lui faut une réussite toutes les 5 minutes, pas toutes les 30 | moi |
 | B4 | **Refuse de travailler** | Provocation ou passivité totale | Ne jamais confronter devant le groupe. Proposer un rôle alternatif : scribe, gardien du temps, testeur | Entretien individuel à froid (pause ou fin de séance) : chercher la cause réelle (peur de l'échec, conflit, fatigue, problème hors classe) | soir |
 | B5 | **Rythme irrégulier : excellent puis absent mentalement** | Alternance `✔` et `✖` | Vérifier le sommeil, la faim, l'ambiance du jour avant tout diagnostic pédagogique | Contact avec la famille si le motif persiste | soir |
@@ -43,7 +43,7 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 | # | Cas | Détection | Réponse immédiate | Réponse de fond | Qui |
 |---|---|---|---|---|---|
 | C1 | **Absent une séance** | Feuille de présence | **Le Filet règle le cas** : il repart du code officiel. Il n'a rien à rattraper sur le projet | Un camarade lui explique la notion manquée en 3 minutes pendant l'accueil + fiche mémo de la séance manquée | moi |
-| C2 | **Absent plusieurs séances** | 2 `✖` consécutifs | Code officiel + piste Bleue systématique + voisin solide | **Liste des 10 minutes** + appel à la famille : l'absence est le principal facteur d'abandon | soir |
+| C2 | **Absent plusieurs séances** | 2 `✖` consécutifs | Code officiel + voisin solide + étapes découpées | **Liste des 10 minutes** + appel à la famille : l'absence est le principal facteur d'abandon | soir |
 | C3 | **Arrive en cours de parcours (nouvel inscrit)** | Inscription tardive | **Protocole d'intégration** (voir bas de page) | Parrainage par un Geek Mentor pendant 3 séances | soir |
 | C4 | **Retards chroniques** | Arrive après le WOW | Procédure d'accueil affichée : il démarre seul, sans perturber | Voir la cause avec la famille (transport, horaire) ; jamais de sanction publique | moi |
 | C5 | **Arrête en cours de parcours** | Deux absences non justifiées | — | Appel de la famille, proposition de retour sans condition. Le Filet garantit qu'un retour est toujours possible | soir |
@@ -51,7 +51,7 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 **Protocole d'intégration d'un nouvel élève (cas C3), en 4 étapes :**
 1. Test de Décollage express (10 min, pendant l'atelier 1 de sa première séance).
 2. Remise du code officiel + **visite guidée du jeu** par un Geek Mentor : « voilà ce que le jeu sait déjà faire ».
-3. Il ne rattrape **pas** les notions manquées : il rejoint le groupe à la brique du jour, en piste Bleue.
+3. Il ne rattrape **pas** les notions manquées : il rejoint le groupe à la brique du jour, avec un voisin solide.
 4. Les notions antérieures sont revues **à la demande**, via les fiches mémo, pendant les 3 séances suivantes.
 > Un nouvel élève n'a pas besoin de comprendre tout le code existant pour ajouter une brique. C'est vrai en classe, et c'est vrai dans la vraie vie d'un développeur — le dire aux élèves les rassure.
 
@@ -95,9 +95,9 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 | F1 | **Blocage sur une notion clé (variable, boucle, fonction, liste)** | Cartes orange répétées | Reprise **débranchée** individuelle : la variable = une boîte étiquetée, la liste = des élèves alignés avec un numéro | Si > 30 % du groupe : la notion réouvre la séance suivante. **La faute est à l'enseignement, pas aux élèves** | moi |
 | F2 | **Erreurs d'indentation répétées** | `IndentationError` en boucle | Règle visuelle : « ce qui est *dans* le bloc est décalé, toujours de 4 espaces » + montrer la barre verticale de l'éditeur | Ajoutée au dictionnaire des erreurs | moi |
 | F3 | **Confond `=` et `==`** | Erreurs de condition | Formule à répéter : « **un** égal, je range ; **deux** égaux, je compare » | Dans le Dictionnaire des erreurs | moi |
-| F4 | **Copie le code sans comprendre** | Ça marche, mais ne sait pas expliquer | **La preuve n° 2 filtre ce cas** : « explique-moi cette ligne comme si j'étais ton petit frère » | Retour en piste Bleue avec code à trous : le trou oblige à comprendre. Jamais de sanction | moi |
+| F4 | **Copie le code sans comprendre** | Ça marche, mais ne sait pas expliquer | **La preuve n° 2 filtre ce cas** : « explique-moi cette ligne comme si j'étais ton petit frère » | On lui redonne la même étape en code à trous : le trou oblige à comprendre. Jamais de sanction | moi |
 | F5 | **Comprend en classe, a tout oublié samedi prochain** | Échec au quiz de rappel | Normal : c'est l'oubli ordinaire. Le rappel des 3 questions est fait pour ça | Réactivation espacée : chaque notion est réutilisée dans les 3 séances suivantes, par construction du projet | moi |
-| F6 | **Ne sait pas décomposer un problème** | Bloque devant une consigne globale (piste Rouge) | Piste Bleue : les étapes sont déjà découpées | Enseigner explicitement le découpage : « quelle est la toute première petite chose que le programme doit faire ? » | moi |
+| F6 | **Ne sait pas décomposer un problème** | Bloque devant une consigne globale | On découpe l'étape devant lui, en trois sous-étapes | Enseigner explicitement le découpage : « quelle est la toute première petite chose que le programme doit faire ? » | moi |
 | F7 | **Suit mais ne peut pas suivre le rythme de lecture du live coding** | Perdu au bout de 2 min | Police 18+, code projeté ligne par ligne, pauses de prédiction toutes les 3 lignes | Le code du live coding est aussi fourni en fiche papier | moi |
 
 ---
@@ -120,7 +120,7 @@ Quand ces deux règles semblent s'opposer, la réponse est toujours l'un des deu
 | # | Cas | Détection | Réponse immédiate | Réponse de fond | Qui |
 |---|---|---|---|---|---|
 | H1 | **Code irrécupérable / tout cassé** | — | Code officiel. 30 secondes. Sans jugement, avec le sourire | C'est précisément la raison d'être du Filet | moi |
-| H2 | **L'élève veut faire un autre jeu** | Demande explicite | Accepter **dans le cadre de la piste Noire**, sur les mêmes notions : « d'accord, mais avec les listes de cette semaine » | Un espace « projet libre » est ouvert aux 3 dernières séances pour tous | moi |
+| H2 | **L'élève veut faire un autre jeu** | Demande explicite | Accepter **comme un défi ⭐**, sur les mêmes notions : « d'accord, mais avec les listes de cette semaine » | Un espace « projet libre » est ouvert aux 3 dernières séances pour tous | moi |
 | H3 | **A terminé tout le parcours en avance** | — | Missions longues : IA de l'ordinateur, sauvegarde des scores, mode 2 joueurs en réseau, plateau 4×4 | Statut d'**assistant** : co-anime une mise en commun, écrit une fiche mémo pour la classe | soir |
 | H4 | **Le jeu marche chez l'un, pas chez l'autre** | — | Comparer les deux codes côte à côte : c'est un excellent exercice de débogage, on en fait une activité | Convention unique de nommage et de version | moi |
 | H5 | **Un élève partage son code fini à toute la classe** | Copie massive | Ne pas punir : la preuve n° 2 (« explique-moi ») rend la copie inutile. En faire un sujet : « à quoi ça sert de copier un code qu'on ne sait pas expliquer ? » | Encourager le partage **d'idées** et interdire le partage de fichiers pendant les ateliers | moi |

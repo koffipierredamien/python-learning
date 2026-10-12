@@ -45,6 +45,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S04-le-jeu-compte/code/live_coding_antiseche.py) — à faire la veille, à voix haute |
 | Imprimer | [🖨️ La liste du jour](2-seances/S05-la-decision/a-imprimer/quantites-et-formats.md) — la feuille de parcours + l'aide-mémoire |
 | Envoyer le programme au responsable | [📋 Le déroulé en Word](2-seances/S04-le-jeu-compte/a-envoyer/deroule-seance-4.docx) |
+| Donner l'exercice de maison | 🎮 [**Le Quiz des Geeks**](2-seances/S05-la-decision/a-envoyer/exercice-maison.md) — une image à envoyer, et sa correction |
 | Envoyer le test aux parents, mercredi | [📝 Le test n°3 « texte ou nombre »](2-seances/S04-le-jeu-compte/a-envoyer/formulaire-exercices.md) — 20 points, corrigé automatiquement |
 | Revoir le TP de samedi dernier | [📄 La séance 3](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) · [💻 son corrigé en Python](2-seances/S03-tp-les-joueurs/code/LISEZ-MOI.md) |
 
@@ -53,7 +54,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 ## La méthode en sept principes
 
 1. Une seule classe, un seul projet, **pas de groupes de niveau**
-2. Différencier par la profondeur : **3 pistes** (🔵 guidée · 🔴 standard · ⚫ défi), choisies par l'élève à chaque atelier
+2. **Un seul exercice pour tous**, et des **défis ⭐** pour ceux qui finissent avant : on différencie par ce qu'on ajoute, jamais par ce qu'on retire
 3. **Le Filet** : le code de référence redistribué à chaque séance → une absence ne met jamais personne en retard
 4. **Un enseignant par classe**, et cinq réflexes pour tenir seul : j'alterne parler / circuler, les cartes de couleur sont mes yeux, les élèves s'entraident d'abord, 2 Geek Mentors par séance, je ne m'assois jamais
 5. **Le Sas « Permis Machine »** pour les grands débutants, sans les séparer du groupe

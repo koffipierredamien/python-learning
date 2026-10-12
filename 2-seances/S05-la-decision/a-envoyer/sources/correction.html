@@ -1,0 +1,126 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Correction — Le Quiz des Geeks</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:210mm 516mm;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:10pt;color:#14142b;padding:8mm 9mm 5mm}
+ .band{background:#0c5c29;color:#fff;border-radius:3mm;padding:3.6mm 5mm;margin-bottom:3.4mm}
+ .band .k{font-size:9pt;letter-spacing:1.2pt;color:#a8e6bd;font-weight:bold}
+ .band h1{font-size:22pt;margin:1.2mm 0 1.4mm}
+ .band .s{font-size:10pt;color:#d8f0e2}
+ pre{margin:0;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:4mm 5mm;
+     font-family:"Courier New",monospace;font-size:9.4pt;line-height:1.42;white-space:pre-wrap}
+ pre .c{color:#7f7f9c}
+ pre .s{color:#ffb74d}
+ pre .k{color:#4fc3f7;font-weight:bold}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:3mm 4mm;margin-top:3.4mm;line-height:1.5}
+ .note b{color:#a65d00}
+ .note ul{margin:1.4mm 0 0;padding-left:5mm}.note li{margin-bottom:1.2mm}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#fff;border:.3mm solid #e8d6a8;
+       border-radius:1mm;padding:.3mm 1mm}
+</style></head><body>
+<div class="band">
+  <div class="k">CORRECTION · POUR L'ENSEIGNANT ET LES PARENTS</div>
+  <h1>✅ LE QUIZ DES GEEKS</h1>
+  <div class="s">Le programme complet, avec les deux bonus. Il tourne tel quel dans Thonny.
+  Les variantes sont nombreuses : <b>ce qui compte, c'est que le programme marche</b>, pas qu'il soit identique.</div>
+</div>
+<pre><span class=<span class="s">"c"</span>># --- ETAPE 1 : l'accueil ---------------------------------------------</span>
+<span class="k">print</span>(<span class="s">"="</span> * 35)
+<span class="k">print</span>(<span class="s">"      LE QUIZ DES GEEKS"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 35)
+<span class="k">print</span>(<span class="s">""</span>)
+
+joueur = <span class="k">input</span>(<span class="s">"Quel est ton nom ? "</span>)
+<span class="k">print</span>(<span class="s">"Bonjour "</span> + joueur + <span class="s">" ! Trois questions t'attendent."</span>)
+<span class="k">print</span>(<span class="s">""</span>)
+
+
+<span class=<span class="s">"c"</span>># --- ETAPE 2 : le compteur part de zero ------------------------------</span>
+score = 0
+
+
+<span class=<span class="s">"c"</span>># --- ETAPE 3 : question 1  (un NOMBRE) -------------------------------</span>
+<span class="k">print</span>(<span class="s">"QUESTION 1"</span>)
+reponse = <span class="k">input</span>(<span class="s">"Combien font 3 + 4 ? "</span>)
+reponse = <span class="k">int</span>(reponse)          <span class=<span class="s">"c"</span>># la reponse du joueur est du TEXTE : on la transforme</span>
+
+<span class="k">if</span> reponse == 7:
+    <span class="k">print</span>(<span class="s">"Bravo, c'est juste !"</span>)
+    score = score + 1
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"Non, la bonne reponse etait 7."</span>)
+<span class="k">print</span>(<span class="s">""</span>)
+
+
+<span class=<span class="s">"c"</span>># --- ETAPE 4 : question 2  (du TEXTE) --------------------------------</span>
+<span class="k">print</span>(<span class="s">"QUESTION 2"</span>)
+reponse = <span class="k">input</span>(<span class="s">"Que donne  \"3\" + \"4\"  en Python ? "</span>)
+
+<span class="k">if</span> reponse == <span class="s">"34"</span>:
+    <span class="k">print</span>(<span class="s">"Bravo, c'est juste !"</span>)
+    score = score + 1
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"Non, la bonne reponse etait 34 : deux textes sont colles."</span>)
+<span class="k">print</span>(<span class="s">""</span>)
+
+
+<span class=<span class="s">"c"</span>># --- ETAPE 5 : question 3  (un NOMBRE) -------------------------------</span>
+<span class="k">print</span>(<span class="s">"QUESTION 3"</span>)
+reponse = <span class="k">input</span>(<span class="s">"Combien de cases a le plateau XO ? "</span>)
+reponse = <span class="k">int</span>(reponse)
+
+<span class="k">if</span> reponse == 9:
+    <span class="k">print</span>(<span class="s">"Bravo, c'est juste !"</span>)
+    score = score + 1
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"Non, la bonne reponse etait 9."</span>)
+<span class="k">print</span>(<span class="s">""</span>)
+
+
+<span class=<span class="s">"c"</span>># --- ETAPE 6 : le bilan ----------------------------------------------</span>
+<span class="k">print</span>(<span class="s">"="</span> * 35)
+<span class="k">print</span>(joueur + <span class="s">", ton score est de "</span> + <span class="k">str</span>(score) + <span class="s">" sur 3."</span>)
+
+<span class="k">if</span> score &gt; 1:
+    <span class="k">print</span>(<span class="s">"Tu es un vrai Geek !"</span>)
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"Il faut reviser, mais tu vas y arriver !"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 35)
+
+
+<span class=<span class="s">"c"</span>># =====================================================================</span>
+<span class=<span class="s">"c"</span>>#  LES DEUX BONUS</span>
+<span class=<span class="s">"c"</span>># =====================================================================</span>
+
+<span class=<span class="s">"c"</span>># --- BONUS 1 : le nombre de points qui manquent ----------------------</span>
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"Il te manquait "</span> + <span class="k">str</span>(3 - score) + <span class="s">" point(s) pour le sans-faute."</span>)
+
+<span class=<span class="s">"c"</span>># --- BONUS 2 : la quatrieme question ---------------------------------</span>
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"QUESTION BONUS"</span>)
+age = <span class="k">input</span>(<span class="s">"Quel age as-tu ? "</span>)
+age = <span class="k">int</span>(age)
+
+<span class="k">if</span> age &gt; 11:
+    <span class="k">print</span>(joueur + <span class="s">", tu es un Jeremiah Geek."</span>)
+<span class="k">else</span>:
+    <span class="k">print</span>(joueur + <span class="s">", tu es un Jerusalem Geek."</span>)</pre>
+<div class="note">
+  <b>Les cinq choses à regarder dans la copie d'un élève</b>
+  <ul>
+    <li>La ligne <span class="mono">score = 0</span> est-elle <b>avant</b> les questions, et <b>une seule fois</b> ?</li>
+    <li>La ligne <span class="mono">reponse = int(reponse)</span> est-elle là pour les questions <b>1 et 3</b>
+        (des nombres), et <b>absente</b> pour la question 2 (du texte) ?</li>
+    <li>Le <span class="mono">==</span> est-il bien <b>doublé</b> dans les <span class="mono">if</span> ?
+        Un seul <span class="mono">=</span> donne un <span class="mono">SyntaxError</span>.</li>
+    <li>Les <b>4 espaces</b> de décalage sont-ils là sous chaque <span class="mono">if</span> et chaque
+        <span class="mono">else</span> ? C'est l'erreur n°1.</li>
+    <li>Le <span class="mono">str(score)</span> est-il présent dans la phrase du bilan ?
+        Sans lui : <span class="mono">TypeError</span>.</li>
+  </ul>
+  <b>Et la vraie question à poser à l'enfant :</b> « lance-le en te trompant exprès — est-ce que le
+  <span class="mono">else</span> se déclenche ? » Un <span class="mono">if</span> qu'on n'a pas testé dans
+  ses deux cas n'est pas testé.
+</div>
+</body></html>
