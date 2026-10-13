@@ -7,14 +7,26 @@ Les deux exercices révisent **exactement les mêmes notions** — on envoie **l
 |---|---|---|
 | **Ce que c'est** | Un **vrai jeu à deux joueurs**, qu'on rejoue | Un quiz de 3 questions, qu'on joue une fois |
 | **On y joue en famille ?** | **Oui** — c'est tout l'intérêt | Non |
-| **L'exercice** | [`exercice-maison-le-nombre-secret.png`](exercice-maison-le-nombre-secret.png) | [`exercice-maison-le-quiz-des-geeks.png`](exercice-maison-le-quiz-des-geeks.png) |
-| **La correction** | [image](correction-le-nombre-secret.png) · [`.py`](correction-nombre-secret.py) | [image](correction-le-quiz-des-geeks.png) · [`.py`](correction-quiz-des-geeks.py) |
+| **L'exercice, en images** | [page 1](exercice-maison-le-nombre-secret-1.png) · [page 2](exercice-maison-le-nombre-secret-2.png) | [page 1](exercice-maison-le-quiz-des-geeks-1.png) · [page 2](exercice-maison-le-quiz-des-geeks-2.png) |
+| **…et en PDF, pour imprimer** | [`exercice-maison-le-nombre-secret.pdf`](exercice-maison-le-nombre-secret.pdf) | [`exercice-maison-le-quiz-des-geeks.pdf`](exercice-maison-le-quiz-des-geeks.pdf) |
+| **La correction** | [page 1](correction-le-nombre-secret-1.png) · [page 2](correction-le-nombre-secret-2.png) · [PDF](correction-le-nombre-secret.pdf) · [`.py`](correction-nombre-secret.py) | [page 1](correction-le-quiz-des-geeks-1.png) · [page 2](correction-le-quiz-des-geeks-2.png) · [PDF](correction-le-quiz-des-geeks.pdf) · [`.py`](correction-quiz-des-geeks.py) |
 
 > **Pourquoi *Le Nombre Secret* est meilleur :** l'enfant ne répond pas à des questions, **il fait jouer
 > quelqu'un**. Le programme réagit (« plus grand ! », « plus petit ! »), il y a un score, et on a envie de
 > refaire une partie. C'est la différence entre un exercice et un jeu.
 
 > **La correction ne part qu'après** le retour des copies.
+
+### 📱 Et pour ceux qui n'ont pas d'ordinateur
+
+Ils font le **[quiz de la semaine](quiz-semaine.md)** à la place : 15 questions à choix multiples sur
+**le même jeu**, depuis un téléphone, **corrigé à 100 % automatiquement**. Personne n'est laissé de côté,
+et samedi tout le monde parlera de la même chose.
+
+### 🖨️ Deux images, ou un PDF
+
+Chaque exercice tient maintenant sur **deux pages A4** : envoyez **les deux images** par message, ou
+**le PDF** à ceux qui veulent l'imprimer. Les deux contiennent exactement la même chose.
 
 ---
 
@@ -80,5 +92,5 @@ Merci pour votre aide, et à samedi 12 h.
 AcProKids Coding Camp — Vision Plénitudes Vie
 ```
 
-> **Pour les enfants sans ordinateur :** ils ne sont pas pénalisés. L'exercice sera refait **en classe**
-> sur les postes, et il n'entre dans aucune note.
+> **Pour les enfants sans ordinateur :** ils font le [quiz de la semaine](quiz-semaine.md), et l'exercice
+> sera refait **en classe** sur les postes. Rien de tout cela n'entre dans une note.

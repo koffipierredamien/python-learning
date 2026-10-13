@@ -1,22 +1,26 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Correction — Le Quiz des Geeks</title>
 <style>
  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
- @page{size:210mm 516mm;margin:0}
- body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:10pt;color:#14142b;padding:8mm 9mm 5mm}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:9.5pt;color:#14142b;padding:7mm 8mm 5mm}
  .band{background:#0c5c29;color:#fff;border-radius:3mm;padding:3.6mm 5mm;margin-bottom:3.4mm}
  .band .k{font-size:9pt;letter-spacing:1.2pt;color:#a8e6bd;font-weight:bold}
- .band h1{font-size:22pt;margin:1.2mm 0 1.4mm}
+ .band h1{font-size:20pt;margin:1mm 0 1.2mm}
  .band .s{font-size:10pt;color:#d8f0e2}
  pre{margin:0;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:4mm 5mm;
-     font-family:"Courier New",monospace;font-size:9.4pt;line-height:1.42;white-space:pre-wrap}
+     font-family:"Courier New",monospace;font-size:8.2pt;line-height:1.32;white-space:pre-wrap}
  pre .c{color:#7f7f9c}
  pre .s{color:#ffb74d}
  pre .k{color:#4fc3f7;font-weight:bold}
- .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:3mm 4mm;margin-top:3.4mm;line-height:1.5}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.6mm 3.4mm;margin-top:3mm;line-height:1.42;font-size:9.2pt}
  .note b{color:#a65d00}
  .note ul{margin:1.4mm 0 0;padding-left:5mm}.note li{margin-bottom:1.2mm}
  .mono{font-family:"Courier New",monospace;font-weight:bold;background:#fff;border:.3mm solid #e8d6a8;
        border-radius:1mm;padding:.3mm 1mm}
+  .saut{page-break-before:always}
+  .suite{background:#0c5c29;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+         font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+  .suite span{color:#a8e6bd;font-weight:normal;font-size:9.4pt}
 </style></head><body>
 <div class="band">
   <div class="k">CORRECTION · POUR L'ENSEIGNANT ET LES PARENTS</div>
@@ -64,7 +68,10 @@ reponse = <span class="k">input</span>(<span class="s">"Que donne  \"3\" + \"4\"
 <span class="k">print</span>(<span class="s">""</span>)
 
 
-<span class=<span class="s">"c"</span>># --- ETAPE 5 : question 3  (un NOMBRE) -------------------------------</span>
+<span class=<span class="s">"c"</span>></pre>
+<div class="saut"></div>
+<div class="suite">✅ LE QUIZ DES GEEKS — la correction, suite <span>page 2 sur 2</span></div>
+<pre># --- ETAPE 5 : question 3  (un NOMBRE) -------------------------------</span>
 <span class="k">print</span>(<span class="s">"QUESTION 3"</span>)
 reponse = <span class="k">input</span>(<span class="s">"Combien de cases a le plateau XO ? "</span>)
 reponse = <span class="k">int</span>(reponse)
