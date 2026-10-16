@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>TP n°3 — conduite et corrigé</title>
+<style>
+  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+  @page{size:A4 portrait;margin:9mm 10mm}
+  body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:9.4pt;color:#14142b}
+  .ent{background:#0c5c29;color:#fff;border-radius:2.6mm;padding:3.2mm 4.4mm;margin-bottom:3mm}
+  .ent .k{font-size:8.4pt;letter-spacing:1.1pt;color:#a8e6bd;font-weight:bold}
+  .ent h1{font-size:18pt;margin:1mm 0 1mm}
+  .ent .s{font-size:9.4pt;color:#d8f0e2;line-height:1.4}
+  h2{font-size:11.4pt;background:#14142b;color:#fff;padding:1.3mm 3mm;margin:3.2mm 0 1.8mm;border-radius:1.6mm}
+  pre{margin:1mm 0;background:#12122a;color:#e8e8f2;border-radius:2mm;padding:2.4mm 3.2mm;
+      font-family:"Courier New",monospace;font-size:8.3pt;line-height:1.3;white-space:pre-wrap}
+  pre .c{color:#7f7f9c} pre .k{color:#4fc3f7;font-weight:bold}
+  table{width:100%;border-collapse:collapse;margin-top:1.2mm}
+  td,th{border:.25mm solid #888;padding:1mm 1.5mm;font-size:8.6pt;text-align:left;vertical-align:top}
+  th{background:#eee}
+  .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;padding:.3mm 1mm;border-radius:1mm}
+  .enc{background:#fffaf0;border:.5mm solid #d79a00;border-radius:2mm;padding:2.4mm 3.2mm;margin:2.4mm 0;line-height:1.42}
+  .enc b{color:#a65d00}
+  ul{margin:1mm 0;padding-left:5mm}li{margin-bottom:1mm;line-height:1.36}
+</style></head><body>
+
+<div class="ent">
+  <div class="k">POUR L'ENSEIGNANT — NE PAS DISTRIBUER</div>
+  <h1>🏆 TP n°3 — conduite de séance et corrigés</h1>
+  <div class="s">Jeremiah Geeks · samedi 28 novembre 2026 · 12 h – 14 h.
+  C'est la dernière séance des deux mois : <b style="color:#fff">elle doit se terminer par une fête,
+  pas par une leçon</b>.</div>
+</div>
+
+<h2>Le minutage, et la seule chose à ne pas rater</h2>
+<table>
+  <tr><th style="width:17%">Heure</th><th style="width:42%">Ce qui se passe</th><th>Votre rôle</th></tr>
+  <tr><td>12 h – 12 h 15</td><td>Prière, et annonce du tournoi</td><td>Montrez le tableau du tournoi, vide, affiché au mur. L'enjeu est posé</td></tr>
+  <tr><td>12 h 15 – 12 h 45</td><td><b>Partie 1</b> — les 8 scénarios</td><td>Vous circulez avec la liste : qui a quel scénario en échec</td></tr>
+  <tr><td>12 h 45 – 13 h 10</td><td><b>Partie 2</b> — les réparations</td><td>Vous aidez <b>en priorité</b> ceux qui ont 3 scénarios ou plus en échec</td></tr>
+  <tr><td>13 h 10 – 13 h 20</td><td>Pause, et <b>tirage au sort</b> des matchs</td><td>Vous remplissez le tableau devant eux. Ça fait monter la tension, c'est voulu</td></tr>
+  <tr><td>13 h 20 – 13 h 25</td><td><b>Partie 3</b> — une finition, vite</td><td>Cinq minutes, pas plus. Ceux qui réparent encore continuent de réparer</td></tr>
+  <tr><td>13 h 25 – 13 h 55</td><td><b>LE TOURNOI</b></td><td>Vous arbitrez, vous commentez à voix haute, vous faites applaudir</td></tr>
+  <tr><td>13 h 55 – 14 h</td><td>Le bilan des deux mois, et la photo</td><td>Ramassez les <b>deux dernières réponses</b> : elles font le programme de décembre</td></tr>
+</table>
+
+<div class="enc">
+  <b>La règle d'or du jour :</b> <b>tout le monde joue au tournoi</b>, même celui dont le jeu ne marche
+  pas. Un élève dont le programme plante joue sur celui de son adversaire — il n'est jamais mis de côté.
+  Un enfant qui repart en ayant perdu un match aura quand même joué ; un enfant qui repart sans avoir
+  joué aura perdu sa séance.
+</div>
+
+<h2>Partie 1 — ce que chaque scénario teste vraiment</h2>
+<table>
+  <tr><th style="width:6%">#</th><th style="width:40%">Ce qu'il vérifie</th><th>S'il échoue, regardez…</th></tr>
+  <tr><td>1</td><td>La pose et l'indice</td><td><span class="mono">plateau[case - 1]</span></td></tr>
+  <tr><td>2</td><td><b>Le tour ne change pas sur un coup refusé</b></td><td>L'échange des symboles est sorti du <span class="mono">if</span></td></tr>
+  <tr><td>3</td><td>La borne haute</td><td><span class="mono">case &lt;= 9</span></td></tr>
+  <tr><td>4</td><td><b>Le bug du zéro</b> — le plus instructif</td><td><span class="mono">case &gt;= 1</span> manquant : le symbole part dans la case 9</td></tr>
+  <tr><td>5-7</td><td>Les 8 lignes gagnantes, et l'arrêt</td><td>Le bloc des <span class="mono">if</span> est-il <b>dans</b> la boucle et <b>après</b> la pose ?</td></tr>
+  <tr><td>8</td><td>Le match nul</td><td>Le <span class="mono">else</span> final, et <span class="mono">tour &lt; 9</span></td></tr>
+</table>
+
+<h2>Partie 3 — le code des finitions</h2>
+<p style="margin:1mm 0">Tout est aussi dans <span class="mono">code/finitions-tp3.py</span>, qui tourne.</p>
+<pre><span class="c"># A - le numero du tour (au debut de la boucle)</span>
+print("--- Tour " + <span class="k">str</span>(tour + 1) + " sur 9 ---")
+
+<span class="c"># B - l'ecran de victoire (a la toute fin)</span>
+<span class="k">if</span> gagnant == "X":
+    nom = joueur1
+<span class="k">else</span>:
+    nom = joueur2
+print("*" * 35)
+print("*        BRAVO " + nom + " !")
+print("*     Tu as gagne en " + <span class="k">str</span>(tour) + " coups.")
+print("*" * 35)
+
+<span class="c"># C - le compteur de betises :  refus = 0  avant la boucle,</span>
+<span class="c">#     refus = refus + 1  dans le else, puis a la fin :</span>
+print("Coups impossibles tentes : " + <span class="k">str</span>(refus))
+
+<span class="c"># E - qui commence (import random tout en haut du fichier)</span>
+<span class="k">import</span> random
+<span class="k">if</span> random.randint(1, 2) == 1:
+    print("Le sort a parle : " + joueur1 + " commence.")
+<span class="k">else</span>:
+    print("Le sort a parle : " + joueur2 + " commence.")</pre>
+
+<div class="enc">
+  <b>La question de la finition D, à poser à toute la classe :</b> « si on remplace X et O par ⚡ et ☠,
+  est-ce que la détection du gagnant marche encore ? » <b>Oui</b> — parce que les huit
+  <span class="mono">if</span> comparent <b>les cases entre elles</b>, jamais avec
+  <span class="mono">"X"</span>. C'est une vraie idée d'informaticien, et ils l'ont écrite sans le
+  savoir. Faites-leur remarquer.
+</div>
+
+<h2>Organiser le tournoi en 30 minutes</h2>
+<ul>
+  <li><b>8 joueurs → 7 matchs.</b> Quatre quarts, deux demies, une finale. Comptez 4 minutes par match :
+    c'est large, une partie de morpion dure deux minutes.</li>
+  <li><b>Deux matchs en parallèle</b> sur deux postes, sinon le temps ne tient pas. Les deux arbitres
+    (les perdants du tour précédent) gèrent chacun un poste.</li>
+  <li><b>Nombre impair d'élèves ?</b> Celui qui est seul passe directement au tour suivant — et il est
+    arbitre du premier match.</li>
+  <li><b>Un jeu qui plante en plein match :</b> on rejoue sur l'autre programme. Notez-le, sans
+    commentaire : la réparation sera le premier exercice de décembre.</li>
+  <li><b>Annoncez chaque match à voix haute</b>, nom contre nom. Faites applaudir à la fin. Cinq
+    secondes de théâtre valent une heure de motivation.</li>
+</ul>
+
+<h2>À noter le soir même — c'est le bilan des deux mois</h2>
+<ul>
+  <li><b>Classeur :</b> présence <span class="mono">S12</span>, et dans <span class="mono">Suivi</span>,
+    <b>qui a un jeu qui passe les 8 scénarios</b>. C'est la vraie note des deux mois.</li>
+  <li><b>Journal :</b> le champion, et surtout <b>les réponses à la question 2 du bilan</b> (« ce que
+    j'aimerais que mon jeu sache faire »). C'est le programme de décembre, écrit par eux.</li>
+  <li><b>Une photo de la classe avec le tableau du tournoi rempli.</b> À montrer aux familles — et à
+    ressortir le jour où un enfant voudra abandonner.</li>
+</ul>
+</body></html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Aide-mémoire — LE PLATEAU SE SOUVIENT</title>
+<style>
+  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+  @page{size:A4 portrait;margin:7mm 9mm}
+  body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:9.3pt;color:#14142b}
+  .consigne{font-size:8.3pt;color:#333;border:1px dashed #999;padding:1.8mm;margin-bottom:2.4mm}
+  h1{font-size:15.5pt;margin:0 0 .8mm;text-align:center}
+  .sur{text-align:center;font-size:9pt;color:#555;margin-bottom:2mm}
+  h2{font-size:10.4pt;background:#1a1a2e;color:#fff;padding:1mm 3mm;margin:2.6mm 0 1.2mm;border-radius:1.5mm}
+  h2.o{background:#e07b1a} h2.v{background:#2e9e52} h2.p{background:#6b2d8f}
+  .cle{background:#fff6d8;border:.7mm solid #d79a00;border-radius:2mm;padding:1.8mm;font-size:9.6pt;
+       text-align:center;margin:1.4mm 0}
+  .code{font-family:"Courier New",monospace;font-size:9.6pt;background:#12122a;color:#4fc3f7;
+        padding:1.8mm 2.6mm;border-radius:1.5mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+  .code i{color:#ffb74d;font-style:normal}
+  .code b{color:#ff8a80;font-weight:normal}
+  .duo{display:flex;gap:3mm;margin-top:1.2mm}
+  .duo > div{flex:1;border:.5mm solid #1a1a2e;border-radius:2mm;padding:1.8mm;font-size:8.8pt;line-height:1.34}
+  .duo b.t{display:block;font-size:10pt;margin-bottom:.8mm}
+  table{width:100%;border-collapse:collapse;margin-top:1.1mm}
+  td,th{border:1px solid #666;padding:.9mm 1.5mm;font-size:8.3pt;vertical-align:top;text-align:left}
+  th{background:#eee}
+  .mono{font-family:"Courier New",monospace;font-weight:bold}
+  .fait{background:#eaf7ef;border:.5mm solid #2fb765;border-radius:2mm;padding:1.8mm 2.4mm;font-size:8.8pt;line-height:1.45}
+  .fait b{color:#0c5c29}
+  .fait .ok{color:#2e9e52;font-weight:bold}
+  @media print{.consigne{display:none}}
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 1 par poste, A4 recto. Posé à côté du clavier.</div>
+<h1>🧠 LE PLATEAU SE SOUVIENT</h1>
+<div class="sur">Séance 6 — samedi 17 octobre 2026</div>
+
+<h2>1 · La liste : une boîte à neuf compartiments</h2>
+<div class="code">plateau = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+            <i>0    1    2    3    4    5    6    7    8</i></div>
+<div class="cle">Le <b>premier</b> compartiment porte le numéro <b>0</b>. Pas 1. <b>Jamais 1.</b></div>
+<div class="duo">
+  <div><b class="t">Lire une case</b>
+    <div class="code" style="font-size:9pt">print(plateau[0])   <i>la 1re</i>
+print(plateau[8])   <i>la 9e</i></div></div>
+  <div><b class="t">Changer une case</b>
+    <div class="code" style="font-size:9pt">plateau[4] = "X"
+<i>la 5e case contient X</i></div></div>
+</div>
+
+<h2 class="p">2 · La ligne du jour</h2>
+<div class="code">plateau[case - 1] = "X"</div>
+<table>
+  <tr><th style="width:30%">La case du joueur</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+  <tr><th>L'indice Python</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+</table>
+<div class="cle" style="margin-top:1.4mm"><b>indice = case − 1</b> &nbsp;·&nbsp; si tu oublies le <b>− 1</b>,
+le symbole se pose <b>à côté</b>, sans aucune erreur rouge.</div>
+
+<h2>3 · Dessiner le plateau à partir de la liste</h2>
+<div class="code">print(" " + plateau[0] + " | " + plateau[1] + " | " + plateau[2])
+print("---+---+---")
+print(" " + plateau[3] + " | " + plateau[4] + " | " + plateau[5])
+print("---+---+---")
+print(" " + plateau[6] + " | " + plateau[7] + " | " + plateau[8])</div>
+<div class="cle">Pour voir le plateau <b>changer</b>, il faut <b>recopier ces cinq lignes après la pose</b>.</div>
+<h2 class="o">Si l'écran devient rouge</h2>
+<table>
+  <tr><th style="width:23%">Ce qui s'affiche</th><th style="width:35%">Ce que ça veut dire</th><th>Ce que je fais</th></tr>
+  <tr><td class="mono">IndexError</td><td>« Cette case n'existe pas dans la liste »</td><td>Une liste de 9 va de <b>0 à 8</b>. Vérifie ton <span class='mono'>− 1</span></td></tr>
+  <tr><td class="mono">TypeError</td><td>Je mélange du texte et un nombre</td><td><span class='mono'>int()</span> pour calculer, <span class='mono'>str()</span> pour coller</td></tr>
+  <tr><td class="mono"><i>le X se pose à côté</i></td><td>Tu as écrit <span class='mono'>plateau[case]</span></td><td><span class='mono'>plateau[case − 1]</span>, toujours</td></tr>
+  <tr><td class="mono"><i>le plateau ne change pas</i></td><td>Tu l'affiches <b>avant</b> de poser</td><td>Recopie l'affichage <b>après</b> la pose</td></tr>
+</table>
+<h2 class="v">Ce que ton jeu sait faire</h2>
+<div class="fait"><b>Depuis le premier samedi, tu sais :</b><br><span class="ok">✔</span> afficher du texte et des phrases fabriquées avec le <span class="mono">+</span> &nbsp;·&nbsp; <span class="ok">✔</span> poser des questions au joueur et garder ses réponses &nbsp;·&nbsp; <span class="ok">✔</span> passer du texte au nombre et retour (<span class="mono">int()</span>, <span class="mono">str()</span>) &nbsp;·&nbsp; <span class="ok">✔</span> compter (<span class="mono">tour = tour + 1</span>) &nbsp;·&nbsp; <span class="ok">✔</span> décider avec <span class="mono">if</span> / <span class="mono">else</span> &nbsp;·&nbsp; <span class="ok">✔</span> garder neuf cases dans une <b>liste</b>, et <b>poser un symbole</b> qui reste</div>
+</body></html>

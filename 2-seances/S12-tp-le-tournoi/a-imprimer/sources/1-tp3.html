@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>TP n°3 — Le tournoi</title>
+<style>
+  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+  @page{size:A4 portrait;margin:9mm 10mm}
+  body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:9.1pt;color:#14142b}
+  .ent{background:#12122a;color:#fff;border-radius:2.6mm;padding:3.4mm 4.4mm;margin-bottom:3mm}
+  .ent .k{font-size:8.4pt;letter-spacing:1.1pt;color:#ffb74d;font-weight:bold}
+  .ent h1{font-size:17.5pt;margin:1mm 0 1mm}
+  .ent .s{font-size:9.6pt;color:#a8a8c0;line-height:1.4}
+  .ident{display:flex;gap:3mm;font-size:9pt;margin-bottom:3mm}
+  .ident div{flex:1;border:.4mm solid #999;border-radius:1.5mm;padding:1.4mm}
+  h2{font-size:11.2pt;background:#14142b;color:#fff;padding:1.2mm 3mm;margin:2.8mm 0 1.6mm;border-radius:1.6mm;
+     display:flex;justify-content:space-between}
+  h2 span{font-weight:normal;font-size:9.4pt;color:#ffb74d}
+  .ex{border:.4mm solid #c9c9d6;border-radius:2mm;padding:1.9mm 2.6mm;margin-bottom:1.9mm;line-height:1.34}
+  .code{font-family:"Courier New",monospace;font-size:9pt;background:#12122a;color:#4fc3f7;
+        padding:1.8mm 2.6mm;border-radius:1.5mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+  .code i{color:#ffb74d;font-style:normal}
+  .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;padding:.3mm 1mm;border-radius:1mm}
+  .star{background:#fff6d8;border:.5mm solid #d79a00}
+  table{width:100%;border-collapse:collapse;margin-top:1.2mm}
+  td,th{border:.25mm solid #888;padding:.9mm 1.4mm;font-size:8.4pt;text-align:left;vertical-align:top}
+  th{background:#eee}
+  .ok{width:11%;text-align:center}
+  .bracket{font-family:"Courier New",monospace;font-size:8.8pt;white-space:pre;line-height:1.4;
+           background:#f7f7fb;border:.4mm solid #c9c9d6;border-radius:2mm;padding:3mm}
+  .fin{background:#f3f3f8;border-left:3mm solid #6b2d8f;border-radius:2mm;padding:2.6mm 3.2mm;line-height:1.42}
+</style></head><body>
+
+<div class="ent">
+  <div class="k">JEREMIAH GEEKS · SAMEDI 28 NOVEMBRE 2026 · 12 h – 14 h</div>
+  <h1>🏆 TP n°3 — Le tournoi</h1>
+  <div class="s">Ton jeu est <b style="color:#fff">fini</b>. Aujourd'hui, on fait trois choses :
+  on le <b style="color:#fff">teste pour de vrai</b>, on le <b style="color:#fff">fignole</b>,
+  et on <b style="color:#fff">joue</b> — un tournoi de classe, sur vos propres programmes.</div>
+</div>
+
+<div class="ident">
+  <div><b>Ton nom :</b></div>
+  <div><b>Ton fichier :</b> <span class="mono">jeu.py</span></div>
+  <div><b>Ton adversaire au 1<sup>er</sup> match :</b></div>
+</div>
+
+<h2>Partie 1 — Le contrôle technique <span>30 min · obligatoire</span></h2>
+<div class="ex">
+  <b>Un programme qu'on n'a pas testé ne marche pas : il n'a pas encore échoué, c'est différent.</b>
+  Lance ton jeu et joue <b>chacun</b> de ces huit scénarios. Coche seulement si le résultat est exactement
+  celui annoncé. <b>Si ça rate, note le numéro</b> : tu le répareras en partie 2.
+  <table>
+    <tr><th style="width:6%">#</th><th style="width:45%">Ce que je tape</th><th>Ce qui doit se passer</th><th class="ok">OK</th></tr>
+    <tr><td>1</td><td>Les deux noms, puis la case <b>5</b></td><td>Le X apparaît au centre</td><td></td></tr>
+    <tr><td>2</td><td>Encore la case <b>5</b></td><td>« Coup impossible », et <b>c'est toujours au même joueur</b></td><td></td></tr>
+    <tr><td>3</td><td>La case <b>12</b></td><td>« Coup impossible », rien ne se pose</td><td></td></tr>
+    <tr><td>4</td><td>La case <b>0</b></td><td>« Coup impossible » — <b>et surtout rien dans la case 9</b></td><td></td></tr>
+    <tr><td>5</td><td>Trois X alignés sur la 1<sup>re</sup> ligne</td><td>La partie <b>s'arrête</b> et annonce le gagnant</td><td></td></tr>
+    <tr><td>6</td><td>Trois O alignés en <b>colonne</b></td><td>Pareil, le bon nom est annoncé</td><td></td></tr>
+    <tr><td>7</td><td>Trois alignés en <b>diagonale</b></td><td>Pareil</td><td></td></tr>
+    <tr><td>8</td><td>Une partie entière sans alignement</td><td>« MATCH NUL » après le 9<sup>e</sup> coup</td><td></td></tr>
+  </table>
+  <div style="margin-top:1.6mm"><b>Les scénarios qui ont raté :</b> ______________________________________</div>
+</div>
+
+<h2>Partie 2 — Les réparations <span>25 min</span></h2>
+<div class="ex">
+  Reprends chaque scénario raté, dans l'ordre. Les pannes les plus fréquentes, et où regarder :
+  <table>
+    <tr><th style="width:44%">Le symptôme</th><th>Où est presque toujours le problème</th></tr>
+    <tr><td>Le joueur change même quand le coup est refusé</td><td>L'échange des symboles est <b>hors</b> du <span class="mono">if</span> du coup valide</td></tr>
+    <tr><td>Le zéro passe encore</td><td>Il manque <span class="mono">case &gt;= 1 and</span> au début de la condition</td></tr>
+    <tr><td>La partie ne s'arrête pas sur une victoire</td><td>La boîte <span class="mono">gagnant</span> est recréée <b>dans</b> la boucle, ou le <span class="mono">and gagnant == ""</span> manque</td></tr>
+    <tr><td>Le gagnant s'appelle « 5 »</td><td>Le bloc des 8 <span class="mono">if</span> est placé <b>avant</b> la pose du symbole</td></tr>
+    <tr><td>Toujours match nul</td><td>Le bloc des 8 <span class="mono">if</span> est <b>après</b> la boucle, au lieu d'être dedans</td></tr>
+    <tr><td>La boucle ne s'arrête jamais</td><td><span class="mono">tour = tour + 1</span> oublié — <b>Ctrl + C</b> pour sortir</td></tr>
+  </table>
+  <div style="margin-top:1.6mm"><b>Quand les huit scénarios passent : Ctrl + S, et lève la main.</b>
+  C'est la validation du TP. Tu peux alors fignoler — et tu es qualifié pour le tournoi.</div>
+</div>
+
+<h2>Partie 3 — Les finitions <span>20 min · au choix</span></h2>
+<div class="ex">
+  Choisis-en <b>au moins une</b>. Elles ne changent pas les règles du jeu : elles le rendent agréable.
+  <table>
+    <tr><th style="width:7%">A</th><td><b>Le numéro du tour.</b> Avant chaque coup, affiche
+      <span class="mono">--- Tour 4 sur 9 ---</span></td><td class="ok">☐</td></tr>
+    <tr><th>B</th><td><b>L'écran de victoire.</b> Un cadre d'étoiles avec le nom du gagnant et le nombre
+      de coups qu'il lui a fallu</td><td class="ok">☐</td></tr>
+    <tr><th>C</th><td><b>Le compteur de bêtises.</b> Compte les coups impossibles et annonce-les à la fin</td><td class="ok">☐</td></tr>
+    <tr><th>D</th><td><b>Les symboles au choix.</b> Demande à chaque joueur son symbole
+      (⚡ et ☠, ou A et Z) au lieu de X et O. <i>Question : est-ce que la détection du gagnant marche
+      encore ? Pourquoi ?</i></td><td class="ok">☐</td></tr>
+  </table>
+</div>
+
+<div class="ex star"><b>⭐⭐ LA FINITION BONUS — qui commence ?</b><br>
+  Deux lignes nouvelles, données toutes faites : l'ordinateur tire au sort qui joue en premier.
+  <div class="code">import random
+
+if random.randint(1, 2) == 1:
+    print("Le sort a parle : " + joueur1 + " commence.")
+else:
+    print("Le sort a parle : " + joueur2 + " commence.")</div>
+  <span class="mono">import random</span> se met <b>tout en haut</b> du fichier.
+  <i>Et si tu veux vraiment que le deuxième joueur commence, il faudra aussi changer</i>
+  <span class="mono">symbole</span> <i>et</i> <span class="mono">joueur</span> <i>au départ. À toi.</i></div>
+
+<h2>Partie 4 — LE TOURNOI <span>35 min</span></h2>
+<div class="ex">
+  <b>Les règles</b>
+  <ul style="margin:1mm 0;padding-left:5mm">
+    <li>On joue <b>sur le programme d'un des deux joueurs</b>, tiré au sort par le professeur.</li>
+    <li><b>Si le programme plante ou triche pendant le match</b>, le match est rejoué sur l'autre
+      programme. Un jeu solide, ça compte.</li>
+    <li>Un match nul se rejoue, et c'est l'autre qui commence.</li>
+    <li><b>Celui qui perd devient arbitre</b> du match suivant : il vérifie que personne ne triche
+      et que le programme annonce le bon gagnant.</li>
+  </ul>
+  <div class="bracket">   1/4 de finale        1/2 finale         FINALE
+
+  ____________ ┐
+               ├─ ____________ ┐
+  ____________ ┘               │
+                               ├─ ____________
+  ____________ ┐               │
+               ├─ ____________ ┘
+  ____________ ┘
+</div>
+  <div style="margin-top:1.6mm">🏆 <b>Champion du Coding Camp :</b> ______________________________</div>
+</div>
+
+<h2>Bilan des deux mois — à remplir avant de partir <span>10 min</span></h2>
+<table>
+  <tr><th style="width:60%">Ce que je sais faire maintenant</th><th style="width:20%">Tout seul</th><th>Pas encore sûr</th></tr>
+  <tr><td style="height:5.8mm">Ranger neuf cases dans une <b>liste</b> et en changer une</td><td></td><td></td></tr>
+  <tr><td style="height:5.8mm">Expliquer pourquoi la case 1 est à l'indice 0</td><td></td><td></td></tr>
+  <tr><td style="height:5.8mm">Écrire une condition avec <span class="mono">and</span> et <span class="mono">or</span></td><td></td><td></td></tr>
+  <tr><td style="height:5.8mm">Écrire une boucle <span class="mono">while</span> qui s'arrête</td><td></td><td></td></tr>
+  <tr><td style="height:5.8mm">Faire alterner deux joueurs</td><td></td><td></td></tr>
+  <tr><td style="height:5.8mm">Trouver un bug en lisant le message rouge</td><td></td><td></td></tr>
+  <tr><td style="height:5.8mm">Tester mon programme <b>avant</b> de dire qu'il marche</td><td></td><td></td></tr>
+</table>
+
+<div class="fin" style="margin-top:3mm">
+  <b>Deux questions, et c'est fini.</b><br>
+  1. De quoi es-tu le plus fier, dans ton jeu ? <span style="border-bottom:.3mm dotted #666;display:inline-block;min-width:105mm">&nbsp;</span><br>
+  2. Qu'est-ce que tu aimerais que ton jeu sache faire, et qu'il ne sait pas encore ?
+  <span style="border-bottom:.3mm dotted #666;display:inline-block;min-width:85mm">&nbsp;</span><br>
+  <i>La réponse 2 décidera du programme de décembre. Écris vraiment ce que tu penses.</i>
+</div>
+</body></html>

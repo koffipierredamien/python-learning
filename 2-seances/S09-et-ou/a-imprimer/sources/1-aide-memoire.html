@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Aide-mémoire — UNE SEULE QUESTION AU LIEU DE TROIS</title>
+<style>
+  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+  @page{size:A4 portrait;margin:7mm 9mm}
+  body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:9.3pt;color:#14142b}
+  .consigne{font-size:8.3pt;color:#333;border:1px dashed #999;padding:1.8mm;margin-bottom:2.4mm}
+  h1{font-size:15.5pt;margin:0 0 .8mm;text-align:center}
+  .sur{text-align:center;font-size:9pt;color:#555;margin-bottom:2mm}
+  h2{font-size:10.4pt;background:#1a1a2e;color:#fff;padding:1mm 3mm;margin:2.6mm 0 1.2mm;border-radius:1.5mm}
+  h2.o{background:#e07b1a} h2.v{background:#2e9e52} h2.p{background:#6b2d8f}
+  .cle{background:#fff6d8;border:.7mm solid #d79a00;border-radius:2mm;padding:1.8mm;font-size:9.6pt;
+       text-align:center;margin:1.4mm 0}
+  .code{font-family:"Courier New",monospace;font-size:9.6pt;background:#12122a;color:#4fc3f7;
+        padding:1.8mm 2.6mm;border-radius:1.5mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+  .code i{color:#ffb74d;font-style:normal}
+  .code b{color:#ff8a80;font-weight:normal}
+  .duo{display:flex;gap:3mm;margin-top:1.2mm}
+  .duo > div{flex:1;border:.5mm solid #1a1a2e;border-radius:2mm;padding:1.8mm;font-size:8.8pt;line-height:1.34}
+  .duo b.t{display:block;font-size:10pt;margin-bottom:.8mm}
+  table{width:100%;border-collapse:collapse;margin-top:1.1mm}
+  td,th{border:1px solid #666;padding:.9mm 1.5mm;font-size:8.3pt;vertical-align:top;text-align:left}
+  th{background:#eee}
+  .mono{font-family:"Courier New",monospace;font-weight:bold}
+  .fait{background:#eaf7ef;border:.5mm solid #2fb765;border-radius:2mm;padding:1.8mm 2.4mm;font-size:8.8pt;line-height:1.45}
+  .fait b{color:#0c5c29}
+  .fait .ok{color:#2e9e52;font-weight:bold}
+  @media print{.consigne{display:none}}
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 1 par poste, A4 recto. Posé à côté du clavier.</div>
+<h1>🔗 UNE SEULE QUESTION AU LIEU DE TROIS</h1>
+<div class="sur">Séance 9 — samedi 7 novembre 2026</div>
+
+<h2>1 · Les deux mots du jour</h2>
+<div class="duo">
+  <div><b class="t">and &nbsp;— il faut TOUT</b>
+    <div class="code" style="font-size:9pt">True  and True   → True
+True  and False  → False
+False and True   → False
+False and False  → False</div>
+    « Mon cahier <b>ET</b> mon stylo. »</div>
+  <div><b class="t">or &nbsp;— il suffit d'UN</b>
+    <div class="code" style="font-size:9pt">True  or False  → True
+False or True   → True
+True  or True    → True
+False or False  → False</div>
+    « Fini l'exercice <b>OU</b> aidé un voisin. »</div>
+</div>
+
+<h2 class="p">2 · Le coup valide, en une seule ligne</h2>
+<div class="code">if case &gt;= 1 and case &lt;= 9 and plateau[case - 1] == str(case):
+<b>····</b>plateau[case - 1] = "X"
+else:
+<b>····</b>print("Coup impossible.")</div>
+<div class="cle">Trois questions, <b>un seul</b> <span class="mono">if</span>, <b>un seul</b> niveau de
+décalage. Le <span class="mono">if</span> dans le <span class="mono">if</span> a disparu.</div>
+
+<h2>3 · Ce que chaque morceau vérifie</h2>
+<table>
+  <tr><th style="width:38%">Le morceau</th><th>La question qu'il pose</th></tr>
+  <tr><td class="mono">case &gt;= 1</td><td>la case n'est pas 0 ou négative — <b>c'est le bug réparé</b></td></tr>
+  <tr><td class="mono">case &lt;= 9</td><td>la case n'est pas 12, ni 50</td></tr>
+  <tr><td class="mono">plateau[case-1] == str(case)</td><td>la case est encore libre</td></tr>
+</table>
+<div class="cle" style="margin-top:1.4mm">Les trois sont reliées par <b>and</b> : il faut que
+<b>les trois</b> soient vraies pour que le coup passe.</div>
+<h2 class="o">Si l'écran devient rouge</h2>
+<table>
+  <tr><th style="width:23%">Ce qui s'affiche</th><th style="width:35%">Ce que ça veut dire</th><th>Ce que je fais</th></tr>
+  <tr><td class="mono">SyntaxError</td><td><span class='mono'>and</span> oublié entre deux conditions</td><td>Relis ta ligne à voix haute : est-ce que ça se dit ?</td></tr>
+  <tr><td class="mono">NameError</td><td><span class='mono'>AND</span> ou <span class='mono'>ET</span></td><td>En minuscules, et en anglais : <span class='mono'>and</span>, <span class='mono'>or</span></td></tr>
+  <tr><td class="mono"><i>tout est refusé</i></td><td><span class='mono'>&gt;=</span> et <span class='mono'>&lt;=</span> inversés</td><td>Tu demandes une case plus petite que 1 ?</td></tr>
+  <tr><td class="mono"><i>le 0 repasse</i></td><td>Le <span class='mono'>case &gt;= 1</span> manque</td><td>Trois questions, pas deux</td></tr>
+</table>
+<h2 class="v">Ce que ton jeu sait faire</h2>
+<div class="fait"><b>Depuis le premier samedi, tu sais :</b><br><span class="ok">✔</span> afficher du texte et des phrases fabriquées avec le <span class="mono">+</span> &nbsp;·&nbsp; <span class="ok">✔</span> poser des questions au joueur et garder ses réponses &nbsp;·&nbsp; <span class="ok">✔</span> passer du texte au nombre et retour (<span class="mono">int()</span>, <span class="mono">str()</span>) &nbsp;·&nbsp; <span class="ok">✔</span> compter (<span class="mono">tour = tour + 1</span>) &nbsp;·&nbsp; <span class="ok">✔</span> décider avec <span class="mono">if</span> / <span class="mono">else</span> &nbsp;·&nbsp; <span class="ok">✔</span> garder neuf cases dans une <b>liste</b>, et poser un symbole qui reste &nbsp;·&nbsp; <span class="ok">✔</span> refuser une case déjà prise ou impossible — <b>en une seule ligne</b></div>
+</body></html>

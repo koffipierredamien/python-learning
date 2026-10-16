@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>TP n°2 — corrigé de l'enseignant</title>
+<style>
+  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+  @page{size:A4 portrait;margin:9mm 10mm}
+  body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:9.5pt;color:#14142b}
+  .ent{background:#0c5c29;color:#fff;border-radius:2.6mm;padding:3.2mm 4.4mm;margin-bottom:3mm}
+  .ent .k{font-size:8.4pt;letter-spacing:1.1pt;color:#a8e6bd;font-weight:bold}
+  .ent h1{font-size:18pt;margin:1mm 0 1mm}
+  .ent .s{font-size:9.4pt;color:#d8f0e2;line-height:1.4}
+  h2{font-size:11.5pt;background:#14142b;color:#fff;padding:1.3mm 3mm;margin:3.4mm 0 1.8mm;border-radius:1.6mm}
+  h3{font-size:10pt;margin:2.6mm 0 1mm;color:#6b2d8f}
+  pre{margin:1mm 0;background:#12122a;color:#e8e8f2;border-radius:2mm;padding:2.4mm 3.2mm;
+      font-family:"Courier New",monospace;font-size:8.4pt;line-height:1.32;white-space:pre-wrap}
+  pre .c{color:#7f7f9c} pre .s{color:#ffb74d} pre .k{color:#4fc3f7;font-weight:bold}
+  table{width:100%;border-collapse:collapse;margin-top:1.2mm}
+  td,th{border:.25mm solid #888;padding:1mm 1.5mm;font-size:8.6pt;text-align:left;vertical-align:top}
+  th{background:#eee}
+  .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;padding:.3mm 1mm;border-radius:1mm}
+  .enc{background:#fffaf0;border:.5mm solid #d79a00;border-radius:2mm;padding:2.4mm 3.2mm;margin:2.4mm 0;line-height:1.42}
+  .enc b{color:#a65d00}
+  ul{margin:1mm 0;padding-left:5mm}li{margin-bottom:1mm;line-height:1.38}
+</style></head><body>
+
+<div class="ent">
+  <div class="k">POUR L'ENSEIGNANT — NE PAS DISTRIBUER</div>
+  <h1>✅ TP n°2 — corrigé et conduite de séance</h1>
+  <div class="s">Jeremiah Geeks · samedi 31 octobre 2026 · 12 h – 14 h.
+  Le code complet est aussi dans <b style="color:#fff">code/corrige-tp2.py</b>, et il tourne.</div>
+</div>
+
+<h2>Comment tenir la salle pendant deux heures</h2>
+<ul>
+  <li><b>Un tour complet de la salle toutes les 10 minutes</b>, même si personne ne demande rien. C'est
+    là qu'on repère celui qui n'a rien écrit depuis un quart d'heure et qui n'ose pas le dire.</li>
+  <li><b>Devant une erreur, on ne corrige pas :</b> on lit le message avec l'élève et on demande
+    « qu'est-ce qu'il te dit ? ». <b>On ne touche jamais son clavier.</b></li>
+  <li><b>Bloqué plus de 5 minutes ?</b> On lui fait sauter l'exercice, et on y revient à la fin.</li>
+  <li><b>Celui qui a fini la partie 4</b> lève la main, on valide, et on l'envoie aux ⭐. S'il a tout
+    fini, il devient <b>Geek Mentor</b> : il aide deux voisins <b>sans toucher à leur clavier</b>.</li>
+  <li><b>À 13 h 50 tout le monde s'arrête</b>, sauvegarde, et remplit le bilan de la dernière page.</li>
+</ul>
+
+<div class="enc">
+  <b>Le seul objectif non négociable :</b> que chaque élève ait terminé la <b>partie 4</b> — le jeu à
+  quatre coups qui refuse les cases prises. Les parties 1 à 3 sont l'échauffement, la partie 5 est un
+  bonus utile. <b>Si quelqu'un est lent, faites-lui sauter la partie 3</b> et passez au projet : il la
+  retravaillera dedans de toute façon.
+</div>
+
+<h3>Repères de temps</h3>
+<table>
+  <tr><th style="width:14%">Heure</th><th style="width:43%">Où devrait en être la classe</th><th>Si on est en retard</th></tr>
+  <tr><td>12 h 15</td><td>Partie 0 finie, fichier créé</td><td>C'est un problème de machine, pas de code : aider individuellement</td></tr>
+  <tr><td>12 h 40</td><td>Partie 1 finie</td><td>Passer à la partie 2 : l'échauffement a fait son travail</td></tr>
+  <tr><td>13 h 00</td><td>Partie 2 finie — <b>la table case/indice est comprise</b></td><td><b>Ne pas sauter cette partie.</b> Plutôt sauter la partie 3</td></tr>
+  <tr><td>13 h 15</td><td>Partie 3 finie, on ouvre <span class="mono">tp2_xo.py</span></td><td>—</td></tr>
+  <tr><td>13 h 50</td><td>Partie 4 validée pour tout le monde</td><td>On valide ce qui est fait, on sauvegarde, on distribue le code officiel</td></tr>
+</table>
+
+<h2>Corrigé — parties 1 et 2 : listes et indices</h2>
+<pre><span class="k">equipe</span> = ["Joyce", "Gedeon", "Sarah", "Ethan"]
+print(equipe)            <span class="c"># la liste entiere, crochets compris</span>
+print(equipe[0])         <span class="c"># Joyce  -- le PREMIER porte le numero 0</span>
+print(equipe[3])         <span class="c"># Ethan  -- le dernier d'une liste de 4</span>
+equipe[1] = "Isaac"      <span class="c"># on remplace, comme dans une boite</span>
+
+<span class="c"># 1.4  print(equipe[4])  ->  IndexError: list index out of range</span>
+
+cases = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+cases[0] = "X"           <span class="c"># case 1</span>
+cases[4] = "O"           <span class="c"># case 5</span>
+cases[8] = "X"           <span class="c"># case 9</span>
+
+case = 3
+cases[case - 1] = "O"    <span class="c"># LA formule : indice = case - 1</span></pre>
+
+<div class="enc">
+  <b>La partie 2 est le cœur du TP.</b> Un élève qui n'a pas compris <span class="mono">case - 1</span>
+  ne fera jamais marcher le projet. <b>Le test en 10 secondes, à faire à chacun en circulant :</b>
+  pointez une case du plateau au hasard et demandez <i>« celle-là, c'est quel indice ? »</i>.
+  S'il hésite, faites-lui écrire les deux rangées de chiffres sur son cahier, l'une sous l'autre.
+  Ça coûte deux minutes et ça sauve la séance.
+</div>
+
+<h2>Corrigé — partie 3 : le plateau qui vit</h2>
+<pre>plateau = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+print(" " + plateau[0] + " | " + plateau[1] + " | " + plateau[2])
+print("---+---+---")
+print(" " + plateau[3] + " | " + plateau[4] + " | " + plateau[5])
+print("---+---+---")
+print(" " + plateau[6] + " | " + plateau[7] + " | " + plateau[8])
+
+case = input("Quelle case ? ")
+case = int(case)
+plateau[case - 1] = "X"
+
+<span class="c"># ... puis on RECOPIE les cinq lignes d'affichage</span></pre>
+<b>L'erreur n°1 de cette partie :</b> l'élève recopie l'affichage <b>avant</b> la pose, et conclut que
+« ça ne marche pas ». Faites-lui lire son programme <b>de haut en bas, avec le doigt</b>.
+
+<h2>Corrigé — partie 4 : le projet</h2>
+<pre>plateau = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+tour = 0
+
+<span class="c"># --- un coup (a recopier quatre fois, en changeant joueur et symbole)</span>
+case = <span class="k">int</span>(input(joueur1 + " (X), quelle case ? "))
+
+<span class="k">if</span> case &gt; 9:
+    print("Cette case n'existe pas !")
+<span class="k">else</span>:
+    <span class="k">if</span> plateau[case - 1] == <span class="k">str</span>(case):
+        plateau[case - 1] = "X"
+        tour = tour + 1
+    <span class="k">else</span>:
+        print("Case deja prise !")
+
+<span class="c"># --- a la fin</span>
+print("Coups reellement joues : " + <span class="k">str</span>(tour) + " sur 4.")
+print("Cases encore libres : " + <span class="k">str</span>(9 - tour))</pre>
+
+<h3>Les trois erreurs les plus probables dans la partie 4</h3>
+<table>
+  <tr><th style="width:38%">Ce qu'on verra</th><th>Ce qu'on dit</th></tr>
+  <tr><td><span class="mono">tour = tour + 1</span> hors du <span class="mono">if</span></td>
+      <td>« Joue deux fois la même case, et regarde ton compteur. Il compte quoi, au juste ? »</td></tr>
+  <tr><td>Le symbole écrit en dur : toujours des X</td>
+      <td>« C'est au tour de qui, là ? Et qu'est-ce que ton programme pose ? »</td></tr>
+  <tr><td>Un seul affichage, au début</td>
+      <td>« Tu l'as vu changer, ton plateau ? Non. Quand est-ce qu'il faudrait le redessiner ? »</td></tr>
+</table>
+
+<h2>Corrigé — partie 5 : la chasse aux bugs</h2>
+<table>
+  <tr><th style="width:5%">#</th><th style="width:40%">Ce qui ne va pas</th><th>La correction</th></tr>
+  <tr><td>1</td><td><span class="mono">IndexError</span> : une liste de 9 va de <b>0 à 8</b></td><td><span class="mono">plateau[8] = "X"</span></td></tr>
+  <tr><td>2</td><td>Le <span class="mono">- 1</span> manque : le X se pose sur la case suivante</td><td><span class="mono">plateau[case - 1] = "X"</span></td></tr>
+  <tr><td>3</td><td>Ce n'est pas une liste : les crochets manquent</td><td><span class="mono">plateau = ["1", "2", "3"]</span></td></tr>
+  <tr><td>4</td><td><span class="mono">TypeError</span> : <span class="mono">case</span> est du texte</td><td>ajouter <span class="mono">case = int(case)</span></td></tr>
+  <tr><td>5</td><td><span class="mono">SyntaxError</span> : un seul <span class="mono">=</span> range, il en faut <b>deux</b> pour comparer</td><td><span class="mono">if plateau[case - 1] == str(case):</span></td></tr>
+</table>
+<b>Ce qu'on cherche ici</b>, ce n'est pas la correction — ils la trouvent vite — c'est qu'ils sachent
+<b>dire ce que le message raconte</b>. Demandez à voix haute : « il dit quoi, exactement ? »
+
+<h2>À noter le soir même</h2>
+<ul>
+  <li><b>Classeur :</b> présence <span class="mono">S08</span>, et dans <span class="mono">Suivi</span>,
+    qui a validé la partie 4.</li>
+  <li><b>Journal :</b> <b>combien ont compris <span class="mono">case - 1</span> sans aide.</b> C'est la
+    mesure du TP, et elle décide du rythme de la séance 9.</li>
+  <li><b>Les feuilles restent aux élèves</b> — mais lisez le bilan avant qu'ils partent.</li>
+</ul>
+</body></html>

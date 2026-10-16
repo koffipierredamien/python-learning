@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>TP n°2 — Le plateau vivant</title>
+<style>
+  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+  @page{size:A4 portrait;margin:9mm 10mm}
+  body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:9.6pt;color:#14142b}
+  .ent{background:#12122a;color:#fff;border-radius:2.6mm;padding:3.4mm 4.4mm;margin-bottom:3mm}
+  .ent .k{font-size:8.4pt;letter-spacing:1.1pt;color:#ffb74d;font-weight:bold}
+  .ent h1{font-size:19pt;margin:1.2mm 0 1.2mm}
+  .ent .s{font-size:9.6pt;color:#a8a8c0;line-height:1.4}
+  .ident{display:flex;gap:3mm;font-size:9pt;margin-bottom:3mm}
+  .ident div{flex:1;border:.4mm solid #999;border-radius:1.5mm;padding:1.4mm}
+  .regles{background:#f3f3f8;border-left:2.6mm solid #6b2d8f;padding:2mm 3mm;font-size:8.8pt;margin-bottom:3mm;line-height:1.38}
+  .regles b{color:#6b2d8f}
+  h2{font-size:12pt;background:#14142b;color:#fff;padding:1.4mm 3mm;margin:4mm 0 2mm;border-radius:1.6mm;
+     display:flex;justify-content:space-between}
+  h2 span{font-weight:normal;font-size:9.4pt;color:#ffb74d}
+  h3{font-size:10.4pt;margin:3mm 0 1.2mm;color:#6b2d8f}
+  .ex{border:.4mm solid #c9c9d6;border-radius:2mm;padding:2.2mm 2.8mm;margin-bottom:2.2mm;line-height:1.4}
+  .ex b.t{color:#14142b}
+  .code{font-family:"Courier New",monospace;font-size:9.2pt;background:#12122a;color:#4fc3f7;
+        padding:1.8mm 2.6mm;border-radius:1.5mm;white-space:pre;line-height:1.34;margin:1.2mm 0}
+  .code i{color:#ffb74d;font-style:normal}
+  .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;padding:.3mm 1mm;border-radius:1mm}
+  .case{display:inline-block;width:4mm;height:4mm;border:.4mm solid #1a1a2e;border-radius:.8mm;
+        vertical-align:-.8mm;margin-right:1.4mm}
+  .star{background:#fff6d8;border:.5mm solid #d79a00}
+  .ecris{border-bottom:.3mm dotted #666;display:inline-block;min-width:50mm}
+  table{width:100%;border-collapse:collapse;margin-top:1.2mm}
+  td,th{border:.25mm solid #888;padding:1mm 1.5mm;font-size:8.6pt;text-align:left}
+  th{background:#eee}
+  .saut{page-break-before:always}
+  @media print{.consigne{display:none}}
+</style></head><body>
+
+<div class="ent">
+  <div class="k">JEREMIAH GEEKS · SAMEDI 31 OCTOBRE 2026 · 12 h – 14 h · SEUL, SUR TON POSTE</div>
+  <h1>🛠️ TP n°2 — Le plateau vivant</h1>
+  <div class="s">Samedi dernier, ton jeu a appris à <b style="color:#fff">se souvenir</b> : le symbole reste
+  sur le plateau, et le jeu refuse une case déjà prise. Aujourd'hui, <b style="color:#fff">tu travailles
+  seul pendant deux heures</b> pour que ça devienne solide. À la fin, ton jeu enchaînera quatre coups
+  sans tricher.</div>
+</div>
+
+<div class="ident">
+  <div><b>Ton nom :</b></div>
+  <div><b>Ton fichier :</b> <span class="mono">tp2_tonprenom.py</span></div>
+  <div><b>Fini à :</b> ____ h ____</div>
+</div>
+
+<div class="regles">
+  <b>Comment travailler aujourd'hui.</b> Tu avances seul, à ton rythme. Le professeur passe
+  régulièrement : <b>il ne fera pas à ta place</b>, il te fera lire ton erreur.
+  Tu coches chaque exercice réussi. Tu relances (<b>F5</b>) après chaque changement, et tu sauvegardes
+  (<b>Ctrl + S</b>) après chaque partie.
+  <b>Bloqué ?</b> 1) je relis la consigne · 2) je lis le message rouge et je cherche la ligne ·
+  3) je regarde le tableau des erreurs, dernière page. <b>Après 5 minutes, je passe à la suite</b> et
+  j'y reviendrai.
+  Les encadrés jaunes <b>⭐ ALLEZ PLUS LOIN</b> sont <b>facultatifs</b>.
+</div>
+
+<h2>Partie 0 — Mise en route <span>5 min</span></h2>
+<div class="ex">
+  Ouvre <b>Thonny</b> → Fichier → Nouveau → Enregistrer sous <span class="mono">tp2_tonprenom.py</span>
+  dans <span class="mono">GEEKS / mon_xo</span>. Écris cette ligne et lance :
+  <div class="code">print("TP2 - Mehdi")</div>
+  <span class="case"></span> <b>C'est réussi quand</b> ton prénom s'affiche en bas.
+</div>
+
+<h2>Partie 1 — Échauffement : les listes <span>20 min</span></h2>
+<div class="ex"><b class="t">1.1 — ta liste</b><br>
+  Crée une liste <span class="mono">equipe</span> avec <b>quatre prénoms</b> de la classe, puis affiche-la
+  en entier avec <span class="mono">print(equipe)</span>.
+  <span class="case" style="margin-left:2mm"></span></div>
+<div class="ex"><b class="t">1.2 — un seul élément</b><br>
+  Affiche <b>le premier</b> prénom, puis <b>le dernier</b>. Attention : le premier porte le numéro
+  <b>0</b>, pas 1.
+  <div class="code">print(equipe[0])     <i>← le premier</i></div>
+  <span class="case"></span> Écris ici le numéro du <b>dernier</b> : <span class="ecris" style="min-width:20mm">&nbsp;</span></div>
+<div class="ex"><b class="t">1.3 — changer un élément</b><br>
+  Remplace le deuxième prénom par un autre, puis réaffiche la liste entière. Le changement doit se voir.
+  <span class="case" style="margin-left:2mm"></span></div>
+<div class="ex"><b class="t">1.4 — l'erreur, exprès</b><br>
+  Essaie <span class="mono">print(equipe[4])</span>. Lis le message rouge.
+  <div style="margin-top:1mm">Nom de l'erreur : <span class="ecris" style="min-width:45mm">&nbsp;</span><br>
+  Ce qu'elle veut dire, avec tes mots : <span class="ecris" style="min-width:110mm">&nbsp;</span></div>
+  <span class="case"></span></div>
+
+<div class="ex star"><b class="t">⭐ ALLEZ PLUS LOIN 1</b><br>
+  Une liste peut contenir des nombres, pas seulement du texte :
+  <div class="code">scores = [10, 25, 7]
+print(scores[0] + scores[1])</div>
+  Essaie. Puis fabrique une liste de trois scores, et affiche <b>leur total</b>.</div>
+
+<h2>Partie 2 — L'indice : la case et son numéro <span>20 min</span></h2>
+<div class="ex">
+  <b>Le point le plus important de la journée.</b> Le joueur parle en <b>cases</b> (de 1 à 9), Python
+  compte en <b>indices</b> (de 0 à 8).
+  <table>
+    <tr><th style="width:26%">La case du joueur</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+    <tr><th>L'indice Python</th><td>0</td><td>1</td><td>2</td><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+  </table>
+  <span class="case" style="margin-top:1.4mm;display:inline-block"></span> <b>Complète la deuxième ligne au crayon</b>, puis écris la formule :
+  indice = <span class="ecris" style="min-width:35mm">&nbsp;</span></div>
+<div class="ex"><b class="t">2.1 — poser à la main</b><br>
+  Crée <span class="mono">cases = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]</span>, puis, <b>sans
+  utiliser de formule</b>, mets un <span class="mono">"X"</span> dans la case 1, un
+  <span class="mono">"O"</span> dans la case 5 et un <span class="mono">"X"</span> dans la case 9.
+  Affiche la liste pour vérifier.
+  <span class="case" style="margin-left:2mm"></span></div>
+<div class="ex"><b class="t">2.2 — poser avec la formule</b><br>
+  Maintenant, range <span class="mono">3</span> dans une boîte <span class="mono">case</span> et pose un
+  <span class="mono">"O"</span> en utilisant <span class="mono">case - 1</span>. Vérifie que le O est
+  bien sur la <b>troisième</b> case.
+  <span class="case" style="margin-left:2mm"></span></div>
+
+<div class="ex star"><b class="t">⭐ ALLEZ PLUS LOIN 2</b><br>
+  Que se passe-t-il avec <span class="mono">cases[-1]</span> ? Essaie, observe, et écris ce que tu
+  comprends. <i>(C'est la cause d'un vrai bug de notre jeu : celui du zéro.)</i></div>
+
+
+
+<h2>Partie 3 — Le plateau qui vit <span>25 min</span></h2>
+<div class="ex"><b class="t">3.1 — dessiner à partir de la liste</b><br>
+  Reprends <span class="mono">plateau</span> (les neuf numéros) et écris les <b>cinq lignes</b> qui
+  dessinent la grille à partir de la liste :
+  <div class="code">print(" " + plateau[0] + " | " + plateau[1] + " | " + plateau[2])
+print("---+---+---")
+<i>… à toi pour les trois lignes suivantes</i></div>
+  <span class="case"></span> <b>C'est réussi quand</b> la grille affiche 1 à 9, bien alignée.</div>
+<div class="ex"><b class="t">3.2 — le plateau change</b><br>
+  Sous ton affichage, écris <span class="mono">plateau[4] = "X"</span>, puis <b>recopie les cinq lignes
+  d'affichage</b>. Lance : la grille doit s'afficher <b>deux fois</b>, et la deuxième a un X au centre.
+  <span class="case" style="margin-left:2mm"></span></div>
+<div class="ex"><b class="t">3.3 — le joueur choisit</b><br>
+  Remplace le <span class="mono">4</span> écrit en dur par une case <b>demandée au joueur</b> :
+  trois lignes (demander, transformer en nombre, poser avec <span class="mono">case - 1</span>).
+  <span class="case" style="margin-left:2mm"></span></div>
+
+<div class="ex star"><b class="t">⭐ ALLEZ PLUS LOIN 3</b><br>
+  Demande aussi au joueur <b>quel symbole</b> il veut poser (par exemple <span class="mono">*</span> ou
+  <span class="mono">#</span>), et pose celui-là au lieu de <span class="mono">"X"</span>.</div>
+
+<h2>Partie 4 — LE PROJET : quatre coups, sans triche <span>35 min</span></h2>
+<div class="ex">
+  <b>C'est la partie qui compte.</b> Nouveau fichier : <span class="mono">tp2_xo.py</span>.
+  Ton programme doit enchaîner <b>quatre coups</b> — X, O, X, O — et <b>refuser</b> une case déjà prise
+  ou un numéro impossible. Voici exactement ce qu'on doit voir (en gras, ce que tape le joueur) :
+  <div class="code">Joueur 1, ton nom ? <i>Joyce</i>
+Joueur 2, ton nom ? <i>Gedeon</i>
+
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+Joyce (X), quelle case ? <i>5</i>
+
+ 1 | 2 | 3
+---+---+---
+ 4 | X | 6
+---+---+---
+ 7 | 8 | 9
+Gedeon (O), quelle case ? <i>5</i>
+Case deja prise !
+<i>… et ainsi de suite jusqu'au 4e coup</i>
+
+Coups reellement joues : 3 sur 4.
+Cases encore libres : 6</div>
+  <b>Les cinq étapes :</b>
+  <table>
+    <tr><th style="width:7%">1</th><td>L'accueil, les deux noms, la liste <span class="mono">plateau</span>, et un compteur <span class="mono">tour = 0</span></td></tr>
+    <tr><th>2</th><td>Afficher le plateau, puis demander sa case au joueur 1 et la transformer en nombre</td></tr>
+    <tr><th>3</th><td>Le <b><span class="mono">if</span> dans le <span class="mono">if</span></b> : si la case n'existe pas → refus ; sinon, si elle est libre → on pose et <span class="mono">tour = tour + 1</span> ; sinon → « Case deja prise ! »</td></tr>
+    <tr><th>4</th><td><b>Recopier</b> les étapes 2 et 3 trois fois : joueur 2 (O), joueur 1 (X), joueur 2 (O)</td></tr>
+    <tr><th>5</th><td>À la fin : le plateau une dernière fois, les coups réellement joués, et les cases libres</td></tr>
+  </table>
+  <span class="case" style="margin-top:1.4mm;display:inline-block"></span> <b>Quand ça marche : Ctrl + S, et lève la main.</b> Le professeur vient voir ton écran — c'est la validation de la séance.</div>
+
+<div class="ex star"><b class="t">⭐ ALLEZ PLUS LOIN 4 — trois défis</b>
+  <ul style="margin:1mm 0 0;padding-left:5mm">
+    <li><b>Le cinquième coup.</b> Ajoute un tour de plus. Combien de lignes as-tu dû recopier ?</li>
+    <li><b>Le compteur de refus.</b> Une deuxième boîte qui compte les coups impossibles, affichée à la fin.</li>
+    <li><b>Le plateau au départ.</b> Essaie de démarrer avec neuf espaces <span class="mono">" "</span>
+      au lieu des numéros. Qu'est-ce qui ne marche plus ? <b>Écris pourquoi</b> — c'est une vraie question
+      d'informaticien.</li>
+  </ul></div>
+
+<h2>Partie 5 — La chasse aux bugs <span>15 min</span></h2>
+<div class="ex">
+  Cinq programmes cassés. Pour chacun : <b>écris ce qui ne va pas</b>, puis corrige dans Thonny.
+  <table>
+    <tr><th style="width:5%">#</th><th style="width:45%">Le code cassé</th><th>Ce qui ne va pas</th></tr>
+    <tr><td>1</td><td><span class="mono">plateau[9] = "X"</span></td><td style="height:8mm"></td></tr>
+    <tr><td>2</td><td><span class="mono">case = 3</span><br><span class="mono">plateau[case] = "X"</span></td><td></td></tr>
+    <tr><td>3</td><td><span class="mono">plateau = "1", "2", "3"</span></td><td style="height:8mm"></td></tr>
+    <tr><td>4</td><td><span class="mono">case = input("Case ? ")</span><br><span class="mono">plateau[case - 1] = "X"</span></td><td></td></tr>
+    <tr><td>5</td><td><span class="mono">if plateau[case - 1] = str(case):</span></td><td style="height:8mm"></td></tr>
+  </table></div>
+
+<h2>Bilan — à remplir avant de partir <span>5 min</span></h2>
+<table>
+  <tr><th style="width:60%">Ce que je sais faire maintenant</th><th style="width:20%">Tout seul</th><th>Pas encore sûr</th></tr>
+  <tr><td style="height:6.5mm">Créer une liste et afficher un seul élément</td><td></td><td></td></tr>
+  <tr><td style="height:6.5mm">Dire pourquoi la case 1 est à l'indice 0</td><td></td><td></td></tr>
+  <tr><td style="height:6.5mm">Poser un symbole avec <span class="mono">plateau[case - 1]</span></td><td></td><td></td></tr>
+  <tr><td style="height:6.5mm">Dessiner le plateau à partir de la liste</td><td></td><td></td></tr>
+  <tr><td style="height:6.5mm">Écrire un <span class="mono">if</span> dans un <span class="mono">if</span></td><td></td><td></td></tr>
+  <tr><td style="height:6.5mm">Reconnaître une <span class="mono">IndexError</span></td><td></td><td></td></tr>
+</table>
+
+<h3>Si ça ne marche pas — le tableau des erreurs</h3>
+<table>
+  <tr><th style="width:24%">Ce qui s'affiche</th><th style="width:34%">Ce que ça veut dire</th><th>Ce que je fais</th></tr>
+  <tr><td class="mono">IndexError</td><td>« Cette case n'existe pas dans la liste »</td><td>Une liste de 9 va de <b>0 à 8</b>. Je vérifie mon <span class="mono">- 1</span></td></tr>
+  <tr><td class="mono">TypeError</td><td>Je mélange du texte et un nombre</td><td><span class="mono">int()</span> pour calculer, <span class="mono">str()</span> pour coller</td></tr>
+  <tr><td class="mono">SyntaxError</td><td>« Je ne comprends pas ta phrase »</td><td>Guillemets, parenthèses, deux-points. Et <span class="mono">==</span>, pas <span class="mono">=</span></td></tr>
+  <tr><td class="mono">IndentationError</td><td>« Il faut décaler après les deux-points »</td><td>4 espaces. 8 pour le <span class="mono">if</span> dans le <span class="mono">if</span></td></tr>
+  <tr><td>Le symbole se pose à côté</td><td>J'ai oublié le <span class="mono">- 1</span></td><td><span class="mono">plateau[case - 1]</span>, toujours</td></tr>
+  <tr><td>Le plateau ne change pas</td><td>J'affiche <b>avant</b> de poser</td><td>Je recopie l'affichage <b>après</b> la pose</td></tr>
+</table>
+</body></html>

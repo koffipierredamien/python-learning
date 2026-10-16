@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Aide-mémoire — ON NE JOUE PAS DEUX FOIS AU MÊME ENDROIT</title>
+<style>
+  html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+  @page{size:A4 portrait;margin:7mm 9mm}
+  body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;font-size:9.3pt;color:#14142b}
+  .consigne{font-size:8.3pt;color:#333;border:1px dashed #999;padding:1.8mm;margin-bottom:2.4mm}
+  h1{font-size:15.5pt;margin:0 0 .8mm;text-align:center}
+  .sur{text-align:center;font-size:9pt;color:#555;margin-bottom:2mm}
+  h2{font-size:10.4pt;background:#1a1a2e;color:#fff;padding:1mm 3mm;margin:2.6mm 0 1.2mm;border-radius:1.5mm}
+  h2.o{background:#e07b1a} h2.v{background:#2e9e52} h2.p{background:#6b2d8f}
+  .cle{background:#fff6d8;border:.7mm solid #d79a00;border-radius:2mm;padding:1.8mm;font-size:9.6pt;
+       text-align:center;margin:1.4mm 0}
+  .code{font-family:"Courier New",monospace;font-size:9.6pt;background:#12122a;color:#4fc3f7;
+        padding:1.8mm 2.6mm;border-radius:1.5mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+  .code i{color:#ffb74d;font-style:normal}
+  .code b{color:#ff8a80;font-weight:normal}
+  .duo{display:flex;gap:3mm;margin-top:1.2mm}
+  .duo > div{flex:1;border:.5mm solid #1a1a2e;border-radius:2mm;padding:1.8mm;font-size:8.8pt;line-height:1.34}
+  .duo b.t{display:block;font-size:10pt;margin-bottom:.8mm}
+  table{width:100%;border-collapse:collapse;margin-top:1.1mm}
+  td,th{border:1px solid #666;padding:.9mm 1.5mm;font-size:8.3pt;vertical-align:top;text-align:left}
+  th{background:#eee}
+  .mono{font-family:"Courier New",monospace;font-weight:bold}
+  .fait{background:#eaf7ef;border:.5mm solid #2fb765;border-radius:2mm;padding:1.8mm 2.4mm;font-size:8.8pt;line-height:1.45}
+  .fait b{color:#0c5c29}
+  .fait .ok{color:#2e9e52;font-weight:bold}
+  @media print{.consigne{display:none}}
+</style></head><body>
+<div class="consigne"><b>À imprimer :</b> 1 par poste, A4 recto. Posé à côté du clavier.</div>
+<h1>🚫 ON NE JOUE PAS DEUX FOIS AU MÊME ENDROIT</h1>
+<div class="sur">Séance 7 — samedi 24 octobre 2026</div>
+
+<h2>1 · Comment savoir qu'une case est libre</h2>
+<div class="cle">Une case libre n'est pas vide : <b>elle contient encore son numéro</b>.</div>
+<div class="code">plateau[case - 1] == str(case)    <i>→ True : la case est LIBRE</i>
+                                  <i>→ False : elle est PRISE</i></div>
+<div style="font-size:8.6pt;margin-top:1mm"><span class="mono">str(case)</span> transforme le nombre
+<span class="mono">3</span> en texte <span class="mono">"3"</span>, pour le comparer avec ce qu'il y a
+dans la case — qui est du texte.</div>
+
+<h2 class="p">2 · Le <span style="font-family:'Courier New'">if</span> dans le <span style="font-family:'Courier New'">if</span></h2>
+<div class="code">if case &gt; 9:
+<b>····</b>print("Cette case n'existe pas !")
+else:
+<b>····</b>if plateau[case - 1] == str(case):
+<b>········</b>plateau[case - 1] = "X"
+<b>····</b>else:
+<b>········</b>print("Case deja prise !")</div>
+<div class="duo">
+  <div><b class="t">Les décalages</b><b>4 espaces</b> pour le premier niveau,
+    <b>8 espaces</b> pour le deuxième. C'est le décalage qui dit <b>qui est dans qui</b>.</div>
+  <div><b class="t">L'ordre des questions</b>La deuxième question ne se pose <b>que si</b> la réponse
+    à la première est non. On ne demande pas si la case est libre si elle n'existe pas.</div>
+</div>
+
+<h2>3 · Teste les trois chemins</h2>
+<table>
+  <tr><th style="width:25%">Je tape</th><th>Ce qui doit se passer</th></tr>
+  <tr><td class="mono">5</td><td>le symbole se pose</td></tr>
+  <tr><td class="mono">5</td><td>« Case deja prise ! » — et le plateau ne bouge pas</td></tr>
+  <tr><td class="mono">12</td><td>« Cette case n'existe pas ! »</td></tr>
+</table>
+<div class="cle" style="margin-top:1.4mm">⚠️ <b>Le bug connu :</b> si tu tapes <b>0</b>, le jeu accepte.
+C'est normal pour l'instant — on le répare à la séance 9.</div>
+<h2 class="o">Si l'écran devient rouge</h2>
+<table>
+  <tr><th style="width:23%">Ce qui s'affiche</th><th style="width:35%">Ce que ça veut dire</th><th>Ce que je fais</th></tr>
+  <tr><td class="mono">IndentationError</td><td>Il manque le décalage après les deux-points</td><td>4 espaces, puis 8 pour le <span class='mono'>if</span> dans le <span class='mono'>if</span></td></tr>
+  <tr><td class="mono"><i>ça se pose quand même</i></td><td>La pose est <b>hors</b> du <span class='mono'>if</span></td><td>Relis les décalages de haut en bas</td></tr>
+  <tr><td class="mono">TypeError</td><td><span class='mono'>str(case)</span> oublié</td><td>On compare du texte avec du texte</td></tr>
+  <tr><td class="mono"><i>deux messages</i></td><td>Un <span class='mono'>print</span> en trop, hors du <span class='mono'>else</span></td><td>Un seul message par chemin</td></tr>
+</table>
+<h2 class="v">Ce que ton jeu sait faire</h2>
+<div class="fait"><b>Depuis le premier samedi, tu sais :</b><br><span class="ok">✔</span> afficher du texte et des phrases fabriquées avec le <span class="mono">+</span> &nbsp;·&nbsp; <span class="ok">✔</span> poser des questions au joueur et garder ses réponses &nbsp;·&nbsp; <span class="ok">✔</span> passer du texte au nombre et retour (<span class="mono">int()</span>, <span class="mono">str()</span>) &nbsp;·&nbsp; <span class="ok">✔</span> compter (<span class="mono">tour = tour + 1</span>) &nbsp;·&nbsp; <span class="ok">✔</span> décider avec <span class="mono">if</span> / <span class="mono">else</span> &nbsp;·&nbsp; <span class="ok">✔</span> garder neuf cases dans une <b>liste</b>, et poser un symbole qui reste &nbsp;·&nbsp; <span class="ok">✔</span> <b>refuser</b> une case déjà prise ou impossible</div>
+</body></html>
