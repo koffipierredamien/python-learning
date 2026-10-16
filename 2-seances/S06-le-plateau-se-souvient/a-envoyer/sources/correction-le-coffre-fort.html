@@ -1,0 +1,125 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Correction — Le Coffre-Fort</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+
+ body{font-size:9.6pt;padding:7mm 8mm 5mm}
+ .band{background:#0c5c29;color:#fff;border-radius:3mm;padding:3.6mm 5mm;margin-bottom:3.4mm}
+ .band .k{font-size:9pt;letter-spacing:1.2pt;color:#a8e6bd;font-weight:bold}
+ .band h1{font-size:20pt;margin:1mm 0 1.2mm}
+ .band .s{font-size:10pt;color:#d8f0e2;line-height:1.45}
+ pre{margin:0 0 2.6mm;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:3mm 4mm;
+     font-family:"Courier New",monospace;font-size:8.1pt;line-height:1.3;white-space:pre-wrap}
+ pre .c{color:#7f7f9c} pre .s{color:#ffb74d} pre .k{color:#4fc3f7;font-weight:bold}
+ .coupe{background:#6b2d8f;color:#fff;border-radius:2.2mm;padding:2mm 3.4mm;margin-bottom:2.6mm;
+        font-size:9.4pt;line-height:1.4}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.6mm 3.4mm;
+       margin-bottom:2.6mm;line-height:1.42;font-size:9.2pt}
+ .note b{color:#a65d00}
+ .note h3{margin:0 0 1.4mm;font-size:10.6pt;color:#a65d00}
+ .note ul{margin:1.2mm 0 0;padding-left:5mm}.note li{margin-bottom:1.1mm}
+ .note .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.3mm 1mm}
+ .suite{background:#0c5c29;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+        font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+ .suite span{color:#a8e6bd;font-weight:normal;font-size:9.4pt}
+</style></head><body>
+<div class="band">
+  <div class="k">CORRECTION · POUR L'ENSEIGNANT ET LES PARENTS</div>
+  <h1>✅ LE COFFRE-FORT</h1>
+  <div class="s">Le programme complet. Il tourne tel quel dans Thonny.
+      Les messages peuvent varier d'un élève à l'autre : <b>ce qui compte, c'est que les marques
+      tombent dans le bon tiroir et que le score soit juste.</b></div>
+</div>
+<pre><span class="c"># --- ETAPE 1 : les cinq tiroirs, dans une liste ----------------------</span>
+tiroirs = [<span class="s">"1"</span>, <span class="s">"2"</span>, <span class="s">"3"</span>, <span class="s">"4"</span>, <span class="s">"5"</span>]
+
+<span class="k">print</span>(<span class="s">" "</span> + tiroirs[0] + <span class="s">" | "</span> + tiroirs[1] + <span class="s">" | "</span> + tiroirs[2] + <span class="s">" | "</span> + tiroirs[3] + <span class="s">" | "</span> + tiroirs[4])
+<span class="k">print</span>(<span class="s">""</span>)
+
+<span class="c"># --- ETAPE 2 : le joueur 2 cache le tresor ---------------------------</span>
+<span class="k">print</span>(<span class="s">"Joueur 1, ferme les yeux !"</span>)
+tresor = <span class="k">input</span>(<span class="s">"Joueur 2, dans quel tiroir caches-tu le tresor ? (1 a 5) "</span>)
+tresor = <span class="k">int</span>(tresor)
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 34)
+<span class="k">print</span>(<span class="s">"   Joueur 1, tu as 2 essais."</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 34)
+<span class="k">print</span>(<span class="s">""</span>)
+
+<span class="c"># --- ETAPE 3 : le compteur de points ---------------------------------</span>
+points = 50
+
+<span class="c"># --- ETAPE 4 : premier essai -----------------------------------------</span>
+essai = <span class="k">input</span>(<span class="s">"Essai 1 - quel tiroir ouvres-tu ? "</span>)
+essai = <span class="k">int</span>(essai)
+
+<span class="k">if</span> essai == tresor:
+    <span class="k">print</span>(<span class="s">"   BRAVO ! Le tresor etait bien la !"</span>)
+    tiroirs[essai - 1] = <span class="s">"T"</span>
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"   Vide ! Ce tiroir ne contenait rien."</span>)
+    tiroirs[essai - 1] = <span class="s">"X"</span>
+    points = points - 20
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">" "</span> + tiroirs[0] + <span class="s">" | "</span> + tiroirs[1] + <span class="s">" | "</span> + tiroirs[2] + <span class="s">" | "</span> + tiroirs[3] + <span class="s">" | "</span> + tiroirs[4])
+<span class="k">print</span>(<span class="s">""</span>)
+
+<span class="c"># --- ETAPE 5 : deuxieme essai  (on recopie l'etape 4) ----------------</span>
+essai = <span class="k">input</span>(<span class="s">"Essai 2 - quel tiroir ouvres-tu ? "</span>)
+essai = <span class="k">int</span>(essai)
+
+<span class="k">if</span> essai == tresor:
+    <span class="k">print</span>(<span class="s">"   BRAVO ! Le tresor etait bien la !"</span>)
+    tiroirs[essai - 1] = <span class="s">"T"</span>
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"   Vide ! Ce tiroir ne contenait rien."</span>)
+    tiroirs[essai - 1] = <span class="s">"X"</span>
+    points = points - 20
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">" "</span> + tiroirs[0] + <span class="s">" | "</span> + tiroirs[1] + <span class="s">" | "</span> + tiroirs[2] + <span class="s">" | "</span> + tiroirs[3] + <span class="s">" | "</span> + tiroirs[4])
+<span class="k">print</span>(<span class="s">""</span>)</pre>
+<div class="saut"></div>
+<div class="suite">✅ LE COFFRE-FORT — la suite <span>page 2 sur 2 · correction-coffre-fort.py</span></div>
+<pre><span class="c"># --- ETAPE 6 : le verdict --------------------------------------------</span>
+<span class="k">print</span>(<span class="s">"="</span> * 34)
+<span class="k">print</span>(<span class="s">"Le tresor etait dans le tiroir "</span> + <span class="k">str</span>(tresor) + <span class="s">"."</span>)
+<span class="k">print</span>(<span class="s">"Ton score : "</span> + <span class="k">str</span>(points) + <span class="s">" / 50"</span>)
+
+<span class="k">if</span> points &gt; 20:
+    <span class="k">print</span>(<span class="s">"PILLEUR DE COFFRE-FORT !"</span>)
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"Le coffre a resiste... pour cette fois."</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 34)</pre>
+
+      <div class="note"><h3>⭐ Les deux bonus</h3>
+        <b>1. Le troisième essai :</b> recopier le bloc de l'étape 5. Rien de plus.<br>
+        <b>2. Le tiroir déjà ouvert :</b> avant d'ouvrir, vérifier que le tiroir
+        <b>contient encore son numéro</b> —
+        <span class="m">if tiroirs[essai - 1] == str(essai):</span> … <span class="m">else:</span>
+        <span class="m">print("Tu as deja ouvert ce tiroir !")</span>.
+        C'est exactement le test de la case libre de la <b>séance 7</b> : l'élève qui le réussit
+        arrive samedi avec une séance d'avance — dites-le-lui devant la classe.</div>
+      <div class="note" style="border-color:#2fb765;background:#f2faf5">
+        <h3 style="color:#0c5c29">✅ Les six choses à regarder dans une copie</h3>
+        <ul>
+          <li>la liste a-t-elle bien <b>cinq</b> cases, entre <b>crochets</b>, séparées par des virgules ?</li>
+          <li>l'affichage utilise-t-il <span class="m">tiroirs[0]</span> à <span class="m">tiroirs[4]</span>
+              — et pas <span class="m">[1]</span> à <span class="m">[5]</span> ?</li>
+          <li>le <span class="m">- 1</span> est-il présent dans <span class="m">tiroirs[essai - 1]</span> ?</li>
+          <li><span class="m">points = 50</span> est-il <b>avant</b> les essais, et <b>une seule fois</b> ?</li>
+          <li><span class="m">points = points - 20</span> est-il <b>dans le else</b>, donc décalé ?</li>
+          <li>les <span class="m">str()</span> sont-ils là dans le verdict ?</li>
+        </ul>
+        <div style="margin-top:1.6mm"><b>Barème conseillé :</b> les étapes 1 à 3 = « il a compris la liste ».
+        Les étapes 4 à 6 = « il a compris l'indice ». <b>On note la preuve, pas la perfection :</b>
+        un jeu qui marche avec deux fautes d'orthographe dans les messages vaut mieux qu'un code
+        parfait qui ne tourne pas.</div></div>
+</body></html>

@@ -1,0 +1,196 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Exercice de maison — Le Distributeur de la Récré</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+
+  body{font-size:9.3pt;padding:6mm 8mm 4mm}
+  .band{background:#12122a;color:#fff;border-radius:3mm;padding:3.2mm 5mm;margin-bottom:2.8mm}
+  .band .k{font-size:9pt;letter-spacing:1.2pt;color:#ffb74d;font-weight:bold}
+  .band h1{font-size:19pt;margin:1mm 0 1.2mm}
+  .band .s{font-size:9.9pt;color:#a8a8c0;line-height:1.4}
+  .band .f{font-family:"Courier New",monospace;background:#20204a;color:#4fc3f7;
+           padding:.8mm 2.2mm;border-radius:1.4mm;display:inline-block;margin-top:1.8mm;font-size:9.8pt}
+  .regle{background:#6b2d8f;color:#fff;border-radius:2.6mm;padding:2.6mm 4mm;
+         margin-bottom:2.8mm;font-size:9.7pt;line-height:1.4}
+  .row{display:flex;gap:3mm;margin-bottom:2.8mm}
+  .goal{flex:1.1;border:.6mm solid #2fb765;border-radius:2.6mm;overflow:hidden}
+  .goal .t{background:#2fb765;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.8pt}
+  .goal pre{margin:0;padding:2.2mm 2.6mm;font-family:"Courier New",monospace;font-size:7.2pt;
+            line-height:1.3;background:#f2faf5;white-space:pre}
+  .goal b{color:#0c5c29}
+  .kit{flex:1;border:.6mm solid #d79a00;border-radius:2.6mm;overflow:hidden;background:#fffaf0}
+  .kit .t{background:#d79a00;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.8pt}
+  .kit .b{padding:2mm 2.6mm;font-size:8.1pt;line-height:1.34}
+  .kit .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.4mm 1mm}
+  .kit hr{border:0;border-top:.3mm dashed #d79a00;margin:1.5mm 0}
+  .st{border:.5mm solid #14142b;border-radius:2.6mm;margin-bottom:2.2mm;overflow:hidden;page-break-inside:avoid}
+  .st .h{background:#14142b;color:#fff;padding:1.1mm 3mm;font-size:10.4pt;font-weight:bold;
+         display:flex;gap:2.6mm;align-items:center}
+  .st .h .n{background:#ffb74d;color:#14142b;border-radius:50%;width:6mm;height:6mm;line-height:6mm;
+            text-align:center;font-size:10pt;display:inline-block}
+  .st .c{padding:1.9mm 2.6mm;line-height:1.34}
+  .st .c ul{margin:0;padding-left:5mm}.st .c li{margin-bottom:.9mm}
+  .bloc{font-family:"Courier New",monospace;font-size:8.2pt;background:#12122a;color:#4fc3f7;
+        padding:1.7mm 2.6mm;border-radius:1.6mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+  .bloc i{color:#ffb74d;font-style:normal}
+  .tip{color:#6b2d8f;font-weight:bold}
+  .fin{background:#f3f3f8;border-left:3mm solid #6b2d8f;border-radius:2mm;
+       padding:2.3mm 3mm;font-size:9pt;line-height:1.36}
+  .suite{background:#12122a;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+         font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+  .suite span{color:#ffb74d;font-weight:normal;font-size:9.4pt}
+</style></head><body>
+<div class="band">
+  <div class="k">EXERCICE DE MAISON · JEREMIAH GEEKS · SEMAINE DU 14 NOVEMBRE</div>
+  <h1>🥤 LE DISTRIBUTEUR</h1>
+  <div class="s">Quatre produits, un porte-monnaie, et <b style="color:#fff">zéro bloc recopié</b>.
+      La machine repropose son menu toute seule, encore et encore, tant qu'il te reste de l'argent.
+      <b style="color:#fff">Ton programme va être plus court que celui de la semaine dernière</b> —
+      et il fera dix fois plus de choses.</div>
+  <div class="f">Thonny → Fichier → Nouveau → Enregistrer sous :  distributeur_tonprenom.py</div>
+</div>
+<div class="regle">🎯 <b>La règle :</b> la machine contient <b>quatre produits</b>, <b>un seul exemplaire</b>
+      de chacun. Tu dis combien tu as d'argent. <b>Tant qu'il te reste au moins 100 F</b> et
+      <b>qu'il reste quelque chose à acheter</b>, la machine réaffiche son menu. À la fin,
+      elle imprime ton ticket.</div>
+<div class="row">
+  <div class="goal"><div class="t">✅ CE QUE TON PROGRAMME DOIT FAIRE</div>
+<pre>========================================
+      LE DISTRIBUTEUR DE LA RECRE
+========================================
+
+Combien as-tu d'argent ? <b>400</b>
+
+----------------------------------------
+ 1. Chips - 100 F
+ 2. Jus - 150 F
+ 3. Chocolat - 200 F
+ 4. Gateau - 250 F
+----------------------------------------
+ Tu as 400 F.
+ Ton choix (1 a 4) ? <b>3</b>
+
+   CLONK !  Chocolat tombe dans le bac.
+
+  ( ... le menu revient tout seul : la
+    case 3 affiche EPUISE, il te reste
+    200 F ... )
+
+ Ton choix (1 a 4) ? <b>4</b>
+
+   BZZZT !  Impossible : mauvais numero,
+            produit epuise, ou pas assez
+            d'argent.
+
+  ( ... elle redemande. Tu prends le Jus,
+    et la boucle s'arrete toute seule ... )
+
+========================================
+              TON TICKET
+========================================
+ Produits pris : 2 / 4
+ Monnaie       : 50 F
+
+ Plus assez d'argent. La recre est finie !
+========================================</pre></div>
+  <div class="kit"><div class="t">🧰 LA BOÎTE À OUTILS</div>
+    <div class="b"><b>La boucle :</b><br>
+      <span class="m">while argent &gt;= 100 and achats &lt; 4:</span><br>
+      les <b>deux points</b> à la fin, et <b>tout ce qui se répète est décalé</b> dessous.
+      <hr>
+      <b>Deux listes qui vont ensemble :</b><br>
+      <span class="m">produits = ["Chips", "Jus", ...]</span><br>
+      <span class="m">prix = [100, 150, 200, 250]</span><br>
+      Le produit n° 3, c'est <span class="m">produits[2]</span>,
+      et il coûte <span class="m">prix[2]</span>. <b>Même indice.</b>
+      <hr>
+      <b>Donc :</b> <span class="m">prix[choix - 1]</span>
+      <hr>
+      <span class="m">!=</span> veut dire <b>est différent de</b>.
+      <hr>
+      ⚠️ <b>Si tu oublies <span class="m">achats = achats + 1</span></b>, la boucle
+      <b>ne s'arrête jamais</b>. Pour arrêter un programme fou :
+      <b>Ctrl + C</b> dans la fenêtre du bas.</div>
+  </div>
+</div>
+<div class="st"><div class="h"><span class="n">1</span> LA MACHINE</div><div class="c">
+         <ul><li>Affiche le cadre de <b>40</b> signes <span class="mono">=</span> et le titre.</li>
+             <li>Crée <b>deux listes</b>, dans le même ordre :
+               <div class="bloc">produits = ["Chips", "Jus", "Chocolat", "Gateau"]
+prix     = [100, 150, 200, 250]</div>
+               Les prix sont des <b>nombres</b> : pas de guillemets autour.</li></ul></div></div>
+<div class="st"><div class="h"><span class="n">2</span> LE CLIENT</div><div class="c">
+         <ul><li>Demande <span class="mono">Combien as-tu d'argent ?</span>, range dans
+             <span class="mono">argent</span>, et <b>transforme en nombre</b>.</li>
+             <li>Crée le compteur <span class="mono">achats</span> à <b>0</b>.</li></ul></div></div>
+<div class="fin" style="border-color:#ffb74d;background:#fffaf0">
+  👉 <b>La suite est sur la page 2</b> : le cœur du programme, la fin, et les bonus.
+</div>
+<div class="saut"></div>
+<div class="suite">🥤 LE DISTRIBUTEUR — la suite <span>page 2 sur 2 · distributeur_tonprenom.py</span></div>
+<div class="st"><div class="h"><span class="n">3</span> LA BOUCLE — et le menu dedans</div><div class="c">
+         <div class="bloc">while argent &gt;= 100 and achats &lt; 4:
+
+    <i>... à partir d'ici, TOUT est décalé de 4 espaces ...</i>
+    print(" 1. " + produits[0] + " - " + str(prix[0]) + " F")
+    <i>... les trois autres lignes du menu ...</i>
+    print(" Tu as " + str(argent) + " F.")
+    choix = input(" Ton choix (1 a 4) ? ")
+    choix = int(choix)</div>
+         <span class="tip">Lis la condition :</span> « tant qu'il me reste de quoi payer le
+         <b>moins cher</b> (100) <b>et</b> qu'il reste un produit à prendre ». Les deux doivent
+         être vraies pour continuer.</div></div>
+<div class="st"><div class="h"><span class="n">4</span> LA VENTE — toujours dans la boucle</div><div class="c">
+         Quatre conditions pour une vente. Lis-les une par une :
+         <div class="bloc">    if choix &gt;= 1 and choix &lt;= 4 and produits[choix - 1] != "EPUISE" and prix[choix - 1] &lt;= argent:
+        print("   CLONK !  " + produits[choix - 1] + " tombe dans le bac.")
+        argent = argent - prix[choix - 1]    <i>← on paie</i>
+        produits[choix - 1] = "EPUISE"       <i>← le produit part</i>
+        achats = achats + 1                  <i>← le compteur AVANCE</i></div>
+         <b>Ces trois lignes vont ensemble.</b> Si tu enlèves la dernière, la boucle tourne pour
+         toujours : c'est <b>la</b> panne de la semaine.</div></div>
+<div class="st"><div class="h"><span class="n">5</span> LE REFUS</div><div class="c">
+         <div class="bloc">    else:
+        print("   BZZZT !  Impossible : mauvais numero, produit epuise,")
+        print("            ou pas assez d'argent.")</div>
+         <b>Remarque :</b> en cas de refus, <b>rien ne change</b> — ni l'argent, ni le compteur.
+         La boucle repart donc <b>exactement comme avant</b>, et redemande. C'est exactement ce
+         qu'on veut (et exactement ce que fait notre jeu XO quand la case est prise).</div></div>
+<div class="st"><div class="h"><span class="n">6</span> LE TICKET — DEHORS de la boucle</div><div class="c">
+         <b>Recolle ces lignes tout à gauche</b> : elles ne doivent s'afficher
+         <b>qu'une fois la boucle terminée</b>.
+         <ul><li><span class="mono">Produits pris : &lt;achats&gt; / 4</span></li>
+             <li><span class="mono">Monnaie       : &lt;argent&gt; F</span></li>
+             <li><b>Si</b> <span class="mono">achats == 4</span> :
+                 <span class="mono">TU AS VIDE LA MACHINE. Respect.</span> <b>Sinon</b> :
+                 <span class="mono">Plus assez d'argent. La recre est finie !</span></li></ul>
+         <span class="tip">Le test qui ne trompe pas :</span> si ton ticket s'affiche
+         <b>après chaque achat</b>, c'est qu'il est resté décalé dans la boucle.</div></div>
+<div class="st" style="border-color:#d79a00"><div class="h" style="background:#d79a00"><span class="n" style="background:#fff">⭐</span> SI TU AS FINI — LES BONUS</div><div class="c"><ul>
+      <li><b>Dis-lui ce qui manque.</b> Dans le refus :
+        <span class="mono">print("   Il te manque " + str(prix[choix - 1] - argent) + " F.")</span></li>
+      <li><b>Le bouton SORTIE.</b> Le client peut partir en tapant <b>0</b>. Il faut
+        <span class="mono">choix = 1</span> <b>avant</b> la boucle, puis
+        <div class="bloc">while argent &gt;= 100 and achats &lt; 4 and choix != 0:</div>
+        <span class="tip">Pourquoi avant ?</span> Parce que Python lit la condition
+        <b>avant</b> le premier tour : si <span class="mono">choix</span> n'existe pas encore,
+        c'est <span class="mono">NameError</span>.</li>
+      <li><b>⭐⭐ Un cinquième produit.</b> Ajoute <span class="mono">"Biscuit"</span> et
+        <span class="mono">50</span> à la fin des deux listes, une ligne de menu, et remplace les 4
+        par des 5. <b>Compte les lignes que tu as changées.</b> Sans boucle, il t'en aurait fallu
+        dix fois plus : voilà ce que la boucle t'a donné.</li></ul></div></div>
+<div class="fin"><b>Quand ça marche :</b> fais <b>trois parties</b> — une où tu vides la machine
+      (il faut 700 F), une où tu tombes en panne d'argent, et une où tu demandes un produit
+      <b>déjà épuisé</b>. Les trois doivent se terminer proprement sur un ticket.
+      <b>Ctrl + S</b>, et <b>envoie une photo de ton écran</b> à ton enseignant.<br>
+      <b>La panne de la semaine :</b> la boucle ne s'arrête plus. Dans 9 cas sur 10,
+      <span class="mono">achats = achats + 1</span> manque, ou il est <b>collé à gauche</b> au lieu
+      d'être dans le <span class="mono">if</span>. <b>Ctrl + C</b> arrête le programme,
+      et on recompte les espaces.</div>
+
+</body></html>

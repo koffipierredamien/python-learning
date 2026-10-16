@@ -1,0 +1,174 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Exercice de maison — Le Coffre-Fort</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+
+  body{font-size:9.3pt;padding:6mm 8mm 4mm}
+  .band{background:#12122a;color:#fff;border-radius:3mm;padding:3.2mm 5mm;margin-bottom:2.8mm}
+  .band .k{font-size:9pt;letter-spacing:1.2pt;color:#ffb74d;font-weight:bold}
+  .band h1{font-size:19pt;margin:1mm 0 1.2mm}
+  .band .s{font-size:9.9pt;color:#a8a8c0;line-height:1.4}
+  .band .f{font-family:"Courier New",monospace;background:#20204a;color:#4fc3f7;
+           padding:.8mm 2.2mm;border-radius:1.4mm;display:inline-block;margin-top:1.8mm;font-size:9.8pt}
+  .regle{background:#6b2d8f;color:#fff;border-radius:2.6mm;padding:2.6mm 4mm;
+         margin-bottom:2.8mm;font-size:9.7pt;line-height:1.4}
+  .row{display:flex;gap:3mm;margin-bottom:2.8mm}
+  .goal{flex:1.1;border:.6mm solid #2fb765;border-radius:2.6mm;overflow:hidden}
+  .goal .t{background:#2fb765;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.8pt}
+  .goal pre{margin:0;padding:2.2mm 2.6mm;font-family:"Courier New",monospace;font-size:7.2pt;
+            line-height:1.3;background:#f2faf5;white-space:pre}
+  .goal b{color:#0c5c29}
+  .kit{flex:1;border:.6mm solid #d79a00;border-radius:2.6mm;overflow:hidden;background:#fffaf0}
+  .kit .t{background:#d79a00;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.8pt}
+  .kit .b{padding:2mm 2.6mm;font-size:8.1pt;line-height:1.34}
+  .kit .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.4mm 1mm}
+  .kit hr{border:0;border-top:.3mm dashed #d79a00;margin:1.5mm 0}
+  .st{border:.5mm solid #14142b;border-radius:2.6mm;margin-bottom:2.2mm;overflow:hidden;page-break-inside:avoid}
+  .st .h{background:#14142b;color:#fff;padding:1.1mm 3mm;font-size:10.4pt;font-weight:bold;
+         display:flex;gap:2.6mm;align-items:center}
+  .st .h .n{background:#ffb74d;color:#14142b;border-radius:50%;width:6mm;height:6mm;line-height:6mm;
+            text-align:center;font-size:10pt;display:inline-block}
+  .st .c{padding:1.9mm 2.6mm;line-height:1.34}
+  .st .c ul{margin:0;padding-left:5mm}.st .c li{margin-bottom:.9mm}
+  .bloc{font-family:"Courier New",monospace;font-size:8.2pt;background:#12122a;color:#4fc3f7;
+        padding:1.7mm 2.6mm;border-radius:1.6mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+  .bloc i{color:#ffb74d;font-style:normal}
+  .tip{color:#6b2d8f;font-weight:bold}
+  .fin{background:#f3f3f8;border-left:3mm solid #6b2d8f;border-radius:2mm;
+       padding:2.3mm 3mm;font-size:9pt;line-height:1.36}
+  .suite{background:#12122a;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+         font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+  .suite span{color:#ffb74d;font-weight:normal;font-size:9.4pt}
+</style></head><body>
+<div class="band">
+  <div class="k">EXERCICE DE MAISON · JEREMIAH GEEKS · SEMAINE DU 17 OCTOBRE</div>
+  <h1>🔐 LE COFFRE-FORT</h1>
+  <div class="s">Un coffre à <b style="color:#fff">cinq tiroirs</b>, un trésor caché, et deux essais pour
+      le trouver. Ta nouvelle arme : <b style="color:#fff">la liste</b> — une seule boîte qui range
+      cinq choses, et qui se souvient de ce que tu as déjà ouvert.</div>
+  <div class="f">Thonny → Fichier → Nouveau → Enregistrer sous :  coffre_tonprenom.py</div>
+</div>
+<div class="regle">🎯 <b>La règle du jeu :</b> joueur 2 cache un trésor dans un des cinq tiroirs.
+      Joueur 1 a <b>deux essais</b>. On part de <b>50 points</b> et chaque tiroir vide en coûte <b>20</b>.
+      Les tiroirs déjà ouverts <b>restent marqués</b> : <b>X</b> s'ils étaient vides, <b>T</b> pour le trésor.</div>
+<div class="row">
+  <div class="goal"><div class="t">✅ CE QUE TON PROGRAMME DOIT FAIRE</div>
+<pre>==================================
+        LE COFFRE-FORT
+==================================
+
+ 1 | 2 | 3 | 4 | 5
+
+Joueur 1, ferme les yeux !
+Joueur 2, dans quel tiroir
+caches-tu le tresor ? (1 a 5) <b>3</b>
+
+==================================
+   Joueur 1, tu as 2 essais.
+==================================
+
+Essai 1 - quel tiroir ouvres-tu ? <b>1</b>
+   Vide ! Ce tiroir ne contenait rien.
+
+ X | 2 | 3 | 4 | 5
+
+Essai 2 - quel tiroir ouvres-tu ? <b>3</b>
+   BRAVO ! Le tresor etait bien la !
+
+ X | 2 | T | 4 | 5
+
+==================================
+Le tresor etait dans le tiroir 3.
+Ton score : 30 / 50
+PILLEUR DE COFFRE-FORT !
+==================================</pre></div>
+  <div class="kit"><div class="t">🧰 LA BOÎTE À OUTILS</div>
+    <div class="b"><b>La liste :</b> une boîte qui en contient cinq.<br>
+      <span class="m">tiroirs = ["1", "2", "3", "4", "5"]</span>
+      <hr>
+      <b>L'indice commence à ZÉRO.</b><br>
+      tiroir n° 1 → <span class="m">tiroirs[0]</span><br>
+      tiroir n° 3 → <span class="m">tiroirs[2]</span><br>
+      tiroir n° <b>N</b> → <span class="m">tiroirs[N - 1]</span>
+      <hr>
+      <b>Écrire dans un tiroir :</b><br>
+      <span class="m">tiroirs[essai - 1] = "X"</span>
+      <hr>
+      <b>input rend TOUJOURS du texte.</b><br>
+      Pour comparer : <span class="m">essai = int(essai)</span><br>
+      Pour l'écrire dans une phrase : <span class="m">str(points)</span>
+      <hr>
+      <b>Le compteur, à l'envers :</b><br>
+      <span class="m">points = 50</span> une seule fois, au début<br>
+      <span class="m">points = points - 20</span> à chaque raté</div>
+  </div>
+</div>
+<div class="st"><div class="h"><span class="n">1</span> LES CINQ TIROIRS</div><div class="c">
+         <ul><li>Affiche le cadre de <b>34 signes</b> <span class="mono">=</span> et le titre.</li>
+             <li>Crée <b>la liste</b> <span class="mono">tiroirs</span> avec les cinq numéros
+                 <b>entre guillemets</b> : ce sont des textes, pas des nombres.</li>
+             <li>Affiche la ligne des tiroirs :
+               <div class="bloc">print(" " + tiroirs[0] + " | " + tiroirs[1] + " | " + tiroirs[2] + " | " + tiroirs[3] + " | " + tiroirs[4])</div>
+               <span class="tip">Oui, c'est long.</span> Recopie-le une fois, puis fais
+               <b>copier-coller</b> : tu en auras besoin trois fois.</li></ul></div></div>
+<div class="st"><div class="h"><span class="n">2</span> LE JOUEUR 2 CACHE LE TRÉSOR</div><div class="c">
+         <ul><li>Affiche <span class="mono">Joueur 1, ferme les yeux !</span></li>
+             <li>Demande <span class="mono">Joueur 2, dans quel tiroir caches-tu le tresor ? (1 a 5)</span>
+                 et range la réponse dans <span class="mono">tresor</span>.</li>
+             <li><b>Transforme-la en nombre.</b> Sans ça, la comparaison de l'étape 4 ne marchera jamais.</li>
+             <li>Affiche le cadre <span class="mono">Joueur 1, tu as 2 essais.</span></li></ul></div></div>
+<div class="st"><div class="h"><span class="n">3</span> LES POINTS</div><div class="c">
+         Crée une boîte <span class="mono">points</span> qui contient <b>50</b>.
+         <b>Une seule fois</b>, avant les essais — si tu la remets avant chaque essai, le score
+         restera bloqué à 50.</div></div>
+<div class="fin" style="border-color:#ffb74d;background:#fffaf0">
+  👉 <b>La suite est sur la page 2</b> : le cœur du programme, la fin, et les bonus.
+</div>
+<div class="saut"></div>
+<div class="suite">🔐 LE COFFRE-FORT — la suite <span>page 2 sur 2 · coffre_tonprenom.py</span></div>
+<div class="st"><div class="h"><span class="n">4</span> L'ESSAI N° 1 — le cœur du jeu</div><div class="c">
+         Demande le tiroir, transforme-le en nombre, puis :
+         <div class="bloc">if essai == tresor:
+    print("   BRAVO ! Le tresor etait bien la !")
+    tiroirs[essai - 1] = "T"      <i>← le trésor</i>
+else:
+    print("   Vide ! Ce tiroir ne contenait rien.")
+    tiroirs[essai - 1] = "X"      <i>← la croix</i>
+    points = points - 20          <i>← DANS le else</i></div>
+         Puis <b>réaffiche la ligne des tiroirs</b> (copier-coller de l'étape 1) :
+         la marque doit apparaître au bon endroit.</div></div>
+<div class="st"><div class="h"><span class="n">5</span> L'ESSAI N° 2</div><div class="c">
+         <b>Recopie tout le bloc de l'étape 4.</b> Tu changes seulement
+         <span class="mono">Essai 1</span> en <span class="mono">Essai 2</span>.
+         <div style="margin-top:1.2mm"><span class="tip">Oui, on recopie encore :</span> garde cet agacement
+         en tête. Dans trois séances, une seule ligne remplacera tous ces blocs.</div></div></div>
+<div class="st"><div class="h"><span class="n">6</span> LE VERDICT</div><div class="c">
+         <ul><li><span class="mono">Le tresor etait dans le tiroir &lt;tresor&gt;.</span> — il faudra <span class="mono">str()</span>.</li>
+             <li><span class="mono">Ton score : &lt;points&gt; / 50</span></li>
+             <li><b>Si</b> les points sont <b>plus grands que 20</b> : <span class="mono">PILLEUR DE COFFRE-FORT !</span></li>
+             <li><b>Sinon</b> : <span class="mono">Le coffre a resiste... pour cette fois.</span></li></ul></div></div>
+<div class="st" style="border-color:#d79a00"><div class="h" style="background:#d79a00"><span class="n" style="background:#fff">⭐</span> SI TU AS FINI — LES BONUS</div><div class="c"><ul>
+      <li><b>Un troisième essai.</b> Recopie encore un bloc. Le score peut alors tomber à 0 — c'est permis.</li>
+      <li><b>⭐⭐ Le tiroir déjà ouvert.</b> Si le joueur retape un tiroir qu'il a déjà ouvert, il ne
+        devrait pas perdre 20 points une deuxième fois. Comment savoir qu'un tiroir est <b>encore fermé</b> ?
+        <b>Il contient encore son numéro.</b>
+        <div class="bloc">if tiroirs[essai - 1] == str(essai):
+    <i>... on ouvre, comme à l'étape 4 ...</i>
+else:
+    print("Tu as deja ouvert ce tiroir !")</div>
+        <b>Celui qui réussit ce bonus a déjà compris la séance de samedi prochain.</b></li></ul></div></div>
+<div class="fin"><b>Quand ça marche :</b> fais une <b>vraie partie</b> avec quelqu'un de ta maison.
+      Puis relance-le en te trompant aux deux essais : le score doit tomber à <b>10</b> et afficher
+      <span class="mono">Le coffre a resiste...</span>. Ensuite <b>Ctrl + S</b>, et
+      <b>envoie une photo de ton écran</b> à ton enseignant.<br>
+      <b>Le bug le plus courant :</b> <span class="mono">tiroirs[essai]</span> au lieu de
+      <span class="mono">tiroirs[essai - 1]</span> — la marque se met <b>à côté</b>.
+      Et si tu tapes 5, Python crie <span class="mono">IndexError</span> : il n'y a pas de tiroir n° 5
+      dans une liste qui s'arrête à l'indice 4.</div>
+
+</body></html>

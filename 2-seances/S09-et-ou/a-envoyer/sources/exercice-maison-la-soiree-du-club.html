@@ -1,0 +1,189 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Exercice de maison — La Soirée du Club Geek</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+
+  body{font-size:9.3pt;padding:6mm 8mm 4mm}
+  .band{background:#12122a;color:#fff;border-radius:3mm;padding:3.2mm 5mm;margin-bottom:2.8mm}
+  .band .k{font-size:9pt;letter-spacing:1.2pt;color:#ffb74d;font-weight:bold}
+  .band h1{font-size:19pt;margin:1mm 0 1.2mm}
+  .band .s{font-size:9.9pt;color:#a8a8c0;line-height:1.4}
+  .band .f{font-family:"Courier New",monospace;background:#20204a;color:#4fc3f7;
+           padding:.8mm 2.2mm;border-radius:1.4mm;display:inline-block;margin-top:1.8mm;font-size:9.8pt}
+  .regle{background:#6b2d8f;color:#fff;border-radius:2.6mm;padding:2.6mm 4mm;
+         margin-bottom:2.8mm;font-size:9.7pt;line-height:1.4}
+  .row{display:flex;gap:3mm;margin-bottom:2.8mm}
+  .goal{flex:1.1;border:.6mm solid #2fb765;border-radius:2.6mm;overflow:hidden}
+  .goal .t{background:#2fb765;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.8pt}
+  .goal pre{margin:0;padding:2.2mm 2.6mm;font-family:"Courier New",monospace;font-size:7.2pt;
+            line-height:1.3;background:#f2faf5;white-space:pre}
+  .goal b{color:#0c5c29}
+  .kit{flex:1;border:.6mm solid #d79a00;border-radius:2.6mm;overflow:hidden;background:#fffaf0}
+  .kit .t{background:#d79a00;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.8pt}
+  .kit .b{padding:2mm 2.6mm;font-size:8.1pt;line-height:1.34}
+  .kit .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.4mm 1mm}
+  .kit hr{border:0;border-top:.3mm dashed #d79a00;margin:1.5mm 0}
+  .st{border:.5mm solid #14142b;border-radius:2.6mm;margin-bottom:2.2mm;overflow:hidden;page-break-inside:avoid}
+  .st .h{background:#14142b;color:#fff;padding:1.1mm 3mm;font-size:10.4pt;font-weight:bold;
+         display:flex;gap:2.6mm;align-items:center}
+  .st .h .n{background:#ffb74d;color:#14142b;border-radius:50%;width:6mm;height:6mm;line-height:6mm;
+            text-align:center;font-size:10pt;display:inline-block}
+  .st .c{padding:1.9mm 2.6mm;line-height:1.34}
+  .st .c ul{margin:0;padding-left:5mm}.st .c li{margin-bottom:.9mm}
+  .bloc{font-family:"Courier New",monospace;font-size:8.2pt;background:#12122a;color:#4fc3f7;
+        padding:1.7mm 2.6mm;border-radius:1.6mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+  .bloc i{color:#ffb74d;font-style:normal}
+  .tip{color:#6b2d8f;font-weight:bold}
+  .fin{background:#f3f3f8;border-left:3mm solid #6b2d8f;border-radius:2mm;
+       padding:2.3mm 3mm;font-size:9pt;line-height:1.36}
+  .suite{background:#12122a;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+         font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+  .suite span{color:#ffb74d;font-weight:normal;font-size:9.4pt}
+.goal pre{font-size:6.9pt;line-height:1.26}</style></head><body>
+<div class="band">
+  <div class="k">EXERCICE DE MAISON · JEREMIAH GEEKS · SEMAINE DU 7 NOVEMBRE</div>
+  <h1>🕶️ LA SOIRÉE DU CLUB GEEK</h1>
+  <div class="s">En classe, ton videur posait <b style="color:#fff">une seule question</b>.
+      Ce soir, il tient la porte tout seul : <b style="color:#fff">trois fauteuils, quatre visiteurs</b>,
+      et une règle de club qui tient en <b style="color:#fff">une ligne</b> grâce à
+      <b style="color:#fff">and</b> et <b style="color:#fff">or</b>.</div>
+  <div class="f">Thonny → Fichier → Nouveau → Enregistrer sous :  videur_tonprenom.py</div>
+</div>
+<div class="regle">🎯 <b>La règle du club :</b> on entre si on a <b>entre 12 et 18 ans</b>
+      <b>ET</b> qu'on a suivi <b>au moins 3 séances</b> — <b>OU</b> si on a le code VIP
+      <span style="font-family:'Courier New',monospace">GEEK2026</span>.
+      Mais il n'y a que <b>trois fauteuils</b> : quand ils sont pris, c'est complet.
+      <b>Même pour un VIP.</b></div>
+<div class="row">
+  <div class="goal"><div class="t">✅ CE QUE TON PROGRAMME DOIT FAIRE</div>
+<pre>======================================
+        LE CLUB GEEK  -  CE SOIR
+======================================
+Trois fauteuils. Pas un de plus.
+
+--------------------------------------
+Qui se presente ? <b>Kofi</b>
+Ton age ? <b>14</b>
+Combien de seances as-tu suivies ? <b>5</b>
+Ton code VIP ?
+   ENTREZ, Kofi !
+   Fauteuils occupes : 1 / 3
+
+--------------------------------------
+Qui se presente ? <b>Awa</b>
+Ton age ? <b>11</b>
+Combien de seances as-tu suivies ? <b>9</b>
+Ton code VIP ?
+   Desole Awa, pas ce soir.
+   Fauteuils occupes : 1 / 3
+
+     ( ... visiteurs 3 et 4 ... )
+
+======================================
+        RAPPORT DU VIDEUR
+======================================
+ Fauteuil 1 : Kofi
+ Fauteuil 2 : Jeremie
+ Fauteuil 3 : Sarah
+
+ Entrees de la soiree : 3 / 3
+ SOIREE COMPLETE !
+ Le club a fait salle pleine.
+======================================</pre></div>
+  <div class="kit"><div class="t">🧰 LA BOÎTE À OUTILS</div>
+    <div class="b"><b>Les deux mots de la semaine :</b><br>
+      <span class="m">and</span> → il faut <b>TOUT</b><br>
+      <span class="m">or</span> &nbsp;→ il suffit d'<b>UN</b>
+      <hr>
+      <b>Les parenthèses, comme en maths :</b><br>
+      <span class="m">(A and B) or C</span><br>
+      on règle d'abord ce qui est <b>dedans</b>.
+      <hr>
+      <b>Le compteur qui MONTE :</b><br>
+      <span class="m">entres = 0</span> au début<br>
+      <span class="m">entres = entres + 1</span> à chaque entrée
+      <hr>
+      <b>La liste des fauteuils :</b><br>
+      <span class="m">fauteuils = ["(libre)", "(libre)", "(libre)"]</span><br>
+      <b>Attention, piège :</b> ici on écrit
+      <span class="m">fauteuils[entres]</span> <b>sans le −1</b> !
+      Le compteur part de 0, il tombe déjà sur le bon fauteuil.
+      <hr>
+      <span class="m">int()</span> pour l'âge et les séances,
+      <span class="m">str()</span> pour les afficher.</div>
+  </div>
+</div>
+<div class="st"><div class="h"><span class="n">1</span> LE CLUB OUVRE</div><div class="c">
+         <ul><li>Affiche le cadre de <b>38</b> signes <span class="mono">=</span>, le titre, et
+             <span class="mono">Trois fauteuils. Pas un de plus.</span></li>
+             <li>Crée la liste <span class="mono">fauteuils</span> avec trois fois
+                 <span class="mono">"(libre)"</span>.</li>
+             <li>Crée le compteur <span class="mono">entres</span> à <b>0</b>.
+                 <b>Une seule fois</b>, tout en haut.</li></ul></div></div>
+<div class="st"><div class="h"><span class="n">2</span> LE VISITEUR SE PRÉSENTE</div><div class="c">
+         Quatre questions, dans cet ordre : <span class="mono">nom</span>,
+         <span class="mono">age</span>, <span class="mono">seances</span>, <span class="mono">code</span>.
+         <div style="margin-top:1.2mm"><b>L'âge et les séances doivent devenir des nombres</b> —
+         on va les comparer. Le nom et le code restent du texte.</div></div></div>
+<div class="st"><div class="h"><span class="n">3</span> Y A-T-IL ENCORE DE LA PLACE ?</div><div class="c">
+         <b>Avant même de regarder le visiteur</b>, le videur regarde la salle :
+         <div class="bloc">if entres &lt; 3:
+    <i>... ici viendra la règle du club (étape 4) ...</i>
+else:
+    print("   Le club est COMPLET. Reviens samedi prochain.")</div>
+         Puis, à la fin du visiteur :
+         <span class="mono">print("   Fauteuils occupes : " + str(entres) + " / 3")</span></div></div>
+<div class="fin" style="border-color:#ffb74d;background:#fffaf0">
+  👉 <b>La suite est sur la page 2</b> : le cœur du programme, la fin, et les bonus.
+</div>
+<div class="saut"></div>
+<div class="suite">🕶️ LA SOIRÉE DU CLUB GEEK — la suite <span>page 2 sur 2 · videur_tonprenom.py</span></div>
+<div class="st"><div class="h"><span class="n">4</span> LA RÈGLE DU CLUB — le cœur de l'exercice</div><div class="c">
+         <b>Dedans</b>, décalé de 4 espaces de plus, le <span class="mono">if</span> qui décide :
+         <div class="bloc">    if (age &gt;= 12 and age &lt;= 18 and seances &gt;= 3) or code == "GEEK2026":
+        print("   ENTREZ, " + nom + " !")
+        fauteuils[entres] = nom        <i>← on l'assoit</i>
+        entres = entres + 1            <i>← un fauteuil de moins</i>
+    else:
+        print("   Desole " + nom + ", pas ce soir.")</div>
+         <span class="tip">Lis la condition à voix haute :</span> « (le bon âge <b>et</b> le bon âge
+         <b>et</b> assez de séances) <b>ou</b> le code VIP ». Si tu sais la dire, tu sais l'écrire.</div></div>
+<div class="st"><div class="h"><span class="n">5</span> LES VISITEURS 2, 3 ET 4</div><div class="c">
+         <b>Recopie tout le bloc</b> (étapes 2, 3 et 4) <b>trois fois de plus</b>.
+         Tu ne changes <b>rien</b> : les questions sont les mêmes, c'est le visiteur qui change.
+         <div style="margin-top:1.2mm"><span class="tip">Compte les lignes que tu recopies.</span>
+         Note le nombre sur ta feuille et apporte-le samedi : on va le faire tomber à <b>zéro</b>.</div></div></div>
+<div class="st"><div class="h"><span class="n">6</span> LE RAPPORT DU VIDEUR</div><div class="c">
+         <ul><li>Affiche les trois fauteuils, un par ligne :
+             <span class="mono">Fauteuil 1 : &lt;fauteuils[0]&gt;</span>…</li>
+             <li><span class="mono">Entrees de la soiree : &lt;entres&gt; / 3</span></li>
+             <li><b>Si</b> <span class="mono">entres == 3</span> :
+                 <span class="mono">SOIREE COMPLETE !</span> <b>Sinon</b> :
+                 <span class="mono">Il restait de la place. Le videur a ete severe.</span></li></ul></div></div>
+<div class="st" style="border-color:#d79a00"><div class="h" style="background:#d79a00"><span class="n" style="background:#fff">⭐</span> SI TU AS FINI — LES BONUS</div><div class="c"><ul>
+      <li><b>Le code en minuscules.</b> Le VIP qui tape <span class="mono">geek2026</span> doit entrer aussi.
+        Un <span class="mono">or</span> de plus suffit.</li>
+      <li><b>Dis-lui pourquoi.</b> Dans le refus, ajoute un <span class="mono">if</span> :
+        si <span class="mono">age &lt; 12</span>, affiche <span class="mono">Trop jeune !</span> ;
+        si <span class="mono">seances &lt; 3</span>, affiche <span class="mono">Viens plus souvent !</span></li>
+      <li><b>⭐⭐ Déjà entré !</b> Un malin se représente une deuxième fois. Avant de l'asseoir :
+        <div class="bloc">if nom == fauteuils[0] or nom == fauteuils[1] or nom == fauteuils[2]:
+    print("Tu es deja a l'interieur !")</div>
+        <b>C'est exactement le test de la case occupée du jeu XO</b>, avec des fauteuils
+        à la place des cases.</li></ul></div></div>
+<div class="fin"><b>Quand ça marche :</b> teste les <b>trois situations</b> — quelqu'un qui entre normalement,
+      quelqu'un qu'on refuse, et un <b>VIP de 30 ans</b> qui entre quand même avec le code.
+      Puis fais entrer quatre personnes valables : la quatrième doit lire
+      <span class="mono">Le club est COMPLET</span>. <b>Ctrl + S</b>, et
+      <b>envoie une photo de ton écran</b> à ton enseignant.<br>
+      <b>Les deux bugs les plus courants :</b> un <span class="mono">and</span> oublié entre deux
+      questions (Python répond <span class="mono">SyntaxError</span>), et
+      <span class="mono">entres = entres + 1</span> <b>oublié</b> — alors tout le monde s'assoit sur
+      le fauteuil 1 et le club n'est jamais complet.</div>
+
+</body></html>

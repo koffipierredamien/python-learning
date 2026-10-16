@@ -1,0 +1,117 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Correction — Le Distributeur de la Récré</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+
+ body{font-size:9.6pt;padding:7mm 8mm 5mm}
+ .band{background:#0c5c29;color:#fff;border-radius:3mm;padding:3.6mm 5mm;margin-bottom:3.4mm}
+ .band .k{font-size:9pt;letter-spacing:1.2pt;color:#a8e6bd;font-weight:bold}
+ .band h1{font-size:20pt;margin:1mm 0 1.2mm}
+ .band .s{font-size:10pt;color:#d8f0e2;line-height:1.45}
+ pre{margin:0 0 2.6mm;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:3mm 4mm;
+     font-family:"Courier New",monospace;font-size:8.3pt;line-height:1.3;white-space:pre-wrap}
+ pre .c{color:#7f7f9c} pre .s{color:#ffb74d} pre .k{color:#4fc3f7;font-weight:bold}
+ .coupe{background:#6b2d8f;color:#fff;border-radius:2.2mm;padding:2mm 3.4mm;margin-bottom:2.6mm;
+        font-size:9.4pt;line-height:1.4}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.6mm 3.4mm;
+       margin-bottom:2.6mm;line-height:1.42;font-size:9.2pt}
+ .note b{color:#a65d00}
+ .note h3{margin:0 0 1.4mm;font-size:10.6pt;color:#a65d00}
+ .note ul{margin:1.2mm 0 0;padding-left:5mm}.note li{margin-bottom:1.1mm}
+ .note .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.3mm 1mm}
+ .suite{background:#0c5c29;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+        font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+ .suite span{color:#a8e6bd;font-weight:normal;font-size:9.4pt}
+</style></head><body>
+<div class="band">
+  <div class="k">CORRECTION · POUR L'ENSEIGNANT ET LES PARENTS</div>
+  <h1>✅ LE DISTRIBUTEUR</h1>
+  <div class="s">Le programme complet. Il tourne tel quel dans Thonny. <b>Le point à vérifier en
+      premier dans une copie, c'est le décalage</b> : ce qui est dans la boucle, et ce qui n'y est pas.</div>
+</div>
+<pre><span class="c"># --- ETAPE 1 : la machine -------------------------------------------</span>
+<span class="c">#  Deux listes qui vont ensemble :</span>
+<span class="c">#  le produit numero 1 est produits[0], et il coute prix[0].</span>
+produits = [<span class="s">"Chips"</span>, <span class="s">"Jus"</span>, <span class="s">"Chocolat"</span>, <span class="s">"Gateau"</span>]
+prix = [100, 150, 200, 250]
+
+<span class="c"># --- ETAPE 2 : le client --------------------------------------------</span>
+argent = <span class="k">input</span>(<span class="s">"Combien as-tu d'argent ? "</span>)
+argent = <span class="k">int</span>(argent)
+
+achats = 0
+
+<span class="c"># --- ETAPE 3 : LA BOUCLE --------------------------------------------</span>
+<span class="c">#  Tant qu'il reste de quoi acheter le moins cher (100)</span>
+<span class="c">#  ET qu'il reste au moins un produit dans la machine.</span>
+<span class="k">while</span> argent &gt;= 100 <span class="k">and</span> achats &lt; 4:
+
+    <span class="k">print</span>(<span class="s">""</span>)
+    <span class="k">print</span>(<span class="s">"-"</span> * 40)
+    <span class="k">print</span>(<span class="s">" 1. "</span> + produits[0] + <span class="s">" - "</span> + <span class="k">str</span>(prix[0]) + <span class="s">" F"</span>)
+    <span class="k">print</span>(<span class="s">" 2. "</span> + produits[1] + <span class="s">" - "</span> + <span class="k">str</span>(prix[1]) + <span class="s">" F"</span>)
+    <span class="k">print</span>(<span class="s">" 3. "</span> + produits[2] + <span class="s">" - "</span> + <span class="k">str</span>(prix[2]) + <span class="s">" F"</span>)
+    <span class="k">print</span>(<span class="s">" 4. "</span> + produits[3] + <span class="s">" - "</span> + <span class="k">str</span>(prix[3]) + <span class="s">" F"</span>)
+    <span class="k">print</span>(<span class="s">"-"</span> * 40)
+    <span class="k">print</span>(<span class="s">" Tu as "</span> + <span class="k">str</span>(argent) + <span class="s">" F."</span>)
+
+    choix = <span class="k">input</span>(<span class="s">" Ton choix (1 a 4) ? "</span>)
+    choix = <span class="k">int</span>(choix)
+
+    <span class="c">#  Une seule question, quatre conditions :</span>
+    <span class="c">#  le numero existe, le produit est encore la, et tu as de quoi payer.</span>
+    <span class="k">if</span> choix &gt;= 1 <span class="k">and</span> choix &lt;= 4 <span class="k">and</span> produits[choix - 1] != <span class="s">"EPUISE"</span> <span class="k">and</span> prix[choix - 1] &lt;= argent:
+        <span class="k">print</span>(<span class="s">""</span>)
+        <span class="k">print</span>(<span class="s">"   CLONK !  "</span> + produits[choix - 1] + <span class="s">" tombe dans le bac."</span>)
+        argent = argent - prix[choix - 1]
+        produits[choix - 1] = <span class="s">"EPUISE"</span>
+        achats = achats + 1
+    <span class="k">else</span>:
+        <span class="k">print</span>(<span class="s">""</span>)
+        <span class="k">print</span>(<span class="s">"   BZZZT !  Impossible : mauvais numero, produit epuise,"</span>)
+        <span class="k">print</span>(<span class="s">"            ou pas assez d'argent."</span>)</pre>
+<div class="saut"></div>
+<div class="suite">✅ LE DISTRIBUTEUR — la suite <span>page 2 sur 2 · correction-distributeur.py</span></div>
+<pre><span class="c"># --- ETAPE 4 : la boucle est finie, le ticket ------------------------</span>
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">"              TON TICKET"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">" Produits pris : "</span> + <span class="k">str</span>(achats) + <span class="s">" / 4"</span>)
+<span class="k">print</span>(<span class="s">" Monnaie       : "</span> + <span class="k">str</span>(argent) + <span class="s">" F"</span>)
+<span class="k">print</span>(<span class="s">""</span>)
+
+<span class="k">if</span> achats == 4:
+    <span class="k">print</span>(<span class="s">" TU AS VIDE LA MACHINE. Respect."</span>)
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">" Plus assez d'argent. La recre est finie !"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)</pre>
+
+      <div class="note"><h3>⭐ Les trois bonus</h3>
+        <b>1. Ce qui manque :</b> <span class="m">str(prix[choix - 1] - argent)</span> dans le refus.<br>
+        <b>2. Le bouton SORTIE :</b> <span class="m">choix = 1</span> <b>avant</b> la boucle, puis
+        <span class="m">and choix != 0</span> dans la condition. L'élève qui oublie l'initialisation
+        récolte un <span class="m">NameError</span> : c'est une excellente leçon, laissez-la arriver.<br>
+        <b>3. Le cinquième produit :</b> 4 lignes à changer. <b>Faites-les compter</b> — puis demandez
+        combien il en aurait fallu dans la version « recopiée » de la semaine dernière.</div>
+      <div class="note" style="border-color:#2fb765;background:#f2faf5">
+        <h3 style="color:#0c5c29">✅ Les six choses à regarder dans une copie</h3>
+        <ul>
+          <li>les <b>deux points</b> à la fin de la ligne <span class="m">while</span> ?</li>
+          <li>tout ce qui doit se répéter est-il <b>décalé</b> sous le <span class="m">while</span> ?</li>
+          <li><span class="m">argent = argent - prix[choix - 1]</span> est-il <b>dans</b> le
+              <span class="m">if</span> qui vend ? (sinon la machine fait payer sans rien donner)</li>
+          <li><span class="m">achats = achats + 1</span> est-il là ? <b>Sans lui : boucle infinie.</b></li>
+          <li>le <span class="m">- 1</span> est-il présent dans les deux listes ?</li>
+          <li>le ticket est-il <b>dehors</b> de la boucle, collé à gauche ?</li>
+        </ul>
+        <div style="margin-top:1.6mm"><b>Si un élève arrive avec une boucle infinie :</b> ne corrigez pas
+        tout de suite. Lancez-la, laissez défiler, puis <b>Ctrl + C</b> devant tout le monde, et
+        demandez à la classe <i>« qu'est-ce qui ne change jamais ? »</i>. C'est la leçon la plus
+        rentable de la séance 11.</div></div>
+</body></html>

@@ -28,7 +28,7 @@
   <div class="s">Le programme complet, avec les deux bonus. Il tourne tel quel dans Thonny.
   Les variantes sont nombreuses : <b>ce qui compte, c'est que le programme marche</b>, pas qu'il soit identique.</div>
 </div>
-<pre><span class=<span class="s">"c"</span>># --- ETAPE 1 : l'accueil ---------------------------------------------</span>
+<pre><span class="c"># --- ETAPE 1 : l'accueil ---------------------------------------------</span>
 <span class="k">print</span>(<span class="s">"="</span> * 35)
 <span class="k">print</span>(<span class="s">"      LE QUIZ DES GEEKS"</span>)
 <span class="k">print</span>(<span class="s">"="</span> * 35)
@@ -39,14 +39,14 @@ joueur = <span class="k">input</span>(<span class="s">"Quel est ton nom ? "</spa
 <span class="k">print</span>(<span class="s">""</span>)
 
 
-<span class=<span class="s">"c"</span>># --- ETAPE 2 : le compteur part de zero ------------------------------</span>
+<span class="c"># --- ETAPE 2 : le compteur part de zero ------------------------------</span>
 score = 0
 
 
-<span class=<span class="s">"c"</span>># --- ETAPE 3 : question 1  (un NOMBRE) -------------------------------</span>
+<span class="c"># --- ETAPE 3 : question 1  (un NOMBRE) -------------------------------</span>
 <span class="k">print</span>(<span class="s">"QUESTION 1"</span>)
 reponse = <span class="k">input</span>(<span class="s">"Combien font 3 + 4 ? "</span>)
-reponse = <span class="k">int</span>(reponse)          <span class=<span class="s">"c"</span>># la reponse du joueur est du TEXTE : on la transforme</span>
+reponse = <span class="k">int</span>(reponse)          <span class="c"># la reponse du joueur est du TEXTE : on la transforme</span>
 
 <span class="k">if</span> reponse == 7:
     <span class="k">print</span>(<span class="s">"Bravo, c'est juste !"</span>)
@@ -56,7 +56,7 @@ reponse = <span class="k">int</span>(reponse)          <span class=<span class="
 <span class="k">print</span>(<span class="s">""</span>)
 
 
-<span class=<span class="s">"c"</span>># --- ETAPE 4 : question 2  (du TEXTE) --------------------------------</span>
+<span class="c"># --- ETAPE 4 : question 2  (du TEXTE) --------------------------------</span>
 <span class="k">print</span>(<span class="s">"QUESTION 2"</span>)
 reponse = <span class="k">input</span>(<span class="s">"Que donne  \"3\" + \"4\"  en Python ? "</span>)
 
@@ -68,7 +68,7 @@ reponse = <span class="k">input</span>(<span class="s">"Que donne  \"3\" + \"4\"
 <span class="k">print</span>(<span class="s">""</span>)
 
 
-<span class=<span class="s">"c"</span>></pre>
+<span class="c"></pre>
 <div class="saut"></div>
 <div class="suite">✅ LE QUIZ DES GEEKS — la correction, suite <span>page 2 sur 2</span></div>
 <pre># --- ETAPE 5 : question 3  (un NOMBRE) -------------------------------</span>
@@ -84,7 +84,7 @@ reponse = <span class="k">int</span>(reponse)
 <span class="k">print</span>(<span class="s">""</span>)
 
 
-<span class=<span class="s">"c"</span>># --- ETAPE 6 : le bilan ----------------------------------------------</span>
+<span class="c"># --- ETAPE 6 : le bilan ----------------------------------------------</span>
 <span class="k">print</span>(<span class="s">"="</span> * 35)
 <span class="k">print</span>(joueur + <span class="s">", ton score est de "</span> + <span class="k">str</span>(score) + <span class="s">" sur 3."</span>)
 
@@ -95,15 +95,15 @@ reponse = <span class="k">int</span>(reponse)
 <span class="k">print</span>(<span class="s">"="</span> * 35)
 
 
-<span class=<span class="s">"c"</span>># =====================================================================</span>
-<span class=<span class="s">"c"</span>>#  LES DEUX BONUS</span>
-<span class=<span class="s">"c"</span>># =====================================================================</span>
+<span class="c"># =====================================================================</span>
+<span class="c">#  LES DEUX BONUS</span>
+<span class="c"># =====================================================================</span>
 
-<span class=<span class="s">"c"</span>># --- BONUS 1 : le nombre de points qui manquent ----------------------</span>
+<span class="c"># --- BONUS 1 : le nombre de points qui manquent ----------------------</span>
 <span class="k">print</span>(<span class="s">""</span>)
 <span class="k">print</span>(<span class="s">"Il te manquait "</span> + <span class="k">str</span>(3 - score) + <span class="s">" point(s) pour le sans-faute."</span>)
 
-<span class=<span class="s">"c"</span>># --- BONUS 2 : la quatrieme question ---------------------------------</span>
+<span class="c"># --- BONUS 2 : la quatrieme question ---------------------------------</span>
 <span class="k">print</span>(<span class="s">""</span>)
 <span class="k">print</span>(<span class="s">"QUESTION BONUS"</span>)
 age = <span class="k">input</span>(<span class="s">"Quel age as-tu ? "</span>)

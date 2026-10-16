@@ -53,63 +53,63 @@ function creerLeQuiz() {
 
   var questions = [
     ['plateau = ["1", "2", "3", "4", "X", "6", "7", "8", "9"]\ncase = 3\nprint(plateau[case - 1] == str(case))',
-     ['True', 'False', '3', 'une erreur rouge'], 'True',
+     ['False', 'True', '3', 'une erreur rouge'], 'True',
      'plateau[2] contient encore "3", donc la case 3 est LIBRE : True.'],
 
     ['Avec le meme plateau, case = 5 :\nprint(plateau[case - 1] == str(case))',
-     ['True', 'X', 'False', 'une erreur rouge'], 'False',
+     ['True', 'X', 'une erreur rouge', 'False'], 'False',
      'plateau[4] contient "X", pas "5". La case est PRISE : False.'],
 
     ['A quoi sert  str(case)  dans cette comparaison ?',
-     ['A transformer le texte en nombre', 'A transformer le nombre en texte, pour le comparer', 'A afficher la case', 'A rien du tout'], 'A transformer le nombre en texte, pour le comparer',
+     ['A transformer le nombre en texte, pour le comparer', 'A transformer le texte en nombre', 'A afficher la case', 'A rien du tout'], 'A transformer le nombre en texte, pour le comparer',
      'La case contient du TEXTE. Pour comparer, il faut comparer du texte avec du texte.'],
 
     ['Une case libre, qu\'est-ce qu\'elle contient ?',
-     ['Rien du tout', 'Un espace', 'Le mot libre', 'Son propre numero'], 'Son propre numero',
+     ['Rien du tout', 'Un espace', 'Son propre numero', 'Le mot libre'], 'Son propre numero',
      'C\'est toute l\'astuce : une case libre contient encore son numero, et c\'est comme ca qu\'on la reconnait.'],
 
     ['plateau[case - 1] = str(case)\n\nQu\'est-ce que cette ligne fait ?',
-     ['Elle REMET le numero dans la case', 'Elle verifie si la case est libre', 'Elle affiche la case', 'Elle provoque une erreur'], 'Elle REMET le numero dans la case',
+     ['Elle verifie si la case est libre', 'Elle REMET le numero dans la case', 'Elle affiche la case', 'Elle provoque une erreur'], 'Elle REMET le numero dans la case',
      'Attention : un seul = range dans la case. Pour comparer, il en faut DEUX.'],
 
     ['if case > 9:\n    print("A")\nelse:\n    if plateau[case - 1] == str(case):\n        print("B")\n    else:\n        print("C")\n\ncase = 12 : qu\'est-ce qui s\'affiche ?',
-     ['B', 'A', 'C', 'rien'], 'A',
+     ['A', 'B', 'C', 'rien'], 'A',
      '12 est plus grand que 9 : on prend le premier chemin, et on ne pose meme pas la deuxieme question.'],
 
     ['Meme programme, case = 3 et la case 3 est libre :',
-     ['A', 'C', 'A puis B', 'B'], 'B',
+     ['A', 'C', 'B', 'A puis B'], 'B',
      'La case existe, donc on passe au else. Elle est libre, donc on prend le premier chemin du deuxieme if.'],
 
     ['Meme programme, case = 5 et la case 5 est prise :',
-     ['A', 'B', 'C', 'B puis C'], 'C',
+     ['A', 'B', 'B puis C', 'C'], 'C',
      'La case existe mais elle est prise : c\'est le else du deuxieme if.'],
 
     ['Combien d\'espaces faut-il devant le deuxieme  if  ?',
-     ['4', '0', '8', '2'], '4',
+     ['0', '4', '8', '2'], '4',
      'Le deuxieme if est DANS le else du premier : il est decale de 4 espaces. Ce qui est dedans sera a 8.'],
 
     ['else:\nif plateau[case - 1] == str(case):\n\nQue se passe-t-il ?',
-     ['Ca marche quand meme', 'Une SyntaxError', 'Rien', 'Une erreur rouge : IndentationError'], 'Une erreur rouge : IndentationError',
+     ['Ca marche quand meme', 'Une SyntaxError', 'Une erreur rouge : IndentationError', 'Rien'], 'Une erreur rouge : IndentationError',
      'Apres les deux-points, il faut decaler. Le deuxieme if doit etre DANS le else.'],
 
     ['Dans ton jeu, que se passe-t-il si le joueur 2 rejoue la case du joueur 1 ?',
-     ['Le O remplace le X', 'Le jeu refuse et il perd son tour', 'Le jeu plante', 'Le jeu demande une autre case'], 'Le jeu refuse et il perd son tour',
+     ['Le jeu refuse et il perd son tour', 'Le O remplace le X', 'Le jeu plante', 'Le jeu demande une autre case'], 'Le jeu refuse et il perd son tour',
      'C\'est exactement ce qu\'on a programme samedi : le jeu refuse, et le plateau ne bouge pas.'],
 
     ['Et si le joueur tape 0 ?',
-     ['Le jeu refuse', 'Le jeu plante', 'Le jeu accepte — c\'est le bug connu', 'Le jeu demande une autre case'], 'Le jeu accepte — c\'est le bug connu',
+     ['Le jeu refuse', 'Le jeu plante', 'Le jeu demande une autre case', 'Le jeu accepte — c\'est le bug connu'], 'Le jeu accepte — c\'est le bug connu',
      'C\'est le bug qu\'on a note ensemble. On le repare a la seance 9, avec le mot and.'],
 
     ['Pourquoi le jeu refuse-t-il la case 12 ?',
-     ['Parce que  case > 9  est vrai', 'Parce que la case 12 est prise', 'Parce que 12 n\'est pas un nombre', 'Parce que le plateau est plein'], 'Parce que  case > 9  est vrai',
+     ['Parce que la case 12 est prise', 'Parce que  case > 9  est vrai', 'Parce que 12 n\'est pas un nombre', 'Parce que le plateau est plein'], 'Parce que  case > 9  est vrai',
      'La premiere question du if teste si la case existe.'],
 
     ['plateau[case - 1] = "X"  est ecrite COLLEE A GAUCHE, hors du if.\nQue se passe-t-il ?',
-     ['Une erreur rouge', 'Le X ne se pose jamais', 'Rien ne change', 'Le X se pose meme quand le coup est refuse'], 'Le X se pose meme quand le coup est refuse',
+     ['Une erreur rouge', 'Le X ne se pose jamais', 'Le X se pose meme quand le coup est refuse', 'Rien ne change'], 'Le X se pose meme quand le coup est refuse',
      'Ce qui n\'est pas decale ne depend d\'aucun if : ca se fait toujours.'],
 
     ['Combien de fois faut-il recopier le bloc du tour, pour que DEUX joueurs jouent ?',
-     ['1 fois', '2 fois', '9 fois', '18 fois'], '2 fois',
+     ['2 fois', '1 fois', '9 fois', '18 fois'], '2 fois',
      'Une fois par joueur. Et pour neuf tours, il faudrait le recopier neuf fois : c\'est pour ca qu\'on apprendra la boucle.']
   ];
 

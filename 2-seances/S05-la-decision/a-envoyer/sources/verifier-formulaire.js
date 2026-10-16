@@ -30,8 +30,13 @@ global.FormApp = {
 };
 global.Logger = { log: () => {} };
 
-const fichier = process.argv[2], fonction = process.argv[3] || 'creerLeTest';
+const fichier = process.argv[2];
 eval(fs.readFileSync(fichier, 'utf8'));
+// le script peut s'appeler creerLeTest (tests de seance) ou creerLeQuiz (quiz hebdo)
+const fonction = process.argv[3]
+  || (typeof creerLeTest === 'function' ? 'creerLeTest'
+      : typeof creerLeQuiz === 'function' ? 'creerLeQuiz' : null);
+if (!fonction) { console.error('Aucune fonction creerLeTest / creerLeQuiz trouvee.'); process.exit(1); }
 eval(fonction + '();');
 
 const qcm = items.filter(i => i.type === 'qcm' && i.points > 0);
