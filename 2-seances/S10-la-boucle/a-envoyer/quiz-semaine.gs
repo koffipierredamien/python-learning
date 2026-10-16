@@ -109,7 +109,7 @@ function creerLeQuiz() {
      'C\'est ca, programmer : une bonne idee fait souvent RETRECIR le code.'],
 
     ['while tour < 20:\n\nQue se passerait-il dans le jeu XO ?',
-     ['Le jeu jouerait 20 tours normalement', 'Rien ne changerait', 'Le jeu planterait quand le plateau serait plein', 'La boucle ne demarrerait pas'], 'Le jeu planterait quand le plateau serait plein',
+     ['Le jeu jouerait 20 tours normalement', 'Le jeu planterait tout de suite', 'Il redemanderait une case sans fin, une fois le plateau plein', 'La boucle ne demarrerait pas'], 'Il redemanderait une case sans fin, une fois le plateau plein',
      'Apres 9 coups, plus aucune case n\'est libre : le joueur ne pourrait plus jamais jouer un coup valide, et la boucle tournerait sans fin.']
   ];
 

@@ -10,7 +10,7 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
 | **Encadrement** | 2 enseignants — **un par classe**, les deux classes en parallèle |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
-| **Séance en préparation** | **Séance 5**, samedi 10 octobre 2026, 12 h - 14 h |
+| **Séance en préparation** | **Séance 6**, samedi 17 octobre 2026, 12 h - 14 h — et **tout octobre-novembre est prêt** |
 
 ---
 
@@ -26,29 +26,30 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 ---
 
-## Aujourd'hui : la séance 5
+## Aujourd'hui : la séance 6 — et les deux mois qui suivent
 
-👉 **[2-seances/S05-la-decision/](2-seances/S05-la-decision/fiche-de-seance.md)**
+👉 **[2-seances/S06-le-plateau-se-souvient/](2-seances/S06-le-plateau-se-souvient/fiche-de-seance.md)**
 
-> **« Le jeu compte et décide. »** La suite directe de la séance 4, qui n'a traité que sa première
-> notion. Aujourd'hui : le compteur `tour = tour + 1`, **les opérateurs** de comparaison, et le
-> **`if` / `else`** qui en fait une décision. Tout le matériel de la séance 4 est réutilisé tel quel ;
-> seul le quiz flash est neuf.
+> **« Le plateau se souvient. »** La notion la plus importante du parcours : **la liste**. À la fin de
+> la séance, le premier X **reste** sur le plateau — pour la première fois, le programme se souvient
+> de ce qu'on lui a dit.
+
+🗺️ **[Le parcours d'octobre et novembre](2-seances/PLAN-OCTOBRE-NOVEMBRE.md)** — **sept séances
+entièrement préparées**, du 17 octobre au 28 novembre : fiches, diaporamas, aide-mémoires, deux TP
+avec corrigés, six quiz de la semaine et trois exercices de maison. **De quoi tenir deux mois sans
+rien avoir à écrire.**
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| Animer la séance | [📖 La fiche du jour](2-seances/S05-la-decision/fiche-de-seance.md) — ce qui change, et ce qu'on rouvre |
-| Ouvrir la séance | 🧭 [**Le Grand Parcours**](2-seances/S05-la-decision/a-imprimer/1-parcours-revision.pdf) — 8 paliers, 35 min, tout ce qu'on sait faire depuis le début |
-| Le projeter pendant le parcours | [📺 Le tableau de bord](2-seances/S05-la-decision/a-projeter/parcours-tableau-de-bord.pptx) — 3 diapos |
-| En réserve | [🎯 Le quiz flash](2-seances/S05-la-decision/a-projeter/quiz-rappel.pptx) — 6 questions ; **sa dernière diapo est le tableau texte / nombre** |
-| Projeter | [📺 Le diaporama de la séance 4](2-seances/S04-le-jeu-compte/a-projeter/seance-4-projection.pptx) — on démarre au séparateur « 2 · Le compteur » |
-| Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S04-le-jeu-compte/code/live_coding_antiseche.py) — à faire la veille, à voix haute |
-| Imprimer | [🖨️ La liste du jour](2-seances/S05-la-decision/a-imprimer/quantites-et-formats.md) — la feuille de parcours + l'aide-mémoire |
-| Envoyer le programme au responsable | [📋 Le déroulé en Word](2-seances/S04-le-jeu-compte/a-envoyer/deroule-seance-4.docx) |
-| Donner l'exercice de maison | 🔢 [**Le Nombre Secret**](2-seances/S05-la-decision/a-envoyer/exercice-maison.md) — 2 images ou 1 PDF, et sa correction |
-| …pour ceux sans ordinateur | 📱 [**Le quiz de la semaine**](2-seances/S05-la-decision/a-envoyer/quiz-semaine.md) — 15 questions, corrigé automatiquement |
-| Envoyer le test aux parents, mercredi | [📝 Le test n°3 « texte ou nombre »](2-seances/S04-le-jeu-compte/a-envoyer/formulaire-exercices.md) — 20 points, corrigé automatiquement |
-| Revoir le TP de samedi dernier | [📄 La séance 3](2-seances/S03-tp-les-joueurs/a-imprimer/quantites-et-formats.md) · [💻 son corrigé en Python](2-seances/S03-tp-les-joueurs/code/LISEZ-MOI.md) |
+| Savoir où va le parcours | 🗺️ [**La carte des deux mois**](2-seances/PLAN-OCTOBRE-NOVEMBRE.md) — l'ordre, le calendrier, le tableau de bord de tous les fichiers |
+| Animer la séance de samedi | [📖 La fiche du jour](2-seances/S06-le-plateau-se-souvient/fiche-de-seance.md) — minute par minute |
+| Projeter | [📺 Le diaporama](2-seances/S06-le-plateau-se-souvient/a-projeter/seance-6-projection.pptx) |
+| Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S06-le-plateau-se-souvient/code/live_coding_antiseche.py) — la veille, à voix haute |
+| Imprimer | [🖨️ La liste du jour](2-seances/S06-le-plateau-se-souvient/a-imprimer/quantites-et-formats.md) |
+| Donner l'exercice de maison, mercredi | 🔐 [**Le Coffre-Fort**](2-seances/S06-le-plateau-se-souvient/a-envoyer/exercice-maison.md) — 2 images ou 1 PDF, et sa correction |
+| …pour ceux sans ordinateur | 📱 [**Le quiz n°5**](2-seances/S06-le-plateau-se-souvient/a-envoyer/quiz-semaine.md) — 15 questions, corrigé automatiquement |
+| Les deux TP du trimestre | 🛠️ [TP n°2, 31 oct](2-seances/S08-tp-le-plateau/fiche-de-seance.md) · 🏆 [TP n°3 et tournoi, 28 nov](2-seances/S12-tp-le-tournoi/fiche-de-seance.md) |
+| Revoir la séance dernière | [📄 La séance 5](2-seances/S05-la-decision/fiche-de-seance.md) · [🔢 Le Nombre Secret](2-seances/S05-la-decision/a-envoyer/exercice-maison.md) |
 
 ---
 
@@ -78,13 +79,13 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 |---|---|---|---|
 | 0. Décollage | 1–2 | L'écran d'accueil, et le jeu demande ton nom | théorie de base · l'algorithme · `print()` · la variable · `input()` |
 | 1. Parler au joueur | 3–5 | Le jeu parle aux deux joueurs, compte, et décide | variables, `input()`, `int()`, le compteur, les opérateurs, `if` / `else` |
-| 2. Le plateau vit | 6–9 | On place X et O à tour de rôle | listes, indices, conditions, boucles |
-| 3. Les règles du jeu | 10–13 | Coups refusés, gagnant, match nul | fonctions, `while`, opérateurs logiques |
-| 4. L'interface graphique | 14–18 | Fenêtre, grille cliquable, design | Tkinter, événements |
+| 2. Le plateau vit | 6–8 | Le symbole reste, et une case prise est refusée | **listes**, indices, `if` imbriqué, **TP n°2** |
+| 3. Les règles du jeu | 9–12 | Neuf tours tout seuls, un vainqueur, un tournoi | **`and` / `or`**, **`while`**, les 8 lignes gagnantes, **TP n°3** |
+| 4. L'interface graphique | 13–18 | Fenêtre, grille cliquable, design | Tkinter, événements |
 | 5. Finition & intelligence | 19–22 | Score, sons, **IA**, distribution | organisation du code, algorithmes |
 
-Les rendez-vous : **S9** première démo jouable · **S15** concours de design ·
-**S18** la Nuit du bug · **S22** tournoi XO et démo aux familles.
+Les rendez-vous : **S10** le jeu tourne tout seul · **S12** premier tournoi de classe ·
+**S15** concours de design · **S18** la Nuit du bug · **S22** tournoi XO et démo aux familles.
 *(La séance 1 n'a pas pu aller jusqu'au bout : le samedi perdu est récupéré en densifiant la phase 1,
 qui passe de quatre séances à trois.)*
 
@@ -102,4 +103,9 @@ qui passe de quatre séances à trois.)*
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture)
 - [x] Séance 5 : **Le Grand Parcours** (feuille, fichiers de code, tableau de bord), quiz flash, fiche de continuité
-- [ ] Séances 6 à 22
+- [x] **Octobre – novembre : les sept séances 6 à 12, entièrement prêtes** — [la carte](2-seances/PLAN-OCTOBRE-NOVEMBRE.md)
+      - [x] 5 séances de cours : fiche, diaporama, aide-mémoire 1 page, code officiel testé, anti-sèche
+      - [x] 2 TP de 2 h avec leurs corrigés (S8 « le plateau vivant », S12 « le tournoi »)
+      - [x] 6 quiz de la semaine, 15 QCM chacun, **corrigés à 100 % automatiquement**
+      - [x] 3 exercices de maison testés, avec images A4, PDF, corrigé et `.py`
+- [ ] Séances 13 à 22

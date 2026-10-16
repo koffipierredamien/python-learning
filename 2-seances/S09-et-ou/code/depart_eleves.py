@@ -4,7 +4,8 @@
 # =====================================================
 #
 #  Aujourd'hui, on n'ajoute rien au jeu : ON ENLEVE.
-#  Le meme jeu, avec deux fois moins de lignes, et le
+#  Le meme jeu, avec une decision deux fois plus courte,
+#  et le
 #  bug du zero repare.
 #
 #  1. F5 tout de suite.

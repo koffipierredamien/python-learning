@@ -9,7 +9,8 @@
 #
 #  Le jeu joue les NEUF tours, et les joueurs alternent.
 #  Ce fichier est plus COURT que celui de la semaine
-#  derniere, et il fait quatre fois plus de choses.
+#  derniere (44 lignes contre 45), et il joue NEUF tours
+#  au lieu de deux.
 # =====================================================
 
 print("===================================")

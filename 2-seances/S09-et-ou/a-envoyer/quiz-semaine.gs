@@ -101,8 +101,8 @@ function creerLeQuiz() {
      'C\'est tout l\'interet de la seance : le if dans le if est devenu UN SEUL if.'],
 
     ['Que se passe-t-il maintenant si le joueur tape 0 ?',
-     ['Le symbole se pose dans la case 9', 'Le jeu plante', 'Le jeu refuse', 'Le jeu accepte'], 'Le jeu refuse',
-     'Le bug est repare : c\'est le morceau case >= 1 qui s\'en charge.'],
+     ['Le symbole se pose dans la case 9', 'Le jeu plante', 'Le jeu refuse, et pour la bonne raison', 'Le jeu refuse en disant que la case est deja prise'], 'Le jeu refuse, et pour la bonne raison',
+     'C\'est le morceau case >= 1 qui s\'en charge. Avant aujourd\'hui le jeu refusait AUSSI, mais par accident, en disant une betise : la case 0 n\'a jamais ete prise par personne.'],
 
     ['Dans  case >= 1 and case <= 9 and plateau[case-1] == str(case),\ncombien de questions sont posees ?',
      ['1', '3', '2', '9'], '3',

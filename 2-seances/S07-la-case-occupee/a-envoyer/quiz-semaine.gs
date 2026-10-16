@@ -96,9 +96,9 @@ function creerLeQuiz() {
      ['Le jeu refuse et il perd son tour', 'Le O remplace le X', 'Le jeu plante', 'Le jeu demande une autre case'], 'Le jeu refuse et il perd son tour',
      'C\'est exactement ce qu\'on a programme samedi : le jeu refuse, et le plateau ne bouge pas.'],
 
-    ['Et si le joueur tape 0 ?',
-     ['Le jeu refuse', 'Le jeu plante', 'Le jeu demande une autre case', 'Le jeu accepte — c\'est le bug connu'], 'Le jeu accepte — c\'est le bug connu',
-     'C\'est le bug qu\'on a note ensemble. On le repare a la seance 9, avec le mot and.'],
+    ['Et si le joueur tape 0 dans le jeu de samedi soir ?',
+     ['Il accepte et pose dans la case 9', 'Il plante', 'Il redemande une autre case', 'Il refuse, en disant que la case est DEJA PRISE'], 'Il refuse, en disant que la case est DEJA PRISE',
+     'Piege ! 0 - 1 vaut -1, et plateau[-1] est la DERNIERE case : elle contient "9", pas "0". Le test de la case libre refuse donc -- par accident, et avec un message faux. Le bug n\'est pas repare, il est CACHE. On le tue vraiment a la seance 9.'],
 
     ['Pourquoi le jeu refuse-t-il la case 12 ?',
      ['Parce que la case 12 est prise', 'Parce que  case > 9  est vrai', 'Parce que 12 n\'est pas un nombre', 'Parce que le plateau est plein'], 'Parce que  case > 9  est vrai',

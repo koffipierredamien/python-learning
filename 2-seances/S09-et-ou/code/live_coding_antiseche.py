@@ -7,8 +7,13 @@
   LE PROBLEME A POSER EN PREMIER :
 
      Projetez le code de la seance 7, et tapez 0 devant eux.
-     Le symbole se pose dans la case 9. "Vous aviez trouve ce bug.
-     Aujourd'hui, on le repare -- et le code va RETRECIR."
+     Le jeu repond "la case 0 est deja prise". C'EST FAUX, et c'est
+     tout le probleme : personne n'a jamais joue la case 0, elle
+     n'existe meme pas. Le jeu refuse par accident, et il ment.
+     (Rappel : a la seance 6, le 0 posait carrement le symbole dans
+     la case 9. Depuis, le bug n'est pas repare, il est cache.)
+
+     "Aujourd'hui, on le repare pour de bon -- et le code va RETRECIR."
 
      12 h 22 - 12 h 32   etape A  -> and, la table a deux colonnes
      12 h 32 - 12 h 40   etape B  -> or

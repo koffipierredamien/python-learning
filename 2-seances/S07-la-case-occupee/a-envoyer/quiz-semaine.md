@@ -17,13 +17,18 @@ et on se retrouve.
 | Partie | Questions | Ce qu'elle vérifie |
 |---|---|---|
 | **A** — La case libre | 5 | comment le programme sait qu'une case est prise : **elle ne contient plus son numéro** |
-| **B** — Le `if` dans le `if` | 5 | les **8 espaces**, quel `else` répond à quel `if`, et ce qui se passe quand on en oublie un |
+| **B** — Le `if` dans le `if` | 5 | **4 espaces puis 8**, quel `else` répond à quel `if`, et ce qui se passe quand on en oublie un |
 | **C** — Le jeu complet | 5 | les quatre cas d'un coup joué, et **le bug du zéro** qu'ils ont trouvé eux-mêmes |
 
-**La question 13 est la plus intéressante : le bug du zéro.** Si on tape `0`, le jeu pose le
-symbole dans la **case 9** (parce que `0 - 1` vaut `-1`, et que `-1` désigne le dernier élément).
-Ce bug est **laissé exprès** : il sera réparé à la séance 9 avec `and`. Ceux qui répondent juste
-arrivent le 7 novembre en sachant déjà pourquoi.
+**La question du zéro est la plus retorse du quiz — et la bonne réponse surprendra même les adultes.**
+Dans le jeu **de la séance 6**, taper `0` posait le symbole dans la **case 9** (`0 - 1` vaut `-1`, et
+`-1` désigne le **dernier** élément). Mais dans le jeu **de samedi dernier**, le test de la case libre
+le **refuse** — en annonçant *« la case 0 est déjà prise »*, ce qui est **faux** : personne n'a jamais
+joué la case 0, elle n'existe même pas.
+
+**Le bug n'est donc pas réparé : il est caché, derrière un message qui ment.** C'est exactement ce
+qu'on répare à la séance 9 avec `and`. Les élèves qui répondent juste à celle-là arrivent le
+7 novembre avec la question déjà posée.
 
 ## Les trois réglages à faire
 

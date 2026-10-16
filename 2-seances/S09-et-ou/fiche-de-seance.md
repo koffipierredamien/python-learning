@@ -1,7 +1,8 @@
 # Séance 9 — « Une seule question au lieu de trois »
 
 > **La séance où le code rétrécit.** On n'ajoute rien au jeu : on enlève. Et le bug du zéro, qu'ils ont
-> trouvé eux-mêmes il y a quinze jours, meurt aujourd'hui.
+> trouvé eux-mêmes il y a quinze jours, meurt aujourd'hui — **pour de bon** : depuis la séance 7 il
+> était seulement *caché*, derrière un message faux.
 
 ---
 
@@ -14,7 +15,7 @@
 | **Notion** | **`and`** (il faut tout) et **`or`** (il suffit d'un) |
 | **Brique projet** | Le `if` dans le `if` devient **une seule condition**, et le **bug du zéro est réparé** |
 | **Point de départ** | [le code officiel de la séance 7](../S07-la-case-occupee/code/code_officiel_fin_de_seance.py) |
-| **Livrable** | Le même jeu, **avec deux fois moins de lignes**, qui refuse aussi le 0 |
+| **Livrable** | Le même jeu, dont **la décision passe de 7 lignes sur 2 niveaux à 4 lignes sur 1**, et qui refuse enfin le 0 pour la bonne raison |
 
 ### Les 3 objectifs
 
@@ -61,8 +62,8 @@
 | 2 | `plateau[9]` sur une liste de 9 cases | `IndexError` |
 | 3 | Comment savoir qu'une case est libre ? | elle contient **encore son numéro** |
 | 4 | `plateau[case - 1] = "X"` avec `case = 3` : où va le X ? | dans la **3ᵉ** case |
-| 5 | Combien d'espaces pour le `if` dans le `if` ? | **8** |
-| 6 | Si je tape 0, que fait le jeu de la séance 7 ? | il pose dans la **case 9** — le bug |
+| 5 | Combien d'espaces devant le **deuxième** `if` — et devant son `print` ? | **4**, puis **8** |
+| 6 | Si je tape 0, que dit le jeu de la séance 7 ? | *« la case 0 est déjà prise »* — **et c'est faux** : il refuse par accident |
 
 ---
 
@@ -146,14 +147,14 @@ else:                              else:
 | `SyntaxError` | `and` oublié entre deux conditions | « Lis ta ligne à voix haute : ça se dit ? » |
 | Tout est toujours refusé | `>=` et `<=` inversés | « Tu demandes une case **plus petite que 1** ? » |
 | `NameError: AND` | `AND` ou `ET` au lieu de `and` | « En minuscules, et en anglais » |
-| Le zéro repasse | `case >= 1` oublié | « Il manque une des trois questions. Laquelle ? » |
+| Le zéro redit « déjà prise » | `case >= 1` oublié | « Il manque une des trois questions. Laquelle ? » |
 
 **Carte bleue :** message différent selon la raison du refus (avec `or`) · compteur de coups refusés ·
 **compter les lignes gagnées** par rapport à la semaine dernière.
 
 ### 4.5 · 13 h 50 - 14 h — Clôture
 
-> « Votre jeu tient en deux fois moins de lignes. Mais pour jouer neuf tours, il faudrait **recopier
+> « Votre décision tient en deux fois moins de lignes. Mais pour jouer neuf tours, il faudrait **recopier
 > neuf fois** ce bloc. Samedi prochain, on apprend le mot qui dit **recommence**. C'est le plus grand
 > jour des deux mois. À samedi ! »
 

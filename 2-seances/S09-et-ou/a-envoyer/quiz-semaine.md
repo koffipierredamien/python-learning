@@ -45,7 +45,7 @@ téléphone. Comptez 20 minutes.
 
 Les questions portent sur les deux mots appris samedi : « and »
 (il faut tout) et « or » (il suffit d'un). Grâce à eux, notre jeu
-est devenu deux fois plus court.
+prend deux fois moins de place à l'endroit qui décide.
 
 Il aura sa note et les explications dès qu'il aura envoyé ses réponses.
 

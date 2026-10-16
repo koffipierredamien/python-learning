@@ -84,8 +84,10 @@ else:
 # =============================================================================
 #  CE QU'ON NE REPARE PAS AUJOURD'HUI, ET ON LE DIT
 # =============================================================================
-#  Tapez 0 devant eux. Le programme accepte, et le symbole se pose
-#  dans la derniere case (plateau[-1], la case 9).
+#  >>> A FAIRE AVANT L'ATELIER DU PROJET (le code n'a pas encore le
+#      test de la case libre). Tapez 0 devant eux : le programme
+#      accepte, et le symbole se pose dans la derniere case
+#      (plateau[-1], la case 9).
 #
 #    "Vous avez trouve un vrai bug. Pour le reparer proprement, il
 #     faudrait poser DEUX questions en meme temps : 'plus grand que 0
@@ -93,6 +95,14 @@ else:
 #     semaines. Notez le bug, on y revient."
 #
 #  >>> C'est la promesse de la seance 9. Tenez-la.
+#
+#  ATTENTION, A SAVOIR POUR VOUS :
+#  une fois le test de la case libre ecrit (l'atelier qui suit), le 0
+#  n'ira plus dans la case 9 : plateau[-1] contient "9", et "9" n'est
+#  pas "0", donc le jeu REFUSE -- en disant "la case 0 est deja prise".
+#  Le bug n'est pas repare : il est CACHE, et le message est faux.
+#  Si un eleve le remarque, felicitez-le tres fort : il a vu plus loin
+#  que le programme. C'est exactement ce qu'on repare a la seance 9.
 #
 #  LES ERREURS QUI VONT ARRIVER
 #   IndentationError ........ le deuxieme if non decale

@@ -129,13 +129,20 @@ s'annonce.)
 
 ### 4.3 · 13 h 10 - 13 h 20 — Je montre : le bug qu'on ne répare pas
 
-Tapez **0** devant eux. Le symbole se pose dans la **case 9**.
+**À faire maintenant, avant l'atelier du projet** — le code n'a pas encore le test de la case libre.
+Tapez **0** devant eux : le symbole se pose dans la **case 9**.
 
 > « Vous venez de trouver un vrai bug. Pour le réparer proprement, il faudrait poser **deux questions en
 > même temps** : *plus grand que 0* **ET** *plus petit que 10*. Ce mot-là, **ET**, on l'apprend dans deux
 > semaines. **Notez le bug** : on y revient. »
 
 **Tenez cette promesse** — c'est l'ouverture de la séance 9.
+
+> ⚠️ **À savoir pour vous, et à ne pas dire tout de suite.** Une fois le test de la case libre écrit
+> (l'atelier qui suit), **le `0` n'ira plus dans la case 9** : `plateau[-1]` contient `"9"`, qui n'est
+> pas `"0"`, donc le jeu **refuse** — en annonçant *« la case 0 est déjà prise »*.
+> **Le bug n'est pas réparé : il est caché, et le message ment.** Si un élève s'en aperçoit,
+> félicitez-le très fort devant tout le monde : il a vu plus loin que le programme.
 
 ### 4.4 · 13 h 20 - 13 h 50 — Vous faites : LE PROJET
 
@@ -195,4 +202,4 @@ Tapez **0** devant eux. Le symbole se pose dans la **case 9**.
 | **Séance suivante** | **TP n°2 — le plateau vivant**, 2 h en autonomie |
 | **Point de départ** | [`code/code_officiel_fin_de_seance.py`](code/code_officiel_fin_de_seance.py) |
 | **Ce qui est acquis** | la liste, l'indice, la pose, **le `if` dans le `if`** |
-| **Ce qui reste cassé, exprès** | **le bug du zéro** — réparé à la séance 9 |
+| **Ce qui reste cassé, exprès** | **le bug du zéro** : il ne pose plus dans la case 9, mais il est refusé *par accident*, avec le message faux « déjà prise ». Vraiment réparé à la séance 9 |
