@@ -49,11 +49,14 @@
 | **La veille** | [`code/live_coding_antiseche.py`](code/live_coding_antiseche.py) à voix haute, en entier |
 | **La veille** | Imprimer 8 × [`a-imprimer/1-aide-memoire.pdf`](a-imprimer/1-aide-memoire.pdf) |
 | **30 min avant** | `GEEKS/mon_xo/jeu.py` = [`code/depart_eleves.py`](code/depart_eleves.py) |
+| **30 min avant** | **[`a-projeter/quiz-rappel.pptx`](a-projeter/quiz-rappel.pptx)** ouvert en premier, le diaporama de la séance derrière |
 | **Au tableau** | `case libre  →  plateau[case - 1] == str(case)` |
 
 ---
 
 ## 3. Le quiz flash — 12 h 15, 7 minutes
+
+**Projetez [`a-projeter/quiz-rappel.pptx`](a-projeter/quiz-rappel.pptx)** — 14 diapos : une question par diapo, sa réponse juste après. **On avance d'une diapo seulement quand toutes les cartes sont levées.** Les six mêmes questions figurent aussi, en résumé, sur deux diapos du diaporama de la séance : c'est le plan de secours si vous ne pouvez ouvrir qu'un seul fichier.
 
 | | Question | Réponse |
 |---|---|---|

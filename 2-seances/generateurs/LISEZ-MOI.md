@@ -10,6 +10,7 @@ mieux changer une ligne et relancer que refaire la mise en page à la main.
 | Script | Ce qu'il écrit | Où |
 |---|---|---|
 | `aide_memoires.py` | les 5 aide-mémoires 1 page | `S06/S07/S09/S10/S11 · a-imprimer/` |
+| `quiz_rappel.js` + `donnees_quiz_rappel.js` | les 5 **quiz flash d'ouverture** (14 diapos : 1 question par diapo) | `S06/S07/S09/S10/S11 · a-projeter/` |
 | `decks.js` + `donnees_decks.js` | les 5 diaporamas de séance | `S06/S07/S09/S10/S11 · a-projeter/` |
 | `decks_tp.js` | les 2 diaporamas de TP | `S08/S12 · a-projeter/` |
 | `quiz_hebdo.py` + `quiz_5_6.py`, `quiz_7_8.py`, `quiz_9_10.py` | les 6 quiz de la semaine (`.gs`) | `S06/S07/S09/S10/S11/S12 · a-envoyer/` |
@@ -36,6 +37,7 @@ python3.13 -I build_exos.py        # exercices de maison : PDF + images
 python3.13 -I notices.py
 python3.13 -I quantites.py
 
+NODE_PATH=/chemin/vers/node_modules node donnees_quiz_rappel.js  # les 5 quiz flash
 NODE_PATH=/chemin/vers/node_modules node donnees_decks.js   # les 5 diaporamas
 NODE_PATH=/chemin/vers/node_modules node decks_tp.js        # les 2 diaporamas de TP
 
@@ -66,3 +68,9 @@ n'est vide, et que **la bonne réponse ne tombe jamais deux fois de suite au mê
 Si une anomalie apparaît dans la sortie, **le quiz ne part pas**.
 
 **Et chaque corrigé en `.py` est exécuté**, sur tous ses chemins, avant d'être publié.
+
+**Les six questions du quiz flash n'existent qu'à un seul endroit** :
+`donnees_quiz_rappel.js`. Le diaporama de la séance en reprend le résumé par
+`QF(numéro)` — il ne les recopie pas. Corriger une question, c'est donc la corriger partout.
+*(Il reste une troisième copie, à la main : le tableau du § 3 de la fiche de séance. Si vous
+changez une question, changez-la là aussi.)*

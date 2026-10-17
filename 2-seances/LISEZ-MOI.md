@@ -48,6 +48,8 @@ S02-premier-contact/
 │                          erreurs anticipées, plans de secours
 │
 ├── a-projeter/            ce qui passe au vidéoprojecteur
+│     quiz-rappel.pptx              le quiz flash d'ouverture : une question
+│                                   par diapo, sa réponse juste après
 │     seance-2-projection.pptx      le diaporama de la séance (28 diapos)
 │     quiz-seance-1.pptx            le quiz (32 diapos), joué en séance 2
 │     quiz-questions-et-reponses.md les 15 questions, réponses et explications

@@ -51,12 +51,14 @@
 | **La veille** | Refaire soi-même [`code/live_coding_antiseche.py`](code/live_coding_antiseche.py) à voix haute, en entier |
 | **La veille** | Imprimer : 8 × [`a-imprimer/1-aide-memoire.pdf`](a-imprimer/1-aide-memoire.pdf) |
 | **30 min avant** | Sur chaque poste : `GEEKS/mon_xo/jeu.py` = [`code/depart_eleves.py`](code/depart_eleves.py) · `GEEKS/xo_officiel/` fermé |
-| **30 min avant** | Thonny en taille 18 minimum, diaporama ouvert |
+| **30 min avant** | Thonny en taille 18 minimum · **[`a-projeter/quiz-rappel.pptx`](a-projeter/quiz-rappel.pptx)** ouvert en premier, le diaporama de la séance derrière |
 | **Au tableau, et on n'efface pas** | les deux rangées : `1 2 3 4 5 6 7 8 9` et en dessous `0 1 2 3 4 5 6 7 8` |
 
 ---
 
 ## 3. Le quiz flash — 12 h 15, 7 minutes
+
+**Projetez [`a-projeter/quiz-rappel.pptx`](a-projeter/quiz-rappel.pptx)** — 14 diapos : une question par diapo, sa réponse juste après. **On avance d'une diapo seulement quand toutes les cartes sont levées.** Les six mêmes questions figurent aussi, en résumé, sur deux diapos du diaporama de la séance : c'est le plan de secours si vous ne pouvez ouvrir qu'un seul fichier.
 
 Les cartes de couleur, comme d'habitude. **6 questions**, elles sont dans le diaporama.
 

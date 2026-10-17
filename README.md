@@ -44,7 +44,8 @@ rien avoir à écrire.**
 | Savoir où va le parcours | 🗺️ [**La carte des deux mois**](2-seances/PLAN-OCTOBRE-NOVEMBRE.md) — l'ordre, le calendrier, le tableau de bord de tous les fichiers |
 | Afficher au mur, **avant samedi** | 📌 [**L'affiche du trimestre**](2-seances/a-afficher/LISEZ-MOI.md) — les 7 samedis, une case à cocher par semaine, et le message aux familles |
 | Animer la séance de samedi | [📖 La fiche du jour](2-seances/S06-le-plateau-se-souvient/fiche-de-seance.md) — minute par minute |
-| Projeter | [📺 Le diaporama](2-seances/S06-le-plateau-se-souvient/a-projeter/seance-6-projection.pptx) |
+| Ouvrir la séance | [🎯 Le quiz flash](2-seances/S06-le-plateau-se-souvient/a-projeter/quiz-rappel.pptx) — 6 questions, 7 min, une question par diapo |
+| Projeter ensuite | [📺 Le diaporama de la séance](2-seances/S06-le-plateau-se-souvient/a-projeter/seance-6-projection.pptx) |
 | Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S06-le-plateau-se-souvient/code/live_coding_antiseche.py) — la veille, à voix haute |
 | Imprimer | [🖨️ La liste du jour](2-seances/S06-le-plateau-se-souvient/a-imprimer/quantites-et-formats.md) |
 | Donner l'exercice de maison, mercredi | 🔐 [**Le Coffre-Fort**](2-seances/S06-le-plateau-se-souvient/a-envoyer/exercice-maison.md) — 2 images ou 1 PDF, et sa correction |
