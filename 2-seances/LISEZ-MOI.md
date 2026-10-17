@@ -18,6 +18,10 @@ Une séance = un dossier. Tout ce qui la concerne est dedans, et rien d'autre.
 | **[S12 — TP n°3 : le tournoi](S12-tp-le-tournoi/fiche-de-seance.md)** · samedi 28 novembre 2026 | **Le jeu XO, fini et jouable** | finitions, tests, et **tournoi de classe** |
 | S13 à S22 | *à venir* | |
 
+> 📌 **[L'affiche du trimestre](a-afficher/LISEZ-MOI.md)** — une page A4 à imprimer **avant le
+> 17 octobre** et à laisser au mur jusqu'au 28 novembre : les sept samedis, une case à cocher
+> chaque semaine. Avec le message d'annonce aux familles.
+
 > 🗺️ **[Le parcours d'octobre et novembre](PLAN-OCTOBRE-NOVEMBRE.md)** — la carte des sept séances
 > ci-dessus : pourquoi cet ordre, le calendrier semaine par semaine, le tableau de bord de tous les
 > fichiers, et la routine des quatre gestes. **C'est par là qu'il faut commencer.**
@@ -61,6 +65,9 @@ S02-premier-contact/
 │     (à partir de la séance 5 : quiz-semaine.gs + quiz-semaine.md — 15 QCM
 │      corrigés à 100 % automatiquement, pour ceux qui n'ont pas d'ordinateur ;
 │      et exercice-maison.md + les images, le PDF et le corrigé, pour les autres)
+│     deroule-seance-N.docx / .pdf      le déroulé pour le responsable :
+│                                       pas de code, pas de jargon, il se
+│                                       transfère tel quel
 │
 └── code/                  ce qui tourne sur les machines
       depart_eleves.py   le fichier de l'élève

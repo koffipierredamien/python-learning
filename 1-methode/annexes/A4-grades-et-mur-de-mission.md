@@ -14,8 +14,8 @@ Un grade s'obtient en validant un **bloc de compétences**, avec les **3 preuves
 |---|---|---|---|
 | 🤍 **Novice** | Allumer, ouvrir Thonny, lancer un programme, afficher un message | 1–2 | Carte de membre de la guilde |
 | 💛 **Apprenti Codeur** | Utiliser des variables, demander une information au joueur, afficher un résultat | 4–5 | Autocollant / bracelet jaune |
-| 🧡 **Codeur** | Utiliser une liste, une condition, une boucle — **son jeu se joue à deux en console** | 8–9 | Bracelet orange + première démo publique |
-| 💚 **Ingénieur** | Écrire une fonction, détecter le gagnant, gérer les coups invalides, **déboguer seul** | 13 | Bracelet vert + nom sur le Mur des Ingénieurs |
+| 🧡 **Codeur** | Utiliser une liste, une condition, une boucle — **son jeu se joue à deux en console** | 10–12 | Bracelet orange + première démo publique |
+| 💚 **Ingénieur** | Détecter le gagnant, gérer les coups invalides, écrire une fonction, **déboguer seul** | 12–14 | Bracelet vert + nom sur le Mur des Ingénieurs |
 | 💙 **Architecte** | Construire une interface graphique, gérer les clics, organiser son code en modules | 18 | Bracelet bleu |
 | 🖤 **Maître Geek** | Jeu complet, personnalisé, distribuable — *et* avoir aidé un camarade à finir le sien | 22 | Diplôme remis devant les familles |
 
@@ -32,9 +32,25 @@ Un grade s'obtient en validant un **bloc de compétences**, avec les **3 preuves
 Une grande affiche murale : le parcours du projet en 22 cases, sous forme de **carte au trésor** (Jerusalem Geeks) ou de **feuille de route de projet / carte de mission spatiale** (Jeremiah Geeks — les ados n'accrochent pas au trésor).
 
 - Chaque case porte le nom de la brique : *« le jeu dit bonjour »*, *« le plateau s'affiche »*, *« on peut jouer un coup »*, *« l'ordinateur sait qui a gagné »*…
+
+**Les sept cases d'octobre et novembre**, à écrire telles quelles sur l'affiche — elles sont formulées du point de vue du joueur, pas de celui du programmeur :
+
+| Séance | La case du Mur |
+|---|---|
+| **S6** · 17 oct | *« le plateau se souvient »* |
+| **S7** · 24 oct | *« on ne joue pas deux fois au même endroit »* |
+| **S8** · 31 oct | *« quatre coups d'affilée, sans bug »* |
+| **S9** · 7 nov | *« le jeu pose une seule question »* |
+| **S10** · 14 nov | *« le jeu tourne tout seul »* |
+| **S11** · 21 nov | *« le jeu sait qui gagne »* |
+| **S12** · 28 nov | *« on a fait un tournoi »* |
+
+> Les cases S6 à S12 sont **collées au mur dès le 17 octobre, vides**. Voir les sept d'un coup, et
+> en cocher une chaque samedi, est ce qui donne aux élèves le sentiment d'avancer — davantage que
+> de découvrir le titre de la séance le jour même.
 - **La classe entière** avance d'une case en fin de séance, jamais un élève seul.
 - Une photo du groupe ou une capture d'écran du jeu est collée sur chaque case franchie.
-- Les grands rendez-vous sont dessinés comme des **étapes phares** : S9 première démo, S15 concours de design, S19 Nuit du bug, S22 tournoi et remise des diplômes.
+- Les grands rendez-vous sont dessinés comme des **étapes phares** : S10 le jeu tourne tout seul, S12 tournoi de classe, S15 concours de design, S18 la Nuit du bug, S22 tournoi et remise des diplômes.
 
 **Pourquoi collectif :** cela transforme l'élève rapide en ressource pour le groupe (« on avance quand tout le monde a sa brique ») au lieu d'en faire un concurrent. C'est le principal antidote à la classe à deux vitesses.
 
@@ -59,8 +75,9 @@ Chaque séance, quatre rôles sont attribués. Ils tournent, et **chaque élève
 
 | Séance | Événement | Pourquoi il est là |
 |---|---|---|
-| **S8** | **Première démo** — le jeu se joue à deux, en console. Les élèves jouent contre les enseignants | Concrétise 2 mois de travail juste avant le creux de motivation |
-| **S14** | **Concours de design** — chacun personnalise son plateau, vote de la classe, plusieurs catégories pour multiplier les gagnants | Ouvre la phase graphique, la plus spectaculaire |
+| **S10** | **Le jeu tourne tout seul** — la première partie complète est jouée devant la classe | Le programme est plus court que la semaine d'avant et fait quatre fois plus : la démonstration se fait toute seule |
+| **S12** | **Tournoi de classe** — chacun joue sur le programme qu'il a écrit, le perdant arbitre le match suivant | Concrétise 2 mois de travail juste avant le creux de motivation. Personne n'est spectateur |
+| **S15** | **Concours de design** — chacun personnalise son plateau, vote de la classe, plusieurs catégories pour multiplier les gagnants | Ouvre la phase graphique, la plus spectaculaire |
 | **S18** | **La Nuit du bug** — les enseignants distribuent des versions du jeu volontairement cassées ; les équipes réparent en temps limité | Transforme le débogage — la compétence la plus difficile — en jeu |
 | **S22** | **Tournoi XO + démo aux familles** — les élèves font jouer leurs parents à leur propre programme, remise des diplômes, chacun repart avec son jeu | Donne un sens à tout le parcours, et une fierté qui dure |
 

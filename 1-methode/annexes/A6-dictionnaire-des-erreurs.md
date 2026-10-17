@@ -38,14 +38,17 @@ La version à imprimer, avec la colonne à cocher : **[`dictionnaire-des-erreurs
 | ☐ | `IndentationError: expected an indented block` | « Après les deux-points, il faut décaler » | Je décale la ligne de **4 espaces** | S4 |
 | ☐ | `IndentationError: unexpected indent` | « Cette ligne est décalée sans raison » | Je la remets au bord | S4 |
 | ☐ | `TabError` | « Tu mélanges tabulations et espaces » | J'efface le début de la ligne et je remets **4 espaces** | S4 |
+| ☐ | `IndentationError` sur le **deuxième** `if` | « Celui-là doit être dans le `else` du premier » | **4 espaces** pour le deuxième `if`, **8** pour ce qu'il contient | S7 |
 
 ## 4. Les listes et le plateau
 
 | ✓ | Ce que l'ordinateur écrit | Ce qu'il veut dire | Ce que je fais | Vers |
 |---|---|---|---|---|
-| ☐ | `IndexError: list index out of range` | « Cette case n'existe pas » | Une liste de 9 cases va de **0 à 8**, pas de 1 à 9 | S8 |
-| ☐ | `TypeError: 'int' object is not subscriptable` | « Ça, ce n'est pas une liste » | Je vérifie que la variable contient bien une liste | S8 |
-| ☐ | Le plateau ne change pas | J'ai modifié une copie, pas la liste elle-même | Je modifie directement `plateau[i]` | S9 |
+| ☐ | `IndexError: list index out of range` | « Cette case n'existe pas » | Une liste de 9 cases va de **0 à 8**, pas de 1 à 9 | S6 |
+| ☐ | `TypeError: 'int' object is not subscriptable` | « Ça, ce n'est pas une liste » | Je vérifie que la variable contient bien une liste | S6 |
+| ☐ | Le plateau ne change pas | J'ai modifié une copie, pas la liste elle-même | Je modifie directement `plateau[i]` | S6 |
+| ☐ | **Aucun message, mais le symbole se pose à côté** | Le `- 1` a été oublié : `plateau[case]` au lieu de `plateau[case - 1]` | **Le plus traître de tous : l'ordinateur ne dit rien.** On le trouve en jouant, pas en relisant | S6 |
+| ☐ | **Je tape 0 et le symbole part dans la case 9** | `0 - 1` vaut `-1`, et `-1` désigne la **dernière** case | Anomalie laissée exprès jusqu'à la séance 9, où `case >= 1` la supprime | S6 |
 
 ## 5. Les conditions, les boucles et les fonctions
 
@@ -53,8 +56,16 @@ La version à imprimer, avec la colonne à cocher : **[`dictionnaire-des-erreurs
 |---|---|---|---|---|
 | ☐ | `SyntaxError` sur un `if` | J'ai écrit `=` au lieu de `==`, ou j'ai oublié les deux-points | `=` **range dans**, `==` **compare** | S4 |
 | ☐ | Les **deux** messages s'affichent | Mes deux `print` sont dans le `if`, aucun dans le `else` | Je relis le décalage : un dans le `if`, un dans le `else` | S4 |
-| ☐ | Le programme ne s'arrête plus | Boucle sans fin : la condition reste vraie | `Ctrl + C` dans la zone du bas, puis je corrige ce qui doit changer dans la boucle | S11 |
-| ☐ | `TypeError: … missing 1 required positional argument` | « Il manque quelque chose entre les parenthèses » | Je regarde ce que la fonction attend | S12 |
+| ☐ | `SyntaxError` sur une condition longue | Il manque un `and` entre deux questions | Je relis ma ligne **à voix haute** : est-ce que ça se dit ? | S9 |
+| ☐ | `NameError: name 'AND' is not defined` | J'ai écrit `AND` ou `ET` | En **minuscules**, et en anglais : `and`, `or` | S9 |
+| ☐ | **La condition est toujours fausse** | `>=` et `<=` sont inversés | « Tu demandes une case plus petite que 1 ? » | S9 |
+| ☐ | **« Case déjà prise » pour une case qui n'existe pas** | Il manque le `case >= 1` au début de la condition | Le message ment : il refuse par accident. Les **trois** questions doivent être là | S9 |
+| ☐ | Le programme ne s'arrête plus | Boucle sans fin : la condition reste vraie | `Ctrl + C` dans la zone du bas, puis je corrige ce qui doit changer dans la boucle | S10 |
+| ☐ | **Le programme ne tourne qu'une seule fois** | Ce qui doit se répéter n'est pas décalé sous le `while` | Tout ce qui se répète est décalé de **4 espaces** | S10 |
+| ☐ | **Le joueur change même quand le coup est refusé** | L'échange des symboles est hors du `if` du coup valide | Je le rentre **dans** le `if`, avec le compteur | S10 |
+| ☐ | **Le gagnant s'appelle « 5 »** | Les alignements sont vérifiés **avant** la pose du symbole | Je place le bloc des 8 `if` **juste après** la pose | S11 |
+| ☐ | **Toujours match nul, même avec trois alignés** | Le bloc des 8 `if` est **après** la boucle | Il doit être **dedans**, vérifié à chaque coup | S11 |
+| ☐ | `TypeError: … missing 1 required positional argument` | « Il manque quelque chose entre les parenthèses » | Je regarde ce que la fonction attend | S13 |
 | ☐ | `UnboundLocalError` | « Tu utilises une variable avant de lui donner une valeur » | Je crée la variable avant de m'en servir | S13 |
 | ☐ | `TypeError: 'str' object is not callable` | J'ai donné à une variable le nom d'une commande | Je renomme ma variable (jamais `print`, `list`, `str`…) | S13 |
 

@@ -11,11 +11,18 @@ Les onglets de suivi ont été ajoutés à la suite :
 |---|---|
 | **Présence** | Les 22 séances. `P` présent · `R` retard · `E` excusé · `A` absent. Le taux se calcule seul et passe en rouge sous 85 % |
 | **Diagnostic** | Le Test de Décollage : pilotage /6, logique /4, profil P0→P3. **Interne : jamais communiqué aux élèves ni aux familles** |
-| **Suivi** | Ce que chaque élève a produit à chaque séance, et les défis ⭐ qu'il a faits. **Colonne ALERTE automatique** |
+| **Suivi** | Ce que chaque élève a produit à chaque séance. `Validée` · `Validée +` (brique **et** un défi ⭐) · `Partielle` · `Rien`. **Colonne ALERTE automatique** |
 | **Observations** | Le journal : un fait marquant, l'action décidée, et si elle a été faite |
 | **Journal** | La revue d'après-séance. **Une ligne par séance ET par classe** : chaque enseignant remplit la sienne |
 | **Indiscipline** | Le registre demandé par le responsable : un fait par ligne, la sanction, et le **compteur d'avertissements par apprenant** |
-| **Révisions maison** | Ce qui revient du **formulaire Google** envoyé en semaine. `O` = a répondu · `N` = rien reçu |
+| **Révisions maison** | Ce qui revient du travail envoyé le mercredi, **sous l'une ou l'autre de ses deux formes** (exercice sur ordinateur, ou quiz sur téléphone). `O` = a répondu · `N` = rien reçu · vide = pas de travail cette semaine-là |
+
+> **Mise à jour d'octobre 2026.** L'onglet `Suivi` ne parle plus de « pistes » : le système des trois
+> pistes a été abandonné, il n'y a plus qu'un seul exercice pour tous. La liste déroulante propose
+> désormais `Validée` / `Validée +` / `Partielle` / `Rien`, et la colonne `Briques` les compte comme
+> avant. L'onglet `Diagnostic` a suivi : la colonne « Piste conseillée » est devenue
+> **« Soutien prévu »** et propose *Accompagnement rapproché*, *Suivi normal* ou
+> *Geek Mentor pressenti*.
 
 ### Les points transmis au responsable
 

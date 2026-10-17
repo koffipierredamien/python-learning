@@ -1,5 +1,5 @@
 # =====================================================
-#  JEU XO  -  Seance 2  -  PISTE BLEUE
+#  JEU XO  -  Seance 2  -  le fichier de depart
 #  1) Mon ecran d'accueil      2) Le jeu demande ton nom
 # =====================================================
 #

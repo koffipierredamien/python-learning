@@ -85,7 +85,8 @@ fiche-de-seance.md      LA RÉFÉRENCE : le déroulé minute par minute, les phr
                         les erreurs qui vont arriver, et les plans de secours
 a-projeter/             le diaporama de la séance (quiz flash de début compris)
 a-imprimer/             l'aide-mémoire 1 page + la liste de ce qu'il faut imprimer
-a-envoyer/              le quiz de la semaine (.gs à coller + sa notice .md) et,
+a-envoyer/              le déroulé de la séance pour le responsable (Word et PDF) ·
+                        le quiz de la semaine (.gs à coller + sa notice .md) · et,
                         trois semaines sur sept, l'exercice de maison et son corrigé
 code/                   depart_eleves.py · code_officiel_fin_de_seance.py ·
                         live_coding_antiseche.py
@@ -96,19 +97,26 @@ distribué à tout le monde, fini ou pas. Personne ne commence la séance suivan
 
 ### Le tableau de bord — chaque fichier, à sa place
 
-| Séance | La fiche | À projeter | À imprimer | À envoyer le mercredi |
-|---|---|---|---|---|
-| **6** · 17 oct | [fiche](S06-le-plateau-se-souvient/fiche-de-seance.md) | [diaporama](S06-le-plateau-se-souvient/a-projeter/seance-6-projection.pptx) | [aide-mémoire](S06-le-plateau-se-souvient/a-imprimer/1-aide-memoire.pdf) · [quantités](S06-le-plateau-se-souvient/a-imprimer/quantites-et-formats.md) | [quiz n°5](S06-le-plateau-se-souvient/a-envoyer/quiz-semaine.md) · [🔐 Le Coffre-Fort](S06-le-plateau-se-souvient/a-envoyer/exercice-maison.md) |
-| **7** · 24 oct | [fiche](S07-la-case-occupee/fiche-de-seance.md) | [diaporama](S07-la-case-occupee/a-projeter/seance-7-projection.pptx) | [aide-mémoire](S07-la-case-occupee/a-imprimer/1-aide-memoire.pdf) · [quantités](S07-la-case-occupee/a-imprimer/quantites-et-formats.md) | [quiz n°6](S07-la-case-occupee/a-envoyer/quiz-semaine.md) |
-| **8** · 31 oct | [fiche TP](S08-tp-le-plateau/fiche-de-seance.md) | [diaporama](S08-tp-le-plateau/a-projeter/seance-8-projection.pptx) | [TP élève](S08-tp-le-plateau/a-imprimer/1-tp2-eleve.pdf) · [corrigé](S08-tp-le-plateau/a-imprimer/2-corrige-tp2.pdf) · [quantités](S08-tp-le-plateau/a-imprimer/quantites-et-formats.md) | *rien* |
-| **9** · 7 nov | [fiche](S09-et-ou/fiche-de-seance.md) | [diaporama](S09-et-ou/a-projeter/seance-9-projection.pptx) | [aide-mémoire](S09-et-ou/a-imprimer/1-aide-memoire.pdf) · [quantités](S09-et-ou/a-imprimer/quantites-et-formats.md) | [quiz n°7](S09-et-ou/a-envoyer/quiz-semaine.md) · [🕶️ La Soirée du Club Geek](S09-et-ou/a-envoyer/exercice-maison.md) |
-| **10** · 14 nov | [fiche](S10-la-boucle/fiche-de-seance.md) | [diaporama](S10-la-boucle/a-projeter/seance-10-projection.pptx) | [aide-mémoire](S10-la-boucle/a-imprimer/1-aide-memoire.pdf) · [quantités](S10-la-boucle/a-imprimer/quantites-et-formats.md) | [quiz n°8](S10-la-boucle/a-envoyer/quiz-semaine.md) · [🥤 Le Distributeur](S10-la-boucle/a-envoyer/exercice-maison.md) |
-| **11** · 21 nov | [fiche](S11-le-gagnant/fiche-de-seance.md) | [diaporama](S11-le-gagnant/a-projeter/seance-11-projection.pptx) | [aide-mémoire](S11-le-gagnant/a-imprimer/1-aide-memoire.pdf) · [quantités](S11-le-gagnant/a-imprimer/quantites-et-formats.md) | [quiz n°9](S11-le-gagnant/a-envoyer/quiz-semaine.md) |
-| **12** · 28 nov | [fiche TP](S12-tp-le-tournoi/fiche-de-seance.md) | [diaporama](S12-tp-le-tournoi/a-projeter/seance-12-projection.pptx) | [TP élève](S12-tp-le-tournoi/a-imprimer/1-tp3-eleve.pdf) · [corrigé](S12-tp-le-tournoi/a-imprimer/2-corrige-tp3.pdf) | [quiz n°10 — bilan](S12-tp-le-tournoi/a-envoyer/quiz-semaine.md) |
+| Séance | La fiche | À projeter | À imprimer | À envoyer le mercredi | Pour le responsable |
+|---|---|---|---|---|---|
+| **6** · 17 oct | [fiche](S06-le-plateau-se-souvient/fiche-de-seance.md) | [diaporama](S06-le-plateau-se-souvient/a-projeter/seance-6-projection.pptx) | [aide-mémoire](S06-le-plateau-se-souvient/a-imprimer/1-aide-memoire.pdf) · [quantités](S06-le-plateau-se-souvient/a-imprimer/quantites-et-formats.md) | [quiz n°5](S06-le-plateau-se-souvient/a-envoyer/quiz-semaine.md) · [🔐 Le Coffre-Fort](S06-le-plateau-se-souvient/a-envoyer/exercice-maison.md) | [déroulé](S06-le-plateau-se-souvient/a-envoyer/deroule-seance-6.pdf) · [Word](S06-le-plateau-se-souvient/a-envoyer/deroule-seance-6.docx) |
+| **7** · 24 oct | [fiche](S07-la-case-occupee/fiche-de-seance.md) | [diaporama](S07-la-case-occupee/a-projeter/seance-7-projection.pptx) | [aide-mémoire](S07-la-case-occupee/a-imprimer/1-aide-memoire.pdf) · [quantités](S07-la-case-occupee/a-imprimer/quantites-et-formats.md) | [quiz n°6](S07-la-case-occupee/a-envoyer/quiz-semaine.md) | [déroulé](S07-la-case-occupee/a-envoyer/deroule-seance-7.pdf) · [Word](S07-la-case-occupee/a-envoyer/deroule-seance-7.docx) |
+| **8** · 31 oct | [fiche TP](S08-tp-le-plateau/fiche-de-seance.md) | [diaporama](S08-tp-le-plateau/a-projeter/seance-8-projection.pptx) | [TP élève](S08-tp-le-plateau/a-imprimer/1-tp2-eleve.pdf) · [corrigé](S08-tp-le-plateau/a-imprimer/2-corrige-tp2.pdf) · [quantités](S08-tp-le-plateau/a-imprimer/quantites-et-formats.md) | *rien* | [déroulé](S08-tp-le-plateau/a-envoyer/deroule-seance-8.pdf) · [Word](S08-tp-le-plateau/a-envoyer/deroule-seance-8.docx) |
+| **9** · 7 nov | [fiche](S09-et-ou/fiche-de-seance.md) | [diaporama](S09-et-ou/a-projeter/seance-9-projection.pptx) | [aide-mémoire](S09-et-ou/a-imprimer/1-aide-memoire.pdf) · [quantités](S09-et-ou/a-imprimer/quantites-et-formats.md) | [quiz n°7](S09-et-ou/a-envoyer/quiz-semaine.md) · [🕶️ La Soirée du Club Geek](S09-et-ou/a-envoyer/exercice-maison.md) | [déroulé](S09-et-ou/a-envoyer/deroule-seance-9.pdf) · [Word](S09-et-ou/a-envoyer/deroule-seance-9.docx) |
+| **10** · 14 nov | [fiche](S10-la-boucle/fiche-de-seance.md) | [diaporama](S10-la-boucle/a-projeter/seance-10-projection.pptx) | [aide-mémoire](S10-la-boucle/a-imprimer/1-aide-memoire.pdf) · [quantités](S10-la-boucle/a-imprimer/quantites-et-formats.md) | [quiz n°8](S10-la-boucle/a-envoyer/quiz-semaine.md) · [🥤 Le Distributeur](S10-la-boucle/a-envoyer/exercice-maison.md) | [déroulé](S10-la-boucle/a-envoyer/deroule-seance-10.pdf) · [Word](S10-la-boucle/a-envoyer/deroule-seance-10.docx) |
+| **11** · 21 nov | [fiche](S11-le-gagnant/fiche-de-seance.md) | [diaporama](S11-le-gagnant/a-projeter/seance-11-projection.pptx) | [aide-mémoire](S11-le-gagnant/a-imprimer/1-aide-memoire.pdf) · [quantités](S11-le-gagnant/a-imprimer/quantites-et-formats.md) | [quiz n°9](S11-le-gagnant/a-envoyer/quiz-semaine.md) | [déroulé](S11-le-gagnant/a-envoyer/deroule-seance-11.pdf) · [Word](S11-le-gagnant/a-envoyer/deroule-seance-11.docx) |
+| **12** · 28 nov | [fiche TP](S12-tp-le-tournoi/fiche-de-seance.md) | [diaporama](S12-tp-le-tournoi/a-projeter/seance-12-projection.pptx) | [TP élève](S12-tp-le-tournoi/a-imprimer/1-tp3-eleve.pdf) · [corrigé](S12-tp-le-tournoi/a-imprimer/2-corrige-tp3.pdf) | [quiz n°10 — bilan](S12-tp-le-tournoi/a-envoyer/quiz-semaine.md) | [déroulé](S12-tp-le-tournoi/a-envoyer/deroule-seance-12.pdf) · [Word](S12-tp-le-tournoi/a-envoyer/deroule-seance-12.docx) |
 
 **Les trois exercices de maison** existent en **deux images A4** (à envoyer par message) **et en PDF**
 (pour ceux qui impriment), avec **le corrigé en images, en PDF et en `.py`**.
 **Le corrigé ne part qu'après le retour des copies.**
+
+### À faire une seule fois, avant le 17 octobre
+
+**Imprimer et afficher [l'affiche du trimestre](a-afficher/LISEZ-MOI.md)** — une page A4 qui porte les
+sept samedis, avec une case à cocher et un emplacement pour la photo de chaque séance. Elle est
+affichée **vide** dès le premier jour : c'est elle qui fait sentir aux élèves qu'ils avancent.
+La même page contient **le message à envoyer aux familles** pour annoncer les deux mois.
 
 ### La routine de la semaine, en quatre gestes
 
@@ -119,6 +127,11 @@ distribué à tout le monde, fini ou pas. Personne ne commence la séance suivan
    puis remplir le Journal (3 lignes) et le classeur de suivi.
 4. **Le mercredi** — envoyer le quiz (et l'exercice de maison, les semaines où il y en a un).
    **N'oubliez pas les quatre clics de l'étape 5** : sans eux, l'élève ne voit ni note ni correction.
+
+> **Pour la direction**, rien à rédiger : le déroulé de chaque séance existe en Word et en PDF dans
+> `a-envoyer/`, dans un registre administratif, sans code et sans jargon — il se transfère tel quel.
+> Le programme d'ensemble des deux mois est, lui, dans
+> [`3-suivi/points-au-responsable/programme-octobre-novembre.pdf`](../3-suivi/points-au-responsable/programme-octobre-novembre.pdf).
 
 ---
 

@@ -16,6 +16,9 @@ mieux changer une ligne et relancer que refaire la mise en page à la main.
 | `exos_maison.py` + `donnees_exos.py` + `build_exos.py` | les 3 exercices de maison : feuille élève et corrigé, en **HTML → PDF → images** | `S06/S09/S10 · a-envoyer/` |
 | `notices.py` | les 6 `quiz-semaine.md` (réglages, message aux parents) | `*/a-envoyer/` |
 | `quantites.py` | les 5 `quantites-et-formats.md` des séances de cours | `*/a-imprimer/` |
+| `deroules.py` + `deroules_donnees.py` | les 7 **déroulés pour le responsable** (Word) | `S06…S12 · a-envoyer/` |
+| `programme_responsable.py` | le **programme des deux mois** (Word) | `3-suivi/points-au-responsable/` |
+| `affiche.py` | **l'affiche du trimestre** : HTML → PDF → image | `2-seances/a-afficher/` |
 
 > `S08` et `S12` (les deux TP) ont des documents écrits à la main, pas générés :
 > leurs `.html` sont dans `a-imprimer/sources/`.
@@ -35,10 +38,23 @@ python3.13 -I quantites.py
 
 NODE_PATH=/chemin/vers/node_modules node donnees_decks.js   # les 5 diaporamas
 NODE_PATH=/chemin/vers/node_modules node decks_tp.js        # les 2 diaporamas de TP
+
+python3.13 -I deroules.py              # les 7 déroulés (Word)
+python3.13 -I programme_responsable.py # le programme des deux mois (Word)
+python3.13 -I affiche.py               # l'affiche du trimestre
+
+# les .docx se convertissent en PDF avec :
+libreoffice --headless --convert-to pdf --outdir <dossier> <fichier>.docx
 ```
 
-**Il faut :** `python3.13` avec **PyMuPDF** (`pip install pymupdf`), **Chromium** (le chemin est en
-haut de `exos_maison.py` et `aide_memoires.py`) et **Node** avec
+> Le **dictionnaire des erreurs** a son propre générateur, rangé avec lui :
+> [`1-methode/annexes/sources/dictionnaire.py`](../../1-methode/annexes/sources/dictionnaire.py).
+> Il reconstruit le tableau imprimable **à partir de l'annexe A6**, pour que les deux ne divergent
+> jamais : on corrige le `.md`, on relance, et le PDF suit.
+
+**Il faut :** `python3.13` avec **PyMuPDF** (`pip install pymupdf`) et **python-docx**
+(`pip install python-docx`), **Chromium** (le chemin est en haut de `exos_maison.py` et
+`aide_memoires.py`), **LibreOffice** pour les PDF des déroulés, et **Node** avec
 **[pptxgenjs](https://gitbrent.github.io/PptxGenJS/)** (`npm install pptxgenjs`).
 
 ## La règle qu'on ne contourne pas

@@ -44,13 +44,15 @@ Cette annexe ne garde donc que les deux modèles qui n'ont pas de version imprim
 ```
 Bonjour à tous 👋
 
-Séance 7 des Jerusalem Geeks aujourd'hui !
+Séance 10 des Jeremiah Geeks aujourd'hui !
 
-✅ Ce qu'on a appris : les boucles — comment demander à
+✅ Ce qu'on a appris : la boucle — comment demander à
    l'ordinateur de répéter quelque chose sans le réécrire.
 
-🎮 Ce que leur jeu sait faire maintenant : les deux joueurs
-   jouent chacun leur tour, et le plateau se met à jour.
+🎮 Ce que leur jeu sait faire maintenant : les neuf tours
+   s'enchaînent tout seuls, et les deux joueurs alternent.
+   Leur programme est PLUS COURT que la semaine dernière,
+   et il fait quatre fois plus de choses.
 
 Bravo à tous : chacun est reparti avec sa brique.
 

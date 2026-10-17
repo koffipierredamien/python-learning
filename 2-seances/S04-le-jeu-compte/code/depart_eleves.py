@@ -1,5 +1,5 @@
 # =====================================================
-#  JEU XO  -  Seance 4  -  PISTE BLEUE
+#  JEU XO  -  Seance 4  -  le fichier de depart
 #  Le jeu verifie et compte
 # =====================================================
 #
