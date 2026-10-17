@@ -1,0 +1,215 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Exercice de maison — La Bataille Navale</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+
+  body{font-size:9.3pt;padding:6mm 8mm 4mm}
+  .band{background:#12122a;color:#fff;border-radius:3mm;padding:3.2mm 5mm;margin-bottom:2.8mm}
+  .band .k{font-size:9pt;letter-spacing:1.2pt;color:#ffb74d;font-weight:bold}
+  .band h1{font-size:19pt;margin:1mm 0 1.2mm}
+  .band .s{font-size:9.9pt;color:#a8a8c0;line-height:1.4}
+  .band .f{font-family:"Courier New",monospace;background:#20204a;color:#4fc3f7;
+           padding:.8mm 2.2mm;border-radius:1.4mm;display:inline-block;margin-top:1.8mm;font-size:9.8pt}
+  .regle{background:#6b2d8f;color:#fff;border-radius:2.6mm;padding:2.6mm 4mm;
+         margin-bottom:2.8mm;font-size:9.7pt;line-height:1.4}
+  .row{display:flex;gap:3mm;margin-bottom:2.8mm}
+  .goal{flex:1.1;border:.6mm solid #2fb765;border-radius:2.6mm;overflow:hidden}
+  .goal .t{background:#2fb765;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.8pt}
+  .goal pre{margin:0;padding:2.2mm 2.6mm;font-family:"Courier New",monospace;font-size:7.2pt;
+            line-height:1.3;background:#f2faf5;white-space:pre}
+  .goal b{color:#0c5c29}
+  .kit{flex:1;border:.6mm solid #d79a00;border-radius:2.6mm;overflow:hidden;background:#fffaf0}
+  .kit .t{background:#d79a00;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.8pt}
+  .kit .b{padding:2mm 2.6mm;font-size:8.1pt;line-height:1.34}
+  .kit .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.4mm 1mm}
+  .kit hr{border:0;border-top:.3mm dashed #d79a00;margin:1.5mm 0}
+  .st{border:.5mm solid #14142b;border-radius:2.6mm;margin-bottom:2.2mm;overflow:hidden;page-break-inside:avoid}
+  .st .h{background:#14142b;color:#fff;padding:1.1mm 3mm;font-size:10.4pt;font-weight:bold;
+         display:flex;gap:2.6mm;align-items:center}
+  .st .h .n{background:#ffb74d;color:#14142b;border-radius:50%;width:6mm;height:6mm;line-height:6mm;
+            text-align:center;font-size:10pt;display:inline-block}
+  .st .c{padding:1.9mm 2.6mm;line-height:1.34}
+  .st .c ul{margin:0;padding-left:5mm}.st .c li{margin-bottom:.9mm}
+  .bloc{font-family:"Courier New",monospace;font-size:8.2pt;background:#12122a;color:#4fc3f7;
+        padding:1.7mm 2.6mm;border-radius:1.6mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+  .bloc i{color:#ffb74d;font-style:normal}
+  .tip{color:#6b2d8f;font-weight:bold}
+  .fin{background:#f3f3f8;border-left:3mm solid #6b2d8f;border-radius:2mm;
+       padding:2.3mm 3mm;font-size:9pt;line-height:1.36}
+  .suite{background:#12122a;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+         font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+  .suite span{color:#ffb74d;font-weight:normal;font-size:9.4pt}
+.goal pre{font-size:6.8pt;line-height:1.25}.kit .b{font-size:7.7pt;line-height:1.3}.kit hr{margin:1.2mm 0}.regle{font-size:9.3pt}</style></head><body>
+<div class="band">
+  <div class="k">EXERCICE RENFORCÉ · JEREMIAH GEEKS · SEMAINE DU 17 OCTOBRE</div>
+  <h1>🚢 LA BATAILLE NAVALE</h1>
+  <div class="s">La version <b style="color:#fff">difficile</b> de la semaine, avec
+      <b style="color:#fff">exactement les mêmes outils</b> que Le Coffre-Fort — pas une notion de plus.
+      Huit cases, <b style="color:#fff">trois bateaux cachés</b>, quatre tirs, et une idée neuve&nbsp;:
+      <b style="color:#fff">une boîte témoin</b> qui retient ce qui vient de se passer.</div>
+  <div class="f">Thonny → Fichier → Nouveau → Enregistrer sous :  navale_tonprenom.py</div>
+</div>
+<div class="regle">🎯 <b>La règle du jeu :</b> joueur 2 cache <b>trois bateaux</b> dans trois cases
+      différentes, de 1 à 8. Joueur 1 a <b>quatre tirs</b>. Un bateau touché vaut <b>+30</b>,
+      un tir dans l'eau coûte <b>−10</b>. La mer garde la trace&nbsp;: <b>X</b> pour un bateau coulé,
+      <b>o</b> pour un trou dans l'eau.</div>
+<div class="row">
+  <div class="goal"><div class="t">✅ CE QUE TON PROGRAMME DOIT FAIRE</div>
+<pre>========================================
+           LA BATAILLE NAVALE
+========================================
+ 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+
+Joueur 1, ferme les yeux !
+Joueur 2, premier bateau  (1 a 8) ? <b>2</b>
+Joueur 2, deuxieme bateau (1 a 8) ? <b>5</b>
+Joueur 2, troisieme bateau (1 a 8) ? <b>7</b>
+
+========================================
+   Joueur 1, tu peux regarder !
+   3 bateaux caches. Tu as 4 tirs.
+========================================
+Tir 1 - quelle case ? <b>2</b>
+   TOUCHE ! Un bateau coule.
+
+ 1 | X | 3 | 4 | 5 | 6 | 7 | 8
+ Score : 30   Bateaux coules : 1 / 3
+
+Tir 2 - quelle case ? <b>1</b>
+   PLOUF ! Rien que de l'eau.
+
+ o | X | 3 | 4 | 5 | 6 | 7 | 8
+ Score : 20   Bateaux coules : 1 / 3
+
+   ( ... les tirs 3 et 4 : 5 puis 7 ... )
+
+========================================
+Les bateaux etaient en 2, 5 et 7.
+Score final : 80
+
+FLOTTE COULEE. Tu es AMIRAL !
+Et quel tir ! Score de professionnel.
+========================================</pre></div>
+  <div class="kit"><div class="t">🧰 LA BOÎTE À OUTILS</div>
+    <div class="b"><b>La mer, c'est une liste de HUIT :</b><br>
+      <span class="m">mer = ["1", "2", ..., "8"]</span><br>
+      donc les indices vont de <b>0 à 7</b>.
+      <hr>
+      <b>Marquer une case :</b><br>
+      <span class="m">mer[tir - 1] = "X"</span>
+      <hr>
+      🆕 <b>LA BOÎTE TÉMOIN.</b> Elle retient si quelque chose
+      s'est passé&nbsp;:<br>
+      <span class="m">touche = 0</span> &nbsp;avant de poser les questions<br>
+      <span class="m">touche = 1</span> &nbsp;si on a trouvé un bateau<br>
+      puis <span class="m">if touche == 1:</span> pour décider.
+      <hr>
+      <b>Trois <span class="m">if</span> à la suite</b>, collés à gauche l'un sous l'autre.
+      Ils ne s'empêchent pas&nbsp;: Python les lit tous les trois.
+      <hr>
+      <b>DEUX compteurs qui avancent ensemble :</b><br>
+      <span class="m">score = score + 30</span> ou <span class="m">score = score - 10</span><br>
+      <span class="m">touches = touches + 1</span>
+      <hr>
+      <span class="m">int()</span> pour les cases, <span class="m">str()</span> pour les afficher.</div>
+  </div>
+</div>
+<div class="st"><div class="h"><span class="n">1</span> LA MER</div><div class="c">
+         <ul><li>Affiche un cadre de <b>40</b> signes <span class="mono">=</span> et le titre.</li>
+             <li>Crée la liste <span class="mono">mer</span> avec les <b>huit</b> numéros,
+                 entre guillemets.</li>
+             <li>Affiche la ligne de mer. Elle est longue&nbsp;: écris-la <b>une fois</b>, puis
+                 <b>copier-coller</b> — tu en auras besoin <b>cinq</b> fois.
+               <div class="bloc">print(" " + mer[0] + " | " + mer[1] + " | " + <i>... jusqu'à ...</i> + mer[7])</div></li></ul></div></div>
+<div class="st"><div class="h"><span class="n">2</span> LES TROIS BATEAUX</div><div class="c">
+         <ul><li>Affiche <span class="mono">Joueur 1, ferme les yeux !</span></li>
+             <li><b>Trois questions</b> au joueur 2, rangées dans <span class="mono">b1</span>,
+                 <span class="mono">b2</span> et <span class="mono">b3</span> — et <b>trois</b>
+                 <span class="mono">int()</span>, un par bateau.</li>
+             <li>Affiche le cadre <span class="mono">3 bateaux caches. Tu as 4 tirs.</span></li></ul>
+         <div style="margin-top:1.2mm"><span class="tip">On fait confiance au joueur 2 :</span>
+         il doit choisir <b>trois cases différentes</b>. Vérifier ça, on saura le faire
+         dans trois semaines.</div></div></div>
+<div class="st"><div class="h"><span class="n">3</span> LES DEUX COMPTEURS</div><div class="c">
+         <span class="mono">score</span> à <b>0</b>, et <span class="mono">touches</span> à <b>0</b>.
+         <b>Une seule fois chacun</b>, avant le premier tir.
+         <div style="margin-top:1.2mm"><span class="tip">Pourquoi deux ?</span> Parce qu'ils ne disent pas
+         la même chose&nbsp;: l'un mesure <b>l'adresse</b>, l'autre dit si <b>la mission</b> est remplie.</div></div></div>
+<div class="fin" style="border-color:#ffb74d;background:#fffaf0">
+  👉 <b>La suite est sur la page 2</b> : le cœur du programme, la fin, et les bonus.
+</div>
+<div class="saut"></div>
+<div class="suite">🚢 LA BATAILLE NAVALE — la suite <span>page 2 sur 2 · navale_tonprenom.py</span></div>
+<div class="st"><div class="h"><span class="n">4</span> LE TIR N° 1 — tout l'exercice est là</div><div class="c">
+         Demande la case, transforme-la en nombre, puis&nbsp;:
+         <div class="bloc">touche = 0                  <i>← la boîte témoin, remise à zéro</i>
+
+if tir == b1:
+    touche = 1
+if tir == b2:
+    touche = 1
+if tir == b3:
+    touche = 1               <i>← trois if, collés à gauche</i>
+
+if touche == 1:
+    print("   TOUCHE ! Un bateau coule.")
+    mer[tir - 1] = "X"
+    score = score + 30
+    touches = touches + 1
+else:
+    print("   PLOUF ! Rien que de l'eau.")
+    mer[tir - 1] = "o"
+    score = score - 10</div>
+         Puis <b>réaffiche la mer</b>, le score et le nombre de bateaux coulés.
+         <div style="margin-top:1.2mm"><span class="tip">Lis le bloc à voix haute :</span>
+         « je ne sais rien (0) → je pose mes trois questions → je regarde ce que la boîte
+         retient → je décide. » Si tu sais le dire, tu sais l'écrire.</div></div>
+<div class="st"><div class="h"><span class="n">5</span> LES TIRS N° 2, 3 ET 4</div><div class="c">
+         <b>Recopie tout le bloc de l'étape 4, trois fois de plus.</b> Tu ne changes que le numéro
+         dans la question (<span class="mono">Tir 2</span>, <span class="mono">Tir 3</span>,
+         <span class="mono">Tir 4</span>).
+         <div style="margin-top:1.2mm">⚠️ <b>Le piège de l'exercice :</b> la ligne
+         <span class="mono">touche = 0</span> doit être <b>dans chaque bloc</b>. Si tu ne l'écris
+         qu'une seule fois tout en haut, alors dès que tu touches un bateau, <b>tous les tirs
+         suivants seront comptés comme touchés</b> — et tu finiras amiral sans rien avoir coulé.
+         <b>Teste-le exprès</b>, pour voir.</div></div></div>
+<div class="st"><div class="h"><span class="n">6</span> LES DEUX VERDICTS</div><div class="c">
+         <ul><li>Affiche où étaient les trois bateaux, et le score final — il faudra
+             <span class="mono">str()</span>.</li>
+             <li><b>Premier verdict — la mission :</b> <b>si</b> <span class="mono">touches == 3</span>,
+             <span class="mono">FLOTTE COULEE. Tu es AMIRAL !</span> <b>sinon</b>
+             <span class="mono">Il reste des bateaux a flot...</span></li>
+             <li><b>Deuxième verdict — le tir :</b> <b>si</b> <span class="mono">score &gt;= 60</span>,
+             <span class="mono">Score de professionnel.</span> <b>sinon</b>
+             <span class="mono">Le tir demande de l'entrainement.</span></li></ul>
+         <div style="margin-top:1.2mm"><span class="tip">Les deux sont indépendants :</span>
+         deux <span class="mono">if</span> / <span class="mono">else</span> l'un <b>sous</b> l'autre,
+         collés à gauche. Pas l'un dans l'autre.</div></div></div>
+<div class="st" style="border-color:#d79a00"><div class="h" style="background:#d79a00"><span class="n" style="background:#fff">⭐</span> SI TU AS FINI — LES BONUS</div><div class="c"><ul>
+      <li><b>Un cinquième tir.</b> Recopie encore le bloc. <b>Compte les lignes que tu recopies</b>
+        et note le nombre sur ta feuille&nbsp;: on te le demandera.</li>
+      <li><b>La précision.</b> Avant le verdict, affiche le nombre de tirs ratés&nbsp;:
+        <span class="mono">rates = 4 - touches</span></li>
+      <li><b>⭐⭐ Le tir déjà joué.</b> Retirer au même endroit ne devrait pas rapporter
+        30 points une deuxième fois. Une case où personne n'a encore tiré
+        <b>contient encore son numéro</b>&nbsp;:
+        <div class="bloc">if mer[tir - 1] == str(tir):
+    <i>... tout le bloc du tir ...</i>
+else:
+    print("Tu as deja tire la !")</div>
+        <b>Celui qui réussit ce bonus a déjà compris la séance de samedi prochain.</b></li></ul></div></div>
+<div class="fin"><b>Quand ça marche :</b> joue <b>trois parties</b> — une où tu coules tout,
+      une où tu raterais tout (le score doit tomber à <b>−40</b>), et une où tu tires
+      <b>deux fois au même endroit</b> pour voir ce que fait ton programme. Puis <b>Ctrl + S</b>,
+      et <b>envoie une photo de ton écran</b>.<br>
+      <b>Les deux bugs les plus courants :</b> <span class="mono">touche = 0</span> écrit une seule
+      fois tout en haut au lieu d'être dans chaque bloc — et <span class="mono">mer[tir]</span>
+      sans le <span class="mono">- 1</span>, qui marque <b>la case d'à côté</b> sans que Python
+      ne dise rien.</div>
+
+</body></html>

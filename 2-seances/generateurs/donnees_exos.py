@@ -525,3 +525,218 @@ prix     = [100, 150, 200, 250]</div>
 )
 
 TOUS = [COFFRE, CLUB, DISTRIB]
+
+# =====================================================================
+#  4  -  LA BATAILLE NAVALE   (version renforcee du Coffre-Fort, seance 6)
+# =====================================================================
+NAVALE = dict(
+    dossier="S06-le-plateau-se-souvient",
+    css1=".goal pre{font-size:6.8pt;line-height:1.25}.kit .b{font-size:7.7pt;line-height:1.3}.kit hr{margin:1.2mm 0}.regle{font-size:9.3pt}",
+    base="exercice-maison-la-bataille-navale",
+    base_cor="correction-la-bataille-navale",
+    py="correction-bataille-navale.py",
+    titre="La Bataille Navale",
+    emoji="\U0001F6A2",
+    nom="LA BATAILLE NAVALE",
+    kicker="EXERCICE RENFORC\u00c9 \u00b7 JEREMIAH GEEKS \u00b7 SEMAINE DU 17 OCTOBRE",
+    fichier="navale_tonprenom.py",
+    chapo="""La version <b style="color:#fff">difficile</b> de la semaine, avec
+      <b style="color:#fff">exactement les m\u00eames outils</b> que Le Coffre-Fort \u2014 pas une notion de plus.
+      Huit cases, <b style="color:#fff">trois bateaux cach\u00e9s</b>, quatre tirs, et une id\u00e9e neuve&nbsp;:
+      <b style="color:#fff">une bo\u00eete t\u00e9moin</b> qui retient ce qui vient de se passer.""",
+    regle="""\U0001F3AF <b>La r\u00e8gle du jeu :</b> joueur 2 cache <b>trois bateaux</b> dans trois cases
+      diff\u00e9rentes, de 1 \u00e0 8. Joueur 1 a <b>quatre tirs</b>. Un bateau touch\u00e9 vaut <b>+30</b>,
+      un tir dans l'eau co\u00fbte <b>\u221210</b>. La mer garde la trace&nbsp;: <b>X</b> pour un bateau coul\u00e9,
+      <b>o</b> pour un trou dans l'eau.""",
+    ecran="""========================================
+           LA BATAILLE NAVALE
+========================================
+ 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+
+Joueur 1, ferme les yeux !
+Joueur 2, premier bateau  (1 a 8) ? <b>2</b>
+Joueur 2, deuxieme bateau (1 a 8) ? <b>5</b>
+Joueur 2, troisieme bateau (1 a 8) ? <b>7</b>
+
+========================================
+   Joueur 1, tu peux regarder !
+   3 bateaux caches. Tu as 4 tirs.
+========================================
+Tir 1 - quelle case ? <b>2</b>
+   TOUCHE ! Un bateau coule.
+
+ 1 | X | 3 | 4 | 5 | 6 | 7 | 8
+ Score : 30   Bateaux coules : 1 / 3
+
+Tir 2 - quelle case ? <b>1</b>
+   PLOUF ! Rien que de l'eau.
+
+ o | X | 3 | 4 | 5 | 6 | 7 | 8
+ Score : 20   Bateaux coules : 1 / 3
+
+   ( ... les tirs 3 et 4 : 5 puis 7 ... )
+
+========================================
+Les bateaux etaient en 2, 5 et 7.
+Score final : 80
+
+FLOTTE COULEE. Tu es AMIRAL !
+Et quel tir ! Score de professionnel.
+========================================""",
+    kit="""<b>La mer, c'est une liste de HUIT :</b><br>
+      <span class="m">mer = ["1", "2", ..., "8"]</span><br>
+      donc les indices vont de <b>0 \u00e0 7</b>.
+      <hr>
+      <b>Marquer une case :</b><br>
+      <span class="m">mer[tir - 1] = "X"</span>
+      <hr>
+      \U0001F195 <b>LA BO\u00ceTE T\u00c9MOIN.</b> Elle retient si quelque chose
+      s'est pass\u00e9&nbsp;:<br>
+      <span class="m">touche = 0</span> &nbsp;avant de poser les questions<br>
+      <span class="m">touche = 1</span> &nbsp;si on a trouv\u00e9 un bateau<br>
+      puis <span class="m">if touche == 1:</span> pour d\u00e9cider.
+      <hr>
+      <b>Trois <span class="m">if</span> \u00e0 la suite</b>, coll\u00e9s \u00e0 gauche l'un sous l'autre.
+      Ils ne s'emp\u00eachent pas&nbsp;: Python les lit tous les trois.
+      <hr>
+      <b>DEUX compteurs qui avancent ensemble :</b><br>
+      <span class="m">score = score + 30</span> ou <span class="m">score = score - 10</span><br>
+      <span class="m">touches = touches + 1</span>
+      <hr>
+      <span class="m">int()</span> pour les cases, <span class="m">str()</span> pour les afficher.""",
+    etapes1=[
+        ("1", "LA MER", """
+         <ul><li>Affiche un cadre de <b>40</b> signes <span class="mono">=</span> et le titre.</li>
+             <li>Cr\u00e9e la liste <span class="mono">mer</span> avec les <b>huit</b> num\u00e9ros,
+                 entre guillemets.</li>
+             <li>Affiche la ligne de mer. Elle est longue&nbsp;: \u00e9cris-la <b>une fois</b>, puis
+                 <b>copier-coller</b> \u2014 tu en auras besoin <b>cinq</b> fois.
+               <div class="bloc">print(" " + mer[0] + " | " + mer[1] + " | " + <i>... jusqu'\u00e0 ...</i> + mer[7])</div></li></ul>"""),
+        ("2", "LES TROIS BATEAUX", """
+         <ul><li>Affiche <span class="mono">Joueur 1, ferme les yeux !</span></li>
+             <li><b>Trois questions</b> au joueur 2, rang\u00e9es dans <span class="mono">b1</span>,
+                 <span class="mono">b2</span> et <span class="mono">b3</span> \u2014 et <b>trois</b>
+                 <span class="mono">int()</span>, un par bateau.</li>
+             <li>Affiche le cadre <span class="mono">3 bateaux caches. Tu as 4 tirs.</span></li></ul>
+         <div style="margin-top:1.2mm"><span class="tip">On fait confiance au joueur 2 :</span>
+         il doit choisir <b>trois cases diff\u00e9rentes</b>. V\u00e9rifier \u00e7a, on saura le faire
+         dans trois semaines.</div>"""),
+        ("3", "LES DEUX COMPTEURS", """
+         <span class="mono">score</span> \u00e0 <b>0</b>, et <span class="mono">touches</span> \u00e0 <b>0</b>.
+         <b>Une seule fois chacun</b>, avant le premier tir.
+         <div style="margin-top:1.2mm"><span class="tip">Pourquoi deux ?</span> Parce qu'ils ne disent pas
+         la m\u00eame chose&nbsp;: l'un mesure <b>l'adresse</b>, l'autre dit si <b>la mission</b> est remplie.</div>"""),
+    ],
+    etapes2=[
+        ("4", "LE TIR N\u00b0 1 \u2014 tout l'exercice est l\u00e0", """
+         Demande la case, transforme-la en nombre, puis&nbsp;:
+         <div class="bloc">touche = 0                  <i>\u2190 la bo\u00eete t\u00e9moin, remise \u00e0 z\u00e9ro</i>
+
+if tir == b1:
+    touche = 1
+if tir == b2:
+    touche = 1
+if tir == b3:
+    touche = 1               <i>\u2190 trois if, coll\u00e9s \u00e0 gauche</i>
+
+if touche == 1:
+    print("   TOUCHE ! Un bateau coule.")
+    mer[tir - 1] = "X"
+    score = score + 30
+    touches = touches + 1
+else:
+    print("   PLOUF ! Rien que de l'eau.")
+    mer[tir - 1] = "o"
+    score = score - 10</div>
+         Puis <b>r\u00e9affiche la mer</b>, le score et le nombre de bateaux coul\u00e9s.
+         <div style="margin-top:1.2mm"><span class="tip">Lis le bloc \u00e0 voix haute :</span>
+         \u00ab je ne sais rien (0) \u2192 je pose mes trois questions \u2192 je regarde ce que la bo\u00eete
+         retient \u2192 je d\u00e9cide. \u00bb Si tu sais le dire, tu sais l'\u00e9crire."""),
+        ("5", "LES TIRS N\u00b0 2, 3 ET 4", """
+         <b>Recopie tout le bloc de l'\u00e9tape 4, trois fois de plus.</b> Tu ne changes que le num\u00e9ro
+         dans la question (<span class="mono">Tir 2</span>, <span class="mono">Tir 3</span>,
+         <span class="mono">Tir 4</span>).
+         <div style="margin-top:1.2mm">\u26a0\ufe0f <b>Le pi\u00e8ge de l'exercice :</b> la ligne
+         <span class="mono">touche = 0</span> doit \u00eatre <b>dans chaque bloc</b>. Si tu ne l'\u00e9cris
+         qu'une seule fois tout en haut, alors d\u00e8s que tu touches un bateau, <b>tous les tirs
+         suivants seront compt\u00e9s comme touch\u00e9s</b> \u2014 et tu finiras amiral sans rien avoir coul\u00e9.
+         <b>Teste-le expr\u00e8s</b>, pour voir.</div>"""),
+        ("6", "LES DEUX VERDICTS", """
+         <ul><li>Affiche o\u00f9 \u00e9taient les trois bateaux, et le score final \u2014 il faudra
+             <span class="mono">str()</span>.</li>
+             <li><b>Premier verdict \u2014 la mission :</b> <b>si</b> <span class="mono">touches == 3</span>,
+             <span class="mono">FLOTTE COULEE. Tu es AMIRAL !</span> <b>sinon</b>
+             <span class="mono">Il reste des bateaux a flot...</span></li>
+             <li><b>Deuxi\u00e8me verdict \u2014 le tir :</b> <b>si</b> <span class="mono">score &gt;= 60</span>,
+             <span class="mono">Score de professionnel.</span> <b>sinon</b>
+             <span class="mono">Le tir demande de l'entrainement.</span></li></ul>
+         <div style="margin-top:1.2mm"><span class="tip">Les deux sont ind\u00e9pendants :</span>
+         deux <span class="mono">if</span> / <span class="mono">else</span> l'un <b>sous</b> l'autre,
+         coll\u00e9s \u00e0 gauche. Pas l'un dans l'autre.</div>"""),
+    ],
+    bonus="""<ul>
+      <li><b>Un cinqui\u00e8me tir.</b> Recopie encore le bloc. <b>Compte les lignes que tu recopies</b>
+        et note le nombre sur ta feuille&nbsp;: on te le demandera.</li>
+      <li><b>La pr\u00e9cision.</b> Avant le verdict, affiche le nombre de tirs rat\u00e9s&nbsp;:
+        <span class="mono">rates = 4 - touches</span></li>
+      <li><b>\u2b50\u2b50 Le tir d\u00e9j\u00e0 jou\u00e9.</b> Retirer au m\u00eame endroit ne devrait pas rapporter
+        30 points une deuxi\u00e8me fois. Une case o\u00f9 personne n'a encore tir\u00e9
+        <b>contient encore son num\u00e9ro</b>&nbsp;:
+        <div class="bloc">if mer[tir - 1] == str(tir):
+    <i>... tout le bloc du tir ...</i>
+else:
+    print("Tu as deja tire la !")</div>
+        <b>Celui qui r\u00e9ussit ce bonus a d\u00e9j\u00e0 compris la s\u00e9ance de samedi prochain.</b></li></ul>""",
+    fin="""<b>Quand \u00e7a marche :</b> joue <b>trois parties</b> \u2014 une o\u00f9 tu coules tout,
+      une o\u00f9 tu raterais tout (le score doit tomber \u00e0 <b>\u221240</b>), et une o\u00f9 tu tires
+      <b>deux fois au m\u00eame endroit</b> pour voir ce que fait ton programme. Puis <b>Ctrl + S</b>,
+      et <b>envoie une photo de ton \u00e9cran</b>.<br>
+      <b>Les deux bugs les plus courants :</b> <span class="mono">touche = 0</span> \u00e9crit une seule
+      fois tout en haut au lieu d'\u00eatre dans chaque bloc \u2014 et <span class="mono">mer[tir]</span>
+      sans le <span class="mono">- 1</span>, qui marque <b>la case d'\u00e0 c\u00f4t\u00e9</b> sans que Python
+      ne dise rien.""",
+    cor_chapo="""Le programme complet. <b>Les tirs 2, 3 et 4 sont le bloc du tir 1, recopi\u00e9 tel
+      quel</b>&nbsp;: il n'est imprim\u00e9 qu'une fois ici, mais il doit appara\u00eetre <b>quatre fois</b>
+      dans le fichier de l'\u00e9l\u00e8ve.""",
+    blocs=[(19, 83), (172, 190)],
+    coupe_texte="""\u2702\ufe0f <b>Ici, dans le fichier de l'\u00e9l\u00e8ve :</b> le bloc du tir 1 (depuis
+      <span style="font-family:'Courier New',monospace">tir = input(...)</span> jusqu'\u00e0 l'affichage
+      du score) <b>recopi\u00e9 trois fois de plus</b>, pour les tirs 2, 3 et 4. Seul le num\u00e9ro dans la
+      question change. Le fichier
+      <span style="font-family:'Courier New',monospace">.py</span> du dossier
+      <span style="font-family:'Courier New',monospace">a-envoyer/</span> contient les quatre blocs en entier.""",
+    taille="8.1pt",
+    cor_notes="""
+      <div class="note"><h3>\u2b50 Les trois bonus</h3>
+        <b>1. Un cinqui\u00e8me tir :</b> recopier le bloc. Le chiffre de lignes recopi\u00e9es est \u00e0
+        r\u00e9clamer&nbsp;: il resservira \u00e0 la s\u00e9ance 10.<br>
+        <b>2. La pr\u00e9cision :</b> <span class="m">rates = 4 - touches</span>, puis un
+        <span class="m">str()</span> pour l'afficher.<br>
+        <b>3. Le tir d\u00e9j\u00e0 jou\u00e9 :</b> <span class="m">if mer[tir - 1] == str(tir):</span> \u2014
+        c'est <b>mot pour mot</b> le test de la case libre de la <b>s\u00e9ance 7</b>. L'\u00e9l\u00e8ve qui
+        le r\u00e9ussit arrive samedi avec une s\u00e9ance d'avance&nbsp;: faites-le expliquer au tableau
+        par lui.</div>
+      <div class="note" style="border-color:#2fb765;background:#f2faf5">
+        <h3 style="color:#0c5c29">\u2705 Les sept choses \u00e0 regarder dans une copie</h3>
+        <ul>
+          <li>la liste a-t-elle <b>huit</b> cases, et l'affichage va-t-il de
+              <span class="m">mer[0]</span> \u00e0 <span class="m">mer[7]</span>&nbsp;?</li>
+          <li>le <span class="m">- 1</span> est-il pr\u00e9sent dans <span class="m">mer[tir - 1]</span>&nbsp;?</li>
+          <li><b>LA FAUTE N\u00b0 1 \u2014 et c'est elle qu'on vient chercher&nbsp;:</b>
+              <span class="m">touche = 0</span> doit \u00eatre remis \u00e0 z\u00e9ro <b>dans chaque bloc de tir</b>.
+              \u00c9crit une seule fois tout en haut, l'\u00e9l\u00e8ve devient amiral sans rien couler.
+              <b>Ne le dites pas&nbsp;: faites-lui jouer une partie et constater.</b></li>
+          <li>les trois <span class="m">if</span> sont-ils <b>ind\u00e9pendants</b>, coll\u00e9s \u00e0 gauche
+              l'un sous l'autre \u2014 et non imbriqu\u00e9s&nbsp;?</li>
+          <li><span class="m">score</span> et <span class="m">touches</span> sont-ils cr\u00e9\u00e9s
+              <b>une seule fois</b>, avant le tir 1&nbsp;?</li>
+          <li><span class="m">touches = touches + 1</span> est-il <b>dans le if</b>, et pas dans le else&nbsp;?</li>
+          <li>les deux verdicts de la fin sont-ils <b>s\u00e9par\u00e9s</b>&nbsp;?</li>
+        </ul>
+        <div style="margin-top:1.6mm"><b>\u00c0 qui le donner.</b> C'est l'exercice de ceux qui ont fini
+        Le Coffre-Fort en vingt minutes, ou qui l'avaient d\u00e9j\u00e0 fait. <b>On ne donne pas les deux</b>&nbsp;:
+        un seul exercice par \u00e9l\u00e8ve, et les autres gardent Le Coffre-Fort. La bo\u00eete \u00e0 outils est
+        <b>exactement la m\u00eame</b>&nbsp;: aucune notion nouvelle, seulement un assemblage plus exigeant.</div></div>""",
+)
+
+TOUS.append(NAVALE)

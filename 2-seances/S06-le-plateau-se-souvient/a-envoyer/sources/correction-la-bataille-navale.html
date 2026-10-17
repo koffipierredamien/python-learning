@@ -1,0 +1,160 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Correction — La Bataille Navale</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+
+ body{font-size:9.6pt;padding:7mm 8mm 5mm}
+ .band{background:#0c5c29;color:#fff;border-radius:3mm;padding:3.6mm 5mm;margin-bottom:3.4mm}
+ .band .k{font-size:9pt;letter-spacing:1.2pt;color:#a8e6bd;font-weight:bold}
+ .band h1{font-size:20pt;margin:1mm 0 1.2mm}
+ .band .s{font-size:10pt;color:#d8f0e2;line-height:1.45}
+ pre{margin:0 0 2.6mm;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:3mm 4mm;
+     font-family:"Courier New",monospace;font-size:8.1pt;line-height:1.3;white-space:pre-wrap}
+ pre .c{color:#7f7f9c} pre .s{color:#ffb74d} pre .k{color:#4fc3f7;font-weight:bold}
+ .coupe{background:#6b2d8f;color:#fff;border-radius:2.2mm;padding:2mm 3.4mm;margin-bottom:2.6mm;
+        font-size:9.4pt;line-height:1.4}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.6mm 3.4mm;
+       margin-bottom:2.6mm;line-height:1.42;font-size:9.2pt}
+ .note b{color:#a65d00}
+ .note h3{margin:0 0 1.4mm;font-size:10.6pt;color:#a65d00}
+ .note ul{margin:1.2mm 0 0;padding-left:5mm}.note li{margin-bottom:1.1mm}
+ .note .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.3mm 1mm}
+ .suite{background:#0c5c29;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+        font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+ .suite span{color:#a8e6bd;font-weight:normal;font-size:9.4pt}
+</style></head><body>
+<div class="band">
+  <div class="k">CORRECTION · POUR L'ENSEIGNANT ET LES PARENTS</div>
+  <h1>✅ LA BATAILLE NAVALE</h1>
+  <div class="s">Le programme complet. <b>Les tirs 2, 3 et 4 sont le bloc du tir 1, recopié tel
+      quel</b>&nbsp;: il n'est imprimé qu'une fois ici, mais il doit apparaître <b>quatre fois</b>
+      dans le fichier de l'élève.</div>
+</div>
+<pre><span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">"           LA BATAILLE NAVALE"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">""</span>)
+
+<span class="c"># --- ETAPE 1 : la mer, huit cases ------------------------------------</span>
+mer = [<span class="s">"1"</span>, <span class="s">"2"</span>, <span class="s">"3"</span>, <span class="s">"4"</span>, <span class="s">"5"</span>, <span class="s">"6"</span>, <span class="s">"7"</span>, <span class="s">"8"</span>]
+
+<span class="k">print</span>(<span class="s">" "</span> + mer[0] + <span class="s">" | "</span> + mer[1] + <span class="s">" | "</span> + mer[2] + <span class="s">" | "</span> + mer[3] + <span class="s">" | "</span> + mer[4] + <span class="s">" | "</span> + mer[5] + <span class="s">" | "</span> + mer[6] + <span class="s">" | "</span> + mer[7])
+<span class="k">print</span>(<span class="s">""</span>)
+
+
+<span class="c"># --- ETAPE 2 : le joueur 2 place ses trois bateaux -------------------</span>
+<span class="k">print</span>(<span class="s">"Joueur 1, ferme les yeux !"</span>)
+<span class="k">print</span>(<span class="s">""</span>)
+
+b1 = <span class="k">input</span>(<span class="s">"Joueur 2, premier bateau  (1 a 8) ? "</span>)
+b1 = <span class="k">int</span>(b1)
+b2 = <span class="k">input</span>(<span class="s">"Joueur 2, deuxieme bateau (1 a 8) ? "</span>)
+b2 = <span class="k">int</span>(b2)
+b3 = <span class="k">input</span>(<span class="s">"Joueur 2, troisieme bateau (1 a 8) ? "</span>)
+b3 = <span class="k">int</span>(b3)
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">"   Joueur 1, tu peux regarder !"</span>)
+<span class="k">print</span>(<span class="s">"   3 bateaux caches. Tu as 4 tirs."</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">""</span>)
+
+
+<span class="c"># --- ETAPE 3 : les deux compteurs ------------------------------------</span>
+score = 0
+touches = 0
+
+
+<span class="c"># --- ETAPE 4 : LE TIR N 1  (le bloc a recopier) ----------------------</span>
+tir = <span class="k">input</span>(<span class="s">"Tir 1 - quelle case ? "</span>)
+tir = <span class="k">int</span>(tir)
+
+<span class="c">#  La boite temoin : on la remet a 0 AVANT les trois questions.</span>
+touche = 0
+
+<span class="k">if</span> tir == b1:
+    touche = 1
+<span class="k">if</span> tir == b2:
+    touche = 1
+<span class="k">if</span> tir == b3:
+    touche = 1
+
+<span class="k">if</span> touche == 1:
+    <span class="k">print</span>(<span class="s">"   TOUCHE ! Un bateau coule."</span>)
+    mer[tir - 1] = <span class="s">"X"</span>
+    score = score + 30
+    touches = touches + 1
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"   PLOUF ! Rien que de l'eau."</span>)
+    mer[tir - 1] = <span class="s">"o"</span>
+    score = score - 10
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">" "</span> + mer[0] + <span class="s">" | "</span> + mer[1] + <span class="s">" | "</span> + mer[2] + <span class="s">" | "</span> + mer[3] + <span class="s">" | "</span> + mer[4] + <span class="s">" | "</span> + mer[5] + <span class="s">" | "</span> + mer[6] + <span class="s">" | "</span> + mer[7])
+<span class="k">print</span>(<span class="s">" Score : "</span> + <span class="k">str</span>(score) + <span class="s">"   Bateaux coules : "</span> + <span class="k">str</span>(touches) + <span class="s">" / 3"</span>)
+<span class="k">print</span>(<span class="s">""</span>)</pre>
+<div class="saut"></div>
+<div class="suite">✅ LA BATAILLE NAVALE — la suite <span>page 2 sur 2 · correction-bataille-navale.py</span></div>
+<div class="coupe">✂️ <b>Ici, dans le fichier de l'élève :</b> le bloc du tir 1 (depuis
+      <span style="font-family:'Courier New',monospace">tir = input(...)</span> jusqu'à l'affichage
+      du score) <b>recopié trois fois de plus</b>, pour les tirs 2, 3 et 4. Seul le numéro dans la
+      question change. Le fichier
+      <span style="font-family:'Courier New',monospace">.py</span> du dossier
+      <span style="font-family:'Courier New',monospace">a-envoyer/</span> contient les quatre blocs en entier.</div>
+<pre><span class="c"># --- ETAPE 8 : LES DEUX VERDICTS -------------------------------------</span>
+<span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">"Les bateaux etaient en "</span> + <span class="k">str</span>(b1) + <span class="s">", "</span> + <span class="k">str</span>(b2) + <span class="s">" et "</span> + <span class="k">str</span>(b3) + <span class="s">"."</span>)
+<span class="k">print</span>(<span class="s">"Score final : "</span> + <span class="k">str</span>(score))
+<span class="k">print</span>(<span class="s">""</span>)
+
+<span class="c">#  Premier verdict : la mission.</span>
+<span class="k">if</span> touches == 3:
+    <span class="k">print</span>(<span class="s">"FLOTTE COULEE. Tu es AMIRAL !"</span>)
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"Il reste des bateaux a flot..."</span>)
+
+<span class="c">#  Deuxieme verdict : le tir. Les deux sont INDEPENDANTS :</span>
+<span class="c">#  on peut avoir un bon score sans avoir tout coule.</span>
+<span class="k">if</span> score &gt;= 60:
+    <span class="k">print</span>(<span class="s">"Et quel tir ! Score de professionnel."</span>)
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"Le tir, en revanche, demande de l'entrainement."</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)</pre>
+
+      <div class="note"><h3>⭐ Les trois bonus</h3>
+        <b>1. Un cinquième tir :</b> recopier le bloc. Le chiffre de lignes recopiées est à
+        réclamer&nbsp;: il resservira à la séance 10.<br>
+        <b>2. La précision :</b> <span class="m">rates = 4 - touches</span>, puis un
+        <span class="m">str()</span> pour l'afficher.<br>
+        <b>3. Le tir déjà joué :</b> <span class="m">if mer[tir - 1] == str(tir):</span> —
+        c'est <b>mot pour mot</b> le test de la case libre de la <b>séance 7</b>. L'élève qui
+        le réussit arrive samedi avec une séance d'avance&nbsp;: faites-le expliquer au tableau
+        par lui.</div>
+      <div class="note" style="border-color:#2fb765;background:#f2faf5">
+        <h3 style="color:#0c5c29">✅ Les sept choses à regarder dans une copie</h3>
+        <ul>
+          <li>la liste a-t-elle <b>huit</b> cases, et l'affichage va-t-il de
+              <span class="m">mer[0]</span> à <span class="m">mer[7]</span>&nbsp;?</li>
+          <li>le <span class="m">- 1</span> est-il présent dans <span class="m">mer[tir - 1]</span>&nbsp;?</li>
+          <li><b>LA FAUTE N° 1 — et c'est elle qu'on vient chercher&nbsp;:</b>
+              <span class="m">touche = 0</span> doit être remis à zéro <b>dans chaque bloc de tir</b>.
+              Écrit une seule fois tout en haut, l'élève devient amiral sans rien couler.
+              <b>Ne le dites pas&nbsp;: faites-lui jouer une partie et constater.</b></li>
+          <li>les trois <span class="m">if</span> sont-ils <b>indépendants</b>, collés à gauche
+              l'un sous l'autre — et non imbriqués&nbsp;?</li>
+          <li><span class="m">score</span> et <span class="m">touches</span> sont-ils créés
+              <b>une seule fois</b>, avant le tir 1&nbsp;?</li>
+          <li><span class="m">touches = touches + 1</span> est-il <b>dans le if</b>, et pas dans le else&nbsp;?</li>
+          <li>les deux verdicts de la fin sont-ils <b>séparés</b>&nbsp;?</li>
+        </ul>
+        <div style="margin-top:1.6mm"><b>À qui le donner.</b> C'est l'exercice de ceux qui ont fini
+        Le Coffre-Fort en vingt minutes, ou qui l'avaient déjà fait. <b>On ne donne pas les deux</b>&nbsp;:
+        un seul exercice par élève, et les autres gardent Le Coffre-Fort. La boîte à outils est
+        <b>exactement la même</b>&nbsp;: aucune notion nouvelle, seulement un assemblage plus exigeant.</div></div>
+</body></html>

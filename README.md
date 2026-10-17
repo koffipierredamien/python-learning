@@ -48,7 +48,7 @@ rien avoir à écrire.**
 | Projeter ensuite | [📺 Le diaporama de la séance](2-seances/S06-le-plateau-se-souvient/a-projeter/seance-6-projection.pptx) |
 | Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S06-le-plateau-se-souvient/code/live_coding_antiseche.py) — la veille, à voix haute |
 | Imprimer | [🖨️ La liste du jour](2-seances/S06-le-plateau-se-souvient/a-imprimer/quantites-et-formats.md) |
-| Donner l'exercice de maison, mercredi | 🔐 [**Le Coffre-Fort**](2-seances/S06-le-plateau-se-souvient/a-envoyer/exercice-maison.md) — 2 images ou 1 PDF, et sa correction |
+| Donner l'exercice de maison, mercredi | 🔐 [**Le Coffre-Fort**](2-seances/S06-le-plateau-se-souvient/a-envoyer/exercice-maison.md), ou 🚢 **La Bataille Navale** pour ceux qui vont vite — mêmes notions, assemblage plus dur |
 | …pour ceux sans ordinateur | 📱 [**Le quiz n°5**](2-seances/S06-le-plateau-se-souvient/a-envoyer/quiz-semaine.md) — 15 questions, corrigé automatiquement |
 | Les deux TP du trimestre | 🛠️ [TP n°2, 31 oct](2-seances/S08-tp-le-plateau/fiche-de-seance.md) · 🏆 [TP n°3 et tournoi, 28 nov](2-seances/S12-tp-le-tournoi/fiche-de-seance.md) |
 | Envoyer le programme au responsable | 📋 [Le programme des deux mois](3-suivi/points-au-responsable/programme-octobre-novembre.pdf) — et, chaque samedi, [le déroulé de la séance](2-seances/S06-le-plateau-se-souvient/a-envoyer/deroule-seance-6.pdf) |
@@ -110,7 +110,7 @@ qui passe de quatre séances à trois.)*
       - [x] 5 séances de cours : fiche, diaporama, aide-mémoire 1 page, code officiel testé, anti-sèche
       - [x] 2 TP de 2 h avec leurs corrigés (S8 « le plateau vivant », S12 « le tournoi »)
       - [x] 6 quiz de la semaine, 15 QCM chacun, **corrigés à 100 % automatiquement**
-      - [x] 3 exercices de maison testés, avec images A4, PDF, corrigé et `.py`
+      - [x] 4 exercices de maison testés (dont un renforcé), avec images A4, PDF, corrigé et `.py`
       - [x] 7 déroulés pour le responsable (Word et PDF), et le programme d'ensemble des deux mois
       - [x] Classeur, dictionnaire des erreurs, grades et Mur de Mission mis à jour sur le nouveau parcours
 - [ ] Séances 13 à 22

@@ -1,20 +1,46 @@
-# 🔐 Exercice de maison — LE COFFRE-FORT
+# 🔐🚢 Exercice de maison — deux niveaux au choix
 
 **Pour les enfants qui ont un ordinateur à la maison.** À envoyer **le mercredi 21 octobre**,
-à rendre **samedi 24**. Comptez **45 min à 1 h**.
+à rendre **samedi 24**. Comptez **45 min à 1 h** pour l'un comme pour l'autre.
 
-| | |
-|---|---|
-| **L'exercice, en images** | [page 1](exercice-maison-le-coffre-fort-1.png) · [page 2](exercice-maison-le-coffre-fort-2.png) |
-| **…et en PDF, pour imprimer** | [`exercice-maison-le-coffre-fort.pdf`](exercice-maison-le-coffre-fort.pdf) |
-| **La correction** | [page 1](correction-le-coffre-fort-1.png) · [page 2](correction-le-coffre-fort-2.png) · [PDF](correction-le-coffre-fort.pdf) · [`.py`](correction-coffre-fort.py) |
-| **Pour ceux qui n'ont pas d'ordinateur** | le **[quiz de la semaine n°5](quiz-semaine.md)**, à la place |
+**Les deux révisent exactement les mêmes notions, avec exactement la même boîte à outils.**
+On envoie **l'un ou l'autre, jamais les deux** : un seul exercice par élève.
+
+| | 🔐 **LE COFFRE-FORT** *(pour tous)* | 🚢 **LA BATAILLE NAVALE** *(renforcé)* |
+|---|---|---|
+| **Pour qui** | **tout le monde** | ceux qui finissent vite, ou qui ont déjà fait le premier |
+| **Ce que c'est** | 5 tiroirs, **1** trésor, **2** essais | 8 cases, **3** bateaux, **4** tirs |
+| **Ce qu'il y a en plus** | — | **la boîte témoin**, trois `if` indépendants, **deux** compteurs, **deux** verdicts |
+| **L'exercice, en images** | [page 1](exercice-maison-le-coffre-fort-1.png) · [page 2](exercice-maison-le-coffre-fort-2.png) | [page 1](exercice-maison-la-bataille-navale-1.png) · [page 2](exercice-maison-la-bataille-navale-2.png) |
+| **…et en PDF** | [`…le-coffre-fort.pdf`](exercice-maison-le-coffre-fort.pdf) | [`…la-bataille-navale.pdf`](exercice-maison-la-bataille-navale.pdf) |
+| **La correction** | [p. 1](correction-le-coffre-fort-1.png) · [p. 2](correction-le-coffre-fort-2.png) · [PDF](correction-le-coffre-fort.pdf) · [`.py`](correction-coffre-fort.py) | [p. 1](correction-la-bataille-navale-1.png) · [p. 2](correction-la-bataille-navale-2.png) · [PDF](correction-la-bataille-navale.pdf) · [`.py`](correction-bataille-navale.py) |
+| **Pour ceux sans ordinateur** | le **[quiz de la semaine n°5](quiz-semaine.md)**, à la place | — |
 
 > **La correction ne part qu'après** le retour des copies.
 
 ---
 
-## Ce que c'est
+## 🚢 La version renforcée, en deux mots
+
+**Aucune notion nouvelle** — c'est tout l'intérêt. Ce qui change, c'est **l'assemblage** :
+
+| Ce qui est plus dur | Pourquoi ça fait progresser |
+|---|---|
+| **Trois** valeurs cachées au lieu d'une | il faut **trois `if` indépendants**, collés à gauche l'un sous l'autre — et comprendre que Python les lit **tous les trois** |
+| **La boîte témoin** `touche = 0` / `touche = 1` | une variable qui **retient ce qui vient de se passer**, pour décider après. C'est exactement l'idée de la boîte `gagnant` de la séance 11 |
+| **Deux** compteurs en parallèle | `score` mesure l'adresse, `touches` dit si la mission est remplie : deux chiffres qui ne disent pas la même chose |
+| **Deux** verdicts séparés à la fin | deux `if` / `else` l'un **sous** l'autre, pas l'un **dans** l'autre |
+| 8 cases au lieu de 5, 4 tirs au lieu de 2 | plus de recopie — et c'est voulu : c'est ce qui rendra la boucle désirable en séance 10 |
+
+> **Le piège qu'on vient chercher :** si l'élève écrit `touche = 0` **une seule fois tout en haut**
+> au lieu de le remettre à zéro dans chaque bloc, il devient amiral **sans rien avoir coulé**.
+> C'est le plus bel exemple de bug silencieux qu'on puisse leur offrir à ce stade.
+> **Ne le lui dites pas : faites-lui jouer une partie, et laissez-le constater.**
+> La feuille le prévient — mais en l'invitant à l'essayer exprès.
+
+---
+
+## 🔐 Le Coffre-Fort — ce que c'est
 
 Un coffre à **cinq tiroirs**. Joueur 2 cache un trésor, joueur 1 a **deux essais**, et le programme
 **garde la trace** des tiroirs ouverts : `X` pour un tiroir vide, `T` pour le trésor.
@@ -94,6 +120,11 @@ AcProKids Coding Camp — Vision Plénitudes Vie
 
 ## Vérification faite
 
-Le corrigé [`correction-coffre-fort.py`](correction-coffre-fort.py) **a été exécuté**, sur les deux
-chemins : trésor trouvé au 1ᵉʳ essai (**30 / 50**, « PILLEUR DE COFFRE-FORT ! ») et jamais trouvé
+[`correction-coffre-fort.py`](correction-coffre-fort.py) **a été exécuté** sur ses deux chemins :
+trésor trouvé au 1ᵉʳ essai (**30 / 50**, « PILLEUR DE COFFRE-FORT ! ») et jamais trouvé
 (**10 / 50**, « Le coffre a resiste... »). Les marques tombent dans les bons tiroirs.
+
+[`correction-bataille-navale.py`](correction-bataille-navale.py) **a été exécuté sur quatre
+chemins** : flotte coulée (**80**, « AMIRAL »), deux bateaux (**40**), un seul (**0**) et aucun
+(**−40**). Les X et les o tombent dans les bonnes cases, et les deux verdicts se déclenchent
+indépendamment.
