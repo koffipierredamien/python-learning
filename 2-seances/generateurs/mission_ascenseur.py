@@ -37,42 +37,36 @@ COMMUN = """
 """
 
 # =====================================================================
-#  LA FEUILLE DE L'ELEVE
+#  LA FEUILLE DE L'ELEVE  -  une page, le contexte et le rendu
 # =====================================================================
 STYLE_ELEVE = COMMUN + """
- .avert{background:#6b2d8f;color:#fff;border-radius:2.6mm;padding:2.3mm 4mm;margin-bottom:2.5mm;
-        font-size:9.5pt;line-height:1.38}
- .bt .c{line-height:1.32}
- .deux{display:flex;gap:3mm;margin-bottom:2.4mm}
+ .deux{display:flex;gap:3mm;margin-bottom:2.6mm}
  .col{flex:1;border:.6mm solid #13678f;border-radius:2.6mm;overflow:hidden}
  .col .t{background:#13678f;color:#fff;font-weight:bold;padding:1.1mm 3mm;font-size:9.6pt}
  .col .b{padding:2mm 2.6mm;font-size:8.8pt;line-height:1.4}
- .col ol{margin:0;padding-left:5mm}.col li{margin-bottom:1.3mm}
  .col pre{margin:0;font-family:"Courier New",monospace;font-size:7.6pt;line-height:1.32;
           white-space:pre;color:#12122a}
- .meth{display:flex;gap:2.4mm;margin-bottom:2.4mm}
- .meth .m{flex:1;border:.5mm solid #d79a00;border-radius:2.4mm;background:#fffaf0;
-          padding:1.8mm 2.2mm;font-size:8.3pt;line-height:1.3}
- .meth .n{background:#d79a00;color:#fff;border-radius:50%;width:5.4mm;height:5.4mm;
-          line-height:5.4mm;text-align:center;font-weight:bold;font-size:9.4pt;display:block;
-          margin-bottom:1.2mm}
- .meth b{color:#a65d00}
- .regles{border:.7mm solid #2fb765;border-radius:2.6mm;overflow:hidden;margin-bottom:2.6mm}
- .regles .t{background:#2fb765;color:#fff;font-weight:bold;padding:1.3mm 3mm;font-size:11pt}
- .regles .b{padding:2.2mm 3mm;font-size:9.6pt;line-height:1.44;background:#f2faf5}
- .regles ol{margin:0;padding-left:5.5mm}.regles li{margin-bottom:1.5mm}
- .ecran{border:.4mm dashed #5a5a72;border-radius:2mm;padding:1.8mm 2.6mm;margin:1.6mm 0 0;
-        font-family:"Courier New",monospace;font-size:8pt;line-height:1.34;white-space:pre;
-        background:#fafafd;color:#2a2a44}
- .lignes{border:.5mm solid #6b2d8f;border-radius:2.6mm;overflow:hidden;margin-bottom:2.4mm}
- .lignes .t{background:#6b2d8f;color:#fff;font-weight:bold;padding:1.3mm 3mm;font-size:11pt}
- .lignes .b{padding:2.4mm 3mm 1.4mm}
- .lignes .l{display:flex;align-items:flex-end;gap:2mm;margin-bottom:2.9mm}
- .lignes .n{font-size:8.6pt;color:#6b2d8f;font-weight:bold;width:5mm;flex:none}
- .lignes .tr{flex:1;border-bottom:.3mm dotted #8a8aa0;height:4mm}
- .fin{background:#f3f3f8;border-left:3mm solid #6b2d8f;border-radius:2mm;
-      padding:2.2mm 3mm;font-size:8.8pt;line-height:1.36}
- .lignes .l{margin-bottom:2.7mm}
+ .mission{display:flex;gap:3mm;margin-bottom:2.6mm;align-items:stretch}
+ .regles{flex:1.15;border:.7mm solid #2fb765;border-radius:2.6mm;overflow:hidden;
+         display:flex;flex-direction:column}
+ .regles .t{background:#2fb765;color:#fff;font-weight:bold;padding:1.3mm 3mm;font-size:10.6pt}
+ .regles .b{padding:2.2mm 3mm;font-size:9.3pt;line-height:1.42;background:#f2faf5;flex:1}
+ .regles .ctx{margin-bottom:1.8mm;color:#0c5c29}
+ .regles ol{margin:0;padding-left:5mm}.regles li{margin-bottom:1.4mm}
+ .ecran{flex:1;border:.7mm solid #12122a;border-radius:2.6mm;overflow:hidden;
+        display:flex;flex-direction:column}
+ .ecran .t{background:#12122a;color:#fff;font-weight:bold;padding:1.3mm 3mm;font-size:10.2pt}
+ .ecran .t span{color:#4fc3f7;font-weight:normal;font-size:8pt}
+ .ecran pre{margin:0;padding:2.4mm 3mm;background:#12122a;color:#d8d8e8;flex:1;
+            font-family:"Courier New",monospace;font-size:7.1pt;line-height:1.3;white-space:pre}
+ .ecran pre b{color:#4fc3f7}
+ .pas{display:flex;gap:3mm}
+ .pas .p{flex:1;border:.6mm solid #6b2d8f;border-radius:2.6mm;background:#faf5fd;
+         padding:2.4mm 3mm;font-size:9.6pt;line-height:1.4}
+ .pas .n{background:#6b2d8f;color:#fff;border-radius:50%;width:6mm;height:6mm;line-height:6mm;
+         text-align:center;font-weight:bold;font-size:10.4pt;display:inline-block;
+         margin-right:2mm;vertical-align:-1mm}
+ .pas b{color:#4b1f66}
 """
 
 ALGO_EXEMPLE = """1. Je demande sa case au joueur, et je
@@ -99,31 +93,57 @@ else:
         print("Deja prise !")
 ... les 5 print du plateau ..."""
 
+ECRAN = """========================================
+        LA TOUR ACPROKIDS
+========================================
+
+ 5 - Terrasse
+ 4 - Cantine
+ 3 - Bureaux
+ 2 - Accueil
+ 1 - Parking
+
+L'ascenseur est a l'etage 1 : Parking
+Tu as droit a 3 voyages.
+
+Voyage 1 - a quel etage vas-tu ? <b>4</b>
+   L'ascenseur MONTE de 3 etage(s).
+   Etage 4 : Cantine
+
+Voyage 2 - a quel etage vas-tu ? <b>9</b>
+   Cet etage n'existe pas.
+   La tour va de 1 a 5.
+
+Voyage 3 - a quel etage vas-tu ? <b>2</b>
+   L'ascenseur DESCEND de 2 etage(s).
+   Etage 2 : Accueil
+
+========================================
+       JOURNAL DE L'ASCENSEUR
+========================================
+ Position finale : etage 2 (Accueil)
+ Etages parcourus : 5
+ Arrets effectues : 2 / 3
+
+ Journee tranquille dans la tour.
+========================================"""
+
 eleve = ['''<div class="band">
-  <div class="k">MISSION AUTONOME N&deg; 1 &middot; JEREMIAH GEEKS &middot; APR&Egrave;S LA S&Eacute;ANCE 7</div>
-  <h1>&#127970; L'ASCENSEUR DE LA TOUR</h1>
-  <div class="s">Mission confi&eacute;e &agrave; : <b style="color:#fff">_______________________________</b>
-    &nbsp;&nbsp;&middot;&nbsp;&nbsp; &Agrave; rendre : <b style="color:#fff">______________</b></div>
-  <div class="f">Thonny &rarr; Fichier &rarr; Nouveau &rarr; Enregistrer sous :  ascenseur_tonprenom.py</div>
+  <h1>&#127970; L\'ASCENSEUR DE LA TOUR</h1>
+  <div class="s">La tour AcProKids a <b style="color:#fff">cinq &eacute;tages</b>, et chacun porte un
+    nom. Il y a un ascenseur, et <b style="color:#fff">c\'est toi qui vas l\'&eacute;crire</b>.</div>
 </div>
 
-<div class="avert">
-  &#9888;&#65039; <b>Cette feuille n'est pas comme les autres.</b> On ne te donne <b>aucune &eacute;tape</b>, et
-  <b>aucune ligne de code</b> &mdash; seulement <b>ce que le programme doit faire</b>. &Agrave; toi de trouver
-  <b>comment</b>. C'est exactement le travail d'un vrai programmeur, et c'est pour &ccedil;a qu'on te la donne.
-</div>
-
-<div class="bt"><div class="h">&#129504; UN ALGORITHME, C'EST QUOI ?</div><div class="c">
-  <b>C'est ton programme &eacute;crit en fran&ccedil;ais, avant de toucher au clavier.</b> Une suite de
-  phrases courtes, dans l'ordre, qui disent ce que la machine doit faire &mdash; sans aucun mot de Python.
-  <div style="margin-top:1.2mm">On l'&eacute;crit <b>d'abord</b>, parce qu'il est bien plus facile de se tromper
-  sur une feuille que dans un fichier. <b>Un programmeur qui tape tout de suite est un programmeur qui
-  recommence trois fois.</b></div>
+<div class="bt"><div class="h">&#129504; UN ALGORITHME, C\'EST QUOI ?</div><div class="c">
+  <b>C\'est ton programme &eacute;crit en fran&ccedil;ais, avant de toucher au clavier.</b> Une suite de
+  phrases courtes, dans l\'ordre, qui disent ce que la machine doit faire &mdash; sans aucun mot de Python.
+  <div style="margin-top:1.2mm">Quand un <b>SI</b> est &agrave; l\'int&eacute;rieur d\'un autre, tu le
+  <b>d&eacute;cales vers la droite</b> sur ta feuille, exactement comme en Python.</div>
 </div></div>
 
 <div class="deux">
-  <div class="col"><div class="t">L'EXEMPLE &mdash; EN FRAN&Ccedil;AIS</div><div class="b">
-    <div style="font-size:8.4pt;color:#5a5a72;margin-bottom:1.4mm">L'algorithme du coup jou&eacute;,
+  <div class="col"><div class="t">L\'EXEMPLE &mdash; EN FRAN&Ccedil;AIS</div><div class="b">
+    <div style="font-size:8.4pt;color:#5a5a72;margin-bottom:1.4mm">L\'algorithme du coup jou&eacute;,
       celui que tu as &eacute;crit samedi dernier :</div>
 <pre>''' + ALGO_EXEMPLE + '''</pre></div></div>
   <div class="col"><div class="t">&hellip;ET EN PYTHON</div><div class="b">
@@ -132,110 +152,44 @@ eleve = ['''<div class="band">
 <pre>''' + CODE_EXEMPLE + '''</pre></div></div>
 </div>
 
-<div class="bt"><div class="h">&#128221; LES QUATRE MOTS QUI SUFFISENT POUR &Eacute;CRIRE UN ALGORITHME</div><div class="c">
-  <b>JE DEMANDE</b> &middot; <b>JE RANGE</b> dans une bo&icirc;te &middot; <b>SI &hellip; SINON &hellip;</b>
-  &middot; <b>J'AFFICHE</b>.
-  <div style="margin-top:1.2mm">Avec ces quatre-l&agrave;, tu peux d&eacute;crire tout ce que tu sais faire.
-  <span class="tip">Et une r&egrave;gle d'or :</span> quand un <b>SI</b> est &agrave; l'int&eacute;rieur
-  d'un autre, tu le <b>d&eacute;cales vers la droite</b> sur ta feuille, comme en Python.</div>
-</div></div>
-
-<div class="meth">
-  <div class="m"><span class="n">1</span><b>&Eacute;cris.</b> Ton algorithme en fran&ccedil;ais,
-    phrase par phrase, sur cette feuille. <b>Pas de clavier.</b></div>
-  <div class="m"><span class="n">2</span><b>Joue-le &agrave; la main.</b> Prends un cas, suis tes
-    phrases <b>une par une</b> comme si tu &eacute;tais l'ordinateur. &Ccedil;a marche ?</div>
-  <div class="m"><span class="n">3</span><b>Traduis.</b> Une phrase &rarr; une ou deux lignes de
-    Python. L&agrave; seulement, tu ouvres Thonny.</div>
-  <div class="m"><span class="n">4</span><b>Casse-le.</b> Tape des choses bizarres expr&egrave;s,
-    et regarde si ton programme tient debout.</div>
+<div class="mission">
+  <div class="regles"><div class="t">&#127919; LE PROGRAMME &Agrave; &Eacute;CRIRE</div><div class="b">
+    <div class="ctx">L\'ascenseur part de l\'<b>&eacute;tage 1</b> et fait <b>trois voyages</b>.
+      &Agrave; chaque voyage, il demande o&ugrave; on veut aller.</div>
+    <ol>
+      <li>Au d&eacute;marrage, il <b>affiche la tour</b> : les cinq &eacute;tages et leurs noms.</li>
+      <li>Si l\'&eacute;tage demand&eacute; <b>n\'existe pas</b>, il <b>refuse</b> et ne bouge pas &mdash;
+          et ce voyage ne compte pas.</li>
+      <li>Sinon il annonce s\'il <b>MONTE</b>, s\'il <b>DESCEND</b> ou qu\'on <b>y est d&eacute;j&agrave;</b>,
+          <b>et de combien d\'&eacute;tages</b>.</li>
+      <li>Puis il annonce <b>le nom</b> de l\'&eacute;tage o&ugrave; il s\'arr&ecirc;te.</li>
+      <li>Il <b>retient o&ugrave; il est</b> : le voyage suivant part de l&agrave;.</li>
+      <li>&Agrave; la fin, un <b>journal de bord</b> : o&ugrave; il se trouve, combien d\'&eacute;tages
+          parcourus <b>en tout</b>, combien de voyages r&eacute;ussis <b>sur trois</b>, et une phrase
+          diff&eacute;rente selon qu\'il a beaucoup travaill&eacute; ou non.</li>
+    </ol>
+  </div></div>
+  <div class="ecran"><div class="t">&#128187; CE QUE &Ccedil;A DOIT DONNER <span>&middot; en bleu : ce qu'on tape</span></div>
+<pre>''' + ECRAN + '''</pre></div>
 </div>
 
-<div class="bt" style="border-color:#d79a00"><div class="h" style="background:#d79a00">&#128161; SI TU BLOQUES &mdash; trois questions &agrave; te poser (et aucune r&eacute;ponse)</div><div class="c">
-  <ul><li><b>&laquo; Qu'est-ce que l'ordinateur doit savoir, et qui change pendant le programme ? &raquo;</b>
-          Chaque chose qui change, c'est une bo&icirc;te &agrave; cr&eacute;er <b>avant</b> le premier voyage.</li>
-      <li><b>&laquo; Combien de r&eacute;ponses diff&eacute;rentes mon programme peut-il donner, ici ? &raquo;</b>
-          S'il y en a plus de deux, c'est qu'il te faut un <span class="mono">if</span>
-          <b>dans</b> un <span class="mono">if</span>.</li>
-      <li><b>&laquo; Je le fais comment, moi, avec un crayon ? &raquo;</b> Prends deux exemples
-          pr&eacute;cis, avec de vrais chiffres, et fais-les &agrave; la main. Ce que ta main a fait
-          <b>deux fois pareil</b>, c'est &ccedil;a, ton algorithme.</li></ul>
-  <div style="margin-top:1.2mm"><span class="tip">Et si &ccedil;a bloque vraiment :</span> montre ton
-  <b>algorithme</b> &agrave; ton enseignant, pas ton code. C'est presque toujours l&agrave; qu'est le probl&egrave;me.</div>
-</div></div>
-
-<div class="fin" style="border-color:#ffb74d;background:#fffaf0">
-  &#128073; <b>La mission est sur la page 2.</b> Lis-la en entier <b>avant</b> d'&eacute;crire quoi que
-  ce soit &mdash; puis reviens &eacute;crire ton algorithme dans le cadre violet.
-</div>
-
-<div class="saut"></div>
-<div class="suite">&#127970; L'ASCENSEUR DE LA TOUR &mdash; la mission <span>page 2 sur 2 &middot; ascenseur_tonprenom.py</span></div>
-
-<div class="regles"><div class="t">&#127919; LE CAHIER DES CHARGES &mdash; les sept r&egrave;gles</div><div class="b">
-  <ol>
-    <li>La tour a <b>cinq &eacute;tages</b> (<b>1 &agrave; 5</b>), et <b>chacun porte un nom</b>
-        &mdash; les noms sont &agrave; toi. Le programme affiche la tour au d&eacute;marrage.</li>
-    <li>L'ascenseur commence <b>&agrave; l'&eacute;tage 1</b>, et le dit.</li>
-    <li>Il fait <b>trois voyages</b>. &Agrave; chaque voyage, il demande &agrave; quel &eacute;tage on va.</li>
-    <li>Si l'&eacute;tage <b>n'existe pas</b>, l'ascenseur <b>refuse</b> et ne bouge pas &mdash;
-        et ce voyage-l&agrave; ne compte pas.</li>
-    <li>Sinon il annonce s'il <b>MONTE</b>, s'il <b>DESCEND</b> ou qu'on <b>y est d&eacute;j&agrave;</b>,
-        <b>et de combien d'&eacute;tages</b> &mdash; puis <b>le nom</b> de l'&eacute;tage d'arriv&eacute;e.</li>
-    <li>Il <b>retient o&ugrave; il est</b> : le voyage suivant part de l&agrave;.</li>
-    <li>&Agrave; la fin, un <b>journal de bord</b> : o&ugrave; il se trouve, <b>combien d'&eacute;tages
-        parcourus en tout</b>, <b>combien de voyages r&eacute;ussis sur trois</b>, et une phrase
-        diff&eacute;rente selon qu'il a beaucoup travaill&eacute; ou non.</li>
-  </ol>
-  <div class="ecran">  Voyage 1 - a quel etage vas-tu ? 4
-     L'ascenseur MONTE de 3 etage(s).
-     Etage 4 : Cantine</div>
-  <div style="font-size:8.6pt;color:#0c5c29;margin-top:1.4mm"><b>Trois lignes, pour te donner le ton
-    &mdash; et c'est tout ce que tu auras.</b> Tes messages, ta mise en page et tes noms d'&eacute;tages
-    sont les tiens.</div>
-</div></div>
-
-<div class="lignes"><div class="t">&#9999;&#65039; TON ALGORITHME &mdash; en fran&ccedil;ais, avant le clavier</div><div class="b">''' +
-"".join('<div class="l"><div class="n">%d</div><div class="tr"></div></div>' % i for i in range(1, 11)) +
-'''</div></div>
-
-<div class="bt" style="border-color:#13678f"><div class="h" style="background:#13678f">&#129302; AVANT DE DIRE QUE C'EST FINI &mdash; les cinq essais obligatoires</div><div class="c">
-  <ul><li>Monter, puis <b>redescendre</b> : le deuxi&egrave;me voyage part-il bien du nouvel &eacute;tage ?</li>
-      <li>Demander <b>l'&eacute;tage o&ugrave; on est d&eacute;j&agrave;</b>.</li>
-      <li>Demander <b>l'&eacute;tage 9</b> : refus&eacute;, et l'ascenseur ne bouge pas.</li>
-      <li>Aller de <b>1 &agrave; 5</b> : le journal doit annoncer <b>4 &eacute;tages</b> parcourus, pas 5.</li>
-      <li>Rater un voyage : le journal doit dire <b>2 / 3</b>.</li></ul>
-</div></div>
-
-
-<div class="bt" style="border-color:#6b2d8f"><div class="h" style="background:#6b2d8f">&#11088;&#11088; SI TU AS FINI</div><div class="c">
-  <ul><li><b>Le compteur de refus.</b> Affiche aussi combien de voyages ont &eacute;t&eacute; refus&eacute;s.</li>
-      <li><b>Le record.</b> Garde en m&eacute;moire <b>l'&eacute;tage le plus haut</b> atteint dans la
-          journ&eacute;e, et annonce-le dans le journal.</li>
-      <li><b>L'ascenseur bavard.</b> Pendant un trajet de plusieurs &eacute;tages, affiche une ligne
-          par &eacute;tage travers&eacute;. <span class="tip">Attention :</span> tu vas avoir envie de
-          r&eacute;p&eacute;ter quelque chose un nombre de fois que tu ne connais pas d'avance. Tu n'as
-          pas encore l'outil. <b>&Eacute;cris l'algorithme quand m&ecirc;me</b>, et garde-le : c'est la
-          s&eacute;ance du 14 novembre.</li></ul>
-</div></div>
-
-<div class="fin">
-  <b>Ce qu'on regardera, et dans cet ordre :</b> d'abord <b>ton algorithme &eacute;crit</b>, ensuite si
-  ton programme tourne, ensuite les cinq essais. <b>Un algorithme clair avec un programme &agrave;
-  moiti&eacute; fini vaut mieux qu'un programme qui marche sans algorithme</b> &mdash; parce que le
-  premier, tu sauras le refaire.<br>
-  <b>Il n'y a pas une seule bonne r&eacute;ponse.</b> Si ton programme respecte les sept r&egrave;gles,
-  il est juste, m&ecirc;me s'il ne ressemble &agrave; celui de personne d'autre.
+<div class="pas">
+  <div class="p"><span class="n">1</span><b>Ton algorithme, dans ton cahier.</b><br>
+    En fran&ccedil;ais, phrase par phrase, <b>avant</b> d\'ouvrir Thonny.</div>
+  <div class="p"><span class="n">2</span><b>Ton code, dans Thonny.</b><br>
+    Une phrase de ton algorithme = une ou deux lignes de Python.
+    <span style="font-family:\'Courier New\',monospace;font-size:8.4pt">ascenseur_tonprenom.py</span></div>
 </div>''']
 
 E.ecrire(os.path.join(ICI, "sources", "mission-1-ascenseur-eleve.html"),
-         "Mission autonome n°1 — L'ascenseur de la tour", STYLE_ELEVE, "\n".join(eleve))
+         "L'ascenseur de la tour", STYLE_ELEVE, "\n".join(eleve))
 
 # =====================================================================
 #  LA FEUILLE DE L'ENSEIGNANT
 # =====================================================================
 STYLE_PROF = COMMUN + """
- .band{background:#0c5c29}
+ .band{background:#0c5c29;padding:2.6mm 5mm;margin-bottom:2.4mm}
+ .band h1{font-size:18pt;margin:.8mm 0 1mm}
  .band .k{color:#a8e6bd}
  .band .s{color:#d8f0e2}
  .suite{background:#0c5c29}
@@ -243,19 +197,20 @@ STYLE_PROF = COMMUN + """
  pre.code{margin:0 0 2.2mm;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:2.2mm 3mm;
      font-family:"Courier New",monospace;font-size:7.3pt;line-height:1.22;white-space:pre-wrap}
  pre.code .c{color:#7f7f9c} pre.code .s{color:#ffb74d} pre.code .k{color:#4fc3f7;font-weight:bold}
- .algo{border:.6mm solid #13678f;border-radius:2.6mm;overflow:hidden;margin-bottom:2.4mm}
+ .algo{border:.6mm solid #13678f;border-radius:2.6mm;overflow:hidden;margin-bottom:1.8mm}
  .algo .t{background:#13678f;color:#fff;font-weight:bold;padding:1.2mm 3mm;font-size:10.4pt}
- .algo pre{margin:0;padding:2mm 3mm;font-family:"Courier New",monospace;font-size:8.1pt;
-           line-height:1.34;white-space:pre;background:#f2f8fc;color:#12122a}
- .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.2mm 3mm;
-       margin-bottom:2.4mm;line-height:1.4;font-size:9pt}
- .note h3{margin:0 0 1.2mm;font-size:10.4pt;color:#a65d00}
- .note ul{margin:1mm 0 0;padding-left:5mm}.note li{margin-bottom:1mm}
+ .algo pre{margin:0;padding:1.6mm 2.4mm;font-family:"Courier New",monospace;font-size:7pt;
+           line-height:1.22;white-space:pre;background:#f2f8fc;color:#12122a}
+ .algo .t{padding:1mm 3mm;font-size:10pt}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2mm 2.8mm;
+       margin-bottom:1.7mm;line-height:1.32;font-size:8.4pt}
+ .note h3{margin:0 0 1mm;font-size:10pt;color:#a65d00}
+ .note ul{margin:.8mm 0 0;padding-left:4.6mm}.note li{margin-bottom:.8mm}
  .note .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
           border:.3mm solid #e8d6a8;border-radius:1mm;padding:.3mm 1mm}
  .coupe{background:#6b2d8f;color:#fff;border-radius:2.2mm;padding:1.8mm 3.2mm;margin-bottom:2.4mm;
         font-size:9pt;line-height:1.4}
- table.g{width:100%;border-collapse:collapse;font-size:8.2pt;margin-top:1mm}
+ table.g{width:100%;border-collapse:collapse;font-size:8pt;margin-top:1mm}
  table.g th{background:#14142b;color:#fff;padding:1mm 1.8mm;text-align:left;font-size:8pt}
  table.g td{border:.25mm solid #c8c8d8;padding:1mm 1.8mm;vertical-align:top;line-height:1.28}
 """
@@ -305,26 +260,43 @@ prof = ['''<div class="band">
 
 <div class="note" style="border-color:#13678f;background:#f2f8fc">
   <h3 style="color:#13678f">&#127919; Pourquoi cette mission, et pour qui</h3>
-  Elle s'adresse &agrave; un &eacute;l&egrave;ve <b>qui a fini avant les autres</b> et qui a besoin
-  d'autre chose qu'un exercice de plus. <b>Elle est r&eacute;utilisable</b> : la feuille porte un champ
-  &laquo;&nbsp;mission confi&eacute;e &agrave;&nbsp;&raquo; et ne nomme personne. <b>Aucune notion nouvelle</b> : tout tient dans la bo&icirc;te
-  &agrave; outils de la s&eacute;ance 7. Ce qui est neuf, c'est qu'on lui demande
-  <b>de concevoir, pas d'ex&eacute;cuter</b>.
+  Pour un &eacute;l&egrave;ve <b>qui a fini avant les autres</b>. <b>Aucune notion nouvelle</b> : tout
+  tient dans la bo&icirc;te &agrave; outils de la s&eacute;ance 7. Ce qui est neuf, c'est qu'on demande
+  <b>de concevoir, pas d'ex&eacute;cuter</b>. La feuille ne nomme personne : elle resservira.
   <ul>
-    <li><b>Elle introduit l'algorithme pour de vrai.</b> La page 1 donne l'exemple qui manquait, et il
-      porte sur un code d&eacute;j&agrave; &eacute;crit en classe : le coup jou&eacute; de
-      la s&eacute;ance 7, en fran&ccedil;ais &agrave; gauche, en Python &agrave; droite.</li>
+    <li><b>Elle introduit l'algorithme pour de vrai.</b> Sa feuille donne l'exemple qui manquait, et il
+      porte sur un code d&eacute;j&agrave; &eacute;crit en classe : le coup jou&eacute; de la
+      s&eacute;ance 7, en fran&ccedil;ais &agrave; gauche, en Python &agrave; droite, ligne pour ligne.</li>
     <li><b>Elle force le <span class="m">if</span> dans le <span class="m">if</span></b> : trois
       r&eacute;ponses possibles (monte / descend / d&eacute;j&agrave; l&agrave;) ne peuvent pas s'&eacute;crire
       avec un seul <span class="m">if</span>. C'est la notion de samedi, port&eacute;e un cran plus loin.</li>
-    <li><b>Elle pr&eacute;pare la s&eacute;ance 10</b> : le dernier bonus bute volontairement sur
-      &laquo; r&eacute;p&eacute;ter un nombre de fois qu'on ne conna&icirc;t pas d'avance &raquo;.
-      On lui demande d'&eacute;crire l'algorithme et de le garder.</li>
+    <li><b>Sa feuille tient sur une page</b> et ne porte que trois choses : ce qu'est un algorithme,
+      le cahier des charges du programme, et l'&eacute;cran attendu. <b>Aucune &eacute;tape, aucune ligne
+      de code.</b> L'algorithme s'&eacute;crit <b>dans son cahier</b>, le code ensuite dans Thonny.</li>
   </ul>
 </div>
 
 <div class="algo"><div class="t">&#129504; L'ALGORITHME MOD&Egrave;LE &mdash; c'est &ccedil;a qu'on lit en premier</div>
 <pre>''' + ALGO_MODELE + '''</pre></div>
+
+<div class="note" style="border-color:#13678f;background:#f2f8fc">
+  <h3 style="color:#13678f">&#129302; Les cinq essais &agrave; lui faire faire avant de valider</h3>
+  Ils ne sont pas sur sa feuille, <b>expr&egrave;s</b> : trouver comment on &eacute;prouve un programme
+  fait partie du travail. Demandez-les un par un, <b>&agrave; la fin</b>.
+  <ul style="margin-top:1mm">
+    <li>Monter, puis <b>redescendre</b> : le deuxi&egrave;me voyage part-il bien du nouvel &eacute;tage ?</li>
+    <li>Demander <b>l'&eacute;tage o&ugrave; on est d&eacute;j&agrave;</b>.</li>
+    <li>Demander <b>l'&eacute;tage 9</b> : refus&eacute;, et l'ascenseur ne bouge pas.</li>
+    <li>Aller de <b>1 &agrave; 5</b> : le journal annonce <b>4 &eacute;tages</b> parcourus, pas 5.</li>
+    <li>Rater un voyage : le journal dit <b>2 / 3</b>.</li>
+  </ul>
+  <div style="margin-top:1.2mm"><b>Et si tout est fini</b>, trois prolongements &agrave; donner
+  oralement : compter les voyages <b>refus&eacute;s</b> ; retenir <b>l'&eacute;tage le plus haut</b>
+  atteint ; afficher <b>une ligne par &eacute;tage travers&eacute;</b> pendant un trajet.
+  <b>Le troisi&egrave;me est un pi&egrave;ge volontaire</b> : il demande de r&eacute;p&eacute;ter un
+  nombre de fois qu'on ne conna&icirc;t pas d'avance, et l'outil n'arrive que le 14 novembre.
+  Demandez l'algorithme quand m&ecirc;me, et gardez-le pour ce jour-l&agrave;.</div>
+</div>
 
 <div class="note">
   <h3>&#128172; Comment l'accompagner sans lui donner la r&eacute;ponse</h3>
@@ -338,9 +310,9 @@ prof = ['''<div class="band">
     <li>&laquo; Fais-le &agrave; la main&nbsp;: tu es &agrave; l'&eacute;tage 2, tu demandes le 5.
       Qu'est-ce qui change&nbsp;? &raquo; <i>Pour la bo&icirc;te oubli&eacute;e.</i></li>
     <li>&laquo; Combien de r&eacute;ponses diff&eacute;rentes ton programme peut-il donner ici&nbsp;?
-      &raquo; <i>Pour l'amener au <span class="m">if</span> dans le <span class="m">if</span>,
-      sans le nommer.</i></li>
-    <li>&laquo; Essaie le 9. &raquo; <i>Plut&ocirc;t que de signaler l'oubli du refus.</i></li>
+      &raquo; <i>Pour amener au <span class="m">if</span> dans le <span class="m">if</span> sans le
+      nommer.</i> &mdash; et &laquo; Essaie le 9. &raquo; <i>plut&ocirc;t que de signaler l'oubli
+      du refus.</i></li>
   </ul>
 </div>
 
@@ -386,19 +358,19 @@ prof.append('''<div class="note" style="border-color:#c0392b;background:#fdf3f2"
   <h3 style="color:#0c5c29">&#9989; Comment l'&eacute;valuer &mdash; par la preuve, pas par une note</h3>
   <table class="g">
     <tr><th style="width:30%">Ce qu'on regarde</th><th>La preuve</th></tr>
-    <tr><td><b>1. L'algorithme existe</b></td><td>Le cadre violet est rempli, en fran&ccedil;ais, avec
-        des <b>SI</b> d&eacute;cal&eacute;s. <b>C'est le vrai livrable de la mission.</b></td></tr>
+    <tr><td><b>1. L'algorithme existe</b></td><td>Il est dans le cahier, en fran&ccedil;ais, avec des
+        <b>SI</b> d&eacute;cal&eacute;s. <b>C'est le vrai livrable de la mission.</b></td></tr>
     <tr><td><b>2. Jou&eacute; &agrave; la main</b></td><td>L'&eacute;l&egrave;ve sait dire, sans la
         machine, ce que devient chaque bo&icirc;te quand on va de l'&eacute;tage 2 au 5.</td></tr>
     <tr><td><b>3. Le programme tourne</b></td><td>Les trois voyages s'encha&icirc;nent sans message rouge.</td></tr>
-    <tr><td><b>4. Il tient debout</b></td><td>Les <b>cinq essais</b> de la feuille passent, le 9 refus&eacute;
-        compris.</td></tr>
+    <tr><td><b>4. Il tient debout</b></td><td>Les <b>cinq essais</b> list&eacute;s plus haut passent, le 9
+        refus&eacute; compris.</td></tr>
     <tr><td><b>5. Expliqu&eacute;</b></td><td>L'&eacute;l&egrave;ve sait dire <b>pourquoi</b> les quatre
         lignes de mise &agrave; jour sont &agrave; ce niveau de d&eacute;calage, et pas plus &agrave;
         droite.</td></tr>
   </table>
-  <div style="margin-top:1.4mm"><b>Les points 1 et 5 comptent plus que le 3</b> &mdash; c'est
-  &eacute;crit sur sa feuille, dites-le avant le d&eacute;but. <b>Et apr&egrave;s :</b>
+  <div style="margin-top:1.4mm"><b>Les points 1 et 5 comptent plus que le 3</b> &mdash; ce n'est
+  pas &eacute;crit sur sa feuille : <b>dites-le vous-m&ecirc;me, avant le d&eacute;but.</b> <b>Et apr&egrave;s :</b>
   faites-lui pr&eacute;senter <b>son algorithme</b> &agrave; la classe en trois minutes, au tableau,
   <b>sans montrer le code</b>. Pour les autres, c'est le premier algorithme qu'ils verront
   &eacute;crit par quelqu'un de leur &acirc;ge.</div>

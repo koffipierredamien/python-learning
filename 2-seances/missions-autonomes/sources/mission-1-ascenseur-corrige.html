@@ -26,7 +26,8 @@
  .bloc i{color:#ffb74d;font-style:normal}
  .tip{color:#6b2d8f;font-weight:bold}
 
- .band{background:#0c5c29}
+ .band{background:#0c5c29;padding:2.6mm 5mm;margin-bottom:2.4mm}
+ .band h1{font-size:18pt;margin:.8mm 0 1mm}
  .band .k{color:#a8e6bd}
  .band .s{color:#d8f0e2}
  .suite{background:#0c5c29}
@@ -34,19 +35,20 @@
  pre.code{margin:0 0 2.2mm;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:2.2mm 3mm;
      font-family:"Courier New",monospace;font-size:7.3pt;line-height:1.22;white-space:pre-wrap}
  pre.code .c{color:#7f7f9c} pre.code .s{color:#ffb74d} pre.code .k{color:#4fc3f7;font-weight:bold}
- .algo{border:.6mm solid #13678f;border-radius:2.6mm;overflow:hidden;margin-bottom:2.4mm}
+ .algo{border:.6mm solid #13678f;border-radius:2.6mm;overflow:hidden;margin-bottom:1.8mm}
  .algo .t{background:#13678f;color:#fff;font-weight:bold;padding:1.2mm 3mm;font-size:10.4pt}
- .algo pre{margin:0;padding:2mm 3mm;font-family:"Courier New",monospace;font-size:8.1pt;
-           line-height:1.34;white-space:pre;background:#f2f8fc;color:#12122a}
- .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.2mm 3mm;
-       margin-bottom:2.4mm;line-height:1.4;font-size:9pt}
- .note h3{margin:0 0 1.2mm;font-size:10.4pt;color:#a65d00}
- .note ul{margin:1mm 0 0;padding-left:5mm}.note li{margin-bottom:1mm}
+ .algo pre{margin:0;padding:1.6mm 2.4mm;font-family:"Courier New",monospace;font-size:7pt;
+           line-height:1.22;white-space:pre;background:#f2f8fc;color:#12122a}
+ .algo .t{padding:1mm 3mm;font-size:10pt}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2mm 2.8mm;
+       margin-bottom:1.7mm;line-height:1.32;font-size:8.4pt}
+ .note h3{margin:0 0 1mm;font-size:10pt;color:#a65d00}
+ .note ul{margin:.8mm 0 0;padding-left:4.6mm}.note li{margin-bottom:.8mm}
  .note .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
           border:.3mm solid #e8d6a8;border-radius:1mm;padding:.3mm 1mm}
  .coupe{background:#6b2d8f;color:#fff;border-radius:2.2mm;padding:1.8mm 3.2mm;margin-bottom:2.4mm;
         font-size:9pt;line-height:1.4}
- table.g{width:100%;border-collapse:collapse;font-size:8.2pt;margin-top:1mm}
+ table.g{width:100%;border-collapse:collapse;font-size:8pt;margin-top:1mm}
  table.g th{background:#14142b;color:#fff;padding:1mm 1.8mm;text-align:left;font-size:8pt}
  table.g td{border:.25mm solid #c8c8d8;padding:1mm 1.8mm;vertical-align:top;line-height:1.28}
 </style></head><body>
@@ -60,21 +62,19 @@
 
 <div class="note" style="border-color:#13678f;background:#f2f8fc">
   <h3 style="color:#13678f">&#127919; Pourquoi cette mission, et pour qui</h3>
-  Elle s'adresse &agrave; un &eacute;l&egrave;ve <b>qui a fini avant les autres</b> et qui a besoin
-  d'autre chose qu'un exercice de plus. <b>Elle est r&eacute;utilisable</b> : la feuille porte un champ
-  &laquo;&nbsp;mission confi&eacute;e &agrave;&nbsp;&raquo; et ne nomme personne. <b>Aucune notion nouvelle</b> : tout tient dans la bo&icirc;te
-  &agrave; outils de la s&eacute;ance 7. Ce qui est neuf, c'est qu'on lui demande
-  <b>de concevoir, pas d'ex&eacute;cuter</b>.
+  Pour un &eacute;l&egrave;ve <b>qui a fini avant les autres</b>. <b>Aucune notion nouvelle</b> : tout
+  tient dans la bo&icirc;te &agrave; outils de la s&eacute;ance 7. Ce qui est neuf, c'est qu'on demande
+  <b>de concevoir, pas d'ex&eacute;cuter</b>. La feuille ne nomme personne : elle resservira.
   <ul>
-    <li><b>Elle introduit l'algorithme pour de vrai.</b> La page 1 donne l'exemple qui manquait, et il
-      porte sur un code d&eacute;j&agrave; &eacute;crit en classe : le coup jou&eacute; de
-      la s&eacute;ance 7, en fran&ccedil;ais &agrave; gauche, en Python &agrave; droite.</li>
+    <li><b>Elle introduit l'algorithme pour de vrai.</b> Sa feuille donne l'exemple qui manquait, et il
+      porte sur un code d&eacute;j&agrave; &eacute;crit en classe : le coup jou&eacute; de la
+      s&eacute;ance 7, en fran&ccedil;ais &agrave; gauche, en Python &agrave; droite, ligne pour ligne.</li>
     <li><b>Elle force le <span class="m">if</span> dans le <span class="m">if</span></b> : trois
       r&eacute;ponses possibles (monte / descend / d&eacute;j&agrave; l&agrave;) ne peuvent pas s'&eacute;crire
       avec un seul <span class="m">if</span>. C'est la notion de samedi, port&eacute;e un cran plus loin.</li>
-    <li><b>Elle pr&eacute;pare la s&eacute;ance 10</b> : le dernier bonus bute volontairement sur
-      &laquo; r&eacute;p&eacute;ter un nombre de fois qu'on ne conna&icirc;t pas d'avance &raquo;.
-      On lui demande d'&eacute;crire l'algorithme et de le garder.</li>
+    <li><b>Sa feuille tient sur une page</b> et ne porte que trois choses : ce qu'est un algorithme,
+      le cahier des charges du programme, et l'&eacute;cran attendu. <b>Aucune &eacute;tape, aucune ligne
+      de code.</b> L'algorithme s'&eacute;crit <b>dans son cahier</b>, le code ensuite dans Thonny.</li>
   </ul>
 </div>
 
@@ -114,6 +114,25 @@
 9. SI les etages parcourus sont plus de 6 : une phrase.
    SINON : l'autre phrase.</pre></div>
 
+<div class="note" style="border-color:#13678f;background:#f2f8fc">
+  <h3 style="color:#13678f">&#129302; Les cinq essais &agrave; lui faire faire avant de valider</h3>
+  Ils ne sont pas sur sa feuille, <b>expr&egrave;s</b> : trouver comment on &eacute;prouve un programme
+  fait partie du travail. Demandez-les un par un, <b>&agrave; la fin</b>.
+  <ul style="margin-top:1mm">
+    <li>Monter, puis <b>redescendre</b> : le deuxi&egrave;me voyage part-il bien du nouvel &eacute;tage ?</li>
+    <li>Demander <b>l'&eacute;tage o&ugrave; on est d&eacute;j&agrave;</b>.</li>
+    <li>Demander <b>l'&eacute;tage 9</b> : refus&eacute;, et l'ascenseur ne bouge pas.</li>
+    <li>Aller de <b>1 &agrave; 5</b> : le journal annonce <b>4 &eacute;tages</b> parcourus, pas 5.</li>
+    <li>Rater un voyage : le journal dit <b>2 / 3</b>.</li>
+  </ul>
+  <div style="margin-top:1.2mm"><b>Et si tout est fini</b>, trois prolongements &agrave; donner
+  oralement : compter les voyages <b>refus&eacute;s</b> ; retenir <b>l'&eacute;tage le plus haut</b>
+  atteint ; afficher <b>une ligne par &eacute;tage travers&eacute;</b> pendant un trajet.
+  <b>Le troisi&egrave;me est un pi&egrave;ge volontaire</b> : il demande de r&eacute;p&eacute;ter un
+  nombre de fois qu'on ne conna&icirc;t pas d'avance, et l'outil n'arrive que le 14 novembre.
+  Demandez l'algorithme quand m&ecirc;me, et gardez-le pour ce jour-l&agrave;.</div>
+</div>
+
 <div class="note">
   <h3>&#128172; Comment l'accompagner sans lui donner la r&eacute;ponse</h3>
   <b>La r&egrave;gle :</b> on ne r&eacute;pond jamais par une ligne de code. On r&eacute;pond
@@ -126,9 +145,9 @@
     <li>&laquo; Fais-le &agrave; la main&nbsp;: tu es &agrave; l'&eacute;tage 2, tu demandes le 5.
       Qu'est-ce qui change&nbsp;? &raquo; <i>Pour la bo&icirc;te oubli&eacute;e.</i></li>
     <li>&laquo; Combien de r&eacute;ponses diff&eacute;rentes ton programme peut-il donner ici&nbsp;?
-      &raquo; <i>Pour l'amener au <span class="m">if</span> dans le <span class="m">if</span>,
-      sans le nommer.</i></li>
-    <li>&laquo; Essaie le 9. &raquo; <i>Plut&ocirc;t que de signaler l'oubli du refus.</i></li>
+      &raquo; <i>Pour amener au <span class="m">if</span> dans le <span class="m">if</span> sans le
+      nommer.</i> &mdash; et &laquo; Essaie le 9. &raquo; <i>plut&ocirc;t que de signaler l'oubli
+      du refus.</i></li>
   </ul>
 </div>
 
@@ -196,19 +215,19 @@ demande = <span class="k">int</span>(demande)
   <h3 style="color:#0c5c29">&#9989; Comment l'&eacute;valuer &mdash; par la preuve, pas par une note</h3>
   <table class="g">
     <tr><th style="width:30%">Ce qu'on regarde</th><th>La preuve</th></tr>
-    <tr><td><b>1. L'algorithme existe</b></td><td>Le cadre violet est rempli, en fran&ccedil;ais, avec
-        des <b>SI</b> d&eacute;cal&eacute;s. <b>C'est le vrai livrable de la mission.</b></td></tr>
+    <tr><td><b>1. L'algorithme existe</b></td><td>Il est dans le cahier, en fran&ccedil;ais, avec des
+        <b>SI</b> d&eacute;cal&eacute;s. <b>C'est le vrai livrable de la mission.</b></td></tr>
     <tr><td><b>2. Jou&eacute; &agrave; la main</b></td><td>L'&eacute;l&egrave;ve sait dire, sans la
         machine, ce que devient chaque bo&icirc;te quand on va de l'&eacute;tage 2 au 5.</td></tr>
     <tr><td><b>3. Le programme tourne</b></td><td>Les trois voyages s'encha&icirc;nent sans message rouge.</td></tr>
-    <tr><td><b>4. Il tient debout</b></td><td>Les <b>cinq essais</b> de la feuille passent, le 9 refus&eacute;
-        compris.</td></tr>
+    <tr><td><b>4. Il tient debout</b></td><td>Les <b>cinq essais</b> list&eacute;s plus haut passent, le 9
+        refus&eacute; compris.</td></tr>
     <tr><td><b>5. Expliqu&eacute;</b></td><td>L'&eacute;l&egrave;ve sait dire <b>pourquoi</b> les quatre
         lignes de mise &agrave; jour sont &agrave; ce niveau de d&eacute;calage, et pas plus &agrave;
         droite.</td></tr>
   </table>
-  <div style="margin-top:1.4mm"><b>Les points 1 et 5 comptent plus que le 3</b> &mdash; c'est
-  &eacute;crit sur sa feuille, dites-le avant le d&eacute;but. <b>Et apr&egrave;s :</b>
+  <div style="margin-top:1.4mm"><b>Les points 1 et 5 comptent plus que le 3</b> &mdash; ce n'est
+  pas &eacute;crit sur sa feuille : <b>dites-le vous-m&ecirc;me, avant le d&eacute;but.</b> <b>Et apr&egrave;s :</b>
   faites-lui pr&eacute;senter <b>son algorithme</b> &agrave; la classe en trois minutes, au tableau,
   <b>sans montrer le code</b>. Pour les autres, c'est le premier algorithme qu'ils verront
   &eacute;crit par quelqu'un de leur &acirc;ge.</div>

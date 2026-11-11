@@ -16,30 +16,32 @@ Aucune notion nouvelle n'y est jamais introduite — **la difficulté est entiè
 
 | | |
 |---|---|
-| **La feuille de l'élève** | [page 1](mission-1-ascenseur-eleve-1.png) · [page 2](mission-1-ascenseur-eleve-2.png) · [**PDF, 2 pages recto-verso**](mission-1-ascenseur-eleve.pdf) |
+| **La feuille de l'élève** | [en image](mission-1-ascenseur-eleve-1.png) · [**PDF, 1 page**](mission-1-ascenseur-eleve.pdf) |
 | **Pour vous — à ne pas donner** | [page 1](mission-1-ascenseur-corrige-1.png) · [page 2](mission-1-ascenseur-corrige-2.png) · [PDF](mission-1-ascenseur-corrige.pdf) · [`.py`](mission-1-ascenseur-corrige.py) |
 | **Boîte à outils** | tout ce qui a été vu **jusqu'à la séance 7**, et rien de plus |
 | **Durée** | 1 h à 1 h 30, dont **au moins 15 minutes sans clavier** |
 
-### Ce que l'élève reçoit
+### Ce que l'élève reçoit : une page, trois choses
 
-**Page 1 — la méthode.** C'est l'exemple d'algorithme qui a manqué en classe, et il porte sur un code
-déjà écrit par toute la classe : **le coup joué de la séance 7**, en français à gauche, en Python à
-droite, **ligne pour ligne**. Puis les quatre mots qui suffisent pour écrire un algorithme
-(*je demande · je range · si… sinon… · j'affiche*), la méthode en quatre temps, et trois questions à
-se poser en cas de blocage — **des questions, pas des réponses**.
+1. **Ce qu'est un algorithme**, en trois lignes — et **l'exemple qui a manqué en classe**, sur un code
+   que toute la classe a déjà écrit : le coup joué de la séance 7, **en français à gauche, en Python à
+   droite, ligne pour ligne**.
+2. **Le programme à écrire** : le contexte en deux phrases, puis six règles de comportement.
+   Pas une étape, pas une ligne de code.
+3. **L'écran attendu**, montré tel qu'il s'affichera, avec en bleu ce que l'utilisateur tape.
 
-**Page 2 — la mission.** Un cahier des charges de **sept règles**, trois lignes d'écran pour le ton,
-**un cadre vierge pour écrire l'algorithme à la main**, cinq essais obligatoires avant de dire que
-c'est fini, et trois défis ⭐⭐.
+Et en bas, les deux seules consignes :
+**① l'algorithme dans son cahier · ② le code dans Thonny.**
 
-> **Il n'y a aucune ligne de code sur la feuille de l'élève**, et aucune étape. C'est écrit en haut
-> de la page 1, en violet, pour que ce ne soit pas pris pour un oubli.
+> **Rien d'autre sur la feuille.** Pas de cadre à remplir, pas de liste de vérifications, pas de bonus :
+> ce qui doit être cherché n'est pas écrit. Les cinq essais de validation et les trois prolongements
+> sont **sur votre feuille à vous**, à donner oralement, et seulement à la fin.
 
 ### Les trois règles de l'accompagnement
 
 1. **Pas d'algorithme écrit, pas de clavier.** C'est la seule consigne ferme de la mission. Si l'élève
-   ouvre Thonny avant d'avoir rempli le cadre violet, on l'y renvoie — gentiment, mais on l'y renvoie.
+   ouvre Thonny avant d'avoir écrit son algorithme dans son cahier, on l'y renvoie — gentiment, mais
+   on l'y renvoie.
 2. **On ne répond jamais par une ligne de code.** On répond **par une question**, et on s'éloigne.
    Les cinq questions à poser sont sur la feuille enseignant.
 3. **Il n'y a pas une bonne réponse.** Tout programme qui respecte les sept règles est juste, même
@@ -58,7 +60,8 @@ quelqu'un de leur âge — et c'est la meilleure introduction possible à la not
 
 Le générateur est [`../generateurs/mission_ascenseur.py`](../generateurs/mission_ascenseur.py) :
 il écrit les deux feuilles en HTML, puis le PDF et les images. La structure se réutilise telle quelle
-pour une mission n°2 — seuls changent le cahier des charges, l'algorithme modèle et le corrigé.
+pour une mission n°2 — seuls changent **le contexte, les règles, l'écran attendu** et le corrigé.
+L'explication de l'algorithme et son exemple, eux, ne bougent pas : ils resservent à chaque fois.
 
 **Trois sujets possibles pour la suite**, à mesure que la boîte à outils grandit :
 
