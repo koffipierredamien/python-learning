@@ -18,6 +18,10 @@ Une séance = un dossier. Tout ce qui la concerne est dedans, et rien d'autre.
 | **[S12 — TP n°3 : le tournoi](S12-tp-le-tournoi/fiche-de-seance.md)** · samedi 28 novembre 2026 | **Le jeu XO, fini et jouable** | finitions, tests, et **tournoi de classe** |
 | S13 à S22 | *à venir* | |
 
+> 🧠 **[Les missions autonomes](missions-autonomes/LISEZ-MOI.md)** — pour l'élève qui a fini avant
+> les autres : on donne **le résultat attendu, pas les étapes**, et il écrit d'abord **l'algorithme**.
+> La n°1 est prête, après la séance 7.
+
 > 📌 **[L'affiche du trimestre](a-afficher/LISEZ-MOI.md)** — une page A4 à imprimer **avant le
 > 17 octobre** et à laisser au mur jusqu'au 28 novembre : les sept samedis, une case à cocher
 > chaque semaine. Avec le message d'annonce aux familles.

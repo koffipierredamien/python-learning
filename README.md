@@ -43,6 +43,7 @@ rien avoir à écrire.**
 |---|---|
 | Savoir où va le parcours | 🗺️ [**La carte des deux mois**](2-seances/PLAN-OCTOBRE-NOVEMBRE.md) — l'ordre, le calendrier, le tableau de bord de tous les fichiers |
 | Afficher au mur, **avant samedi** | 📌 [**L'affiche du trimestre**](2-seances/a-afficher/LISEZ-MOI.md) — les 7 samedis, une case à cocher par semaine, et le message aux familles |
+| Occuper un élève qui a fini avant les autres | 🧠 [**Les missions autonomes**](2-seances/missions-autonomes/LISEZ-MOI.md) — un cahier des charges, pas des étapes : il écrit l'algorithme, puis le code |
 | Animer la séance de samedi | [📖 La fiche du jour](2-seances/S06-le-plateau-se-souvient/fiche-de-seance.md) — minute par minute |
 | Ouvrir la séance | [🎯 Le quiz flash](2-seances/S06-le-plateau-se-souvient/a-projeter/quiz-rappel.pptx) — 6 questions, 7 min, une question par diapo |
 | Projeter ensuite | [📺 Le diaporama de la séance](2-seances/S06-le-plateau-se-souvient/a-projeter/seance-6-projection.pptx) |
@@ -111,6 +112,7 @@ qui passe de quatre séances à trois.)*
       - [x] 2 TP de 2 h avec leurs corrigés (S8 « le plateau vivant », S12 « le tournoi »)
       - [x] 6 quiz de la semaine, 15 QCM chacun, **corrigés à 100 % automatiquement**
       - [x] 4 exercices de maison testés (dont un renforcé), avec images A4, PDF, corrigé et `.py`
+      - [x] 1 mission autonome (l'algorithme d'abord, le code ensuite) pour les élèves en avance
       - [x] 7 déroulés pour le responsable (Word et PDF), et le programme d'ensemble des deux mois
       - [x] Classeur, dictionnaire des erreurs, grades et Mur de Mission mis à jour sur le nouveau parcours
 - [ ] Séances 13 à 22

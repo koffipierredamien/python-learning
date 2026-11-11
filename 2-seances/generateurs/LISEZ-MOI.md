@@ -20,6 +20,7 @@ mieux changer une ligne et relancer que refaire la mise en page à la main.
 | `deroules.py` + `deroules_donnees.py` | les 7 **déroulés pour le responsable** (Word) | `S06…S12 · a-envoyer/` |
 | `programme_responsable.py` | le **programme des deux mois** (Word) | `3-suivi/points-au-responsable/` |
 | `affiche.py` | **l'affiche du trimestre** : HTML → PDF → image | `2-seances/a-afficher/` |
+| `mission_ascenseur.py` | la **mission autonome n°1** : feuille élève et feuille enseignant | `2-seances/missions-autonomes/` |
 
 > `S08` et `S12` (les deux TP) ont des documents écrits à la main, pas générés :
 > leurs `.html` sont dans `a-imprimer/sources/`.
@@ -44,6 +45,7 @@ NODE_PATH=/chemin/vers/node_modules node decks_tp.js        # les 2 diaporamas d
 python3.13 -I deroules.py              # les 7 déroulés (Word)
 python3.13 -I programme_responsable.py # le programme des deux mois (Word)
 python3.13 -I affiche.py               # l'affiche du trimestre
+python3.13 -I mission_ascenseur.py     # la mission autonome n°1
 
 # les .docx se convertissent en PDF avec :
 libreoffice --headless --convert-to pdf --outdir <dossier> <fichier>.docx
@@ -54,9 +56,10 @@ libreoffice --headless --convert-to pdf --outdir <dossier> <fichier>.docx
 > Il reconstruit le tableau imprimable **à partir de l'annexe A6**, pour que les deux ne divergent
 > jamais : on corrige le `.md`, on relance, et le PDF suit.
 
-**Il faut :** `python3.13` avec **PyMuPDF** (`pip install pymupdf`) et **python-docx**
-(`pip install python-docx`), **Chromium** (le chemin est en haut de `exos_maison.py` et
-`aide_memoires.py`), **LibreOffice** pour les PDF des déroulés, et **Node** avec
+**Il faut :** `python3` avec **python-docx** (`pip install python-docx`), **Chromium** (le chemin est
+en haut de `exos_maison.py` et `aide_memoires.py`), **poppler-utils** (`pdfinfo`, `pdftoppm`,
+`pdftotext` — pour compter les pages, fabriquer les images et mesurer le remplissage),
+**LibreOffice** pour les PDF des déroulés, et **Node** avec
 **[pptxgenjs](https://gitbrent.github.io/PptxGenJS/)** (`npm install pptxgenjs`).
 
 ## La règle qu'on ne contourne pas

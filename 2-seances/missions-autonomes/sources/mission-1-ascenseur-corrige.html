@@ -1,0 +1,216 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Corrigé — Mission autonome n°1</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff;
+      font-size:9.4pt;padding:6mm 8mm 4mm}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+ .band{background:#12122a;color:#fff;border-radius:3mm;padding:3.2mm 5mm;margin-bottom:2.8mm}
+ .band .k{font-size:8.8pt;letter-spacing:1.6pt;color:#ffb74d;font-weight:bold}
+ .band h1{font-size:20pt;margin:1mm 0 1.2mm}
+ .band .s{font-size:9.8pt;color:#a8a8c0;line-height:1.42}
+ .band .f{font-family:"Courier New",monospace;background:#20204a;color:#4fc3f7;
+          padding:.8mm 2.2mm;border-radius:1.4mm;display:inline-block;margin-top:1.6mm;font-size:9.6pt}
+ .suite{background:#12122a;color:#fff;border-radius:2.4mm;padding:2mm 4mm;margin-bottom:2.6mm;
+        font-size:10.2pt;font-weight:bold;display:flex;justify-content:space-between}
+ .suite span{color:#ffb74d;font-weight:normal;font-size:9pt}
+ .bt{border:.5mm solid #14142b;border-radius:2.6mm;margin-bottom:2.4mm;overflow:hidden;
+     page-break-inside:avoid}
+ .bt .h{background:#14142b;color:#fff;padding:1.1mm 3mm;font-size:10.4pt;font-weight:bold}
+ .bt .c{padding:2mm 2.8mm;line-height:1.36}
+ .bt ul{margin:0;padding-left:5mm}.bt li{margin-bottom:1mm}
+ .bloc{font-family:"Courier New",monospace;font-size:8.2pt;background:#12122a;color:#4fc3f7;
+       padding:1.7mm 2.6mm;border-radius:1.6mm;white-space:pre;line-height:1.32;margin:1.2mm 0}
+ .bloc i{color:#ffb74d;font-style:normal}
+ .tip{color:#6b2d8f;font-weight:bold}
+
+ .band{background:#0c5c29}
+ .band .k{color:#a8e6bd}
+ .band .s{color:#d8f0e2}
+ .suite{background:#0c5c29}
+ .suite span{color:#a8e6bd}
+ pre.code{margin:0 0 2.2mm;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:2.2mm 3mm;
+     font-family:"Courier New",monospace;font-size:7.3pt;line-height:1.22;white-space:pre-wrap}
+ pre.code .c{color:#7f7f9c} pre.code .s{color:#ffb74d} pre.code .k{color:#4fc3f7;font-weight:bold}
+ .algo{border:.6mm solid #13678f;border-radius:2.6mm;overflow:hidden;margin-bottom:2.4mm}
+ .algo .t{background:#13678f;color:#fff;font-weight:bold;padding:1.2mm 3mm;font-size:10.4pt}
+ .algo pre{margin:0;padding:2mm 3mm;font-family:"Courier New",monospace;font-size:8.1pt;
+           line-height:1.34;white-space:pre;background:#f2f8fc;color:#12122a}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.2mm 3mm;
+       margin-bottom:2.4mm;line-height:1.4;font-size:9pt}
+ .note h3{margin:0 0 1.2mm;font-size:10.4pt;color:#a65d00}
+ .note ul{margin:1mm 0 0;padding-left:5mm}.note li{margin-bottom:1mm}
+ .note .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.3mm 1mm}
+ .coupe{background:#6b2d8f;color:#fff;border-radius:2.2mm;padding:1.8mm 3.2mm;margin-bottom:2.4mm;
+        font-size:9pt;line-height:1.4}
+ table.g{width:100%;border-collapse:collapse;font-size:8.2pt;margin-top:1mm}
+ table.g th{background:#14142b;color:#fff;padding:1mm 1.8mm;text-align:left;font-size:8pt}
+ table.g td{border:.25mm solid #c8c8d8;padding:1mm 1.8mm;vertical-align:top;line-height:1.28}
+</style></head><body>
+<div class="band">
+  <div class="k">CORRIG&Eacute; &middot; POUR L'ENSEIGNANT &middot; &Agrave; NE PAS DONNER</div>
+  <h1>&#9989; MISSION N&deg; 1 &mdash; L'ASCENSEUR DE LA TOUR</h1>
+  <div class="s"><b style="color:#fff">Ceci est UNE solution, pas LA solution.</b> L'&eacute;l&egrave;ve
+    a re&ccedil;u un cahier des charges, pas des instructions. Tout programme qui respecte les sept
+    r&egrave;gles est juste, m&ecirc;me s'il ne ressemble en rien &agrave; celui-ci.</div>
+</div>
+
+<div class="note" style="border-color:#13678f;background:#f2f8fc">
+  <h3 style="color:#13678f">&#127919; Pourquoi cette mission, et pour qui</h3>
+  Elle s'adresse &agrave; un &eacute;l&egrave;ve <b>qui a fini avant les autres</b> et qui a besoin
+  d'autre chose qu'un exercice de plus. <b>Elle est r&eacute;utilisable</b> : la feuille porte un champ
+  &laquo;&nbsp;mission confi&eacute;e &agrave;&nbsp;&raquo; et ne nomme personne. <b>Aucune notion nouvelle</b> : tout tient dans la bo&icirc;te
+  &agrave; outils de la s&eacute;ance 7. Ce qui est neuf, c'est qu'on lui demande
+  <b>de concevoir, pas d'ex&eacute;cuter</b>.
+  <ul>
+    <li><b>Elle introduit l'algorithme pour de vrai.</b> La page 1 donne l'exemple qui manquait, et il
+      porte sur un code d&eacute;j&agrave; &eacute;crit en classe : le coup jou&eacute; de
+      la s&eacute;ance 7, en fran&ccedil;ais &agrave; gauche, en Python &agrave; droite.</li>
+    <li><b>Elle force le <span class="m">if</span> dans le <span class="m">if</span></b> : trois
+      r&eacute;ponses possibles (monte / descend / d&eacute;j&agrave; l&agrave;) ne peuvent pas s'&eacute;crire
+      avec un seul <span class="m">if</span>. C'est la notion de samedi, port&eacute;e un cran plus loin.</li>
+    <li><b>Elle pr&eacute;pare la s&eacute;ance 10</b> : le dernier bonus bute volontairement sur
+      &laquo; r&eacute;p&eacute;ter un nombre de fois qu'on ne conna&icirc;t pas d'avance &raquo;.
+      On lui demande d'&eacute;crire l'algorithme et de le garder.</li>
+  </ul>
+</div>
+
+<div class="algo"><div class="t">&#129504; L'ALGORITHME MOD&Egrave;LE &mdash; c'est &ccedil;a qu'on lit en premier</div>
+<pre>1. Je cree la liste des cinq noms d'etages.
+2. J'affiche la tour.
+3. Je range 1 dans la boite "etage actuel".
+4. Je range 0 dans la boite "etages parcourus".
+5. Je range 0 dans la boite "arrets".
+
+   -- POUR CHAQUE VOYAGE (je recopie le bloc 3 fois) --
+
+6. Je demande l'etage, je le transforme en nombre.
+7. SI cet etage est plus grand que 5 :
+       je dis qu'il n'existe pas.          <-- et rien d'autre ne change
+   SINON :
+       SI l'etage demande est plus haut que l'etage actuel :
+           je range (demande - actuel) dans "distance" ;
+           je dis que ca MONTE de "distance".
+       SINON :
+           SI l'etage demande est plus bas :
+               je range (actuel - demande) dans "distance" ;
+               je dis que ca DESCEND de "distance".
+           SINON :
+               je range 0 dans "distance" ;
+               je dis qu'on y est deja.
+
+       j'affiche le nom de l'etage demande ;
+       j'ajoute "distance" aux etages parcourus ;
+       j'ajoute 1 aux arrets ;
+       je range l'etage demande dans "etage actuel".
+
+   -- FIN DU BLOC --
+
+8. J'affiche le journal : etage actuel et son nom, etages
+   parcourus, arrets sur 3.
+9. SI les etages parcourus sont plus de 6 : une phrase.
+   SINON : l'autre phrase.</pre></div>
+
+<div class="note">
+  <h3>&#128172; Comment l'accompagner sans lui donner la r&eacute;ponse</h3>
+  <b>La r&egrave;gle :</b> on ne r&eacute;pond jamais par une ligne de code. On r&eacute;pond
+  <b>par une question</b>, et on s'en va.
+  <ul>
+    <li>&laquo; Montre-moi ton algorithme. &raquo; <i>(Pas d'algorithme &eacute;crit, pas de code&nbsp;: on s'arr&ecirc;te
+      l&agrave;, retour &agrave; la feuille. C'est la seule consigne ferme de la mission.)</i></li>
+    <li>&laquo; Lis-moi la phrase 7 &agrave; voix haute. &raquo; <i>Entendre son propre algorithme
+      r&eacute;v&egrave;le les trous mieux que n'importe quelle relecture.</i></li>
+    <li>&laquo; Fais-le &agrave; la main&nbsp;: tu es &agrave; l'&eacute;tage 2, tu demandes le 5.
+      Qu'est-ce qui change&nbsp;? &raquo; <i>Pour la bo&icirc;te oubli&eacute;e.</i></li>
+    <li>&laquo; Combien de r&eacute;ponses diff&eacute;rentes ton programme peut-il donner ici&nbsp;?
+      &raquo; <i>Pour l'amener au <span class="m">if</span> dans le <span class="m">if</span>,
+      sans le nommer.</i></li>
+    <li>&laquo; Essaie le 9. &raquo; <i>Plut&ocirc;t que de signaler l'oubli du refus.</i></li>
+  </ul>
+</div>
+
+<div class="saut"></div>
+<div class="suite">&#9989; MISSION N&deg; 1 &mdash; la suite <span>page 2 sur 2 &middot; mission-1-ascenseur-corrige.py</span></div>
+
+<div class="coupe">&#9986;&#65039; <b>Le d&eacute;but</b> (la liste des cinq noms, l'affichage de la tour, les trois bo&icirc;tes de d&eacute;part) <b>est sans surprise</b> : il est dans le fichier <span style="font-family:'Courier New',monospace">mission-1-ascenseur-corrige.py</span>. Voici <b>le bloc du voyage</b>, le seul qui compte &mdash; il est <b>recopi&eacute; trois fois</b>, et le journal de bord vient apr&egrave;s.</div>
+
+<pre class="code"><span class="c"># =====================================================================</span>
+<span class="c">#  VOYAGE 1   (c'est ce bloc que l'eleve recopiera trois fois)</span>
+<span class="c"># =====================================================================</span>
+demande = <span class="k">input</span>(<span class="s">"Voyage 1 - a quel etage vas-tu ? "</span>)
+demande = <span class="k">int</span>(demande)
+
+<span class="k">if</span> demande &gt; 5:
+    <span class="k">print</span>(<span class="s">"   Cet etage n'existe pas. La tour va de 1 a 5."</span>)
+<span class="k">else</span>:
+    <span class="k">if</span> demande &gt; actuel:
+        distance = demande - actuel
+        <span class="k">print</span>(<span class="s">"   L'ascenseur MONTE de "</span> + <span class="k">str</span>(distance) + <span class="s">" etage(s)."</span>)
+    <span class="k">else</span>:
+        <span class="k">if</span> demande &lt; actuel:
+            distance = actuel - demande
+            <span class="k">print</span>(<span class="s">"   L'ascenseur DESCEND de "</span> + <span class="k">str</span>(distance) + <span class="s">" etage(s)."</span>)
+        <span class="k">else</span>:
+            distance = 0
+            <span class="k">print</span>(<span class="s">"   Tu y es deja ! Les portes se rouvrent."</span>)
+
+    <span class="c">#  Ces quatre lignes sont DANS le else du premier if, mais</span>
+    <span class="c">#  DEHORS des trois branches : elles servent dans les trois cas.</span>
+    <span class="k">print</span>(<span class="s">"   Etage "</span> + <span class="k">str</span>(demande) + <span class="s">" : "</span> + etages[demande - 1])
+    parcourus = parcourus + distance
+    arrets = arrets + 1
+    actuel = demande
+
+<span class="k">print</span>(<span class="s">""</span>)</pre>
+
+<div class="note" style="border-color:#c0392b;background:#fdf3f2">
+  <h3 style="color:#c0392b">&#10060; Ce qui est vraiment faux &mdash; et ce qui ne l'est pas</h3>
+  <table class="g">
+    <tr><th style="width:46%">Vraiment faux</th><th>Juste autrement &mdash; on ne corrige pas</th></tr>
+    <tr><td><b><span class="m">actuel = demande</span> oubli&eacute;</b> &mdash; l'ascenseur ne bouge
+        jamais. <b>&Agrave; chercher en premier.</b></td>
+        <td>D'autres noms d'&eacute;tages, d'autres messages, une tour affich&eacute;e dans l'autre sens.</td></tr>
+    <tr><td>Les quatre lignes de mise &agrave; jour <b>plac&eacute;es dans une seule branche</b> au lieu
+        d'&ecirc;tre dessous : l'ascenseur ne se met &agrave; jour qu'un cas sur trois.</td>
+        <td>Recalculer la distance dans chaque branche au lieu de garder une bo&icirc;te
+        <span class="m">distance</span> : plus long, pas plus faux.</td></tr>
+    <tr><td><span class="m">etages[demande]</span> sans le <span class="m">- 1</span> : le nom
+        affich&eacute; est celui de l'&eacute;tage du dessus, <b>et Python ne dit rien</b>.</td>
+        <td><span class="m">demande &gt; 5</span> ou <span class="m">demande &gt;= 6</span>.</td></tr>
+    <tr><td>Un &eacute;tage inexistant accept&eacute; (<span class="m">IndexError</span> ou un nom
+        faux), ou <span class="m">parcourus = parcourus + distance</span> &eacute;crit <b>avant</b> le
+        calcul de la distance.</td>
+        <td>Compter aussi les voyages rat&eacute;s, ou tenir un journal plus riche que demand&eacute; :
+        c'est un bonus, pas une faute.</td></tr>
+  </table>
+  <div style="margin-top:1.4mm"><b>Le z&eacute;ro et les nombres n&eacute;gatifs ne sont pas au programme
+  de cette mission</b> &mdash; les refuser demanderait le <span class="m">and</span> de la s&eacute;ance 9.
+  Si l'&eacute;l&egrave;ve le remarque, c'est un excellent signe : dites-lui que c'est exactement la
+  question du 7 novembre.</div>
+</div>
+
+<div class="note" style="border-color:#2fb765;background:#f2faf5">
+  <h3 style="color:#0c5c29">&#9989; Comment l'&eacute;valuer &mdash; par la preuve, pas par une note</h3>
+  <table class="g">
+    <tr><th style="width:30%">Ce qu'on regarde</th><th>La preuve</th></tr>
+    <tr><td><b>1. L'algorithme existe</b></td><td>Le cadre violet est rempli, en fran&ccedil;ais, avec
+        des <b>SI</b> d&eacute;cal&eacute;s. <b>C'est le vrai livrable de la mission.</b></td></tr>
+    <tr><td><b>2. Jou&eacute; &agrave; la main</b></td><td>L'&eacute;l&egrave;ve sait dire, sans la
+        machine, ce que devient chaque bo&icirc;te quand on va de l'&eacute;tage 2 au 5.</td></tr>
+    <tr><td><b>3. Le programme tourne</b></td><td>Les trois voyages s'encha&icirc;nent sans message rouge.</td></tr>
+    <tr><td><b>4. Il tient debout</b></td><td>Les <b>cinq essais</b> de la feuille passent, le 9 refus&eacute;
+        compris.</td></tr>
+    <tr><td><b>5. Expliqu&eacute;</b></td><td>L'&eacute;l&egrave;ve sait dire <b>pourquoi</b> les quatre
+        lignes de mise &agrave; jour sont &agrave; ce niveau de d&eacute;calage, et pas plus &agrave;
+        droite.</td></tr>
+  </table>
+  <div style="margin-top:1.4mm"><b>Les points 1 et 5 comptent plus que le 3</b> &mdash; c'est
+  &eacute;crit sur sa feuille, dites-le avant le d&eacute;but. <b>Et apr&egrave;s :</b>
+  faites-lui pr&eacute;senter <b>son algorithme</b> &agrave; la classe en trois minutes, au tableau,
+  <b>sans montrer le code</b>. Pour les autres, c'est le premier algorithme qu'ils verront
+  &eacute;crit par quelqu'un de leur &acirc;ge.</div>
+</div>
+</body></html>

@@ -121,19 +121,48 @@ def pdf(src_html, out_pdf):
                     "file://" + src_html], check=True,
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-def png(src_pdf, prefixe):
-    import pymupdf
-    doc = pymupdf.open(src_pdf)
+class _Doc(object):
+    """Le minimum dont les generateurs se servent : le nombre de pages."""
+    def __init__(self, n):
+        self.page_count = n
+
+
+def pages(src_pdf):
+    """Nombre de pages, via poppler (pdfinfo)."""
+    r = subprocess.run(["pdfinfo", src_pdf], capture_output=True, text=True, check=True)
+    for ligne in r.stdout.split("\n"):
+        if ligne.startswith("Pages:"):
+            return int(ligne.split()[1])
+    raise RuntimeError("pdfinfo n'a pas donne le nombre de pages")
+
+
+def png(src_pdf, prefixe, dpi=150):
+    """Une image par page, via poppler (pdftoppm)."""
+    subprocess.run(["pdftoppm", "-png", "-r", str(dpi), src_pdf, prefixe], check=True)
+    n = pages(src_pdf)
+    larg = len(str(n))
     noms = []
-    for i, page in enumerate(doc):
-        pix = page.get_pixmap(dpi=150)
-        nom = "%s-%d.png" % (prefixe, i + 1)
-        pix.save(nom)
-        noms.append(nom)
-    return noms, doc
+    for i in range(1, n + 1):
+        #  pdftoppm numerote sur la largeur du total : -1, ou -01 au-dela de 9
+        brut = "%s-%0*d.png" % (prefixe, larg, i)
+        voulu = "%s-%d.png" % (prefixe, i)
+        if brut != voulu and os.path.exists(brut):
+            os.replace(brut, voulu)
+        noms.append(voulu)
+    return noms, _Doc(n)
+
 
 def mesure(src_pdf):
-    import pymupdf
-    doc = pymupdf.open(src_pdf)
-    return [round(100 * max(b[3] for b in p.get_text("blocks")) / p.rect.height)
-            for p in doc]
+    """Taux de remplissage de chaque page, en %, via pdftotext -bbox."""
+    r = subprocess.run(["pdftotext", "-bbox", src_pdf, "-"],
+                       capture_output=True, text=True, check=True)
+    taux, hauteur, bas = [], None, 0.0
+    for m in re.finditer(r'<page width="([\d.]+)" height="([\d.]+)"|yMax="([\d.]+)"|</page>',
+                         r.stdout):
+        if m.group(2):
+            hauteur, bas = float(m.group(2)), 0.0
+        elif m.group(3):
+            bas = max(bas, float(m.group(3)))
+        elif hauteur:
+            taux.append(round(100 * bas / hauteur))
+    return taux
