@@ -21,6 +21,7 @@ mieux changer une ligne et relancer que refaire la mise en page à la main.
 | `programme_responsable.py` | le **programme des deux mois** (Word) | `3-suivi/points-au-responsable/` |
 | `affiche.py` | **l'affiche du trimestre** : HTML → PDF → image | `2-seances/a-afficher/` |
 | `mission_ascenseur.py` | la **mission autonome n°1** : feuille élève et feuille enseignant | `2-seances/missions-autonomes/` |
+| `revision_generale.js` + `donnees_revision_generale.js` | la **révision générale** du 14 novembre : 38 diapos, cartes **et** ateliers au clavier | `S10-la-boucle/a-projeter/` |
 
 > `S08` et `S12` (les deux TP) ont des documents écrits à la main, pas générés :
 > leurs `.html` sont dans `a-imprimer/sources/`.
@@ -39,6 +40,7 @@ python3.13 -I notices.py
 python3.13 -I quantites.py
 
 NODE_PATH=/chemin/vers/node_modules node donnees_quiz_rappel.js  # les 5 quiz flash
+NODE_PATH=/chemin/vers/node_modules node donnees_revision_generale.js  # la révision générale
 NODE_PATH=/chemin/vers/node_modules node donnees_decks.js   # les 5 diaporamas
 NODE_PATH=/chemin/vers/node_modules node decks_tp.js        # les 2 diaporamas de TP
 

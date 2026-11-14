@@ -57,6 +57,11 @@
 
 ## 3. Le quiz flash — 12 h 15, 7 minutes
 
+> 🎯 **Le 14 novembre, on a fait autre chose :** une **[révision générale de 50 minutes](revision-generale.md)**
+> — le quiz, mais avec des **ateliers au clavier** entre les manches, et une dernière manche qui
+> fabrique le besoin de la boucle. À projeter : [`a-projeter/revision-generale.pptx`](a-projeter/revision-generale.pptx).
+> Le quiz flash ci-dessous reste la version courte, pour un samedi ordinaire.
+
 **Projetez [`a-projeter/quiz-rappel.pptx`](a-projeter/quiz-rappel.pptx)** — 14 diapos : une question par diapo, sa réponse juste après. **On avance d'une diapo seulement quand toutes les cartes sont levées.** Les six mêmes questions figurent aussi, en résumé, sur deux diapos du diaporama de la séance : c'est le plan de secours si vous ne pouvez ouvrir qu'un seul fichier.
 
 | | Question | Réponse |
