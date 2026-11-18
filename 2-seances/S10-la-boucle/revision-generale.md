@@ -98,7 +98,20 @@ besoin**, et il vient d'eux.
 
 ---
 
-## 5. Après la séance
+## 5. À envoyer le mercredi
+
+La même révision existe **en formulaire Google**, pour qu'ils la refassent à la maison :
+**[`a-envoyer/quiz-revision-generale.md`](a-envoyer/quiz-revision-generale.md)** — 20 questions,
+corrigées à 100 % automatiquement. Les huit cartes du diaporama y sont telles quelles, et **les cinq
+ateliers sont devenus des questions** : on ne leur demande plus d'écrire le code, mais de dire ce
+qu'il fait.
+
+**Envoyez celui-là cette semaine**, et gardez le [quiz n°8](a-envoyer/quiz-semaine.md) — qui ne porte
+que sur la boucle — pour un rappel plus tard.
+
+---
+
+## 6. Après la séance
 
 - **Journal** : notez, pour chacun des cinq ateliers, **combien l'ont fait tourner seuls**. C'est une
   photographie de la classe plus honnête qu'un test écrit.

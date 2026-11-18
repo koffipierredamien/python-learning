@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Six quiz hebdomadaires, 15 questions a choix multiples chacun, 100 % auto-corriges.
+"""Les quiz a choix multiples, 100 % auto-corriges.
+   Quinze questions pour un quiz de la semaine ; davantage pour une revision.
    Les bonnes reponses sont placees automatiquement selon une sequence de positions
    qui evite deux fois de suite le meme emplacement."""
 import io, os, subprocess
@@ -9,11 +10,22 @@ BASE_CIBLE = [1, 3, 2, 4, 1, 2, 4, 3, 1, 4, 2, 3, 1, 4, 2]   # jamais deux fois 
 # Une permutation differente par quiz : d'une semaine a l'autre, la suite des
 # positions change, pour qu'aucun eleve ne puisse la repérer d'un quiz au suivant.
 PERMUTATIONS = {5: [1, 2, 3, 4], 6: [2, 1, 4, 3], 7: [3, 4, 1, 2],
-                8: [4, 3, 2, 1], 9: [2, 3, 4, 1], 10: [4, 1, 2, 3]}
+                8: [4, 3, 2, 1], 9: [2, 3, 4, 1], 10: [4, 1, 2, 3],
+                11: [3, 1, 4, 2]}
 
-def cible(num):
+def cible(num, n=15):
+    """Les positions ou tombera la bonne reponse : jamais deux fois de suite
+       au meme endroit, et les quatre positions a peu pres autant servies."""
     p = PERMUTATIONS.get(num, [1, 2, 3, 4])
-    return [p[v - 1] for v in BASE_CIBLE]
+    suite = []
+    while len(suite) < n:
+        for v in BASE_CIBLE:
+            if suite and p[v - 1] == suite[-1]:
+                continue                      # on saute, pour ne jamais repeter
+            suite.append(p[v - 1])
+            if len(suite) == n:
+                break
+    return suite
 
 GABARIT = u'''/**
  * =====================================================================
@@ -23,7 +35,7 @@ GABARIT = u'''/**
  *  POUR LES ENFANTS QUI N'ONT PAS D'ORDINATEUR : ils le font A LA PLACE
  *  de l'exercice de maison. Un telephone suffit.
  *
- *  15 questions a choix multiples = 15 points.
+ *  {n} questions a choix multiples = {n} points.
  *  TOUT EST CORRIGE AUTOMATIQUEMENT : aucun corrige a coller a la main.
  * =====================================================================
  *
@@ -53,7 +65,7 @@ function creerLeQuiz() {{
       '{intro}\\n\\n' +
       'RAPPELS A GARDER SOUS LES YEUX :\\n' +
       '{rappels}\\n\\n' +
-      '15 questions, 15 points. Tu as ta note et les explications a la fin. ' +
+      '{n} questions, {n} points. Tu as ta note et les explications a la fin. ' +
       'Se tromper n\\'est pas grave : c\\'est comme ca qu\\'on apprend.');
 
   form.setIsQuiz(true);
@@ -105,7 +117,7 @@ function creerLeQuiz() {{
   Logger.log(form.getPublishedUrl());
   Logger.log('LIEN POUR MODIFIER :');
   Logger.log(form.getEditUrl());
-  Logger.log('15 questions a choix multiples = 15 points, 100 % automatique.');
+  Logger.log('{n} questions a choix multiples = {n} points, 100 % automatique.');
 }}
 '''
 
@@ -115,9 +127,9 @@ def js(t):
 
 
 def bloc_questions(qs, num):
-    out = []
+    out, positions = [], cible(num, len(qs))
     for i, (enonce, bonne, distracteurs, expl) in enumerate(qs):
-        k = cible(num)[i] - 1
+        k = positions[i] - 1
         choix = distracteurs[:k] + [bonne] + distracteurs[k:]
         assert len(choix) == 4, (i, choix)
         assert len(set(choix)) == 4, (i, choix)
@@ -126,15 +138,18 @@ def bloc_questions(qs, num):
     return u",\n\n".join(out)
 
 
-def ecrire(num, dossier, titre, sujet, intro, rappels, sections, qs):
-    assert len(qs) == 15, (num, len(qs))
+def ecrire(num, dossier, titre, sujet, intro, rappels, sections, qs,
+           fichier="quiz-semaine.gs", remplacements=None):
     src = GABARIT.format(
-        num=num, sujet=sujet, titre=js(titre), intro=js(intro),
+        num=num, n=len(qs), sujet=sujet, titre=js(titre), intro=js(intro),
         rappels=js("\n".join("    " + r for r in rappels)),
         questions=bloc_questions(qs, num),
         sections=u"{" + u", ".join("%d: ['%s', '%s']" % (k, js(v[0]), js(v[1]))
                                    for k, v in sections.items()) + u"}")
-    chemin = os.path.join(BASE, dossier, "a-envoyer", "quiz-semaine.gs")
+    for vieux, neuf in (remplacements or []):
+        assert vieux in src, vieux[:50]
+        src = src.replace(vieux, neuf, 1)
+    chemin = os.path.join(BASE, dossier, "a-envoyer", fichier)
     io.open(chemin, "w", encoding="utf-8").write(src)
     # on rejoue contre le faux FormApp
     tmp = "/tmp/quiz_check.js"

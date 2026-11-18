@@ -14,6 +14,7 @@ mieux changer une ligne et relancer que refaire la mise en page à la main.
 | `decks.js` + `donnees_decks.js` | les 5 diaporamas de séance | `S06/S07/S09/S10/S11 · a-projeter/` |
 | `decks_tp.js` | les 2 diaporamas de TP | `S08/S12 · a-projeter/` |
 | `quiz_hebdo.py` + `quiz_5_6.py`, `quiz_7_8.py`, `quiz_9_10.py` | les 6 quiz de la semaine (`.gs`) | `S06/S07/S09/S10/S11/S12 · a-envoyer/` |
+| `quiz_revision.py` | la **révision générale en formulaire** (20 questions) | `S10-la-boucle · a-envoyer/` |
 | `exos_maison.py` + `donnees_exos.py` + `build_exos.py` | les 3 exercices de maison : feuille élève et corrigé, en **HTML → PDF → images** | `S06/S09/S10 · a-envoyer/` |
 | `notices.py` | les 6 `quiz-semaine.md` (réglages, message aux parents) | `*/a-envoyer/` |
 | `quantites.py` | les 5 `quantites-et-formats.md` des séances de cours | `*/a-imprimer/` |
@@ -34,6 +35,7 @@ cd 2-seances/generateurs
 python3.13 -I quiz_5_6.py          # les quiz : chacun est revérifié en sortant
 python3.13 -I quiz_7_8.py
 python3.13 -I quiz_9_10.py
+python3.13 -I quiz_revision.py    # la révision générale en formulaire
 python3.13 -I aide_memoires.py     # affiche le taux de remplissage de chaque page
 python3.13 -I build_exos.py        # exercices de maison : PDF + images
 python3.13 -I notices.py
