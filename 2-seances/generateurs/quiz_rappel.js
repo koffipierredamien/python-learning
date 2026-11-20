@@ -113,6 +113,9 @@ function creer(s) {
        color:CYAN,lineSpacing:24});}
    sl.addNotes(s.bascule.note||'On enchaîne tout de suite sur la leçon. Le quiz ne se commente pas.');}
 
+  if (!require('fs').existsSync(BASE + s.dossier)) {
+    console.log('  IGNORE (seance retiree du parcours) : ' + s.dossier);
+    return Promise.resolve(); }
   const sortie = BASE + s.dossier + '/a-projeter/quiz-rappel.pptx';
   return p.writeFile({fileName: sortie})
           .then(()=>console.log('  S'+s.num+' -> '+s.dossier+'/a-projeter/quiz-rappel.pptx'));

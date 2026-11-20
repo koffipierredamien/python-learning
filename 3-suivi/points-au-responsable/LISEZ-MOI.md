@@ -13,7 +13,16 @@ après l'avoir envoyé, on en fait un nouveau.
 > par [`2-seances/generateurs/programme_responsable.py`](../../2-seances/generateurs/programme_responsable.py).
 >
 > **Deux points d'étape sont prévus** sur ces deux mois : après le TP du 31 octobre, et après le
-> tournoi du 28 novembre — celui-là reprendra le bilan rempli par les élèves eux-mêmes.
+> tournoi — celui-là reprendra le bilan rempli par les élèves eux-mêmes.
+
+> ⚠️ **Mise à jour du 20 novembre.** Le programme transmis le 17 octobre annonçait sept séances
+> jusqu'au tournoi du 28 novembre. **La classe a pris deux samedis de retard** : la révision du
+> 14 novembre n'a pas pu aller à son terme, et la répétition (`while`) n'est pas commencée.
+> **Le tournoi du 28 novembre n'aura donc pas lieu à cette date.**
+>
+> Ce document reste **tel qu'il a été envoyé** — on ne réécrit pas un point transmis.
+> L'écart se dit dans le **déroulé hebdomadaire** et, s'il faut un écrit, dans un **nouveau point
+> daté**. L'état réel du parcours est dans [le plan](../../2-seances/PLAN.md).
 
 ## Comment il est fabriqué
 

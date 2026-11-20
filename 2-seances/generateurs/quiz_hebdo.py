@@ -146,6 +146,10 @@ def ecrire(num, dossier, titre, sujet, intro, rappels, sections, qs,
         questions=bloc_questions(qs, num),
         sections=u"{" + u", ".join("%d: ['%s', '%s']" % (k, js(v[0]), js(v[1]))
                                    for k, v in sections.items()) + u"}")
+    dossier_seance = os.path.join(BASE, dossier)
+    if not os.path.isdir(dossier_seance):
+        print("QUIZ %d  %s : IGNORE (seance retiree du parcours)" % (num, dossier))
+        return
     for vieux, neuf in (remplacements or []):
         assert vieux in src, vieux[:50]
         src = src.replace(vieux, neuf, 1)

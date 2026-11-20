@@ -10,7 +10,8 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
 | **Encadrement** | 2 enseignants — **un par classe**, les deux classes en parallèle |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
-| **Séance en préparation** | **Séance 6**, samedi 17 octobre 2026, 12 h - 14 h — et **tout octobre-novembre est prêt** |
+| **Prochaine séance** | **Séance 11**, samedi 21 novembre 2026, 12 h - 14 h — [tout est prêt](2-seances/S11-les-trois-chemins/fiche-de-seance.md) |
+| **Où nous en sommes** | dix séances faites · [la carte du terrain](2-seances/PLAN.md), refaite le 20 novembre |
 
 ---
 
@@ -26,34 +27,34 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 ---
 
-## Aujourd'hui : la séance 6 — et les deux mois qui suivent
+## Demain : la séance 11 — « Trois chemins au lieu de deux »
 
-👉 **[2-seances/S06-le-plateau-se-souvient/](2-seances/S06-le-plateau-se-souvient/fiche-de-seance.md)**
+👉 **[2-seances/S11-les-trois-chemins/](2-seances/S11-les-trois-chemins/fiche-de-seance.md)**
 
-> **« Le plateau se souvient. »** La notion la plus importante du parcours : **la liste**. À la fin de
-> la séance, le premier X **reste** sur le plateau — pour la première fois, le programme se souvient
-> de ce qu'on lui a dit.
+> **`elif`, et l'ordre des conditions.** Jusqu'ici, le jeu refusait un coup en disant
+> « la case n'existe pas **ou** elle est déjà prise ». À la fin de la séance, **il dit laquelle des
+> deux** — et la classe a compris que *Python s'arrête au premier vrai*.
 
-🗺️ **[Le parcours d'octobre et novembre](2-seances/PLAN-OCTOBRE-NOVEMBRE.md)** — **sept séances
-entièrement préparées**, du 17 octobre au 28 novembre : fiches, diaporamas, aide-mémoires, deux TP
-avec corrigés, six quiz de la semaine et trois exercices de maison. **De quoi tenir deux mois sans
-rien avoir à écrire.**
+> 🃏 **Le cours lui-même est devenu un quiz.** On projette une question, ils lèvent une carte,
+> puis ils tapent. La notion du jour arrive **après** le constat de son absence, jamais avant.
+> Chaque atelier porte une ligne ⭐ pour ceux qui finissent avant les autres.
+
+🗺️ **[Où nous en sommes, et ce qui vient](2-seances/PLAN.md)** — ce qui a réellement eu lieu
+depuis le 12 septembre, ce que la classe sait faire au 20 novembre, ce qu'elle ne sait pas encore,
+et pourquoi le dépôt a été réordonné. **On prépare désormais la séance suivante, pas le trimestre.**
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| Savoir où va le parcours | 🗺️ [**La carte des deux mois**](2-seances/PLAN-OCTOBRE-NOVEMBRE.md) — l'ordre, le calendrier, le tableau de bord de tous les fichiers |
-| Afficher au mur, **avant samedi** | 📌 [**L'affiche du trimestre**](2-seances/a-afficher/LISEZ-MOI.md) — les 7 samedis, une case à cocher par semaine, et le message aux familles |
+| **Tout projeter demain** | 📺 [**Le cours en quiz**](2-seances/S11-les-trois-chemins/a-projeter/cours-en-quiz.pptx) — **46 diapos**, de la prière à la clôture |
+| Animer la séance | [📖 La fiche du jour](2-seances/S11-les-trois-chemins/fiche-de-seance.md) — minute par minute, avec ce qu'on dit |
+| Imprimer | 🖨️ [La liste du jour](2-seances/S11-les-trois-chemins/a-imprimer/quantites-et-formats.md) · [l'aide-mémoire 1 page](2-seances/S11-les-trois-chemins/a-imprimer/1-aide-memoire.pdf) |
+| Donner l'exercice | 📋 [**Le Bulletin**](2-seances/S11-les-trois-chemins/a-envoyer/exercice-le-bulletin.pdf), et ⭐ **Le Prix du Ticket** pour ceux qui vont vite — [corrigé des deux](2-seances/S11-les-trois-chemins/a-envoyer/correction-le-bulletin.pdf) |
+| Préparer les postes | [`code/depart_eleves.py`](2-seances/S11-les-trois-chemins/code/depart_eleves.py) · le Filet : [le code officiel](2-seances/S11-les-trois-chemins/code/code_officiel_fin_de_seance.py) |
 | Occuper un élève qui a fini avant les autres | 🧠 [**Les missions autonomes**](2-seances/missions-autonomes/LISEZ-MOI.md) — un cahier des charges, pas des étapes : il écrit l'algorithme, puis le code |
-| Animer la séance de samedi | [📖 La fiche du jour](2-seances/S06-le-plateau-se-souvient/fiche-de-seance.md) — minute par minute |
-| Ouvrir la séance | [🎯 Le quiz flash](2-seances/S06-le-plateau-se-souvient/a-projeter/quiz-rappel.pptx) — 6 questions, 7 min, une question par diapo |
-| Projeter ensuite | [📺 Le diaporama de la séance](2-seances/S06-le-plateau-se-souvient/a-projeter/seance-6-projection.pptx) |
-| Répéter le live coding | [⌨️ L'anti-sèche](2-seances/S06-le-plateau-se-souvient/code/live_coding_antiseche.py) — la veille, à voix haute |
-| Imprimer | [🖨️ La liste du jour](2-seances/S06-le-plateau-se-souvient/a-imprimer/quantites-et-formats.md) |
-| Donner l'exercice de maison, mercredi | 🔐 [**Le Coffre-Fort**](2-seances/S06-le-plateau-se-souvient/a-envoyer/exercice-maison.md), ou 🚢 **La Bataille Navale** pour ceux qui vont vite — mêmes notions, assemblage plus dur |
-| …pour ceux sans ordinateur | 📱 [**Le quiz n°5**](2-seances/S06-le-plateau-se-souvient/a-envoyer/quiz-semaine.md) — 15 questions, corrigé automatiquement |
-| Les deux TP du trimestre | 🛠️ [TP n°2, 31 oct](2-seances/S08-tp-le-plateau/fiche-de-seance.md) · 🏆 [TP n°3 et tournoi, 28 nov](2-seances/S12-tp-le-tournoi/fiche-de-seance.md) |
-| Envoyer le programme au responsable | 📋 [Le programme des deux mois](3-suivi/points-au-responsable/programme-octobre-novembre.pdf) — et, chaque samedi, [le déroulé de la séance](2-seances/S06-le-plateau-se-souvient/a-envoyer/deroule-seance-6.pdf) |
-| Revoir la séance dernière | [📄 La séance 5](2-seances/S05-la-decision/fiche-de-seance.md) · [🔢 Le Nombre Secret](2-seances/S05-la-decision/a-envoyer/exercice-maison.md) |
+| Faire réviser à la maison | 📱 [**La révision générale en formulaire**](2-seances/S10-revision-generale/a-envoyer/quiz-revision-generale.md) — 20 questions, corrigées automatiquement |
+| Afficher au mur | 📌 [**L'affiche du trimestre**](2-seances/a-afficher/LISEZ-MOI.md) — une case à cocher par samedi, et le message aux familles |
+| Envoyer au responsable | 📋 [Le déroulé de la séance](2-seances/S11-les-trois-chemins/a-envoyer/deroule-seance-11.pdf) — sans code ni jargon |
+| Revoir la séance dernière | 📄 [La révision générale du 14 novembre](2-seances/S10-revision-generale/fiche-de-seance.md) — et ce qu'elle a appris à l'enseignant |
 
 ---
 
@@ -84,14 +85,18 @@ rien avoir à écrire.**
 | 0. Décollage | 1–2 | L'écran d'accueil, et le jeu demande ton nom | théorie de base · l'algorithme · `print()` · la variable · `input()` |
 | 1. Parler au joueur | 3–5 | Le jeu parle aux deux joueurs, compte, et décide | variables, `input()`, `int()`, le compteur, les opérateurs, `if` / `else` |
 | 2. Le plateau vit | 6–8 | Le symbole reste, et une case prise est refusée | **listes**, indices, `if` imbriqué, **TP n°2** |
-| 3. Les règles du jeu | 9–12 | Neuf tours tout seuls, un vainqueur, un tournoi | **`and` / `or`**, **`while`**, les 8 lignes gagnantes, **TP n°3** |
+| 3. Les règles du jeu | 9–… | Un refus qui dit pourquoi, neuf tours tout seuls, un vainqueur, un tournoi | **`and` / `or`**, **`elif`**, **`while`**, les 8 lignes gagnantes, **TP n°3** |
 | 4. L'interface graphique | 13–18 | Fenêtre, grille cliquable, design | Tkinter, événements |
 | 5. Finition & intelligence | 19–22 | Score, sons, **IA**, distribution | organisation du code, algorithmes |
 
-Les rendez-vous : **S10** le jeu tourne tout seul · **S12** premier tournoi de classe ·
-**S15** concours de design · **S18** la Nuit du bug · **S22** tournoi XO et démo aux familles.
-*(La séance 1 n'a pas pu aller jusqu'au bout : le samedi perdu est récupéré en densifiant la phase 1,
-qui passe de quatre séances à trois.)*
+Les rendez-vous : le jour où **le jeu tourne tout seul** · le **premier tournoi de classe** ·
+le concours de design · la Nuit du bug · le **tournoi XO et la démo aux familles**, en fin de parcours.
+
+> ⚠️ **Les numéros de la phase 3 ne sont plus datés.** Le parcours ci-dessus dit l'**ordre** des
+> briques, pas le calendrier : la répartition en samedis se décide **chaque semaine**, sur ce qui a
+> été réellement compris. L'état réel est toujours dans [la carte du terrain](2-seances/PLAN.md).
+> *(La séance 1 n'a pas pu aller jusqu'au bout, la séance 4 ni la révision du 14 novembre non plus :
+> on avance au rythme de la classe.)*
 
 ---
 
@@ -107,12 +112,18 @@ qui passe de quatre séances à trois.)*
 - [x] Le classeur de suivi, le registre des indisciplines et le suivi des révisions à la maison
 - [x] Le jeu XO terminé (démonstration d'ouverture)
 - [x] Séance 5 : **Le Grand Parcours** (feuille, fichiers de code, tableau de bord), quiz flash, fiche de continuité
-- [x] **Octobre – novembre : les sept séances 6 à 12, entièrement prêtes** — [la carte](2-seances/PLAN-OCTOBRE-NOVEMBRE.md)
-      - [x] 5 séances de cours : fiche, diaporama, aide-mémoire 1 page, code officiel testé, anti-sèche
-      - [x] 2 TP de 2 h avec leurs corrigés (S8 « le plateau vivant », S12 « le tournoi »)
+- [x] **Séances 6 à 9 : faites** — la liste et l'indice, la case déjà prise, **TP n°2 « le plateau vivant »**, `and` / `or`
+      - [x] fiche, diaporama, aide-mémoire 1 page, code officiel testé, anti-sèche pour chacune
+      - [x] 3 exercices de maison testés (Coffre-Fort, Bataille Navale, Club Geek) : A4, PDF, images, corrigé et `.py`
       - [x] 6 quiz de la semaine, 15 QCM chacun, **corrigés à 100 % automatiquement**
-      - [x] 4 exercices de maison testés (dont un renforcé), avec images A4, PDF, corrigé et `.py`
-      - [x] 1 mission autonome (l'algorithme d'abord, le code ensuite) pour les élèves en avance
-      - [x] 7 déroulés pour le responsable (Word et PDF), et le programme d'ensemble des deux mois
-      - [x] Classeur, dictionnaire des erreurs, grades et Mur de Mission mis à jour sur le nouveau parcours
-- [ ] Séances 13 à 22
+- [x] **Séance 10 — révision générale** (14 nov) : 46 diapos, trois manches faites sur cinq — [le compte rendu](2-seances/S10-revision-generale/fiche-de-seance.md)
+      - [x] le **formulaire de révision à la maison**, 20 questions, autonome et auto-corrigé
+- [x] **Séance 11 — demain, 21 novembre : prête** — [la fiche](2-seances/S11-les-trois-chemins/fiche-de-seance.md)
+      - [x] **le cours en quiz** : 46 diapos, 4 manches, 3 ateliers au clavier, des ⭐ partout
+      - [x] aide-mémoire 1 page, code de départ et code officiel, 4 ateliers corrigés et testés
+      - [x] l'exercice **Le Bulletin** + l'exercice ⭐ **Le Prix du Ticket** : A4, PDF, images, les deux corrigés
+      - [x] le déroulé pour le responsable (Word et PDF)
+- [x] 1 mission autonome (l'algorithme d'abord, le code ensuite) pour les élèves en avance
+- [x] L'affiche du trimestre, le classeur, le dictionnaire des erreurs, les grades et le Mur de Mission
+- [x] **Les générateurs** : diaporamas, quiz, fiches, déroulés, aide-mémoires, exercices — [mode d'emploi](2-seances/generateurs/LISEZ-MOI.md)
+- [ ] La suite : la boucle `while`, le gagnant, le tournoi, puis l'interface graphique — **chacune préparée la semaine où elle arrive**

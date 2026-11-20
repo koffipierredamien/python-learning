@@ -13,23 +13,29 @@ Une séance = un dossier. Tout ce qui la concerne est dedans, et rien d'autre.
 | **[S07 — On ne joue pas deux fois au même endroit](S07-la-case-occupee/fiche-de-seance.md)** · samedi 24 octobre 2026 | Le jeu **refuse** une case déjà prise | **le `if` dans le `if`** · `== str(case)` |
 | **[S08 — TP n°2 : le plateau vivant](S08-tp-le-plateau/fiche-de-seance.md)** · samedi 31 octobre 2026 | Quatre coups d'affilée, sans bug | TP de 2 h, en autonomie — [corrigé](S08-tp-le-plateau/code/corrige-tp2.py) |
 | **[S09 — Une seule question au lieu de trois](S09-et-ou/fiche-de-seance.md)** · samedi 7 novembre 2026 | Le même jeu, avec une décision **deux fois plus courte**, et le bug du zéro vraiment réparé | **`and`** et **`or`** |
-| **[S10 — Le jeu tourne tout seul](S10-la-boucle/fiche-de-seance.md)** · samedi 14 novembre 2026 | **Neuf tours**, et les joueurs alternent | **la boucle `while`** |
-| **[S11 — Le jeu sait qui gagne](S11-le-gagnant/fiche-de-seance.md)** · samedi 21 novembre 2026 | **Une vraie partie, avec un vainqueur** | les 8 lignes gagnantes · `while tour < 9 and gagnant == ""` |
-| **[S12 — TP n°3 : le tournoi](S12-tp-le-tournoi/fiche-de-seance.md)** · samedi 28 novembre 2026 | **Le jeu XO, fini et jouable** | finitions, tests, et **tournoi de classe** |
-| S13 à S22 | *à venir* | |
+| **[S10 — Révision générale](S10-revision-generale/fiche-de-seance.md)** · samedi 14 novembre 2026 | *(séance de consolidation, **non terminée**)* | le cours en quiz : cartes + ateliers au clavier |
+| **[S11 — Trois chemins au lieu de deux](S11-les-trois-chemins/fiche-de-seance.md)** · samedi 21 novembre 2026 | Le jeu dit **laquelle** des deux raisons il refuse un coup | **`elif`** · l'ordre des conditions · l'algorithme avant le code |
+| S12 à S22 | *se préparent une semaine à la fois — voir [le plan](PLAN.md)* | |
 
 > 🧠 **[Les missions autonomes](missions-autonomes/LISEZ-MOI.md)** — pour l'élève qui a fini avant
 > les autres. **Une page** : le contexte du programme, ses règles, l'écran attendu. Pas d'étapes, pas
 > de code. **L'algorithme d'abord, dans le cahier ; le code ensuite, dans Thonny.**
 > La n°1 est prête, après la séance 7.
 
+> 🃏 **Depuis le 14 novembre, le cours lui-même est un quiz.** Plus de « je montre / vous
+> faites » : on projette une question, tout le monde lève une carte au signal, puis on tape le
+> code — **en prédisant ce qu'il va faire avant de le lancer**. Chaque atelier porte une ligne
+> ⭐ pour ceux qui finissent avant les autres, et l'algorithme s'écrit en français sur le cahier
+> **avant** le clavier. La fiche de séance, elle, continue d'exister : c'est elle qui produit le
+> déroulé transmis au responsable.
+
 > 📌 **[L'affiche du trimestre](a-afficher/LISEZ-MOI.md)** — une page A4 à imprimer **avant le
 > 17 octobre** et à laisser au mur jusqu'au 28 novembre : les sept samedis, une case à cocher
 > chaque semaine. Avec le message d'annonce aux familles.
 
-> 🗺️ **[Le parcours d'octobre et novembre](PLAN-OCTOBRE-NOVEMBRE.md)** — la carte des sept séances
-> ci-dessus : pourquoi cet ordre, le calendrier semaine par semaine, le tableau de bord de tous les
-> fichiers, et la routine des quatre gestes. **C'est par là qu'il faut commencer.**
+> 🗺️ **[Le plan](PLAN.md)** — où nous en sommes vraiment, ce que la classe sait faire au jour
+> d'aujourd'hui, et ce qui est prêt pour samedi prochain. Il est refait à chaque fois que la réalité
+> s'écarte du programme. **C'est par là qu'il faut commencer.**
 
 > **La séance 4 n'a traité que sa première notion** (texte ou nombre). Le compteur et la décision
 > passent à la séance 5, qui réutilise **tout** le matériel de la séance 4 : diaporama, aide-mémoire,
@@ -56,6 +62,9 @@ S02-premier-contact/
 │     quiz-rappel.pptx              le quiz flash d'ouverture : une question
 │                                   par diapo, sa réponse juste après
 │     seance-2-projection.pptx      le diaporama de la séance (28 diapos)
+│     (à partir du 14 novembre : cours-en-quiz.pptx — un seul fichier qui porte
+│      TOUTE la séance, de la prière à la clôture. Le cours lui-même est un quiz :
+│      une question projetée, les cartes levées, puis du code tapé au clavier)
 │     quiz-seance-1.pptx            le quiz (32 diapos), joué en séance 2
 │     quiz-questions-et-reponses.md les 15 questions, réponses et explications
 │     kahoot-en-ligne/              si vous préférez le vrai Kahoot

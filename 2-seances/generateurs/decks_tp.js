@@ -46,7 +46,11 @@ function deck(d) {
    txt(s,d.finTexte,{x:M,y:4.4,w:10.4,h:1.4,fontSize:19,color:GRIS_C,lineSpacing:26});
    s.addNotes(d.notesFin||'');}
 
-  return p.writeFile({fileName:'/home/user/python-learning/2-seances/'+d.dossier+'/a-projeter/seance-'+d.num+'-projection.pptx'})
+  const racine = require('path').resolve(__dirname, '..') + '/';
+  if (!require('fs').existsSync(racine + d.dossier)) {
+    console.log('  IGNORE (seance retiree du parcours) : ' + d.dossier);
+    return Promise.resolve(); }
+  return p.writeFile({fileName: racine + d.dossier + '/a-projeter/seance-' + d.num + '-projection.pptx'})
           .then(f=>console.log('  TP S'+d.num+' écrit'));
 }
 

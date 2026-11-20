@@ -1,0 +1,159 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Correction — Le Bulletin</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;font-family:"Trebuchet MS",Verdana,sans-serif;color:#14142b;background:#fff}
+ .saut{page-break-before:always}
+ .mono{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+       padding:.3mm 1mm;border-radius:1mm}
+
+ body{font-size:9.6pt;padding:7mm 8mm 5mm}
+ .band{background:#0c5c29;color:#fff;border-radius:3mm;padding:3.6mm 5mm;margin-bottom:3.4mm}
+ .band .k{font-size:9pt;letter-spacing:1.2pt;color:#a8e6bd;font-weight:bold}
+ .band h1{font-size:20pt;margin:1mm 0 1.2mm}
+ .band .s{font-size:10pt;color:#d8f0e2;line-height:1.45}
+ pre{margin:0 0 2.6mm;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:3mm 4mm;
+     font-family:"Courier New",monospace;font-size:7.6pt;line-height:1.3;white-space:pre-wrap}
+ pre .c{color:#7f7f9c} pre .s{color:#ffb74d} pre .k{color:#4fc3f7;font-weight:bold}
+ .coupe{background:#6b2d8f;color:#fff;border-radius:2.2mm;padding:2mm 3.4mm;margin-bottom:2.6mm;
+        font-size:9.4pt;line-height:1.4}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.6mm 3.4mm;
+       margin-bottom:2.6mm;line-height:1.42;font-size:9.2pt}
+ .note b{color:#a65d00}
+ .note h3{margin:0 0 1.4mm;font-size:10.6pt;color:#a65d00}
+ .note ul{margin:1.2mm 0 0;padding-left:5mm}.note li{margin-bottom:1.1mm}
+ .note .m{font-family:"Courier New",monospace;font-weight:bold;background:#fff;
+          border:.3mm solid #e8d6a8;border-radius:1mm;padding:.3mm 1mm}
+ .suite{background:#0c5c29;color:#fff;border-radius:2.4mm;padding:2.2mm 4mm;margin-bottom:3mm;
+        font-size:10.4pt;font-weight:bold;display:flex;justify-content:space-between}
+ .suite span{color:#a8e6bd;font-weight:normal;font-size:9.4pt}
+.note{padding:2.2mm 3mm;margin-bottom:2.1mm;line-height:1.36;font-size:8.9pt}.note h3{margin-bottom:1.1mm;font-size:10pt}.coupe{padding:1.7mm 3mm;margin-bottom:2.1mm;font-size:9pt}</style></head><body>
+<div class="band">
+  <div class="k">CORRECTION · POUR L'ENSEIGNANT ET LES PARENTS</div>
+  <h1>✅ LE BULLETIN</h1>
+  <div class="s">Les deux programmes complets, tels qu'ils tournent dans Thonny.
+      <b>Le premier livrable n'est pas le code : c'est l'algorithme sur le cahier.</b>
+      Les messages peuvent varier — ce qui compte, c'est que la cascade soit dans un ordre qui tient.</div>
+</div>
+<pre><span class="k">print</span>(<span class="s">"="</span> * 38)
+<span class="k">print</span>(<span class="s">"          LE BULLETIN"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 38)
+<span class="k">print</span>(<span class="s">""</span>)
+
+<span class="c"># --- ETAPE 1 : qui est-ce ? ------------------------------------------</span>
+nom = <span class="k">input</span>(<span class="s">"Nom de l'eleve : "</span>)
+
+<span class="c"># --- ETAPE 2 : les trois notes ---------------------------------------</span>
+note1 = <span class="k">input</span>(<span class="s">"Note de Mathematiques /20 : "</span>)
+note1 = <span class="k">int</span>(note1)
+note2 = <span class="k">input</span>(<span class="s">"Note de Francais /20      : "</span>)
+note2 = <span class="k">int</span>(note2)
+note3 = <span class="k">input</span>(<span class="s">"Note d'Informatique /20   : "</span>)
+note3 = <span class="k">int</span>(note3)
+
+<span class="c"># --- ETAPE 3 : la moyenne --------------------------------------------</span>
+<span class="c">#  On garde la partie entiere : int() coupe ce qu'il y a apres la virgule.</span>
+moyenne = <span class="k">int</span>((note1 + note2 + note3) / 3)
+
+<span class="c"># --- ETAPE 4 : LA CASCADE  (le coeur de l'exercice) ------------------</span>
+<span class="c">#  Du PLUS EXIGEANT au MOINS EXIGEANT. Dans l'autre sens, tout le</span>
+<span class="c">#  monde serait "Passable".</span>
+<span class="k">if</span> moyenne &gt;= 16:
+    mention = <span class="s">"TRES BIEN"</span>
+elif moyenne &gt;= 14:
+    mention = <span class="s">"BIEN"</span>
+elif moyenne &gt;= 12:
+    mention = <span class="s">"ASSEZ BIEN"</span>
+elif moyenne &gt;= 10:
+    mention = <span class="s">"PASSABLE"</span>
+<span class="k">else</span>:
+    mention = <span class="s">"A REVOIR"</span>
+
+<span class="c"># --- ETAPE 5 : le bulletin -------------------------------------------</span>
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 38)
+<span class="k">print</span>(<span class="s">" Eleve   : "</span> + nom)
+<span class="k">print</span>(<span class="s">" Maths   : "</span> + <span class="k">str</span>(note1) + <span class="s">" / 20"</span>)
+<span class="k">print</span>(<span class="s">" Francais: "</span> + <span class="k">str</span>(note2) + <span class="s">" / 20"</span>)
+<span class="k">print</span>(<span class="s">" Info    : "</span> + <span class="k">str</span>(note3) + <span class="s">" / 20"</span>)
+<span class="k">print</span>(<span class="s">"-"</span> * 38)
+<span class="k">print</span>(<span class="s">" Moyenne : "</span> + <span class="k">str</span>(moyenne) + <span class="s">" / 20"</span>)
+<span class="k">print</span>(<span class="s">" Mention : "</span> + mention)
+<span class="k">print</span>(<span class="s">"="</span> * 38)</pre>
+<div class="saut"></div>
+<div class="suite">✅ LE BULLETIN — la suite <span>page 2 sur 2 · correction-le-prix-du-ticket.py</span></div>
+<div class="coupe">⭐ <b>LE PRIX DU TICKET</b> — donné <b>sans consigne détaillée</b> à ceux qui ont
+      fini Le Bulletin avant les autres. <b>Deux pièges volontaires :</b> l'ordre de la cascade, et la
+      réduction du samedi.</div>
+<pre><span class="k">print</span>(<span class="s">"="</span> * 44)
+<span class="k">print</span>(<span class="s">"        LE CINEMA DU QUARTIER"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 44)
+<span class="k">print</span>(<span class="s">""</span>)
+
+age = <span class="k">input</span>(<span class="s">"Quel age as-tu ? "</span>)
+age = <span class="k">int</span>(age)
+jour = <span class="k">input</span>(<span class="s">"Quel jour viens-tu ? "</span>)
+
+<span class="c"># --- LA CASCADE DES TARIFS -------------------------------------------</span>
+<span class="c">#  LE PIEGE : si on ecrit  elif age &gt;= 18  pour les adultes AVANT la</span>
+<span class="c">#  ligne des 65 ans, alors une personne de 70 ans paie 2000, parce que</span>
+<span class="c">#  70 &gt;= 18 est deja vrai et que Python s'arrete au premier vrai.</span>
+<span class="c">#  En allant du plus jeune au plus age, le probleme disparait tout seul.</span>
+<span class="k">if</span> age &lt; 5:
+    prix = 0
+elif age &lt;= 12:
+    prix = 500
+elif age &lt;= 17:
+    prix = 1000
+elif age &lt;= 64:
+    prix = 2000
+<span class="k">else</span>:
+    prix = 1000
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"Tarif de base : "</span> + <span class="k">str</span>(prix) + <span class="s">" F"</span>)
+
+<span class="c"># --- LA REDUCTION DU SAMEDI ------------------------------------------</span>
+<span class="c">#  Ce n'est PAS un elif : la reduction s'applique APRES, quel que soit</span>
+<span class="c">#  le tarif trouve. C'est un if tout seul, qui vient apres la cascade.</span>
+<span class="k">if</span> jour == <span class="s">"samedi"</span>:
+    prix = prix - 500
+    <span class="c">#  Le garde-fou : on ne rembourse personne.</span>
+    <span class="k">if</span> prix &lt; 0:
+        prix = 0
+    <span class="k">print</span>(<span class="s">"Reduction du samedi : -500 F"</span>)
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 44)
+<span class="k">print</span>(<span class="s">" A PAYER : "</span> + <span class="k">str</span>(prix) + <span class="s">" F"</span>)
+<span class="k">if</span> prix == 0:
+    <span class="k">print</span>(<span class="s">" C'est gratuit, bonne seance !"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 44)</pre>
+
+      <div class="note"><h3>⚠️ Le piège de l'ordre — à faire vivre, pas à expliquer</h3>
+        Celui qui écrit sa cascade <b>du plus petit au plus grand</b> n'a <b>aucune erreur rouge</b> :
+        tout le monde sort <b>PASSABLE</b>. Ne corrigez pas sa ligne — faites-lui entrer
+        <b>20, 19, 18</b> et lire la mention à voix haute. Il trouvera seul.</div>
+      <div class="note"><h3>⭐ Le prix du ticket : les deux pièges</h3>
+        <b>1. L'ordre.</b> Un <span class="m">elif age &gt;= 18</span> placé avant la ligne des
+        65 ans fait payer <b>2000 F à une personne de 70 ans</b> : 70 ≥ 18 est déjà vrai, et Python
+        s'arrête au premier vrai. En allant <b>du plus jeune au plus âgé</b>, le problème disparaît.<br>
+        <b>2. Le samedi.</b> Ce n'est <b>pas</b> un <span class="m">elif</span> : la réduction
+        s'applique <b>après</b>, quel que soit le tarif trouvé. Collée en <span class="m">elif</span>,
+        elle ne toucherait que ceux qui ne sont tombés dans <b>aucune</b> tranche : personne.<br>
+        <b>Le garde-fou</b> <span class="m">if prix &lt; 0: prix = 0</span> évite de rembourser
+        un enfant de 3 ans venu un samedi.</div>
+      <div class="note" style="border-color:#2fb765;background:#f2faf5">
+        <h3 style="color:#0c5c29">✅ Les cinq choses à regarder dans une copie</h3>
+        <ul>
+          <li><b>L'algorithme est-il sur le cahier ?</b> C'est le premier livrable, avant le code.</li>
+          <li>les <b>trois</b> <span class="m">int()</span> sont-ils là, un par note ?</li>
+          <li>la cascade va-t-elle <b>du plus exigeant au moins exigeant</b> ?</li>
+          <li>y a-t-il <b>un seul</b> <span class="m">if</span>, puis des <span class="m">elif</span> ?
+              (quatre <span class="m">if</span> séparés marchent aussi ici : on le dit, on ne le
+              sanctionne pas)</li>
+          <li>le <span class="m">else</span> final est-il là ? Sans lui, une moyenne de 5
+              n'affiche <b>aucune</b> mention.</li>
+        </ul>
+        <div style="margin-top:1.4mm"><b>On note la preuve, pas la perfection.</b></div></div>
+</body></html>

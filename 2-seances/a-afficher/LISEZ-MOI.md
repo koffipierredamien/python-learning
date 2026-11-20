@@ -7,6 +7,40 @@
 | **Quand** | **avant le samedi 17 octobre**, et elle reste au mur jusqu'au 28 novembre |
 | **Combien** | **1 par classe** |
 
+> ⚠️ **À lire avant de parler du 28 novembre (mise à jour du 20 novembre).**
+> L'affiche et le message ci-dessous ont été écrits mi-octobre. **La classe a pris deux samedis de
+> retard** : la répétition (`while`) n'a pas encore été commencée, donc **le jeu ne jouera pas ses
+> neuf tours tout seul le 28 novembre, et il n'y aura pas de tournoi ce jour-là.**
+>
+> **Ce qu'on fait :** on garde l'affiche au mur — les cases cochées disent le vrai travail accompli —
+> et on **barre à la main** la case du 28 novembre pour y écrire ce qu'on y fera réellement.
+> **On ne réimprime pas** : une affiche corrigée à la main devant les élèves dit une chose juste,
+> *on avance au rythme de la classe, pas du papier*.
+>
+> **Le message à envoyer aux familles avant le 28 novembre :**
+>
+> ```
+> Bonjour à tous, et que la paix soit avec vous.
+>
+> Une précision sur le programme annoncé en octobre.
+>
+> Nos enfants ont pris le temps de bien comprendre les décisions
+> du jeu - c'est la partie la plus difficile, et ils l'ont faite
+> sérieusement. Leur jeu sait désormais refuser un coup interdit
+> et dire pourquoi il le refuse.
+>
+> Le tournoi annoncé pour le 28 novembre aura donc lieu un peu
+> plus tard : nous préférons qu'ils jouent sur un programme
+> qu'ils maîtrisent vraiment. Nous vous donnerons la date dès
+> qu'elle sera sûre.
+>
+> Les séances continuent normalement, chaque samedi de 12 h à 14 h.
+>
+> Merci de votre confiance.
+> ```
+>
+> Voir [le plan](../PLAN.md) pour l'état réel du parcours.
+
 C'est **le Mur de Mission** des deux mois, en une page : les sept samedis, ce que le jeu saura faire
 à la fin de chacun, une case à cocher et un emplacement pour la photo du jour.
 

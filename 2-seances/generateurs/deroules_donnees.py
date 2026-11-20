@@ -313,216 +313,147 @@ SEANCES = [
  "depuis la séance 7 est close."},
 
 # =====================================================================
-{"num": 10, "dossier": "S10-la-boucle",
- "titre": "Le jeu tourne tout seul",
+{"num": 10, "dossier": "S10-revision-generale",
+ "titre": "Révision générale",
  "date": "samedi 14 novembre 2026",
  "objet":
- "Depuis cinq semaines, les élèves recopient à l'identique le bloc d'instructions correspondant au "
- "tour d'un joueur, autant de fois qu'il y a de tours à jouer. L'agacement est installé, et il a été "
- "entretenu volontairement. La séance introduit la répétition : une instruction qui demande à "
- "l'ordinateur de refaire un travail tant qu'une condition reste vraie. C'est la notion la plus "
- "rentable du parcours. En fin de séance, le jeu enchaîne ses neuf tours en alternant les deux "
- "joueurs, et le programme est plus court que celui de la semaine précédente.",
+ "Séance de consolidation, sans notion nouvelle. Après neuf séances, il devenait nécessaire de "
+ "vérifier ce qui était réellement acquis, et non ce qui avait été enseigné. La séance a pris la "
+ "forme d'un questionnaire projeté en cinq manches, chacune suivie d'un atelier où les apprenants "
+ "éprouvent sur leur poste un programme qui ne fait pas ce qu'ils attendent. La séance n'a pas pu "
+ "aller à son terme : les deux dernières manches n'ont pas été traitées, et la notion qui devait "
+ "être introduite en fin de séance a été reportée.",
  "horaires": [("12 h - 12 h 15", "Prière et accueil", "15 min"),
-              ("12 h 15 - 12 h 22", "Quiz de révision du travail de la semaine précédente", "7 min"),
-              ("12 h 22 - 12 h 40", "Première séquence : la répétition, et la répétition sans fin", "18 min"),
-              ("12 h 40 - 12 h 55", "Premier atelier : le compte à rebours", "15 min"),
-              ("12 h 55 - 13 h 05", "Pause", "10 min"),
-              ("13 h 05 - 13 h 20", "Deuxième séquence : l'alternance des deux joueurs", "15 min"),
-              ("13 h 20 - 13 h 50", "Second atelier : le projet", "30 min"),
+              ("12 h 15 - 12 h 18", "Règle du jeu : la carte, puis le clavier", "3 min"),
+              ("12 h 18 - 12 h 26", "Manche 1 : distinguer un texte d'un nombre", "8 min"),
+              ("12 h 26 - 12 h 35", "Manche 2 : les listes et le rang", "9 min"),
+              ("12 h 35 - 12 h 45", "Manche 3 : le décalage des lignes", "10 min"),
+              ("12 h 45 - 13 h 56", "Manches 4 et 5 : non traitées, reportées", "—"),
+              ("13 h 56 - 14 h", "Clôture", "4 min")],
+ "deroule": [
+  ("12 h - 12 h 15   Prière et accueil", ACCUEIL),
+  ("12 h 15 - 12 h 18   La règle de la séance",
+   ("Deux sortes de questions sont annoncées : celles auxquelles on répond en levant une carte de "
+    "couleur, tout le monde en même temps, et celles où l'on tape soi-même le programme projeté.",
+    "Une consigne est posée pour toute la séance : avant de lancer un programme, chacun annonce ce "
+    "qu'il pense qu'il va faire. Cette prédiction est l'exercice ; celui qui lance sans prédire ne "
+    "se trompe jamais devant lui-même, et n'apprend donc rien.")),
+  ("12 h 18 - 12 h 45   Les trois premières manches",
+   ("Chaque manche associe deux questions à la carte et un atelier sur machine. Les ateliers sont "
+    "construits autour d'un programme qui échoue : les apprenants doivent trouver pourquoi, puis "
+    "réparer.",
+    "Les trois manches traitées ont porté sur la distinction entre un texte et un nombre, sur la "
+    "manière de désigner un élément dans une liste, et sur le décalage des lignes, qui détermine "
+    "quelles instructions dépendent d'une condition.",
+    "Le temps consacré à chaque atelier a dépassé ce qui était prévu, les apprenants ayant cherché "
+    "les causes par eux-mêmes plutôt que de recevoir la correction. Ce dépassement est considéré "
+    "comme utile.")),
+  ("12 h 45 - 14 h   Ce qui n'a pas pu être traité",
+   ("Les deux dernières manches, ainsi que la notion de répétition qui devait être introduite en fin "
+    "de séance, n'ont pas été abordées.",
+    "Le programme des séances suivantes a été réorganisé en conséquence. La séance du 21 novembre "
+    "reprend les points que la révision a montrés fragiles, et la répétition est reportée à une "
+    "séance ultérieure, lorsque le besoin en sera clairement établi.")),
+  ("13 h 56 - 14 h   Clôture",
+   ("Avancement du Mur de Mission.",
+    "Annonce de la séance suivante.")),
+ ],
+ "travail":
+ "Un questionnaire de vingt questions, corrigé automatiquement, a été adressé à toutes les familles. "
+ "Il reprend l'intégralité de la séance et se fait depuis un téléphone en une demi-heure. Il a été "
+ "rédigé de manière à être compréhensible sans avoir assisté à la séance, afin que les apprenants "
+ "absents puissent en bénéficier également. Il n'entre dans aucune note.",
+ "acquis":
+ "Cette séance n'a pas ajouté de compétence nouvelle. Elle a donné à l'équipe enseignante une "
+ "photographie précise de ce qui est acquis et de ce qui ne l'est pas, laquelle a servi à "
+ "réorganiser le programme des séances suivantes."},
+
+# =====================================================================
+{"num": 11, "dossier": "S11-les-trois-chemins",
+ "titre": "Trois chemins au lieu de deux",
+ "date": "samedi 21 novembre 2026",
+ "objet":
+ "Le programme des apprenants sait aujourd'hui refuser un coup illégal, mais il ne sait en donner "
+ "qu'une seule explication, et elle est ambiguë : il annonce que la case n'existe pas ou qu'elle est "
+ "déjà occupée, sans jamais dire laquelle des deux. La raison en est technique : une structure de "
+ "décision ordinaire n'offre que deux issues, et il en faudrait trois. La séance introduit donc le "
+ "moyen d'enchaîner plusieurs conditions, et surtout la règle qui le gouverne : l'ordinateur "
+ "s'arrête à la première condition vraie et ne regarde pas les suivantes — d'où l'importance de "
+ "l'ordre dans lequel on les écrit. La séance se tient entièrement au format questionnaire, et "
+ "chaque notion est suivie d'un atelier sur machine.",
+ "horaires": [("12 h - 12 h 15", "Prière et accueil", "15 min"),
+              ("12 h 15 - 12 h 28", "Questionnaire de révision : sept questions", "13 min"),
+              ("12 h 28 - 13 h 05", "Le cours : quatre séquences, trois ateliers sur machine", "37 min"),
+              ("13 h 05 - 13 h 15", "Pause", "10 min"),
+              ("13 h 15 - 13 h 40", "Exercice : le bulletin scolaire", "25 min"),
+              ("13 h 40 - 13 h 50", "Exercice de prolongement, pour les plus rapides", "10 min"),
               ("13 h 50 - 14 h", "Clôture", "10 min")],
  "deroule": [
   ("12 h - 12 h 15   Prière et accueil", ACCUEIL),
-  ("12 h 15 - 12 h 22   Quiz de révision",
-   ("Six questions sur les opérateurs introduits la semaine précédente.",
-    "L'enseignant réclame ensuite le chiffre noté à la fin de la séance 9 — le nombre de lignes que "
-    "chacun recopie — et l'inscrit au tableau. La leçon du jour s'écrit dessous. L'argument en faveur "
-    "de la notion vient ainsi des élèves eux-mêmes, et non de l'enseignant.")),
-  ("12 h 22 - 12 h 40   Première séquence : la répétition, et la répétition sans fin",
-   ("La notion est d'abord énoncée en français, puis mimée avec un objet que l'on fait tourner, avant "
-    "d'être écrite. Une répétition comporte toujours trois éléments : un point de départ, une "
-    "condition d'arrêt, et quelque chose qui progresse à chaque passage.",
-    "Démonstration à l'écran, les élèves annonçant le nombre de passages avant exécution.",
-    "L'enseignant supprime ensuite l'élément qui progresse, et le programme ne s'arrête plus. Il "
-    "laisse défiler quelques secondes, puis montre comment interrompre un programme devenu "
-    "incontrôlable. Cette manipulation est faite devant la classe à dessein : elle se produira chez "
-    "plusieurs élèves dans l'heure qui suit, et il importe qu'ils sachent déjà quoi faire, et qu'ils "
-    "sachent que cela n'a rien de grave.")),
-  ("12 h 40 - 12 h 55   Premier atelier : le compte à rebours",
-   ("Chaque élève écrit, dans un fichier distinct, un compte à rebours qui part d'un nombre et "
-    "descend jusqu'à un. L'exercice est court et son résultat est immédiatement visible.",
-    "L'enseignant circule et vérifie une seule chose auprès de chacun : la présence de l'élément qui "
-    "progresse, et son décalage correct.")),
-  ("12 h 55 - 13 h 05   Pause",
-   ("Pause réelle. L'enseignant ouvre le fichier du projet sur chaque poste.",)),
-  ("13 h 05 - 13 h 20   Deuxième séquence : l'alternance des deux joueurs",
-   ("Le jeu ne doit pas seulement répéter le tour : il doit changer de joueur à chaque passage. Deux "
-    "informations changent ensemble — le symbole déposé et le nom affiché — et elles sont traitées "
-    "au même endroit.",
-    "L'enseignant montre ce qui se produit lorsqu'on ne change que l'une des deux, puis corrige. "
-    "C'est l'erreur la plus fréquente de l'atelier qui suit.")),
-  ("13 h 20 - 13 h 50   Second atelier : le projet",
-   ("Les blocs recopiés depuis cinq semaines sont supprimés et remplacés par une répétition unique.",
-    "C'est la première fois du parcours que l'atelier consiste principalement à effacer. Le résultat "
-    "est spectaculaire et doit être montré : le fichier est plus court que celui de la semaine "
-    "précédente, et il joue neuf tours au lieu de deux.",
-    "À la fin de l'atelier, le programme de référence est remis à tous, qu'ils aient terminé ou non.")),
+  ("12 h 15 - 12 h 28   Questionnaire de révision",
+   ("Sept questions projetées, auxquelles les apprenants répondent simultanément au moyen de cartes "
+    "de couleur. Aucun appareil n'est nécessaire, et les résultats individuels ne sont jamais "
+    "commentés devant le groupe.",
+    "Les questions portent sur les points que la séance de révision du 14 novembre a montrés "
+    "fragiles, en premier lieu le décalage des lignes.")),
+  ("12 h 28 - 12 h 32   Première séquence : constater le défaut",
+   ("L'enseignant exécute devant la classe le programme que les apprenants ont eux-mêmes écrit, et "
+    "lui soumet deux coups illégaux de natures différentes. Le programme répond la même chose dans "
+    "les deux cas.",
+    "Ce constat précède la leçon : la notion du jour est introduite parce que les apprenants "
+    "viennent de voir qu'elle leur manque, et non parce qu'elle figure au programme.")),
+  ("12 h 32 - 12 h 44   Deuxième séquence : enchaîner les conditions",
+   ("Présentation de la structure qui permet de poser une deuxième question seulement si la première "
+    "a reçu une réponse négative, puis une troisième, et ainsi de suite.",
+    "La règle qui la gouverne est écrite au tableau et y demeure toute la séance : l'ordinateur "
+    "s'arrête à la première condition vraie et ne regarde pas les suivantes.",
+    "Atelier sur machine. Un prolongement est prévu pour les apprenants les plus rapides ; il les "
+    "conduit à découvrir d'eux-mêmes la nécessité d'un cas par défaut, qui sera la séquence "
+    "suivante.")),
+  ("12 h 44 - 12 h 59   Troisième séquence : l'ordre des conditions",
+   ("Séquence principale de la séance. Une suite de conditions parfaitement exactes, mais écrite "
+    "dans le mauvais ordre, produit un résultat faux pour tout le monde. La démonstration est faite "
+    "avant toute explication.",
+    "Atelier sur machine, le plus long de la séance. Il est soumis à une condition : "
+    "**l'algorithme doit être rédigé sur le cahier, en français, avant toute saisie au clavier**, "
+    "et l'enseignant le vérifie en circulant. Les apprenants n'ayant jamais travaillé cette "
+    "démarche de manière formelle, elle fait ici l'objet d'une exigence explicite.")),
+  ("12 h 59 - 13 h 05   Quatrième séquence : application au projet",
+   ("La structure étudiée est reportée dans le jeu de chacun. Le programme énonce désormais trois "
+    "réponses distinctes à un coup, là où il n'en donnait qu'une, ambiguë.",
+    "À la fin de la séquence, le programme de référence est remis à tous, qu'ils aient terminé ou "
+    "non : aucun apprenant ne prend de retard sur le projet commun.")),
+  ("13 h 05 - 13 h 15   Pause",
+   ("Pause réelle. L'enseignant prépare les postes pour l'exercice.",)),
+  ("13 h 15 - 13 h 40   Exercice : le bulletin scolaire",
+   ("Chaque apprenant écrit un programme qui demande le nom d'un élève et trois notes, calcule la "
+    "moyenne et annonce la mention correspondante.",
+    "Comme à la troisième séquence, l'algorithme est rédigé sur le cahier avant toute saisie.")),
+  ("13 h 40 - 13 h 50   Exercice de prolongement",
+   ("Destiné aux apprenants qui ont terminé avant les autres. Il s'agit d'une tarification par "
+    "tranches d'âge, assortie d'une réduction un jour de la semaine.",
+    "Deux difficultés y sont dissimulées volontairement, et ne sont pas signalées : un ordre de "
+    "conditions qui paraît correct attribue le mauvais tarif aux personnes âgées, et l'absence "
+    "d'une précaution conduit le programme à annoncer un prix négatif. L'enseignant se borne à "
+    "demander quatre essais précis ; les apprenants trouvent eux-mêmes.",
+    "Conformément au principe retenu pour l'ensemble du parcours, il n'existe qu'un seul exercice "
+    "pour toute la classe : ceux qui avancent vite reçoivent un travail supplémentaire, et non un "
+    "exercice allégé pour les autres.")),
   ("13 h 50 - 14 h   Clôture",
    ("Avancement du Mur de Mission.",
-    "Une partie complète est jouée devant la classe, du premier au neuvième coup.",
-    "Annonce de la séance 11 : le jeu dira qui a gagné.")),
+    "Question posée à la classe sur ce qui n'est pas sûr d'avoir été compris. Les réponses "
+    "déterminent l'ouverture de la séance suivante.",
+    "Annonce de la séance 12.")),
  ],
  "travail":
- "Deux travaux équivalents, au choix selon l'équipement de la famille. Les élèves qui disposent d'un "
- "ordinateur écrivent « Le Distributeur de la récré », une machine qui propose ses produits tant que "
- "le client a de quoi payer ; comptez une heure. Les autres répondent à un questionnaire de quinze "
- "questions corrigé automatiquement, en vingt minutes. Les familles sont prévenues qu'un programme "
- "peut se mettre à défiler sans s'arrêter, que cela est normal à ce stade, et comment l'interrompre.",
+ "Deux travaux équivalents sont proposés, au choix selon l'équipement de la famille, et aucun "
+ "n'entre dans une note. Les apprenants disposant d'un ordinateur reprennent chez eux l'exercice du "
+ "bulletin et son prolongement ; les autres répondent, depuis un téléphone, au questionnaire de "
+ "révision adressé la semaine précédente, qui reste accessible et peut être refait autant de fois "
+ "que souhaité.",
  "acquis":
- "À l'issue de cette séance, chaque élève sait écrire une répétition comportant ses trois éléments, "
- "sait reconnaître et interrompre une répétition sans fin, et sait faire alterner deux joueurs. "
- "Le jeu enchaîne ses neuf tours sans intervention."},
-
-# =====================================================================
-{"num": 11, "dossier": "S11-le-gagnant",
- "titre": "Le jeu sait qui gagne",
- "date": "samedi 21 novembre 2026",
- "objet":
- "Le jeu joue ses neuf tours, mais il ne sait pas ce qu'il joue : il s'arrête quand le plateau est "
- "plein, sans jamais constater qu'un joueur a aligné trois symboles. La séance lui apprend à le "
- "voir. Les huit alignements possibles sont d'abord établis par la classe elle-même, puis vérifiés "
- "par le programme après chaque coup ; une information nouvelle, qui retient le nom du vainqueur, est "
- "introduite à cette occasion, ainsi qu'une seconde condition d'arrêt. En fin de séance, le jeu est "
- "une partie de morpion complète : il s'arrête dès qu'un joueur gagne, l'annonce, et reconnaît le "
- "match nul.",
- "horaires": [("12 h - 12 h 15", "Prière et accueil", "15 min"),
-              ("12 h 15 - 12 h 22", "Quiz de révision du travail de la semaine précédente", "7 min"),
-              ("12 h 22 - 12 h 35", "Première séquence : qu'est-ce que gagner ?", "13 min"),
-              ("12 h 35 - 12 h 50", "Deuxième séquence : les huit alignements et le nom du vainqueur", "15 min"),
-              ("12 h 50 - 13 h", "Troisième séquence : la seconde condition d'arrêt", "10 min"),
-              ("13 h - 13 h 10", "Pause", "10 min"),
-              ("13 h 10 - 13 h 45", "Atelier : le projet", "35 min"),
-              ("13 h 45 - 14 h", "La première partie complète, et clôture", "15 min")],
- "deroule": [
-  ("12 h - 12 h 15   Prière et accueil", ACCUEIL),
-  ("12 h 15 - 12 h 22   Quiz de révision",
-   ("Six questions sur la répétition introduite la semaine précédente, et sur la manière "
-    "d'interrompre un programme qui ne s'arrête plus.",)),
-  ("12 h 22 - 12 h 35   Première séquence : qu'est-ce que gagner ?",
-   ("Séquence sans machine. Les élèves énumèrent eux-mêmes, sur une feuille blanche puis au tableau, "
-    "toutes les façons de gagner au morpion. Ils en trouvent huit, et l'enseignant ne donne le "
-    "chiffre qu'une fois la recherche terminée.",
-    "La formulation exacte de la règle est ensuite discutée. Trois cases identiques ne suffisent "
-    "pas : trois cases encore vides portent des numéros différents, mais trois cases contenant le "
-    "même symbole constituent un alignement. Cette précision est le point difficile de la séance.")),
-  ("12 h 35 - 12 h 50   Deuxième séquence : les huit alignements et le nom du vainqueur",
-   ("Les huit vérifications sont écrites à l'écran. Elles sont répétitives et sans difficulté "
-    "individuelle ; elles figurent en entier sur l'aide-mémoire distribué, et les élèves les "
-    "recopient de là. Ce choix est assumé : le temps de la séance doit aller à la compréhension, "
-    "non à la saisie.",
-    "Une information nouvelle est créée avant la partie, vide, et destinée à recevoir le nom du "
-    "vainqueur lorsqu'il y en aura un. Le fait qu'elle soit créée avant, et une seule fois, est la "
-    "notion la plus abstraite de la séance ; elle est expliquée lentement et vérifiée par questions.")),
-  ("12 h 50 - 13 h   Troisième séquence : la seconde condition d'arrêt",
-   ("La partie s'arrêtait jusqu'ici pour une seule raison : le plateau plein. Elle doit désormais "
-    "s'arrêter aussi dès qu'un vainqueur est désigné. Les deux raisons sont réunies au moyen de "
-    "l'opérateur cumulatif appris à la séance 9.",
-    "L'emplacement des huit vérifications est souligné : elles doivent être faites après chaque coup "
-    "et à l'intérieur de la répétition. Placées ailleurs, elles produisent deux anomalies "
-    "caractéristiques que l'enseignant montre volontairement.")),
-  ("13 h - 13 h 10   Pause", ("Pause réelle.",)),
-  ("13 h 10 - 13 h 45   Atelier : le projet",
-   ("Atelier le plus long du parcours à ce jour. Chaque élève ajoute à son propre jeu les huit "
-    "vérifications, l'information retenant le vainqueur, la seconde condition d'arrêt et l'annonce "
-    "finale.",
-    "Trois situations doivent être essayées par l'élève avant qu'il ne signale avoir terminé : une "
-    "victoire en ligne, une victoire en diagonale, et une partie nulle.",
-    "À la fin de l'atelier, le programme de référence est remis à tous, qu'ils aient terminé ou non.")),
-  ("13 h 45 - 14 h   La première partie complète, et clôture",
-   ("Une partie entière est jouée devant la classe sur le programme d'un élève, choisi parmi ceux "
-    "qui parlent le moins souvent.",
-    "C'est le terme de deux mois de travail : le programme écrit par des enfants de neuf à dix-huit "
-    "ans est devenu un jeu complet, avec ses règles, son vainqueur et son match nul. Le moment est "
-    "nommé comme tel devant le groupe.",
-    "Annonce de la séance 12 : travaux pratiques, finitions, et tournoi de classe.")),
- ],
- "travail":
- "Un questionnaire unique de quinze questions, corrigé automatiquement, est adressé à toutes les "
- "familles ; il demande vingt minutes depuis un téléphone. Aucun exercice de programmation n'est "
- "donné : le travail réel de la semaine est que chaque élève se présente le samedi suivant avec un "
- "jeu qui fonctionne, le tournoi se jouant sur leurs propres programmes.",
- "acquis":
- "À l'issue de cette séance, chaque élève sait énumérer les huit alignements gagnants, sait conserver "
- "une information d'une étape à l'autre d'une répétition, et sait arrêter une répétition pour deux "
- "raisons distinctes. Le jeu est une partie de morpion complète et jouable."},
-
-# =====================================================================
-{"num": 12, "dossier": "S12-tp-le-tournoi",
- "titre": "Travaux pratiques n°3 — tests, finitions et tournoi",
- "date": "samedi 28 novembre 2026",
- "objet":
- "Dernière séance des deux mois. Elle comporte trois temps : les élèves éprouvent leur propre "
- "programme au moyen d'une liste de huit situations à essayer, réparent ce qui doit l'être, puis "
- "jouent les uns contre les autres sur les jeux qu'ils ont écrits. La séance introduit, sans en "
- "faire une leçon, une idée professionnelle : un programme que l'on n'a pas éprouvé ne fonctionne "
- "pas, il n'a simplement pas encore échoué. Elle se termine par un bilan écrit rempli par chaque "
- "élève, dont les réponses détermineront le programme de décembre.",
- "horaires": [("12 h - 12 h 15", "Prière, accueil et annonce du tournoi", "15 min"),
-              ("12 h 15 - 12 h 45", "Partie 1 : le contrôle technique, huit situations", "30 min"),
-              ("12 h 45 - 13 h 10", "Partie 2 : les réparations", "25 min"),
-              ("13 h 10 - 13 h 20", "Pause et tirage au sort des rencontres", "10 min"),
-              ("13 h 20 - 13 h 25", "Partie 3 : une finition au choix", "5 min"),
-              ("13 h 25 - 13 h 55", "Partie 4 : le tournoi de classe", "30 min"),
-              ("13 h 55 - 14 h", "Bilan écrit, photographie et clôture", "5 min")],
- "deroule": [
-  ("12 h - 12 h 15   Prière, accueil et annonce du tournoi",
-   ACCUEIL + (
-   "Le tableau du tournoi est affiché vide dès l'ouverture. Il est annoncé que tout le monde y "
-   "participera, y compris les élèves dont le programme ne fonctionne pas : ceux-là joueront sur le "
-   "programme de leur adversaire. Aucun enfant ne repart sans avoir joué.",)),
-  ("12 h 15 - 12 h 45   Partie 1 : le contrôle technique",
-   ("Chaque élève essaie sur son propre jeu huit situations précisées sur le document remis, et "
-    "coche uniquement celles dont le résultat est exactement celui annoncé. Les situations qui "
-    "échouent sont notées et seront traitées dans le temps suivant.",
-    "Les élèves se prêtent les postes deux par deux : éprouver le programme d'un camarade est plus "
-    "efficace, et moins douloureux, qu'éprouver le sien.")),
-  ("12 h 45 - 13 h 10   Partie 2 : les réparations",
-   ("Les situations ayant échoué sont reprises dans l'ordre. Le document remis associe à chaque "
-    "symptôme l'endroit du programme où se trouve presque toujours la cause.",
-    "L'enseignant ne corrige pas à la place de l'élève. Lorsque les huit situations passent, l'élève "
-    "lève la main : c'est la validation des travaux pratiques, et la qualification pour le tournoi.",
-    "Les élèves dont le programme ne peut être réparé dans le temps imparti reçoivent le programme "
-    "de référence, sans commentaire et sans que cela soit présenté comme un échec.")),
-  ("13 h 10 - 13 h 20   Pause et tirage au sort",
-   ("Pause réelle. Le tirage au sort des rencontres est effectué pendant la pause et les noms sont "
-    "inscrits au tableau du tournoi.",)),
-  ("13 h 20 - 13 h 25   Partie 3 : une finition au choix",
-   ("Chaque élève ajoute à son jeu une amélioration de son choix parmi celles proposées. Elles ne "
-    "changent pas les règles du jeu : elles le rendent agréable, et elles sont le seul espace de la "
-    "séance où l'élève décide seul de ce qu'il fait.",)),
-  ("13 h 25 - 13 h 55   Partie 4 : le tournoi de classe",
-   ("Rencontres à élimination directe. Chaque match se joue sur le programme de l'un des deux "
-    "joueurs, désigné par tirage au sort.",
-    "Si un programme s'interrompt ou annonce un résultat faux pendant un match, la rencontre est "
-    "rejouée sur l'autre programme : la solidité d'un programme compte, et les élèves le constatent "
-    "d'eux-mêmes.",
-    "Le perdant de chaque rencontre devient arbitre de la suivante. Tout le monde a donc une fonction "
-    "jusqu'à la fin.")),
-  ("13 h 55 - 14 h   Bilan écrit, photographie et clôture",
-   ("Chaque élève remplit la dernière page de son document : sept compétences à cocher, et deux "
-    "questions ouvertes. La seconde — ce qu'il aimerait que son jeu sache faire et qu'il ne sait pas "
-    "encore — sert à établir le programme de décembre.",
-    "Photographie du groupe devant le tableau du tournoi rempli. Elle servira longtemps.",
-    "Les documents sont ramassés. Ils constituent le bilan des deux mois.")),
- ],
- "travail":
- "Un questionnaire-bilan de quinze questions, corrigé automatiquement, reprend l'ensemble des sept "
- "séances d'octobre et novembre. Il est adressé à toutes les familles et demande vingt minutes. "
- "Il n'est pas une évaluation : lu partie par partie plutôt qu'élève par élève, il indique à "
- "l'équipe enseignante ce qui devra être repris à la reprise.",
- "acquis":
- "À l'issue de ces deux mois, chaque élève dispose d'un jeu de morpion complet, qu'il a écrit "
- "lui-même, auquel il a fait jouer ses camarades, et qu'il sait éprouver. Il sait employer une "
- "liste, le rang d'un élément, une décision, des conditions combinées et une répétition — c'est-à-dire "
- "l'essentiel de ce dont il aura besoin pour la suite du parcours."},
+ "À l'issue de cette séance, chaque apprenant sait enchaîner plusieurs conditions, sait que "
+ "l'ordinateur s'arrête à la première qui est vraie, et sait en déduire dans quel ordre les écrire. "
+ "Il a en outre rédigé au moins un algorithme en français avant de programmer. Le jeu indique "
+ "désormais au joueur la raison précise pour laquelle un coup est refusé."},
 ]

@@ -9,23 +9,40 @@ mieux changer une ligne et relancer que refaire la mise en page à la main.
 
 | Script | Ce qu'il écrit | Où |
 |---|---|---|
-| `aide_memoires.py` | les 5 aide-mémoires 1 page | `S06/S07/S09/S10/S11 · a-imprimer/` |
-| `quiz_rappel.js` + `donnees_quiz_rappel.js` | les 5 **quiz flash d'ouverture** (14 diapos : 1 question par diapo) | `S06/S07/S09/S10/S11 · a-projeter/` |
-| `decks.js` + `donnees_decks.js` | les 5 diaporamas de séance | `S06/S07/S09/S10/S11 · a-projeter/` |
-| `decks_tp.js` | les 2 diaporamas de TP | `S08/S12 · a-projeter/` |
-| `quiz_hebdo.py` + `quiz_5_6.py`, `quiz_7_8.py`, `quiz_9_10.py` | les 6 quiz de la semaine (`.gs`) | `S06/S07/S09/S10/S11/S12 · a-envoyer/` |
-| `quiz_revision.py` | la **révision générale en formulaire** (20 questions) | `S10-la-boucle · a-envoyer/` |
-| `exos_maison.py` + `donnees_exos.py` + `build_exos.py` | les 3 exercices de maison : feuille élève et corrigé, en **HTML → PDF → images** | `S06/S09/S10 · a-envoyer/` |
-| `notices.py` | les 6 `quiz-semaine.md` (réglages, message aux parents) | `*/a-envoyer/` |
-| `quantites.py` | les 5 `quantites-et-formats.md` des séances de cours | `*/a-imprimer/` |
-| `deroules.py` + `deroules_donnees.py` | les 7 **déroulés pour le responsable** (Word) | `S06…S12 · a-envoyer/` |
-| `programme_responsable.py` | le **programme des deux mois** (Word) | `3-suivi/points-au-responsable/` |
+| `aide_memoires.py` | les aide-mémoires 1 page | `S06/S07/S09/S11 · a-imprimer/` |
+| `quiz_rappel.js` + `donnees_quiz_rappel.js` | les **quiz flash d'ouverture** (14 diapos : 1 question par diapo) | `S06/S07/S09 · a-projeter/` |
+| `decks.js` + `donnees_decks.js` | les diaporamas de séance *(ancien format : « je montre / vous faites »)* | `S06/S07/S09 · a-projeter/` |
+| `decks_tp.js` | les diaporamas de TP | `S08 · a-projeter/` |
+| `quiz_hebdo.py` + `quiz_5_6.py`, `quiz_7_8.py`, `quiz_9_10.py` | les quiz de la semaine (`.gs`), 15 QCM chacun | `S06/S07/S09 · a-envoyer/` |
+| `quiz_revision.py` | la **révision générale en formulaire** (20 questions) | `S10-revision-generale · a-envoyer/` |
+| `exos_maison.py` + `donnees_exos.py` + `build_exos.py` | les exercices : feuille élève et corrigé, en **HTML → PDF → images** | `S06/S09/S11 · a-envoyer/` |
+| `notices.py` | les `quiz-semaine.md` (réglages, message aux parents) | `*/a-envoyer/` |
+| `quantites.py` | les `quantites-et-formats.md` des séances de cours | `*/a-imprimer/` |
+| `deroules.py` + `deroules_donnees.py` | les **déroulés pour le responsable** (Word) | `S06…S11 · a-envoyer/` |
+| `programme_responsable.py` | le **programme des deux mois** (Word) — écrit avant le réordonnancement du 20 novembre | `3-suivi/points-au-responsable/` |
 | `affiche.py` | **l'affiche du trimestre** : HTML → PDF → image | `2-seances/a-afficher/` |
 | `mission_ascenseur.py` | la **mission autonome n°1** : feuille élève et feuille enseignant | `2-seances/missions-autonomes/` |
-| `revision_generale.js` + `donnees_revision_generale.js` | la **révision générale** du 14 novembre : 38 diapos, cartes **et** ateliers au clavier | `S10-la-boucle/a-projeter/` |
+| `revision_generale.js` + `donnees_revision_generale.js` | la **révision générale** du 14 novembre : cartes **et** ateliers au clavier | `S10-revision-generale/a-projeter/` |
+| `cours_en_quiz.js` + `donnees_cours_s11.js` | **le cours en quiz** de la séance 11 : 46 diapos, de la prière à la clôture — révision, leçons, ateliers au clavier, ⭐ et exercices | `S11-les-trois-chemins/a-projeter/` |
 
-> `S08` et `S12` (les deux TP) ont des documents écrits à la main, pas générés :
-> leurs `.html` sont dans `a-imprimer/sources/`.
+> `S08` (le TP) a des documents écrits à la main, pas générés :
+> ses `.html` sont dans `a-imprimer/sources/`.
+
+### ⚠️ Les séances retirées du parcours
+
+Le 20 novembre, les séances préparées pour **la boucle, le gagnant et le tournoi** ont été retirées
+du parcours actif : elles annonçaient des dates fausses et un ordre qui ne tient plus
+(voir [le plan](../PLAN.md), § 2).
+
+**Leurs données sont restées ici** — dans `donnees_decks.js`, `donnees_quiz_rappel.js`,
+`quiz_7_8.py`, `quiz_9_10.py`, `donnees_exos.py`, `deroules_donnees.py`, `aide_memoires.py`,
+`quantites.py`, `notices.py`. Rien n'est perdu : le jour où la boucle reprendra sa place, on recrée
+le dossier de la séance et on relance le générateur.
+
+**En attendant, chaque générateur vérifie que le dossier existe avant d'écrire** et affiche
+`IGNORE (seance retiree du parcours)` sinon. C'est volontaire : **relancer un générateur ne peut
+pas ressusciter une séance retirée.** Les fichiers eux-mêmes sont dans l'historique Git, au commit
+`65667c2`.
 
 ## Comment les relancer
 
@@ -43,6 +60,7 @@ python3.13 -I quantites.py
 
 NODE_PATH=/chemin/vers/node_modules node donnees_quiz_rappel.js  # les 5 quiz flash
 NODE_PATH=/chemin/vers/node_modules node donnees_revision_generale.js  # la révision générale
+NODE_PATH=/chemin/vers/node_modules node donnees_cours_s11.js   # le cours en quiz de la séance 11
 NODE_PATH=/chemin/vers/node_modules node donnees_decks.js   # les 5 diaporamas
 NODE_PATH=/chemin/vers/node_modules node decks_tp.js        # les 2 diaporamas de TP
 

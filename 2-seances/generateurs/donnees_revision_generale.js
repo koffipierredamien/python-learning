@@ -2,7 +2,7 @@ const {creer} = require(__dirname + '/revision_generale.js');
 
 // cartes : 0 = ▲ ROUGE · 1 = ◆ BLEUE · 2 = ● ORANGE · 3 = ■ VERTE
 const S = {
- dossier:'S10-la-boucle',
+ dossier:'S10-revision-generale',
  titre:'Révision générale — séance 10',
 
  manches:[

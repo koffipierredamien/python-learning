@@ -740,3 +740,185 @@ else:
 )
 
 TOUS.append(NAVALE)
+
+
+# =====================================================================
+#  4  -  LE BULLETIN   (apres la seance 11 : la cascade elif)
+#        + l'exercice etoile LE PRIX DU TICKET, pour ceux qui vont vite
+# =====================================================================
+BULLETIN = dict(
+    dossier="S11-les-trois-chemins",
+    css1=".goal pre{font-size:7pt;line-height:1.28}",
+    base="exercice-le-bulletin",
+    base_cor="correction-le-bulletin",
+    py="correction-le-bulletin.py",
+    py2="correction-le-prix-du-ticket.py",
+    titre="Le Bulletin",
+    emoji="📋",
+    nom="LE BULLETIN",
+    kicker="EXERCICE DE LA SÉANCE 11 · JEREMIAH GEEKS · 21 NOVEMBRE",
+    fichier="bulletin_tonprenom.py",
+    chapo="""Trois notes, une moyenne, et une mention qui tombe toute seule.
+      Ton nouvel outil : <b style="color:#fff">la cascade</b> —
+      <b style="color:#fff">if</b> … <b style="color:#fff">elif</b> … <b style="color:#fff">elif</b> …
+      <b style="color:#fff">else</b>, où <b style="color:#fff">un seul chemin</b> sur cinq est pris.""",
+    regle="""🎯 <b>La règle :</b> on saisit un nom et <b>trois notes sur 20</b>. Le programme calcule la
+      <b>moyenne</b>, puis attribue <b>une seule</b> mention :
+      <b>16 et plus</b> → TRES BIEN · <b>14 et plus</b> → BIEN · <b>12 et plus</b> → ASSEZ BIEN ·
+      <b>10 et plus</b> → PASSABLE · <b>en dessous</b> → A REVOIR.
+      <br>✍️ <b>Avant le clavier : l'algorithme en français, dans ton cahier.</b> Une ligne par chemin.""",
+    ecran="""======================================
+          LE BULLETIN
+======================================
+
+Nom de l'eleve : <b>Sara</b>
+Note de Mathematiques /20 : <b>15</b>
+Note de Francais /20      : <b>14</b>
+Note d'Informatique /20   : <b>13</b>
+
+======================================
+ Eleve   : Sara
+ Maths   : 15 / 20
+ Francais: 14 / 20
+ Info    : 13 / 20
+--------------------------------------
+ Moyenne : 14 / 20
+ Mention : BIEN
+======================================""",
+    kit="""<b>La cascade : un seul chemin.</b><br>
+      <span class="m">if moyenne &gt;= 16:</span><br>
+      <span class="m">elif moyenne &gt;= 14:</span><br>
+      <span class="m">else:</span>
+      <hr>
+      <b>elif</b> = <b>el</b>se + <b>if</b> → « sinon, est-ce que… ? »<br>
+      Python <b>s'arrête au premier chemin qui passe</b>. Pas au meilleur : <b>au premier</b>.
+      <hr>
+      <b>L'ordre décide de tout.</b><br>
+      Du <b>plus exigeant</b> au <b>moins exigeant</b>.<br>
+      Dans l'autre sens, <b>tout le monde</b> est PASSABLE.
+      <hr>
+      <b>input rend TOUJOURS du texte.</b><br>
+      Pour calculer : <span class="m">note1 = int(note1)</span><br>
+      Pour coller dans une phrase : <span class="m">str(moyenne)</span>
+      <hr>
+      <b>La moyenne, sans virgule :</b><br>
+      <span class="m">moyenne = int((n1 + n2 + n3) / 3)</span>""",
+    etapes1=[
+        ("0", "✍️ L'ALGORITHME — SUR TON CAHIER, PAS À L'ÉCRAN", """
+         <b>Avant d'ouvrir Thonny</b>, écris en français, une ligne par chemin :
+         <div class="bloc">SI la moyenne est 16 ou plus      -> mention TRES BIEN
+SINON SI la moyenne est 14 ou plus -> mention BIEN
+SINON SI ...
+SINON                              -> mention A REVOIR</div>
+         <b>Compte tes lignes.</b> Tu dois en avoir <b>cinq</b> — donc cinq chemins dans ton code.
+         <span class="tip">Montre ton cahier à ton enseignant avant de toucher le clavier.</span>"""),
+        ("1", "LE CADRE ET LE NOM", """
+         <ul><li>Affiche le cadre de <b>38 signes</b> <span class="mono">=</span>, le titre
+             <span class="mono">LE BULLETIN</span>, puis le cadre à nouveau.</li>
+             <li>Demande <span class="mono">Nom de l'eleve : </span> et range la réponse dans
+             <span class="mono">nom</span>. <b>Celui-là reste du texte</b> : on ne le calcule pas.</li></ul>"""),
+        ("2", "LES TROIS NOTES", """
+         Trois questions, trois boîtes : <span class="mono">note1</span>,
+         <span class="mono">note2</span>, <span class="mono">note3</span>.
+         <div class="bloc">note1 = input("Note de Mathematiques /20 : ")
+note1 = int(note1)      <i>← SANS ÇA, l'addition collera les notes : "15" + "14" = "1514"</i></div>
+         <b>Trois <span class="mono">int()</span>, un par note.</b> C'est l'oubli n° 1."""),
+    ],
+    etapes2=[
+        ("3", "LA MOYENNE", """
+         <div class="bloc">moyenne = int((note1 + note2 + note3) / 3)</div>
+         <b>Les parenthèses autour de l'addition</b> : sans elles, Python ne divise que la
+         <b>dernière</b> note. Le <span class="mono">int()</span> autour coupe ce qu'il y a après
+         la virgule — un bulletin n'affiche pas <span class="mono">14.333333</span>."""),
+        ("4", "LA CASCADE — le cœur de l'exercice", """
+         Recopie ton algorithme de l'étape 0, en Python :
+         <div class="bloc">if moyenne &gt;= 16:
+    mention = "TRES BIEN"
+elif moyenne &gt;= 14:
+    mention = "BIEN"
+<i>... à toi les deux chemins du milieu ...</i>
+else:
+    mention = "A REVOIR"</div>
+         <ul><li><b>Un seul</b> <span class="mono">if</span> au départ, puis des
+             <span class="mono">elif</span>.</li>
+             <li><b>Du plus grand au plus petit.</b> Essaie une fois dans l'autre sens, avec une
+             moyenne de 18 : tu verras s'afficher <span class="mono">PASSABLE</span>. C'est normal,
+             et c'est toute la leçon.</li>
+             <li>Le <span class="mono">else</span> final n'a <b>pas</b> de condition : c'est
+             « dans tous les autres cas ».</li></ul>"""),
+        ("5", "LE BULLETIN", """
+         <ul><li>Une ligne par matière : <span class="mono">" Maths   : " + str(note1) + " / 20"</span></li>
+             <li>Une ligne de <b>38 tirets</b> <span class="mono">-</span> pour séparer.</li>
+             <li><span class="mono">" Moyenne : " + str(moyenne) + " / 20"</span></li>
+             <li><span class="mono">" Mention : " + mention</span> —
+                 <b>celui-là est déjà du texte</b>, pas de <span class="mono">str()</span>.</li></ul>
+         <span class="tip">Astuce :</span> <span class="mono">print("=" * 38)</span> écrit
+         38 fois le signe <span class="mono">=</span> sans les taper un par un."""),
+    ],
+    bonus="""<b>⭐ LE PRIX DU TICKET — l'exercice en plus, pour qui a déjà fini.</b>
+      <div style="margin:1.4mm 0">Le cinéma du quartier affiche ses tarifs :
+      <b>moins de 5 ans</b> → gratuit · <b>jusqu'à 12 ans</b> → 500 F ·
+      <b>jusqu'à 17 ans</b> → 1000 F · <b>adulte</b> → 2000 F ·
+      <b>65 ans et plus</b> → 1000 F. Et <b>le samedi, 500 F de moins pour tout le monde</b>.</div>
+      <div class="bloc">Quel age as-tu ? <b>70</b>
+Quel jour viens-tu ? <b>lundi</b>
+Tarif de base : 1000 F
+ A PAYER : 1000 F</div>
+      <ul><li><b>Pas de consigne détaillée cette fois.</b> Le programme demande l'âge, puis le jour,
+          et annonce le prix. À toi de trouver <b>l'ordre</b> des chemins.</li>
+          <li>✍️ <b>L'algorithme d'abord, sur le cahier.</b> Puis le code.</li>
+          <li><b>Les quatre essais à réussir :</b> 3 ans un lundi → <b>0 F</b> ·
+              <b>70 ans un lundi → 1000 F</b> (celui-là piège presque tout le monde) ·
+              30 ans un samedi → <b>1500 F</b> · 3 ans un samedi → <b>0 F</b>.</li>
+          <li><b>Une question à se poser :</b> la réduction du samedi, est-ce
+              <b>un chemin de plus dans la cascade</b>, ou <b>autre chose</b> ?
+              Essaie les deux. Un seul des deux passe les quatre essais.</li></ul>""",
+    fin="""<b>Quand ça marche :</b> lance-le <b>cinq fois</b>, une par mention —
+      20/19/18, 15/14/13, 13/12/11, 11/10/10, et 5/6/7. Les cinq mentions doivent sortir.
+      Puis <b>Ctrl + S</b>, et <b>envoie une photo de ton écran</b> à ton enseignant.<br>
+      <b>Les deux bugs les plus courants :</b> un <span class="mono">int()</span> oublié
+      (Python colle les notes au lieu de les additionner), et <b>la cascade à l'envers</b>
+      (tout le monde est PASSABLE). Le deuxième ne fait <b>aucune erreur rouge</b> :
+      c'est à toi de le voir.""",
+    # --- corrige -----------------------------------------------------
+    cor_chapo="""Les deux programmes complets, tels qu'ils tournent dans Thonny.
+      <b>Le premier livrable n'est pas le code : c'est l'algorithme sur le cahier.</b>
+      Les messages peuvent varier — ce qui compte, c'est que la cascade soit dans un ordre qui tient.""",
+    blocs=[(12, 56), (13, 56)],
+    coupe_texte="""⭐ <b>LE PRIX DU TICKET</b> — donné <b>sans consigne détaillée</b> à ceux qui ont
+      fini Le Bulletin avant les autres. <b>Deux pièges volontaires :</b> l'ordre de la cascade, et la
+      réduction du samedi.""",
+    taille="7.6pt",
+    css2=".note{padding:2.2mm 3mm;margin-bottom:2.1mm;line-height:1.36;font-size:8.9pt}"
+         ".note h3{margin-bottom:1.1mm;font-size:10pt}"
+         ".coupe{padding:1.7mm 3mm;margin-bottom:2.1mm;font-size:9pt}",
+    cor_notes="""
+      <div class="note"><h3>⚠️ Le piège de l'ordre — à faire vivre, pas à expliquer</h3>
+        Celui qui écrit sa cascade <b>du plus petit au plus grand</b> n'a <b>aucune erreur rouge</b> :
+        tout le monde sort <b>PASSABLE</b>. Ne corrigez pas sa ligne — faites-lui entrer
+        <b>20, 19, 18</b> et lire la mention à voix haute. Il trouvera seul.</div>
+      <div class="note"><h3>⭐ Le prix du ticket : les deux pièges</h3>
+        <b>1. L'ordre.</b> Un <span class="m">elif age &gt;= 18</span> placé avant la ligne des
+        65 ans fait payer <b>2000 F à une personne de 70 ans</b> : 70 ≥ 18 est déjà vrai, et Python
+        s'arrête au premier vrai. En allant <b>du plus jeune au plus âgé</b>, le problème disparaît.<br>
+        <b>2. Le samedi.</b> Ce n'est <b>pas</b> un <span class="m">elif</span> : la réduction
+        s'applique <b>après</b>, quel que soit le tarif trouvé. Collée en <span class="m">elif</span>,
+        elle ne toucherait que ceux qui ne sont tombés dans <b>aucune</b> tranche : personne.<br>
+        <b>Le garde-fou</b> <span class="m">if prix &lt; 0: prix = 0</span> évite de rembourser
+        un enfant de 3 ans venu un samedi.</div>
+      <div class="note" style="border-color:#2fb765;background:#f2faf5">
+        <h3 style="color:#0c5c29">✅ Les cinq choses à regarder dans une copie</h3>
+        <ul>
+          <li><b>L'algorithme est-il sur le cahier ?</b> C'est le premier livrable, avant le code.</li>
+          <li>les <b>trois</b> <span class="m">int()</span> sont-ils là, un par note ?</li>
+          <li>la cascade va-t-elle <b>du plus exigeant au moins exigeant</b> ?</li>
+          <li>y a-t-il <b>un seul</b> <span class="m">if</span>, puis des <span class="m">elif</span> ?
+              (quatre <span class="m">if</span> séparés marchent aussi ici : on le dit, on ne le
+              sanctionne pas)</li>
+          <li>le <span class="m">else</span> final est-il là ? Sans lui, une moyenne de 5
+              n'affiche <b>aucune</b> mention.</li>
+        </ul>
+        <div style="margin-top:1.4mm"><b>On note la preuve, pas la perfection.</b></div></div>""",
+)
+
+TOUS.append(BULLETIN)

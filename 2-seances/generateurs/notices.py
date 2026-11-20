@@ -173,6 +173,8 @@ for q in QUIZ:
     txt = ENTETE_QUIZ.format(num=q["num"], titre=q["titre"], accroche=q["accroche"],
                              mercredi=q["mercredi"], samedi=q["samedi"],
                              parties=parties, clef=q["clef"], message=q["message"])
+    if not os.path.isdir(os.path.join(BASE, q["dossier"])):
+        print("IGNORE (seance retiree du parcours) :", q["dossier"]); continue
     chemin = os.path.join(BASE, q["dossier"], "a-envoyer", "quiz-semaine.md")
     open(chemin, "w", encoding="utf-8").write(txt)
     print("écrit :", chemin)

@@ -108,7 +108,16 @@ STYLE_COR = STYLE_COMMUN + """
 """
 
 # ---------------------------------------------------------------- rendu
+def seance_retiree(chemin):
+    """Une seance retiree du parcours ne doit jamais etre recreee."""
+    rel = os.path.relpath(chemin, RACINE).split(os.sep)
+    return bool(rel) and rel[0].startswith("S") and not os.path.isdir(os.path.join(RACINE, rel[0]))
+
+
 def ecrire(chemin, titre, style, corps):
+    if seance_retiree(chemin):
+        print("IGNORE (seance retiree du parcours) :", os.path.relpath(chemin, RACINE))
+        return
     os.makedirs(os.path.dirname(chemin), exist_ok=True)
     open(chemin, "w", encoding="utf-8").write(
         '<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>'

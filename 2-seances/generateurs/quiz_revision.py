@@ -37,7 +37,7 @@ NOTE_CASE = ('Dans cette liste, la case 3 est deja prise : elle contient "X" '
              'au lieu de "3".\nLe test  plateau[case - 1] == str(case)  veut dire : '
              '« la case contient encore son numero, donc elle est libre ».\n\n')
 
-ecrire(11, "S10-la-boucle",
+ecrire(11, "S10-revision-generale",
  titre="Revision generale — vingt questions",
  sujet="texte et nombres, listes, decalage, and / or, et la repetition",
  intro="Vingt questions pour verifier ce que tu sais faire. Chacune se repond avec ce qui est ecrit dedans : tu n'as besoin de rien d'autre, ni d'un cahier, ni d'un ordinateur. Tu peux la refaire autant de fois que tu veux.",

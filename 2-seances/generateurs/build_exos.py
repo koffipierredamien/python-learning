@@ -40,7 +40,7 @@ def feuille_exo(d, dossier):
 
 def feuille_cor(d, dossier):
     chemin_py = os.path.join(dossier, d["py"])
-    style = E.STYLE_COR % {"taille": d["taille"]}
+    style = E.STYLE_COR % {"taille": d["taille"]} + d.get("css2", "")
     p = []
     p.append('<div class="band">\n  <div class="k">CORRECTION · POUR L\'ENSEIGNANT ET LES PARENTS</div>\n'
              '  <h1>✅ %s</h1>\n  <div class="s">%s</div>\n</div>\n' % (d["nom"], d["cor_chapo"]))
@@ -48,21 +48,26 @@ def feuille_cor(d, dossier):
     p.append('<pre>%s</pre>\n' % E.colorie(E.extrait(chemin_py, a, b)))
     p.append('<div class="saut"></div>\n')
     p.append('<div class="suite">✅ %s — la suite <span>page 2 sur 2 · %s</span></div>\n'
-             % (d["nom"], d["py"]))
+             % (d["nom"], d.get("py2") or d["py"]))
     if d["coupe_texte"]:
         p.append('<div class="coupe">%s</div>\n' % d["coupe_texte"])
     a, b = d["blocs"][1]
-    p.append('<pre>%s</pre>\n' % E.colorie(E.extrait(chemin_py, a, b)))
+    #  la page 2 peut venir d'un SECOND fichier (l'exercice etoile)
+    second = os.path.join(dossier, d["py2"]) if d.get("py2") else chemin_py
+    p.append('<pre>%s</pre>\n' % E.colorie(E.extrait(second, a, b)))
     p.append(d["cor_notes"])
     src = os.path.join(dossier, "sources", d["base_cor"] + ".html")
     E.ecrire(src, "Correction — " + d["titre"], style, "".join(p))
     return src
 
 for d in TOUS:
+    if not os.path.isdir(os.path.join(E.RACINE, d["dossier"])):
+        print("%-42s IGNORE (seance retiree du parcours)" % d["base"])
+        continue
     dossier = os.path.join(E.RACINE, d["dossier"], "a-envoyer")
     for src, base in ((feuille_exo(d, dossier), d["base"]),
                       (feuille_cor(d, dossier), d["base_cor"])):
         out_pdf = os.path.join(dossier, base + ".pdf")
         E.pdf(src, out_pdf)
         noms, doc = E.png(out_pdf, os.path.join(dossier, base))
-        print("%-42s %d pages  remplissage %s" % (base, len(doc), E.mesure(out_pdf)))
+        print("%-42s %d pages  remplissage %s" % (base, doc.page_count, E.mesure(out_pdf)))

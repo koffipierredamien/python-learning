@@ -33,6 +33,7 @@ GABARIT = u"""<!doctype html>
   .fait b{{color:#0c5c29}}
   .fait .ok{{color:#2e9e52;font-weight:bold}}
   @media print{{.consigne{{display:none}}}}
+  {extra}
 </style></head><body>
 <div class="consigne"><b>À imprimer :</b> 1 par poste, A4 recto. Posé à côté du clavier.</div>
 <h1>{emoji} {titre}</h1>
@@ -274,15 +275,84 @@ jamais égaux.</div>""",
                (u"<i>le gagnant s'appelle « 5 »</i>", u"Le bloc des 8 <span class='mono'>if</span> est <b>avant</b> la pose", u"On teste <b>après</b> avoir joué"),
                (u"<i>toujours match nul</i>", u"Le bloc est <b>après</b> la boucle", u"Il doit être dedans, à chaque coup"),
                ("IndentationError", u"Les 8 <span class='mono'>if</span> mal décalés", u"Ils sont dans le <span class='mono'>if</span> du coup valide")]),
+
+ dict(dossier="S11-les-trois-chemins", num=11, date="samedi 21 novembre 2026",
+      titre="LES TROIS CHEMINS", emoji="🚦",
+      extra=u"body{font-size:9pt} h2{margin:2.1mm 0 1mm} .cle{padding:1.5mm;margin:1.1mm 0} .fait{font-size:7.9pt;line-height:1.3} td,th{font-size:7.7pt;padding:.7mm 1.3mm}",
+      nouveau=[u'garder neuf cases dans une <b>liste</b>, poser, et refuser un coup impossible',
+               u'choisir entre <b>plusieurs chemins</b> avec <span class="mono">elif</span>'],
+      corps=u"""
+<h2>1 · Le mot du jour : <span style="font-family:'Courier New'">elif</span></h2>
+<div class="cle"><b>elif</b> = <b>el</b>se + <b>if</b> → « sinon, est-ce que… ? »</div>
+<div class="duo">
+  <div><b class="t">Deux if — deux questions</b>
+    <div class="code" style="font-size:9pt">if note &gt;= 10:
+<b>····</b>print("Admis")
+if note &gt;= 16:
+<b>····</b>print("Felicitations")</div>
+    Les <b>deux</b> peuvent s'afficher.</div>
+  <div><b class="t">if / elif — un seul chemin</b>
+    <div class="code" style="font-size:9pt">if note &gt;= 16:
+<b>····</b>print("Felicitations")
+elif note &gt;= 10:
+<b>····</b>print("Admis")</div>
+    <b>Un seul</b> message : dès qu'un chemin passe, les autres sont sautés.</div>
+</div>
+
+<h2 class="p">2 · LA LIGNE DU JOUR — votre jeu dit enfin LAQUELLE</h2>
+<div class="code">if case &lt; 1 or case &gt; 9:
+<b>····</b>print("Cette case n'existe pas !")
+elif plateau[case - 1] != str(case):
+<b>····</b>print("Cette case est deja prise !")
+else:
+<b>····</b>plateau[case - 1] = "X"</div>
+<table>
+  <tr><th style="width:25%">Je tape</th><th>Ce que le jeu répond</th></tr>
+  <tr><td class="mono">5</td><td>le X se pose</td></tr>
+  <tr><td class="mono">5</td><td>« Cette case est deja prise ! »</td></tr>
+  <tr><td class="mono">12</td><td>« Cette case n'existe pas ! »</td></tr>
+  <tr><td class="mono">0</td><td>« Cette case n'existe pas ! » — <b>la bonne raison, enfin</b></td></tr>
+</table>
+<div class="cle" style="margin-top:1.4mm">Hier le jeu disait <b>une seule phrase pour deux problèmes différents</b>.
+Aujourd'hui, chaque refus a <b>son</b> message.</div>
+
+<h2 class="o">3 · L'ordre décide de tout</h2>
+<div class="duo">
+  <div><b class="t">❌ Du plus petit au plus grand</b>
+    <div class="code" style="font-size:8.8pt">if note &gt;= 10:
+<b>····</b>mention = "Passable"
+elif note &gt;= 16:
+<b>····</b>mention = "Tres bien"</div>
+    <span class="mono">note = 18</span> → <b>« Passable »</b></div>
+  <div><b class="t">✔ Du plus grand au plus petit</b>
+    <div class="code" style="font-size:8.8pt">if note &gt;= 16:
+<b>····</b>mention = "Tres bien"
+elif note &gt;= 10:
+<b>····</b>mention = "Passable"</div>
+    <span class="mono">note = 18</span> → <b>« Tres bien »</b></div>
+</div>
+<div class="cle">Python <b>s'arrête au premier chemin qui passe</b>. Pas au meilleur : <b>au premier</b>.
+Une cascade se lit <b>du plus sélectif au plus large</b>.</div>
+
+<div class="cle" style="background:#eaf7ef;border-color:#2fb765">✍ <b>Avant le clavier :</b>
+dans ton cahier, <b>une ligne de français par chemin</b> — <b>SI</b> l'âge &lt; 5 → gratuit ·
+<b>SINON SI</b> ≤ 12 → 500 F · <b>SINON</b> → plein tarif. Autant de lignes que de
+<span class="mono">if</span> / <span class="mono">elif</span> / <span class="mono">else</span>.</div>""",
+      erreurs=[("SyntaxError", u"<span class='mono'>elseif</span>, <span class='mono'>else if</span> ou <span class='mono'>elsif</span>", u"En Python c'est <span class='mono'>elif</span>, en un seul mot"),
+               (u"<i>tout le monde a la même mention</i>", u"La cascade est dans le mauvais ordre", u"Du plus sélectif au plus large"),
+               (u"<i>deux messages s'affichent</i>", u"Tu as mis deux <span class='mono'>if</span> au lieu de <span class='mono'>if</span> / <span class='mono'>elif</span>", u"Un seul chemin → un seul <span class='mono'>if</span>, puis des <span class='mono'>elif</span>"),
+               ("IndentationError", u"Il manque les 4 espaces après les deux-points", u"Chaque chemin a son bloc décalé")]),
 ]
 
 for s in SEANCES:
     acquis = ACQUIS_BASE + s["nouveau"]
     liste = u" &nbsp;·&nbsp; ".join(u'<span class="ok">✔</span> ' + a for a in acquis)
     page = GABARIT.format(titre=s["titre"], emoji=s["emoji"], num=s["num"], date=s["date"],
-                          corps=s["corps"],
+                          corps=s["corps"], extra=s.get("extra", u""),
                           erreurs=u"\n  ".join(ligne_err(*e) for e in s["erreurs"]),
                           acquis=u"<b>Depuis le premier samedi, tu sais :</b><br>" + liste)
+    if not os.path.isdir(os.path.join(BASE, s["dossier"])):
+        print("IGNORE (seance retiree du parcours) :", s["dossier"]); continue
     dossier = os.path.join(BASE, s["dossier"], "a-imprimer")
     src = os.path.join(dossier, "sources", "1-aide-memoire.html")
     io.open(src, "w", encoding="utf-8").write(page)
@@ -290,7 +360,11 @@ for s in SEANCES:
     subprocess.run([CHROME, "--headless", "--disable-gpu", "--no-sandbox",
                     "--no-pdf-header-footer", "--print-to-pdf=" + pdf, src],
                    capture_output=True)
-    import pymupdf
-    d = pymupdf.open(pdf)
-    taux = 100 * max(x[3] for x in d[0].get_text("blocks")) / d[0].rect.height
-    print("S%02d  %-12s  %d page(s)  %3.0f%%" % (s["num"], s["dossier"][:12], len(d), taux))
+    info = subprocess.run(["pdfinfo", pdf], capture_output=True, text=True).stdout
+    pages = int([l for l in info.splitlines() if l.startswith("Pages:")][0].split()[1])
+    bbox = subprocess.run(["pdftotext", "-bbox", "-f", "1", "-l", "1", pdf, "-"],
+                          capture_output=True, text=True).stdout
+    hauteur = float(bbox.split('height="')[1].split('"')[0])
+    bas = max(float(x.split('"')[0]) for x in bbox.split('yMax="')[1:])
+    print("S%02d  %-12s  %d page(s)  %3.0f%%" % (s["num"], s["dossier"][:12], pages,
+                                                 100 * bas / hauteur))

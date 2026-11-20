@@ -141,6 +141,9 @@ function creer(s) {
    txt(sl,'🚀  À samedi, les Geeks !',{x:M,y:5.8,w:9.0,h:0.7,fontSize:23,color:CYAN,italic:true});
    sl.addNotes('On laisse la diapo affichée pendant la sortie.');}
 
+  if (!require('fs').existsSync(BASE + s.dossier)) {
+    console.log('  IGNORE (seance retiree du parcours) : ' + s.dossier);
+    return Promise.resolve(); }
   const sortie = BASE + s.dossier + '/a-projeter/seance-' + s.num + '-projection.pptx';
   return p.writeFile({fileName: sortie}).then(()=>console.log('  S' + s.num + ' -> ' + sortie.split('/').slice(-1)[0]));
 }

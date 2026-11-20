@@ -12,7 +12,7 @@ GAB = u"""# 🖨️ Ce qu'il faut imprimer pour la séance {num} ({date})
 {note_aide}
 
 > **Si vous ne pouvez pas imprimer :** l'aide-mémoire **se projette** (il est repris sur les
-> dernières diapos de `a-projeter/seance-{num}-projection.pptx`). On perd le papier, pas le fond.
+> dernières diapos de `a-projeter/{deck}`). On perd le papier, pas le fond.
 
 ## Sur chaque poste, avant leur arrivée
 
@@ -78,28 +78,31 @@ Ctrl + C   =   arrêter un programme devenu fou""",
              ("—", "Prévoyez d'écrire **Ctrl + C** en très grand : au moins un poste partira en boucle infinie, et c'est une bonne nouvelle")]),
 
  dict(num=11, date="21 novembre",
+   deck="cours-en-quiz.pptx",
    extra="",
-   note_aide="🔴 **Celui-ci est différent : il contient le bloc des 8 `if`, écrit en entier.** Ils le recopient depuis la feuille — c'est prévu, et c'est le seul moyen de tenir dans l'heure.",
-   tableau="""les indices, pas les numéros de case :
+   note_aide="⚠️ **Le cours se fait dans le quiz projeté : la feuille ne sert qu'à côté du clavier.** On ne la distribue pas au début comme un document à lire — on la pose sur le poste, et on y renvoie à chaque atelier.",
+   tableau="""elif  =  else + if   ->   « sinon, est-ce que ... ? »
 
-        0 | 1 | 2
-       ---+---+---
-        3 | 4 | 5
-       ---+---+---
-        6 | 7 | 8
+Python s'arrete au PREMIER chemin qui passe.
+Pas au meilleur : AU PREMIER.
 
-while tour < 9 and gagnant == "" :  deux raisons de s'arrêter""",
+                 un seul chemin sur trois""",
    materiel=[("1", "Minuteur visible"),
-             ("1 jeu", "Les **neuf cartons**, pour montrer les 8 lignes gagnantes à la main avant de les écrire"),
-             ("8", "Une **feuille blanche par élève** : ils écrivent les 8 lignes gagnantes avant de taper quoi que ce soit")]),
+             ("8", "**Le cahier ouvert à côté du clavier** : l'algorithme en français s'y écrit **avant** chaque atelier. Pas de clavier sans cahier écrit"),
+             ("1 jeu", "**Trois panneaux** « CASE INEXISTANTE » / « CASE PRISE » / « COUP JOUÉ » : un élève annonce un numéro, un autre lève le bon panneau — la cascade se mime avant de s'écrire"),
+             ("—", "**Les 4 cartes de couleur** (▲ rouge · ◆ bleue · ● orange · ■ verte) : tout le quiz repose dessus, vérifiez qu'elles sont sur les 8 postes"),
+             ("—", "**De quoi occuper ceux qui vont vite** : les lignes ⭐ sont dans le quiz, et l'exercice ⭐ LE PRIX DU TICKET est prêt dans `a-envoyer/`")]),
 ]
 
 for s in S:
     mat = "\n".join("| **%s** | %s |" % (a, b) for a, b in s["materiel"])
     txt = GAB.format(num=s["num"], date=s["date"], extra=s["extra"],
+                     deck=s.get("deck", "seance-%d-projection.pptx" % s["num"]),
                      note_aide=s["note_aide"], tableau=s["tableau"], materiel=mat)
     dossier = {6: "S06-le-plateau-se-souvient", 7: "S07-la-case-occupee", 9: "S09-et-ou",
-               10: "S10-la-boucle", 11: "S11-le-gagnant"}[s["num"]]
+               10: "S10-la-boucle", 11: "S11-les-trois-chemins"}[s["num"]]
+    if not os.path.isdir(os.path.join(BASE, dossier)):
+        print("IGNORE (seance retiree du parcours) :", dossier); continue
     chemin = os.path.join(BASE, dossier, "a-imprimer", "quantites-et-formats.md")
     open(chemin, "w", encoding="utf-8").write(txt)
     print("écrit :", chemin)
