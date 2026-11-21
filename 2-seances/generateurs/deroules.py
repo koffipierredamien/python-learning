@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 """Les deroules de seance destines au responsable (Word).
 
-   Registre administratif : pas de code, pas de jargon, pas d'emoji.
-   Le responsable doit pouvoir lire le document sans rien connaitre
-   a la programmation, et le transferer tel quel.
+   UNE PAGE, et pas une de plus. Registre administratif : pas de code,
+   pas de jargon, pas d'emoji. Le responsable doit pouvoir le lire sans
+   rien connaitre a la programmation, et le transferer tel quel.
+
+   On lui donne quatre choses, et rien d'autre : l'objet de la seance,
+   le programme en un coup d'oeil, le travail donne aux familles, et ce
+   que l'eleve sait faire a la fin. Le detail minute par minute reste
+   dans la fiche de seance, qui est un document d'enseignant.
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -57,7 +62,8 @@ def construire(s):
            ("Jerusalem Geeks (9 – 12 ans) et Jeremiah Geeks (12 – 18 ans)", False)], 9.5, after=12)
 
     # ------------------------------------------------------------ objet
-    riche([("Objet de la séance. ", True), (s["objet"], False)], after=12)
+    riche([("Objet de la séance. ", True),
+           (s.get("objet_court") or s["objet"], False)], after=12)
 
     # ------------------------------------------------------------ tableau
     para("LE PROGRAMME EN UN COUP D'ŒIL", 11, True, MARINE, after=6)
@@ -72,21 +78,14 @@ def construire(s):
             c = t.cell(li, ci); c.text = ""
             r = c.paragraphs[0].add_run(v); r.font.size = Pt(9)
     t.columns[0].width = Cm(3.3); t.columns[1].width = Cm(10.6); t.columns[2].width = Cm(2.1)
-    para("", 6, after=10)
-
-    # ------------------------------------------------------------ deroule
-    para("LE DÉROULÉ EN DÉTAIL", 11, True, MARINE, after=6)
-    for titre, paragraphes in s["deroule"]:
-        para(titre, 10.5, True, VIOLET, after=3)
-        for p in paragraphes:
-            para(p, 10.5, after=4)
-        para("", 4, after=2)
+    para("", 6, after=12)
 
     # ------------------------------------------------------------ travail
     para("TRAVAIL DONNÉ POUR LA SEMAINE", 11, True, MARINE, after=6)
     para(s["travail"], after=12)
 
     # ------------------------------------------------------------ acquis
+    para("CE QUE L'ÉLÈVE SAIT FAIRE À L'ISSUE DE LA SÉANCE", 11, True, MARINE, after=6)
     para(s["acquis"], after=4)
 
     sortie = os.path.join(RACINE, s["dossier"], "a-envoyer",

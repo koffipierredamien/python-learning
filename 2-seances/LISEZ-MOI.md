@@ -82,8 +82,12 @@ S02-premier-contact/
 │      corrigés à 100 % automatiquement, pour ceux qui n'ont pas d'ordinateur ;
 │      et exercice-maison.md + les images, le PDF et le corrigé, pour les autres)
 │     deroule-seance-N.docx / .pdf      le déroulé pour le responsable :
-│                                       pas de code, pas de jargon, il se
-│                                       transfère tel quel
+│                                       UNE PAGE — l'objet de la séance, le
+│                                       programme en un coup d'œil, le travail
+│                                       donné aux familles, et ce que l'élève
+│                                       sait faire à la fin. Pas de code, pas
+│                                       de jargon, il se transfère tel quel.
+│                                       Le détail reste dans la fiche de séance
 │
 └── code/                  ce qui tourne sur les machines
       depart_eleves.py   le fichier de l'élève

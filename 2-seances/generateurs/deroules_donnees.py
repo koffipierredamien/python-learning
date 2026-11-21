@@ -13,6 +13,11 @@ SEANCES = [
 {"num": 6, "dossier": "S06-le-plateau-se-souvient",
  "titre": "Le plateau se souvient",
  "date": "samedi 17 octobre 2026",
+ "objet_court":
+ "Le programme dialogue avec deux joueurs et affiche un plateau numéroté, mais il ne garde aucune "
+ "trace des coups joués. La séance lui donne cette mémoire — la notion dont tout le reste du "
+ "parcours dépend. En fin de séance, le symbole déposé par un joueur demeure affiché sur le "
+ "plateau.",
  "objet":
  "Les apprenants disposent d'un programme qui dialogue avec deux joueurs, affiche un plateau "
  "numéroté et refuse une case qui n'existe pas. Il lui manque l'essentiel : la mémoire. Lorsqu'un "
@@ -95,6 +100,11 @@ SEANCES = [
 {"num": 7, "dossier": "S07-la-case-occupee",
  "titre": "On ne joue pas deux fois au même endroit",
  "date": "samedi 24 octobre 2026",
+ "objet_court":
+ "Le plateau conserve désormais les coups joués, mais le programme accepte encore qu'un joueur "
+ "écrase le symbole de son adversaire. La séance lui apprend à vérifier l'état d'une case avant "
+ "d'y écrire. En fin de séance, un coup déposé sur une case occupée est refusé et le joueur perd "
+ "son tour.",
  "objet":
  "Le plateau conserve maintenant les coups joués, mais le programme accepte encore qu'un joueur "
  "dépose son symbole sur une case déjà occupée, effaçant celui de son adversaire. La séance apprend "
@@ -174,6 +184,11 @@ SEANCES = [
 {"num": 8, "dossier": "S08-tp-le-plateau",
  "titre": "Travaux pratiques n°2 — le plateau vivant",
  "date": "samedi 31 octobre 2026",
+ "objet_court":
+ "Deuxième séance de travaux pratiques du parcours, sans notion nouvelle. Les apprenants "
+ "travaillent seuls sur un document écrit qui leur est remis, pendant que l'enseignant circule, "
+ "débloque et valide. L'objectif est de consolider les deux notions les plus difficiles de ces "
+ "deux mois, sans lesquelles aucune des séances suivantes n'est possible.",
  "objet":
  "Deuxième séance de travaux pratiques du parcours. Elle ne comporte aucune notion nouvelle. Les "
  "élèves travaillent seuls, sur un document écrit qui leur est remis, pendant que l'enseignant "
@@ -238,6 +253,10 @@ SEANCES = [
 {"num": 9, "dossier": "S09-et-ou",
  "titre": "Une seule question au lieu de trois",
  "date": "samedi 7 novembre 2026",
+ "objet_court":
+ "La séance n'ajoute rien au jeu : elle en retranche. Le contrôle écrit à la séance 7 fonctionne, "
+ "mais il est long et difficile à relire. La séance apprend à réunir plusieurs questions en une "
+ "seule, et corrige à cette occasion l'anomalie annoncée aux élèves quinze jours plus tôt.",
  "objet":
  "La séance n'ajoute rien au jeu : elle en retranche. Le contrôle écrit à la séance 7 fonctionne, "
  "mais il est long et difficile à relire, et il laisse subsister l'anomalie annoncée ce jour-là. "
@@ -309,13 +328,18 @@ SEANCES = [
  "acquis":
  "À l'issue de cette séance, chaque élève sait énoncer avec ses propres mots la différence entre une "
  "exigence cumulative et une alternative, et sait réunir plusieurs conditions en une seule ligne. "
- "Le jeu rend la même décision qu'auparavant, en deux fois moins de lignes, et l'anomalie ouverte "
- "depuis la séance 7 est close."},
+ "Le jeu rend la même décision qu'auparavant, mais elle est deux fois plus courte et tient sur un "
+ "seul niveau, et l'anomalie ouverte depuis la séance 7 est close."},
 
 # =====================================================================
 {"num": 10, "dossier": "S10-revision-generale",
  "titre": "Révision générale",
  "date": "samedi 14 novembre 2026",
+ "objet_court":
+ "Séance de consolidation, sans notion nouvelle : vérifier, après neuf séances, ce qui est "
+ "réellement acquis et non ce qui a été enseigné. La séance n'a pas pu aller à son terme : les "
+ "deux dernières manches n'ont pas été traitées, et la notion prévue en fin de séance a été "
+ "reportée.",
  "objet":
  "Séance de consolidation, sans notion nouvelle. Après neuf séances, il devenait nécessaire de "
  "vérifier ce qui était réellement acquis, et non ce qui avait été enseigné. La séance a pris la "
@@ -372,6 +396,12 @@ SEANCES = [
 {"num": 11, "dossier": "S11-les-trois-chemins",
  "titre": "Trois chemins au lieu de deux",
  "date": "samedi 21 novembre 2026",
+ "objet_court":
+ "Le programme des apprenants sait refuser un coup illégal, mais il n'en donne qu'une explication "
+ "ambiguë : il annonce que la case n'existe pas ou qu'elle est déjà occupée, sans jamais dire "
+ "laquelle des deux. La séance lui apprend à enchaîner plusieurs conditions et, surtout, à les "
+ "écrire dans le bon ordre. En fin de séance, le jeu indique au joueur la raison précise pour "
+ "laquelle un coup est refusé.",
  "objet":
  "Le programme des apprenants sait aujourd'hui refuser un coup illégal, mais il ne sait en donner "
  "qu'une seule explication, et elle est ambiguë : il annonce que la case n'existe pas ou qu'elle est "
@@ -454,6 +484,5 @@ SEANCES = [
  "acquis":
  "À l'issue de cette séance, chaque apprenant sait enchaîner plusieurs conditions, sait que "
  "l'ordinateur s'arrête à la première qui est vraie, et sait en déduire dans quel ordre les écrire. "
- "Il a en outre rédigé au moins un algorithme en français avant de programmer. Le jeu indique "
- "désormais au joueur la raison précise pour laquelle un coup est refusé."},
+ "Il a en outre rédigé au moins un algorithme en français avant de programmer."},
 ]
