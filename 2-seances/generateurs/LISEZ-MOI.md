@@ -23,6 +23,8 @@ mieux changer une ligne et relancer que refaire la mise en page à la main.
 | `affiche.py` | **l'affiche du trimestre** : HTML → PDF → image | `2-seances/a-afficher/` |
 | `mission_ascenseur.py` | la **mission autonome n°1** : feuille élève et feuille enseignant | `2-seances/missions-autonomes/` |
 | `revision_generale.js` + `donnees_revision_generale.js` | la **révision générale** du 14 novembre : cartes **et** ateliers au clavier | `S10-revision-generale/a-projeter/` |
+| `quiz_rappel_general.py` | le **quiz de rappel** (20 questions) : tout le parcours jusqu'à l'ordre des conditions, **sans la boucle** | `S11-les-trois-chemins · a-envoyer/` |
+| `exercice_la_medaille.py` | l'exercice **La Médaille** : HTML → PDF → images, sans date ni cadre à remplir — il se lit sur un téléphone | `S11-les-trois-chemins · a-envoyer/` |
 | `cours_en_quiz.js` + `donnees_cours_s11.js` | **le cours en quiz** de la séance 11 : 46 diapos, de la prière à la clôture — révision, leçons, ateliers au clavier, ⭐ et exercices | `S11-les-trois-chemins/a-projeter/` |
 
 > `S08` (le TP) a des documents écrits à la main, pas générés :
@@ -53,6 +55,8 @@ python3.13 -I quiz_5_6.py          # les quiz : chacun est revérifié en sortan
 python3.13 -I quiz_7_8.py
 python3.13 -I quiz_9_10.py
 python3.13 -I quiz_revision.py    # la révision générale en formulaire
+python3.13 -I quiz_rappel_general.py   # le quiz de rappel (20 questions)
+python3.13 -I exercice_la_medaille.py  # l'exercice La Médaille : PDF + images
 python3.13 -I aide_memoires.py     # affiche le taux de remplissage de chaque page
 python3.13 -I build_exos.py        # exercices de maison : PDF + images
 python3.13 -I notices.py

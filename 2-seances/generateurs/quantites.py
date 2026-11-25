@@ -88,6 +88,7 @@ Pas au meilleur : AU PREMIER.
 
                  un seul chemin sur trois""",
    materiel=[("1", "Minuteur visible"),
+             ("8", "🔴 **Une feuille de papier et un stylo par poste.** C'est ce qui a interrompu la séance la première fois : l'algorithme ne s'écrit pas sans. À défaut : dans Thonny, en commentaires"),
              ("8", "**Le cahier ouvert à côté du clavier** : l'algorithme en français s'y écrit **avant** chaque atelier. Pas de clavier sans cahier écrit"),
              ("1 jeu", "**Trois panneaux** « CASE INEXISTANTE » / « CASE PRISE » / « COUP JOUÉ » : un élève annonce un numéro, un autre lève le bon panneau — la cascade se mime avant de s'écrire"),
              ("—", "**Les 4 cartes de couleur** (▲ rouge · ◆ bleue · ● orange · ■ verte) : tout le quiz repose dessus, vérifiez qu'elles sont sur les 8 postes"),

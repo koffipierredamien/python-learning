@@ -3,7 +3,7 @@
 > **Ce document dit la vérité du terrain, pas le programme rêvé.** Il est refait à chaque fois que
 > la réalité s'écarte du plan — c'est-à-dire souvent, et c'est normal.
 >
-> **Dernière mise à jour : vendredi 20 novembre 2026.**
+> **Dernière mise à jour : mercredi 25 novembre 2026.**
 
 ---
 
@@ -21,13 +21,14 @@
 | **[S08](S08-tp-le-plateau/fiche-de-seance.md)** | 31 oct | **TP n°2 — le plateau vivant** | ✅ |
 | **[S09](S09-et-ou/fiche-de-seance.md)** | 7 nov | `and` / `or`, la condition unique | ✅ |
 | **[S10](S10-revision-generale/revision-generale.md)** | 14 nov | **Révision générale** — *non terminée : deux manches sur cinq n'ont pas été faites* | ⚠️ partiel |
-| **[S11](S11-les-trois-chemins/fiche-de-seance.md)** | **21 nov** | **`elif`, et l'ordre des conditions** | 🔜 **demain** |
+| **[S11](S11-les-trois-chemins/fiche-de-seance.md)** | 21 nov | **`elif`** — *arrêtée à la page de l'algorithme : les apprenants n'avaient ni papier ni stylo* | ⚠️ partiel |
 
-### Ce que la classe sait faire, au 20 novembre
+### Ce que la classe sait faire, au 25 novembre
 
 `print` · les variables · `input` · le `+` qui colle · **`int()` et `str()`** · le compteur ·
 les opérateurs `>` `<` `>=` `<=` `==` `!=` · **`if` / `else`** · **le `if` dans le `if`** ·
-**`and` et `or`** · **la liste et l'indice `case - 1`** · lire un message rouge.
+**`and` et `or`** · **la liste et l'indice `case - 1`** · lire un message rouge ·
+**`elif` et la règle du premier vrai** — *vus, mais pas encore pratiqués au clavier*.
 
 **Leur jeu :** il accueille les deux joueurs, affiche un plateau qui se souvient des coups, refuse
 une case qui n'existe pas et une case déjà prise — mais sans dire laquelle des deux.
@@ -36,7 +37,7 @@ une case qui n'existe pas et une case déjà prise — mais sans dire laquelle d
 
 | | |
 |---|---|
-| **`elif`** | demain |
+| **Écrire une cascade au clavier** | la notion est vue, l'atelier n'a pas eu lieu |
 | **La répétition (`while`)** | **pas commencée.** Elle n'arrivera que le jour où recopier sera devenu insupportable |
 | **Détecter le gagnant** | elle suppose la répétition |
 | **Les fonctions, le graphique** | plus tard |
@@ -63,46 +64,74 @@ chaque semaine, sur ce qui a été réellement compris.
 
 ---
 
-## 3. Demain — samedi 21 novembre
+## 3. Où la séance 11 s'est arrêtée, et par où elle reprend
 
-### 🔜 [Séance 11 — « Trois chemins au lieu de deux »](S11-les-trois-chemins/fiche-de-seance.md)
+### ⚠️ Ce qui s'est passé
 
-**La notion :** `elif`, et la règle qui va avec — *Python s'arrête au premier vrai*.
-**La brique :** le jeu ne dit plus « la case n'existe pas **ou** elle est déjà prise ».
-Il dit **laquelle des deux**.
+La séance s'est arrêtée **à la diapo qui demande d'écrire l'algorithme** : les apprenants
+n'avaient **ni papier ni stylo**. Tout ce qui précède a été fait.
 
-| Horaire | Séquence |
+| Ce qui a été fait | Ce qui reste |
 |---|---|
-| 12 h 00 | Prière et accueil |
-| 12 h 15 | **Quiz de révision** — 7 cartes |
-| 12 h 28 | **Le cours en quiz** — 4 manches, 3 ateliers au clavier |
-| 13 h 05 | Pause |
-| 13 h 15 | **L'exercice** : Le Bulletin |
-| 13 h 40 | ⭐ **L'exercice étoile** : Le Prix du Ticket |
-| 13 h 50 | Clôture |
+| Le quiz de révision — les 7 cartes | **L'atelier 2** : la cascade des mentions, algorithme d'abord |
+| Manche 1 : le constat (le jeu dit quelque chose de faux) | Manche 4 : la cascade reportée **dans leur jeu** |
+| Manche 2 : `elif`, et l'atelier « deux `if`, ou un `elif` ? » | L'exercice **Le Bulletin** |
+| Manche 3 : les deux questions — le piège de `note = 18`, et l'ordre | ⭐ **Le Prix du Ticket** |
+
+**La notion est passée ; la pratique au clavier, non.** C'est exactement ce qui manque.
+
+### Ce qu'on fait la prochaine fois
+
+**On reprend la même séance, à la diapo où l'on s'est arrêté.** Rien à repréparer : le
+[diaporama](S11-les-trois-chemins/a-projeter/cours-en-quiz.pptx) et la
+[fiche](S11-les-trois-chemins/fiche-de-seance.md) sont les mêmes. Deux précautions :
+
+1. **Du papier et un stylo sur chaque poste, avant leur arrivée.** C'est ce qui a bloqué la
+   séance, et c'est la chose la moins chère à prévoir.
+2. **Cinq minutes de reprise** sur les manches 2 et 3 avant de repartir : une semaine a passé.
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| **Tout projeter** | [`a-projeter/cours-en-quiz.pptx`](S11-les-trois-chemins/a-projeter/cours-en-quiz.pptx) — **46 diapos**, de la révision à la clôture |
+| **Tout projeter** | [`a-projeter/cours-en-quiz.pptx`](S11-les-trois-chemins/a-projeter/cours-en-quiz.pptx) — on reprend à l'atelier de la manche 3 |
 | Animer | [📖 la fiche de séance](S11-les-trois-chemins/fiche-de-seance.md) |
 | Les corrigés | [les 4 ateliers](S11-les-trois-chemins/code/ateliers-corriges.py) · [Le Bulletin](S11-les-trois-chemins/code/corrige-exercice.py) · [⭐ Le Prix du Ticket](S11-les-trois-chemins/code/corrige-exercice-etoile.py) |
-| **Imprimer la veille** | 🖨️ [la liste du jour](S11-les-trois-chemins/a-imprimer/quantites-et-formats.md) — 8 × [l'aide-mémoire](S11-les-trois-chemins/a-imprimer/1-aide-memoire.pdf) et 8 × [la feuille d'exercice](S11-les-trois-chemins/a-envoyer/exercice-le-bulletin.pdf) |
-| La feuille d'exercice et son corrigé | 📋 [Le Bulletin](S11-les-trois-chemins/a-envoyer/exercice-le-bulletin.pdf) (2 pages, étape 0 = l'algorithme) · [le corrigé des deux exercices](S11-les-trois-chemins/a-envoyer/correction-le-bulletin.pdf) |
+| Imprimer | 🖨️ [la liste du jour](S11-les-trois-chemins/a-imprimer/quantites-et-formats.md) — 8 × [l'aide-mémoire](S11-les-trois-chemins/a-imprimer/1-aide-memoire.pdf) et 8 × [la feuille d'exercice](S11-les-trois-chemins/a-envoyer/exercice-le-bulletin.pdf) |
 | Préparer les postes | [`code/depart_eleves.py`](S11-les-trois-chemins/code/depart_eleves.py) · le Filet : [`code_officiel_fin_de_seance.py`](S11-les-trois-chemins/code/code_officiel_fin_de_seance.py) |
 | Transmettre à Pasteur Eli | [📋 le déroulé](S11-les-trois-chemins/a-envoyer/deroule-seance-11.pdf) · [version Word](S11-les-trois-chemins/a-envoyer/deroule-seance-11.docx) |
 
-### Les deux choses à ne pas lâcher demain
+### Les deux choses à ne pas lâcher
 
-1. **L'algorithme sur le cahier avant le clavier.** C'est exigé deux fois : à l'atelier 2 et à
+1. **L'algorithme sur le papier avant le clavier.** C'est exigé deux fois : à l'atelier 2 et à
    l'exercice. **Refusez le clavier à qui ne l'a pas écrit** — ça prend trois minutes, et c'est la
    compétence qui manque le plus.
-2. **La manche 3** (l'ordre des conditions). Si le temps manque, on coupe la manche 4, jamais la 3.
+2. **L'atelier 2** (la cascade des mentions). C'est celui qu'on n'a pas pu faire : il passe avant
+   tout le reste.
 
 ### Pour les rapides, comme Sara
 
 Trois niveaux, dans cet ordre : les ⭐ **à l'intérieur de chaque atelier** · l'**exercice étoile**
 (Le Prix du Ticket, deux pièges cachés) · et, si elle a tout fini, la
 [**mission autonome n°1**](missions-autonomes/LISEZ-MOI.md), qui s'écrit entièrement avec ce qu'elle sait.
+
+---
+
+## 3 bis. Le travail envoyé entre les deux séances
+
+Deux documents, pour que la semaine ne soit pas perdue — le mode d'emploi et le message aux
+familles sont dans
+[**`travail-de-la-semaine.md`**](S11-les-trois-chemins/a-envoyer/travail-de-la-semaine.md).
+
+| | Quoi | Pour qui |
+|---|---|---|
+| 🧠 | [**Le quiz de rappel**](S11-les-trois-chemins/a-envoyer/quiz-rappel-general.gs) — 20 questions, corrigées automatiquement, de la première séance jusqu'à l'ordre des conditions | tout le monde, depuis un téléphone |
+| 🏅 | [**L'exercice — La Médaille**](S11-les-trois-chemins/a-envoyer/exercice-la-medaille.pdf) — trois questions de réflexion, puis un programme **sans aucune consigne de code** | ceux qui ont un ordinateur |
+
+**Pourquoi La Médaille :** la question du quiz qui dit *« du plus précis au plus large »* ne vaut
+que si on l'a pratiquée. Ici, le cas « exactement 100 » placé après `>= 90` n'est jamais atteint —
+l'enfant le découvre en tapant 100, et personne ne le lui aura dit.
+Le corrigé est dans
+[`correction-la-medaille.py`](S11-les-trois-chemins/a-envoyer/correction-la-medaille.py) : **il ne
+part pas aux élèves.**
 
 ---
 

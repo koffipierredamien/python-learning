@@ -4,6 +4,20 @@
 > question, ils lèvent une carte, puis ils tapent. La notion du jour arrive au moment où ils ont
 > constaté eux-mêmes qu'elle leur manque.
 
+> ⚠️ **CETTE SÉANCE A ÉTÉ INTERROMPUE, ET ELLE REPREND.**
+> Elle s'est arrêtée **à la diapo qui demande d'écrire l'algorithme** (l'atelier de la manche 3) :
+> les apprenants n'avaient **ni papier ni stylo**. Ont été faits : le quiz de révision, les manches
+> 1 et 2 en entier (le constat, `elif`, l'atelier 1), et **les deux questions de la manche 3** —
+> le piège de `note = 18` et l'ordre des conditions. Reste : **l'atelier 2**, la manche 4, et les
+> deux exercices.
+>
+> **On reprend cette même fiche à cet endroit**, avec deux précautions : **du papier et un stylo
+> sur chaque poste avant leur arrivée**, et **cinq minutes de reprise** sur les manches 2 et 3,
+> parce qu'une semaine a passé. Rien d'autre ne change.
+>
+> Entre les deux, un quiz de rappel et un exercice sont partis aux familles :
+> [`a-envoyer/travail-de-la-semaine.md`](a-envoyer/travail-de-la-semaine.md).
+
 ---
 
 ## 0. Carte d'identité
@@ -57,6 +71,7 @@
 | **30 min avant** | `GEEKS/mon_xo/jeu.py` = [`code/depart_eleves.py`](code/depart_eleves.py) · un fichier neuf `mentions.py` pour les ateliers |
 | **Au tableau, et on n'efface pas** | `elif  =  « sinon, si ... »` et, en dessous, **`Python s'arrete au PREMIER VRAI`** |
 | **Les cartes** | Les quatre cartes de couleur sur chaque table, comme d'habitude |
+| 🔴 **Sur chaque poste** | **Une feuille de papier et un stylo.** C'est ce qui a interrompu la séance la première fois : l'algorithme ne s'écrit pas sans. À défaut, on écrit l'algorithme **dans Thonny, en commentaires**, chaque ligne commençant par `#` |
 
 ---
 

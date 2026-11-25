@@ -11,7 +11,7 @@ BASE_CIBLE = [1, 3, 2, 4, 1, 2, 4, 3, 1, 4, 2, 3, 1, 4, 2]   # jamais deux fois 
 # positions change, pour qu'aucun eleve ne puisse la repérer d'un quiz au suivant.
 PERMUTATIONS = {5: [1, 2, 3, 4], 6: [2, 1, 4, 3], 7: [3, 4, 1, 2],
                 8: [4, 3, 2, 1], 9: [2, 3, 4, 1], 10: [4, 1, 2, 3],
-                11: [3, 1, 4, 2]}
+                11: [3, 1, 4, 2], 12: [1, 4, 3, 2]}
 
 def cible(num, n=15):
     """Les positions ou tombera la bonne reponse : jamais deux fois de suite
