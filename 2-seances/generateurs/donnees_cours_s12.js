@@ -1,0 +1,157 @@
+const {creer} = require(__dirname + '/cours_en_quiz.js');
+
+// cartes : 0 = ▲ ROUGE · 1 = ◆ BLEUE · 2 = ● ORANGE · 3 = ■ VERTE
+const S = {
+ dossier:'S12-le-jeu-dit-pourquoi',
+ fichier:'cours-en-quiz',
+ titre:'Séance 12 — Le jeu dit enfin pourquoi',
+ heureRegle:'12 h 13',
+ ouverture:{
+   kicker:'SÉANCE 12  ·  SAMEDI 28 NOVEMBRE',
+   titre:'LE JEU DIT\nENFIN POURQUOI',
+   titreTaille:46, titreH:1.6,
+   sous:'Quatre manches. Des cartes en l\'air, et les mains sur le clavier.',
+   promesse:'La semaine dernière, on a compris le mot.\nAujourd\'hui, on le met dans le jeu.',
+   note:'Affichée pendant qu\'ils s\'installent. Sur chaque poste : Thonny, le jeu de chacun ouvert, '
+     + 'ET UNE FEUILLE DE PAPIER AVEC UN STYLO. C\'est ce qui a interrompu la dernière séance : on ne recommence pas.'},
+
+ manches:[
+
+ // ============================================================ 1
+ {heure:'12 h 15', duree:'12 min', titre:'Ce qu\'on sait déjà',
+  sous:'Sept cartes sur le travail de la semaine. Rien de neuf, que du déjà vu.',
+  note:"Sept cartes en douze minutes : on ne s'attarde sur aucune. Si une carte passe mal, on la note et on y revient a la fin, pas maintenant.",
+  qcm:[
+   {code:'note = 30\n\nif note >= 90:\n    print("Or")\nelif note >= 60:\n    print("Recu")', consigne:'Qu\'est-ce qui s\'affiche ?', taille:19,
+    options:['Or','Recu','rien du tout','une erreur rouge'], bonne:2,
+    pourquoi:'Aucune des deux conditions n\'est vraie, et il n\'y a pas de else. Python ne dit rien du tout — ce n\'est pas une erreur, c\'est un TROU.',
+    noteReponse:"Beaucoup vont chercher une erreur rouge. Il n'y en a pas : c'est tout le probleme."},
+   {code:'note = 95\n\nif note >= 60:\n    print("Recu")\nif note >= 90:\n    print("Felicitations")', consigne:'Attention, DEUX if séparés. Qu\'est-ce qui s\'affiche ?', taille:19,
+    options:['Recu seulement','Recu, puis Felicitations','Felicitations seulement','une erreur rouge'], bonne:1,
+    pourquoi:'Deux if séparés, ce sont DEUX questions indépendantes : Python pose les deux, et les deux sont vraies. Avec elif, la deuxième n\'aurait même pas été regardée.'},
+   {code:'age = input("Ton age ? ")\n\nif age > 12:\n    print("Grand")', consigne:'L\'enfant tape 15. Que se passe-t-il ?', taille:19,
+    options:['Ca affiche Grand','Ca n\'affiche rien','une erreur rouge','Ca affiche 15'], bonne:2,
+    pourquoi:'input rend TOUJOURS du texte. On ne peut pas comparer du texte avec un nombre. Il manque  age = int(age).'},
+   {consigne:'Dans une cascade de if / elif / else, dans quel ordre faut-il ranger les questions ?',
+    options:['Dans n\'importe quel ordre','De la plus LARGE à la plus PRÉCISE','De la plus PRÉCISE à la plus LARGE','Par ordre alphabétique'], bonne:2,
+    pourquoi:'Python s\'arrête au premier chemin qui passe. La question la plus difficile à satisfaire passe donc en premier, et celle qui attrape tout le monde en dernier — souvent, c\'est le else.'},
+   {code:'plateau = ["1", "2", "X", "4", "5", "6", "7", "8", "9"]', consigne:'Le joueur annonce la case 3. Quelle case de la liste faut-il regarder ?', taille:17,
+    options:['plateau[3]','plateau[2]','plateau[1]','plateau[0]'], bonne:1,
+    pourquoi:'Les numéros de la liste commencent à ZÉRO : la case 3 du joueur, c\'est plateau[2]. C\'est le fameux  case - 1.'},
+   {consigne:'Les cases vont de 1 à 9. Pour REFUSER un numéro qui n\'existe pas, j\'écris :',
+    options:['if case < 1 and case > 9:','if case >= 1 or case <= 9:','if case > 1 or case < 9:','if case < 1 or case > 9:'], bonne:3,
+    pourquoi:'Une seule des deux raisons suffit pour refuser : c\'est or. Avec and, il faudrait un nombre à la fois plus petit que 1 ET plus grand que 9 : ça n\'existe pas, donc rien ne serait jamais refusé.'},
+   {consigne:'Un programme doit répondre : « Gratuit » en dessous de 5 ans, « Tarif enfant » jusqu\'à 12 ans, « Tarif normal » pour tous les autres.\n\nCombien de CHEMINS, et combien de CONDITIONS à écrire ?',
+    options:['3 chemins, 3 conditions','3 chemins, 2 conditions','2 chemins, 2 conditions','3 chemins, 1 condition'], bonne:1,
+    pourquoi:'Trois chemins : if, elif, else. Mais le else n\'a PAS de condition — il attrape tout ce qui reste. Deux conditions suffisent.',
+    noteReponse:"C'est le comptage qu'on fait sur le papier AVANT de taper. Retenez-le : on va s'en servir dans dix minutes."},
+  ]},
+
+ // ============================================================ 2
+ {heure:'12 h 27', duree:'18 min', titre:'La Médaille',
+  sous:'Celle de la semaine. On la corrige ensemble — et on commence par le papier.',
+  note:"Demandez d'abord, a main levee, qui l'a faite. On ne commente pas ceux qui ne l'ont pas faite : ils la font maintenant, avec les autres.",
+  qcm:[
+   {code:'points = 100\n\nif points >= 90:\n    print("Medaille d\'or")\nelif points == 100:\n    print("Sans faute !")', consigne:'Qu\'est-ce qui s\'affiche ?', taille:18,
+    options:['Sans faute !','Medaille d\'or','Medaille d\'or, puis Sans faute !','rien du tout'], bonne:1,
+    pourquoi:'100 est DÉJÀ plus grand que 90 : le premier chemin passe, et le second n\'est jamais regardé. Le cas le PLUS PRÉCIS — exactement 100 — devait être écrit EN PREMIER.',
+    noteReponse:"Demandez qui est tombe dans ce piege chez lui. Les mains qui se levent valent tous les discours."},
+  ],
+  atelier:{duree:'15 min', titre:'La Médaille — le papier d\'abord.',
+   temps:['✍  SUR TA FEUILLE, et rien d\'autre : une ligne de français par cas. Puis COMPTE — combien de chemins ? combien de conditions ?',
+          'Lève la main quand ta feuille est écrite. Pas de clavier avant.',
+          'Maintenant tape-la. Puis essaie 100, 90, 74, 59, 0 et 120 : les six doivent tomber juste.',
+          '⭐ SI TU AS FINI : affiche en plus combien de points il manquait pour la médaille du dessus.'],
+   tailleTemps:16,
+   corrige:'points = int(input("Combien de points sur 100 ? "))\n\nif   points < 0 or points > 100:\n    print("Ce nombre n\'existe pas.")\nelif points == 100:\n    print("SANS FAUTE ! Tu es en finale.")\nelif points >= 90:\n    print("Medaille d\'OR")\nelif points >= 75:\n    print("Medaille d\'ARGENT")\nelif points >= 60:\n    print("Medaille de BRONZE")\nelse:\n    print("Participant. Reviens l\'annee prochaine !")',
+   tailleCor:15,
+   variante:'⭐ Les points manquants : un bloc SÉPARÉ, après la cascade —  if points >= 75 and points < 90:  print("Il te manquait " + str(90 - points) + " points pour l\'or")',
+   lecon:'Deux règles, et elles suffisent. L\'IMPOSSIBLE d\'abord : on ne juge pas un nombre qui n\'existe pas. Puis le PLUS PRÉCIS avant le plus large : « exactement 100 » n\'a qu\'une seule réponse possible, « 90 et plus » en a onze.',
+   note:"Circulez, et refusez le clavier a qui n'a pas sa feuille ecrite. Trois minutes, pas plus — mais tenez-le pour tout le monde, sans exception.",
+   noteCorrige:"Le second piege est le zero : qui a ecrit  points <= 0  refuse un enfant qui a zero point. Faites taper 0 avant de passer a la suite."},
+ },
+
+ // ============================================================ 3
+ {heure:'12 h 45', duree:'5 min', titre:'L\'erreur qui ne fait pas d\'erreur',
+  sous:'La leçon la plus importante de la journée, et elle tient en une phrase.',
+  lecon:[
+   {sombre:true, sur:'Ce qu\'il faut retenir de La Médaille', titre:'Python ne vous dira jamais\nque votre ordre est faux.',
+    titreH:1.6, titreTaille:34,
+    code:'if points >= 90:         <- l\'ordre est faux\n    ...\nelif points == 100:      <- cette ligne ne servira JAMAIS\n    ...\n\n   -> aucune erreur rouge\n   -> le programme tourne tres bien\n   -> il donne juste la mauvaise reponse',
+    taille:17,
+    points:['Essaie toujours le plus grand, le plus petit, et celui qui est pile sur la limite.',
+            'Si un chemin ne s\'affiche JAMAIS, c\'est qu\'un chemin au-dessus l\'attrape déjà.'],
+    cle:'Une erreur rouge est un cadeau : elle vous dit où regarder. Un ordre faux ne fait AUCUN bruit.',
+    note:"Ecrivez la phrase au tableau et ne l'effacez pas. C'est la difference entre un enfant qui tape du code et un enfant qui programme."},
+  ],
+  qcm:[
+   {code:'if prix >= 1000:\n    print("Cher")\nelif prix >= 5000:\n    print("Tres cher")\nelse:\n    print("Abordable")', consigne:'Quelle ligne ne s\'affichera JAMAIS, quel que soit le prix ?', taille:19,
+    options:['Cher','Abordable','aucune, tout va bien','Tres cher'], bonne:3,
+    pourquoi:'Un prix de 8000 est déjà plus grand que 1000 : il sort « Cher », et la ligne du 5000 n\'est jamais regardée. « Tres cher » est du code mort — et aucune erreur rouge ne le signale.'},
+  ]},
+
+ // ============================================================ 4
+ {heure:'12 h 50', duree:'20 min', titre:'Et maintenant, VOTRE JEU',
+  sous:'La brique du jour. Votre jeu arrête de dire « l\'un ou l\'autre ».',
+  note:"C'est le moment que la seance derniere n'a pas atteint. Ne le sacrifiez pour rien.",
+  lecon:[
+   {sombre:true, sur:'Le problème qu\'on traîne depuis trois semaines', titre:'Le joueur tape 12.\nVotre jeu lui répond :',
+    titreH:1.6, titreTaille:32,
+    code:'Coup impossible : la case n\'existe pas,\nou elle est deja prise.',
+    taille:20,
+    cle:'« OU » ? Mais LAQUELLE des deux ? Le joueur ne sait toujours pas ce qu\'il a fait de travers.',
+    note:"Projetez vraiment leur jeu et tapez 12, puis une case deja prise. Le MEME message les deux fois."},
+  ],
+  qcm:[
+   {consigne:'Votre jeu doit donner trois réponses : « cette case n\'existe pas », « cette case est déjà prise », et poser le symbole.\n\nDans quel ORDRE faut-il poser les questions ?',
+    options:['D\'abord : est-elle prise ? puis : existe-t-elle ?','L\'ordre n\'a aucune importance ici','D\'abord : existe-t-elle ? puis : est-elle prise ?','D\'abord : poser le symbole, et verifier apres'], bonne:2,
+    pourquoi:'On élimine d\'abord l\'impossible. Et il y a une vraie raison technique : pour savoir si la case 12 est prise, il faudrait aller regarder dans plateau[11]… qui n\'existe pas. Python s\'arrêterait sur une erreur rouge, IndexError.',
+    noteReponse:"Cette question vaut la seance entiere. Laissez le silence, puis faites expliquer la raison technique par un eleve."},
+  ],
+  atelier:{duree:'14 min', titre:'Ton jeu dit enfin POURQUOI.',
+   code:'if case < 1 or case > 9:\n    print("   Cette case n\'existe pas !")\nelif plateau[case - 1] != str(case):\n    print("   Cette case est deja prise !")\nelse:\n    plateau[case - 1] = "X"\n    print("   Pose !")',
+   taille:17,
+   temps:['Ouvre ton jeu. Remplace ton ancien if / else par cette cascade — pour le joueur 1 d\'abord.',
+          'Essaie 12, puis une case déjà prise, puis une case libre. TROIS messages différents.',
+          '⭐ SI TU AS FINI : fais la même chose pour le joueur 2, avec un O.'],
+   corrige:'if case < 1 or case > 9:\n    print("   Cette case n\'existe pas !")\nelif plateau[case - 1] != str(case):\n    print("   Cette case est deja prise !")\nelse:\n    plateau[case - 1] = "X"\n    print("   Pose !")',
+   tailleCor:17,
+   variante:'Le  !=  veut dire « est différent de ». La case ne contient plus son numéro : quelqu\'un a posé dessus.',
+   lecon:'Votre jeu ne dit plus « l\'un ou l\'autre ». Il dit lequel. C\'est la brique du jour, et elle tient en un seul mot.',
+   noteCorrige:"Distribuez le code officiel a tout le monde a la fin, fini ou pas : c'est Le Filet."},
+ },
+ ],
+
+ exercice:{heure:'13 h 20', duree:'22 min', titre:'LE BULLETIN',
+  chapo:'Un programme qui calcule la moyenne de trois notes et annonce la mention.',
+  consignes:[
+   '✍  L\'ALGORITHME D\'ABORD, SUR TA FEUILLE. Montre-la avant de toucher au clavier.',
+   'Demande le nom de l\'élève, puis ses trois notes sur 20 : Mathematiques, Francais, Informatique.',
+   'Calcule la moyenne. Garde la partie entière : moyenne = int((n1 + n2 + n3) / 3)',
+   'Annonce la mention avec une cascade : 16+ TRES BIEN · 14-15 BIEN · 12-13 ASSEZ BIEN · 10-11 PASSABLE · moins de 10 A REVOIR.',
+   'Affiche le bulletin complet : le nom, les trois notes, la moyenne, la mention.',
+  ],
+  taille:16,
+  ecran:'======================================\n          LE BULLETIN\n======================================\n\nNom de l\'eleve : Sara\nNote de Mathematiques /20 : 15\nNote de Francais /20      : 14\nNote d\'Informatique /20   : 13\n\n======================================\n Eleve   : Sara\n Maths   : 15 / 20\n Francais: 14 / 20\n Info    : 13 / 20\n--------------------------------------\n Moyenne : 14 / 20\n Mention : BIEN\n======================================',
+  note:"La feuille existe : exercice-le-bulletin.pdf, deux pages. Celui qui n'a pas d'algorithme sur sa feuille n'ouvre pas Thonny — c'est la seule consigne ferme."},
+
+ etoile:{heure:'13 h 42', duree:'8 min', titre:'LE PRIX DU TICKET',
+  chapo:'Pour ceux qui ont fini Le Bulletin. Deux pièges sont cachés dedans, et on ne dit pas lesquels.',
+  consignes:[
+   '✍  L\'ALGORITHME D\'ABORD. Celui-là, tu ne t\'en sortiras pas sans.',
+   'Le programme demande l\'âge et le jour. Les tarifs : moins de 5 ans gratuit · 5 à 12 ans 500 F · 13 à 17 ans 1000 F · 18 à 64 ans 2000 F · 65 ans et plus 1000 F.',
+   'LE SAMEDI, tout le monde paie 500 F de moins — mais personne ne se fait rembourser.',
+   'Affiche le tarif de base, la réduction s\'il y en a une, et la somme à payer.',
+  ],
+  taille:17,
+  ecran:'LES QUATRE ESSAIS QUI DOIVENT PASSER\n\n   3 ans,  un lundi   ->     0 F   (et « c\'est gratuit »)\n  70 ans,  un lundi   ->  1000 F   <- LE PIEGE\n  30 ans,  un samedi  ->  1500 F\n   3 ans,  un samedi  ->     0 F   <- LE GARDE-FOU',
+  note:"Ils ne finiront pas en huit minutes, et ce n'est pas grave : ils finissent a la maison. Donnez seulement les quatre essais, jamais les pieges."},
+
+ cloture:{heure:'13 h 50',
+  titre:'Votre jeu dit enfin\nPOURQUOI il refuse.',
+  texte:'Trois chemins au lieu de deux, et un seul mot nouveau. Mais votre jeu ne joue toujours qu\'UN SEUL coup…',
+  tableau:'elif = « sinon, si ... »     ·     Python s\'arrete au PREMIER VRAI\n\nLa prochaine fois : et si on voulait jouer les NEUF coups ?',
+  note:"Avancement du Mur de Mission. Puis la question de cloture : « qu'est-ce que vous n'etes pas surs d'avoir compris ? ». Laissez la derniere ligne a l'ecran pendant qu'ils rangent : c'est la graine de la repetition, et elle doit les demanger."},
+};
+
+creer(S);

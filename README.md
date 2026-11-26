@@ -10,8 +10,8 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 | **Format** | 2 h, chaque samedi de **12 h à 14 h** · 22 séances, ouvertes par un temps de prière |
 | **Encadrement** | 2 enseignants — **un par classe**, les deux classes en parallèle |
 | **Outils** | Python 3 · Thonny · Tkinter — gratuits, sans internet |
-| **Prochaine séance** | **la séance 11 reprend où elle s'est arrêtée** — [par où et pourquoi](2-seances/PLAN.md) |
-| **Où nous en sommes** | onze séances · [la carte du terrain](2-seances/PLAN.md), refaite le 25 novembre |
+| **Prochaine séance** | **Séance 12**, samedi 28 novembre 2026 — [tout est prêt](2-seances/S12-le-jeu-dit-pourquoi/fiche-de-seance.md) |
+| **Où nous en sommes** | onze séances · [la carte du terrain](2-seances/PLAN.md), refaite le 26 novembre |
 
 ---
 
@@ -27,17 +27,18 @@ de la première ligne de code jusqu'à l'application graphique jouable.
 
 ---
 
-## La séance 11 reprend — « Trois chemins au lieu de deux »
+## Samedi : la séance 12 — « Le jeu dit enfin pourquoi »
 
-👉 **[2-seances/S11-les-trois-chemins/](2-seances/S11-les-trois-chemins/fiche-de-seance.md)**
+👉 **[2-seances/S12-le-jeu-dit-pourquoi/](2-seances/S12-le-jeu-dit-pourquoi/fiche-de-seance.md)**
 
-> **`elif`, et l'ordre des conditions.** Jusqu'ici, le jeu refusait un coup en disant
-> « la case n'existe pas **ou** elle est déjà prise ». À la fin de la séance, **il dit laquelle des
-> deux** — et la classe a compris que *Python s'arrête au premier vrai*.
+> **Aucune notion nouvelle — et c'est voulu.** La séance 11 a donné `elif` et la règle du premier
+> vrai, mais elle s'est arrêtée à la diapo de l'algorithme : les apprenants n'avaient ni papier ni
+> stylo. Celle-ci finit ce qui a été commencé, en partant du travail fait à la maison.
+> À la fin, le jeu ne dit plus « la case n'existe pas **ou** elle est déjà prise » :
+> **il dit laquelle des deux.**
 
-> ⚠️ **La séance a été interrompue à la diapo de l'algorithme** : les apprenants n'avaient ni
-> papier ni stylo. La notion est passée, la pratique au clavier non. **On reprend la même séance
-> à cet endroit**, avec du papier sur chaque poste.
+> 🔴 **La seule chose à ne pas oublier : une feuille de papier et un stylo sur chaque poste.**
+> C'est ce qui a coûté la séance précédente.
 
 > 🃏 **Le cours lui-même est devenu un quiz.** On projette une question, ils lèvent une carte,
 > puis ils tapent. La notion du jour arrive **après** le constat de son absence, jamais avant.
@@ -49,17 +50,17 @@ et pourquoi le dépôt a été réordonné. **On prépare désormais la séance 
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| **Tout projeter demain** | 📺 [**Le cours en quiz**](2-seances/S11-les-trois-chemins/a-projeter/cours-en-quiz.pptx) — **46 diapos**, de la prière à la clôture |
-| Animer la séance | [📖 La fiche du jour](2-seances/S11-les-trois-chemins/fiche-de-seance.md) — minute par minute, avec ce qu'on dit |
-| Imprimer | 🖨️ [La liste du jour](2-seances/S11-les-trois-chemins/a-imprimer/quantites-et-formats.md) · [l'aide-mémoire 1 page](2-seances/S11-les-trois-chemins/a-imprimer/1-aide-memoire.pdf) |
-| Donner l'exercice | 📋 [**Le Bulletin**](2-seances/S11-les-trois-chemins/a-envoyer/exercice-le-bulletin.pdf), et ⭐ **Le Prix du Ticket** pour ceux qui vont vite — [corrigé des deux](2-seances/S11-les-trois-chemins/a-envoyer/correction-le-bulletin.pdf) |
-| Préparer les postes | [`code/depart_eleves.py`](2-seances/S11-les-trois-chemins/code/depart_eleves.py) · le Filet : [le code officiel](2-seances/S11-les-trois-chemins/code/code_officiel_fin_de_seance.py) |
+| **Tout projeter samedi** | 📺 [**Le cours en quiz**](2-seances/S12-le-jeu-dit-pourquoi/a-projeter/cours-en-quiz.pptx) — **38 diapos**, de la prière à la clôture |
+| Animer la séance | [📖 La fiche du jour](2-seances/S12-le-jeu-dit-pourquoi/fiche-de-seance.md) — minute par minute, avec ce qu'on dit |
+| Imprimer | 🖨️ [La liste du jour](2-seances/S12-le-jeu-dit-pourquoi/a-imprimer/quantites-et-formats.md) · [l'aide-mémoire 1 page](2-seances/S12-le-jeu-dit-pourquoi/a-imprimer/1-aide-memoire.pdf) |
+| Donner l'exercice | 📋 [**Le Bulletin**](2-seances/S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin.pdf), et ⭐ **Le Prix du Ticket** pour ceux qui vont vite — [corrigé des deux](2-seances/S12-le-jeu-dit-pourquoi/a-envoyer/correction-le-bulletin.pdf) |
+| Préparer les postes | [`code/depart_eleves.py`](2-seances/S12-le-jeu-dit-pourquoi/code/depart_eleves.py) · le Filet : [le code officiel](2-seances/S12-le-jeu-dit-pourquoi/code/code_officiel_fin_de_seance.py) |
 | Occuper un élève qui a fini avant les autres | 🧠 [**Les missions autonomes**](2-seances/missions-autonomes/LISEZ-MOI.md) — un cahier des charges, pas des étapes : il écrit l'algorithme, puis le code |
 | Faire réviser à la maison | 🧠 [**Le quiz de rappel**](2-seances/S11-les-trois-chemins/a-envoyer/travail-de-la-semaine.md) — 20 questions, corrigées automatiquement, de la première séance jusqu'à l'ordre des conditions |
-| Donner du travail entre deux séances | 🏅 [**La Médaille**](2-seances/S11-les-trois-chemins/a-envoyer/exercice-la-medaille.pdf) — trois questions de réflexion, puis un programme **sans aucune consigne de code** |
+| Donner du travail entre deux séances | 🏅 [**La Médaille**](2-seances/S11-les-trois-chemins/a-envoyer/exercice-la-medaille.pdf) — trois questions de réflexion, puis un programme **sans aucune consigne de code** · [son corrigé](2-seances/S11-les-trois-chemins/a-envoyer/correction-la-medaille.pdf) |
 | Afficher au mur | 📌 [**L'affiche du trimestre**](2-seances/a-afficher/LISEZ-MOI.md) — une case à cocher par samedi, et le message aux familles |
-| Envoyer au responsable | 📋 [Le déroulé de la séance](2-seances/S11-les-trois-chemins/a-envoyer/deroule-seance-11.pdf) — sans code ni jargon |
-| Revoir la séance dernière | 📄 [La révision générale du 14 novembre](2-seances/S10-revision-generale/fiche-de-seance.md) — et ce qu'elle a appris à l'enseignant |
+| Envoyer au responsable | 📋 [Le déroulé de la séance](2-seances/S12-le-jeu-dit-pourquoi/a-envoyer/deroule-seance-12.pdf) — une page, sans code ni jargon |
+| Revoir la séance dernière | 📄 [La séance 11](2-seances/S11-les-trois-chemins/fiche-de-seance.md) — où elle s'est arrêtée, et pourquoi |
 
 ---
 
@@ -123,12 +124,15 @@ le concours de design · la Nuit du bug · le **tournoi XO et la démo aux famil
       - [x] 6 quiz de la semaine, 15 QCM chacun, **corrigés à 100 % automatiquement**
 - [x] **Séance 10 — révision générale** (14 nov) : 46 diapos, trois manches faites sur cinq — [le compte rendu](2-seances/S10-revision-generale/fiche-de-seance.md)
       - [x] le **formulaire de révision à la maison**, 20 questions, autonome et auto-corrigé
-- [x] **Séance 11 — commencée, à reprendre** — [la fiche](2-seances/S11-les-trois-chemins/fiche-de-seance.md)
+- [x] **Séance 11 — faite à moitié** (interrompue à la diapo de l'algorithme) — [la fiche](2-seances/S11-les-trois-chemins/fiche-de-seance.md)
       - [x] **le cours en quiz** : 46 diapos, 4 manches, 3 ateliers au clavier, des ⭐ partout
       - [x] aide-mémoire 1 page, code de départ et code officiel, 4 ateliers corrigés et testés
       - [x] l'exercice **Le Bulletin** + l'exercice ⭐ **Le Prix du Ticket** : A4, PDF, images, les deux corrigés
       - [x] le déroulé pour le responsable (Word et PDF)
       - [x] le **quiz de rappel** (20 questions) et l'exercice **La Médaille**, envoyés entre les deux séances
+- [x] **Séance 12 — samedi 28 novembre : prête** — [la fiche](2-seances/S12-le-jeu-dit-pourquoi/fiche-de-seance.md)
+      - [x] **le cours en quiz** : 38 diapos, 4 manches, 2 ateliers au clavier, bâtie sur le travail de la maison
+      - [x] aide-mémoire, liste d'impression, les cinq corrigés exécutés, et le déroulé pour le responsable
 - [x] 1 mission autonome (l'algorithme d'abord, le code ensuite) pour les élèves en avance
 - [x] L'affiche du trimestre, le classeur, le dictionnaire des erreurs, les grades et le Mur de Mission
 - [x] **Les générateurs** : diaporamas, quiz, fiches, déroulés, aide-mémoires, exercices — [mode d'emploi](2-seances/generateurs/LISEZ-MOI.md)

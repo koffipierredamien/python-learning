@@ -93,6 +93,22 @@ Pas au meilleur : AU PREMIER.
              ("1 jeu", "**Trois panneaux** « CASE INEXISTANTE » / « CASE PRISE » / « COUP JOUÉ » : un élève annonce un numéro, un autre lève le bon panneau — la cascade se mime avant de s'écrire"),
              ("—", "**Les 4 cartes de couleur** (▲ rouge · ◆ bleue · ● orange · ■ verte) : tout le quiz repose dessus, vérifiez qu'elles sont sur les 8 postes"),
              ("—", "**De quoi occuper ceux qui vont vite** : les lignes ⭐ sont dans le quiz, et l'exercice ⭐ LE PRIX DU TICKET est prêt dans `a-envoyer/`")]),
+
+ dict(num=12, date="28 novembre",
+   deck="cours-en-quiz.pptx",
+   extra="| **8** (1 par poste) | [`exercice-le-bulletin.pdf`](../a-envoyer/exercice-le-bulletin.pdf) | A4 portrait, **recto-verso** | ordinaire |",
+   note_aide="⚠️ **Le cours se fait dans le quiz projeté : la feuille ne sert qu'à côté du clavier.** C'est le même aide-mémoire que la séance précédente : si vous l'avez déjà imprimé, il ressert tel quel.",
+   tableau="""Python ne vous dira JAMAIS que votre ordre est faux.
+
+      l'IMPOSSIBLE d'abord,
+      puis le PLUS PRECIS,
+      puis le plus large,
+      et le else attrape tout le reste.""",
+   materiel=[("8", "🔴 **UNE FEUILLE DE PAPIER ET UN STYLO PAR POSTE.** C'est ce qui a interrompu la séance précédente : l'algorithme ne s'écrit pas sans. **À vérifier poste par poste avant leur arrivée**"),
+             ("1", "Minuteur visible"),
+             ("1 jeu", "**Trois panneaux** « CASE INEXISTANTE » / « CASE PRISE » / « COUP JOUÉ » : un élève annonce un numéro, un autre lève le bon panneau — la cascade se mime avant de s'écrire"),
+             ("—", "**Les 4 cartes de couleur** (▲ rouge · ◆ bleue · ● orange · ■ verte) sur les 8 postes : tout le quiz repose dessus"),
+             ("—", "**Le jeu de chaque élève ouvert dans Thonny** avant qu'ils arrivent : on y revient à la manche 4, et c'est la brique du jour")]),
 ]
 
 for s in S:
@@ -101,7 +117,8 @@ for s in S:
                      deck=s.get("deck", "seance-%d-projection.pptx" % s["num"]),
                      note_aide=s["note_aide"], tableau=s["tableau"], materiel=mat)
     dossier = {6: "S06-le-plateau-se-souvient", 7: "S07-la-case-occupee", 9: "S09-et-ou",
-               10: "S10-la-boucle", 11: "S11-les-trois-chemins"}[s["num"]]
+               10: "S10-la-boucle", 11: "S11-les-trois-chemins",
+               12: "S12-le-jeu-dit-pourquoi"}[s["num"]]
     if not os.path.isdir(os.path.join(BASE, dossier)):
         print("IGNORE (seance retiree du parcours) :", dossier); continue
     chemin = os.path.join(BASE, dossier, "a-imprimer", "quantites-et-formats.md")

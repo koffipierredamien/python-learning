@@ -3,7 +3,7 @@
 > **Ce document dit la vérité du terrain, pas le programme rêvé.** Il est refait à chaque fois que
 > la réalité s'écarte du plan — c'est-à-dire souvent, et c'est normal.
 >
-> **Dernière mise à jour : mercredi 25 novembre 2026.**
+> **Dernière mise à jour : jeudi 26 novembre 2026.**
 
 ---
 
@@ -22,6 +22,7 @@
 | **[S09](S09-et-ou/fiche-de-seance.md)** | 7 nov | `and` / `or`, la condition unique | ✅ |
 | **[S10](S10-revision-generale/revision-generale.md)** | 14 nov | **Révision générale** — *non terminée : deux manches sur cinq n'ont pas été faites* | ⚠️ partiel |
 | **[S11](S11-les-trois-chemins/fiche-de-seance.md)** | 21 nov | **`elif`** — *arrêtée à la page de l'algorithme : les apprenants n'avaient ni papier ni stylo* | ⚠️ partiel |
+| **[S12](S12-le-jeu-dit-pourquoi/fiche-de-seance.md)** | **28 nov** | **La cascade pratiquée**, et la brique : le jeu dit **laquelle** des deux raisons | 🔜 **prête** |
 
 ### Ce que la classe sait faire, au 25 novembre
 
@@ -64,48 +65,59 @@ chaque semaine, sur ce qui a été réellement compris.
 
 ---
 
-## 3. Où la séance 11 s'est arrêtée, et par où elle reprend
+## 3. La prochaine séance — [S12, « Le jeu dit enfin pourquoi »](S12-le-jeu-dit-pourquoi/fiche-de-seance.md)
 
-### ⚠️ Ce qui s'est passé
+### ⚠️ D'où elle part
 
-La séance s'est arrêtée **à la diapo qui demande d'écrire l'algorithme** : les apprenants
-n'avaient **ni papier ni stylo**. Tout ce qui précède a été fait.
+La séance 11 s'est arrêtée **à la diapo qui demande d'écrire l'algorithme** : les apprenants
+n'avaient **ni papier ni stylo**.
 
-| Ce qui a été fait | Ce qui reste |
+| Ce qui a été fait le 21 | Ce que la séance 12 reprend |
 |---|---|
-| Le quiz de révision — les 7 cartes | **L'atelier 2** : la cascade des mentions, algorithme d'abord |
-| Manche 1 : le constat (le jeu dit quelque chose de faux) | Manche 4 : la cascade reportée **dans leur jeu** |
-| Manche 2 : `elif`, et l'atelier « deux `if`, ou un `elif` ? » | L'exercice **Le Bulletin** |
-| Manche 3 : les deux questions — le piège de `note = 18`, et l'ordre | ⭐ **Le Prix du Ticket** |
+| Le quiz de révision — 7 cartes | **Écrire une cascade soi-même**, algorithme d'abord |
+| Le constat : le jeu dit quelque chose de faux | **La mettre dans le jeu** — la brique, jamais posée |
+| `elif`, et l'atelier « deux `if`, ou un `elif` ? » | L'exercice **Le Bulletin** |
+| Le piège de `note = 18`, et l'ordre des conditions | ⭐ **Le Prix du Ticket** |
 
-**La notion est passée ; la pratique au clavier, non.** C'est exactement ce qui manque.
+**La notion est passée ; la pratique au clavier, non.** La séance 12 **n'apporte rien de neuf** :
+elle finit ce qui a été commencé, en partant du travail fait à la maison.
 
-### Ce qu'on fait la prochaine fois
+### Son programme
 
-**On reprend la même séance, à la diapo où l'on s'est arrêté.** Rien à repréparer : le
-[diaporama](S11-les-trois-chemins/a-projeter/cours-en-quiz.pptx) et la
-[fiche](S11-les-trois-chemins/fiche-de-seance.md) sont les mêmes. Deux précautions :
-
-1. **Du papier et un stylo sur chaque poste, avant leur arrivée.** C'est ce qui a bloqué la
-   séance, et c'est la chose la moins chère à prévoir.
-2. **Cinq minutes de reprise** sur les manches 2 et 3 avant de repartir : une semaine a passé.
+| Horaire | Séquence |
+|---|---|
+| 12 h 00 | Prière et accueil |
+| 12 h 15 | **Manche 1** — quiz de reprise, 7 cartes |
+| 12 h 27 | **Manche 2** — La Médaille : le papier, puis le clavier |
+| 12 h 45 | **Manche 3** — l'erreur qui ne fait pas d'erreur |
+| 12 h 50 | **Manche 4** — et maintenant, VOTRE JEU |
+| 13 h 10 | Pause |
+| 13 h 20 | **L'exercice** : Le Bulletin |
+| 13 h 42 | ⭐ **L'exercice étoile** : Le Prix du Ticket |
+| 13 h 50 | Clôture |
 
 | J'ai besoin de… | C'est ici |
 |---|---|
-| **Tout projeter** | [`a-projeter/cours-en-quiz.pptx`](S11-les-trois-chemins/a-projeter/cours-en-quiz.pptx) — on reprend à l'atelier de la manche 3 |
-| Animer | [📖 la fiche de séance](S11-les-trois-chemins/fiche-de-seance.md) |
-| Les corrigés | [les 4 ateliers](S11-les-trois-chemins/code/ateliers-corriges.py) · [Le Bulletin](S11-les-trois-chemins/code/corrige-exercice.py) · [⭐ Le Prix du Ticket](S11-les-trois-chemins/code/corrige-exercice-etoile.py) |
-| Imprimer | 🖨️ [la liste du jour](S11-les-trois-chemins/a-imprimer/quantites-et-formats.md) — 8 × [l'aide-mémoire](S11-les-trois-chemins/a-imprimer/1-aide-memoire.pdf) et 8 × [la feuille d'exercice](S11-les-trois-chemins/a-envoyer/exercice-le-bulletin.pdf) |
-| Préparer les postes | [`code/depart_eleves.py`](S11-les-trois-chemins/code/depart_eleves.py) · le Filet : [`code_officiel_fin_de_seance.py`](S11-les-trois-chemins/code/code_officiel_fin_de_seance.py) |
-| Transmettre à Pasteur Eli | [📋 le déroulé](S11-les-trois-chemins/a-envoyer/deroule-seance-11.pdf) · [version Word](S11-les-trois-chemins/a-envoyer/deroule-seance-11.docx) |
+| **Tout projeter** | [`a-projeter/cours-en-quiz.pptx`](S12-le-jeu-dit-pourquoi/a-projeter/cours-en-quiz.pptx) — **38 diapos**, de la prière à la clôture |
+| Animer | [📖 la fiche de séance](S12-le-jeu-dit-pourquoi/fiche-de-seance.md) |
+| Les corrigés | [La Médaille](S12-le-jeu-dit-pourquoi/code/corrige-la-medaille.py) · [Le Bulletin](S12-le-jeu-dit-pourquoi/code/corrige-exercice.py) · [⭐ Le Prix du Ticket](S12-le-jeu-dit-pourquoi/code/corrige-exercice-etoile.py) |
+| Imprimer | 🖨️ [la liste du jour](S12-le-jeu-dit-pourquoi/a-imprimer/quantites-et-formats.md) · [l'aide-mémoire](S12-le-jeu-dit-pourquoi/a-imprimer/1-aide-memoire.pdf) · [la feuille d'exercice](S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin.pdf) |
+| Préparer les postes | [`code/depart_eleves.py`](S12-le-jeu-dit-pourquoi/code/depart_eleves.py) · le Filet : [`code_officiel_fin_de_seance.py`](S12-le-jeu-dit-pourquoi/code/code_officiel_fin_de_seance.py) |
+| Transmettre à Pasteur Eli | [📋 le déroulé](S12-le-jeu-dit-pourquoi/a-envoyer/deroule-seance-12.pdf) · [version Word](S12-le-jeu-dit-pourquoi/a-envoyer/deroule-seance-12.docx) |
 
-### Les deux choses à ne pas lâcher
+### 🔴 La seule chose à ne pas oublier
 
-1. **L'algorithme sur le papier avant le clavier.** C'est exigé deux fois : à l'atelier 2 et à
-   l'exercice. **Refusez le clavier à qui ne l'a pas écrit** — ça prend trois minutes, et c'est la
-   compétence qui manque le plus.
-2. **L'atelier 2** (la cascade des mentions). C'est celui qu'on n'a pas pu faire : il passe avant
-   tout le reste.
+**Une feuille de papier et un stylo sur chaque poste, vérifiés avant qu'ils entrent.**
+C'est ce qui a coûté la séance précédente, et c'est la chose la moins chère à prévoir.
+À défaut : l'algorithme s'écrit **dans Thonny, en commentaires** — ce n'est pas un pis-aller,
+c'est une vraie méthode de programmeur.
+
+### Les deux autres choses à ne pas lâcher
+
+1. **Le clavier se refuse à qui n'a pas écrit son algorithme.** Trois minutes, et pour tout le
+   monde — sans exception, sinon la règle ne vaut rien.
+2. **La manche 4.** C'est la brique, et c'est celle que la séance 11 n'a pas atteinte. Si le temps
+   manque, on sacrifie Le Bulletin, jamais la manche 4.
 
 ### Pour les rapides, comme Sara
 
@@ -115,7 +127,7 @@ Trois niveaux, dans cet ordre : les ⭐ **à l'intérieur de chaque atelier** ·
 
 ---
 
-## 3 bis. Le travail envoyé entre les deux séances
+## 4. Le travail envoyé entre les deux séances
 
 Deux documents, pour que la semaine ne soit pas perdue — le mode d'emploi et le message aux
 familles sont dans
@@ -135,7 +147,7 @@ part pas aux élèves.**
 
 ---
 
-## 4. Le format des séances a changé
+## 5. Le format des séances a changé
 
 Depuis le 14 novembre, **le cours lui-même est un quiz**. On ne fait plus « je montre / vous
 faites » :
@@ -150,12 +162,12 @@ faites » :
 **La notion du jour arrive toujours après le constat de son absence**, jamais avant.
 
 Et **la fiche de séance continue d'exister** : c'est elle qui produit
-[le déroulé transmis à Pasteur Eli](S11-les-trois-chemins/a-envoyer/deroule-seance-11.pdf),
+[le déroulé transmis à Pasteur Eli](S12-le-jeu-dit-pourquoi/a-envoyer/deroule-seance-12.pdf),
 rédigé sans code ni jargon.
 
 ---
 
-## 5. Ce qui reste prêt et attend son tour
+## 6. Ce qui reste prêt et attend son tour
 
 | Ce qui existe déjà | Où |
 |---|---|
@@ -167,7 +179,7 @@ rédigé sans code ni jargon.
 
 ---
 
-## 6. Les règles qui ne changent pas
+## 7. Les règles qui ne changent pas
 
 1. **Le Filet** — à la fin de chaque séance, le code officiel est distribué à tout le monde, fini ou
    pas. Personne ne commence la séance suivante en retard.

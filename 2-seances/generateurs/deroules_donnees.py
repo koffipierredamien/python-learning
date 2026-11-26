@@ -485,4 +485,40 @@ SEANCES = [
  "À l'issue de cette séance, chaque apprenant sait enchaîner plusieurs conditions, sait que "
  "l'ordinateur s'arrête à la première qui est vraie, et sait en déduire dans quel ordre les écrire. "
  "Il a en outre rédigé au moins un algorithme en français avant de programmer."},
+
+# =====================================================================
+{"num": 12, "dossier": "S12-le-jeu-dit-pourquoi",
+ "titre": "Le jeu dit enfin pourquoi",
+ "date": "samedi 28 novembre 2026",
+ "objet_court":
+ "La séance précédente a introduit le moyen d'enchaîner plusieurs conditions, mais elle n'a pas "
+ "pu aller jusqu'à la mise en pratique sur machine. Celle-ci la reprend et la mène à son terme : "
+ "les apprenants écrivent eux-mêmes l'enchaînement, d'abord en français sur le papier, puis dans "
+ "leur programme. En fin de séance, le jeu indique au joueur la raison précise pour laquelle un "
+ "coup est refusé, au lieu d'une explication ambiguë.",
+ "objet":
+ "La séance précédente a introduit le moyen d'enchaîner plusieurs conditions, mais elle n'a pas "
+ "pu aller jusqu'à la mise en pratique sur machine. Celle-ci la reprend et la mène à son terme.",
+ "horaires": [("12 h - 12 h 15", "Prière et accueil", "15 min"),
+              ("12 h 15 - 12 h 27", "Questionnaire de reprise : sept questions", "12 min"),
+              ("12 h 27 - 12 h 45", "Correction collective du travail de la semaine, sur machine", "18 min"),
+              ("12 h 45 - 12 h 50", "Séquence : l'erreur qui ne provoque aucun message", "5 min"),
+              ("12 h 50 - 13 h 10", "Application au projet : le jeu de chacun", "20 min"),
+              ("13 h 10 - 13 h 20", "Pause", "10 min"),
+              ("13 h 20 - 13 h 42", "Exercice : le bulletin scolaire", "22 min"),
+              ("13 h 42 - 13 h 50", "Exercice de prolongement, pour les plus rapides", "8 min"),
+              ("13 h 50 - 14 h", "Clôture", "10 min")],
+ "deroule": [],
+ "travail":
+ "Deux travaux équivalents sont proposés, au choix selon l'équipement de la famille, et aucun "
+ "n'entre dans une note. Les apprenants disposant d'un ordinateur terminent chez eux l'exercice du "
+ "bulletin et son prolongement ; les autres reprennent, depuis un téléphone, le questionnaire de "
+ "révision adressé la semaine précédente, qui reste accessible et peut être refait autant de fois "
+ "que souhaité.",
+ "acquis":
+ "À l'issue de cette séance, chaque apprenant a écrit lui-même un enchaînement de conditions, "
+ "après l'avoir rédigé en français sur le papier. Il sait que l'ordinateur s'arrête à la première "
+ "condition vraie, et il a constaté qu'un mauvais ordre ne provoque aucun message d'erreur : le "
+ "programme fonctionne et donne une réponse fausse. Le jeu indique désormais au joueur la raison "
+ "précise pour laquelle un coup est refusé."},
 ]

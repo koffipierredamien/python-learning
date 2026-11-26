@@ -40,18 +40,18 @@ function creer(s) {
       color:o.couleur||CYAN,lineSpacing:o.inter||(o.taille||18)*1.35});};
 
   // ================================================================ ouverture
-  {const sl=sombre(null); neuf(sl,9.6,1.6,0.8,CYAN,82);
-   txt(sl,'SÉANCE 10  ·  SAMEDI 14 NOVEMBRE',{x:M,y:1.5,w:8.6,h:0.4,fontSize:14,bold:true,color:VIOLET,charSpacing:4});
-   txt(sl,'RÉVISION GÉNÉRALE',{x:M,y:2.05,w:9.2,h:1.3,fontSize:54,bold:true,color:BLANC});
-   txt(sl,'Cinq manches. Des cartes en l\'air, et les mains sur le clavier.',
+  {const o=s.ouverture||{}; const sl=sombre(null); neuf(sl,9.6,1.6,0.8,CYAN,82);
+   const nbm=s.manches.length;
+   txt(sl,o.kicker||'',{x:M,y:1.5,w:8.6,h:0.4,fontSize:14,bold:true,color:VIOLET,charSpacing:4});
+   txt(sl,o.titre||s.titre,{x:M,y:2.05,w:9.2,h:o.titreH||1.3,fontSize:o.titreTaille||54,bold:true,color:BLANC,
+     lineSpacing:(o.titreTaille||54)*1.1});
+   txt(sl,o.sous||(nbm+' manches. Des cartes en l\'air, et les mains sur le clavier.'),
        {x:M,y:3.5,w:9.0,h:0.8,fontSize:21,color:GRIS_C,lineSpacing:27});
-   txt(sl,'Tout ce qu\'on sait depuis septembre — et à la fin,\nce qui nous manque encore.',
-       {x:M,y:4.5,w:9.4,h:1.2,fontSize:20,italic:true,color:CYAN,lineSpacing:27});
-   sl.addNotes('Affichée pendant qu\'ils s\'installent. Thonny ouvert sur chaque poste, '
-     + 'un fichier neuf : revision.py. On ne touche pas au jeu aujourd\'hui.');}
+   txt(sl,o.promesse||'',{x:M,y:4.5,w:9.4,h:1.2,fontSize:20,italic:true,color:CYAN,lineSpacing:27});
+   sl.addNotes(o.note||'');}
 
   // ================================================================ la regle
-  {const sl=claire('12 h 17');
+  {const sl=claire(s.heureRegle||null);
    txt(sl,'COMMENT ON JOUE',{x:M,y:0.5,w:8,h:0.4,fontSize:14,bold:true,color:VIOLET_F,charSpacing:3});
    txt(sl,'Deux sortes de questions.',{x:M,y:1.0,w:11,h:0.8,fontSize:34,bold:true,color:ENCRE});
    const w=(W-2*M-0.4)/2;

@@ -344,6 +344,12 @@ dans ton cahier, <b>une ligne de français par chemin</b> — <b>SI</b> l'âge &
                ("IndentationError", u"Il manque les 4 espaces après les deux-points", u"Chaque chemin a son bloc décalé")]),
 ]
 
+#  La seance 12 poursuit la meme notion : c'est le MEME aide-memoire,
+#  a sa date. On ne duplique pas le contenu, on le reutilise.
+_onze = [x for x in SEANCES if x["num"] == 11][0]
+SEANCES.append(dict(_onze, dossier="S12-le-jeu-dit-pourquoi", num=12,
+                    date="samedi 28 novembre 2026"))
+
 for s in SEANCES:
     acquis = ACQUIS_BASE + s["nouveau"]
     liste = u" &nbsp;·&nbsp; ".join(u'<span class="ok">✔</span> ' + a for a in acquis)

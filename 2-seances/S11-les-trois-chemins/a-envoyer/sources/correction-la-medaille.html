@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Correction — La Médaille</title>
+<style>
+ html,*{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
+ @page{size:A4 portrait;margin:0}
+ body{margin:0;padding:7mm 8mm;font-family:"Trebuchet MS",Verdana,sans-serif;
+      font-size:9.2pt;color:#14142b;background:#fff;line-height:1.33}
+ .m{font-family:"Courier New",monospace;font-weight:bold;background:#f0f0f6;
+    padding:.3mm 1mm;border-radius:1mm}
+ .band{background:#0c5c29;color:#fff;border-radius:3mm;padding:3.2mm 5mm;margin-bottom:3mm}
+ .band .k{font-size:8.6pt;letter-spacing:1.2pt;color:#a8e6bd;font-weight:bold}
+ .band h1{font-size:19pt;margin:.8mm 0 1mm}
+ .band .s{font-size:9.8pt;color:#d8f0e2;line-height:1.4}
+ pre{margin:0 0 2.6mm;background:#12122a;color:#e8e8f2;border-radius:2.6mm;padding:2.8mm 3.6mm;
+     font-family:"Courier New",monospace;font-size:7.7pt;line-height:1.28;white-space:pre}
+ pre .c{color:#7f7f9c} pre .s{color:#ffb74d} pre .k{color:#4fc3f7;font-weight:bold}
+ .note{background:#fffaf0;border:.6mm solid #d79a00;border-radius:2.6mm;padding:2.2mm 3mm;
+       margin-bottom:2.4mm;line-height:1.38}
+ .note h3{margin:0 0 1.1mm;font-size:10.2pt;color:#a65d00}
+ .note b{color:#a65d00}
+ .note ul{margin:1mm 0 0;padding-left:5mm}.note li{margin-bottom:.9mm}
+ table{width:100%;border-collapse:collapse;margin:1mm 0 0;font-size:8.8pt}
+ td,th{border:.2mm solid #999;padding:.9mm 2mm;text-align:left}
+ th{background:#eee;font-size:8.8pt}
+ td.n{font-family:"Courier New",monospace;font-weight:bold;width:14%;text-align:right}
+ .vert{background:#f2faf5;border:.6mm solid #2fb765;border-radius:2.6mm;padding:2.2mm 3mm}
+ .serre{font-size:8.6pt;line-height:1.3}
+ .vert h3{margin:0 0 1.1mm;font-size:10.2pt;color:#0c5c29}
+</style></head><body>
+
+<div class="band">
+  <div class="k">CORRECTION · POUR L'ENSEIGNANT ET LES PARENTS — NE PAS DONNER AUX ÉLÈVES</div>
+  <h1>&#9989; LA MÉDAILLE</h1>
+  <div class="s">L'énoncé ne donne <b>aucune consigne de code</b> : il donne un barème et six essais.
+    <b>Tout l'exercice est de trouver dans quel ordre poser les questions.</b> Les messages peuvent
+    varier : ce qui compte, c'est que les six essais tombent juste.</div>
+</div>
+
+<pre><span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">"        LE CONCOURS DU QUARTIER"</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)
+<span class="k">print</span>(<span class="s">""</span>)
+
+points = <span class="k">input</span>(<span class="s">"Combien de points sur 100 ? "</span>)
+points = <span class="k">int</span>(points)
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">if</span> points &lt; 0 <span class="k">or</span> points &gt; 100:
+    <span class="k">print</span>(<span class="s">"Ce nombre n'existe pas."</span>)
+<span class="c"># le cas le PLUS PRECIS d'abord : un seul nombre le satisfait</span>
+<span class="k">elif</span> points == 100:
+    <span class="k">print</span>(<span class="s">"SANS FAUTE ! Tu es en finale."</span>)
+<span class="k">elif</span> points &gt;= 90:
+    <span class="k">print</span>(<span class="s">"Medaille d'OR"</span>)
+<span class="k">elif</span> points &gt;= 75:
+    <span class="k">print</span>(<span class="s">"Medaille d'ARGENT"</span>)
+<span class="k">elif</span> points &gt;= 60:
+    <span class="k">print</span>(<span class="s">"Medaille de BRONZE"</span>)
+<span class="k">else</span>:
+    <span class="k">print</span>(<span class="s">"Participant. Reviens l'annee prochaine !"</span>)
+
+<span class="k">print</span>(<span class="s">""</span>)
+<span class="k">print</span>(<span class="s">"="</span> * 40)</pre>
+
+<div class="note"><h3>&#9888; Les deux pièges — à faire vivre, surtout pas à expliquer</h3>
+<b>1. Le 100.</b> Écrit <b>après</b> le <span class="m">&gt;= 90</span>, le cas
+<span class="m">== 100</span> n'est <b>jamais atteint</b> : 100 est déjà plus grand que 90, et Python
+s'arrête au premier chemin qui passe. L'enfant reçoit une médaille d'or au lieu d'aller en finale,
+<b>et aucune erreur rouge ne s'affiche</b>.<br>
+<b>2. Le 0.</b> Qui écrit <span class="m">points &lt;= 0</span> pour l'impossible refuse le zéro.
+Or <b>on peut avoir zéro point sans tricher</b> : il fallait <span class="m">points &lt; 0</span>.<br>
+<b>Ne corrigez pas la ligne fautive</b> : faites taper <b>100</b>, puis <b>0</b>, et faites lire
+l'écran à voix haute. Ils trouvent seuls, et ils ne l'oublient plus.</div>
+
+<table>
+  <tr><th colspan="2">&#127919; Les six essais</th><th>Ce qui doit s'afficher</th></tr>
+  <tr><td class="n">100</td><td>&rarr;</td><td>SANS FAUTE ! Tu es en finale. &nbsp; <b>— le piège</b></td></tr>
+  <tr><td class="n">90</td><td>&rarr;</td><td>Medaille d'OR</td></tr>
+  <tr><td class="n">74</td><td>&rarr;</td><td>Medaille de BRONZE</td></tr>
+  <tr><td class="n">59</td><td>&rarr;</td><td>Participant. Reviens l'annee prochaine !</td></tr>
+  <tr><td class="n">0</td><td>&rarr;</td><td>Participant. Reviens l'annee prochaine ! &nbsp; <b>— le second piège</b></td></tr>
+  <tr><td class="n">120</td><td>&rarr;</td><td>Ce nombre n'existe pas.</td></tr>
+</table>
+
+<div style="height:1.8mm"></div>
+
+<div class="vert"><h3>&#9989; Les trois réponses des questions de réflexion</h3>
+<b>1.</b> Il s'affiche <b>Bronze</b>. 95 est déjà plus grand que 60 : le premier chemin passe, et
+celui du 90 n'est jamais regardé. On répare en <b>échangeant les deux blocs</b> — rien d'autre.<br>
+<b>2.</b> Avec 30, <b>aucune</b> des deux conditions n'est vraie, et il n'y a <b>pas de
+<span class="m">else</span></b> : l'écran reste vide. Il manque le <span class="m">else</span>, qui
+n'a pas de condition et attrape tout le reste.<br>
+<b>3.</b> <span class="m">if reponse == "oui": … elif reponse == "non": … else: …</span> — même
+comportement aux trois réponses, et surtout <b>un seul niveau de décalage</b> au lieu de deux.</div>
+
+<div style="height:1.8mm"></div>
+
+<div class="note serre" style="border-color:#2fb765;background:#f2faf5">
+<h3 style="color:#0c5c29">Ce qu'on regarde en corrigeant</h3>
+<b>L'algorithme en français existe-t-il, avant le code ?</b> C'est le premier livrable. &nbsp;·&nbsp;
+Le <span class="m">int()</span> est-il là ? &nbsp;·&nbsp; Y a-t-il <b>un seul</b>
+<span class="m">if</span>, puis des <span class="m">elif</span>, puis un
+<span class="m">else</span> ? &nbsp;·&nbsp; Le test de l'impossible est-il <b>en premier</b> ?
+&nbsp;·&nbsp; <b>On note la preuve, pas la perfection.</b></div>
+
+</body></html>

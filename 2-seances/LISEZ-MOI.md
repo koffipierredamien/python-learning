@@ -14,8 +14,9 @@ Une séance = un dossier. Tout ce qui la concerne est dedans, et rien d'autre.
 | **[S08 — TP n°2 : le plateau vivant](S08-tp-le-plateau/fiche-de-seance.md)** · samedi 31 octobre 2026 | Quatre coups d'affilée, sans bug | TP de 2 h, en autonomie — [corrigé](S08-tp-le-plateau/code/corrige-tp2.py) |
 | **[S09 — Une seule question au lieu de trois](S09-et-ou/fiche-de-seance.md)** · samedi 7 novembre 2026 | Le même jeu, avec une décision **deux fois plus courte**, et le bug du zéro vraiment réparé | **`and`** et **`or`** |
 | **[S10 — Révision générale](S10-revision-generale/fiche-de-seance.md)** · samedi 14 novembre 2026 | *(séance de consolidation, **non terminée**)* | le cours en quiz : cartes + ateliers au clavier |
-| **[S11 — Trois chemins au lieu de deux](S11-les-trois-chemins/fiche-de-seance.md)** · samedi 21 novembre 2026 | Le jeu dit **laquelle** des deux raisons il refuse un coup | **`elif`** · l'ordre des conditions · l'algorithme avant le code |
-| S12 à S22 | *se préparent une semaine à la fois — voir [le plan](PLAN.md)* | |
+| **[S11 — Trois chemins au lieu de deux](S11-les-trois-chemins/fiche-de-seance.md)** · samedi 21 novembre 2026 | *(interrompue à la diapo de l'algorithme : ni papier ni stylo)* | **`elif`** · l'ordre des conditions |
+| **[S12 — Le jeu dit enfin pourquoi](S12-le-jeu-dit-pourquoi/fiche-de-seance.md)** · samedi 28 novembre 2026 | Le jeu dit **laquelle** des deux raisons il refuse un coup | *(rien de neuf)* la cascade **pratiquée** · l'algorithme avant le code |
+| S13 à S22 | *se préparent une semaine à la fois — voir [le plan](PLAN.md)* | |
 
 > 🧠 **[Les missions autonomes](missions-autonomes/LISEZ-MOI.md)** — pour l'élève qui a fini avant
 > les autres. **Une page** : le contexte du programme, ses règles, l'écran attendu. Pas d'étapes, pas

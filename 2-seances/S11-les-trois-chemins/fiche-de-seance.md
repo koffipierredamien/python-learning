@@ -11,9 +11,10 @@
 > le piège de `note = 18` et l'ordre des conditions. Reste : **l'atelier 2**, la manche 4, et les
 > deux exercices.
 >
-> **On reprend cette même fiche à cet endroit**, avec deux précautions : **du papier et un stylo
-> sur chaque poste avant leur arrivée**, et **cinq minutes de reprise** sur les manches 2 et 3,
-> parce qu'une semaine a passé. Rien d'autre ne change.
+> **La suite a sa propre fiche :**
+> [**Séance 12 — « Le jeu dit enfin pourquoi »**](../S12-le-jeu-dit-pourquoi/fiche-de-seance.md).
+> Elle reprend la pratique là où elle s'est arrêtée, part du travail fait à la maison, et porte
+> la brique du jour. **C'est elle qu'on anime la prochaine fois, pas celle-ci.**
 >
 > Entre les deux, un quiz de rappel et un exercice sont partis aux familles :
 > [`a-envoyer/travail-de-la-semaine.md`](a-envoyer/travail-de-la-semaine.md).
@@ -67,7 +68,7 @@
 |---|---|
 | **La veille** | Faire tourner [`code/ateliers-corriges.py`](code/ateliers-corriges.py) et les deux corrigés d'exercice. Dix minutes, et plus aucune surprise |
 | **La veille** | Lire les **notes du diaporama** : elles portent ce que la fiche ne dit pas |
-| **La veille** | **Imprimer** : 8 × [`a-imprimer/1-aide-memoire.pdf`](a-imprimer/1-aide-memoire.pdf) (A4 recto) et 8 × [`a-envoyer/exercice-le-bulletin.pdf`](a-envoyer/exercice-le-bulletin.pdf) (A4 recto-verso) — le détail dans [`a-imprimer/quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
+| **La veille** | **Imprimer** : 8 × [`a-imprimer/1-aide-memoire.pdf`](a-imprimer/1-aide-memoire.pdf) (A4 recto) et 8 × [`../S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin.pdf`](../S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin.pdf) (A4 recto-verso) — le détail dans [`a-imprimer/quantites-et-formats.md`](a-imprimer/quantites-et-formats.md) |
 | **30 min avant** | `GEEKS/mon_xo/jeu.py` = [`code/depart_eleves.py`](code/depart_eleves.py) · un fichier neuf `mentions.py` pour les ateliers |
 | **Au tableau, et on n'efface pas** | `elif  =  « sinon, si ... »` et, en dessous, **`Python s'arrete au PREMIER VRAI`** |
 | **Les cartes** | Les quatre cartes de couleur sur chaque table, comme d'habitude |
@@ -151,9 +152,9 @@ C'est Le Filet.
 **[LE BULLETIN](code/corrige-exercice.py)** (25 min) : trois notes, une moyenne, une cascade de mentions,
 un bulletin affiché. **L'algorithme sur le cahier d'abord**, comme à l'atelier 2.
 
-> **La feuille existe :** [`a-envoyer/exercice-le-bulletin.pdf`](a-envoyer/exercice-le-bulletin.pdf)
+> **La feuille existe :** [`../S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin.pdf`](../S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin.pdf)
 > (2 pages, étape 0 = l'algorithme) et son corrigé
-> [`a-envoyer/correction-le-bulletin.pdf`](a-envoyer/correction-le-bulletin.pdf), qui porte **les deux
+> [`../S12-le-jeu-dit-pourquoi/a-envoyer/correction-le-bulletin.pdf`](../S12-le-jeu-dit-pourquoi/a-envoyer/correction-le-bulletin.pdf), qui porte **les deux
 > programmes**. Les `.png` à côté sont là pour WhatsApp. Ceux qui n'auront pas fini terminent à la maison.
 
 **⭐ [LE PRIX DU TICKET](code/corrige-exercice-etoile.py)** (10 min, pour ceux qui ont fini) : une
@@ -197,8 +198,8 @@ tarification par tranches d'âge, plus une réduction le samedi. **Deux pièges 
 2. **Journal** : **combien ont écrit un algorithme sur leur cahier sans qu'on le leur redemande ?**
    C'est l'indicateur de la séance, plus que la cascade elle-même.
 3. **À envoyer le soir** : les deux images
-   [`a-envoyer/exercice-le-bulletin-1.png`](a-envoyer/exercice-le-bulletin-1.png) et
-   [`-2.png`](a-envoyer/exercice-le-bulletin-2.png), pour ceux qui finissent à la maison.
+   [`../S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin-1.png`](../S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin-1.png) et
+   [`-2.png`](../S12-le-jeu-dit-pourquoi/a-envoyer/exercice-le-bulletin-2.png), pour ceux qui finissent à la maison.
    **Le corrigé ne part pas** : il reste pour l'enseignant et les parents.
 4. **Le déroulé à transmettre** : [`a-envoyer/deroule-seance-11.pdf`](a-envoyer/deroule-seance-11.pdf) —
    pour Pasteur Eli, sans code ni jargon.

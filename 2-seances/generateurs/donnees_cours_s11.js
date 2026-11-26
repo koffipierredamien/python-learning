@@ -5,6 +5,15 @@ const S = {
  dossier:'S11-les-trois-chemins',
  fichier:'cours-en-quiz',
  titre:'Séance 11 — Trois chemins au lieu de deux',
+ heureRegle:'12 h 26',
+ ouverture:{
+   kicker:'SÉANCE 11  ·  SAMEDI 21 NOVEMBRE',
+   titre:'TROIS CHEMINS\nAU LIEU DE DEUX',
+   titreTaille:48, titreH:1.5,
+   sous:'Quatre manches. Des cartes en l\'air, et les mains sur le clavier.',
+   promesse:'À la fin de la séance, votre jeu ne dira plus\n« l\'une ou l\'autre » : il dira LAQUELLE.',
+   note:'Affichée pendant qu\'ils s\'installent. Thonny ouvert sur chaque poste, '
+     + 'et le jeu de chacun ouvert à côté : on y reviendra à la manche 4.'},
 
  manches:[
 

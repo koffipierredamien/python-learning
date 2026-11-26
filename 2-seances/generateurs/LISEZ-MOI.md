@@ -26,6 +26,7 @@ mieux changer une ligne et relancer que refaire la mise en page à la main.
 | `quiz_rappel_general.py` | le **quiz de rappel** (20 questions) : tout le parcours jusqu'à l'ordre des conditions, **sans la boucle** | `S11-les-trois-chemins · a-envoyer/` |
 | `exercice_la_medaille.py` | l'exercice **La Médaille** : HTML → PDF → images, sans date ni cadre à remplir — il se lit sur un téléphone | `S11-les-trois-chemins · a-envoyer/` |
 | `cours_en_quiz.js` + `donnees_cours_s11.js` | **le cours en quiz** de la séance 11 : 46 diapos, de la prière à la clôture — révision, leçons, ateliers au clavier, ⭐ et exercices | `S11-les-trois-chemins/a-projeter/` |
+| `cours_en_quiz.js` + `donnees_cours_s12.js` | **le cours en quiz** de la séance 12 : 38 diapos — la reprise, bâtie sur le travail fait à la maison | `S12-le-jeu-dit-pourquoi/a-projeter/` |
 
 > `S08` (le TP) a des documents écrits à la main, pas générés :
 > ses `.html` sont dans `a-imprimer/sources/`.
@@ -65,6 +66,7 @@ python3.13 -I quantites.py
 NODE_PATH=/chemin/vers/node_modules node donnees_quiz_rappel.js  # les 5 quiz flash
 NODE_PATH=/chemin/vers/node_modules node donnees_revision_generale.js  # la révision générale
 NODE_PATH=/chemin/vers/node_modules node donnees_cours_s11.js   # le cours en quiz de la séance 11
+NODE_PATH=/chemin/vers/node_modules node donnees_cours_s12.js   # le cours en quiz de la séance 12
 NODE_PATH=/chemin/vers/node_modules node donnees_decks.js   # les 5 diaporamas
 NODE_PATH=/chemin/vers/node_modules node decks_tp.js        # les 2 diaporamas de TP
 

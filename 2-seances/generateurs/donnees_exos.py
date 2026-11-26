@@ -747,7 +747,7 @@ TOUS.append(NAVALE)
 #        + l'exercice etoile LE PRIX DU TICKET, pour ceux qui vont vite
 # =====================================================================
 BULLETIN = dict(
-    dossier="S11-les-trois-chemins",
+    dossier="S12-le-jeu-dit-pourquoi",
     css1=".goal pre{font-size:7pt;line-height:1.28}",
     base="exercice-le-bulletin",
     base_cor="correction-le-bulletin",
